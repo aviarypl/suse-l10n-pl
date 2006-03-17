@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-03 11:49+0100\n"
-"PO-Revision-Date: 2006-03-10 22:35+0100\n"
-"Last-Translator: Wadim Dziedzic <nikdo@aviary.pl>\n"
+"POT-Creation-Date: 2006-03-13 14:13+0100\n"
+"PO-Revision-Date: 2006-03-17 20:58+0100\n"
+"Last-Translator: Stanisław Małolepszy <smalolepszy@aviary.pl>\n"
 "Language-Team: Polish <i18n@suse.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -53,50 +53,50 @@ msgid "Reading daemon status..."
 msgstr "Odczytywanie stanu demona..."
 
 #: src/Heartbeat.ycp:113
-#: src/Heartbeat.ycp:219
+#: src/Heartbeat.ycp:242
 msgid "Finished"
 msgstr "Zakończono"
 
 #. Heartbeat read dialog caption
-#: src/Heartbeat.ycp:206
+#: src/Heartbeat.ycp:229
 msgid "Saving Heartbeat Configuration"
 msgstr "Zapisywanie konfiguracji Heartbeat"
 
-#: src/Heartbeat.ycp:210
+#: src/Heartbeat.ycp:233
 msgid "Write settings"
 msgstr "Zapisywanie ustawień"
 
-#: src/Heartbeat.ycp:211
+#: src/Heartbeat.ycp:234
 msgid "Write resources"
 msgstr "Zapisywanie grup"
 
-#: src/Heartbeat.ycp:212
+#: src/Heartbeat.ycp:235
 msgid "Write authentication keys"
 msgstr "Zapisywanie kluczy autoryzacji"
 
-#: src/Heartbeat.ycp:213
+#: src/Heartbeat.ycp:236
 msgid "Restart services"
 msgstr "Restartowanie usług"
 
-#: src/Heartbeat.ycp:215
+#: src/Heartbeat.ycp:238
 msgid "Writing settings..."
 msgstr "Zapisywanie ustawień..."
 
-#: src/Heartbeat.ycp:216
+#: src/Heartbeat.ycp:239
 msgid "Writing resources..."
 msgstr "Zapisywanie zasobów..."
 
-#: src/Heartbeat.ycp:217
+#: src/Heartbeat.ycp:240
 msgid "Writing authentication keys..."
 msgstr "Zapisywanie kluczy autoryzacji..."
 
-#: src/Heartbeat.ycp:218
+#: src/Heartbeat.ycp:241
 msgid "Restarting services..."
 msgstr "Restartowanie usług..."
 
 #. TODO FIXME: your code here...
 #. Configuration summary text for autoyast
-#: src/Heartbeat.ycp:356
+#: src/Heartbeat.ycp:379
 msgid "Configuration Summary..."
 msgstr "Zestawienie konfiguracji..."
 
@@ -203,134 +203,121 @@ msgstr ""
 
 #: src/helps.ycp:31
 msgid ""
-"<p><b>Node Configuration</b> allows configuration of the\n"
-"node names of the two nodes in the cluster -- this one and its\n"
-"peer -- without a domain name appended.</p>\n"
-msgstr ""
-"<p><b>Konfiguracja węzła</b> pozwala skonfigurować nazwy\n"
-"węzłów dwóch węzłów w klastrze -- tego i jego partnera --\n"
-"bez dołączania nazwy domeny.</p>\n"
+"<p><b>Node Configuration</b> lets you specify and\n"
+"add nodes to your cluster. This installation program lets you create\n"
+"a new cluster or add nodes to an existing cluster. To add new nodes\n"
+"to an existing cluster, you must run this installation program from a\n"
+"node that is already in the cluster, not on a node that you want to add\n"
+"to the cluster.</p>\n"
+msgstr "<p><b>Konfiguracja węzłów</b> umożliwia określenie i dodawanie wezłów na klastra. Za pomocą tego programu możliwe jest utworzenie nowego klastra oraz dodanie węzłów do już istniejących klastrów. Aby dodać nowe węzły do istniejącego klastra, konieczne jest uruchomienie tego programu z węzła, który jest już w klastrze, a nie z węzła, który ma zostać do niego dodany.</p>\n"
 
-#: src/helps.ycp:35
+#: src/helps.ycp:39
 msgid ""
-"<p>The names specified here should match the output of\n"
-"<i>uname -n</i> on each node.</p>"
-msgstr ""
-"<p>Podana tutaj nazwa powinna odpowiadać wyjściu\n"
-"polecenia <i>uname -n</i> na każdym z węzłów.</p>"
+"<p>This cluster installation program does not copy the Heartbeat\n"
+"software package to cluster nodes. Prior to running this installation program, the\n"
+"Heartbeat software package must be installed on all nodes that will be\n"
+"part of your cluster.</p>"
+msgstr "<p>Pprogram instalacyjny nie kopiuje pakietu Heartbeat do wszystkich węzlów klastra. Przed jego uruchomieniem konieczne jest więc, aby pakiet Hearbeat był zainstalowany na wszystkich węzłach, które staną się częściami klastra.</p>"
 
-#: src/helps.ycp:38
+#: src/helps.ycp:44
 msgid ""
-"<p>In <b>Media Configuration</b>, specify the\n"
-"interconnects Heartbeat should use for its internal control\n"
-"and liveness messages. It is strongly\n"
-"recommended to specify more than one media for redundancy reasons.</p>\n"
-msgstr ""
-"<p>W <b>Konfiguracji medium</b> można określić połączenia, których\n"
-"powinno używać Heartbeat do wewnętrznego sterowania\n"
-"oraz przekazywania komunikatów o życiu. Dla zapewnienia redundancji <b>bardzo</b> zalecane\n"
-"jest podanie więcej niż jednego medium.</p>\n"
+"<p>To add a node to the cluster, enter the name of the node\n"
+"then click <b>Add</b>. Repeat this process for each\n"
+"node to add to the cluster. You can find node names for servers\n"
+"by entering the <tt>uname -n</tt> command on each node.</p>\n"
+msgstr "<p>Aby dodać węzeł do klastra, należy wprowadzić nazwę węzła i nacisnąć <b>Dodaj</b>. Czynność tę należy powtórzyć dla każdego węzła, który ma zostać dodany do klastra. Nazwę węzła w przypadku serwerów można uzyskać wpisując w każdym węźle w wierszu poleceń polecenie <tt>uname -n</tt>.</p>\n"
 
-#: src/helps.ycp:43
+#: src/helps.ycp:50
 msgid ""
-"<p>Choose at least one <b>Heartbeat Medium</b>. At least two independent\n"
-"ones are strongly recommended.</p>\n"
-msgstr ""
-"<p>Należy wybrać co najmniej jedno <b>Medium Heartbeat</b>. Co najmniej dwa niezależne\n"
-"są bardzo zalecane.</p>\n"
-
-#: src/helps.ycp:46
-msgid ""
-"<p>If specifying a <b>Serial Port</b>, provide the correct\n"
-"device file name of the port connected to the peer node via a null-modem\n"
-"cable.</p>"
-msgstr ""
-"<p>Podając <b>port szeregowy</b>, nalezy podać poprawną nazwę pliku\n"
-"urządzenia portu dołączonego do partnerskiego węzła kablem\n"
-"null-modem.</p>"
-
-#: src/helps.ycp:49
-msgid ""
-"<p>For a <b>broadcast</b> medium, choose one of the available network\n"
-"devices.</p>\n"
-msgstr ""
-"<p>W przypadku medium <b>rozgłaszanie</b>, należy wybrać jedno z dostępnych\n"
-"urządzeń sieciowych.</p>\n"
-
-#: src/helps.ycp:52
-msgid ""
-"<p>For a <b>unicast</b> medium, provide both the IP address of the peer\n"
-"to use and the network interface.</p>"
-msgstr ""
-"<p>W przypadku medium <b>unicast</b> należy podać adres IP partnera i interfejs \n"
-"sieciowy do użycia.</p>"
+"<p>If after adding a node to the cluster, you need to specify a \n"
+"different node name for that node, double click the node you want\r\n"
+"to edit, change the node name, and then click Edit.</p>"
+msgstr "<p>Aby zmienić nazwę węzła już dodanego do klastra, należy podwójnie kliknąć myszą wybrany węzeł, zmienić jego nazwę, a następnie nacisnąć przycisk Edytuj.</p>"
 
 #: src/helps.ycp:54
 msgid ""
-"<p>For a <b>multicast</b> medium, choose network device, multicast\n"
-"group to join (class D multicast address 224.0.0.0 - 239.255.255.255) and\n"
-"the ttl value (1-255).</p>"
+"<p><b>Heartbeat Media Configuration</b> lets you\n"
+" specify the method Heartbeat should use for internal communication\n"
+"between cluster nodes. This provides a way for cluster nodes to signal\n"
+"that they are alive to other nodes in the cluster. For proper redundancy,\n"
+"you should specify more than one heartbeat medium if possible.</p>\n"
 msgstr ""
-"<p>W przypadku medium <b>multicast</b> należy wybrać interfejs sieciowy, grupę\n"
-"multicast do przyłączenia (klasa D adres multicast 224.0.0.0 - 239.255.255.255) \n"
-"i wartość ttl (1-255).</p>"
+"<p><b>Konfiguracja medium Hearbeat</b> pozwala określić\n"
+"metodę wewnętrznej komunikacji między węzłami w klastrze.\n"
+"W ten sposób węzły informują się nawzajem o tym, że działają. \n"
+"O ile jest to możliwe, zalecane jest określenie więcej niż jednego medium.</p>\n"
 
-#: src/helps.ycp:57
+#: src/helps.ycp:60
 msgid ""
-"<p>The <b>UDP port</b> sets the UDP port used for the unicast and\n"
-"broadcast media. Leave this at the default value (694)\n"
-"unless you are running multiple Heartbeat clusters over the same network\n"
-"segment, in which case you need to run each of them on a different port\n"
+"<p>Choose at least one <b>Heartbeat Medium</b> and, if possible,\n"
+" two or more. After specifying a heartbeat medium, click <b>Add</b> to add\n"
+"that medium type to Heartbeat.</p>\n"
+msgstr "<p>Proszę wybrać przynajmniej jedno <b>medium Heartbeat</b>, a jeśli to możliwe - dwa lub więcej. Po określieniu medium, proszę nacisnąć <b>Dodaj</b>, aby dodać je do Heartbeat.</p>\n"
+
+#: src/helps.ycp:65
+msgid ""
+"<p>If you choose <b>Broadcast</b>, select one of the available network\n"
+"devices in the device list.</p>\n"
+msgstr ""
+"<p>W przypadku medium <b>rozgłaszanie</b>, należy wybrać z listy urządzeń\n"
+" jedno z dostępnych urządzeń sieciowych.</p>\n"
+
+#: src/helps.ycp:69
+msgid ""
+"<p>For <b>multicast</b>, choose a network device, multicast\n"
+"group to join (class D multicast address 224.0.0.0-239.255.255.255) and\n"
+"the ttl value (1-255).</p>\n"
+msgstr ""
+"<p>W przypadku medium <b>multicast</b> należy wybrać interfejs sieciowy,\n"
+"docelową grupę multicast (klasa D adres multicast 224.0.0.0 - 239.255.255.255) \n"
+"oraz wartość ttl (1-255).</p>\n"
+
+#: src/helps.ycp:74
+msgid ""
+"<p><b>UDP Port</b> sets the UDP port that is used for the\n"
+"broadcast media. Leave this set to the default value (694)\n"
+"unless you are running multiple Heartbeat clusters on the same network\n"
+"segment, in which case you need to run each cluster on a different port\n"
 "number.</p>\n"
 msgstr ""
-"<p><b>Port UDP</b> określa port UDP używany dla mediów\n"
-"unicast i rozgłaszania. Jeśli w jednym segmencie sieci nie będzie uruchomionych wielu \n"
-"klastrów Heartbeat, to należy zostawić wartość domyślną (694). W innym przypadku\n"
+"<p><b>Port UDP</b> określa port UDP używany dla medium\n"
+"rozgłaszanie. Jeśli w jednym segmencie sieci działa tylko jeden klaster Heartbeat,\n"
+"to należy zostawić wartość domyślną (694). W innym przypadku\n"
 "należy wybrać inny numer portu dla każdego klastra.</p>\n"
 
-#: src/helps.ycp:63
+#: src/helps.ycp:81
 msgid ""
-"<p>The <b>Baud Rate</b> controls the speed of the serial port if you are\n"
-"using a serial media. It is global for all serial\n"
-"interconnects.</p>\n"
+"<p>Specify the authentication method to\n"
+" use for network communication between cluster nodes. Choosing\n"
+"an authentication method protects against network attacks.</p>\n"
 msgstr ""
-"<p><b>Szybkość modulacji</b> określa szybkość portu szeregowego\n"
-"w przypadku używania go jako medium. Jest to wartość globalna\n"
-"dla wszystkich połączeń szeregowych.</p>\n"
+"<p>Aby używać komunikacji sieciowej między węzłami klastra,\n"
+"należy podać <b>metodę uwierzytelniania</b>. \n"
+"Ma to duże znaczenie dla ochrony przed atakami z sieci.</p>\n"
 
-#: src/helps.ycp:68
+#: src/helps.ycp:85
 msgid ""
-"<p>Specify the <b>authentication method</b> to use for the network\n"
-"communication. This is very important to protect against network\n"
-"attacks.</p>\n"
-msgstr ""
-"<p>Aby używać komunikacji sieciowej należy podać <b>metodę autoryzacji</b>. \n"
-"Jest to bardzo ważne dla ochrony przed atakami z sieci.</p>\n"
-
-#: src/helps.ycp:72
-msgid ""
-"<p>Both <b>md5</b> and <b>sha1</b> require a <i>shared\n"
-"secret</i>, which is used to protect and authenticate the messages. The\n"
-"<b>crc</b> mechanism does not do message authentication and \n"
-"only protects against corruption, not against attacks.</p>\n"
+"<p>Both the <b>md5</b> and <b>sha1</b> methods require a\n"
+" <i>shared secret</i>, which is used to protect and authenticate\n"
+" messages. The <b>crc</b> method does not perform message authentication\n"
+" and only protects against corruption, not against attacks.</p>\n"
 msgstr ""
 "<p>Zarówno <b>md5</b> jak i <b>sha1</b> wymaga <i>dzielonego\n"
-"hasła</i>, które jest używane do ochrony i autoryzacji komunikatów.\n"
-"Mechanizm <b>crc</b> nie realizuje autoryzacji i chroni\n"
-"przed uszkodzeniami a nie przed atakami.</p>\n"
+"hasła</i>, które jest używane do ochrony i uwierzytelniania komunikatów.\n"
+"Mechanizm <b>crc</b> nie stosuje uwierzytelniania komunikatów, i chroni\n"
+"przed uszkodzeniami, a nie przed atakami.</p>\n"
 
-#: src/helps.ycp:76
+#: src/helps.ycp:91
 msgid ""
-"<p>It is recommended to choose the <b>sha1</b> method, which is the\n"
-"    strongest authentication scheme available, and an appropriately strong\n"
-"    password. This must be exactly the same on all cluster\n"
-"    members.</p>\n"
+"<p>The <b>sha1</b> method is recommended because it provides the\n"
+"    strongest authentication scheme available. The authentication key\n"
+"(password) specified is used on all nodes in the cluster.</p>\n"
 msgstr ""
-"<p>Zalecane jest wybranie metody <b>sha1</b>, które jest\n"
-"    najmocniejszym dostępnym schematem i stosunkowo silnym hasłem.\n"
-"    Musi być ono dokładnie takie samo na wszystkich węzłach klastra.</p>\n"
+"<p>Zalecane jest wybranie metody <b>sha1</b>, która jest\n"
+"    najmocniejszym dostępnym schematem.\n"
+"    Podany klucz uwierzytelniania (hasło) musi być dokładnie taki sam na wszystkich węzłach klastra.</p>\n"
 
-#: src/helps.ycp:82
+#: src/helps.ycp:96
 msgid ""
 "<p><b>Resources</b> -- specify which resources are handled by Heartbeat\n"
 "and how Heartbeat should handle failback (migration of resources back to\n"
@@ -340,7 +327,7 @@ msgstr ""
 "i jak Heartbeat powinno obsługiwać przełączanie poawaryjne (migrację zasobów do węzła\n"
 "po rozwiązaniu awarii).</p>\n"
 
-#: src/helps.ycp:86
+#: src/helps.ycp:100
 msgid ""
 "<p>If you set <b>Automatic Failback</b> to <i>on</i>, Heartbeat \n"
 "migrates resources back to the primary owner as soon as it becomes\n"
@@ -355,7 +342,7 @@ msgstr ""
 "zasoby między węzłami, ale wymaga szybkiego zatrzymywania zasobów,\n"
 "aby mogły płynnie wystartować, nie powodując dużej przerwy w pracy.</p>\n"
 
-#: src/helps.ycp:93
+#: src/helps.ycp:107
 msgid ""
 "<p>For most scenarios, <i>off</i> is the correct choice. It requires \n"
 "the administrator to trigger the failback of resources manually\n"
@@ -369,7 +356,7 @@ msgstr ""
 "awaria jest naprawiona. Pozwala to na wybranie odpowiedniego czasu na\n"
 "obsługę i nie przerywania usługi raz jeszcze.</p>\n"
 
-#: src/helps.ycp:99
+#: src/helps.ycp:113
 msgid ""
 "<p><i>legacy</i> is the old default for compatibility with former\n"
 "Heartbeat releases. It activates the automatic failback if not all\n"
@@ -381,7 +368,7 @@ msgstr ""
 "poawaryjne, jeśli nie wszystkie węzły obsługują jeszcze nowe polecenia.\n"
 "Jawne wybranie <i>włączone</i> lub <i>wyłączone</i> jest zalecane w nowych wdrożeniach.</p>\n"
 
-#: src/helps.ycp:104
+#: src/helps.ycp:118
 msgid ""
 "<p>Adding a resource to a given node places the resource under\n"
 "Heartbeat's control. It will be started and stopped automatically by\n"
@@ -393,7 +380,7 @@ msgstr ""
 "Heartbeat. Należy się upewnić, ze zasób nie jest uruchamiany przez\n"
 "cokolwiek innego.</p>\n"
 
-#: src/helps.ycp:109
+#: src/helps.ycp:123
 msgid ""
 "<p>Heartbeat primarily starts the resource on the node to which it is\n"
 "assigned if both nodes are healthy and up. See the <b>auto_failback</b>\n"
@@ -402,7 +389,7 @@ msgstr ""
 "<p>Jeśli oba węzły są sprawne i działają Heartbeat najpierw uruchamia zasób na węźle, do którego\n"
 "jest on przypisany. Zobacz ustawienia <b>automatycznego przełączania poawaryjnego</b> powyżej.</p>\n"
 
-#: src/helps.ycp:113
+#: src/helps.ycp:127
 msgid ""
 "<p>Specify any init script name as a resource or a specify a special \n"
 "Heartbeat resource script (provided in the <i>/etc/ha.d/resource.d</i>\n"
@@ -417,65 +404,61 @@ msgstr ""
 "od nazwy skryptu przez <i>::</i>, np. <i>Filesystem::/dev/sda1::/mnt::reiserfs</i>. \n"
 "Należy to sprawdzić w dokumentacji skryptu zasobu.</p>\n"
 
-#: src/helps.ycp:121
+#: src/helps.ycp:135
 msgid ""
-"<p>To protect the shared data, <b>STONITH</b> must be configured.\n"
-"Heartbeat is capable of driving a number of serial and network\n"
-"power switches to prevent a potentially faulty node from corrupting the\n"
-"shared data.</p>\n"
+"<p>To protect the shared data, <b>STONITH</b>\n"
+" must be configured. Heartbeat is capable of driving a number of\n"
+"serial and network power switches to prevent a potentially faulty\n"
+"node from corrupting shared data.</p>\n"
 msgstr ""
 "<p>Dla ochrony danych współdzielonych należy skonfigurować <b>STONITH</b>.\n"
-"Heartbeat może sterować kilkoma szeregowymi wyłącznikami zasilania, aby\n"
-"zapobiec możliwości, że błędnie działający węzeł uszkodzi współdzielone\n"
-"dane.</p>\n"
+"Heartbeat może sterować kilkoma szeregowymi oraz sieciowymi wyłącznikami\n"
+" zasilania, aby zapobiec sytuacji, w której błędnie działający węzeł uszkodzi\n"
+" współdzielone dane.</p>\n"
 
-#: src/helps.ycp:126
+#: src/helps.ycp:140
 msgid ""
-"<p>It needs to know which node can access the power switch. For a serial\n"
-"power switch, this is a specific node name. For a network power\n"
-"switch, typically enter a '*' to indicate that it is accessible from all\n"
-"nodes.</p>\n"
+"<p>STONITH needs to know which nodes can access the power\n"
+" switch. Enter or select the name of the node in <b>Host From</b>.\n"
+" For a serial power switch, this is a specific node name.\n"
+" For a network power switch, you should typically enter an asterisk\n"
+" (*) to indicate that it is accessible from all nodes.</p>\n"
 msgstr ""
-"<p>Heartbeat musi wiedzieć, który węzeł ma dostęp do wyłącznika zasilania.\n"
-"W przypadku wyłącznika sterowanego łączem szeregowym podaje się nazwę węzła.\n"
+"<p>STONITH musi wiedzieć, które węzły mają dostęp do wyłącznika zasilania.\n"
+"Proszę podać lub wybrać nazwę węzła w polu <b>Komputer z</b>. W przypadku wyłącznika sterowanego łączem szeregowym podaje się nazwę węzła.\n"
 "Dla wyłącznika dostępnego przez sieć, zwykle podaje się '*' aby wskazać, \n"
 "że jest on dostępny ze wszystkich węzłów.</p>\n"
 
-#: src/helps.ycp:131
+#: src/helps.ycp:146
 msgid ""
-"<p>The <b>STONITH Type</b> must match the module name capable of\n"
-"controlling the power switch used.  The <b>Parameters</b>\n"
-"are also specific to the module. See the <i>stonith -h</i>\n"
-"command line tool for a listing of the supported modules and the\n"
-"parameters they accept.</p>\n"
+"<p>The <b>STONITH Type</b> is the name of the module that\n"
+" is used to control the power switch. <b>Parameters</b> are\n"
+" specific to the module specified. See the <tt>stonith -h</tt>\n"
+" command line tool for a list of supported modules and\n"
+" the parameters they accept.</p>\n"
 msgstr ""
-"<p><b>Typ STONITH</b> musi odpowiadać nazwie modułu będącego\n"
-"w stanie sterować używanymi wyłącznikami zasilania.\n"
-"Moduł ten ma także specyficzne <b>parametry</b>. Polecenie\n"
-"<i>stonith -h</i> wyświetla listę dostępnych\n"
+"<p><b>Typ STONITH</b> musi odpowiadać nazwie modułu, który służy\n"
+"sterowaniu wyłącznikiem zasilania. <b>Parametry</b> różnią się w zależności\n"
+"od modułu. Polecenie <i>stonith -h</i> wyświetla listę dostępnych\n"
 "modułów i akceptowanych przez nie parametrów.</p>\n"
 
-#: src/helps.ycp:138
+#: src/helps.ycp:153
 msgid ""
 "<p><b><big>Booting</big></b><br>\n"
-"To start the Heartbeat server every time your computer is booted, set\n"
-"<b>On</b>. Otherwise set <b>Off</b>.</p>"
+"To start the Heartbeat software each time this cluster server\n"
+"is booted, select <b>On</b>. If you select <b>Off</b>, you \n"
+"must start Heartbeat manually each time this cluster server\n"
+"is booted. You can start the Heartbeat server manually using\n"
+"the <tt>/etc/init.d/heartbeat start</tt> command.</p>\n"
 msgstr ""
-"<p><b><big>Uruchamianie</big></b><br>\n"
-"Aby uruchamiać serwer Heartbeat za każdym razem gdy komputer jest\n"
-"uruchamiany, należy zaznaczyć <b>włączone</b>, w przeciwnym razie ustaw <b>wyłączone</b>.</p>"
+"<p><b><big>Uruchamianie systemu</big></b><br>\n"
+"Aby uruchamiać oprogramowanie Heartbeat przy każdym uruchomieniu\n"
+"serwera klastra, proszę wybrać <b>Włączone</b>. Jeśli zostanie wybrane\n"
+" <b>Wyłączone</b>, konieczne będzie ręczne uruchamianie Heartbeat\n"
+"po każdym uruchomieniu serwera klastra. Do ręcznego uruchamiania\n"
+" Heartbeat służy polecenie  <tt>/etc/init.d/heartbeat start</tt>.</p>\n"
 
-#: src/helps.ycp:141
-msgid ""
-"<p><b><big>Switch On or Off</big></b><br>\n"
-"To start or stop the Heartbeat server immediately, use <b>Start Heartbeat\n"
-"Server Now</b> or <b>Stop Heartbeat Server Now</b>.</p>"
-msgstr ""
-"<p><b><big>Włączanie lub wyłączanie</big></b><br>\n"
-"Aby uruchomić lub zatrzymać serwer Heartbeat natychmiast, należy wybrać <b>Uruchom serwer\n"
-"Heartbeat teraz</b> albo <b>Zatrzymaj serwer Heartbeat teraz</b>.</p>"
-
-#: src/helps.ycp:145
+#: src/helps.ycp:161
 msgid ""
 "<p>Heartbeat uses a variety of timers to tune and configure its behavior.\n"
 "All timers are specified in seconds.</p>\n"
@@ -483,7 +466,7 @@ msgstr ""
 "<p>Do skonfigurowania działania Heartbeat używa różnych liczników.\n"
 "Wartości wszystkich są podane w sekundach.</p>\n"
 
-#: src/helps.ycp:148
+#: src/helps.ycp:164
 msgid ""
 "<p><b>Keep Alive</b> specifies the interval at which a node announces itself on\n"
 "the network.</p>\n"
@@ -491,7 +474,7 @@ msgstr ""
 "<p><b>Aktywność</b> określa czas, po którym węzeł wysyła informacje \n"
 "o sobie w sieci.</p>\n"
 
-#: src/helps.ycp:151
+#: src/helps.ycp:167
 msgid ""
 "<p><b>Dead Time</b> is the time after which a node is presumed to be dead.\n"
 "It should probably default to five times the Keep Alive interval.</p>\n"
@@ -499,7 +482,7 @@ msgstr ""
 "<p><b>Czas śmierci</b> jest czasem, po którym zakłada się, że węzeł jest martwy.\n"
 "Dobrą wartością domyślną jest pięć razy dłużej niż czas aktywności.</p>\n"
 
-#: src/helps.ycp:154
+#: src/helps.ycp:170
 msgid ""
 "<p><b>Warn Time</b> is the time after which Heartbeat warns in the log files\n"
 "that a node has been slow in sending its heartbeats. This should\n"
@@ -509,7 +492,7 @@ msgstr ""
 "pliku rejestrów informację, że węzeł opóźnia się w wysyłaniu sygnału synchronizacji.\n"
 "Dobrą wartością domyślną jest trzy razy dłużej niż czas aktywności.</p>\n"
 
-#: src/helps.ycp:158
+#: src/helps.ycp:174
 msgid ""
 "<p><b>Init Dead Time</b> is the time a node waits after start-up for the other\n"
 "nodes, given that sometimes network interfaces, routing, etc., take a\n"
@@ -520,7 +503,7 @@ msgstr ""
 "sieciowych, routingu, itp. zajmuje pewien czas. Domyślnie powinno\n"
 "to być co najmniej dwa razy więcej niż czas śmierci.</p>\n"
 
-#: src/helps.ycp:162
+#: src/helps.ycp:178
 msgid ""
 "If the <b>Watchdog Timer</b> is enabled, Heartbeat uses\n"
 "the in-kernel watchdog for monitoring the local node itself. If\n"
@@ -532,7 +515,7 @@ msgstr ""
 "Heartbeat nie wykona zapisu do tego pliku co każde sześćdziesiąt\n"
 "sekund, jądro wymusi zrestartowanie węzła.</p>\n"
 
-#: src/helps.ycp:168
+#: src/helps.ycp:184
 msgid ""
 "<p><b>IP Fail</b> allows monitoring of external\n"
 "hosts and moving the resources accordingly (i.e., to the host with the\n"
@@ -542,7 +525,7 @@ msgstr ""
 "maszyn i odpowiednie przenoszenie zasobów (np. na węzeł z \n"
 "<i>najlepszym</i> połączeniem).</p>\n"
 
-#: src/helps.ycp:172
+#: src/helps.ycp:188
 msgid ""
 "<p>If enabled, Heartbeat needs a <b>Ping List</b> of external nodes to ping.\n"
 "The minimum if IP fail is enabled is one. A maximum of four to eight nodes seems sensible.</p>\n"
@@ -551,11 +534,11 @@ msgstr ""
 "Minimalną liczbą elementów na liście w przypadku włączenia Awarii IP jest jeden.\n"
 "Sensownym maksimum wydaje się podanie czterech węzłów.</p>\n"
 
-#: src/helps.ycp:175
+#: src/helps.ycp:191
 msgid "<p>For more complex configurations, Heartbeat also supports <i>Ping Groups</i>."
 msgstr "<p>Dla skomplikowanych konfiguracji, Heartbeat obsługuje także <i>Grupy pingowania</i>."
 
-#: src/helps.ycp:177
+#: src/helps.ycp:193
 msgid ""
 "A list of IP addresses is grouped together and if any\n"
 "of them is reachable, the node is deemed able to communicate with\n"
@@ -586,7 +569,6 @@ msgid "Ping to Node"
 msgstr "Pinguj do węzła"
 
 #: src/ipfail_conf.ycp:88
-#: src/media_conf.ycp:123
 msgid "IP Address"
 msgstr "Adres IP"
 
@@ -669,31 +651,14 @@ msgstr ""
 msgid "UDP Port"
 msgstr "Port UDP"
 
-#: src/media_conf.ycp:108
-msgid "Baud Rate"
-msgstr "Szybkość modulacji"
-
-#: src/media_conf.ycp:113
-msgid "Serial Port"
-msgstr "Port szeregowy"
-
-#: src/media_conf.ycp:115
-msgid "Serial Port Name"
-msgstr "Nazwa portu szeregowego"
-
 #: src/media_conf.ycp:117
 msgid "Broadcast"
 msgstr "Rozgłaszanie"
 
 #: src/media_conf.ycp:119
-#: src/media_conf.ycp:125
 #: src/media_conf.ycp:131
 msgid "Device"
 msgstr "Urządzenie"
-
-#: src/media_conf.ycp:121
-msgid "Unicast"
-msgstr "Unicast"
 
 #: src/media_conf.ycp:127
 msgid "Multicast"
@@ -727,29 +692,26 @@ msgstr "Podane medium jest już wykorzystywane."
 msgid "Multicast group address must be class D (224.0.0.0 - 239.255.255.255)."
 msgstr "Grupowy adres multicast musi być klasy D (224.0.0.0 - 239.255.255.255)."
 
-#: src/node_conf.ycp:38
-msgid "The other node name is required."
-msgstr "Wymagana jest nazwa innego węzła."
-
-#: src/node_conf.ycp:42
-msgid "The other node name cannot be same as this node name."
-msgstr "Nazwa innego węzła nie może być taka sama jak nazwa tego węzła."
-
-#: src/node_conf.ycp:60
+#: src/node_conf.ycp:73
 msgid "This Node"
 msgstr "Nazwa tego węzła"
 
-#: src/node_conf.ycp:72
+#: src/node_conf.ycp:87
 msgid "Add Nodes"
 msgstr "Dodaj węzły"
 
-#: src/node_conf.ycp:74
+#: src/node_conf.ycp:89
 msgid "Node Name"
 msgstr "Nazwa węzła"
 
-#: src/node_conf.ycp:76
-msgid "Node IP"
-msgstr "IP węzła"
+#: src/node_conf.ycp:182
+msgid "Specify the node name."
+msgstr "Proszę podać nazwę węzła."
+
+#: src/node_conf.ycp:186
+#: src/node_conf.ycp:193
+msgid "The specified node is already in the cluster."
+msgstr "Podany węzeł jest już w klastrze."
 
 #: src/resources_conf.ycp:113
 msgid "Automatic Failback"
@@ -821,7 +783,7 @@ msgstr "Serwer Heartbeat nie działa."
 
 #: src/stonith_conf.ycp:19
 msgid "Specified STONITH host is already present."
-msgstr "Wybrany host STONITH już jest obecny."
+msgstr "Wybrana maszyna STONITH już jest obecny."
 
 #: src/stonith_conf.ycp:40
 msgid "Add STONITH Host"
@@ -841,11 +803,11 @@ msgstr "Parametry"
 
 #: src/stonith_conf.ycp:142
 msgid "Specify the host name."
-msgstr "Proszę podać nazwę hosta."
+msgstr "Podaj nazwę maszyny."
 
 #: src/stonith_conf.ycp:146
 msgid "Specify the STONITH type."
-msgstr "Proszę podać typ STONITH."
+msgstr "Podaj typ STONITH."
 
 #: src/stonith_conf.ycp:153
 msgid "The specified STONITH is already present."
@@ -861,6 +823,116 @@ msgstr "Konfiguracja Heartbeat"
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
 
+#~ msgid ""
+#~ "<p><b>Node Configuration</b> allows configuration of the\n"
+#~ "node names of the two nodes in the cluster -- this one and its\n"
+#~ "peer -- without a domain name appended.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Konfiguracja węzła</b> pozwala skonfigurować nazwy\n"
+#~ "węzłów dwóch węzłów w klastrze -- tego i jego partnera --\n"
+#~ "bez dołączania nazwy domeny.</p>\n"
+#~ msgid ""
+#~ "<p>The names specified here should match the output of\n"
+#~ "<i>uname -n</i> on each node.</p>"
+#~ msgstr ""
+#~ "<p>Podana tutaj nazwa powinna odpowiadać wyjściu\n"
+#~ "polecenia <i>uname -n</i> na każdym z węzłów.</p>"
+#~ msgid ""
+#~ "<p>In <b>Media Configuration</b>, specify the\n"
+#~ "interconnects Heartbeat should use for its internal control\n"
+#~ "and liveness messages. It is strongly\n"
+#~ "recommended to specify more than one media for redundancy reasons.</p>\n"
+#~ msgstr ""
+#~ "<p>W <b>Konfiguracji medium</b> można określić połączenia, których\n"
+#~ "powinno używać Heartbeat do wewnętrznego sterowania\n"
+#~ "oraz przekazywania komunikatów o życiu. Dla zapewnienia redundancji <b>bardzo</b> zalecane\n"
+#~ "jest podanie więcej niż jednego medium.</p>\n"
+#~ msgid ""
+#~ "<p>Choose at least one <b>Heartbeat Medium</b>. At least two independent\n"
+#~ "ones are strongly recommended.</p>\n"
+#~ msgstr ""
+#~ "<p>Należy wybrać co najmniej jedno <b>Medium Heartbeat</b>. Co najmniej dwa niezależne\n"
+#~ "są bardzo zalecane.</p>\n"
+#~ msgid ""
+#~ "<p>If specifying a <b>Serial Port</b>, provide the correct\n"
+#~ "device file name of the port connected to the peer node via a null-modem\n"
+#~ "cable.</p>"
+#~ msgstr ""
+#~ "<p>Podając <b>port szeregowy</b>, nalezy podać poprawną nazwę pliku\n"
+#~ "urządzenia portu dołączonego do partnerskiego węzła kablem\n"
+#~ "null-modem.</p>"
+#~ msgid ""
+#~ "<p>For a <b>unicast</b> medium, provide both the IP address of the peer\n"
+#~ "to use and the network interface.</p>"
+#~ msgstr ""
+#~ "<p>W przypadku medium <b>unicast</b> należy podać adres IP partnera i interfejs \n"
+#~ "sieciowy do użycia.</p>"
+#~ msgid ""
+#~ "<p>The <b>UDP port</b> sets the UDP port used for the unicast and\n"
+#~ "broadcast media. Leave this at the default value (694)\n"
+#~ "unless you are running multiple Heartbeat clusters over the same network\n"
+#~ "segment, in which case you need to run each of them on a different port\n"
+#~ "number.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Port UDP</b> określa port UDP używany dla mediów\n"
+#~ "unicast i rozgłaszania. Jeśli w jednym segmencie sieci nie będzie uruchomionych wielu \n"
+#~ "klastrów Heartbeat, to należy zostawić wartość domyślną (694). W innym przypadku\n"
+#~ "należy wybrać inny numer portu dla każdego klastra.</p>\n"
+#~ msgid ""
+#~ "<p>The <b>Baud Rate</b> controls the speed of the serial port if you are\n"
+#~ "using a serial media. It is global for all serial\n"
+#~ "interconnects.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Szybkość modulacji</b> określa szybkość portu szeregowego\n"
+#~ "w przypadku używania go jako medium. Jest to wartość globalna\n"
+#~ "dla wszystkich połączeń szeregowych.</p>\n"
+#~ msgid ""
+#~ "<p>Specify the <b>authentication method</b> to use for the network\n"
+#~ "communication. This is very important to protect against network\n"
+#~ "attacks.</p>\n"
+#~ msgstr ""
+#~ "<p>Aby używać komunikacji sieciowej należy podać <b>metodę autoryzacji</b>. \n"
+#~ "Jest to bardzo ważne dla ochrony przed atakami z sieci.</p>\n"
+#~ msgid ""
+#~ "<p>To protect the shared data, <b>STONITH</b> must be configured.\n"
+#~ "Heartbeat is capable of driving a number of serial and network\n"
+#~ "power switches to prevent a potentially faulty node from corrupting the\n"
+#~ "shared data.</p>\n"
+#~ msgstr ""
+#~ "<p>Dla ochrony danych współdzielonych należy skonfigurować <b>STONITH</b>.\n"
+#~ "Heartbeat może sterować kilkoma szeregowymi wyłącznikami zasilania, aby\n"
+#~ "zapobiec możliwości, że błędnie działający węzeł uszkodzi współdzielone\n"
+#~ "dane.</p>\n"
+#~ msgid ""
+#~ "<p><b><big>Booting</big></b><br>\n"
+#~ "To start the Heartbeat server every time your computer is booted, set\n"
+#~ "<b>On</b>. Otherwise set <b>Off</b>.</p>"
+#~ msgstr ""
+#~ "<p><b><big>Uruchamianie</big></b><br>\n"
+#~ "Aby uruchamiać serwer Heartbeat za każdym razem gdy komputer jest\n"
+#~ "uruchamiany, należy zaznaczyć <b>włączone</b>, w przeciwnym razie ustaw <b>wyłączone</b>.</p>"
+#~ msgid ""
+#~ "<p><b><big>Switch On or Off</big></b><br>\n"
+#~ "To start or stop the Heartbeat server immediately, use <b>Start Heartbeat\n"
+#~ "Server Now</b> or <b>Stop Heartbeat Server Now</b>.</p>"
+#~ msgstr ""
+#~ "<p><b><big>Włączanie lub wyłączanie</big></b><br>\n"
+#~ "Aby uruchomić lub zatrzymać serwer Heartbeat natychmiast, należy wybrać <b>Uruchom serwer\n"
+#~ "Heartbeat teraz</b> albo <b>Zatrzymaj serwer Heartbeat teraz</b>.</p>"
+#~ msgid "Baud Rate"
+#~ msgstr "Szybkość modulacji"
+#~ msgid "Serial Port"
+#~ msgstr "Port szeregowy"
+#~ msgid "Serial Port Name"
+#~ msgstr "Nazwa portu szeregowego"
+#~ msgid "Unicast"
+#~ msgstr "Unicast"
+#~ msgid "The other node name is required."
+#~ msgstr "Wymagana jest nazwa innego węzła."
+#~ msgid "The other node name cannot be same as this node name."
+#~ msgstr "Nazwa innego węzła nie może być taka sama jak nazwa tego węzła."
+#~ msgid "Node IP"
+#~ msgstr "IP węzła"
 #~ msgid "The Other Node"
 #~ msgstr "Nazwa innego węzła"
 

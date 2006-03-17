@@ -6,9 +6,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-02-03 11:49+0100\n"
-"PO-Revision-Date: 2003-10-06 11:28+0200\n"
-"Last-Translator: Polish <i18n@suse.de>\n"
+"POT-Creation-Date: 2006-03-13 14:20+0100\n"
+"PO-Revision-Date: 2006-03-17 21:36+0100\n"
+"Last-Translator: Stanisław Małolepszy <smalolepszy@aviary.pl>\n"
 "Language-Team: Polish <i18n@suse.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,124 +16,712 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. popup label
-#: src/clients/inst_disks_activate.ycp:39
+#: src/clients/s390-disk-controller.ycp:34
 msgid "Detecting Available Controllers"
 msgstr "Wykrywanie dostępnych kontrolerów"
 
-#. dialog caption
-#: src/clients/inst_disks_activate.ycp:64
-msgid "Disk Activation"
-msgstr "Aktywacja dysku"
+#. Initialization dialog caption
+#: src/clients/s390-disk-controller.ycp:56
+msgid "S/390 Disk Controller Configuration"
+msgstr "Konfiguracja kontrolera dyskowego S/390"
 
 #. push button
-#: src/clients/inst_disks_activate.ycp:73
+#: src/clients/s390-disk-controller.ycp:62
 msgid "Configure &DASD Disks"
 msgstr "Konfiguracja dysków &DASD"
 
 #. push button
-#: src/clients/inst_disks_activate.ycp:79
+#: src/clients/s390-disk-controller.ycp:66
 msgid "Configure &ZFCP Disks"
 msgstr "Konfiguracja dysków &ZFCP"
 
+#. Initialization dialog contents
+#: src/clients/s390-disk-controller.ycp:71
+#: src/dasd/wizards.ycp:92
+#: src/zfcp/wizards.ycp:92
+msgid "Initializing..."
+msgstr "Inicjalizacja..."
+
+#. table cell
+#: src/dasd/dialogs.ycp:101
+#: src/dasd/dialogs.ycp:106
+#: src/dasd/dialogs.ycp:121
+#: src/dasd/dialogs.ycp:146
+#: src/dump/dialogs.ycp:95
+#: src/modules/DASDController.ycp:199
+#: src/modules/DASDController.ycp:208
+#: src/modules/DASDController.ycp:209
+msgid "Yes"
+msgstr "Tak"
+
+#. table cell
+#: src/dasd/dialogs.ycp:103
+#: src/dasd/dialogs.ycp:108
+#: src/dasd/dialogs.ycp:123
+#: src/dasd/dialogs.ycp:148
+#: src/dump/dialogs.ycp:97
+#: src/modules/DASDController.ycp:199
+#: src/modules/DASDController.ycp:208
+#: src/modules/DASDController.ycp:209
+msgid "No"
+msgstr "Nie"
+
+#. Dialog caption
+#: src/dasd/dialogs.ycp:188
+msgid "DASD Disk Management"
+msgstr "Zarządzanie dyskami DASD"
+
+#. table header
+#: src/dasd/dialogs.ycp:192
+msgid "Sel."
+msgstr "Wyb."
+
+#. table header
+#: src/dasd/dialogs.ycp:194
+#: src/dasd/dialogs.ycp:213
+msgid "Channel"
+msgstr "Kanał"
+
+#. table header
+#: src/dasd/dialogs.ycp:196
+#: src/dump/dialogs.ycp:62
+msgid "Device"
+msgstr "Urządzenie"
+
+#. table header
+#: src/dasd/dialogs.ycp:198
+msgid "Type"
+msgstr "Typ"
+
+#. table header
+#: src/dasd/dialogs.ycp:200
+msgid "Access Type"
+msgstr "Rodzaj dostępu"
+
+#. table header
+#: src/dasd/dialogs.ycp:203
+#: src/dasd/dialogs.ycp:217
+msgid "Use DIAG"
+msgstr "Użycie DIAG"
+
+#. table header
+#: src/dasd/dialogs.ycp:205
+msgid "Formatted"
+msgstr "Sformatowano"
+
+#. table header
+#: src/dasd/dialogs.ycp:207
+msgid "Partition Information"
+msgstr "Informacje o partycji"
+
+#. table header
+#: src/dasd/dialogs.ycp:215
+#: src/dump/dialogs.ycp:64
+msgid "Format"
+msgstr "Formatuj"
+
+#. menuy button id
+#: src/dasd/dialogs.ycp:223
+msgid "&Activate"
+msgstr "&Aktywacja"
+
+#. menuy button id
+#: src/dasd/dialogs.ycp:225
+msgid "&Deactivate"
+msgstr "&Deaktywacja"
+
+#. menuy button id
+#: src/dasd/dialogs.ycp:230
+msgid "Set DIAG O&n"
+msgstr "Włącz DIA&G"
+
+#. menuy button id
+#: src/dasd/dialogs.ycp:232
+msgid "Set DIAG O&ff"
+msgstr "W&yłącz DIAG"
+
+#. menuy button id
+#: src/dasd/dialogs.ycp:235
+msgid "&Format"
+msgstr "&Formatuj"
+
+#. text entry
+#: src/dasd/dialogs.ycp:241
+#: src/zfcp/dialogs.ycp:170
+msgid "Mi&nimum Channel"
+msgstr "Mi&n. kanał"
+
+#. text entry
+#: src/dasd/dialogs.ycp:243
+#: src/zfcp/dialogs.ycp:172
+msgid "Ma&ximum Channel"
+msgstr "Ma&x. kanał"
+
 #. push button
-#: src/clients/inst_disks_activate.ycp:84
-msgid "Configure &iSCSI Disks"
-msgstr "Sonfiguruj dyski &iSCSI"
+#: src/dasd/dialogs.ycp:247
+#: src/zfcp/dialogs.ycp:176
+msgid "&Filter"
+msgstr "&Filtr"
 
-#~ msgid "S/390 Disk Controller Configuration"
-#~ msgstr "Konfiguracja kontrolera dyskowego S/390"
+#. push button
+#: src/dasd/dialogs.ycp:254
+msgid "A&dd New Disk"
+msgstr "&Dodaj nowy dysk"
 
-#~ msgid "Initializing..."
-#~ msgstr "Inicjalizacja..."
+#. push button
+#: src/dasd/dialogs.ycp:256
+msgid "De&lete Disk"
+msgstr "Usuń dysk (&l)"
 
-#~ msgid "Yes"
-#~ msgstr "Tak"
+#. pudh button
+#: src/dasd/dialogs.ycp:261
+msgid "&Select or Deselect"
+msgstr "Zaznacz lub odznacz (&s)"
 
-#~ msgid "No"
-#~ msgstr "Nie"
+#. menu button
+#: src/dasd/dialogs.ycp:264
+msgid "Perform &Action"
+msgstr "Wykonaj &akcję"
 
-#~ msgid "DASD Disk Management"
-#~ msgstr "Zarządzanie dyskami DASD"
+#. error popup message
+#: src/dasd/dialogs.ycp:333
+#: src/dasd/dialogs.ycp:358
+#: src/dasd/dialogs.ycp:382
+#: src/dasd/dialogs.ycp:402
+#: src/dasd/dialogs.ycp:421
+msgid "No disk selected."
+msgstr "Nie wybrano żadnego dysku."
 
-#~ msgid "Sel."
-#~ msgstr "Wyb."
+#. error report, %1 is device identification
+#: src/dasd/dialogs.ycp:435
+#, ycp-format
+msgid "Disk %1 is not active."
+msgstr "Dysk %1 nie jest aktywny."
 
-#~ msgid "Channel"
-#~ msgstr "Kanał"
+#. error report, %1 is device identification
+#: src/dasd/dialogs.ycp:442
+#, ycp-format
+msgid "Disk %1 is not accessible for writing."
+msgstr "Dysk %1 jest niedostępny do zapisu."
 
-#~ msgid "Device"
-#~ msgstr "Urządzenie"
+#. integer field (count of disks formatted at parallely)
+#: src/dasd/dialogs.ycp:459
+msgid "&Parallel Formatted Disks"
+msgstr "Równole&głe dyski formatowane"
 
-#~ msgid "Type"
-#~ msgstr "Typ"
+#. check box
+#: src/dasd/dialogs.ycp:462
+msgid "&Write the Volume Label"
+msgstr "Zapisz etykietę wo&luminu"
 
-#~ msgid "Access Type"
-#~ msgstr "Rodzaj dostępu"
+#. popup question
+#: src/dasd/dialogs.ycp:490
+#, ycp-format
+msgid ""
+"Formatting these disks destroys all data on them.<br>\n"
+"Really format the following disks?<br>\n"
+"%1"
+msgstr ""
+"Formatownie zniszczy wszystkie dane na wybranych dyskach.<br>\n"
+"Czy na pewno sformatować poniższe dyski?<br>\n"
+"%1"
 
-#~ msgid "Use DIAG"
-#~ msgstr "Użycie DIAG"
+#. Dialog caption
+#: src/dasd/dialogs.ycp:534
+msgid "Add New DASD Disk"
+msgstr "Dodaj nowy dysk DASD"
 
-#~ msgid "Formatted"
-#~ msgstr "Sformatowano"
+#. text entry
+#. combo box
+#: src/dasd/dialogs.ycp:541
+#: src/zfcp/dialogs.ycp:339
+msgid "&Channel Number"
+msgstr "Numer &kanału"
 
-#~ msgid "Partition Information"
-#~ msgstr "Informacje o partycji"
+#. check box
+#: src/dasd/dialogs.ycp:545
+msgid "Format the Disk"
+msgstr "Formatuj dysk"
 
-#~ msgid "Format"
-#~ msgstr "Formatuj"
+#. check box
+#: src/dasd/dialogs.ycp:548
+msgid "Use &DIAG"
+msgstr "Użycie &DIAG"
 
-#~ msgid "&Activate"
-#~ msgstr "&Aktywacja"
+#. yes-no popup
+#: src/dasd/dialogs.ycp:566
+#: src/zfcp/dialogs.ycp:233
+#: src/zfcp/dialogs.ycp:365
+msgid ""
+"Really leave the ZFCP disk configuration without saving?\n"
+"All changes will be lost."
+msgstr ""
+"Czy na pewno chcesz opuścić konfigurację dysku ZFCP bez zapisu?\n"
+"Wszystkie zmiany zostaną stracone."
 
-#~ msgid "&Deactivate"
-#~ msgstr "&Deaktywacja"
+#. Read dialog help 1/2
+#: src/dasd/helps.ycp:20
+msgid ""
+"<p><b><big>Initializing Controller Configuration</big></b><br>\n"
+"Please wait...<br></p>"
+msgstr ""
+"<p><b><big>Inicjalizacja konfiguracji kontrolera</big></b><br>\n"
+"Proszę czekać...<br></p>"
 
-#~ msgid "Set DIAG O&n"
-#~ msgstr "Włącz DIAG (&n)"
+#. Read dialog help 2/2
+#: src/dasd/helps.ycp:24
+#: src/dump/helps.ycp:25
+#: src/zfcp/helps.ycp:24
+msgid ""
+"<p><b><big>Aborting Initialization:</big></b><br>\n"
+"Safely abort the configuration utility by pressing <b>Abort</b> now.</p>"
+msgstr ""
+"<p><b><big>Przerywanie inicjalizacji:</big></b><br>\n"
+"Aby bezpiecznie przerwać działania konfiguratora, proszę nacisnąć przycisk <b>Przerwij</b>.</p>"
 
-#~ msgid "Set DIAG O&ff"
-#~ msgstr "Wyłącz DIAG (&f)"
+#. Write dialog help 1/2
+#: src/dasd/helps.ycp:28
+msgid ""
+"<p><b><big>Saving Controller Configuration</big></b><br>\n"
+"Please wait...<br></p>"
+msgstr ""
+"<p><b><big>Zapisywanie konfiguracji kontrolera</big></b><br>\n"
+"Proszę czekać...<br></p>"
 
-#~ msgid "&Format"
-#~ msgstr "&Formatuj"
+#. Write dialog help 2/2
+#: src/dasd/helps.ycp:32
+#: src/dump/helps.ycp:35
+#: src/zfcp/helps.ycp:32
+msgid ""
+"<p><b><big>Aborting Saving:</big></b><br>\n"
+"Abort the save procedure by pressing <b>Abort</b>.\n"
+"An additional dialog informs whether it is safe to do so.</p>"
+msgstr ""
+"<p><b><big>Przerwanie zapisu:</big></b><br>\n"
+"Przerwij procedurę zapisu naciskając <b>Przerwij</b>.\n"
+"Dodatkowe okno będzie zawierało informację czy jest to bezpieczne.</p>"
 
-#~ msgid "Mi&nimum Channel"
-#~ msgstr "Mi&n. kanał"
+#. Disk selection dialog help 1/4
+#: src/dasd/helps.ycp:37
+#: src/dasd/helps.ycp:53
+msgid ""
+"<p><b><big>Configured DASD Disks</big></b><br>\n"
+"In this dialog, manage DASD disks on your system.</p>"
+msgstr ""
+"<p><b><big>Skonfigurowane dyski DASD</big></b><br>\n"
+"W tym oknie możesz zarządzać dyskami DASD w systemie.</p>"
 
-#~ msgid "Ma&ximum Channel"
-#~ msgstr "Ma&x. kanał"
+#. Disk selection dialog help 2/4
+#: src/dasd/helps.ycp:41
+#: src/dasd/helps.ycp:57
+msgid ""
+"<p>To filter disks that you want to have displayed, set\n"
+"the <b>Minimum Channel</b> and the <b>Maximum Channel</b>\n"
+"and click <b>Filter</b>.</p>"
+msgstr ""
+"<p>Aby filtrować wyświetlone dyski, ustaw <b>Min. kanał</b> oraz <b>Max. kanał</b>\n"
+"oraz naciśnij <b>Filtrowanie</b>.</p>"
 
-#~ msgid "&Filter"
-#~ msgstr "&Filtr"
+#. Disk selection dialog help 4/4
+#: src/dasd/helps.ycp:46
+msgid "<p>To configure a new DASD disk, click <b>Add</b>.</p>"
+msgstr "<p>Aby skonfigurować nowy dysk DASD, naciśnij <b>Dodaj</b>.</p>"
 
-#~ msgid "A&dd New Disk"
-#~ msgstr "&Dodaj nowy dysk"
+#. Disk selection dialog help 4/4
+#: src/dasd/helps.ycp:49
+msgid ""
+"<p>To remove a configured DASD disk, select it and click\n"
+"<b>Delete</b>.</p>"
+msgstr ""
+"<p>W celu usunięcia skonfigurowanego dysku DASD, zaznacz go i kliknij\n"
+"<b>Usuń</b>.</p>"
 
-#~ msgid "De&lete Disk"
-#~ msgstr "Usuń dysk (&l)"
+#. Disk selection dialog help 3/4
+#: src/dasd/helps.ycp:62
+msgid ""
+"<p>All actions can be performed on multiple disks at once. To select disks\n"
+"on which to perform an action, select the desired disks and click\n"
+"<b>Select or Deselect</b>.</p>"
+msgstr ""
+"<p>Wszystkie operacje mogą być wykonywane jednocześnie na wielu dyskach. \n"
+"Aby wybrać dyski na których chcesz wykonać operację, zaznacz je oraz kliknij \n"
+"<b>Zaznacz lub Odznacz</b>.</p>"
 
-#~ msgid "&Select or Deselect"
-#~ msgstr "Zaznacz lub odznacz (&s)"
+#. Disk selection dialog help 4/4
+#: src/dasd/helps.ycp:67
+msgid ""
+"<p>To perform an action on the selected disks, use <b>Perform Action</b>.\n"
+"The action will be performed immediately!</p>"
+msgstr ""
+"<p>Aby wykonać operację na wybranych dyskach, użyj <b>Wykonaj operację</b>.\n"
+"Operacja zostanie bezzwłocznie wykonana!</p>"
 
-#~ msgid "Perform &Action"
-#~ msgstr "Wykonaj &akcję"
+#. Disk add help 1/3
+#: src/dasd/helps.ycp:71
+msgid ""
+"<p><b><big>Add New DASD Disk</big></b><br>\n"
+"Enter the identifier of the disk to add. To specify the disk, use the\n"
+"<b>Channel Number</b> of the DASD disk.</p>"
+msgstr ""
+"<p><b><big>Dodaj nowy dysk DASD</big></b><br>\n"
+"Podaj identyfikator dysku do dodania. Aby określić dysk, użyj\n"
+"<b>Numer Kanału</b> dysku DASD.</p>"
 
-#~ msgid "No disk selected."
-#~ msgstr "Nie wybrano żadnego dysku."
+#. Disk add help 1/3
+#: src/dasd/helps.ycp:77
+msgid ""
+"<p>To specify if the disk will be formatted,\n"
+"use <b>Format the Disk</b>.</p>"
+msgstr ""
+"<p>Aby określić, czy dysk ma zostać sformatowany, użyj\n"
+"<b>Formatuj dysk</b>.</p>"
 
-#~ msgid "Disk %1 is not active."
-#~ msgstr "Dysk %1 nie jest aktywny."
+#. Disk add help 3/3, optional
+#: src/dasd/helps.ycp:83
+msgid ""
+"<p>To specify if DIAG mode will be used,\n"
+"use <b>Use DIAG</b>.</p>"
+msgstr ""
+"<p>Aby określić, czy ma zostać użyty tryb DIAG,\n"
+"użyj <b>Użycie DIAG</b>.</p>"
 
-#~ msgid "Disk %1 is not accessible for writing."
-#~ msgstr "Dysk %1 jest niedostępny do zapisu."
+#. Initialization dialog caption
+#: src/dasd/wizards.ycp:90
+#: src/zfcp/wizards.ycp:90
+msgid "Controller Configuration"
+msgstr "Konfiguracja sterownika"
 
-#, fuzzy
-#~ msgid "&Parallel Formatted Disks"
-#~ msgstr "Dyski równolegle formatowane"
+#. Dialog caption
+#: src/dump/dialogs.ycp:59
+msgid "Dump Device Management"
+msgstr "Zarządzanie urządzeniami zrzutu"
 
-#, fuzzy
-#~ msgid "&Write the volume label"
-#~ msgstr "Etykieta wo&luminu"
+#: src/dump/dialogs.ycp:63
+msgid "Loader Section Label"
+msgstr "Etykieta sekcji "
+
+#. Dialog caption
+#: src/dump/dialogs.ycp:155
+msgid "Add New Dump Device"
+msgstr "Dodaj nowe urządzenie zrzutu"
+
+#. Dialog caption
+#: src/dump/dialogs.ycp:157
+msgid "Edit Dump Device"
+msgstr "Edytuj urządzenie zrzutu"
+
+#. text entry
+#: src/dump/dialogs.ycp:166
+msgid "&Dump Device"
+msgstr "&Urządzenie zrzutu"
+
+#. check box, try to keep short
+#: src/dump/dialogs.ycp:171
+msgid "Install Dump Record Even If Disk Already &Formatted"
+msgstr "Zainstaluj urządzenie zrzutu nawet jeśli dysk jest już s&formatowany"
+
+#. yes-no popup
+#: src/dump/dialogs.ycp:199
+msgid "Really leave the dump device configuration?"
+msgstr "Czy na pewno opuścić konfigurację urządzeń zrzutu?"
+
+#: src/dump/dialogs.ycp:210
+#, ycp-format
+msgid ""
+"The disk %1 will formatted as a dump device now.\n"
+"Continue?"
+msgstr ""
+"Dysk %1 zostanie sformatowany jako urządzenie zrzutu.\n"
+"Czy kontynuować?"
+
+#. yes-no popup
+#: src/dump/dialogs.ycp:226
+msgid "Add another dump device?"
+msgstr "Czy dodać jeszcze jedno urządzenie zrzutu?"
+
+#. Read dialog help 1/2
+#: src/dump/helps.ycp:20
+msgid ""
+"<p><b><big>Initializing Dump Devices Configuration</big></b>\n"
+"<br>\n"
+"Please wait...<br></p>"
+msgstr ""
+"<p><b><big>Inicjalizacja konfiguracji urządzeń zrzutu</big></b><br>\n"
+"Proszę czekać...<br></p>"
+
+#. Write dialog help 1/2
+#: src/dump/helps.ycp:31
+msgid ""
+"<p><b><big>Saving Dump Device Configuration</big></b><br>\n"
+"Please wait...<br></p>"
+msgstr ""
+"<p><b><big>Zapisywanie konfiguracji urządzeń zrzutu</big></b><br>\n"
+"Proszę czekać...<br></p>"
+
+#. Dump dialog symmart help 1/2
+#: src/dump/helps.ycp:42
+msgid ""
+"<p><b><big>Configured Dump Devices</big></b><br>\n"
+"This dialog shows configured dump devices for your system.</p>"
+msgstr ""
+"<p><b><big>Skonfigurowane urządzenia zrzutu</big></b><br>\n"
+"To okno pokazuje urządzenia zrzutu skonfigurowane w systemie.</p>"
+
+#. Dump dialog symmart help 2/2
+#: src/dump/helps.ycp:46
+msgid ""
+"<p>To add configure a new dump device, click <b>Add</b>. To edit an\n"
+"already configured dump device, select it and click <b>Edit</b>.\n"
+"To remove a configured dump device, select it and click <b>Delete</b>."
+msgstr "<p>Aby dodać nowe urządzenie zrzutu, proszę nacisnąć <b>Dodaj</b>. Aby zmienić już skonfigurowane urządzenie zrzutu, proszę wybrać je, a następnie nacisnąć <b>Edytuj</b>. Aby usunąć skonfigurowane urządzenie zrzutu, proszę wybrać je, a następnie nacisnąć <b>Edytuj</b>. </p>"
+
+#. Disk add help 1/3
+#: src/dump/helps.ycp:52
+msgid ""
+"<p><b><big>Add New Dump Device</big></b><br>\n"
+"Prepare a device for use as an S/390 dump device. Supported devices are\n"
+"ECKD DASD and zfcp disks. Set <b>Dump Device</b> to select the device\n"
+"to format. If the device is already formatted\n"
+"or configured, setting\n"
+"<b>Install Dump Record Even If Disk Already &Formatted</b> is required.</p>"
+msgstr ""
+"<p><b><big>Dodawanie nowego urządzenia zrzutu</big></b><br>\n"
+"Proszę przygotować urzadzenie, które zostanie skonfigurowane jako urządzenei zrzutu S/390. Następnie, za pomocą pola <b>Urządzenie zrzutu</b>, proszę wybrać urządzenie, które zostanie sformatowane. Jeśli urządzenie jest już sformatowane lub skonfigurowane, należy zaznaczyć pole <b>Zainstaluj urządzenie zrzutu nawet jeśli dysk jest już sformatowany</b>.</p>"
+
+#. summary text, %1 is channel ID (number),
+#. %2 is Yes or No
+#: src/modules/DASDController.ycp:197
+#, ycp-format
+msgid "Channel ID: %1, Format: %2"
+msgstr "ID kanału: %1, Formatowanie: %2"
+
+#. summary text, %1 is channel ID (number),
+#. %2 and %3 are Yes or No
+#: src/modules/DASDController.ycp:206
+#, ycp-format
+msgid "Channel ID: %1, Format: %2, Use DIAG: %3"
+msgstr "ID kanału: %1, Formatowanie: %2, Użycie DIAG: %3"
+
+#. popup label
+#: src/modules/DASDController.ycp:275
+msgid "Reading Configured DASD Disks"
+msgstr "Czytanie skonfigurowanych dyskow DASD"
+
+#. error report, %1 is device identification
+#: src/modules/DASDController.ycp:362
+#: src/modules/ZFCPController.ycp:282
+#, ycp-format
+msgid "%1: sysfs not mounted."
+msgstr "%1: nie zamontowano sysfs."
+
+#. error report, %1 is device identification
+#: src/modules/DASDController.ycp:366
+#: src/modules/ZFCPController.ycp:286
+#, ycp-format
+msgid "%1: Invalid status for <online>"
+msgstr "%1: niepoprawny status dla <online>"
+
+#. error report, %1 is device identification
+#: src/modules/DASDController.ycp:370
+#: src/modules/ZFCPController.ycp:290
+#, ycp-format
+msgid "%1: No device found for <ccwid>"
+msgstr "%1: Nie znaleziono urządzenia dla <ccwid>"
+
+#. error report, %1 is device identification
+#: src/modules/DASDController.ycp:374
+#: src/modules/ZFCPController.ycp:294
+#, ycp-format
+msgid "%1: Could not change state of the device"
+msgstr "%1: Nie można zmienić stanu urządzenia"
+
+#. error report, %1 is device identification, %2 is integer code
+#: src/modules/DASDController.ycp:378
+#: src/modules/ZFCPController.ycp:298
+#, ycp-format
+msgid "%1: Unknown error %2"
+msgstr "%1: nieznany błąd %2"
+
+#. error report, %1 is exit code of the command (integer)
+#: src/modules/DASDController.ycp:475
+#: src/modules/DASDController.ycp:559
+#, ycp-format
+msgid "Disks formatting failed. Exit code: %1"
+msgstr "Nie powiodło się formatowanie dysku. Kod wyjścia: %1"
+
+#. progress bar, %1 is device name, %2 and %3
+#. integers,
+#. eg. Formatting /dev/dasda: cylinder 123 of 12334 done
+#: src/modules/DASDController.ycp:537
+#, ycp-format
+msgid "Formatting %1: cylinder %2 of %3 done"
+msgstr "Formatowanie %1: cylinder %2 z %3"
+
+#. error description
+#: src/modules/Dump.ycp:123
+#: src/modules/Dump.ycp:159
+msgid "Disk unusable."
+msgstr "Dysk niezdatny do użycia."
+
+#. error description
+#: src/modules/Dump.ycp:126
+#: src/modules/Dump.ycp:162
+msgid "Support program not installed."
+msgstr "Program pomocniczy nie jest zainstalowany."
+
+#. error description, %1 is error code (integer)
+#: src/modules/Dump.ycp:129
+#, ycp-format
+msgid "Error code from support program: %1."
+msgstr "Numer błędu programu pomocniczego: %1"
+
+#. error report, %1 is device name, %2 error description
+#: src/modules/Dump.ycp:131
+#: src/modules/Dump.ycp:167
+#, ycp-format
+msgid ""
+"Cannot create dump device %1:\n"
+"%2"
+msgstr ""
+"Nie można utworzyć urządzenia zrzutu %1:\n"
+"%2"
+
+#. error description
+#: src/modules/Dump.ycp:165
+msgid "Error code from support program."
+msgstr "Numer błędu programu pomocniczego: %1"
+
+#. summary text, %1 is channel ID, %1 is WWPN, %3 is LUN
+#. (all of them are numbers)
+#: src/modules/ZFCPController.ycp:176
+#, ycp-format
+msgid "Channel ID: %1, WWPN: %2, ZFCP LUN: %3"
+msgstr "ID kanału: %1, WWPN: %2, ZFCP LUN: %3"
+
+#. popup label
+#: src/modules/ZFCPController.ycp:249
+msgid "Reading Configured ZFCP Disks"
+msgstr "Czytanie skonfigurowanych dysków ZFCP"
+
+#. Dialog caption
+#: src/zfcp/dialogs.ycp:164
+msgid "Configured ZFCP Disks"
+msgstr "Skonfigurowane dyski ZFCP"
+
+#. table header
+#: src/zfcp/dialogs.ycp:184
+msgid "Channel Number"
+msgstr "Numer kanału"
+
+#. table header
+#: src/zfcp/dialogs.ycp:186
+msgid "WWPN"
+msgstr "WWPN"
+
+#. table header
+#: src/zfcp/dialogs.ycp:188
+msgid "zfcp-LUN"
+msgstr "zfcp-LUN"
+
+#. popup qestion, %1 is device name (eg. /dev/sda)
+#: src/zfcp/dialogs.ycp:248
+#, ycp-format
+msgid "Remove disk %1?"
+msgstr "Usunąć dysk %1?"
+
+#. Dialog caption
+#: src/zfcp/dialogs.ycp:287
+msgid "Add New ZFCP Disk"
+msgstr "Dodanie nowego dysku ZFCP"
+
+#. text entry
+#: src/zfcp/dialogs.ycp:343
+msgid "&WWPN"
+msgstr "&WWPN"
+
+#. text entry
+#: src/zfcp/dialogs.ycp:347
+msgid "&FCP-LUN"
+msgstr "&FCP-LUN"
+
+#. Read dialog help 1/2
+#: src/zfcp/helps.ycp:20
+msgid ""
+"<p><b><big>Initializing ZFCP Disk Configuration</big></b><br>\n"
+"Please wait...<br></p>"
+msgstr ""
+"<p><b><big>Inicjalizacja konfiguracji dysków ZFCP</big></b><br>\n"
+"Proszę czekać...<br></p>"
+
+#. Write dialog help 1/2
+#: src/zfcp/helps.ycp:28
+msgid ""
+"<p><b><big>Saving ZFCP Disk Configuration</big></b><br>\n"
+"Please wait...<br></p>"
+msgstr ""
+"<p><b><big>Zapisywanie konfiguracji dysków ZFCP</big></b><br>\n"
+"Proszę czekać...<br></p>"
+
+#. Disk selection dialog help 1/3
+#: src/zfcp/helps.ycp:37
+msgid ""
+"<p><b><big>Configured ZFCP Disks</big></b><br>\n"
+"In this dialog, manage ZFCP disks on your system.</p>"
+msgstr ""
+"<p><b><big>Skonfigurowane dyski ZFCP</big></b><br>\n"
+"W tym oknie można zarządzać dyskami ZFCP w Twoim systemie.</p>"
+
+#. Disk selection dialog help 2/3
+#: src/zfcp/helps.ycp:41
+msgid "<p>To configure a new ZFCP disk, click <b>Add</b>.</p>"
+msgstr "<p>Aby skonfigurować nowy dysk ZFCP, kliknij <b>Dodaj</b>.</p>"
+
+#. Disk selection dialog help 3/3
+#: src/zfcp/helps.ycp:44
+msgid ""
+"<p>To remove a configured ZFCP disk, select it and click\n"
+"<b>Delete</b>.</p>"
+msgstr ""
+"<p>Aby usunąć skonfigurowany dysk ZFCP, zaznacz go i kliknij\n"
+"<b>Usuń</b>.</p>"
+
+#. Disk selection dialog Warning
+#: src/zfcp/helps.ycp:48
+#: src/zfcp/helps.ycp:59
+msgid "<h1>Warning</h1>"
+msgstr "<h1>Uwaga</h1>"
+
+#: src/zfcp/helps.ycp:48
+msgid ""
+"<p>When accessing a ZFCP-device\n"
+"<b>READ</b>/<b>WRITE</b>please make sure that this access is exclusive.\n"
+"Otherwise the potential risk of data corruption is there.</p>"
+msgstr "<p>Podczas korzystania z urządzenia ZFCP w trybie <b>READ</b>/<b>WRITE</b>, proszę upewnić się, że dostęp do urządzenia jest wyłączny. W przeciwnym razie istnieje ryzyko utraty danych.</p>"
+
+#. Disk add help 1/1
+#: src/zfcp/helps.ycp:53
+msgid ""
+"<p><b><big>Add New ZFCP Disk</big></b><br>\n"
+"Enter the identifier of the disk to add. Enter the\n"
+"<b>Channel Number</b> of the ZFCP controller, the worldwide port number\n"
+"(<b>WWPN</b>), and the <b>FCP-LUN</b> number.</p>"
+msgstr ""
+"<p><b><big>Dodaj nowy dysk ZFCP</big></b><br>\n"
+"Wprowadź identyfikator dysku do dodania. Podaj \n"
+"<b>Numer Kanału</b> kontrolera ZFCP, globalny numer portu\n"
+"(<b>WWPN</b>) oraz numer <b>FCP-LUN</b>.</p>"
+
+#: src/zfcp/helps.ycp:60
+msgid ""
+"<p>When accessing a ZFCP device\n"
+"<b>READ</b>/<b>WRITE</b>, make sure that this access is exclusive.\n"
+"Otherwise there is a potential risk of data corruption.</p>"
+msgstr "<p>Podczas korzystania z urządzenia ZFCP w trybie <b>READ</b>/<b>WRITE</b>, proszę upewnić się, że dostęp do urządzenia jest wyłączny. W przeciwnym razie istnieje ryzyko utraty danych.</p>"
+
+#~ msgid "Disk Activation"
+#~ msgstr "Aktywacja dysku"
+#~ msgid "Configure &iSCSI Disks"
+#~ msgstr "Sonfiguruj dyski &iSCSI"
 
 #, fuzzy
 #~ msgid ""
@@ -143,142 +731,6 @@ msgstr "Sonfiguruj dyski &iSCSI"
 #~ msgstr ""
 #~ "Czy na pewno wywołać polecenie dasdfmt na dysku %1?\n"
 #~ "Wszystkie dane na tym dysku zostaną utracone.\n"
-
-#~ msgid "Add New DASD Disk"
-#~ msgstr "Dodaj nowy dysk DASD"
-
-#~ msgid "&Channel Number"
-#~ msgstr "Numer kanału (&c)"
-
-#~ msgid "Format the Disk"
-#~ msgstr "Formatuj dysk"
-
-#~ msgid "Use &DIAG"
-#~ msgstr "Użycie &DIAG"
-
-#~ msgid ""
-#~ "Really leave the ZFCP disk configuration without saving?\n"
-#~ "All changes will be lost."
-#~ msgstr ""
-#~ "Czy na pewno chcesz opuścić konfigurację dysku ZFCP bez zapisu?\n"
-#~ "Wszystkie zmiany zostaną stracone."
-
-#~ msgid ""
-#~ "<p><b><big>Initializing Controller Configuration</big></b><br>\n"
-#~ "Please wait...<br></p>"
-#~ msgstr ""
-#~ "<p><b><big>Inicjalizacja konfiguracji kontrolera</big></b><br>\n"
-#~ "Proszę czekać...<br></p>"
-
-#~ msgid ""
-#~ "<p><b><big>Aborting Initialization:</big></b><br>\n"
-#~ "Safely abort the configuration utility by pressing <b>Abort</b> now.</p>"
-#~ msgstr ""
-#~ "<p><b><big>Przerywanie inicjalizacji:</big></b><br>\n"
-#~ "Aby bezpiecznie przerwać działania konfiguratora, proszę nacisnąć przycisk <b>Przerwij</b>.</p>"
-
-#~ msgid ""
-#~ "<p><b><big>Saving Controller Configuration</big></b><br>\n"
-#~ "Please wait...<br></p>"
-#~ msgstr ""
-#~ "<p><b><big>Zapisywanie konfiguracji kontrolera</big></b><br>\n"
-#~ "Proszę czekać...<br></p>"
-
-#~ msgid ""
-#~ "<p><b><big>Aborting Saving:</big></b><br>\n"
-#~ "Abort the save procedure by pressing <b>Abort</b>.\n"
-#~ "An additional dialog informs whether it is safe to do so.</p>"
-#~ msgstr ""
-#~ "<p><b><big>Przerwanie zapisu:</big></b><br>\n"
-#~ "Przerwij procedurę zapisu naciskając <b>Przerwij</b>.\n"
-#~ "Dodatkowe okno będzie zawierało informację czy jest to bezpieczne.</p>"
-
-#~ msgid ""
-#~ "<p><b><big>Configured DASD Disks</big></b><br>\n"
-#~ "In this dialog, manage DASD disks on your system.</p>"
-#~ msgstr ""
-#~ "<p><b><big>Skonfigurowane dyski DASD</big></b><br>\n"
-#~ "W tym oknie możesz zarządzać dyskami DASD w systemie.</p>"
-
-#~ msgid ""
-#~ "<p>To filter disks that you want to have displayed, set\n"
-#~ "the <b>Minimum Channel</b> and the <b>Maximum Channel</b>\n"
-#~ "and click <b>Filter</b>.</p>"
-#~ msgstr ""
-#~ "<p>Aby filtrować wyświetlone dyski, ustaw <b>Min. kanał</b> oraz <b>Max. kanał</b>\n"
-#~ "oraz naciśnij <b>Filtrowanie</b>.</p>"
-
-#~ msgid "<p>To configure a new DASD disk, click <b>Add</b>.</p>"
-#~ msgstr "<p>Aby skonfigurować nowy dysk DASD, naciśnij <b>Dodaj</b>.</p>"
-
-#~ msgid ""
-#~ "<p>To remove a configured DASD disk, select it and click\n"
-#~ "<b>Delete</b>.</p>"
-#~ msgstr ""
-#~ "<p>W celu usunięcia skonfigurowanego dysku DASD, zaznacz go i kliknij\n"
-#~ "<b>Usuń</b>.</p>"
-
-#~ msgid ""
-#~ "<p>All actions can be performed on multiple disks at once. To select disks\n"
-#~ "on which to perform an action, select the desired disks and click\n"
-#~ "<b>Select or Deselect</b>.</p>"
-#~ msgstr ""
-#~ "<p>Wszystkie operacje mogą być wykonywane jednocześnie na wielu dyskach. \n"
-#~ "Aby wybrać dyski na których chcesz wykonać operację, zaznacz je oraz kliknij \n"
-#~ "<b>Zaznacz lub Odznacz</b>.</p>"
-
-#~ msgid ""
-#~ "<p>To perform an action on the selected disks, use <b>Perform Action</b>.\n"
-#~ "The action will be performed immediately!</p>"
-#~ msgstr ""
-#~ "<p>Aby wykonać operację na wybranych dyskach, użyj <b>Wykonaj operację</b>.\n"
-#~ "Operacja zostanie bezzwłocznie wykonana!</p>"
-
-#~ msgid ""
-#~ "<p><b><big>Add New DASD Disk</big></b><br>\n"
-#~ "Enter the identifier of the disk to add. To specify the disk, use the\n"
-#~ "<b>Channel Number</b> of the DASD disk.</p>"
-#~ msgstr ""
-#~ "<p><b><big>Dodaj nowy dysk DASD</big></b><br>\n"
-#~ "Podaj identyfikator dysku do dodania. Aby określić dysk, użyj\n"
-#~ "<b>Numer Kanału</b> dysku DASD.</p>"
-
-#~ msgid ""
-#~ "<p>To specify if the disk will be formatted,\n"
-#~ "use <b>Format the Disk</b>.</p>"
-#~ msgstr ""
-#~ "<p>Aby określić, czy dysk ma zostać sformatowany, użyj\n"
-#~ "<b>Formatuj dysk</b>.</p>"
-
-#~ msgid ""
-#~ "<p>To specify if DIAG mode will be used,\n"
-#~ "use <b>Use DIAG</b>.</p>"
-#~ msgstr ""
-#~ "<p>Aby określić, czy ma zostać użyty tryb DIAG,\n"
-#~ "użyj <b>Użycie DIAG</b>.</p>"
-
-#~ msgid "Controller Configuration"
-#~ msgstr "Konfiguracja sterownika"
-
-#, fuzzy
-#~ msgid "Dump Device Management"
-#~ msgstr "Zarządzanie dyskami DASD"
-
-#, fuzzy
-#~ msgid "Loader Section Label"
-#~ msgstr "&Wczytaj zestaw"
-
-#, fuzzy
-#~ msgid "Add New Dump Device"
-#~ msgstr "Dodaj nowy dysk DASD"
-
-#, fuzzy
-#~ msgid "Edit Dump Device"
-#~ msgstr "Urządzenie wirtualne"
-
-#, fuzzy
-#~ msgid "&Dump Device"
-#~ msgstr "Urzą&dzenie"
 
 #, fuzzy
 #~ msgid "&ZIPL section name"
@@ -301,155 +753,6 @@ msgstr "Sonfiguruj dyski &iSCSI"
 #~ "Wszystkie zmiany zostaną stracone."
 
 #, fuzzy
-#~ msgid ""
-#~ "<p><b><big>Initializing Dump Devices Configuration</big></b>\n"
-#~ "<br>\n"
-#~ "Please wait...<br></p>"
-#~ msgstr ""
-#~ "<p><b><big>Inicjalizacja konfiguracji serwera DNS</big></b><br>\n"
-#~ "Proszę czekać...<br></p>"
-
-#, fuzzy
-#~ msgid ""
-#~ "<p><b><big>Saving Dump Devices Configuration</big></b><br>\n"
-#~ "Please wait...<br></p>"
-#~ msgstr ""
-#~ "<p><b><big>Zapisywanie konfiguracji serwera DNS</big></b><br>\n"
-#~ "Proszę czekać...<br></p>"
-
-#, fuzzy
-#~ msgid ""
-#~ "<p><b><big>Configured Dump Devices</big></b><br>\n"
-#~ "This dialog shows configured dump devices fo your system.</p>"
-#~ msgstr ""
-#~ "<p><b><big>Skonfigurowane dyski DASD</big></b><br>\n"
-#~ "W tym oknie możesz zarządzać dyskami DASD w systemie.</p>"
-
-#, fuzzy
-#~ msgid ""
-#~ "<p>To add configure a new dump device, click <b>Add</b>. To edit an\n"
-#~ "already configured dump device, select it and click <b>Edit</b>.\n"
-#~ "To remove a configured dump device, select it and click <b>Delete</b>."
-#~ msgstr ""
-#~ "<p>Aby dodać nowy forwarder, należy podać jego <b>Adres IP</b>,a potem kliknąć <b>Dodaj</b>. \n"
-#~ "Aby usunąć skonfigurowany forwarder, należy go wybrać i kliknąć <b>Usuń</b>.</p>"
-
-#, fuzzy
 #~ msgid "Dump Configuration"
 #~ msgstr "Konfiguracja usług sms"
 
-#~ msgid "Channel ID: %1, Format: %2"
-#~ msgstr "ID kanału: %1, Formatowanie: %2"
-
-#~ msgid "Channel ID: %1, Format: %2, Use DIAG: %3"
-#~ msgstr "ID kanału: %1, Formatowanie: %2, Użycie DIAG: %3"
-
-#~ msgid "Reading Configured DASD Disks"
-#~ msgstr "Czytanie skonfigurowanych dyskow DASD"
-
-#~ msgid "%1: sysfs not mounted."
-#~ msgstr "%1: nie zamontowano sysfs."
-
-#~ msgid "%1: Invalid status for <online>"
-#~ msgstr "%1: niepoprawny status dla <online>"
-
-#~ msgid "%1: No device found for <ccwid>"
-#~ msgstr "%1: Nie znaleziono urządzenia dla <ccwid>"
-
-#~ msgid "%1: Could not change state of the device"
-#~ msgstr "%1: Nie można zmienić stanu urządzenia"
-
-#~ msgid "%1: Unknown error %2"
-#~ msgstr "%1: nieznany błąd %2"
-
-#~ msgid "Disks formatting failed. Exit code: %1"
-#~ msgstr "Nie powiodło się formatowanie dysku. Kod wyjścia: %1"
-
-#~ msgid "Formatting %1: cylinder %2 of %3 done"
-#~ msgstr "Formatowanie %1: cylinder %2 z %3"
-
-#, fuzzy
-#~ msgid "Disk unuseable"
-#~ msgstr "Wyłączone"
-
-#, fuzzy
-#~ msgid "Support program not installed"
-#~ msgstr "program nie jest zainstalowany"
-
-#, fuzzy
-#~ msgid ""
-#~ "Cannot create dump device %1:\n"
-#~ "%2"
-#~ msgstr "Nie można utworzyć użytkownika UML %1"
-
-#~ msgid "Channel ID: %1, WWPN: %2, ZFCP LUN: %3"
-#~ msgstr "ID kanału: %1, WWPN: %2, ZFCP LUN: %3"
-
-#~ msgid "Reading Configured ZFCP Disks"
-#~ msgstr "Czytanie skonfigurowanych dysków ZFCP"
-
-#~ msgid "Configured ZFCP Disks"
-#~ msgstr "Skonfigurowane dyski ZFCP"
-
-#~ msgid "Channel Number"
-#~ msgstr "Numer kanału"
-
-#~ msgid "WWPN"
-#~ msgstr "WWPN"
-
-#~ msgid "zfcp-LUN"
-#~ msgstr "zfcp-LUN"
-
-#~ msgid "Remove disk %1?"
-#~ msgstr "Usunąć dysk %1?"
-
-#~ msgid "Add New ZFCP Disk"
-#~ msgstr "Dodanie nowego dysku ZFCP"
-
-#~ msgid "&WWPN"
-#~ msgstr "&WWPN"
-
-#~ msgid "&FCP-LUN"
-#~ msgstr "&FCP-LUN"
-
-#~ msgid ""
-#~ "<p><b><big>Initializing ZFCP Disk Configuration</big></b><br>\n"
-#~ "Please wait...<br></p>"
-#~ msgstr ""
-#~ "<p><b><big>Inicjalizacja konfiguracji dysków ZFCP</big></b><br>\n"
-#~ "Proszę czekać...<br></p>"
-
-#~ msgid ""
-#~ "<p><b><big>Saving ZFCP Disk Configuration</big></b><br>\n"
-#~ "Please wait...<br></p>"
-#~ msgstr ""
-#~ "<p><b><big>Zapisywanie konfiguracji dysków ZFCP</big></b><br>\n"
-#~ "Proszę czekać...<br></p>"
-
-#~ msgid ""
-#~ "<p><b><big>Configured ZFCP Disks</big></b><br>\n"
-#~ "In this dialog, manage ZFCP disks on your system.</p>"
-#~ msgstr ""
-#~ "<p><b><big>Skonfigurowane dyski ZFCP</big></b><br>\n"
-#~ "W tym oknie można zarządzać dyskami ZFCP w Twoim systemie.</p>"
-
-#~ msgid "<p>To configure a new ZFCP disk, click <b>Add</b>.</p>"
-#~ msgstr "<p>Aby skonfigurować nowy dysk ZFCP, kliknij <b>Dodaj</b>.</p>"
-
-#~ msgid ""
-#~ "<p>To remove a configured ZFCP disk, select it and click\n"
-#~ "<b>Delete</b>.</p>"
-#~ msgstr ""
-#~ "<p>Aby usunąć skonfigurowany dysk ZFCP, zaznacz go i kliknij\n"
-#~ "<b>Usuń</b>.</p>"
-
-#~ msgid ""
-#~ "<p><b><big>Add New ZFCP Disk</big></b><br>\n"
-#~ "Enter the identifier of the disk to add. Enter the\n"
-#~ "<b>Channel Number</b> of the ZFCP controller, the worldwide port number\n"
-#~ "(<b>WWPN</b>), and the <b>FCP-LUN</b> number.</p>"
-#~ msgstr ""
-#~ "<p><b><big>Dodaj nowy dysk ZFCP</big></b><br>\n"
-#~ "Wprowadź identyfikator dysku do dodania. Podaj \n"
-#~ "<b>Numer Kanału</b> kontrolera ZFCP, globalny numer portu\n"
-#~ "(<b>WWPN</b>) oraz numer <b>FCP-LUN</b>.</p>"
