@@ -1,21 +1,23 @@
+# translation of scanner.po to 
 # translation of scanner.po to
 # Polish message file for YaST2 (@memory@).
 # Copyright (C) 2003 SuSE Linux AG.
+# Wojciech Kapusta <wojciech@aviary.pl>, 2006.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: scanner\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-02-03 11:50+0100\n"
-"PO-Revision-Date: 2006-03-18 23:31+0100\n"
-"Last-Translator: \n"
+"PO-Revision-Date: 2006-03-23 12:27+0100\n"
+"Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Poedit-Bookmarks: -1,142,-1,-1,-1,-1,-1,-1,-1,-1\n"
-"X-Generator: KBabel 1.11.2\n"
+"X-Generator: KBabel 1.9.1\n"
 
 #. Message of a Report::Error where %1 will be replaced by the package name.
 #. Only a simple message because this error does not happen on a normal system
@@ -296,7 +298,7 @@ msgstr "Nie wykryto żadnego skanera i nie istnieją aktywne skanery ani sterown
 #. Scanner model list firmware entry for models which require a firmware upload:
 #: src/Scanner.ycp:1177
 msgid "Firmware upload required."
-msgstr "Wymagane jest załadowanie firmware."
+msgstr "Wymagane jest wczytanie pliku firmware (oprogramowanie producenta)."
 
 #. Scanner model list status entry for "good" supported models:
 #. %1 will be replaced by the backend (scanner driver) name
@@ -383,18 +385,17 @@ msgid ""
 "The man page of the driver describes how to configure it for firmware upload.\n"
 "The following command shows the man page for your driver:\n"
 msgstr ""
-"Plik firmware zawiera oprogramowanie, które musi zostać załadowane do pamięci skanera.\n"
-"Bez firmware skaner nie może działać.\n"
+"Plik firmware (z oprogramowaniem producenta) zawiera oprogramowanie, które musi zostać wczytane do pamięci skanera. Bez pliku firmware skaner nie może działać.\n"
 "\n"
-"Ponieważ firmware jest objęty licencją przez producenta skanera, SuSE Linux nie może\n"
+"Ponieważ firmware jest objęty licencją przez producenta skanera, SUSE Linux nie może\n"
 "go dostarczać. Plik firmware jest zwykle dostarczany na płycie CD od producenta.\n"
 "Możliwe też, że można go pobrać z witryny WWW producenta. Proszę zapytać producenta,\n"
 "w jaki sposób zdobyć plik firmware dla danego skanera. Dodatkowe użyteczne informacje\n"
 "można znaleźć na stronie WWW projektu SANE (http://www.sane-project.org/).\n"
 "\n"
 "Po zdobyciu pliku firmware, należy ręcznie skonfigurować sterownik.\n"
-"Podręcznik man dla sterownika opisuje, w jaki sposób skonfigurować go do\n"
-"załadowana firmware. Podręcznik man dla sterownika jest dostępny po wywołaniu polecenia:\n"
+"Podręcznik systemowy dla sterownika opisuje, w jaki sposób skonfigurować go do\n"
+"odczytywania pliku firmware. Podręcznik systemowy dla sterownika jest dostępny po wywołaniu polecenia:\n"
 
 #. Message of a Popup::YesNo for scanners which should be set up with the hpaio driver.
 #. Do not change or translate "hpaio", it is a driver name.
@@ -514,7 +515,7 @@ msgstr "Sprawdzanie czy konieczna jest instalacja dodatkowych pakietów"
 #. 2. progress stage name of a Progress::New:
 #: src/Scanner.ycp:1545
 msgid "Check whether firmware upload is required"
-msgstr "Sprawdzanie czy konieczne jest ładowanie firmware"
+msgstr "Sprawdzenie, czy konieczne jest wczytywanie pliku firmware"
 
 #. 3. progress stage name of a Progress::New:
 #: src/Scanner.ycp:1547
@@ -539,7 +540,7 @@ msgstr "Sprawdzanie czy konieczna jest instalacja dodatkowych pakietów..."
 #. 2. progress step progress bar title of a Progress::New:
 #: src/Scanner.ycp:1558
 msgid "Checking whether firmware upload is required..."
-msgstr "Sprawdzanie czy konieczne jest ładowanie firmware..."
+msgstr "Sprawdzanie, czy konieczne jest wczytywanie pliku firmware..."
 
 #. 3. progress step progress bar title of a Progress::New:
 #: src/Scanner.ycp:1560
@@ -585,7 +586,7 @@ msgstr "Przerwane"
 #. Header of a Popup::AnyMessage for scanners which require a firmware upload:
 #: src/Scanner.ycp:1614
 msgid "Firmware Upload Required"
-msgstr "Wymagane jest załadowanie firmware"
+msgstr "Wymagane jest wczytanie pliku firmware"
 
 #. Message of a Report::Warning for scanners which should be set up with the hpaio backend.
 #. Only a simple message because before there was a Popup::YesNo
@@ -1634,9 +1635,9 @@ msgid ""
 "</p>"
 msgstr ""
 "<p>\n"
-"<b><big>Załadowanie firmware</big></b><br>\n"
-"Niektóre modele wymagają załadowania firmware'u.\n"
-"W takim przypadku wyświatlany jest odpowiedni tekst wyjasniający.\n"
+"<b><big>Wczytanie pliku firmware</big></b><br>\n"
+"Niektóre modele wymagają wczytania pliku firmware (z oprogramowaniem producenta).\n"
+"W takim przypadku wyświetlany jest odpowiedni tekst wyjaśniający.\n"
 "</p>"
 
 #. ConfigureBackend dialog help 4/4:
