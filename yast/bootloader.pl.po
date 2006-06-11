@@ -16,15 +16,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bootloader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-13 14:11+0100\n"
-"PO-Revision-Date: 2006-04-07 14:42+0200\n"
-"Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
+"POT-Creation-Date: 2006-05-24 15:40+0200\n"
+"PO-Revision-Date: 2006-06-11 00:58+0100\n"
+"Last-Translator: Stanisław Małolepszy <smalolepszy@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: KBabel 1.9.1\n"
 
 #. This is the headline of the bootfloppy module
@@ -43,7 +42,8 @@ msgid "Creating USB modules floppy"
 msgstr "Tworzenie dyskietki z modułami USB"
 
 #. image text - label
-#: src/clients/bootfloppy.ycp:62 src/clients/bootfloppy.ycp:69
+#: src/clients/bootfloppy.ycp:62
+#: src/clients/bootfloppy.ycp:69
 msgid "Creating IDE/RAID/SCSI modules floppy"
 msgstr "Tworzenie dyskietki z modułami IDE / RAID / SCSI"
 
@@ -135,13 +135,11 @@ msgstr ""
 #: src/clients/bootfloppy.ycp:241
 msgid ""
 "<p><b>Boot Floppies</b><br>\n"
-"These boot floppies can be used to boot your installed system or a rescue "
-"system\n"
+"These boot floppies can be used to boot your installed system or a rescue system\n"
 "(from the first CD-ROM or the rescue floppy).</p>"
 msgstr ""
 "<p><b>Dyskietki startowe</b><br>\n"
-"Dyskietki startowe mogą być użyte do uruchomienia zainstalowanego systemu "
-"lub\n"
+"Dyskietki startowe mogą być użyte do uruchomienia zainstalowanego systemu lub\n"
 "jego naprawy (przy użyciu pierwszej płyty CD lub dyskietki ratunkowej).</p>"
 
 #. help text 3/5
@@ -163,8 +161,7 @@ msgstr ""
 msgid ""
 "<p><b>Module Floppies</b><br>\n"
 "All SuSE kernels are modularized. This means that most drivers\n"
-"are loaded as kernel modules on demand. Because the space on one single "
-"floppy\n"
+"are loaded as kernel modules on demand. Because the space on one single floppy\n"
 "is not sufficient for all kernel modules, consider creating one\n"
 "of the <b>module floppies</b>.</p>"
 msgstr ""
@@ -178,8 +175,7 @@ msgstr ""
 #: src/clients/bootfloppy.ycp:263
 msgid ""
 "<p><b>Custom Floppy</b><br>\n"
-"To create a floppy from another image, select <b>Custom Floppy</b>. You "
-"will\n"
+"To create a floppy from another image, select <b>Custom Floppy</b>. You will\n"
 "be prompted for the file containing the floppy image.</p>"
 msgstr ""
 "<p><b>Dyskietka niestandardowa</b><br>\n"
@@ -220,8 +216,7 @@ msgid ""
 "If your computer has multiple floppy drives, select the correct device.</p>\n"
 msgstr ""
 "<p><b><big>Stacja dyskietek</big></b><br>\n"
-"Jeśli ten komputer ma kilka napędów dyskietek, proszę wybrać odpowiednie "
-"urządzenie.</p>\n"
+"Jeśli ten komputer ma kilka napędów dyskietek, proszę wybrać odpowiednie urządzenie.</p>\n"
 
 #. help text 3/4
 #: src/clients/bootfloppy.ycp:297
@@ -268,8 +263,7 @@ msgstr ""
 msgid ""
 "<p><b><big>Select Floppy Image:</big></b><br>\n"
 "Enter the URL from which to download the floppy image.\n"
-"If necessary, also specify the user name and password for authentication.</"
-"p>\n"
+"If necessary, also specify the user name and password for authentication.</p>\n"
 msgstr ""
 "<p><b><big>Wybierz obraz dyskietki</big></b><br>\n"
 "Proszę podać adres URL, z którego należy pobrać obraz dyskietki.\n"
@@ -498,7 +492,8 @@ msgstr ""
 "\n"
 
 #. command line error report, %1 is section name
-#: src/clients/bootloader.ycp:80 src/clients/bootloader.ycp:121
+#: src/clients/bootloader.ycp:80
+#: src/clients/bootloader.ycp:121
 #, ycp-format
 msgid "Section %1 not found."
 msgstr "Sekcja %1 nie została znaleziona."
@@ -575,76 +570,110 @@ msgid "The value of the option"
 msgstr "Wartość opcji"
 
 #. progress step title
-#: src/clients/bootloader_finish.ycp:46
+#: src/clients/bootloader_finish.ycp:47
 msgid "Saving bootloader configuration..."
 msgstr "Zapisywanie konfiguracji programu rozruchowego..."
 
 #. for s390:
 #. Message that will be displayed along with information
 #. how the boot loader was installed
-#: src/clients/bootloader_finish.ycp:95
+#: src/clients/bootloader_finish.ycp:97
 msgid ""
 "\n"
-"Your system will now be shut down.\n"
+"Your system will now shut down.\n"
 "After shutdown, reload the system\n"
-"with the load address of your root DASD.\n"
+"with the load address of your root DASD or\n"
+"the load adress of your zFCP device.\n"
+"Then reconnect and run the following:\n"
+"/usr/lib/YaST2/startup/YaST2.ssh\n"
+"For details, read the related chapter\n"
+"in the documentation.\n"
 msgstr ""
 "\n"
 "System zostanie teraz zamknięty.\n"
 "Po zamknięciu proszę uruchomić system podając \n"
-"adres do pobrania głównego DASD.\n"
+"adres do wczytania głównego DASD\n"
+"lub adres urządzenia zFCP.\n"
+"Po wznowieniu pracy komputera proszę\n"
+"połączyć się z powrotem z Internetem i uruchomić:\n"
+"/usr/lib/YaST2/startup/YaST2.ssh\n"
+"Więcej szczegółów znajduje się\n"
+"w dokumentacji.\n"
+
+#. for s390:
+#. Message that will be displayed along with information
+#. how the boot loader was installed
+#: src/clients/bootloader_finish.ycp:111
+msgid ""
+"\n"
+"Your system will shut down now.\n"
+"After shutdown, reload the system\n"
+"with the load address of your root DASD or\n"
+"the load address of your zFCP device.\n"
+"For details, read the relevant chapter\n"
+"in the documentation.\n"
+msgstr ""
+"\n"
+"System zostanie teraz zamknięty.\n"
+"Po zamknięciu proszę uruchomić system podając \n"
+"adres do wczytania głównego DASD\n"
+"lub adres urządzenia zFCP.\n"
+"Więcej szczegółów znajduje się\n"
+"w dokumentacji.\n"
 
 #. Final message after all packages from CD1 are installed
 #. and we're ready to start (boot into) the installed system
 #. Message that will be displayed along with information
 #. how the boot loader was installed
-#: src/clients/bootloader_finish.ycp:107
+#: src/clients/bootloader_finish.ycp:127
+msgid ""
+"The system will reboot now.\n"
+"After reboot, reconnect and run the following:\n"
+"/usr/lib/YaST2/startup/YaST2.ssh"
+msgstr ""
+"System zostanie teraz ponownie uruchomiony.\n"
+"Po wznowieniu pracy komputera proszę\n"
+"połączyć się z powrotem z Internetem i uruchomić:\n"
+"/usr/lib/YaST2/startup/YaST2.ssh"
+
+#. Final message after all packages from CD1 are installed
+#. and we're ready to start (boot into) the installed system
+#. Message that will be displayed along with information
+#. how the boot loader was installed
+#: src/clients/bootloader_finish.ycp:135
 msgid "The system will reboot now..."
 msgstr "Nastąpi ponowne uruchomienie systemu..."
 
 #: src/clients/bootloader_proposal.ycp:71
-msgid ""
-"No boot loader is selected for installation. Your system might not be "
-"bootable."
-msgstr ""
-"Nie wybrano do zainstalowania żadnego programu rozruchowego. System może się "
-"nie uruchomić."
+msgid "No boot loader is selected for installation. Your system might not be bootable."
+msgstr "Nie wybrano do zainstalowania żadnego programu rozruchowego. System może się nie uruchomić."
 
 #. error in the proposal
 #: src/clients/bootloader_proposal.ycp:78
 msgid "Because of the partitioning, the bootloader cannot be installed properly"
-msgstr ""
-"Z powodu wybranego podziału na partycje nie można prawidłowo zainstalować "
-"programu rozruchowego."
+msgstr "Z powodu wybranego podziału na partycje nie można prawidłowo zainstalować programu rozruchowego."
 
 #: src/clients/bootloader_proposal.ycp:92
+msgid "The selected boot path will not be activated for your installation. Your system may not be bootable."
+msgstr "Wybrana ścieżka do programu rozruchowego nie zostanie uaktywniona. System może się nie uruchomić."
+
+#: src/clients/bootloader_proposal.ycp:109
 msgid ""
-"The selected boot path will not be activated for your installation. Your "
-"system may not be bootable."
+"Configure a valid boot loader location before continuing.<br>\n"
+"In case that no selection can be made it may be necessary to create a PReP Boot partition."
 msgstr ""
-"Wybrana ścieżka do programu rozruchowego nie zostanie uaktywniona. System "
-"może się nie uruchomić."
+"Proszę skonfigurować poprawne położenie programu rozruchowego.<br>\n"
+"Jeśli nie ma możliwości wyboru, prawdopodobnie trzeba będzie utworzyć partycję PReP-boot."
 
 #. proposal part - bootloader label
-#: src/clients/bootloader_proposal.ycp:139
+#: src/clients/bootloader_proposal.ycp:148
 msgid "Booting"
 msgstr "Uruchamianie systemu"
 
 #. menubutton entry
-#: src/clients/bootloader_proposal.ycp:141
+#: src/clients/bootloader_proposal.ycp:150
 msgid "&Booting"
 msgstr "&Uruchamianie systemu"
-
-#. report error
-#: src/elilo/misc.ycp:130
-msgid ""
-"Updating the directory layout \n"
-"to match Intel's EFI specification failed.\n"
-"Update it manually before proceeding."
-msgstr ""
-"Aktualizacja układu katalogów w celu\n"
-"zgodności z Intel EFI nie powiodła się.\n"
-"Proszę zaktualizować ręcznie przed kontynuacją."
 
 #. check box
 #: src/elilo/widgets.ycp:44
@@ -668,19 +697,23 @@ msgid "Section Editor"
 msgstr "Edytor sekcji"
 
 #. frame
-#: src/generic/wizards.ycp:74 src/routines/dialogs.ycp:153
+#: src/generic/wizards.ycp:74
+#: src/routines/dialogs.ycp:153
 #: src/routines/dialogs.ycp:203
 msgid "Section Settings"
 msgstr "Ustawienia sekcji"
 
 #. dialog caption
-#: src/generic/wizards.ycp:90 src/routines/dialogs.ycp:174
-#: src/routines/dialogs.ycp:219 src/routines/dialogs.ycp:249
+#: src/generic/wizards.ycp:90
+#: src/routines/dialogs.ycp:174
+#: src/routines/dialogs.ycp:219
+#: src/routines/dialogs.ycp:249
 msgid "Boot Loader Settings: Section Management"
 msgstr "Ustawienia programu rozruchowego: zarządzanie sekcjami"
 
 #. message
-#: src/generic/wizards.ycp:144 src/routines/dialogs.ycp:131
+#: src/generic/wizards.ycp:144
+#: src/routines/dialogs.ycp:131
 msgid "There are no options to set for the current boot loader."
 msgstr "Nie ma żadnych opcji do ustawienia dla tego programu rozruchowego."
 
@@ -690,38 +723,41 @@ msgid "Install ABOOT boot loader"
 msgstr "Zainstaluj program rozruchowy ABOOT"
 
 #. summary part, %1 is a list of device names
-#: src/modules/BootCommon.ycp:559
+#: src/modules/BootCommon.ycp:594
 #, ycp-format
 msgid "Master boot records of disks %1"
 msgstr "Główne sektory startowe (MBR) dysków %1"
 
 #. summary text, %1 is bootloader name (eg. LILO)
-#: src/modules/BootCommon.ycp:571
+#: src/modules/BootCommon.ycp:606
 #, ycp-format
 msgid "Boot Loader Type: %1"
 msgstr "Typ programu rozruchowego: %1"
 
 #. summary text, location is location description (eg. /dev/hda)
-#: src/modules/BootCommon.ycp:574 src/modules/BootPOWERLILO.ycp:631
+#: src/modules/BootCommon.ycp:609
+#: src/modules/BootPOWERLILO.ycp:783
 #, ycp-format
 msgid "Location: %1"
 msgstr "Lokalizacja: %1"
 
 #. section name "suffix" for default section
-#: src/modules/BootCommon.ycp:579 src/modules/BootELILO.ycp:305
-#: src/modules/BootPOWERLILO.ycp:638
+#: src/modules/BootCommon.ycp:614
+#: src/modules/BootELILO.ycp:302
+#: src/modules/BootPOWERLILO.ycp:790
 msgid " (default)"
 msgstr " (domyślnie)"
 
 #. summary text. %1 is list of bootloader sections
-#: src/modules/BootCommon.ycp:583 src/modules/BootELILO.ycp:310
-#: src/modules/BootPOWERLILO.ycp:643
+#: src/modules/BootCommon.ycp:618
+#: src/modules/BootELILO.ycp:307
+#: src/modules/BootPOWERLILO.ycp:795
 #, ycp-format
 msgid "Sections: %1"
 msgstr "Sekcje: %1"
 
 #. summary text
-#: src/modules/BootCommon.ycp:587
+#: src/modules/BootCommon.ycp:622
 msgid ""
 "Do not install boot loader; just create\n"
 "configuration files"
@@ -730,18 +766,19 @@ msgstr ""
 "utwórz tylko pliki konfiguracyjne"
 
 #. summary text, %1 is bootloader name (eg. LILO)
-#: src/modules/BootELILO.ycp:285 src/modules/BootPOWERLILO.ycp:614
+#: src/modules/BootELILO.ycp:282
+#: src/modules/BootPOWERLILO.ycp:766
 #, ycp-format
 msgid "Boot loader type: %1"
 msgstr "Typ programu rozruchowego: %1"
 
 #. summary text
-#: src/modules/BootELILO.ycp:291
+#: src/modules/BootELILO.ycp:288
 msgid "Do Not Create EFI Boot Manager Entry"
 msgstr "Nie twórz pozycji EFI w programie rozruchowym"
 
 #. summary text, %1 is label of the entry of EFI boot manager
-#: src/modules/BootELILO.ycp:297
+#: src/modules/BootELILO.ycp:294
 #, ycp-format
 msgid "Create EFI Boot Manager Entry %1"
 msgstr "Utwórz pozycję EFI %1 w programie rozruchowym"
@@ -749,18 +786,18 @@ msgstr "Utwórz pozycję EFI %1 w programie rozruchowym"
 #. means: process received signal SIGSEGV
 #. please, use some usual translation
 #. proofreaders: don't change this text
-#: src/modules/BootELILO.ycp:353
+#: src/modules/BootELILO.ycp:350
 msgid "Segmentation fault"
 msgstr "Segmentacja nie powiodła się"
 
 #. error popup - label, %1 is bootloader name
-#: src/modules/BootELILO.ycp:358
+#: src/modules/BootELILO.ycp:355
 #, ycp-format
 msgid "Error Occurred while Installing %1"
 msgstr "Wystąpił błąd podczas instalacji %1"
 
 #. menubutton item, keep as short as possible
-#: src/modules/BootGRUB.ycp:618
+#: src/modules/BootGRUB.ycp:619
 msgid "Propose and &Merge with Existing GRUB Menus"
 msgstr "Wyszukaj i p&ołącz z istniejącym menu GRUB"
 
@@ -769,35 +806,23 @@ msgstr "Wyszukaj i p&ołącz z istniejącym menu GRUB"
 msgid "Install MILO boot loader"
 msgstr "Instalowanie programu rozruchowego MILO"
 
-#: src/modules/BootPOWERLILO.ycp:650
-msgid "Do not install boot loader; just create configuration files"
-msgstr ""
-"Nie instaluj programu rozruchowego;\n"
-"utwórz tylko pliki konfiguracyjne"
-
 #. summary part
-#: src/modules/BootPPC.ycp:665
+#: src/modules/BootPPC.ycp:664
 msgid "Boot configuration on new PowerMacs is not yet implemented."
-msgstr ""
-"Konfiguracja uruchomienia systemu na nowych PowerMac nie została jeszcze "
-"zaimplementowana."
+msgstr "Konfiguracja uruchomienia systemu na nowych PowerMac nie została jeszcze zaimplementowana."
 
 #. summary part
-#: src/modules/BootPPC.ycp:672
+#: src/modules/BootPPC.ycp:671
 msgid "Configure the BootX App in classic MacOS to boot the file 'vmlinuz-oldworld'"
-msgstr ""
-"Skonfiguruj aplikację BootX w MacOS classic, aby uruchamiała plik 'vmlinuz-"
-"oldworld'"
+msgstr "Skonfiguruj aplikację BootX w MacOS classic, aby uruchamiała plik 'vmlinuz-oldworld'"
 
 #. summary part
-#: src/modules/BootPPC.ycp:679
+#: src/modules/BootPPC.ycp:678
 msgid "Boot configuration for this board is not yet implemented."
-msgstr ""
-"Konfiguracja uruchomienia systemu dla tej płyty głównej nie została jeszcze "
-"zaimplementowana."
+msgstr "Konfiguracja uruchomienia systemu dla tej płyty głównej nie została jeszcze zaimplementowana."
 
 #. part of bootloader summary
-#: src/modules/BootPPC.ycp:683
+#: src/modules/BootPPC.ycp:682
 #, ycp-format
 msgid "Board Type: %1"
 msgstr "Typ płyty: %1"
@@ -808,7 +833,7 @@ msgid "Copying hardware configuration template failed."
 msgstr "Kopiowanie szablonu konfiguracji sprzętu nie powiodło się."
 
 #. summary
-#: src/modules/BootZIPL.ycp:290
+#: src/modules/BootZIPL.ycp:289
 msgid "Install S390 Boot Loader"
 msgstr "Instalacja programu rozruchowego S390"
 
@@ -854,37 +879,37 @@ msgid "Added Kernel Parameters: %1"
 msgstr "Dodatkowe parametry jądra: %1"
 
 #. progress stage, text in dialog (short)
-#: src/modules/Bootloader.ycp:379
+#: src/modules/Bootloader.ycp:370
 msgid "Create initrd"
 msgstr "Tworzenie initrd"
 
 #. progress stage, text in dialog (short)
-#: src/modules/Bootloader.ycp:381
+#: src/modules/Bootloader.ycp:372
 msgid "Save boot loader configuration files"
 msgstr "Zapis plików konfiguracyjnych programu rozruchowego"
 
 #. progress stage, text in dialog (short)
-#: src/modules/Bootloader.ycp:383
+#: src/modules/Bootloader.ycp:374
 msgid "Install boot loader"
 msgstr "Instalacja program rozruchowego"
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:387
+#: src/modules/Bootloader.ycp:378
 msgid "Creating initrd..."
 msgstr "Tworzenie initrd..."
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:389
+#: src/modules/Bootloader.ycp:380
 msgid "Saving boot loader configuration files..."
 msgstr "Zapisywanie plików konfiguracyjnych programu rozruchowego..."
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:391
+#: src/modules/Bootloader.ycp:382
 msgid "Installing boot loader..."
 msgstr "Instalowanie programu rozruchowego..."
 
 #. progress line
-#: src/modules/Bootloader.ycp:397
+#: src/modules/Bootloader.ycp:388
 msgid "Saving Boot Loader Configuration"
 msgstr "Zapisywanie konfiguracji programu rozruchowego"
 
@@ -948,7 +973,7 @@ msgstr "Diagnostyka producenta"
 #. are allowed. Always remove the leading '_', its just to
 #. be able to have translations with and without diacritics
 #. please use diacritics here
-#: src/modules/GfxMenu.ycp:189
+#: src/modules/GfxMenu.ycp:212
 msgid "_Linux"
 msgstr "_Linux"
 
@@ -956,7 +981,7 @@ msgstr "_Linux"
 #. are allowed. Always remove the leading '_', its just to
 #. be able to have translations with and without diacritics
 #. please use diacritics here
-#: src/modules/GfxMenu.ycp:194
+#: src/modules/GfxMenu.ycp:217
 msgid "_Failsafe"
 msgstr "_bezpieczny"
 
@@ -964,7 +989,7 @@ msgstr "_bezpieczny"
 #. are allowed. Always remove the leading '_', its just to
 #. be able to have translations with and without diacritics
 #. please use diacritics here
-#: src/modules/GfxMenu.ycp:199
+#: src/modules/GfxMenu.ycp:222
 msgid "_Floppy"
 msgstr "_dyskietka"
 
@@ -972,7 +997,7 @@ msgstr "_dyskietka"
 #. are allowed. Always remove the leading '_', its just to
 #. be able to have translations with and without diacritics
 #. please use diacritics here
-#: src/modules/GfxMenu.ycp:204
+#: src/modules/GfxMenu.ycp:227
 msgid "_Hard Disk"
 msgstr "_dysk twardy"
 
@@ -980,7 +1005,7 @@ msgstr "_dysk twardy"
 #. are allowed. Always remove the leading '_', its just to
 #. be able to have translations with and without diacritics
 #. please use diacritics here
-#: src/modules/GfxMenu.ycp:209
+#: src/modules/GfxMenu.ycp:232
 msgid "_Memory Test"
 msgstr "_test pamięci"
 
@@ -988,7 +1013,7 @@ msgstr "_test pamięci"
 #. are allowed. Always remove the leading '_', its just to
 #. be able to have translations with and without diacritics
 #. please use diacritics here
-#: src/modules/GfxMenu.ycp:214
+#: src/modules/GfxMenu.ycp:237
 msgid "_MBR before Installation"
 msgstr "_główny sektor startowy przed instalacją"
 
@@ -996,7 +1021,7 @@ msgstr "_główny sektor startowy przed instalacją"
 #. are allowed. Always remove the leading '_', its just to
 #. be able to have translations with and without diacritics
 #. please use diacritics here
-#: src/modules/GfxMenu.ycp:219
+#: src/modules/GfxMenu.ycp:242
 msgid "_Previous Kernel"
 msgstr "_poprzednie jądro"
 
@@ -1004,39 +1029,31 @@ msgstr "_poprzednie jądro"
 #. are allowed. Always remove the leading '_', its just to
 #. be able to have translations with and without diacritics
 #. please use diacritics here
-#: src/modules/GfxMenu.ycp:224
+#: src/modules/GfxMenu.ycp:247
 msgid "_Vendor Diagnostics"
 msgstr "_diagnostyka producenta"
 
 #. summary part
-#: src/ppc/chrp.ycp:92
-msgid ""
-"There is no 41 PReP boot nor a FAT16 partition. You cannot boot from the "
-"hard disk."
-msgstr ""
-"Nie znaleziono ani partycji 41 PReP, ani partycji FAT16. Nie można uruchomić "
-"systemu z dysku twardego."
+#: src/ppc/chrp.ycp:90
+msgid "There is no 41 PReP boot nor a FAT16 partition. You cannot boot from the hard disk."
+msgstr "Nie znaleziono ani partycji startowej PReP 41, ani partycji startowej FAT16. Nie można uruchomić systemu z dysku twardego."
 
 #. summary part
-#: src/ppc/chrp.ycp:99 src/ppc/iseries.ycp:218 src/ppc/prep.ycp:98
+#: src/ppc/chrp.ycp:97
+#: src/ppc/iseries.ycp:218
+#: src/ppc/prep.ycp:96
 msgid "No boot configuration. Configure booting manually."
-msgstr ""
-"Nie znaleziono konfiguracji uruchomienia systemu. Proszę skonfigurować "
-"uruchamianie ręcznie."
+msgstr "Nie znaleziono konfiguracji uruchomienia systemu. Proszę skonfigurować uruchamianie ręcznie."
 
 #. summary part
-#: src/ppc/chrp.ycp:107
+#: src/ppc/chrp.ycp:105
 #, ycp-format
-msgid ""
-"yaboot will be written to %1. A correct boot path will be prepended to boot-"
-"device variable."
-msgstr ""
-"yaboot zostanie zapisany do %1. Prawidłowa ścieżka startowa zostanie "
-"uzupełniona o prefiks zależny od urządzenia, z którego będzie uruchamiany "
-"system."
+msgid "yaboot will be written to %1. A correct boot path will be prepended to boot-device variable."
+msgstr "yaboot zostanie zapisany do %1. Prawidłowa ścieżka startowa zostanie uzupełniona o prefiks zależny od urządzenia, z którego będzie uruchamiany system."
 
 #. dialog caption
-#: src/ppc/dialogs.ycp:44 src/routines/dialogs_i386.ycp:245
+#: src/ppc/dialogs.ycp:44
+#: src/routines/dialogs_i386.ycp:245
 msgid "Boot Loader Options"
 msgstr "Opcje programu rozruchowego"
 
@@ -1045,7 +1062,8 @@ msgid "<p><big><b>Boot Loader Location</b></big><br>"
 msgstr "<p><big><b>Lokalizacja programu rozruchowego</b></big></p>"
 
 #. help text 1/1
-#: src/ppc/helps.ycp:24 src/routines/helps_i386.ycp:78
+#: src/ppc/helps.ycp:24
+#: src/routines/helps_i386.ycp:78
 msgid ""
 "<p><big><b>Boot Menu</b></big><br>\n"
 "To show the boot loader menu during the boot process, set\n"
@@ -1063,7 +1081,8 @@ msgstr ""
 "i <b>Czas oczekiwania menu rozruchowego</b>.</p>"
 
 #. help text 1/5
-#: src/ppc/helps.ycp:30 src/routines/helps.ycp:289
+#: src/ppc/helps.ycp:30
+#: src/routines/helps.ycp:289
 msgid ""
 "<p><big><b>Type of the New Section</b></big><br>\n"
 "Select the type of the new section to create.</p>"
@@ -1088,7 +1107,8 @@ msgid "<p><big><b>Section Settings</b></big><br>"
 msgstr "<p><big><b>Ustawienia sekcji</b></big><br>"
 
 #. help text 2/5
-#: src/ppc/helps.ycp:36 src/routines/helps.ycp:292
+#: src/ppc/helps.ycp:36
+#: src/routines/helps.ycp:292
 msgid ""
 "<p>Select <b>Clone Selected Section</b> to clone the currently selected\n"
 "section. Then modify the options that should differ from the\n"
@@ -1099,7 +1119,8 @@ msgstr ""
 "zmienione w stosunku do wybranej sekcji.</p>"
 
 #. help text 3/5
-#: src/ppc/helps.ycp:40 src/routines/helps.ycp:296
+#: src/ppc/helps.ycp:40
+#: src/routines/helps.ycp:296
 msgid ""
 "<p>Select <b>Kernel (Linux)</b> to add a new Linux kernel or other image\n"
 "to load and start.</p>"
@@ -1169,7 +1190,8 @@ msgstr "Partycja PReP albo FAT"
 msgid "Boot Folder Path"
 msgstr "Ścieżka do katalogu rozruchowego"
 
-#: src/ppc/helps.ycp:64 src/ppc/helps.ycp:67
+#: src/ppc/helps.ycp:64
+#: src/ppc/helps.ycp:67
 msgid "PReP Partition"
 msgstr "Partycja PReP"
 
@@ -1186,12 +1208,14 @@ msgid "HFS Boot Partition"
 msgstr "Partycja rozruchowa HFS"
 
 #. heading
-#: src/ppc/helps.ycp:69 src/routines/dialogs.ycp:148
+#: src/ppc/helps.ycp:69
+#: src/routines/dialogs.ycp:148
 msgid "Kernel Section"
 msgstr "Sekcja jądra"
 
 #. file open popup caption
-#: src/ppc/helps.ycp:70 src/routines/section_widgets.ycp:126
+#: src/ppc/helps.ycp:70
+#: src/routines/section_widgets.ycp:126
 msgid "Kernel Image"
 msgstr "Obraz jądra"
 
@@ -1204,7 +1228,8 @@ msgid "Optional Kernel Command Line Parameter"
 msgstr "Opcjonalne parametry polecenia wywołania jądra"
 
 #. file open popup caption
-#: src/ppc/helps.ycp:73 src/routines/section_widgets.ycp:156
+#: src/ppc/helps.ycp:73
+#: src/routines/section_widgets.ycp:156
 msgid "Initial RAM Disk"
 msgstr "RAM-dysk początkowy"
 
@@ -1223,12 +1248,8 @@ msgstr "Partycja rozruchowa innego systemu"
 #. summary part, %1 is filename
 #: src/ppc/iseries.ycp:185
 #, ycp-format
-msgid ""
-"A stream file will be written to %1. Copy this file to OS400 side and boot "
-"with *STMF."
-msgstr ""
-"Plik strumienia zostanie zapisany do %1. Proszę skopiować ten plik do OS400 "
-"i uruchomić system przy użyciu *STMF."
+msgid "A stream file will be written to %1. Copy this file to OS400 side and boot with *STMF."
+msgstr "Plik strumienia zostanie zapisany do %1. Proszę skopiować ten plik do OS400 i uruchomić system przy użyciu *STMF."
 
 #. summary part, %1 is filename
 #: src/ppc/iseries.ycp:193
@@ -1252,55 +1273,64 @@ msgid "No boot option selected."
 msgstr "Nie wybrano żadnej opcji uruchomienia systemu."
 
 #. part of summary
-#: src/ppc/misc.ycp:197
+#: src/ppc/misc.ycp:196
 msgid "New World Power Macintosh"
 msgstr "New World Power Macintosh"
 
 #. part of summary
-#: src/ppc/misc.ycp:199
+#: src/ppc/misc.ycp:198
 msgid "Old World Power Macintosh"
 msgstr "Old World Power Macintosh"
 
 #. part of summary
-#: src/ppc/misc.ycp:201 src/ppc/misc.ycp:209
+#: src/ppc/misc.ycp:200
+#: src/ppc/misc.ycp:208
 msgid "Unknown"
 msgstr "Nieznany"
 
 #. table cell / label
 #. frame
-#: src/ppc/ppc_boot_loader_locations_widget.ycp:114 src/ppc/widgets.ycp:387
-#: src/ppc/widgets.ycp:491 src/ppc/widgets2.ycp:319
+#: src/ppc/ppc_boot_loader_locations_widget.ycp:114
+#: src/ppc/widgets.ycp:387
+#: src/ppc/widgets.ycp:491
+#: src/ppc/widgets2.ycp:319
 #: src/routines/global_widgets.ycp:550
 msgid "Boot Loader Location"
 msgstr "Położenie programu rozruchowego"
 
 #. frame
-#: src/ppc/ppc_global_options_widget.ycp:99 src/routines/widgets_i386.ycp:75
+#: src/ppc/ppc_global_options_widget.ycp:99
+#: src/routines/widgets_i386.ycp:75
 msgid "Boot Menu"
 msgstr "Menu rozruchowe"
 
 #. frame
-#: src/ppc/ppc_section_type_widget.ycp:84 src/routines/section_widgets.ycp:251
+#: src/ppc/ppc_section_type_widget.ycp:84
+#: src/routines/section_widgets.ycp:287
 msgid "Section Type"
 msgstr "Typ sekcji"
 
 #. text entry
-#: src/ppc/ppc_section_widgets.ycp:84 src/routines/section_widgets.ycp:305
+#: src/ppc/ppc_section_widgets.ycp:84
+#: src/routines/section_widgets.ycp:341
 msgid "Section &Name"
 msgstr "&Nazwa sekcji"
 
 #. table header, Def stands for default
-#: src/ppc/ppc_sections_widget.ycp:206 src/routines/global_widgets.ycp:242
+#: src/ppc/ppc_sections_widget.ycp:206
+#: src/routines/global_widgets.ycp:242
 msgid "Def."
 msgstr "Def."
 
 #. table header
-#: src/ppc/ppc_sections_widget.ycp:208 src/routines/global_widgets.ycp:244
+#: src/ppc/ppc_sections_widget.ycp:208
+#: src/routines/global_widgets.ycp:244
 msgid "Label"
 msgstr "Etykieta"
 
 #. table header
-#: src/ppc/ppc_sections_widget.ycp:210 src/routines/global_widgets.ycp:246
+#: src/ppc/ppc_sections_widget.ycp:210
+#: src/routines/global_widgets.ycp:246
 #: src/routines/global_widgets.ycp:857
 msgid "Type"
 msgstr "Typ"
@@ -1313,33 +1343,34 @@ msgid "Section Summary"
 msgstr "Podsumowanie sekcji"
 
 #. pushbutton
-#: src/ppc/ppc_sections_widget.ycp:220 src/routines/dialogs_i386.ycp:59
+#: src/ppc/ppc_sections_widget.ycp:220
+#: src/routines/dialogs_i386.ycp:59
 #: src/routines/global_widgets.ycp:256
 msgid "&Up"
 msgstr "W &górę"
 
 #. pushbutton
-#: src/ppc/ppc_sections_widget.ycp:222 src/routines/dialogs_i386.ycp:60
+#: src/ppc/ppc_sections_widget.ycp:222
+#: src/routines/dialogs_i386.ycp:60
 #: src/routines/global_widgets.ycp:258
 msgid "&Down"
 msgstr "W &dół"
 
 #. pushbutton
-#: src/ppc/ppc_sections_widget.ycp:233 src/routines/global_widgets.ycp:269
+#: src/ppc/ppc_sections_widget.ycp:233
+#: src/routines/global_widgets.ycp:269
 msgid "Set as De&fault"
 msgstr "Ustaw jako d&omyślny"
 
 #. summary part
-#: src/ppc/prep.ycp:91
+#: src/ppc/prep.ycp:89
 msgid "There is no 41 PReP boot partition. You cannot boot from the hard disk."
-msgstr "Nie ma partycji 41 PReP. Nie można uruchomić systemu z dysku twardego."
+msgstr "Nie ma partycji startowej PReP 41. Nie można uruchomić systemu z dysku twardego."
 
 #. summary part
-#: src/ppc/prep.ycp:105
+#: src/ppc/prep.ycp:103
 msgid "The zImage.prep from CD1/boot must be written to a 41 PReP boot partition."
-msgstr ""
-"Plik zImage.prep z płyty CD1/boot musi być zapisany na partycję startową "
-"systemu 41 PReP."
+msgstr "Plik zImage.prep z płyty CD1/boot musi być zapisany na partycję startową systemu typu PReP 41."
 
 #. label / table entry
 #: src/ppc/widgets.ycp:111
@@ -1362,9 +1393,10 @@ msgid "Set Default OpenFirmware Boot Device"
 msgstr "Ustaw OpenFirmware jako domyślne urządzenie rozruchowe"
 
 #. combo box
-#: src/ppc/widgets.ycp:183 src/ppc/widgets.ycp:417
+#: src/ppc/widgets.ycp:183
+#: src/ppc/widgets.ycp:417
 msgid "41 &PReP Boot Partition"
-msgstr "Partycja startowa 41 &PReP"
+msgstr "Partycja startowa &PReP 41"
 
 #. table item
 #: src/ppc/widgets.ycp:215
@@ -1374,7 +1406,7 @@ msgstr "Brak"
 #. label / table entry
 #: src/ppc/widgets.ycp:229
 msgid "41 PReP Boot Partition"
-msgstr "Partycja startowa 41 PReP"
+msgstr "Partycja startowa PReP 41"
 
 #. checkbox
 #: src/ppc/widgets.ycp:249
@@ -1389,7 +1421,7 @@ msgstr "Plik strumieniowy dla *&STMF"
 #. checkbox
 #: src/ppc/widgets.ycp:257
 msgid "Write the Kernel to 41 &PReP Boot Partition (for *NWSSTG)"
-msgstr "Zapisz jądro do partycji startowej 41 &PReP (dla *NWSSTG)"
+msgstr "Zapisz jądro do partycji startowej &PReP 41 (dla *NWSSTG)"
 
 #. combo box
 #: src/ppc/widgets.ycp:263
@@ -1430,14 +1462,15 @@ msgstr "*STMF (%1)"
 
 #. part of summatu
 #. table cell
-#: src/ppc/widgets.ycp:371 src/ppc/widgets.ycp:479
+#: src/ppc/widgets.ycp:371
+#: src/ppc/widgets.ycp:479
 msgid "Do Not Install Boot Loader"
 msgstr "Nie instaluj programu rozruchowego"
 
 #. checkbox
 #: src/ppc/widgets.ycp:411
 msgid "Write the Kernel to 41 &PReP Boot Partition"
-msgstr "Zapisz jądro na partycję startową 41 &PReP"
+msgstr "Zapisz jądro na partycji startowej &PReP 41"
 
 #. table cell, %1 is device name (eg. /dev/hda1)
 #: src/ppc/widgets.ycp:474
@@ -1456,71 +1489,84 @@ msgid "Boot Menu PPC"
 msgstr "Menu rozruchowe PPC"
 
 #. check box
-#: src/ppc/widgets2.ycp:80 src/routines/widgets_i386.ycp:83
+#: src/ppc/widgets2.ycp:80
+#: src/routines/widgets_i386.ycp:83
 msgid "&Continue Booting after a Time-Out"
 msgstr "Kontynuuj uruchamianie po &czasie oczekiwania"
 
 #. integer field
-#: src/ppc/widgets2.ycp:82 src/routines/widgets_i386.ycp:85
+#: src/ppc/widgets2.ycp:82
+#: src/routines/widgets_i386.ycp:85
 msgid "Boot &Menu Time-Out"
 msgstr "Czas &oczekiwania menu rozruchowego"
 
 #. frame
-#: src/ppc/widgets2.ycp:202 src/routines/widgets_i386.ycp:205
+#: src/ppc/widgets2.ycp:202
+#: src/routines/widgets_i386.ycp:205
 msgid "Password Protection"
 msgstr "Zabezpieczenie hasłem"
 
 #. check box
-#: src/ppc/widgets2.ycp:208 src/routines/widgets_i386.ycp:211
+#: src/ppc/widgets2.ycp:208
+#: src/routines/widgets_i386.ycp:211
 msgid "Prot&ect Boot Loader with Password"
 msgstr "Zab&ezpiecz program rozruchowy hasłem"
 
 #. text entry
-#: src/ppc/widgets2.ycp:211 src/routines/widgets_i386.ycp:214
+#: src/ppc/widgets2.ycp:211
+#: src/routines/widgets_i386.ycp:214
 msgid "&Password"
 msgstr "Ha&sło"
 
 #. text entry
-#: src/ppc/widgets2.ycp:213 src/routines/widgets_i386.ycp:216
+#: src/ppc/widgets2.ycp:213
+#: src/routines/widgets_i386.ycp:216
 msgid "Re&type Password"
 msgstr "Proszę w&pisać hasło ponownie"
 
 #. radio button
-#: src/ppc/widgets2.ycp:254 src/routines/global_widgets.ycp:472
+#: src/ppc/widgets2.ycp:254
+#: src/routines/global_widgets.ycp:472
 msgid "&Master Boot Record"
 msgstr "&Główny sektor startowy"
 
 #. radiobutton, %1 is device (eg. /dev/hda)
-#: src/ppc/widgets2.ycp:256 src/routines/global_widgets.ycp:474
+#: src/ppc/widgets2.ycp:256
+#: src/routines/global_widgets.ycp:474
 #, ycp-format
 msgid "&Master Boot Record of %1"
 msgstr "&Główny sektor startowy %1"
 
 #. radiobutton, %1 is device (eg. /dev/hda1)
-#: src/ppc/widgets2.ycp:269 src/routines/global_widgets.ycp:504
+#: src/ppc/widgets2.ycp:269
+#: src/routines/global_widgets.ycp:504
 #, ycp-format
 msgid "Boot &Sector of Boot Partition %1"
 msgstr "&Sektor startowy partycji startowej %1"
 
 #. radiobutton, %1 is device (eg. /dev/hda1)
-#: src/ppc/widgets2.ycp:281 src/routines/global_widgets.ycp:516
+#: src/ppc/widgets2.ycp:281
+#: src/routines/global_widgets.ycp:516
 #, ycp-format
 msgid "Boot Sector of Roo&t Partition %1"
 msgstr "Sektor startowy partycji głównej (roo&t) %1"
 
 #. radiobutton, %1 is device name, typically /dev/fd0
-#: src/ppc/widgets2.ycp:293 src/routines/global_widgets.ycp:528
+#: src/ppc/widgets2.ycp:293
+#: src/routines/global_widgets.ycp:528
 #, ycp-format
 msgid "&Floppy Disk %1"
 msgstr "D&yskietka %1"
 
 #. radiobutton
-#: src/ppc/widgets2.ycp:305 src/routines/global_widgets.ycp:536
+#: src/ppc/widgets2.ycp:305
+#: src/routines/global_widgets.ycp:536
 msgid "Ot&her"
 msgstr "&Inne"
 
 #. yes-no popup
-#: src/ppc/widgets2.ycp:396 src/routines/global_widgets.ycp:647
+#: src/ppc/widgets2.ycp:396
+#: src/routines/global_widgets.ycp:647
 msgid ""
 "The partition selected for boot loader installation\n"
 "does not have enough free space in its boot sector\n"
@@ -1606,13 +1652,15 @@ msgstr "Szczegóły instalacji programu rozruchowego"
 
 #. textentry header
 #. combo box
-#: src/routines/dialogs_i386.ycp:124 src/routines/section_widgets.ycp:384
+#: src/routines/dialogs_i386.ycp:124
+#: src/routines/section_widgets.ycp:422
 msgid "&Device"
 msgstr "Urzą&dzenie"
 
 #. table header
 #. menu button
-#: src/routines/global_widgets.ycp:115 src/routines/global_widgets.ycp:748
+#: src/routines/global_widgets.ycp:115
+#: src/routines/global_widgets.ycp:748
 msgid "Other"
 msgstr "Inne"
 
@@ -1672,7 +1720,8 @@ msgstr ""
 
 #. radiobutton
 #. menubutton item, keep as short as possible
-#: src/routines/global_widgets.ycp:353 src/routines/global_widgets.ycp:716
+#: src/routines/global_widgets.ycp:353
+#: src/routines/global_widgets.ycp:716
 msgid "&Propose New Configuration"
 msgstr "Za&proponuj nową konfigurację"
 
@@ -1709,7 +1758,8 @@ msgstr "Główne sekto&ry startowe dysków %1"
 
 #. pushbutton
 #. menu button entry
-#: src/routines/global_widgets.ycp:690 src/routines/global_widgets.ycp:711
+#: src/routines/global_widgets.ycp:690
+#: src/routines/global_widgets.ycp:711
 msgid "E&dit Configuration Files"
 msgstr "E&dytuj pliki konfiguracyjne"
 
@@ -1790,10 +1840,8 @@ msgstr ""
 #, ycp-format
 msgid ""
 "<P>From <B>Other</B>,\n"
-"you can manually edit the boot loader configuration files, clear the "
-"current \n"
-"configuration and propose a new configuration, start from scratch, or "
-"reread\n"
+"you can manually edit the boot loader configuration files, clear the current \n"
+"configuration and propose a new configuration, start from scratch, or reread\n"
 "the configuration saved on your disk. %1</P>"
 msgstr ""
 "<P>Po naciśnięciu <B>Inne</B> można \n"
@@ -1865,8 +1913,7 @@ msgid ""
 "The boot manager (%1) can be installed in the following ways:</p>"
 msgstr ""
 "<p><big><b>Położenie programu rozruchowego</b></big><br>\n"
-"Program rozruchowy (%1) może być zainstalowany w jeden z następujących "
-"sposobów:</p>"
+"Program rozruchowy (%1) może być zainstalowany w jeden z następujących sposobów:</p>"
 
 #. custom bootloader help text, 2 of 7
 #: src/routines/helps.ycp:115
@@ -1886,17 +1933,14 @@ msgid ""
 "- In the <b>Boot Sector</b> of the <tt>/boot</tt> or <tt>/</tt> (root) \n"
 "partition.  This is the recommended option whenever there is a suitable\n"
 "partition. Either set <b>Activate Boot Loader Partition</b> and\n"
-"<b>Replace MBR with Generic Code</b> in <b>Boot Loader Installation Details</"
-"b>\n"
+"<b>Replace MBR with Generic Code</b> in <b>Boot Loader Installation Details</b>\n"
 "to update the master boot record\n"
 "if it is needed or configure your other boot manager\n"
 "to start &product;.</p>"
 msgstr ""
 "<p>\n"
-"- W <b>sektorze startowym</b> partycji <tt>/boot</tt> albo <tt>/</tt> "
-"(root). \n"
-"Jest to zalecana opcja, jeśli istnieje odpowiednia partycja. Należy albo "
-"ustawić \n"
+"- W <b>sektorze startowym</b> partycji <tt>/boot</tt> albo <tt>/</tt> (root). \n"
+"Jest to zalecana opcja, jeśli istnieje odpowiednia partycja. Należy albo ustawić \n"
 "<b>Aktywuj partycję programu rozruchowego</b> i <b>Zastąp sektor \n"
 "startowy kodem domyślnym</b> w <b>Szczegółach instalacji programu \n"
 "rozruchowego</b> aby - jeśli zajdzie potrzeba - zaktualizować główny \n"
@@ -1997,20 +2041,17 @@ msgid ""
 msgstr ""
 "<P><B>Zaawansowana konfiguracja ręczna</B><BR>\n"
 "Tutaj można ręcznie edytować konfigurację programu rozruchowego.</P>\n"
-"<P>Uwaga: plik konfiguracji ostatecznej może mieć inaczej rozmieszczone "
-"wcięcia.</P>"
+"<P>Uwaga: plik konfiguracji ostatecznej może mieć inaczej rozmieszczone wcięcia.</P>"
 
 #. help text 1/1
 #: src/routines/helps.ycp:211
 msgid ""
 "<p><b><big>Section Name</big></b><br>\n"
-"Use <b>Section Name</b> to specify the boot loader section name. The "
-"section\n"
+"Use <b>Section Name</b> to specify the boot loader section name. The section\n"
 "name must be unique.</p>"
 msgstr ""
 "<p><b><big>Nazwa sekcji</big></b><br>\n"
-"Proszę użyć <b>Nazwa sekcji</b>, aby podać nazwę sekcji programu "
-"rozruchowego.\n"
+"Proszę użyć <b>Nazwa sekcji</b>, aby podać nazwę sekcji programu rozruchowego.\n"
 "Nazwa sekcji nie może się powtórzyć.</p>"
 
 #. help text 1/1
@@ -2026,22 +2067,19 @@ msgstr ""
 #: src/routines/helps.ycp:232
 msgid ""
 "<p><big><b>Initial RAM Disk</b></big><br>\n"
-"Use <b>Initial RAM Disk</b> to specify the initial RAM disk (initrd) to "
-"load. If it is\n"
+"Use <b>Initial RAM Disk</b> to specify the initial RAM disk (initrd) to load. If it is\n"
 "left empty, no initial RAM disk is loaded during boot.</p>"
 msgstr ""
 "<p><big><b>RAM-dysk początkowy</b></big><br>\n"
 "Proszę użyć pola <b>RAM-dysk początkowy</b>, aby określić początkowy\n"
-"RAM-dysk (initrd) do wczytania. W przypadku pozostawienia tego pola "
-"pustego,\n"
+"RAM-dysk (initrd) do wczytania. W przypadku pozostawienia tego pola pustego,\n"
 "w czasie uruchamiania systemu nie nastąpi wczytanie żadnego RAM-dysku.</p>"
 
 #. help text 1/1
 #: src/routines/helps.ycp:243
 msgid ""
 "<p><big><b>Root Device<b></big><br>\n"
-"Use <b>Root Device</b> to specify the root file system to mount after the "
-"kernel is\n"
+"Use <b>Root Device</b> to specify the root file system to mount after the kernel is\n"
 "loaded.</p>\n"
 msgstr ""
 "<p><big><b>Urządzenie główne<b></big><br>\n"
@@ -2074,8 +2112,7 @@ msgstr ""
 #: src/routines/helps.ycp:277
 msgid ""
 "<p><big><b>Device</b></big><br>\n"
-"Use <b>Device</b> to set the device from which to load the operating "
-"system.\n"
+"Use <b>Device</b> to set the device from which to load the operating system.\n"
 "In most cases, it is the disk partition in which \n"
 "the other system is installed.</p>"
 msgstr ""
@@ -2101,8 +2138,7 @@ msgid ""
 "booting other operating systems.</p>"
 msgstr ""
 "<p>Proszę wybrać <b>Inny system (Chainloader)</b>, aby dodać sekcję,\n"
-"która wczytuje i uruchamia sektor startowy z partycji na dysku. Opcji tej "
-"używa\n"
+"która wczytuje i uruchamia sektor startowy z partycji na dysku. Opcji tej używa\n"
 "się do uruchamiania innych systemów operacyjnych.</p>"
 
 #. help text 1/5
@@ -2132,8 +2168,7 @@ msgid ""
 "To replace the master boot record of your disk with generic code (which\n"
 "boots the active partition), set <b>Replace MBR with Generic Code</b>.</p>"
 msgstr ""
-"<p><big><b>Zastąpienie głównego sektora startowego kodem domyślnym</b></"
-"big><br>\n"
+"<p><big><b>Zastąpienie głównego sektora startowego kodem domyślnym</b></big><br>\n"
 "Aby zastąpić główny sektor startowy (MBR) na dysku kodem domyślnym\n"
 "(który uruchamia aktywną partycję), należy ustawić <b>Zastąpienie głównego\n"
 "sektora startowego kodem domyślnym</b>.</p>"
@@ -2187,57 +2222,58 @@ msgstr ""
 "i powtórzyć w polu <b>Powtórz hasło</b>.</p>\n"
 
 #. error popup - label, %1 is bootloader name
-#: src/routines/lib_iface.ycp:249
+#: src/routines/lib_iface.ycp:246
 #, ycp-format
 msgid "Error occurred while installing %1."
 msgstr "Wystąpił błąd podczas instalacji %1."
 
 #. part of summary, %1 is a list of hard disks device names
-#: src/routines/lilolike.ycp:1018
+#: src/routines/lilolike.ycp:1056
 #, ycp-format
 msgid "Order of Hard Disks: %1"
 msgstr "Kolejność dysków twardych: %1"
 
 #. summary string
-#: src/routines/misc.ycp:64
+#: src/routines/misc.ycp:65
 msgid "Do not install any boot loader"
 msgstr "Nie instaluj żadnego programu rozruchowego"
 
 #. combo box item
-#: src/routines/misc.ycp:66
+#: src/routines/misc.ycp:67
 msgid "Do Not Install Any Boot Loader"
 msgstr "Nie instaluj żadnego programu rozruchowego"
 
 #. summary string
-#: src/routines/misc.ycp:72
+#: src/routines/misc.ycp:73
 msgid "Install the default boot loader"
 msgstr "Instaluj domyślny program rozruchowy"
 
 #. combo box item
-#: src/routines/misc.ycp:74
+#: src/routines/misc.ycp:75
 msgid "Install Default Boot Loader"
 msgstr "Instaluj domyślny program rozruchowy"
 
 #. summary string
-#: src/routines/misc.ycp:78
+#: src/routines/misc.ycp:79
 msgid "Boot loader"
 msgstr "Program rozruchowy"
 
 #. combo box item
-#: src/routines/misc.ycp:80
+#: src/routines/misc.ycp:81
 msgid "Boot Loader"
 msgstr "Program rozruchowy"
 
 #. popup, %1 is bootloader name
 #. data saved to floppy disk
 #. popup, %1 is bootloader name
-#: src/routines/misc.ycp:184 src/routines/popups.ycp:325
+#: src/routines/misc.ycp:185
+#: src/routines/popups.ycp:328
 #, ycp-format
 msgid "The %1 boot sector has been written to the floppy disk."
 msgstr "Sektor startowy %1 został zapisany na dyskietce."
 
 #. popup - continuing
-#: src/routines/misc.ycp:194
+#: src/routines/misc.ycp:195
 msgid "Leave the floppy disk in the drive."
 msgstr "Proszę pozostawić dyskietkę w napędzie."
 
@@ -2383,7 +2419,8 @@ msgid "Low level format failed. Try again?"
 msgstr "Formatowanie niskopoziomowe nie powiodło się. Spróbować ponownie?"
 
 #. error report
-#: src/routines/popups.ycp:220 src/routines/popups.ycp:230
+#: src/routines/popups.ycp:220
+#: src/routines/popups.ycp:230
 msgid "Creating file system failed."
 msgstr "Tworzenie systemu plików nie powiodło się."
 
@@ -2422,12 +2459,13 @@ msgstr "Na pewno usunąć zaznaczoną opcję?"
 
 #. FIXME too generic, but was already translated
 #. error report
-#: src/routines/popups.ycp:284 src/routines/popups.ycp:314
+#: src/routines/popups.ycp:284
+#: src/routines/popups.ycp:317
 msgid "Unable to install the boot loader."
 msgstr "Instalacja programu rozruchowego nie powiodła się."
 
 #. message popup
-#: src/routines/popups.ycp:305
+#: src/routines/popups.ycp:308
 msgid ""
 "Sorry, there are currently\n"
 "no options to set here."
@@ -2436,13 +2474,13 @@ msgstr ""
 "tutaj opcji do wyboru."
 
 #. popup - continuing - alternative 1 ...
-#: src/routines/popups.ycp:329
+#: src/routines/popups.ycp:332
 msgid "Leave the floppy disk in the drive. The system will now be rebooted."
 msgstr "Proszę pozostawić dyskietkę w napędzie. System zostanie ponownie uruchomiony."
 
 #. warning popup. %1 is device name, %2 is date/time in form of
 #. 'date' command output
-#: src/routines/popups.ycp:358
+#: src/routines/popups.ycp:361
 #, ycp-format
 msgid ""
 "Warning!\n"
@@ -2466,7 +2504,7 @@ msgstr ""
 "Czy kontynuować?\n"
 
 #. PushButton
-#: src/routines/popups.ycp:376
+#: src/routines/popups.ycp:379
 msgid "&Yes, Rewrite"
 msgstr "&Tak, nadpisz"
 
@@ -2475,65 +2513,67 @@ msgstr "&Tak, nadpisz"
 #. %2 is Y serolution (height) in pixels
 #. %3 is color depth (usually one of 8, 16, 24, 32)
 #. %4 is the VGA mode ID (hexadecimal number)
-#: src/routines/section_widgets.ycp:186
+#: src/routines/section_widgets.ycp:222
 #, ycp-format
 msgid "%1x%2, %3 bits (mode %4)"
 msgstr "%1x%2, %3 bity (tryb %4)"
 
 #. item of a combo box
-#: src/routines/section_widgets.ycp:190
+#: src/routines/section_widgets.ycp:226
 msgid "Text Mode"
 msgstr "Tryb tekstowy"
 
 #. file open popup caption
-#: src/routines/section_widgets.ycp:214
+#: src/routines/section_widgets.ycp:250
 msgid "Device to Boot"
 msgstr "Urządzenie do uruchomienia"
 
 #. radio button
-#: src/routines/section_widgets.ycp:231
+#: src/routines/section_widgets.ycp:267
 msgid "Clone Selected Section"
 msgstr "Sklonuj wybraną sekcję"
 
 #. radio button
-#: src/routines/section_widgets.ycp:237
+#: src/routines/section_widgets.ycp:273
 msgid "Kernel (Linux)"
 msgstr "Jądro (Linux)"
 
 #. radio button
-#: src/routines/section_widgets.ycp:239
+#: src/routines/section_widgets.ycp:275
 msgid "Kernel via XEN"
 msgstr "Jądro w XEN"
 
 #. radio button (don't translate 'chainloader')
-#: src/routines/section_widgets.ycp:241
+#: src/routines/section_widgets.ycp:277
 msgid "Other System (Chainloader)"
 msgstr "Inny system (ChainLoader)"
 
 #. text entry
 #. combo box
-#: src/routines/section_widgets.ycp:317 src/routines/section_widgets.ycp:321
+#: src/routines/section_widgets.ycp:353
+#: src/routines/section_widgets.ycp:357
 msgid "&Kernel"
 msgstr "&Jądro"
 
 #. text entry
 #. combo box
-#: src/routines/section_widgets.ycp:339 src/routines/section_widgets.ycp:343
+#: src/routines/section_widgets.ycp:375
+#: src/routines/section_widgets.ycp:379
 msgid "&Initial RAM Disk"
 msgstr "RAM-d&ysk początkowy"
 
 #. combo box
-#: src/routines/section_widgets.ycp:359
+#: src/routines/section_widgets.ycp:395
 msgid "Root &Device"
 msgstr "Urzą&dzenie główne"
 
 #. combo box
-#: src/routines/section_widgets.ycp:367
+#: src/routines/section_widgets.ycp:405
 msgid "&VGA Mode"
 msgstr "Tryb &VGA"
 
 #. text entry
-#: src/routines/section_widgets.ycp:374
+#: src/routines/section_widgets.ycp:412
 msgid "Other Kernel &Parameters"
 msgstr "Inne &parametry jądra"
 
@@ -2556,9 +2596,40 @@ msgstr ""
 msgid "ZIPL &Target"
 msgstr "&Cel ZIPL"
 
-msgid "Use the Apple MkLinux Booter to boot the kernel."
-msgstr "Użyj Apple MkLinux Booter, aby uruchomić jądro systemu."
+#. for s390:
+#. Message that will be displayed along with information
+#. how the boot loader was installed
+#: src/clients/bootloader_finish.ycp:95
+msgid ""
+"\n"
+"Your system will now be shut down.\n"
+"After shutdown, reload the system\n"
+"with the load address of your root DASD.\n"
+msgstr ""
+"\n"
+"System zostanie teraz zamknięty.\n"
+"Po zamknięciu proszę uruchomić system podając \n"
+"adres do pobrania głównego DASD.\n"
 
-msgid "PReP partition"
-msgstr "Partycja PReP"
+#. report error
+#: src/elilo/misc.ycp:130
+msgid ""
+"Updating the directory layout \n"
+"to match Intel's EFI specification failed.\n"
+"Update it manually before proceeding."
+msgstr ""
+"Aktualizacja układu katalogów w celu\n"
+"zgodności z Intel EFI nie powiodła się.\n"
+"Proszę zaktualizować ręcznie przed kontynuacją."
+
+#: src/modules/BootPOWERLILO.ycp:650
+msgid "Do not install boot loader; just create configuration files"
+msgstr ""
+"Nie instaluj programu rozruchowego;\n"
+"utwórz tylko pliki konfiguracyjne"
+
+#~ msgid "Use the Apple MkLinux Booter to boot the kernel."
+#~ msgstr "Użyj Apple MkLinux Booter, aby uruchomić jądro systemu."
+#~ msgid "PReP partition"
+#~ msgstr "Partycja PReP"
 
