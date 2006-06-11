@@ -15,15 +15,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: installation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-28 23:07+0200\n"
-"PO-Revision-Date: 2006-04-04 23:26+0200\n"
-"Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
+"POT-Creation-Date: 2006-05-24 15:43+0200\n"
+"PO-Revision-Date: 2006-06-12 01:05+0100\n"
+"Last-Translator: Stanisław Małolepszy <smalolepszy@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;X-Generator: KBabel 1.9.1\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;X-Generator: KBabel 1.9.1\n"
 "X-Generator: KBabel 1.9.1\n"
 
 #. this is a heading
@@ -36,15 +35,45 @@ msgstr "Pusty"
 msgid "&Dummy"
 msgstr "&Pusty"
 
-#: src/clients/add-on_auto.ycp:55
+#: src/clients/add-on_auto.ycp:57
 #, ycp-format
 msgid "<li>Media: %1, Path: %2, Product: %3</li>\n"
 msgstr "<li>Nośnik: %1, ścieżka: %2, produkt: %3</li>\n"
 
 #. error report
 #: src/clients/add-on_auto.ycp:123
-msgid "Failed to add Add-On Product."
+msgid "Failed to add add-on product."
 msgstr "Dołączenie produktów dodatkowych nie powiodło się"
+
+#. placeholder for unknown path
+#. summary item, %1 is product name, %2 media URL, %3 directory on media
+#. placeholder for unknown directory
+#. place holder for unknown URL
+#. placeholder for unknown path
+#. placeholder for unknown URL
+#: src/clients/add-on_proposal.ycp:27
+#: src/clients/add-on_proposal.ycp:31
+#: src/include/add-on-workflow.ycp:416
+#: src/include/add-on-workflow.ycp:421
+#: src/include/add-on-workflow.ycp:786
+#: src/include/add-on-workflow.ycp:792
+msgid "Unknown"
+msgstr "Nieznane"
+
+#. summary string
+#: src/clients/add-on_proposal.ycp:36
+msgid "No add-on product selected for installation"
+msgstr "Żaden produkt dodatkowy nie został wybrany do instalacji."
+
+#. this is a heading
+#: src/clients/add-on_proposal.ycp:61
+msgid "Add-On Products"
+msgstr "Produkty dodatkowe"
+
+#. this is a menu entry
+#: src/clients/add-on_proposal.ycp:63
+msgid "Add-On &Products"
+msgstr "&Produkty dodatkowe"
 
 #. progress step title
 #: src/clients/copy_files_finish.ycp:45
@@ -65,6 +94,18 @@ msgstr "Inicjalizacja domyślnego menedżera okien..."
 #: src/clients/fonts_finish.ycp:39
 msgid "Initializing fonts..."
 msgstr "Inicjalizacja czcionek..."
+
+#. feedback heading
+#. main screen heading
+#: src/clients/inst_addon_update_sources.ycp:51
+#: src/include/add-on-workflow.ycp:779
+msgid "Add-On Product Installation"
+msgstr "Instalacja produktów dodatkowych"
+
+#. feedback message
+#: src/clients/inst_addon_update_sources.ycp:53
+msgid "Reading packages available on the installation sources..."
+msgstr "Odczytywanie pakietów dostępnych w źródłach instalacyjnych..."
 
 #. strings for "ask for online update"-popup
 #: src/clients/inst_ask_online_update.ycp:34
@@ -93,48 +134,47 @@ msgstr ""
 
 #. Check box: start the clone process and store the autoyast
 #. profile in /root/autoinst.xml
-#: src/clients/inst_congratulate.ycp:53
+#: src/clients/inst_congratulate.ycp:71
 msgid "&Clone This System for Autoyast"
 msgstr "S&klonuj ten system dla programu AutoYaST"
 
 #. caption for dialog "Congratulation Dialog"
-#: src/clients/inst_congratulate.ycp:57
+#: src/clients/inst_congratulate.ycp:75
 msgid "Installation Completed"
 msgstr "Instalacja zakończona"
 
 #. congratulation text 1/4
-#: src/clients/inst_congratulate.ycp:60
+#: src/clients/inst_congratulate.ycp:81
 msgid "<p><b>Congratulations!</b></p>"
 msgstr "<p><b>Gratulacje!</b></p>"
 
 #. congratulation text 2/4
-#: src/clients/inst_congratulate.ycp:63
+#: src/clients/inst_congratulate.ycp:84
 msgid ""
 "<p>The installation of &product; on your machine is complete.\n"
 "After clicking <b>Finish</b>, you can log in to the system.</p>\n"
 msgstr ""
 "<p>Instalacja &product; na tym komputerze została zakończona.\n"
-"Po naciśnięciu przycisku <b>Zakończ</b> można będzie zalogować się do "
-"systemu.</p>\n"
+"Po naciśnięciu przycisku <b>Zakończ</b> można będzie zalogować się do systemu.</p>\n"
 
 #. congratulation text 3/4
-#: src/clients/inst_congratulate.ycp:68
+#: src/clients/inst_congratulate.ycp:89
 #, ycp-format
 msgid "<p>Visit us at %1.</p>"
-msgstr "<p>Zapraszamy do odwiedzenia naszej witryny %1.</p>"
+msgstr "<p>Proszę odwiedzić nas na stronie %1.</p>"
 
 #. congratulation text 4/4
-#: src/clients/inst_congratulate.ycp:71
+#: src/clients/inst_congratulate.ycp:92
 msgid "<p>Have a lot of fun!<br>Your SUSE Development Team</p>"
 msgstr "<p>Życzymy przyjemnego używania systemu!<br>Zespół SUSE Linux</p>"
 
 #. help 1/4 for dialog "Congratulation Dialog"
-#: src/clients/inst_congratulate.ycp:90
+#: src/clients/inst_congratulate.ycp:113
 msgid "<p>Your system is ready for use.</p>"
 msgstr "<p>System jest gotowy do pracy.</p>"
 
 #. help 2/4 for dialog "Congratulation Dialog"
-#: src/clients/inst_congratulate.ycp:93
+#: src/clients/inst_congratulate.ycp:116
 msgid ""
 "<p><b>Finish</b> will close the YaST installation and continue\n"
 "to the login screen.</p>\n"
@@ -143,7 +183,7 @@ msgstr ""
 "i pojawi się ekran logowania.</p>\n"
 
 #. help 3/4 for dialog "Congratulation Dialog"
-#: src/clients/inst_congratulate.ycp:98
+#: src/clients/inst_congratulate.ycp:121
 msgid ""
 "<p>If you choose the default graphical desktop KDE, you can\n"
 "adjust some KDE settings to your hardware. Also notice\n"
@@ -153,78 +193,73 @@ msgstr ""
 "można dostosować niektóre parametry KDE do posiadanego sprzętu.\n"
 "Proszę zapoznać się także z informacjami na ekranie powitalnym SUSE.</p>\n"
 
-#: src/clients/inst_congratulate.ycp:104
+#: src/clients/inst_congratulate.ycp:127
 msgid ""
 "<p>Use <b>Clone</b> if you want to create an AutoYaST profile.\n"
-"AutoYaST is a way to do a complete SUSE Linux installation without user "
-"interaction. AutoYaST\n"
-"needs a profile to know what the installed system should look like. If this "
-"option is\n"
-"selected, a profile of the current system is stored in /root/autoyast.xml.</"
-"p>\n"
+"AutoYaST is a way to do a complete SUSE Linux installation without user interaction. AutoYaST\n"
+"needs a profile to know what the installed system should look like. If this option is\n"
+"selected, a profile of the current system is stored in /root/autoyast.xml.</p>\n"
 msgstr ""
 "<p>Aby utworzyć profil AutoYaST, należy użyć <b>Sklonuj</b>.\n"
-"Program AutoYaST pozwala na przeprowadzenie kompletnej instalacji SUSE Linux "
-"bez interakcji z użytkownikiem.\n"
-"AutoYaST wymaga tzw. profilu (zapisane wszystkie wybory, pakiety itp), aby "
-"wiedzieć, jak wyglądać ma zainstalowany system. Po zaznaczeniu tej opcji, "
-"profil obecnego systemu zostanie zachowany w pliku /root/autoyast.xml.</p>\n"
+"Program AutoYaST pozwala na przeprowadzenie kompletnej instalacji SUSE Linux bez interakcji z użytkownikiem.\n"
+"AutoYaST wymaga tzw. profilu (zapisane wszystkie wybory, pakiety itp), aby wiedzieć, jak wyglądać ma zainstalowany system. Po zaznaczeniu tej opcji, profil obecnego systemu zostanie zachowany w pliku /root/autoyast.xml.</p>\n"
 
 #. popup label
-#: src/clients/inst_disks_activate.ycp:39
+#: src/clients/inst_disks_activate.ycp:53
 msgid "Detecting Available Controllers"
 msgstr "Wykrywanie dostępnych kontrolerów"
 
 #. dialog caption
-#: src/clients/inst_disks_activate.ycp:64
+#: src/clients/inst_disks_activate.ycp:78
 msgid "Disk Activation"
 msgstr "Aktywacja dysku"
 
 #. push button
-#: src/clients/inst_disks_activate.ycp:73
+#: src/clients/inst_disks_activate.ycp:87
 msgid "Configure &DASD Disks"
 msgstr "Skonfiguruj dyski &DASD"
 
 #. push button
-#: src/clients/inst_disks_activate.ycp:79
+#: src/clients/inst_disks_activate.ycp:93
 msgid "Configure &ZFCP Disks"
 msgstr "Skonfiguruj dyski &ZFCP"
 
 #. push button
-#: src/clients/inst_disks_activate.ycp:84
+#: src/clients/inst_disks_activate.ycp:98
 msgid "Configure &iSCSI Disks"
 msgstr "Skonfiguruj dyski &iSCSI"
 
 #. dialog heading, %1 is package name
-#: src/clients/inst_doit.ycp:43
+#: src/clients/inst_doit.ycp:45
 #, ycp-format
 msgid "Confirm Package License: %1"
 msgstr "Zgoda na warunki licencji pakietu: %1"
 
 #. push button
 #. Button to accept a license agreement
-#: src/clients/inst_doit.ycp:53 src/clients/inst_info.ycp:39
+#: src/clients/inst_doit.ycp:55
+#: src/clients/inst_info.ycp:39
 msgid "I &Agree"
 msgstr "&Zgadzam się"
 
 #. push button
-#: src/clients/inst_doit.ycp:55
+#: src/clients/inst_doit.ycp:57
 msgid "I &Disagree"
 msgstr "&Nie zgadzam się"
 
-#. push button
-#: src/clients/inst_doit.ycp:57
-msgid "I D&isagree with All"
-msgstr "Nie zgadzam się na ż&adne"
-
 #. help text
-#: src/clients/inst_doit.ycp:69
+#. FIXME
+#. FIXME
+#. Remove reference to "Disagree with all" button (bug #163001) in help text
+#. --sh 2006-04-24
+#. FIXME
+#. FIXME
+#: src/clients/inst_doit.ycp:79
 msgid ""
 "<p><b><big>License Confirmation</big></b><br>\n"
 "The package in the headline of the dialog requires an explicit confirmation\n"
 "of acceptance of its license.\n"
-"If you reject the license of the package, the package will not be "
-"installed.\n"
+"If you reject the license of the package, the package will not be installed.\n"
 "<br>\n"
 "To accept the license of the package, click <b>I Agree</b>.\n"
 "To reject the license of the package, click <b>I Disagree</b>.\n"
@@ -234,31 +269,28 @@ msgid ""
 msgstr ""
 "<p><b><big>Zgoda na warunki licencji</big></b><br>\n"
 "Pakiet wymieniony w tytule okna wymaga wyraźnej zgody na warunki licencji.\n"
-"W przypadku niewyrażenia zgody na warunki licencji tego pakietu, nie "
-"zostanie on zainstalowany\n"
+"W przypadku niewyrażenia zgody na warunki licencji tego pakietu, nie zostanie on zainstalowany\n"
 "<br>\n"
 "Aby zaakceptować licencję tego pakietu, proszę nacisnąć <b>Zgadzam się</b>.\n"
 "Aby odrzucić licencję tego pakietu, proszę nacisnąć <b>Nie zgadzam się</b>.\n"
 "<br>\n"
-"Aby odrzucić licencje wszystkich pakietów wymagających potwierdzenia "
-"licencji, proszę nacisnąć <b>Nie zgadzam się na żadne</b>.</p>"
+"Aby odrzucić licencje wszystkich pakietów wymagających potwierdzenia licencji, proszę nacisnąć <b>Nie zgadzam się na żadne</b>.</p>"
 
 #. Heading for confirmation popup before the installation really starts
-#: src/clients/inst_doit.ycp:121
+#: src/clients/inst_doit.ycp:131
 msgid "Confirm Installation"
 msgstr "Zatwierdzenie instalacji"
 
 #. Text for confirmation popup before the installation really starts 1/3
-#: src/clients/inst_doit.ycp:125
+#: src/clients/inst_doit.ycp:135
 msgid "<p>All information required for the base installation is now complete.</p>"
 msgstr "<p>Wszystkie informacje wymagane do instalacji podstawowej zostały zebrane.</p>"
 
 #. Text for confirmation popup before the installation really starts 2/3
-#: src/clients/inst_doit.ycp:127
+#: src/clients/inst_doit.ycp:137
 msgid ""
 "\n"
-"<p>If you continue now, partitions on your hard disk will be <b>formatted</"
-"b>\n"
+"<p>If you continue now, partitions on your hard disk will be <b>formatted</b>\n"
 "(erasing any existing data in those partitions) \n"
 "according to the installation settings in the previous dialogs.</p>"
 msgstr ""
@@ -269,24 +301,23 @@ msgstr ""
 
 #. Text for confirmation popup before the installation really starts 3/3
 #. Text for confirmation popup before the update really starts 3/3
-#: src/clients/inst_doit.ycp:132 src/clients/inst_doit.ycp:150
+#: src/clients/inst_doit.ycp:142
+#: src/clients/inst_doit.ycp:160
 msgid "<p>Go back and check the settings if you are unsure.</p>"
-msgstr ""
-"<p>W razie wątpliwości proszę wrócić do poprzednich okien i sprawdzić "
-"ustawienia.</p>"
+msgstr "<p>W razie wątpliwości proszę wrócić do poprzednich okien i sprawdzić ustawienia.</p>"
 
 #. Heading for confirmation popup before the update really starts
-#: src/clients/inst_doit.ycp:140
+#: src/clients/inst_doit.ycp:150
 msgid "Confirm Update"
 msgstr "Zatwierdzenie aktualizacji"
 
 #. Text for confirmation popup before the update really starts 1/3
-#: src/clients/inst_doit.ycp:144
+#: src/clients/inst_doit.ycp:154
 msgid "<p>All information required to perform an update is now complete.</p>"
 msgstr "<p>Wszystkie informacje wymagane do aktualizacji zostały zebrane.</p>"
 
 #. Text for confirmation popup before the update really starts 2/3
-#: src/clients/inst_doit.ycp:146
+#: src/clients/inst_doit.ycp:156
 msgid ""
 "\n"
 "<p>If you continue now, data on your hard disk will be overwritten \n"
@@ -297,12 +328,12 @@ msgstr ""
 "nadpisane, zgodnie z ustawieniami z poprzednich okien.</p>"
 
 #. Label for the button that confirms startint the installation
-#: src/clients/inst_doit.ycp:154
+#: src/clients/inst_doit.ycp:164
 msgid "Start &Update"
 msgstr "&Uruchom aktualizację"
 
 #. Help text for last dialog of base installation
-#: src/clients/inst_finish.ycp:33
+#: src/clients/inst_finish.ycp:34
 msgid ""
 "<p>\n"
 "Please wait while the base system is being installed.\n"
@@ -313,36 +344,36 @@ msgstr ""
 "</p>"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:40
+#: src/clients/inst_finish.ycp:41
 msgid "Copy files to installed system"
 msgstr "Kopiowanie plików do instalowanego systemu"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:49
+#: src/clients/inst_finish.ycp:50
 msgid "Save configuration"
 msgstr "Zapis konfiguracji"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:68
+#: src/clients/inst_finish.ycp:69
 msgid "Install boot manager"
 msgstr "Instalacja menedżera rozruchu"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:75
+#: src/clients/inst_finish.ycp:76
 msgid "Save installation settings"
 msgstr "Zapis ustawień instalacji"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:85
+#: src/clients/inst_finish.ycp:86
 msgid "Prepare system for initial boot"
 msgstr "Przygotowywanie systemu do pierwszego uruchomienia"
 
 #. Headline for last dialog of base installation: Install LILO etc.
-#: src/clients/inst_finish.ycp:148
+#: src/clients/inst_finish.ycp:150
 msgid "Finishing Basic Installation"
 msgstr "Kończenie instalacji podstawowej"
 
-#: src/clients/inst_finish.ycp:192
+#: src/clients/inst_finish.ycp:194
 msgid "Finished."
 msgstr "Zakończono."
 
@@ -352,22 +383,26 @@ msgid "I Do &Not Agree"
 msgstr "&Nie zgadzam się"
 
 #. dialog caption
-#: src/clients/inst_license.ycp:85 src/modules/AddOnProduct.ycp:686
+#: src/clients/inst_license.ycp:85
+#: src/modules/AddOnProduct.ycp:686
 msgid "License Agreement"
 msgstr "Umowa licencyjna"
 
 #. radio button
-#: src/clients/inst_license.ycp:101 src/modules/AddOnProduct.ycp:702
+#: src/clients/inst_license.ycp:101
+#: src/modules/AddOnProduct.ycp:702
 msgid "Yes, I Agree to the License Agreement"
 msgstr "Tak, zgadzam się z warunkami umowy licencyjnej"
 
 #. radio button
-#: src/clients/inst_license.ycp:105 src/modules/AddOnProduct.ycp:706
+#: src/clients/inst_license.ycp:105
+#: src/modules/AddOnProduct.ycp:706
 msgid "No, I Do Not Agree"
 msgstr "Nie, nie zgadzam się"
 
 #. help text
-#: src/clients/inst_license.ycp:114 src/modules/AddOnProduct.ycp:716
+#: src/clients/inst_license.ycp:114
+#: src/modules/AddOnProduct.ycp:716
 msgid ""
 "<p>Read the license agreement carefully and select\n"
 "one of the available options. If you do not agree to the license agreement,\n"
@@ -378,7 +413,8 @@ msgstr ""
 "na warunki licencji konfiguracja zostanie przerwana.</p>\n"
 
 #. yes-no popup
-#: src/clients/inst_license.ycp:148 src/modules/AddOnProduct.ycp:823
+#: src/clients/inst_license.ycp:148
+#: src/modules/AddOnProduct.ycp:825
 msgid "Reread or reconsider the license agreement?"
 msgstr ""
 "Aby kontynuować instalację, konieczne jest \n"
@@ -391,24 +427,28 @@ msgid "System is shutting down..."
 msgstr "Zamykanie systemu..."
 
 #. message popup
-#: src/clients/inst_license.ycp:179 src/modules/AddOnProduct.ycp:837
+#: src/clients/inst_license.ycp:179
+#: src/modules/AddOnProduct.ycp:839
 msgid "Accept or decline the license agreement."
 msgstr "Proszę zaakceptować albo odrzucić warunki umowy licencyjnej."
 
 #. label
-#: src/clients/inst_mode.ycp:49 src/clients/inst_system_analysis.ycp:47
+#: src/clients/inst_mode.ycp:49
+#: src/clients/inst_system_analysis.ycp:47
 msgid "Evaluating root partition. One moment please..."
 msgstr "Sprawdzanie partycji głównej (root). Proszę czekać..."
 
 #. a popup
-#: src/clients/inst_mode.ycp:57 src/clients/inst_system_analysis.ycp:55
+#: src/clients/inst_mode.ycp:57
+#: src/clients/inst_system_analysis.ycp:55
 msgid "No Linux root partition found."
 msgstr "Nie znaleziono żadnej partycji głównej z systemem Linux."
 
 #. Information popup: Inform user what partition
 #. will be booted from after user selected
 #. "Boot installed system"
-#: src/clients/inst_mode.ycp:80 src/clients/inst_system_analysis.ycp:78
+#: src/clients/inst_mode.ycp:80
+#: src/clients/inst_system_analysis.ycp:78
 #, ycp-format
 msgid "Booting from %1"
 msgstr "Uruchamianie systemu z %1"
@@ -449,7 +489,8 @@ msgstr ""
 "</p>"
 
 #. help text for installation method
-#: src/clients/inst_mode.ycp:164 src/clients/inst_system_analysis.ycp:156
+#: src/clients/inst_mode.ycp:164
+#: src/clients/inst_system_analysis.ycp:156
 msgid ""
 "<p>\n"
 "Select <b>New Installation</b> if there is no existing Linux system on your\n"
@@ -458,13 +499,12 @@ msgid ""
 "</p>"
 msgstr ""
 "<p>\n"
-"Proszę wybrać opcję <b>Nowa instalacja</b>, jeśli w tym komputerze nie ma "
-"systemu Linux, albo jeśli trzeba całkowicie wymienić istniejący system "
-"linuksowy, porzucając wszystkie jego dotychczasowe dane konfiguracyjne.\n"
+"Proszę wybrać opcję <b>Nowa instalacja</b>, jeśli w tym komputerze nie ma systemu Linux, albo jeśli trzeba całkowicie wymienić istniejący system linuksowy, porzucając wszystkie jego dotychczasowe dane konfiguracyjne.\n"
 "</p>"
 
 #. help text for installation method
-#: src/clients/inst_mode.ycp:175 src/clients/inst_system_analysis.ycp:164
+#: src/clients/inst_mode.ycp:175
+#: src/clients/inst_system_analysis.ycp:164
 msgid ""
 "<p>\n"
 "Select <b>Update an Existing System</b> to update a Linux system already\n"
@@ -473,9 +513,7 @@ msgid ""
 "</p>"
 msgstr ""
 "<p>\n"
-"Proszę wybrać opcję <b>Aktualizacja istniejącego systemu</b>, aby "
-"zaktualizować system Linux zainstalowany w tym komputerze. W tym trybie "
-"instalator zachowuje\n"
+"Proszę wybrać opcję <b>Aktualizacja istniejącego systemu</b>, aby zaktualizować system Linux zainstalowany w tym komputerze. W tym trybie instalator zachowuje\n"
 "ustawienia konfiguracyjne istniejącego systemu, jeśli jest to możliwe.\n"
 "</p>"
 
@@ -512,8 +550,7 @@ msgid ""
 msgstr ""
 "<p>\n"
 "Proszę wybrać <b>Uruchomienie zainstalowanego systemu</b>, jeśli na dysku\n"
-"znajduje się system Linux, którego nie można uruchomić. Po wybraniu tej "
-"opcji\n"
+"znajduje się system Linux, którego nie można uruchomić. Po wybraniu tej opcji\n"
 "należy spróbować naprawić system ręcznie.\n"
 "</p>"
 
@@ -529,7 +566,8 @@ msgstr "&Aktualizacja istniejącego systemu"
 
 #. label for radio button 3: Start repair system
 #. radio button
-#: src/clients/inst_mode.ycp:230 src/clients/inst_system_analysis.ycp:139
+#: src/clients/inst_mode.ycp:230
+#: src/clients/inst_system_analysis.ycp:139
 msgid "&Repair Installed System"
 msgstr "&Naprawa zainstalowanego systemu"
 
@@ -544,7 +582,8 @@ msgid "Please select"
 msgstr "Proszę wybrać"
 
 #. this is a label of a message box
-#: src/clients/inst_mode.ycp:333 src/clients/inst_system_analysis.ycp:265
+#: src/clients/inst_mode.ycp:333
+#: src/clients/inst_system_analysis.ycp:265
 msgid ""
 "Choose one of the\n"
 "options to continue."
@@ -553,24 +592,27 @@ msgstr ""
 "z opcji, aby kontynuować."
 
 #. heading in proposal, in case the module doesn't create one
-#: src/clients/inst_proposal.ycp:200 src/clients/inst_proposal.ycp:205
-#: src/clients/inst_proposal.ycp:226 src/clients/inst_proposal.ycp:230
+#: src/clients/inst_proposal.ycp:200
+#: src/clients/inst_proposal.ycp:205
+#: src/clients/inst_proposal.ycp:226
+#: src/clients/inst_proposal.ycp:230
 msgid "ERROR: Missing Title"
 msgstr "BŁĄD: Brak nazwy"
 
 #. Initial contents of proposal subwindow while proposals are calculated
-#: src/clients/inst_proposal.ycp:208 src/clients/inst_proposal.ycp:673
+#: src/clients/inst_proposal.ycp:208
+#: src/clients/inst_proposal.ycp:675
 msgid "Analyzing your system..."
 msgstr "Trwa analiza systemu..."
 
 #. fallback proposal, means usually an internal error
-#: src/clients/inst_proposal.ycp:355
+#: src/clients/inst_proposal.ycp:357
 msgid "ERROR: No proposal"
 msgstr "BŁĄD: Brak projektu"
 
 #. Submodules handle their own error reporting
 #. text for a message box
-#: src/clients/inst_proposal.ycp:406
+#: src/clients/inst_proposal.ycp:408
 msgid ""
 "Configuration saved.\n"
 "There were errors."
@@ -579,7 +621,7 @@ msgstr ""
 "Wystąpiły błędy."
 
 #. dialog headline
-#: src/clients/inst_proposal.ycp:618
+#: src/clients/inst_proposal.ycp:620
 msgid "Installation Settings"
 msgstr "Ustawienia instalacji"
 
@@ -588,40 +630,41 @@ msgstr "Ustawienia instalacji"
 #. Translators: About 40 characters max,
 #. use newlines for longer translations.
 #. radio button
-#: src/clients/inst_proposal.ycp:640
+#: src/clients/inst_proposal.ycp:642
 msgid "&Skip Configuration"
 msgstr "&Pomiń konfigurację"
 
 #. radio button
-#: src/clients/inst_proposal.ycp:643
+#: src/clients/inst_proposal.ycp:645
 msgid "&Use Following Configuration"
 msgstr "&Użyj poniższej konfiguracji"
 
 #. menu button
-#: src/clients/inst_proposal.ycp:654 src/clients/inst_proposal.ycp:805
+#: src/clients/inst_proposal.ycp:656
+#: src/clients/inst_proposal.ycp:807
 msgid "&Change..."
 msgstr "&Zmień..."
 
 #. Help message between headline and installation proposal / settings summary.
 #. May contain newlines, but don't make it very much longer than the original.
-#: src/clients/inst_proposal.ycp:715
+#: src/clients/inst_proposal.ycp:717
 msgid "Click any headline to make changes or use the \"Change...\" menu below."
 msgstr ""
 "Aby wprowadzić zmiany, proszę wybrać dowolny nagłówek po prawej, \n"
 "albo nacisnąć \"Zmień...\" poniżej."
 
 #. push button
-#: src/clients/inst_proposal.ycp:741
+#: src/clients/inst_proposal.ycp:743
 msgid "&Show Release Notes"
 msgstr "Informacje o &wydaniu"
 
 #. menu button item
-#: src/clients/inst_proposal.ycp:803
+#: src/clients/inst_proposal.ycp:805
 msgid "&Reset to defaults"
 msgstr "P&rzywróć domyślne"
 
 #. General part of the help text for all types of proposals
-#: src/clients/inst_proposal.ycp:847
+#: src/clients/inst_proposal.ycp:849
 msgid ""
 "<p>\n"
 "Change the values by clicking on the respective headline\n"
@@ -635,7 +678,7 @@ msgstr ""
 
 #. Help text for installation proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:857
+#: src/clients/inst_proposal.ycp:859
 msgid ""
 "<p>\n"
 "Use <b>Accept</b> to perform a new installation with the values displayed.\n"
@@ -647,7 +690,7 @@ msgstr ""
 "</p>\n"
 
 #. Help text for installation proposal, continued
-#: src/clients/inst_proposal.ycp:863
+#: src/clients/inst_proposal.ycp:865
 msgid ""
 "<p>\n"
 "To update an existing &product; system instead of doing a new install,\n"
@@ -668,21 +711,20 @@ msgstr ""
 #. * - sh@suse.de 2002-02-26
 #. *
 #. Help text for installation proposal, continued
-#: src/clients/inst_proposal.ycp:877 src/clients/inst_proposal.ycp:899
+#: src/clients/inst_proposal.ycp:879
+#: src/clients/inst_proposal.ycp:901
 msgid ""
 "<p>\n"
-"Your hard disk has not been modified in any way, so you can still safely "
-"abort.\n"
+"Your hard disk has not been modified in any way, so you can still safely abort.\n"
 "</p>\n"
 msgstr ""
 "<p>\n"
-"Dysk twardy komputera nie został w żaden sposób zmodyfikowany. Można "
-"bezpiecznie zrezygnować z instalacji.\n"
+"Dysk twardy komputera nie został w żaden sposób zmodyfikowany. Można bezpiecznie zrezygnować z instalacji.\n"
 "</p>\n"
 
 #. Help text for update proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:886
+#: src/clients/inst_proposal.ycp:888
 msgid ""
 "<p>\n"
 "Use <b>Accept</b> to perform an update with the values displayed.\n"
@@ -695,7 +737,7 @@ msgstr ""
 
 #. Help text for network configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:908
+#: src/clients/inst_proposal.ycp:910
 msgid ""
 "<p>\n"
 "Put the network settings into effect by pressing <b>Next</b>.\n"
@@ -707,7 +749,7 @@ msgstr ""
 
 #. Help text for service configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:917
+#: src/clients/inst_proposal.ycp:919
 msgid ""
 "<p>\n"
 "Put the service settings into effect by pressing <b>Next</b>.\n"
@@ -719,7 +761,7 @@ msgstr ""
 
 #. Help text for hardware configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:926
+#: src/clients/inst_proposal.ycp:928
 msgid ""
 "<p>\n"
 "Put the hardware settings into effect by pressing <b>Next</b>.\n"
@@ -730,12 +772,12 @@ msgstr ""
 "</p>\n"
 
 #. Proposal in uml module
-#: src/clients/inst_proposal.ycp:934
+#: src/clients/inst_proposal.ycp:936
 msgid "<P><B>UML Installation Proposal</B></P>"
 msgstr "<P><B>Propozycja instalacji UML</B></P>"
 
 #. help text
-#: src/clients/inst_proposal.ycp:936
+#: src/clients/inst_proposal.ycp:938
 msgid ""
 "<P>UML (User Mode Linux) installation allows you to start independent\n"
 "Linux virtual machines in the host system.</P>"
@@ -746,7 +788,7 @@ msgstr ""
 #. Generic help text for other proposals (not basic installation or
 #. hardhware configuration.
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:951
+#: src/clients/inst_proposal.ycp:953
 msgid ""
 "<p>\n"
 "To use the settings as displayed, press <b>Next</b>.\n"
@@ -757,7 +799,7 @@ msgstr ""
 "</p>\n"
 
 #. help text
-#: src/clients/inst_proposal.ycp:960
+#: src/clients/inst_proposal.ycp:962
 msgid ""
 "<p>Some proposals might be\n"
 "locked by the system administrator, so cannot be changed. To change\n"
@@ -769,22 +811,22 @@ msgstr ""
 "z administratorem.</p>"
 
 #. question in a popup box
-#: src/clients/inst_proposal.ycp:1110
+#: src/clients/inst_proposal.ycp:1113
 msgid "Really reset everything to default values?"
 msgstr "Czy na pewno przywrócić wszystkie wartości domyślne?"
 
 #. explain consequences of a decision
-#: src/clients/inst_proposal.ycp:1112
+#: src/clients/inst_proposal.ycp:1115
 msgid "You will lose all changes."
 msgstr "Wszystkie wprowadzone zmiany zostaną utracone."
 
 #. message show when user has disabled the configuration
-#: src/clients/inst_proposal.ycp:1124
+#: src/clients/inst_proposal.ycp:1127
 msgid "Skipping configuration upon user request"
 msgstr "Konfiguracja pominięta na żądanie użytkownika"
 
 #. error message is a popup
-#: src/clients/inst_proposal.ycp:1142
+#: src/clients/inst_proposal.ycp:1145
 msgid ""
 "The proposal contains an error that must be\n"
 "resolved before continuing.\n"
@@ -869,16 +911,17 @@ msgstr ""
 "Proszę sprawdzić urządzenia!\n"
 
 #. strings for main (wizard) layout
-#. Transltors: This is title/brand - only translate the Configuration
-#: src/clients/inst_suse_register.ycp:54
+#. Translators: This is title/brand - verify how to translate it correctly
+#: src/clients/inst_suse_register.ycp:67
 msgid "Novell Customer Center Configuration"
 msgstr "Konfiguracja Novell Customer Center"
 
-#: src/clients/inst_suse_register.ycp:55
-msgid "Update Configuration"
-msgstr "Aktualizacja konfiguracji"
+#. Translators: Module Title for the Box
+#: src/clients/inst_suse_register.ycp:70
+msgid "Online Update Configuration"
+msgstr "Konfiguracja aktualizacji on-line"
 
-#: src/clients/inst_suse_register.ycp:61
+#: src/clients/inst_suse_register.ycp:77
 msgid ""
 "Get technical support and product updates and\n"
 "manage subscriptions with Novell Customer Center."
@@ -886,58 +929,62 @@ msgstr ""
 "W Novell Customer Center można uzyskać pomoc techniczną, \n"
 "pobrać aktualizacje produktów oraz zarządzać subskrypcjami."
 
-#: src/clients/inst_suse_register.ycp:67
+#: src/clients/inst_suse_register.ycp:81
 msgid "Configure Now (Recommended)"
 msgstr "Skonfiguruj teraz (zalecane)"
 
-#: src/clients/inst_suse_register.ycp:68
+#: src/clients/inst_suse_register.ycp:82
 msgid "Configure Later"
 msgstr "Skonfiguruj później"
 
-#: src/clients/inst_suse_register.ycp:70
+#: src/clients/inst_suse_register.ycp:84
 msgid "Include for Convenience"
 msgstr "Włącz dla udogodnienia"
 
 #. Translators: Text for UI Label - capitalized
-#: src/clients/inst_suse_register.ycp:71
+#: src/clients/inst_suse_register.ycp:85
 #: src/clients/suse_register_auto.ycp:198
 msgid "Hardware Profile"
 msgstr "Profil sprzętu"
 
 #. Translators: Text for UI Label - capitalized
-#: src/clients/inst_suse_register.ycp:72
+#: src/clients/inst_suse_register.ycp:86
 #: src/clients/suse_register_auto.ycp:200
 msgid "Optional Information"
 msgstr "Informacje opcjonalne"
 
-#: src/clients/inst_suse_register.ycp:73
+#: src/clients/inst_suse_register.ycp:87
 msgid "Registration Code"
 msgstr "Kod rejestracyjny"
 
-#: src/clients/inst_suse_register.ycp:74
-#: src/clients/inst_suse_register.ycp:164
+#: src/clients/inst_suse_register.ycp:88
+#: src/clients/inst_suse_register.ycp:187
 msgid "Details..."
 msgstr "Szczegóły..."
 
 #. strings for success popup
-#: src/clients/inst_suse_register.ycp:78
+#: src/clients/inst_suse_register.ycp:92
 msgid "Your configuration was successful."
 msgstr "Proces konfiguracji zakończony powodzeniem."
 
+#: src/clients/inst_suse_register.ycp:93
+msgid "An update server has been added to your configuration."
+msgstr "Serwer z aktualizacjami został dodany do konfiguracji."
+
 #. strings for manual interaction popup
-#: src/clients/inst_suse_register.ycp:82
+#: src/clients/inst_suse_register.ycp:97
 msgid "Manual Interaction Required"
 msgstr "Wymagana interakcja ręczna"
 
-#: src/clients/inst_suse_register.ycp:83
+#: src/clients/inst_suse_register.ycp:98
 msgid "Needed Information"
 msgstr "Wymagane informacje"
 
-#: src/clients/inst_suse_register.ycp:84
+#: src/clients/inst_suse_register.ycp:99
 msgid "Continue"
 msgstr "Kontynuuj"
 
-#: src/clients/inst_suse_register.ycp:86
+#: src/clients/inst_suse_register.ycp:101
 msgid ""
 "A Web browser will start in which to complete\n"
 "the configuration on the opened Web site."
@@ -946,11 +993,11 @@ msgstr ""
 "pozwoli uzupełnić konfigurację na otwartej witrynie internetowej."
 
 #. string for show information popup
-#: src/clients/inst_suse_register.ycp:92
+#: src/clients/inst_suse_register.ycp:107
 msgid "Registration and Privacy Information"
 msgstr "Informacje dotyczące rejestracji i poufności"
 
-#: src/clients/inst_suse_register.ycp:96
+#: src/clients/inst_suse_register.ycp:111
 msgid ""
 "The server requires additional system information. Activating \n"
 "submission of the hardware profile automatically."
@@ -959,11 +1006,11 @@ msgstr ""
 "aktywowanie wysyłania profilu sprzętowego."
 
 #. nonroot-message strings
-#: src/clients/inst_suse_register.ycp:101
+#: src/clients/inst_suse_register.ycp:116
 msgid "Update Source Issues"
 msgstr "Aktualizacja źródeł wydania"
 
-#: src/clients/inst_suse_register.ycp:103
+#: src/clients/inst_suse_register.ycp:118
 msgid ""
 "Registering as a regular user does not include the update source\n"
 "in the Online Update YaST module. If you continue and later want \n"
@@ -981,19 +1028,36 @@ msgstr ""
 "dostępne dla wszystkich narzędzi."
 
 #. error messages
-#: src/clients/inst_suse_register.ycp:114
-msgid "Error: Recieved data is invalid."
+#: src/clients/inst_suse_register.ycp:129
+msgid "Error: Data received is invalid."
 msgstr "Błąd: otrzymane dane są nieprawidłowe."
 
-#: src/clients/inst_suse_register.ycp:115
+#: src/clients/inst_suse_register.ycp:130
 msgid "Error: Could not retrieve data."
 msgstr "Błąd: nie udało się pobrać danych."
 
-#: src/clients/inst_suse_register.ycp:121
+#: src/clients/inst_suse_register.ycp:132
+msgid ""
+"No Web browser available.\n"
+"Run the suse_register command manually."
+msgstr ""
+"Nie znaleziono przeglądarki internetowej.\n"
+"Proszę uruchomić \"suse_register\" ręcznie."
+
+#: src/clients/inst_suse_register.ycp:136
+msgid ""
+"Your registration requires interactive input that is not\n"
+"supported in text mode. Run YaST2 in the graphical mode or\n"
+"run the suse_register command manually."
+msgstr ""
+"Rejestracja wymaga funkcji niedostępnych w trybie\n"
+"tekstowym. Proszę uruchomić YaST2 w trybie graficznym\n"
+"lub uruchomić \"suse_register\" ręcznie."
+
+#: src/clients/inst_suse_register.ycp:144
 msgid ""
 "<p>\n"
-"Configure your system to enable online updates by registering it with "
-"Novell.\n"
+"Configure your system to enable online updates by registering it with Novell.\n"
 "To do this now, select <b>Configure Now</b>. Delay the registration with\n"
 "<b>Configure Later</b>.\n"
 "</p>"
@@ -1005,15 +1069,14 @@ msgstr ""
 "rejestrację należy wybrać <b>Konfiguruj później</b>.\n"
 "</p>"
 
-#: src/clients/inst_suse_register.ycp:129
+#: src/clients/inst_suse_register.ycp:152
 msgid ""
 "<p>\n"
 "To simplify the registration process, include information from your system\n"
 "with <b>Optional Information</b> and <b>Hardware Profile</b>. \n"
 "<b>Details</b> shows the maximum amount of information that can be involved\n"
 " in your registration. To obtain this information, it contacts the Novell\n"
-"server to query what information is needed for your product. Only the "
-"identity\n"
+"server to query what information is needed for your product. Only the identity\n"
 "of the installed product is sent in this initial exchange.\n"
 "</p>"
 msgstr ""
@@ -1028,7 +1091,7 @@ msgstr ""
 "produktu.\n"
 "</p>"
 
-#: src/clients/inst_suse_register.ycp:140
+#: src/clients/inst_suse_register.ycp:163
 msgid ""
 "<p>\n"
 "If you purchased your copy of this product, enable <b>Registration Code</b>\n"
@@ -1042,14 +1105,12 @@ msgstr ""
 "Spowoduje to zarejestrowanie Państwa w celu umo·żliwienia otrzymywania pomocy przy instalacji, dołączonej do produktu.\n"
 "</p>"
 
-#: src/clients/inst_suse_register.ycp:148
+#: src/clients/inst_suse_register.ycp:171
 msgid ""
 "<p>\n"
 "No information is passed to anyone outside Novell. The data is used for\n"
-"statistical purposes and to enhance your convenience regarding driver "
-"support\n"
-"and your Web account. Find a detailed privacy policy in <b>Details</b>. "
-"View\n"
+"statistical purposes and to enhance your convenience regarding driver support\n"
+"and your Web account. Find a detailed privacy policy in <b>Details</b>. View\n"
 "the transmitted information in the log file <tt>~/.suse_register.log</tt>.\n"
 "</p>"
 msgstr ""
@@ -1062,25 +1123,27 @@ msgstr ""
 "</p>"
 
 #. further strings
-#: src/clients/inst_suse_register.ycp:161
+#: src/clients/inst_suse_register.ycp:184
 msgid "Checking..."
 msgstr "Sprawdzanie..."
 
-#: src/clients/inst_suse_register.ycp:162
+#: src/clients/inst_suse_register.ycp:185
+#: src/clients/inst_suse_register.ycp:188
 msgid "Error"
 msgstr "Błąd"
 
-#: src/clients/inst_suse_register.ycp:163
+#: src/clients/inst_suse_register.ycp:186
 msgid "An error occurred while connecting to the server."
 msgstr "Wystąpił błąd podczas łączenia się z serwerem."
 
-#: src/clients/inst_suse_register.ycp:165
-msgid "Error Message"
-msgstr "Komunikat błędu"
-
-#: src/clients/inst_suse_register.ycp:166
-msgid "Starting Browser..."
+#: src/clients/inst_suse_register.ycp:189
+msgid "Starting browser..."
 msgstr "Uruchamianie przeglądarki..."
+
+#. add update source
+#: src/clients/inst_suse_register.ycp:742
+msgid "Setting up online update source..."
+msgstr "Konfigurowanie źródeł aktualizacji on-line..."
 
 #. //////////////////////////////////////////////////////////////////////////////
 #. Main Dialog
@@ -1116,7 +1179,8 @@ msgstr "Zapisywanie konfiguracji systemu"
 #. prior to calling any SuSEconfig module.
 #.
 #. progress step title
-#: src/clients/inst_suseconfig.ycp:133 src/clients/ldconfig_finish.ycp:39
+#: src/clients/inst_suseconfig.ycp:133
+#: src/clients/ldconfig_finish.ycp:39
 msgid "Setting up linker cache"
 msgstr "Konfiguracja bufora konsolidatora"
 
@@ -1202,12 +1266,10 @@ msgstr ""
 #: src/clients/inst_system_analysis.ycp:171
 msgid ""
 "<p>\n"
-"To install an add-on product from separate media together with &product;, "
-"select\n"
+"To install an add-on product from separate media together with &product;, select\n"
 "<b>Include Add-On Products from Separate Media</b>.</p>\n"
 msgstr ""
-"Aby zainstalować dodatkowy produkt z innego nośnika wraz z systemem "
-"&product;, należy\n"
+"Aby zainstalować dodatkowy produkt z innego nośnika wraz z systemem &product;, należy\n"
 "wybrać <b>Dołącz dodatkowe produkty z innych nośników</b>.</p>\n"
 
 #. help text for installation method
@@ -1218,9 +1280,7 @@ msgid ""
 "your hard disk. With this option, try to fix problems automatically.\n"
 "</p>"
 msgstr ""
-"<p>Jeśli na dysku znajduje się uszkodzony system Linux, proszę nacisnąć "
-"<b>Inne...</b> a następnie wybrać opcję <b>Naprawa zainstalowanego systemu</"
-"b>. Po wybraniu tej opcji nastąpi próba automatycznej naprawy systemu.\n"
+"<p>Jeśli na dysku znajduje się uszkodzony system Linux, proszę nacisnąć <b>Inne...</b> a następnie wybrać opcję <b>Naprawa zainstalowanego systemu</b>. Po wybraniu tej opcji nastąpi próba automatycznej naprawy systemu.\n"
 "</p>"
 
 #. help text for installation method
@@ -1231,9 +1291,7 @@ msgid ""
 "disk that will not boot. With this option, try to fix problems manually.\n"
 "</p>"
 msgstr ""
-"<p>Jeśli na dysku znajduje się system Linux, którego nie można uruchomić, "
-"proszę nacisnąć <b>Inne...</b>, a następnie wybrać opcję <b>Uruchomienie "
-"zainstalowanego systemu</b>, aby uzyskać możliwość naprawy ręcznej.\n"
+"<p>Jeśli na dysku znajduje się system Linux, którego nie można uruchomić, proszę nacisnąć <b>Inne...</b>, a następnie wybrać opcję <b>Uruchomienie zainstalowanego systemu</b>, aby uzyskać możliwość naprawy ręcznej.\n"
 "</p>"
 
 #: src/clients/inst_system_analysis.ycp:190
@@ -1274,7 +1332,8 @@ msgstr ""
 
 #. }
 #. dialog caption
-#: src/clients/installation.ycp:140 src/modules/AddOnProduct.ycp:915
+#: src/clients/installation.ycp:140
+#: src/modules/AddOnProduct.ycp:920
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
 
@@ -1376,17 +1435,14 @@ msgstr "Nie można odczytać informacji o wydaniu."
 #. beginning of the rich text with the release notes
 #: src/clients/release_notes_popup.ycp:67
 msgid ""
-"<p><b>These are the release notes made for the first initial release. They "
-"are\n"
+"<p><b>These are the release notes made for the first initial release. They are\n"
 "part of the installation media. During installation, if a connection\n"
 "to the Internet is available, you can download updated release notes\n"
 "from the SUSE Linux Web server.</b></p>"
 msgstr ""
 "<p><b>To są informacje o wydaniu, dotyczące pierwszego wydania tej wersji.\n"
-"Są one zamieszczone na medium instalacyjnym. Podczas instalacji można "
-"pobrać \n"
-"zaktualizowane informacje o wydaniu z serwera internetowego SUSE Linux, "
-"jeśli\n"
+"Są one zamieszczone na medium instalacyjnym. Podczas instalacji można pobrać \n"
+"zaktualizowane informacje o wydaniu z serwera internetowego SUSE Linux, jeśli\n"
 "będzie dostępne połączenie z Internetem.</b></p>"
 
 #. progress step title
@@ -1493,12 +1549,7 @@ msgid "Key is invalid."
 msgstr "Nieprawidłowy klucz."
 
 #: src/clients/suse_register_auto.ycp:179
-msgid ""
-"<p>Product registration includes your product in Novell's database, enabling "
-"you to get online updates and technical support. To register while "
-"installing automatically, select <b>Run Product Registration</b>. To "
-"simplify the procedure, include information from your system with "
-"<b>Hardware Profile</b> and <b>Optional Information</b>.</p>"
+msgid "<p>Product registration includes your product in Novell's database, enabling you to get online updates and technical support. To register while installing automatically, select <b>Run Product Registration</b>. To simplify the procedure, include information from your system with <b>Hardware Profile</b> and <b>Optional Information</b>.</p>"
 msgstr ""
 "<p>Rejestracja produktu, dołączająca Państwa produkt do bazy danych firmy \n"
 "Novell, pozwala na korzystanie z aktualizacji online i pomocy technicznej. Aby \n"
@@ -1507,19 +1558,11 @@ msgstr ""
 "dołączyć informacje o systemie przez opcje: <b>Profil sprzętowy</b> i <b>Informacje opcjonalne</b>.</p>"
 
 #: src/clients/suse_register_auto.ycp:182
-msgid ""
-"<p>Get more information about the registration process with "
-"<tt>suse_register -h</tt>.</p>"
+msgid "<p>Get more information about the registration process with <tt>suse_register -h</tt>.</p>"
 msgstr "<p>Więcej informacji o procesie rejestracji można uzyskać przy pomocy polecenia <tt>suse_register -h</tt>.</p>"
 
 #: src/clients/suse_register_auto.ycp:185
-msgid ""
-"<p>Other information used for registration is shown in <b>Registration Data</"
-"b>. Add a new key and value pair by pressing <b>Add</b> then entering the "
-"appropriate values. These parameters are those that can be passed with "
-"<tt>suse_register -a</tt>. Get more information about them with "
-"<tt>suse_register -p</tt>.   Remove a pair with <b>Delete</b> or modify an "
-"existing pair with <b>Edit</b>.</p>"
+msgid "<p>Other information used for registration is shown in <b>Registration Data</b>. Add a new key and value pair by pressing <b>Add</b> then entering the appropriate values. These parameters are those that can be passed with <tt>suse_register -a</tt>. Get more information about them with <tt>suse_register -p</tt>.   Remove a pair with <b>Delete</b> or modify an existing pair with <b>Edit</b>.</p>"
 msgstr ""
 "<p>Pozostałe informacje używane do procesu rejestracji przedstawiane są \n"
 "w <b>Dane rejestracyjne</b>. Aby dodać nowy klucz i parę wartości proszę \n"
@@ -1585,7 +1628,8 @@ msgid "Please insert the vendor CD-ROM"
 msgstr "Proszę umieścić dysk producenta w napędzie CD"
 
 #. VENDOR: vendor cd contains wrong data
-#: src/clients/vendor.ycp:134 src/clients/vendor.ycp:148
+#: src/clients/vendor.ycp:134
+#: src/clients/vendor.ycp:148
 #: src/clients/vendor.ycp:196
 msgid ""
 "Could not find driver data on the CD-ROM.\n"
@@ -1642,63 +1686,93 @@ msgstr "Kopiowanie konfiguracji systemu X Window do systemu..."
 msgid "Writing YaST Configuration..."
 msgstr "Zapisywanie konfiguracji programu YaST..."
 
+#. Scanning network for SLP servers
+#. translators: popup busy message
+#: src/include/add-on-workflow.ycp:66
+msgid "Scanning network..."
+msgstr "Skanowanie sieci..."
+
+#. error popup
+#: src/include/add-on-workflow.ycp:75
+msgid "No SLP catalogs found."
+msgstr "Nie odnaleziono katalogów SLP..."
+
+#. translators: popup heading
+#: src/include/add-on-workflow.ycp:92
+msgid "Choose SLP Catalog"
+msgstr "Katalog SLP"
+
+#. table header
+#: src/include/add-on-workflow.ycp:98
+msgid "Type"
+msgstr "Typ"
+
+#. table header
+#: src/include/add-on-workflow.ycp:100
+msgid "URL"
+msgstr "URL"
+
 #. radio button
-#: src/include/add-on-workflow.ycp:61
+#: src/include/add-on-workflow.ycp:175
 msgid "&Scan Using SLP..."
 msgstr "&Skanuj używając SLP..."
 
 #. radio button
-#: src/include/add-on-workflow.ycp:63
+#: src/include/add-on-workflow.ycp:177
 msgid "&FTP..."
 msgstr "&FTP..."
 
 #. radio button
-#: src/include/add-on-workflow.ycp:65
+#: src/include/add-on-workflow.ycp:179
 msgid "&HTTP..."
 msgstr "&HTTP..."
 
 #. radio button
-#: src/include/add-on-workflow.ycp:67
+#: src/include/add-on-workflow.ycp:181
 msgid "HTT&PS..."
 msgstr "HTT&PS..."
 
 #. radio button
-#: src/include/add-on-workflow.ycp:69
+#: src/include/add-on-workflow.ycp:183
 msgid "&SMB/CIFS"
 msgstr "&SMB/CIFS"
 
 #. radio button
-#: src/include/add-on-workflow.ycp:71
+#: src/include/add-on-workflow.ycp:185
 msgid "&NFS..."
 msgstr "&NFS..."
 
 #. radio button
-#: src/include/add-on-workflow.ycp:73 src/include/add-on-workflow.ycp:95
+#: src/include/add-on-workflow.ycp:187
+#: src/include/add-on-workflow.ycp:204
 msgid "&CD..."
 msgstr "&CD..."
 
 #. radio button
-#: src/include/add-on-workflow.ycp:75 src/include/add-on-workflow.ycp:97
+#: src/include/add-on-workflow.ycp:189
+#: src/include/add-on-workflow.ycp:206
 msgid "&DVD..."
 msgstr "&DVD..."
 
 #. radio button
-#: src/include/add-on-workflow.ycp:77 src/include/add-on-workflow.ycp:99
+#: src/include/add-on-workflow.ycp:191
+#: src/include/add-on-workflow.ycp:208
 msgid "&Local Directory..."
 msgstr "Katalog &lokalny..."
 
 #. radio button
-#: src/include/add-on-workflow.ycp:79
+#: src/include/add-on-workflow.ycp:193
+#: src/include/add-on-workflow.ycp:210
 msgid "Specify &URL..."
 msgstr "Określ &URL..."
 
 #. dialog caption
-#: src/include/add-on-workflow.ycp:106
+#: src/include/add-on-workflow.ycp:219
 msgid "Add-On Product Media"
 msgstr "Nośniki produktów dodatkowych"
 
 #. help
-#: src/include/add-on-workflow.ycp:108
+#: src/include/add-on-workflow.ycp:221
 msgid ""
 "<p><big><b>Catalog Media</b></big><br>\n"
 "Add-on products can be installed from CD, over a\n"
@@ -1709,7 +1783,7 @@ msgstr ""
 "z sieci lub z dysku twardego.</p>\n"
 
 #. help, continued
-#: src/include/add-on-workflow.ycp:114
+#: src/include/add-on-workflow.ycp:227
 msgid ""
 "<p>\n"
 "To install add-on product from <b>CD</b>,\n"
@@ -1720,7 +1794,7 @@ msgstr ""
 "potrzebny jest zestaw płyt CD/DVD danego produktu.</p>"
 
 #. help, continued
-#: src/include/add-on-workflow.ycp:119
+#: src/include/add-on-workflow.ycp:232
 msgid ""
 "<p>\n"
 "The product CDs can be copied to the hard disk.\n"
@@ -1737,7 +1811,7 @@ msgstr ""
 "katalogu, wystarczy podać tylko jego nazwę. </p>\n"
 
 #. help, continued
-#: src/include/add-on-workflow.ycp:128
+#: src/include/add-on-workflow.ycp:241
 msgid ""
 "<p>\n"
 "Network installation requires a working network connection.\n"
@@ -1749,78 +1823,55 @@ msgstr ""
 "Należy określić katalog, w którym znajdują się pakiety\n"
 "z pierwszego dysku CD, np. /data1/CD1.</p>\n"
 
+#. if (Stage::initial())
+#. {
+#. if (Popup::ConfirmAbort (`painless))
+#. break;
+#. }
+#. else
+#. {
 #. yes-no popup
 #. popup question
-#: src/include/add-on-workflow.ycp:154 src/include/add-on-workflow.ycp:375
-#: src/include/add-on-workflow.ycp:512 src/modules/AddOnProduct.ycp:813
+#: src/include/add-on-workflow.ycp:275
+#: src/include/add-on-workflow.ycp:454
+#: src/include/add-on-workflow.ycp:667
+#: src/modules/AddOnProduct.ycp:815
 msgid "Really abort add-on product installation?"
 msgstr "Czy na pewno przerwać instalację produktów dodatkowych?"
 
-#. translators: popup busy message
-#: src/include/add-on-workflow.ycp:165
-msgid "Scanning network..."
-msgstr "Skanowanie sieci..."
-
-#. error popup
-#: src/include/add-on-workflow.ycp:171
-msgid "No SLP catalogs found."
-msgstr "Nie odnaleziono katalogów SLP..."
-
-#. translators: popup heading
-#: src/include/add-on-workflow.ycp:185
-msgid "Choose SLP Catalog"
-msgstr "Katalog SLP"
-
-#. table header
-#: src/include/add-on-workflow.ycp:190
-msgid "Type"
-msgstr "Typ"
-
-#. table header
-#: src/include/add-on-workflow.ycp:192
-msgid "URL"
-msgstr "URL"
-
-#: src/include/add-on-workflow.ycp:245
+#: src/include/add-on-workflow.ycp:318
 msgid "Insert the add-on product CD"
 msgstr "Proszę umieścić w napędzie płytę CD produktu dodatkowego"
 
-#: src/include/add-on-workflow.ycp:253
+#: src/include/add-on-workflow.ycp:326
 msgid "Insert the add-on product DVD"
 msgstr "Proszę umieścić w napędzie płytę DVD produktu dodatkowego"
 
 #. error report
-#: src/include/add-on-workflow.ycp:294
+#: src/include/add-on-workflow.ycp:369
 msgid "No catalog found on medium."
 msgstr "Na nośniku nie znaleziono katalogu oprogramowania."
 
 #. error report
-#: src/include/add-on-workflow.ycp:315 src/include/add-on-workflow.ycp:416
+#: src/include/add-on-workflow.ycp:393
+#: src/include/add-on-workflow.ycp:501
 msgid "Failed to initialize the catalog."
 msgstr "Inicjalizacja katalogu nie powiodła się."
 
-#. placeholder for unknown directory
-#. place holder for unknown URL
-#. placeholder for unknown path
-#. placeholder for unknown URL
-#: src/include/add-on-workflow.ycp:337 src/include/add-on-workflow.ycp:342
-#: src/include/add-on-workflow.ycp:596 src/include/add-on-workflow.ycp:602
-msgid "Unknown"
-msgstr "Nieznane"
-
 #. table cell, %1 is URL, %2 is directory name
-#: src/include/add-on-workflow.ycp:340 src/include/add-on-workflow.ycp:600
+#: src/include/add-on-workflow.ycp:419
+#: src/include/add-on-workflow.ycp:790
 #, ycp-format
 msgid "URL: %1, Directory: %2"
 msgstr "URL: %1, katalog: %2"
 
 #. dialog caption
-#: src/include/add-on-workflow.ycp:346
+#: src/include/add-on-workflow.ycp:425
 msgid "Catalog Selection"
 msgstr "Wybór katalogu oprogramowania"
 
 #. help text
-#: src/include/add-on-workflow.ycp:348
+#: src/include/add-on-workflow.ycp:427
 msgid ""
 "<p><big><b>Catalog Selection</b></big><br>\n"
 "There were multiple catalogs found on the selected medium.\n"
@@ -1831,83 +1882,92 @@ msgstr ""
 "Należy wskazać, który z nich ma być używany.</p>\n"
 
 #. popup message
-#: src/include/add-on-workflow.ycp:391
+#: src/include/add-on-workflow.ycp:470
 msgid "Select a catalog."
 msgstr "Proszę wybrać katalog oprogramowania."
 
 #. table cell
-#: src/include/add-on-workflow.ycp:450
+#: src/include/add-on-workflow.ycp:541
 msgid "No product found in the catalog"
 msgstr "W katalogu nie znaleziono żadnego produktu."
 
 #. message popup
-#: src/include/add-on-workflow.ycp:465
+#: src/include/add-on-workflow.ycp:573
+msgid ""
+"The product on the media is already installed\n"
+"or selected for installation."
+msgstr ""
+"Produkt znajdujący się na nośniku został już\n"
+"zainstalowany lub wybrany do instalacji."
+
+#. message popup
+#: src/include/add-on-workflow.ycp:596
 msgid "Dependencies of the add-on product cannot be fullfilled."
 msgstr "Zależności produktu dodatkowego nie mogą zostać spełnione."
 
 #. dialog caption
-#: src/include/add-on-workflow.ycp:485
+#: src/include/add-on-workflow.ycp:640
 msgid "Product Selection"
 msgstr "Wybór produktu"
 
 #. multi selection list
-#: src/include/add-on-workflow.ycp:489
+#: src/include/add-on-workflow.ycp:644
 msgid "Available Products"
 msgstr "Dostępne produkty"
 
 #. help text
-#: src/include/add-on-workflow.ycp:493
+#: src/include/add-on-workflow.ycp:648
 msgid ""
 "<p><b><big>Product Selection</big></b><br>\n"
 "There were multiple products found in the catalog. Select the products\n"
 "to install.</p>\n"
 msgstr ""
 "<p><b><big>Wybór produktu</big></b><br>\n"
-"W katalogu znajduje się wiele produktów. Proszę wybrać produkt do instalacji."
-"</p>\n"
+"W katalogu znajduje się wiele produktów. Proszę wybrać produkt do instalacji.</p>\n"
 
 #. message popup
-#: src/include/add-on-workflow.ycp:529
+#: src/include/add-on-workflow.ycp:709
 msgid "Dependencies of the selected add-on products cannot be fullfilled."
 msgstr "Zależności zaznaczonych produktów dodatkowych nie mogą zostać spełnione."
 
-#. main screen heading
-#: src/include/add-on-workflow.ycp:589
-msgid "Add-On Product Installation"
-msgstr "Instalacja produktów dodatkowych"
-
-#: src/include/add-on-workflow.ycp:605
+#: src/include/add-on-workflow.ycp:795
 #, ycp-format
 msgid "Product %1"
 msgstr "Produkt %1"
 
 #. table header
-#: src/include/add-on-workflow.ycp:610
+#: src/include/add-on-workflow.ycp:800
 msgid "Media"
 msgstr "Nośnik"
 
 #. table header
-#: src/include/add-on-workflow.ycp:612
+#: src/include/add-on-workflow.ycp:802
 msgid "Product"
 msgstr "Produkt"
 
 #. message report
-#: src/include/add-on-workflow.ycp:641
+#: src/include/add-on-workflow.ycp:831
 msgid "Select a product to delete."
 msgstr "Wskaż produkt do usunięcia."
 
 #. popup error
 #. error report
-#: src/modules/AddOnProduct.ycp:767 src/modules/AddOnProduct.ycp:788
-#: src/modules/AddOnProduct.ycp:892
+#: src/modules/AddOnProduct.ycp:769
+#: src/modules/AddOnProduct.ycp:790
+#: src/modules/AddOnProduct.ycp:897
 msgid "An error occurred while preparing the installation system."
 msgstr "Wystąpił błąd podczas przygotowywania systemu instalacyjnego."
 
 #. error report
-#: src/modules/AddOnProduct.ycp:907
+#: src/modules/AddOnProduct.ycp:912
 #, ycp-format
 msgid "Control file %1 not found on media."
 msgstr "Na nośniku nie znaleziono pliku sterującego %1."
+
+#. translators: busy popup while registering the system
+#: src/modules/Register.ycp:298
+msgid "Contacting server..."
+msgstr "Łączenie z serwerem..."
 
 #. notification 1/2
 #: src/modules/X11Version.ycp:140
@@ -1920,24 +1980,45 @@ msgstr "<p>Aby system X11 był dostępny, należy zainstalować pakiet <b>%1</b>
 msgid "<p>Do you want to install it now?</p>"
 msgstr "<p>Czy zainstalować go teraz?</p>"
 
-msgid "Optional Data"
-msgstr "Dane opcjonalne"
+#. error report
+#: src/clients/add-on_auto.ycp:123
+msgid "Failed to add Add-On Product."
+msgstr "Dołączenie produktów dodatkowych nie powiodło się"
 
-msgid "Preview Information"
-msgstr "Podgląd informacji"
+#. push button
+#: src/clients/inst_doit.ycp:57
+msgid "I D&isagree with All"
+msgstr "Nie zgadzam się na ż&adne"
 
-msgid "Information to Send"
-msgstr "Informacje do wysłania"
+#: src/clients/inst_suse_register.ycp:55
+msgid "Update Configuration"
+msgstr "Aktualizacja konfiguracji"
 
-msgid ""
-"<p><b>Novell Customer Center Configuration</b></p>\n"
-"<p>To be replaced by a useful text. This text should explain what we are "
-"doing here in this yast module.</p>"
-msgstr ""
-"<p><b>Konfiguracja Novell Customer Center</b></p>\n"
-"<p>Tekst tymczasowy, zostanie zastąpiony informacjami dotyczącymi tego "
-"modułu programu YaST.</p>"
+#. error messages
+#: src/clients/inst_suse_register.ycp:114
+msgid "Error: Recieved data is invalid."
+msgstr "Błąd: otrzymane dane są nieprawidłowe."
 
-msgid "Details"
-msgstr "Szczegóły"
+#: src/clients/inst_suse_register.ycp:165
+msgid "Error Message"
+msgstr "Komunikat błędu"
+
+#: src/clients/inst_suse_register.ycp:166
+msgid "Starting Browser..."
+msgstr "Uruchamianie przeglądarki..."
+
+#~ msgid "Optional Data"
+#~ msgstr "Dane opcjonalne"
+#~ msgid "Preview Information"
+#~ msgstr "Podgląd informacji"
+#~ msgid "Information to Send"
+#~ msgstr "Informacje do wysłania"
+#~ msgid ""
+#~ "<p><b>Novell Customer Center Configuration</b></p>\n"
+#~ "<p>To be replaced by a useful text. This text should explain what we are doing here in this yast module.</p>"
+#~ msgstr ""
+#~ "<p><b>Konfiguracja Novell Customer Center</b></p>\n"
+#~ "<p>Tekst tymczasowy, zostanie zastąpiony informacjami dotyczącymi tego modułu programu YaST.</p>"
+#~ msgid "Details"
+#~ msgstr "Szczegóły"
 
