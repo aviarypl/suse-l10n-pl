@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-13 14:24+0100\n"
-"PO-Revision-Date: 2006-04-11 09:47+0200\n"
-"Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
+"POT-Creation-Date: 2006-05-24 15:55+0200\n"
+"PO-Revision-Date: 2006-06-14 12:43+0100\n"
+"Last-Translator: Stanisław Małolepszy <smalolepszy@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,15 +23,2146 @@ msgstr ""
 "X-Generator: KBabel 1.9.1\n"
 
 #: control/vm_install.glade:14
-msgid "Xen Virtual Machine Settings"
-msgstr "Ustawienia wirtualnego komputera Xen"
+msgid "Virtual Machine (Installation Settings)"
+msgstr "Ustawienia instalacji maszyny wirtualnej"
+
+#: control/vm_install.glade:30
+#: control/vm_install.glade:44
+msgid "Virtual Machine (Final Settings)"
+msgstr "Ustawienia końcowe maszyny wirtualnej"
 
 #. activation mode - in virtual machine installation proposal
 #. combobox item
-#: src/VM_Common.ycp:45
-#: src/inst_vm_options.ycp:56
+#: src/VM_Common.ycp:74
+#: src/inst_vm_options.ycp:54
 msgid "Manually"
 msgstr "Ręcznie"
+
+#. combobox item
+#: src/VM_Common.ycp:74
+#: src/inst_vm_options.ycp:56
+msgid "Automatically"
+msgstr "Automatycznie"
+
+#. virtual network card - in virtual machine installation proposal
+#. combobox item
+#: src/VM_Common.ycp:77
+#: src/inst_vm_network.ycp:255
+msgid "AMD PCnet"
+msgstr "AMD PCnet"
+
+#. combobox item
+#: src/VM_Common.ycp:77
+#: src/inst_vm_network.ycp:257
+msgid "NE2000"
+msgstr "NE2000"
+
+#. virtual graphics card - in virtual machine installation proposal
+#. combobox item
+#: src/VM_Common.ycp:80
+#: src/inst_vm_hardware.ycp:44
+msgid "Cirrus Logic"
+msgstr "Cirrus Logic"
+
+#. combobox item
+#: src/VM_Common.ycp:80
+#: src/inst_vm_hardware.ycp:46
+msgid "Standard VGA"
+msgstr "Standardowe VGA"
+
+#. graphics viewer - in virtual machine installation proposal
+#. combobox item
+#. table item
+#: src/VM_Common.ycp:83
+#: src/inst_vm_hardware.ycp:56
+#: src/inst_vm_manage.ycp:284
+msgid "VNC"
+msgstr "VNC"
+
+#. combobox item
+#. table item
+#: src/VM_Common.ycp:83
+#: src/inst_vm_hardware.ycp:54
+#: src/inst_vm_manage.ycp:281
+msgid "SDL"
+msgstr "SDL"
+
+#. hardware clock - in virtual machine installation proposal
+#. combobox item
+#: src/VM_Common.ycp:86
+#: src/inst_vm_hardware.ycp:66
+#: src/inst_vm_hardware.ycp:84
+msgid "UTC"
+msgstr "UTC"
+
+#. combobox item
+#: src/VM_Common.ycp:86
+#: src/inst_vm_hardware.ycp:64
+#: src/inst_vm_hardware.ycp:82
+msgid "Local Time"
+msgstr "Czas lokalny"
+
+#. table item
+#: src/VM_Common.ycp:161
+#: src/inst_vm_manage.ycp:258
+msgid "Paravirtualization"
+msgstr "Parawirtualizacja"
+
+#. table item
+#: src/VM_Common.ycp:161
+#: src/inst_vm_manage.ycp:261
+msgid "Full Virtualization"
+msgstr "Pełna wirtualizacja"
+
+#: src/VM_Common.ycp:250
+msgid "Undefined Error"
+msgstr "Nieokreślony błąd"
+
+#. Details button on a popup error message
+#: src/VM_Common.ycp:254
+msgid "&Details..."
+msgstr "Szcz&egóły..."
+
+#. proposal items
+#. %1 = an absolute filename path to the AutoYaST profile.
+#: src/VM_Common.ycp:281
+#, ycp-format
+msgid "AutoYaST Profile: %1"
+msgstr "Profil AutoYaST: %1"
+
+#. none AutoYast profile has been selected
+#: src/VM_Common.ycp:283
+msgid "<I>none</I>"
+msgstr "<I>Brak</>"
+
+#. warning text in proposal dialog
+#: src/VM_Common.ycp:294
+msgid "The AutoYaST profile for VM cannot be configured here in full virtualization mode.<BR>Configure it inside the VM after boot."
+msgstr "Nie można skonfigurować w tym miejscu profilu programu AutoYaST dla komputera wirtualnego, w trybie pełnej wirtualizacji.<br>Proszę skonfigurować profil po uruchomieniu, wewnątrz komputera wirtualnego."
+
+#. combobox item
+#. restart mode - when the virtual machine is restarted
+#: src/VM_Common.ycp:315
+msgid "Always"
+msgstr "Zawsze"
+
+#. combobox item
+#. restart mode - when the virtual machine is restarted
+#: src/VM_Common.ycp:318
+msgid "Never"
+msgstr "Nigdy"
+
+#. combobox item
+#. restart mode - when the virtual machine is restarted
+#: src/VM_Common.ycp:321
+msgid "On Reboot"
+msgstr "Podczas ponownego uruchomienia"
+
+#. combobox item
+#. lifecycle_event mode (on_poweroff, on_reboot, on_crash) - destroy virtual machine
+#. combobox item
+#: src/VM_Common.ycp:328
+#: src/inst_vm_options.ycp:28
+#: src/inst_vm_options.ycp:99
+msgid "Destroy"
+msgstr "Zniszcz"
+
+#. combobox item
+#. lifecycle_event mode (on_poweroff, on_reboot, on_crash) - restart virtual machine
+#. combobox item
+#: src/VM_Common.ycp:331
+#: src/inst_vm_options.ycp:30
+#: src/inst_vm_options.ycp:103
+msgid "Restart"
+msgstr "Uruchom ponownie"
+
+#. combobox item
+#. lifecycle_event mode (on_poweroff, on_reboot, on_crash) - preserve virtual machine
+#. combobox item
+#: src/VM_Common.ycp:334
+#: src/inst_vm_options.ycp:32
+#: src/inst_vm_options.ycp:107
+msgid "Preserve"
+msgstr "Zachowaj"
+
+#. combobox item
+#. lifecycle_event mode (on_poweroff, on_reboot, on_crash) - rename and restart virtual machine
+#. combobox item
+#: src/VM_Common.ycp:337
+#: src/inst_vm_options.ycp:34
+#: src/inst_vm_options.ycp:111
+msgid "Rename and restart"
+msgstr "Zmień nazwę i uruchom ponownie"
+
+#. installation proposal item
+#: src/VM_Common.ycp:488
+msgid "Installation Device: ISO Image File"
+msgstr "Sposób instalacji: z obrazu ISO"
+
+#. installation proposal item
+#: src/VM_Common.ycp:492
+msgid "Installation Device: CD/DVD Device"
+msgstr "Sposób instalacji: napęd CD/DVD"
+
+#. installation proposal item
+#. %1 = absolute pathname the to a Xen-Enabled kernel
+#: src/VM_Common.ycp:497
+#, ycp-format
+msgid "Kernel: %1"
+msgstr "Jądro: %1"
+
+#. installation proposal item
+#. %1 = absolute pathname to a Xen-Enabled initrd (ramdisk)
+#: src/VM_Common.ycp:502
+#, ycp-format
+msgid "RAM Disk Image: %1"
+msgstr "Obraz RAM-dysku: %1"
+
+#. installation proposal header
+#: src/VM_Common.ycp:526
+msgid "Custom Installation Source"
+msgstr "Inne źródło instalacji"
+
+#. installation proposal header
+#: src/VM_Common.ycp:531
+msgid "SLP Installation Source"
+msgstr "Źródło instalacji SLP"
+
+#. %1 = installation source description or URL
+#: src/VM_Common.ycp:535
+#, ycp-format
+msgid "SUSE Installation Source: %1"
+msgstr "Źródło instalacji SUSE: %1"
+
+#. error message in proposal
+#: src/VM_Common.ycp:548
+#: src/VM_Common.ycp:555
+msgid "OS installation source is not configured"
+msgstr "Nie skonfigurowano źródła instalacji systemu"
+
+#. Popup error message
+#. %1 = absolute pathname to a loopback disk image (i.e '/var/lib/xen/images/vm1/hda')
+#: src/VM_Common.ycp:586
+#, ycp-format
+msgid ""
+"Cannot create the following disk image:\n"
+"%1\n"
+"\n"
+"Please, ensure there is enough free disk space\n"
+"to create the specified disk image.\n"
+"\n"
+msgstr ""
+"Nie można utworzyć poniższego obrazu dysku:\n"
+"%1\n"
+"\n"
+"Proszę upewnić się, że na dysku dostępne jest wystarczająco dużo wolnego miejsca, aby utworzyć ten obraz.\n"
+"\n"
+
+#. popup error message
+#. %1 = absolute pathname to a product control file (i.e. '/usr/share/YaST2/control/vm_install.xml')
+#: src/VM_Common.ycp:903
+#, ycp-format
+msgid "Control file %1 was not found."
+msgstr "Nie znaleziono pliku kontrolnego %1."
+
+#. part of proposal - MAC address is not specified, assign random
+#: src/VM_Common.ycp:912
+msgid "Random MAC address"
+msgstr "Losowy adres MAC"
+
+#. Proposal for virtual machine installation
+#. %1 = Name of Virtual Machine (i.e. 'vm1')
+#: src/VM_XEN.ycp:341
+#, ycp-format
+msgid "Name of Virtual Machine: %1"
+msgstr "Nazwa komputera wirtualnego: %1"
+
+#. Proposal for virtual machine settings - %1 is a start mode (On boot/Manually)
+#: src/VM_XEN.ycp:347
+#, ycp-format
+msgid "Activation: %1"
+msgstr "Aktywacja: %1"
+
+#. table item
+#: src/VM_XEN.ycp:348
+#: src/VM_XEN.ycp:352
+#: src/VM_XEN.ycp:356
+#: src/VM_XEN.ycp:360
+#: src/VM_XEN.ycp:391
+#: src/VM_XEN.ycp:394
+#: src/VM_XEN.ycp:399
+#: src/VM_XEN.ycp:1343
+#: src/inst_vm_manage.ycp:265
+msgid "Unknown"
+msgstr "Nieznany"
+
+#. Proposal for virtual machine settings
+#: src/VM_XEN.ycp:351
+#, ycp-format
+msgid "On Power Off: %1"
+msgstr ""
+
+#. Proposal for virtual machine settings
+#: src/VM_XEN.ycp:355
+#, ycp-format
+msgid "On Reboot: %1"
+msgstr "Podczas ponownego uruchomienia: %1"
+
+#. Proposal for virtual machine settings
+#: src/VM_XEN.ycp:359
+#, ycp-format
+msgid "On Crash: %1"
+msgstr "W przypadku awarii systemu: %1"
+
+#. Proposal for virtual machine installation
+#. %1 = integer value
+#: src/VM_XEN.ycp:376
+#, ycp-format
+msgid "Memory Size: %1 MB"
+msgstr "Wielkość pamięci: %1 MB"
+
+#. Proposal for virtual machine installation
+#. %1 = integer value
+#: src/VM_XEN.ycp:382
+#, ycp-format
+msgid "Number of Virtual CPUs: %1"
+msgstr "Liczba wirtualnych procesorów: %1"
+
+#. Proposal for virtual machine installation
+#: src/VM_XEN.ycp:390
+#, ycp-format
+msgid "Virtual Graphics Card: %1"
+msgstr "Wirtualna karta graficzna:  %1"
+
+#. Proposal for virtual machine installation
+#: src/VM_XEN.ycp:393
+#, fuzzy, ycp-format
+msgid "Graphics Viewer: %1"
+msgstr "Karta graficzna: "
+
+#. Proposal for virtual machine installation
+#: src/VM_XEN.ycp:398
+#, ycp-format
+msgid "Hardware Clock: %1"
+msgstr "Zegar sprzętowy: %1"
+
+#. error in the installation proposal - do not allow to continue
+#: src/VM_XEN.ycp:415
+#, ycp-format
+msgid "Not enough free memory (%1 MB available)."
+msgstr "Za mało wolnej pamięci (dostępne %1 MB)."
+
+#. proposal time
+#: src/VM_XEN.ycp:592
+#: src/inst_vm_disks.ycp:638
+msgid "Sparse File"
+msgstr "Rzadki plik"
+
+#. proposal item
+#: src/VM_XEN.ycp:598
+#: src/inst_vm_disks.ycp:638
+msgid "Read-Only"
+msgstr "Tylko do odczytu"
+
+#. %1 are options, e.g. Read-only
+#: src/VM_XEN.ycp:613
+#, ycp-format
+msgid "(%1)"
+msgstr "(%1)"
+
+#. %1 = disk, e.g. /dev/hda4
+#: src/VM_XEN.ycp:621
+#, ycp-format
+msgid "Use Disk %1"
+msgstr "Proszę użyć dysku %1"
+
+#. proposal item
+#. %1 = integer value representing the proposed disk size in MB
+#: src/VM_XEN.ycp:627
+#, ycp-format
+msgid "Create %1 MB Image"
+msgstr "Utwórz obraz %1 MB"
+
+#. proposal item
+#. %1 = absolute pathname to a disk image file.
+#: src/VM_XEN.ycp:633
+#, ycp-format
+msgid "Use Image %1"
+msgstr "Proszę użyć obrazu %1"
+
+#. Disk name for installation proposal
+#. %1 is a number, %2 size of disk, %3 is "(sparse image)" if it's set
+#: src/VM_XEN.ycp:638
+#, ycp-format
+msgid "Disk %1: %2 %3"
+msgstr "Dysk %1: %2 %3"
+
+#. warning text in proposal dialog
+#. %1 = device name (e.g. hda, sda...)
+#: src/VM_XEN.ycp:658
+#, ycp-format
+msgid "Disk <tt>%1</tt> cannot be used"
+msgstr "Nie można użyć dysku <tt>%1</tt>"
+
+#. warning text in proposal dialog
+#: src/VM_XEN.ycp:670
+msgid "Disk <tt>hdc</tt> cannot be used with CD-ROM emulation"
+msgstr "Nie można użyć dysku <tt>hdc</tt> z emulacją CD-ROM"
+
+#. warning text in proposal dialog
+#: src/VM_XEN.ycp:677
+msgid "No disk has been selected."
+msgstr "Nie wybrano żadnego dysku."
+
+#. warning text in proposal dialog
+#. %1 = absolute filename of the new disk image
+#: src/VM_XEN.ycp:695
+#, ycp-format
+msgid "New disk image <tt>%1</tt> already exists."
+msgstr "Nowy obraz dysku <tt>%1</tt> już istnieje."
+
+#. proposal item
+#: src/VM_XEN.ycp:715
+msgid "Boot Device: "
+msgstr "Urządzenie rozruchowe:"
+
+#: src/VM_XEN.ycp:715
+msgid "Hard Disk"
+msgstr "Dysk twardy"
+
+#: src/VM_XEN.ycp:715
+msgid "CD/DVD"
+msgstr "CD/DVD"
+
+#. proposal item
+#: src/VM_XEN.ycp:720
+msgid "CD/DVD Image: "
+msgstr "Obraz dysku CD/DVD:"
+
+#. proposal item
+#: src/VM_XEN.ycp:730
+msgid "Installation Options: "
+msgstr "Ustawienia instalacji:"
+
+#. proposal item
+#: src/VM_XEN.ycp:736
+msgid "Partition Containing Boot Files: "
+msgstr "Partycja zawierająca pliki rozruchu:"
+
+#. proposal item
+#: src/VM_XEN.ycp:738
+msgid "Xen-Enabled Kernel: "
+msgstr "Jądro z włączoną obsługą Xen"
+
+#. proposal item
+#: src/VM_XEN.ycp:741
+msgid "Boot File (initrd): "
+msgstr "Plik rozruchu (initrd):"
+
+#. proposal item
+#: src/VM_XEN.ycp:745
+msgid "Boot Options: "
+msgstr "Opcje uruchamiania sytemu:"
+
+#. error in the installation proposal - do not allow to continue
+#: src/VM_XEN.ycp:764
+msgid "Partition Containing Boot Files not specified."
+msgstr "Nie podano partycji zawierającej pliki rozruchowe."
+
+#. error in the installation proposal - do not allow to continue
+#: src/VM_XEN.ycp:769
+msgid "Xen-Enabled Kernel not specified."
+msgstr "Nie podano jądra z włączoną obsługą Xen."
+
+#. popup error message
+#: src/VM_XEN.ycp:1203
+#, fuzzy
+msgid "Cannot add a new virtual disk target."
+msgstr "Nie można uruchomić komputera wirtualnego."
+
+#. Proposal item - %1 is number of virtual network card the virtual machine
+#: src/VM_XEN.ycp:1317
+#, ycp-format
+msgid "Number of Virtual Network Cards: %1"
+msgstr "Ilość wirtualnych kart sieciowych: %1"
+
+#. proposal item - %1 = translated string 'DHCP'
+#. proposal item - %1 = translated string 'Static IP'
+#: src/VM_XEN.ycp:1323
+#: src/VM_XEN.ycp:1327
+#, ycp-format
+msgid "Network Installation Settings: %1"
+msgstr "Ustawienia instalacji sieciowej: %1"
+
+#: src/VM_XEN.ycp:1323
+#: src/inst_vm_network.ycp:226
+msgid "DHCP"
+msgstr "z DHCP"
+
+#: src/VM_XEN.ycp:1327
+#: src/inst_vm_network.ycp:227
+msgid "Static IP"
+msgstr "Statyczny adres IP"
+
+#. proposal item - %1 = IP address
+#: src/VM_XEN.ycp:1329
+#, ycp-format
+msgid "IP: %1"
+msgstr "IP: %1"
+
+#. proposal item - %1 = netmask
+#: src/VM_XEN.ycp:1331
+#, ycp-format
+msgid "Netmask: %1"
+msgstr "Maska sieci: %1"
+
+#. proposal item - %1 = gateway
+#: src/VM_XEN.ycp:1333
+#, ycp-format
+msgid "Gateway: %1"
+msgstr "Brama: %1"
+
+#. proposal item - %1 = translated string 'NE2000' or 'AMD PCnet'
+#: src/VM_XEN.ycp:1342
+#, ycp-format
+msgid "Virtual Network Card: %1"
+msgstr "Wirtualna karta sieciowa: %1"
+
+#. error in the installation proposal - do not allow to continue
+#: src/VM_XEN.ycp:1355
+msgid "Network configuration is not valid."
+msgstr "Konfiguracja sieci jest nieprawidłowa."
+
+#. error in the installation proposal - do not allow to continue
+#: src/VM_XEN.ycp:1362
+msgid "IP not specified."
+msgstr "Nie określono IP."
+
+#. error in the installation proposal - do not allow to continue
+#: src/VM_XEN.ycp:1367
+msgid "Netmask not specified."
+msgstr "Nie określono maski sieci."
+
+#. error in the installation proposal - do not allow to continue
+#: src/VM_XEN.ycp:1372
+msgid "Gateway not specified."
+msgstr "Nie określono bramy sieciowej."
+
+#. popup error message
+#: src/VM_XEN.ycp:1961
+#: src/VM_XEN.ycp:1987
+#: src/VM_XEN.ycp:2019
+msgid ""
+"Failed to extract the kernel\n"
+"from the installation source.\n"
+"\n"
+"Please check that your installation\n"
+"source is accessible."
+msgstr ""
+"Odczytanie obrazu jądra ze źródła\n"
+"istalacji nie powiodło się.\n"
+"\n"
+"Proszę sprawdzić, czy źródło instalacji jest dostępne."
+
+#. popup error message
+#: src/VM_XEN.ycp:1999
+#: src/VM_XEN.ycp:2032
+msgid "Failed to create the installation RAM disk."
+msgstr "Nie można utworzyć RAM-dysku instalacyjnego."
+
+#. popup error message
+#. popup error message with 'Details...' button
+#: src/VM_XEN.ycp:2143
+#: src/VM_XEN.ycp:2151
+msgid "Cannot open the virtual machine console."
+msgstr "Nie można otworzyć konsoli maszyny wirtualnej."
+
+#. popup error message with 'Details...' button
+#: src/VM_XEN.ycp:2166
+msgid "Cannot shutdown the virtual machine."
+msgstr "Nie można wyłączyć maszyny wirtualnej."
+
+#. popup error message with 'Details...' button
+#: src/VM_XEN.ycp:2180
+msgid "Cannot terminate the virtual machine."
+msgstr "Nie można zakończyć działania maszyny wirtualnej."
+
+#. popup error message
+#: src/VM_XEN.ycp:2197
+msgid "Cannot start the virtual machine."
+msgstr "Nie można uruchomić komputera wirtualnego."
+
+#. progress stage
+#: src/dom0_setup.ycp:23
+msgid "Install Packages"
+msgstr "Instalacja pakietów"
+
+#. progress stage
+#: src/dom0_setup.ycp:25
+msgid "Firewall Configuration"
+msgstr "Konfiguracja zapory sieciowej"
+
+#. Headline for management domain installation
+#: src/dom0_setup.ycp:33
+msgid "Configuring the VM Server (domain 0)"
+msgstr "Konfiguracja serwera VM (domeny 0)"
+
+#. xen domain0 installation help text - 1/4
+#: src/dom0_setup.ycp:36
+msgid ""
+"<p><big><b>VM Server Configuration</b></big></p><p>Configuration\n"
+"of the VM Server (domain 0) has two parts.</p>\n"
+msgstr ""
+"<P><B>Konfiguracja serwera VM</B></P><P>Konfiguracja\n"
+"serwera VM jest dwuczęściowa.</P>\n"
+
+#. xen domain0 installation help text - 2/4
+#: src/dom0_setup.ycp:41
+msgid ""
+"<p>The required packages are installed into the system first. Then the\n"
+"boot loader is switched to GRUB if it is not already used and the Xen section is\n"
+"added to the boot loader menu if it is missing.</p>\n"
+msgstr ""
+"<P>Najpierw w systemie instalowane są wymagane pakiety. Następnie \n"
+"program rozruchowy zmieniony zostaje na GRUB, o ile nie jest on już \n"
+"używany, a do menu rozruchowego dodawana jest sekcja Xen, jeśli jej brak.</P>\n"
+
+#. xen domain0 installation help text - 3/4
+#: src/dom0_setup.ycp:47
+msgid ""
+"<p>GRUB is needed because it supports the multiboot standard required\n"
+"to boot Xen and Linux kernel.</p>\n"
+msgstr ""
+"<P>Wymagany jest program GRUB, gdyż obsługuje on standard multiboot,\n"
+"niezbędny do uruchamiania Xen i jądra Linux.</P>\n"
+
+#. xen domain0 installation help text - 4/4
+#: src/dom0_setup.ycp:52
+msgid "<p>When the configuration is successfully finished, it is possible to boot the VM Server from the boot loader menu.</p>"
+msgstr "<P>Kiedy konfiguracja zostanie zakończona pomyślnie, możliwe będzie uruchomienie Xen z menu programu rozruchowego.</P>"
+
+#. error popup
+#: src/dom0_setup.ycp:55
+msgid "An error occurred during installation."
+msgstr "Wystąpił błąd podczas instalacji."
+
+#. error popup
+#. part of an error message
+#: src/dom0_setup.ycp:57
+#: src/inst_vm_kickoff.ycp:93
+msgid "The installation will be aborted."
+msgstr "Instalacja zostanie przerwana."
+
+#. progressbar title - check whether Xen packages are installed
+#: src/dom0_setup.ycp:83
+msgid "Checking packages..."
+msgstr "Sprawdzanie pakietów..."
+
+#. progressbar title - install the required packages
+#: src/dom0_setup.ycp:87
+msgid "Installing packages..."
+msgstr "Instalowanie pakietów..."
+
+#. error popup
+#: src/dom0_setup.ycp:94
+msgid "Cannot install required packages."
+msgstr "Nie można zainstalować wymaganych pakietów."
+
+#. popup message - ask user to reboot the machine into Xen kernel
+#: src/dom0_setup.ycp:140
+msgid ""
+"The machine is ready to start the VM Server.\n"
+"\n"
+"Reboot the machine and select the Xen section in the boot loader menu to start it.\n"
+msgstr ""
+"Komputer jest gotowy do uruchomienia serwera VM.\n"
+"\n"
+"Aby go uruchomić, proszę uruchomić komputer ponownie i wybrać\n"
+"opcję Xen w menu programu rozruchowego.\n"
+
+#. screen title for network options
+#: src/inst_vm_autoyast.ycp:22
+msgid "AutoYaST Profile"
+msgstr "Profil AutoYaST"
+
+#: src/inst_vm_autoyast.ycp:30
+msgid "AutoYaST &Profile"
+msgstr "Pro&fil AutoYaST"
+
+#: src/inst_vm_autoyast.ycp:34
+msgid "Select Profile..."
+msgstr "Wybierz profil..."
+
+#. help text for autoyast settings (1/2)
+#. Add virtual disk - help text 1/2
+#. Create New Disk Image - help text 1/4
+#. Use Existing Disk Image- help text 1/4
+#. Use Block Device - help text 1/4
+#. manage virtual machines - help text 1/4
+#. help text for network settings (1/2)
+#. virtual machine options - help text title
+#. Operating System Installation - help text 1/4
+#. Install Using a CD / DVD Device help text 1/3
+#. Install Using an ISO Image - help text 1/3
+#. help text for OS selection in full virtualization mode (1/2)
+#. boot options - help text 1/3
+#. Create a Virtual Machine - help text 1/4
+#. help text for virtualization mode setting (1/5)
+#: src/inst_vm_autoyast.ycp:40
+#: src/inst_vm_disks.ycp:55
+#: src/inst_vm_disks.ycp:120
+#: src/inst_vm_disks.ycp:268
+#: src/inst_vm_disks.ycp:473
+#: src/inst_vm_manage.ycp:337
+#: src/inst_vm_network.ycp:86
+#: src/inst_vm_network.ycp:269
+#: src/inst_vm_options.ycp:86
+#: src/inst_vm_source.ycp:121
+#: src/inst_vm_source.ycp:246
+#: src/inst_vm_source.ycp:423
+#: src/inst_vm_source.ycp:785
+#: src/inst_vm_source.ycp:912
+#: src/inst_xen_create.ycp:62
+#: src/inst_xen_mode.ycp:47
+#, ycp-format
+msgid "<p><b><big>%1</big></b></p>"
+msgstr "<p><b><big>%1</big></b></p>"
+
+#. help text for autoyast settings (2/2)
+#: src/inst_vm_autoyast.ycp:42
+msgid "<p>You can install a VM using predefined settings from an AutoYaST profile. AutoYast profiles can be created using YaST > Miscellaneous > Autoinstallation.</p>"
+msgstr "<p>Istnieje możliwość zainstalowania maszyny wirtualnej korzystając z ustawień zapisanych w profilach AutoYaST. Profile te można utworzyć wybierająć YaST > Inne > Autoinstalacja.</p>"
+
+#: src/inst_vm_autoyast.ycp:63
+msgid "Select an AutoYaST Profile"
+msgstr "Proszę wybrać profil AutoYaST"
+
+#: src/inst_vm_autoyast.ycp:75
+msgid "The specified AutoYaST Profile does not exist."
+msgstr "Podany profil AutoYaST nie istnieje."
+
+#: src/inst_vm_autoyast.ycp:87
+msgid ""
+"Cannot load the profile in\n"
+"the current system. It may be broken."
+msgstr ""
+"Nie można wczytać profilu\n"
+"do aktualnego systemu.\n"
+"Plik profilu może być uszkodzony."
+
+#. ask user to load VM settings from the profile
+#: src/inst_vm_autoyast.ycp:99
+msgid "Load the virtual machine configuration from the profile?"
+msgstr "Czy wczytać konfigurację wirtualnego komputera z profilu?"
+
+#. dialog title
+#: src/inst_vm_disks.ycp:35
+msgid "Add Virtual Disk"
+msgstr "Dodaj dysk wirtualny"
+
+#: src/inst_vm_disks.ycp:43
+msgid "&Create New Disk Image"
+msgstr "Utwórz &nowy obraz dysku"
+
+#: src/inst_vm_disks.ycp:45
+msgid "&Use Existing Disk Image"
+msgstr "Użyj &istniejącego obrazu dysku"
+
+#: src/inst_vm_disks.ycp:47
+msgid "U&se Block Device"
+msgstr "Uży&j urządzenia blokowego"
+
+#. Add virtual disk - help text 2/2
+#: src/inst_vm_disks.ycp:57
+msgid "<p>A virtual disk can be added by creating a new disk image, selecting an existing disk image, or specifying a block device.</p>"
+msgstr "<p>Dysk wirtualny można dodać na 3 sposoby: tworząc nowy obraz dysku, wybierając już istniejący obraz dysku lub określając odpowiednie urządzenie blokowe.</p>"
+
+#. dialog title
+#: src/inst_vm_disks.ycp:93
+msgid "Create New Disk Image"
+msgstr "Nowy obraz dysku"
+
+#. combobox label - the device name as it appers to the virtual machine
+#: src/inst_vm_disks.ycp:102
+#: src/inst_vm_disks.ycp:249
+#: src/inst_vm_disks.ycp:459
+msgid "&Virtual Disk"
+msgstr "Dysk wi&rtualny"
+
+#. label - directory where the disk image will be created
+#: src/inst_vm_disks.ycp:105
+msgid "&Disk Image Directory"
+msgstr "&Katalog obrazu dysku"
+
+#. combobox label
+#: src/inst_vm_disks.ycp:108
+msgid "Maximum &Size in MB"
+msgstr "Mak&symalna wielkość w MB"
+
+#: src/inst_vm_disks.ycp:111
+msgid "Create &Sparse Image File"
+msgstr "Utwórz &rzadki plik obrazu"
+
+#: src/inst_vm_disks.ycp:112
+#: src/inst_vm_disks.ycp:260
+#: src/inst_vm_disks.ycp:466
+msgid "&Read-Only Access"
+msgstr "Tylko do &odczytu"
+
+#. Create New Disk Image - help text 2/4
+#. Use Existing Disk Image - help text 2/4
+#. Use Block Device - help text 2/4
+#: src/inst_vm_disks.ycp:122
+#: src/inst_vm_disks.ycp:270
+#: src/inst_vm_disks.ycp:475
+msgid "<p>The <b>virtual disk</b> configuration describes how the virtual disk appears to the virtual machine. This controls the ordering of virtual disks within the VM, and is specified using the Linux naming convention.</p>"
+msgstr "<p>Konfiguracja <b>dysku wirtualnego</b> określa, w jaki sposób dysk wirtualny jest widziany przez maszynę wirtualną. Ustawienia te określają kolejność dysków wirtualnych w maszynie wirtualnej. Do tego celu stosuje się linuksowy sposób nazywania dysków."
+
+#. Create New Disk Image - help text 3/4
+#: src/inst_vm_disks.ycp:124
+msgid "<p>The disk image file will be created in the <b>disk image directory</b> with the specified <b>maximum size</b>. A <b>sparse image file</b> only allocates disk space as it is needed.</p>"
+msgstr "<p>Plik obrazu dysku zostanie utworzony w <b>katalogu obrazu dysku</b>, a jego wielkość będzie równa wartości podanej w polu <b>wielkość maksymalna</b>. W przypadku <b>elastycznego obrazu pliku</b>, wielkość obrazu rośnie dopiero wraz z zapotrzebowaniem na nią.</p>"
+
+#. Create New Disk Image - help text 4/4
+#: src/inst_vm_disks.ycp:126
+msgid "<p>Virtual disks can be safely shared among multiple VMs only if every use of the disk is marked <b>read-only</b>. If it is read-only, it cannot be modified by the VM.</p>"
+msgstr "<p>Dyski wirtualne można bezpiecznie współdzielić między maszynami wirtualnymi pod warunkiem, że korzystanie z dysku odbywa się w trybie <b>\"tylko do odczytu\"</b>. Dzięki temu dysk wirtualny jest chroniony przed zmianami, jakich mogłaby dokonać maszyna wirtualna.</p>"
+
+#. error message
+#: src/inst_vm_disks.ycp:157
+#: src/inst_vm_disks.ycp:299
+#: src/inst_vm_disks.ycp:506
+msgid "The Virtual Disk field cannot be left empty."
+msgstr "Pole Dysk wirtualny nie może być puste."
+
+#. popup error message
+#: src/inst_vm_disks.ycp:165
+#: src/inst_vm_disks.ycp:184
+#: src/inst_vm_disks.ycp:514
+msgid ""
+"The Virtual Disk has already been used\n"
+"with another configured virtual disk image.\n"
+"\n"
+"Please select a different Virtual Disk."
+msgstr ""
+"Dysk wirtualny był już używany z innym\n"
+"skonfigurowanym obrazem dysku wirtualnego.\n"
+"\n"
+"Proszę wybrać inny dysk wirtualny."
+
+#. error message
+#: src/inst_vm_disks.ycp:200
+msgid "The Disk Image Directory must be an absolute path."
+msgstr "Katalog obrazu dysku należy podać z bezwzględną ścieżką dostępu."
+
+#. error message
+#: src/inst_vm_disks.ycp:206
+msgid "An invalid disk size was specified."
+msgstr "Podano nieprawidłową wielkość dysku."
+
+#. popup error message with continue/cancel buttons
+#. File is read-only; UI specified read-write.
+#. popup error message with continue/cancel buttons
+#: src/inst_vm_disks.ycp:212
+#: src/inst_vm_disks.ycp:339
+#: src/inst_vm_disks.ycp:350
+#: src/inst_vm_disks.ycp:529
+#: src/inst_vm_disks.ycp:535
+#: src/inst_vm_source.ycp:952
+msgid "Warning"
+msgstr "Ostrzeżenie"
+
+#: src/inst_vm_disks.ycp:212
+#: src/inst_vm_disks.ycp:350
+#: src/inst_vm_disks.ycp:529
+msgid "The Virtual Disk might not be a supported virtual device."
+msgstr "Dysk wirtualny może nie być obsługiwanym urządzeniem wirtualnym."
+
+#. dialog title
+#: src/inst_vm_disks.ycp:239
+msgid "Use Existing Disk Image"
+msgstr "Istniejący obraz dysku"
+
+#: src/inst_vm_disks.ycp:252
+msgid "&Disk Image File"
+msgstr "&Plik obrazu dysku"
+
+#: src/inst_vm_disks.ycp:256
+msgid "&Select Image..."
+msgstr "Wy&bierz obraz..."
+
+#. Use Existing Disk Image - help text 1/4
+#: src/inst_vm_disks.ycp:272
+msgid "<p>The <b>disk image file</b> is an existing image file to be used by the VM.</p>"
+msgstr "<p>W polu <b>Plik obrazu dysku</p> należy podać absolutną ścieżkę do istniejącego pliku obrazu, który ma zostać uzyty przez maszynę wirtualną.</p>"
+
+#. Use Existing Disk Image - help text 1/4
+#. Use Block Device - help text 4/4
+#: src/inst_vm_disks.ycp:274
+#: src/inst_vm_disks.ycp:479
+msgid "<p>Virtual disks can be safely shared among multiple VMs only if every use of the disk is marked read-only. If it is <b>read-only</b>, it cannot be modified by the VM.</p>"
+msgstr "<p>Dyski wirtualne można bezpiecznie współdzielić między maszynami wirtualnymi pod warunkiem, że korzystanie z dysku odbywa się w trybie <b>\"tylko do odczytu\"</b>. Dzięki temu dysk wirtualny jest chroniony przed zmianami, jakich mogłaby dokonać maszyna wirtualna.</p>"
+
+#. popup error message
+#: src/inst_vm_disks.ycp:307
+msgid ""
+"The Virtual Disk has already been used\n"
+"with another configured virtual disk image.\n"
+"\n"
+"Please, select a different Virtual Disk."
+msgstr ""
+"Dysk wirtualny był już używany z innym\n"
+"skonfigurowanym obrazem dysku wirtualnego.\n"
+"\n"
+"Proszę wybrać inny dysk wirtualny."
+
+#. error message
+#: src/inst_vm_disks.ycp:316
+msgid "The Disk Image File field cannot be left empty."
+msgstr "Pole Plik obrazu dysku nie może być puste"
+
+#. error message
+#: src/inst_vm_disks.ycp:322
+msgid "The Disk Image File must be an absolute path."
+msgstr "Plik obrazu dysku należy podać z bezwzględną ścieżką dostępu."
+
+#. popup error message
+#: src/inst_vm_disks.ycp:330
+msgid "The specified Disk Image File does not exist."
+msgstr "Podany plik obrazu dysku nie istnieje."
+
+#: src/inst_vm_disks.ycp:339
+msgid ""
+"The Disk Image File is read-only in the filesystem,\n"
+"so it will be exported to the VM as read-only."
+msgstr ""
+"Plik obrazu dysku jest w trybie \"tylko do odczytu\",\n"
+"zostanie więc wyeksportowany do maszyny wirtualnej\n"
+"także w trybie \"tylko do odczytu\"."
+
+#: src/inst_vm_disks.ycp:359
+msgid "Select Disk Image"
+msgstr "Proszę wybrać obraz dysku"
+
+#. dialog title
+#: src/inst_vm_disks.ycp:449
+msgid "Use Block Device"
+msgstr "Urządzenie blokowe"
+
+#. combobox label - the block device to use (in dom0)
+#: src/inst_vm_disks.ycp:463
+msgid "Block Device"
+msgstr "Urządzenia blokowe"
+
+#. Use Block Device - help text 3/4
+#: src/inst_vm_disks.ycp:477
+msgid "<p>The <b>block device</b> is a block device on the VM Server.</p>"
+msgstr "<p>W polu <b>Urządzenie blokowe</b> należy podać urządzenie blokowe znajdujące się na serwerze VM.</p>"
+
+#. error message
+#: src/inst_vm_disks.ycp:523
+msgid "The Block Device field cannot be left empty."
+msgstr "Nazwa urządzenia blokowego nie może być pusta."
+
+#: src/inst_vm_disks.ycp:535
+msgid "The Block Device might not be a valid block device in domain 0."
+msgstr "Urządzenie blokowe może nie być prawidłowym urządzeniem blokowym na serwerze VM."
+
+#. build and show dialog
+#. dialog title - virtual disk configuration
+#: src/inst_vm_disks.ycp:635
+msgid "Virtual Disks"
+msgstr "Dyski wirtualne"
+
+#. table - column heading
+#: src/inst_vm_disks.ycp:638
+msgid "Virtual Disk"
+msgstr "Dysk wirtualny"
+
+#: src/inst_vm_disks.ycp:638
+#: src/xen_auto.ycp:74
+msgid "Source"
+msgstr "Źródło"
+
+#: src/inst_vm_disks.ycp:638
+msgid "Disk Size (MB)"
+msgstr "Wielkość dysku (MB)"
+
+#. Virtual Disks - help text 1/2
+#: src/inst_vm_disks.ycp:654
+#, ycp-format
+msgid "<p><b><big>%1</big><b></p>"
+msgstr "<p><b><big>%1</big></b></p>"
+
+#. Virtual Disks - help text 2/2
+#: src/inst_vm_disks.ycp:656
+msgid "<p>A virtual machine can have one or more virtual disks. Each virtual disk points to a file or block device on the VM Server.</p>"
+msgstr "<p>Maszyna wirtualna może miec jeden lub więcej wirtualnych dysków. Każdy wirtualny dysk to plik albo urządzenie blokowe na serwerze VM.</p>"
+
+#. error popup
+#: src/inst_vm_disks.ycp:706
+msgid "At least one disk is required."
+msgstr "Wymagany jest co najmniej jeden dysk."
+
+#. screen title for virtual machine options
+#. this is a heading
+#: src/inst_vm_hardware.ycp:23
+#: src/vm_hardware_proposal.ycp:51
+msgid "Hardware"
+msgstr "Sprzęt"
+
+#. combobox label
+#: src/inst_vm_hardware.ycp:34
+msgid "&Memory Size in MB"
+msgstr "Roz&miar pamięci w MB:"
+
+#. combobox label
+#: src/inst_vm_hardware.ycp:41
+msgid "Virtual Graphics Card"
+msgstr "Wirtualne karty graficzne"
+
+#. combobox label
+#: src/inst_vm_hardware.ycp:51
+#, fuzzy
+msgid "Graphics Viewer"
+msgstr "Grafika"
+
+#. combobox label
+#: src/inst_vm_hardware.ycp:61
+#: src/inst_vm_hardware.ycp:79
+msgid "Virtual Hardware Clock"
+msgstr "Wirtualny zegar sprzętowy"
+
+#. combobox label
+#: src/inst_vm_hardware.ycp:74
+msgid "Number of Virtual &CPUs"
+msgstr "Liczba wirtualnych pro&cesorów:"
+
+#. help text - hardware
+#: src/inst_vm_hardware.ycp:93
+msgid "<p><b><big>Hardware</big></b></p>"
+msgstr "<p><b><big>Sprzęt</big></b></p>"
+
+#: src/inst_vm_hardware.ycp:94
+msgid "<p><b>Memory size</b> specifies the amount of RAM, in megabytes, to allocate to the virtual machine when it starts.</p>"
+msgstr ""
+
+#: src/inst_vm_hardware.ycp:97
+msgid "<p>By default, Xen will emulate a <b>Cirrus Logic</b> graphics card for fully virtualized guests. If your operating system does not support that, select <b>Standard VGA</b>.</p>"
+msgstr ""
+
+#: src/inst_vm_hardware.ycp:98
+msgid "<p>You may display the fully virtualized guest's screen using <b>SDL</b> or <b>VNC</b>. SDL is best when displaying locally; VNC is better when displaying remotely. Note that closing an SDL window terminates the VM, whereas VNC can reconnect to the VM at any time.</p>"
+msgstr ""
+
+#: src/inst_vm_hardware.ycp:102
+msgid "<p>The <b>number of virtual CPUs</b> may exceed the number of physical CPUs.</p>"
+msgstr ""
+
+#: src/inst_vm_hardware.ycp:105
+msgid "<p>The <b>virtual hardware clock</b> can be set to local time or UTC.  Pick the setting that is compatible with your VM's operating system.</p>"
+msgstr ""
+
+#. error message: requested memory size is greater that available free memory
+#: src/inst_vm_hardware.ycp:146
+#, ycp-format
+msgid ""
+"The requested memory size is larger than the amount of space currently available.\n"
+"There is %1MB free memory available."
+msgstr ""
+"Żądany rozmiar pamięci jest większy niż aktualnie dostępny.\n"
+"Dostępnych jest %1MB wolnej pamięci."
+
+#: src/inst_vm_hardware.ycp:152
+msgid "Memory Size in MB cannot be less than 16 MB."
+msgstr ""
+
+#. progress stage 1/4
+#: src/inst_vm_kickoff.ycp:32
+msgid "Install packages"
+msgstr "Instalacja pakietów"
+
+#. progress stage 2/4
+#: src/inst_vm_kickoff.ycp:34
+msgid "Prepare virtual machine environment"
+msgstr "Przygotowanie środowiska komputera wirtualnego"
+
+#. progress stage 3/4
+#: src/inst_vm_kickoff.ycp:36
+msgid "Write virtual machine configuration"
+msgstr "Zapis konfiguracji komputera wirtualnego"
+
+#. progress stage 4/4
+#. progress stage 1/2
+#: src/inst_vm_kickoff.ycp:38
+#: src/inst_vm_kickoff.ycp:63
+msgid "Start the virtual machine"
+msgstr "Uruchomienie komputera wirtualnego"
+
+#. progress stage description 1/4
+#: src/inst_vm_kickoff.ycp:43
+msgid "Installing packages"
+msgstr "Instalowanie pakietów..."
+
+#. progress stage description 2/4
+#: src/inst_vm_kickoff.ycp:45
+msgid "Preparing virtual machine environment"
+msgstr "Przygotowywanie środowiska maszyny wirtualnej"
+
+#. progress stage description 3/4
+#: src/inst_vm_kickoff.ycp:47
+msgid "Writing virtual machine configuration"
+msgstr "Zapisywanie konfiguracji maszyny wirtualnej"
+
+#. progress stage description 4/4
+#. progress stage description 2/2
+#: src/inst_vm_kickoff.ycp:49
+#: src/inst_vm_kickoff.ycp:70
+msgid "Starting the virtual machine"
+msgstr "Uruchamianie maszyny wirtualnej"
+
+#. Headline for virtual machine installation
+#: src/inst_vm_kickoff.ycp:53
+msgid "Preparing Installation of the Virtual Machine"
+msgstr "Przygotowanie instalacji komputera wirtualnego"
+
+#. help text 1/1
+#: src/inst_vm_kickoff.ycp:56
+msgid "<p><b><big>Installation<big></b></p><p>Preparing the virtual machine for installation...</p>"
+msgstr "<P><B>Instalacja</B></P><P>Przygotowanie maszyny wirtualnej do instalacji...</P>"
+
+#. progress stage 1/2
+#: src/inst_vm_kickoff.ycp:61
+msgid "Update virtual machine configuration"
+msgstr "Aktualizowanie konfiguracji maszyny wirtualnej"
+
+#. progress stage description 1/2
+#: src/inst_vm_kickoff.ycp:68
+msgid "Updating virtual machine configuration"
+msgstr "Aktualizowanie konfiguracji maszyny wirtualnej"
+
+#. Headline for virtual machine installation
+#. popup message heading
+#: src/inst_vm_kickoff.ycp:74
+#: src/inst_vm_kickoff.ycp:196
+msgid "Virtual Machine Started"
+msgstr "Maszyna wirtualna uruchomiona"
+
+#. help text 1/2
+#: src/inst_vm_kickoff.ycp:77
+msgid "<p><b><big>Virtual Machine Started<big></b></p><p>Your virtual machine should now be running in a separate window.</p>"
+msgstr ""
+
+#. help text 2/2
+#: src/inst_vm_kickoff.ycp:79
+msgid "<p>If problems have occurred, you may need to edit the VM configuration file and manually re-start your VM. VM configuration files are stored in <tt>/etc/xen/vm/</tt>.</p>"
+msgstr ""
+
+#. popup error message
+#: src/inst_vm_kickoff.ycp:102
+msgid "Cannot install the required packages."
+msgstr "Nie można zainstalować wymaganych pakietów."
+
+#. popup error message
+#: src/inst_vm_kickoff.ycp:113
+msgid "Cannot prepare the virtual machine environment."
+msgstr "Nie można przygotować środowiska komputera wirtualnego."
+
+#. popup error message
+#: src/inst_vm_kickoff.ycp:123
+msgid "Cannot write the configuration of the virtual machine."
+msgstr "Nie można zapisać konfiguracji komputera wirtualnego."
+
+#. popup error message
+#: src/inst_vm_kickoff.ycp:134
+msgid "Cannot update the configuration of the virtual machine."
+msgstr "Nie można zaktualizować konfiguracji komputera wirtualnego."
+
+#. popup message heading
+#: src/inst_vm_kickoff.ycp:162
+msgid "Installation Started"
+msgstr "Instalacja rozpoczęta"
+
+#. rich text message
+#: src/inst_vm_kickoff.ycp:164
+msgid "The virtual machine installation should now be running in a separate window. When the installation has completed, click 'Continue' to finalize the boot settings."
+msgstr ""
+
+#. popup message heading
+#: src/inst_vm_kickoff.ycp:179
+msgid "Installation Complete"
+msgstr "Instalacja zakończona"
+
+#. rich text message
+#: src/inst_vm_kickoff.ycp:181
+msgid "The virtual machine settings now need to be finalized."
+msgstr ""
+
+#. rich text message
+#: src/inst_vm_kickoff.ycp:198
+msgid "<p>Your virtual machine should now be running in a separate window.</p><p>If problems have occurred, you may need to edit the VM configuration file and manually re-start your VM. VM configuration files are stored in <tt>/etc/xen/vm/</tt>.</p>"
+msgstr ""
+
+#. popup message button
+#: src/inst_vm_kickoff.ycp:201
+msgid "Create More..."
+msgstr "Utwórz następną..."
+
+#. table item
+#: src/inst_vm_manage.ycp:268
+msgid "Stopped"
+msgstr "Zatrzymana"
+
+#. table item
+#: src/inst_vm_manage.ycp:271
+msgid "Not Responding"
+msgstr "Nie odpowiada"
+
+#. table item
+#: src/inst_vm_manage.ycp:274
+msgid "Running"
+msgstr "Uruchomiona"
+
+#. table item
+#: src/inst_vm_manage.ycp:277
+msgid "Text"
+msgstr "Tekst"
+
+#. screen title for Virtual Machines Dialog
+#: src/inst_vm_manage.ycp:297
+msgid "Manage Virtual Machines"
+msgstr "Maszyny wirtualne"
+
+#. table heading
+#. table column heading
+#: src/inst_vm_manage.ycp:305
+#: src/inst_vm_source.ycp:570
+msgid "Name"
+msgstr "Nazwa"
+
+#. table heading
+#. screen title for the Xen mode selection
+#. this is a heading
+#. this is a menu entry
+#: src/inst_vm_manage.ycp:307
+#: src/inst_xen_mode.ycp:25
+#: src/xen_auto.ycp:71
+#: src/xen_mode_proposal.ycp:54
+#: src/xen_mode_proposal.ycp:56
+msgid "Virtualization Mode"
+msgstr "Tryb wirtualizacji"
+
+#. table heading
+#: src/inst_vm_manage.ycp:309
+msgid "Status"
+msgstr "Status"
+
+#. table heading
+#: src/inst_vm_manage.ycp:311
+msgid "Memory (MB)"
+msgstr "Pamięć (MB)"
+
+#. table heading
+#: src/inst_vm_manage.ycp:313
+msgid "Console"
+msgstr "Konsola"
+
+#. button label
+#: src/inst_vm_manage.ycp:323
+msgid "&Start"
+msgstr "Włą&czony"
+
+#. button label
+#: src/inst_vm_manage.ycp:325
+msgid "&View"
+msgstr "&Widok"
+
+#. button label
+#: src/inst_vm_manage.ycp:327
+msgid "S&hutdown"
+msgstr "&Wyłącz"
+
+#. button label
+#: src/inst_vm_manage.ycp:329
+msgid "&Terminate"
+msgstr "Za&kończ działanie"
+
+#. manage virtual machines - help text 2/4
+#: src/inst_vm_manage.ycp:339
+msgid "<p>A virtual machine (VM) is a defined instance of virtual hardware, such as CPU, memory, network card, and block devices, and the operating system that runs on it.</p>"
+msgstr ""
+
+#. manage virtual machines - help text 3/4
+#: src/inst_vm_manage.ycp:341
+msgid "<p>The number of VMs you can create depends on the requirements for each VM and the available hardware resources.</p>"
+msgstr ""
+
+#. manage virtual machines - help text 4/4
+#: src/inst_vm_manage.ycp:343
+msgid "<p>For the most current information on Novell VM server technology, see <tt>www.novell.com/documentation/technology/vm_server</tt>.</p>"
+msgstr ""
+
+#. button label
+#: src/inst_vm_manage.ycp:348
+msgid "&Close"
+msgstr "Za&mknij"
+
+#. popup feedback message
+#: src/inst_vm_manage.ycp:353
+#: src/inst_vm_manage.ycp:407
+msgid "Reading Virtual Machine Settings"
+msgstr "Odczytywanie ustawień maszyny wirtualnej"
+
+#: src/inst_vm_manage.ycp:353
+#: src/inst_vm_manage.ycp:407
+#: src/inst_vm_manage.ycp:436
+#: src/inst_vm_manage.ycp:471
+#: src/inst_vm_manage.ycp:488
+#: src/inst_vm_manage.ycp:521
+#: src/inst_vm_manage.ycp:550
+msgid "Please Wait..."
+msgstr "Proszę czekać..."
+
+#. popup yes/no dialog
+#: src/inst_vm_manage.ycp:418
+#: src/inst_vm_manage.ycp:424
+msgid "Delete Virtual Machine"
+msgstr "Czy usunąć maszynę wirtualną"
+
+#: src/inst_vm_manage.ycp:418
+msgid ""
+"You are about to completely remove the selected VM.\n"
+"\n"
+"Are you sure you want to delete the selected VM?\n"
+"\n"
+msgstr ""
+
+#: src/inst_vm_manage.ycp:424
+msgid ""
+"The selected VM disk image and configuration file\n"
+"will be completely destroyed.\n"
+"\n"
+"This action cannot be undone.\n"
+"\n"
+"Do you wish to continue?\n"
+"\n"
+msgstr ""
+
+#. popup feedback message
+#: src/inst_vm_manage.ycp:436
+msgid "Deleting Virtual Machine"
+msgstr "Usuwanie maszyny wirtualnej"
+
+#. popup error message
+#. %1 = integer size in MB
+#. %2 = integer size in MB
+#: src/inst_vm_manage.ycp:461
+#, ycp-format
+msgid ""
+"There is not enough free memory to\n"
+"start the selected virtual machine.\n"
+"\n"
+"Required memory size %1, memory available %2\n"
+"\n"
+msgstr ""
+
+#. popup feedback message
+#: src/inst_vm_manage.ycp:471
+msgid "Starting Virtual Machine"
+msgstr "Uruchomianie maszyny wirtualnej"
+
+#. nothing to display when using SDL
+#. popup feedback message
+#: src/inst_vm_manage.ycp:488
+msgid "Opening Virtual Machine Console"
+msgstr "Otwieranie konsoli maszyny wirtualnej"
+
+#. popup yes/no dialog
+#: src/inst_vm_manage.ycp:512
+msgid "Shutdown Virtual Machine"
+msgstr "Czy wyłączyć maszynę wirtualną"
+
+#: src/inst_vm_manage.ycp:512
+msgid ""
+"Shutting down the VM stops its operating system\n"
+"and any running programs. \n"
+"\n"
+"Are you sure you want to shutdown the selected VM?\n"
+"\n"
+msgstr ""
+
+#. popup feedback message
+#: src/inst_vm_manage.ycp:521
+msgid "Shutting Down Virtual Machine"
+msgstr "Wyłączanie maszyny wirtualnej"
+
+#. popup yes/no dialog
+#: src/inst_vm_manage.ycp:538
+msgid "Terminate Virtual Machine"
+msgstr "Czy zakończyć działanie maszyny wirtualnej"
+
+#: src/inst_vm_manage.ycp:538
+msgid ""
+"Terminating a VM might result in loss of application\n"
+"and system data. \n"
+"\n"
+"The VM will not have a chance to save its state or\n"
+"any data before it is terminated.\n"
+"\n"
+"Are you sure you want to terminate the selected VM?\n"
+"\n"
+msgstr ""
+
+#. popup feedback message
+#: src/inst_vm_manage.ycp:550
+msgid "Terminating Virtual Machine"
+msgstr "Zamykanie maszyny wirtualnej"
+
+#: src/inst_vm_network.ycp:49
+msgid "Random Address"
+msgstr "Adres losowy"
+
+#: src/inst_vm_network.ycp:54
+msgid "Default Bridge"
+msgstr "Domyślny mostek"
+
+#: src/inst_vm_network.ycp:71
+msgid "Configure Virtual Network Card"
+msgstr "Konfiguracja wirtuanych kart &sieciowych"
+
+#: src/inst_vm_network.ycp:78
+msgid "&MAC Address"
+msgstr "Adres &MAC"
+
+#: src/inst_vm_network.ycp:80
+msgid "&Bridge Name"
+msgstr "Nazwa &mostka"
+
+#: src/inst_vm_network.ycp:87
+msgid "<p>The virtual network card configuration describes how the network card appears to the virtual machine.</p>"
+msgstr ""
+
+#: src/inst_vm_network.ycp:88
+msgid "<p>By default, a <b>MAC address</b> has been randomly generated for use with this virtual machine when it boots.  A valid <b>MAC address</b> consists of six 2-digit hex numbers, separated by colons.</p>"
+msgstr ""
+
+#: src/inst_vm_network.ycp:89
+msgid "<p>A virtual network interface can be connected to a bridge configured in the VM Server. If the <b>Bridge Name</b> is left blank, the default bridge will be used.</p>"
+msgstr ""
+
+#. error message
+#: src/inst_vm_network.ycp:120
+msgid "The MAC address entered is not valid."
+msgstr "Podany adres MAC jest nieprawidłowy."
+
+#. screen title for network options
+#. this is a heading
+#: src/inst_vm_network.ycp:201
+#: src/vm_network_proposal.ycp:52
+#: src/xen_auto.ycp:75
+msgid "Network"
+msgstr "Sieć"
+
+#: src/inst_vm_network.ycp:207
+msgid "No."
+msgstr "Nr"
+
+#: src/inst_vm_network.ycp:207
+msgid "MAC Address"
+msgstr "Adres MAC"
+
+#: src/inst_vm_network.ycp:207
+msgid "Bridge"
+msgstr "Mostek"
+
+#: src/inst_vm_network.ycp:221
+#, fuzzy
+msgid "OS Installation Network Settings"
+msgstr "Ustawienia instalacji"
+
+#: src/inst_vm_network.ycp:225
+msgid "None"
+msgstr "Brak"
+
+#: src/inst_vm_network.ycp:233
+msgid "IP"
+msgstr "IP"
+
+#: src/inst_vm_network.ycp:234
+msgid "Netmask"
+msgstr "Maska sieci"
+
+#: src/inst_vm_network.ycp:235
+msgid "Gateway"
+msgstr "Brama"
+
+#: src/inst_vm_network.ycp:248
+msgid "Virtual Network Card"
+msgstr "Wirtualna karta sieciowa"
+
+#. help text for network settings (2/2)
+#: src/inst_vm_network.ycp:271
+msgid "<p>A virtual machine can have zero or more virtual ethernet network cards. The MAC address is a unique identification of the virtual ethernet network card.</p>"
+msgstr "<p>Każda maszyna wirtualna ma wirtualną eternetową kartę sieciową. Adres MAC stanowi unikatową identyfikację wirtualnej karty sieciowej.</p>"
+
+#: src/inst_vm_network.ycp:273
+msgid "<p>The <b>network installation settings</b> are used only during the installation. They are useful when installing from a network installation source.</p>"
+msgstr ""
+
+#: src/inst_vm_network.ycp:276
+msgid "<p>By default, Xen will emulate an <b>AMD PCnet</b> network card for fully virtualized guests. If your operating system does not support that, select <b>NE2000.</b></p>"
+msgstr ""
+
+#: src/inst_vm_network.ycp:362
+msgid ""
+"IP cannot be left empty.\n"
+"Please, specify an IP."
+msgstr ""
+
+#: src/inst_vm_network.ycp:367
+msgid ""
+"Netmask cannot be left empty.\n"
+"Please, specify a netmask."
+msgstr ""
+
+#: src/inst_vm_network.ycp:372
+msgid ""
+"Gateway cannot be left empty.\n"
+"Please, specify a gateway."
+msgstr ""
+
+#: src/inst_vm_network.ycp:379
+msgid ""
+"An invalid IP was specified.\n"
+"\n"
+msgstr ""
+"Podano nieprawidłowy adres IP.\n"
+"\n"
+
+#: src/inst_vm_network.ycp:383
+msgid ""
+"An invalid Netmask was specified.\n"
+"\n"
+msgstr ""
+"Podano nieprawidłową maskę sieci.\n"
+"\n"
+
+#: src/inst_vm_network.ycp:387
+msgid ""
+"An invalid Gateway was specified.\n"
+"\n"
+msgstr ""
+"Podano nieprawidłową bramę sieciową.\n"
+"\n"
+
+#. screen title for virtual machine options
+#. this is a heading
+#: src/inst_vm_options.ycp:24
+#: src/vm_options_proposal.ycp:50
+msgid "VM Properties"
+msgstr "Właściwości VM"
+
+#. textbox label
+#: src/inst_vm_options.ycp:45
+msgid "&Name of Virtual Machine"
+msgstr "Nazwa maszyny wirtualnej: %1"
+
+#. combobox label
+#: src/inst_vm_options.ycp:51
+msgid "Start the VM"
+msgstr "Uruchom VM"
+
+#. combobox label
+#: src/inst_vm_options.ycp:62
+msgid "When the VM is Powered Off"
+msgstr ""
+
+#. combobox label
+#: src/inst_vm_options.ycp:68
+msgid "When the VM is Rebooted"
+msgstr ""
+
+#. combobox label
+#: src/inst_vm_options.ycp:74
+msgid "When the VM Crashes"
+msgstr ""
+
+#. virtual machine options (boot) - help text 1/1
+#: src/inst_vm_options.ycp:89
+msgid "<p>Each virtual machine must have a unique name. The <b>name of virtual machine</b> entered here will be used as the name of the VM configuration file.</p>"
+msgstr ""
+
+#. virtual machine options (install) - help text 1/8
+#: src/inst_vm_options.ycp:93
+msgid "<p>The VM can be started <b>automatically</b> when the VM Server starts, or <b>manually</b> via YaST or the command line.</p>"
+msgstr "<P>Maszyna wirtualna może być uruchamiana <b>automatycznie</b> w czasie uruchamiania serwera VM lub <b>ręcznie</b> za pomocą narzędzia YaST lub linii poleceń.</P>"
+
+#. virtual machine options (install) - help text 2/8
+#: src/inst_vm_options.ycp:95
+msgid "<p>When various lifecycle events occur (<b>power off</b>, <b>reboot</b>, or <b>crash</b> of the VM), an action can automatically be taken. These actions are:</p>"
+msgstr ""
+
+#. virtual machine options (install) - help text 3/8
+#: src/inst_vm_options.ycp:97
+msgid "<ul>"
+msgstr ""
+
+#. virtual machine options (install) - help text 4/8
+#: src/inst_vm_options.ycp:101
+msgid "The VM is cleaned up as normal."
+msgstr ""
+
+#. virtual machine options (install) - help text 5/8
+#: src/inst_vm_options.ycp:105
+msgid "A new VM is started in place of the old one."
+msgstr ""
+
+#. virtual machine options (install) - help text 6/8
+#: src/inst_vm_options.ycp:109
+msgid "The VM will remain in memory until it is destroyed manually."
+msgstr ""
+
+#. virtual machine options (install) - help text 7/8
+#: src/inst_vm_options.ycp:113
+msgid "The VM is renamed and will remain in memory until it is destroyed manually, and a new VM is started."
+msgstr ""
+
+#. virtual machine options (install) - help text 8/8
+#: src/inst_vm_options.ycp:115
+msgid "</ul>"
+msgstr ""
+
+#. error message: do not allow empty name of virtual machine
+#: src/inst_vm_options.ycp:155
+msgid ""
+"Name of Virtual Machine cannot be left empty.\n"
+"Please, specify a Name of Virtual Machine."
+msgstr ""
+
+#. error message: name of virtual machine must be unique, entered name is already in use
+#: src/inst_vm_options.ycp:162
+msgid ""
+"Name of Virtual Machine is already used.\n"
+"Enter another name.\n"
+msgstr ""
+"Podana nazwa maszyny wirtualnej jest już wykorzystywana.\n"
+"Proszę wprowadzić inną nazwę.\n"
+
+#. popup error message
+#: src/inst_vm_options.ycp:170
+msgid "Name of Virtual Machine cannot be exactly '.' or '..'"
+msgstr "Nazwą maszyny wirtualnej nie może być \".\" (kropka) ani \"..\" (dwie kropki)."
+
+#. popup error message
+#: src/inst_vm_options.ycp:176
+msgid "Name of Virtual Machine cannot begin with a number."
+msgstr "Nazwa maszyny wirtualnej nie może zaczynać się od cyfry."
+
+#. screen title - installation source configuration
+#: src/inst_vm_source.ycp:27
+msgid "Installation Source"
+msgstr "Źródło instalacji"
+
+#. screen title
+#. dialog title
+#. this is a heading
+#: src/inst_vm_source.ycp:94
+#: src/inst_vm_source.ycp:716
+#: src/vm_source_proposal.ycp:58
+msgid "Operating System Installation"
+msgstr "Istalacja systemu operacyjnego"
+
+#. frame label
+#: src/inst_vm_source.ycp:100
+#: src/inst_vm_source.ycp:750
+msgid "Install Using"
+msgstr "Zainstaluj z"
+
+#. radio button
+#: src/inst_vm_source.ycp:103
+msgid "Network Installation &Source"
+msgstr "Źródło in&stalacji internetowej"
+
+#. radio button
+#. `HSpacing(3),
+#. combobox label
+#. radio button label
+#: src/inst_vm_source.ycp:106
+#: src/inst_vm_source.ycp:205
+#: src/inst_vm_source.ycp:755
+msgid "&CD / DVD Device"
+msgstr "Napęd &CD lub DVD"
+
+#. radio button
+#. `HSpacing(3),
+#. textbox label
+#. radio button label
+#: src/inst_vm_source.ycp:109
+#: src/inst_vm_source.ycp:377
+#: src/inst_vm_source.ycp:764
+msgid "&ISO Image File"
+msgstr "Plik obrazu &ISO"
+
+#. frame label
+#: src/inst_vm_source.ycp:115
+msgid "Installation Options"
+msgstr "Opcje instalacji"
+
+#. Operating System Installation - help text 2/4
+#: src/inst_vm_source.ycp:123
+msgid "<p>The VM's operating system can be installed from a YaST Network Installation Source, a CD / DVD device, or an ISO image file.</p>"
+msgstr ""
+
+#. Operating System Installation - help text 3/4
+#: src/inst_vm_source.ycp:125
+msgid "<p>Any of these methods can be used to install SUSE operating systems.  Non-SUSE operating systems must be installed from a CD / DVD device or an ISO image file.</p>"
+msgstr ""
+
+#. Operating System Installation - help text 4/4
+#: src/inst_vm_source.ycp:127
+msgid "<p><b>Installation Options</b> are optional arguments passed to the kernel during installation.</p>"
+msgstr ""
+
+#. dialog title
+#: src/inst_vm_source.ycp:181
+msgid "Install Using a CD / DVD Device"
+msgstr ""
+
+#. format CD device name: %1 is model name (e.g. "TOSHIBA DVD-ROM SD-M1402"), %2 is device name (e.g. /dev/hdc)
+#: src/inst_vm_source.ycp:195
+#: src/inst_vm_source.ycp:741
+#, ycp-format
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#. frame label
+#: src/inst_vm_source.ycp:211
+msgid "CD / DVD Media Type"
+msgstr ""
+
+#. radio button
+#. radio button label
+#: src/inst_vm_source.ycp:214
+#: src/inst_vm_source.ycp:391
+msgid "&SUSE Installation Source"
+msgstr "Źródło instalacji SUSE"
+
+#. radio button
+#. radio button label
+#: src/inst_vm_source.ycp:217
+#: src/inst_vm_source.ycp:394
+msgid "&Other Installation Source"
+msgstr "I&nne źródło instalacji"
+
+#. textbox label
+#: src/inst_vm_source.ycp:221
+#: src/inst_vm_source.ycp:398
+#: src/inst_vm_source.ycp:897
+msgid "&Xen-Enabled Kernel"
+msgstr "Jądro z włączoną obsługą &Xen"
+
+#. button label
+#: src/inst_vm_source.ycp:226
+#: src/inst_vm_source.ycp:237
+#: src/inst_vm_source.ycp:382
+#: src/inst_vm_source.ycp:403
+#: src/inst_vm_source.ycp:414
+msgid "Browse..."
+msgstr "Przeglądaj..."
+
+#. textbox label
+#: src/inst_vm_source.ycp:232
+#: src/inst_vm_source.ycp:409
+#, fuzzy
+msgid "&Installation File (initrd)"
+msgstr "Instalacja zakończona niepowodzeniem."
+
+#. Install Using a CD / DVD Device help text 2/3
+#: src/inst_vm_source.ycp:248
+msgid "<p>The VM's operating system will be installed from the selected <b>CD / DVD device</b>.</p>"
+msgstr ""
+
+#. Install Using a CD / DVD Device help text 3/3
+#: src/inst_vm_source.ycp:250
+msgid "<p>Specify whether the <b>CD / DVD media type</b> is a SUSE installation source, or some other type.  Using installation media other than SUSE requires you to designate the locations of the Xen-enabled kernel and, optionally, the initial installation program (initrd).  These files must be accessible on the VM Server's file system.</p>"
+msgstr ""
+
+#. popup error message
+#: src/inst_vm_source.ycp:286
+msgid "A CD / DVD device name must be selected."
+msgstr "Konieczne jest wybranie napędu CD lub DVD."
+
+#. popup error message
+#: src/inst_vm_source.ycp:310
+#: src/inst_vm_source.ycp:474
+msgid "The kernel file name cannot be empty."
+msgstr "Nazwa pliku jądra nie może być pusta."
+
+#. popup title
+#: src/inst_vm_source.ycp:343
+#: src/inst_vm_source.ycp:508
+msgid "Select Xen-Enabled Kernel"
+msgstr "Jądro z włączoną obsługą Xen"
+
+#. popup title
+#: src/inst_vm_source.ycp:353
+#: src/inst_vm_source.ycp:518
+msgid "Select Initial RAM Disk"
+msgstr "Wybór poczatkowego RAM-dysku"
+
+#. dialog title
+#: src/inst_vm_source.ycp:370
+msgid "Install Using an ISO Image"
+msgstr "Instalacja z obrazu ISO"
+
+#. heading in a popup dialog
+#: src/inst_vm_source.ycp:388
+msgid "ISO Type"
+msgstr "Typ ISO"
+
+#. Install Using an ISO Image - help text 2/3
+#: src/inst_vm_source.ycp:425
+msgid "If the installation source files are stored in an .ISO image file, you can specify its location on the VM Server's file system.</p>"
+msgstr ""
+
+#. Install Using an ISO Image - help text 3/3
+#: src/inst_vm_source.ycp:427
+msgid "<p>Specify whether the <b>ISO image file</b> is a SUSE installation source, or some other type. Using installation media other than SUSE requires you to designate the locations of the Xen-enabled kernel and, optionally, the initial installation program (initrd). These files must be accessible on the VM Server's file system.</p>"
+msgstr ""
+
+#. popup error message
+#: src/inst_vm_source.ycp:463
+msgid "ISO file name cannot be empty."
+msgstr "Nazwa pliku ISO nie może być pusta."
+
+#. popup title
+#: src/inst_vm_source.ycp:528
+#: src/inst_vm_source.ycp:844
+msgid "Select ISO Image"
+msgstr "Obraz ISO"
+
+#. dialog title
+#: src/inst_vm_source.ycp:547
+msgid "Install Using a Network Installation Source"
+msgstr "Instalacja ze źródła internetowego"
+
+#. radio button label
+#: src/inst_vm_source.ycp:564
+msgid "&Configured Installation Source"
+msgstr "S&konfigurowane źródło instalacji"
+
+#: src/inst_vm_source.ycp:570
+msgid "URL"
+msgstr "URL"
+
+#. push button label
+#. installation source configuration module
+#. is started when it's pressed
+#: src/inst_vm_source.ycp:575
+msgid "C&onfigure..."
+msgstr "K&onfiguracja..."
+
+#. radio button label
+#: src/inst_vm_source.ycp:578
+msgid "Custom &Installation Source"
+msgstr "Inne źródło &instalacyjne"
+
+#. textbox label
+#: src/inst_vm_source.ycp:582
+msgid "&URL of Installation Source"
+msgstr "&URL źródła instalacyjnego"
+
+#. Install Using a Network Installation Source - help text 1/4
+#: src/inst_vm_source.ycp:595
+#, ycp-format
+msgid "<P><B><big>%1</big></B></P>"
+msgstr "<P><B><big>%1</big></B></P>"
+
+#. Install Using a Network Installation Source - help text 2/4
+#: src/inst_vm_source.ycp:597
+msgid "<p>YaST provides a library for storing <b>SUSE installation source</b> files with their associated kernel and initial install programs (initrd).</p>"
+msgstr ""
+
+#. Install Using a Network Installation Source - help text 3/4
+#: src/inst_vm_source.ycp:599
+msgid "<p>Make sure to select an installation source that includes a Xen-enabled kernel.</p>"
+msgstr ""
+
+#. Install Using a Network Installation Source - help text 4/4
+#: src/inst_vm_source.ycp:601
+msgid "<P>Only network installation sources, such as FTP or NFS, are supported.</P>"
+msgstr "<P>Obsługiwane są wyłącznie sieciowe źródła instalacyjne, jak FTP czy NFS.</P>"
+
+#. popup error message
+#: src/inst_vm_source.ycp:659
+msgid "Entered URL value is not valid."
+msgstr "Wprowadzony URL jest nieprawidłowy."
+
+#. combo box label
+#: src/inst_vm_source.ycp:759
+msgid "&Device Name"
+msgstr "Nazwa urzą&dzenia"
+
+#. textbox label
+#: src/inst_vm_source.ycp:768
+msgid "&File Name"
+msgstr "Nazwa &pliku"
+
+#. button label
+#: src/inst_vm_source.ycp:773
+msgid "Br&owse..."
+msgstr "Prze&glądaj..."
+
+#. help text for OS selection in full virtualization mode (2/2)
+#: src/inst_vm_source.ycp:787
+msgid "<p>The installation of the operating system can be started from a physical CD / DVD or an ISO image file.</p>"
+msgstr ""
+
+#. error - entered empty ISO image file name
+#: src/inst_vm_source.ycp:832
+msgid "Select an ISO image file for CD-ROM emulation."
+msgstr "Proszę wybrać obraz ISO dla emulacji płyty CD-ROM."
+
+#. sort list and remove duplicates
+#. dialog title
+#: src/inst_vm_source.ycp:886
+msgid "Operating System Boot Files"
+msgstr "Pliki rozruchowe systemu operacyjnego"
+
+#. frame label
+#: src/inst_vm_source.ycp:891
+msgid "Boot Using"
+msgstr "Urucham za pomocą"
+
+#. combobox label
+#: src/inst_vm_source.ycp:894
+msgid "&Partition Containing Boot Files"
+msgstr "&Partycja zawierająca pliki rozruchowe"
+
+#. textbox label
+#: src/inst_vm_source.ycp:900
+msgid "Boot &File (initrd)"
+msgstr ""
+
+#. frame label
+#: src/inst_vm_source.ycp:905
+msgid "Boot Options"
+msgstr "&Opcje rozruchowe"
+
+#. boot options - help text 2/3
+#: src/inst_vm_source.ycp:914
+msgid "<p>The VM boots its operating system using the <b>kernel</b> and <b>boot file</b> stored on a virtual disk. Specify the partition that holds these files and the location of each. For example, partition: <tt>hda1</tt>; location of <b>kernel</b>: <tt>/boot/vmlinuz-xen</tt>; and location of <b>boot file</b>: <tt>/boot/initrd-xen.</tt></p>"
+msgstr ""
+
+#. boot options - help text 3/3
+#: src/inst_vm_source.ycp:916
+msgid "<p><b>Boot options</b> are optional arguments passed to the kernel each time it boots.</p>"
+msgstr "<P><I>Opcje rozruchowe</I> dodatkowe parametry przekazywane do jądra przy każdym jego uruchomieniu.</P>"
+
+#. popup error message
+#: src/inst_vm_source.ycp:941
+msgid "Partition Containing Kernel and RAM Disk cannot be empty."
+msgstr ""
+
+#: src/inst_vm_source.ycp:952
+msgid ""
+"The Partition Containing Kernel and RAM Disk,\n"
+"does not match any configued disks."
+msgstr ""
+
+#. popup error message
+#: src/inst_vm_source.ycp:961
+msgid "Xen-Enabled Kernel cannot be empty."
+msgstr "Pole Jądro z włączoną obsługą Xen nie moze być puste."
+
+#. error - the installation runs in xterm, we need access to a X server
+#: src/inst_xen_create.ycp:30
+msgid "Virtual machine installation requires access to a graphical environment."
+msgstr "Instalacja wirtualnego komputera wymaga dostępu do środowiska graficznego."
+
+#. screen title for the Xen create selection
+#: src/inst_xen_create.ycp:37
+msgid "Create a Virtual Machine"
+msgstr "Utwórz maszyne wirtualną"
+
+#. frame label
+#: src/inst_xen_create.ycp:46
+msgid "Method for Installing the VM's Operating System"
+msgstr ""
+
+#. radio button label
+#: src/inst_xen_create.ycp:50
+msgid "Run an OS installation program"
+msgstr "Uruchom program instalacyjny systemu"
+
+#. radio button label
+#: src/inst_xen_create.ycp:53
+msgid "Use a disk image or a physical disk that contains OS boot files"
+msgstr ""
+
+#. Create a Virtual Machine - help text 2/4
+#: src/inst_xen_create.ycp:64
+msgid "<p>Creating a VM requires that you install the VM's operating system by either running an OS installation program or specifying a disk image that already contains an operating system.</p>"
+msgstr ""
+
+#. Create a Virtual Machine - help text 3/4
+#: src/inst_xen_create.ycp:66
+msgid "<p><b>Run an OS Installation Program</b>: You can install a VM's operating system by running an OS installation program from a YaST Network Installation Source, a CD / DVD device, or an ISO image file.</p>"
+msgstr ""
+
+#. Create a Virtual Machine - help text 1/4
+#: src/inst_xen_create.ycp:68
+msgid "<p><b>Use a Disk Image</b>: You can specify that the VM boots an already-installed operating system from boot files located on a disk image or a physical disk.</p>"
+msgstr ""
+
+#. popup error message
+#: src/inst_xen_create.ycp:95
+msgid "At least one item must be selected."
+msgstr "Wybrana musi zostać przynajmniej jedna pozycja."
+
+#: src/inst_xen_mode.ycp:36
+msgid "Paravirtualization (requires Xen-enabled guest OS)"
+msgstr "Parawirtualizacja (wymaga dostosowanego do Xen systemu wewnętrznego)"
+
+#: src/inst_xen_mode.ycp:38
+msgid "Full Virtualization (requires specialized hardware)"
+msgstr "Pełna wirtualizacja (wymaga specjalnego sprzętu)"
+
+#. help text for virtualization mode setting (2/5)
+#: src/inst_xen_mode.ycp:49
+msgid "<p>Virtual machines can be created to run in either paravirtualization mode or full virtualization mode.</p>"
+msgstr "<p>Maszyny wirtualne można tworzyć w trybie parawirtualizacji albo w trybie pełnej wirtualizacji.</p>"
+
+#. help text for virtualization mode setting (3/5)
+#: src/inst_xen_mode.ycp:52
+msgid "<p><b>Paravirtualization mode</b> uses selective emulation of the hardware devices. To run in paravirtualization mode, the OS must be optimized to run in the Xen virtual server environment. This type of optimized OS is often called a paravirtualized or Xen-enabled guest.</p>"
+msgstr ""
+
+#. help text for virtualization mode setting (4/5)
+#: src/inst_xen_mode.ycp:55
+msgid "<p><b>Full virtualization mode</b> completely emulates all hardware devices but must run on a computer that supports hardware-assisted virtualization. Most popular operating systems can run in full virtualization mode.</p>"
+msgstr ""
+
+#. this is a heading
+#. this is a menu entry
+#: src/vm_autoyast_proposal.ycp:60
+#: src/vm_autoyast_proposal.ycp:62
+msgid "AutoYaST"
+msgstr "AutoYaST"
+
+#. this is a heading
+#: src/vm_disks_proposal.ycp:62
+#: src/xen_auto.ycp:73
+msgid "Disks"
+msgstr "Dyski"
+
+#. this is a menu entry
+#: src/vm_disks_proposal.ycp:64
+msgid "&Disks"
+msgstr "&Dyski"
+
+#. progress step title
+#: src/vm_finish.ycp:47
+msgid "Configuring the virtual machine..."
+msgstr "Konfigurowanie komputera wirtualnego..."
+
+#. this is a menu entry
+#: src/vm_hardware_proposal.ycp:53
+msgid "&Hardware"
+msgstr "Sprzę&t"
+
+#. install summary - help text 1/4
+#: src/vm_helps_proposal.ycp:21
+msgid "<p><b><big>Virtual Machine (Installation Settings)</big></b></p>"
+msgstr "<p><b><big>Maszyna wirtualna (ustawienia instalacjis)</big></b></p>"
+
+#. install summary - help text 2/4
+#: src/vm_helps_proposal.ycp:23
+msgid "<p>These settings define an initial VM environment to be used for the installation of the VM's operating system.</p>"
+msgstr ""
+
+#. install summary - help text 3/4
+#: src/vm_helps_proposal.ycp:25
+msgid "<p>Clicking Next launches the OS installation program in a separate window. Follow the on-screen instructions to install the OS.</p>"
+msgstr ""
+
+#. install summary - help text 4/4
+#: src/vm_helps_proposal.ycp:27
+msgid "<p>After completing the OS installation program, you will be prompted to finalize the VM settings.</p>"
+msgstr ""
+
+#. final settings help text 1/3
+#: src/vm_helps_proposal.ycp:31
+msgid "<p><b><big>Virtual Machine (Final Settings)</big></b></p>"
+msgstr "<p><b><big>Maszyna wirtualna (ustawienia końcowe)</big></b></p>"
+
+#. final settings help text 2/3
+#: src/vm_helps_proposal.ycp:33
+msgid "<p>These settings define the final virtual machine environment.</p>"
+msgstr "<p>Ustawienia te określają ostateczne środowisko maszyny wirtualnej.</p>"
+
+#. final settings help text 3/3
+#: src/vm_helps_proposal.ycp:35
+msgid "<p>Click Next to save the settings to a VM configuration file (<tt>/etc/xen/vm/vm_name</tt>) and start the VM's operating system. You can change the VM settings later by editing the VM configuration file.</p>"
+msgstr ""
+
+#. this is a menu entry
+#: src/vm_network_proposal.ycp:54
+msgid "&Network"
+msgstr "Si&eć"
+
+#. this is a menu entry
+#: src/vm_options_proposal.ycp:52
+msgid "VM &Properties"
+msgstr "Właściw&ości maszyny wirtualnej"
+
+#. this is a menu entry
+#: src/vm_source_proposal.ycp:60
+msgid "Operating &System Installation"
+msgstr "Instalacja &systemu operacyjnego"
+
+#. this is a heading
+#: src/vm_source_proposal.ycp:67
+msgid "Operating System Boot"
+msgstr "Uruchomenie systemu operacyjnego"
+
+#. this is a menu entry
+#: src/vm_source_proposal.ycp:69
+msgid "Operating &System Boot"
+msgstr "Uruchomenie &systemu operacyjnego"
+
+#. we are already in UML, nested virtual machine is not supported
+#: src/xen.ycp:37
+msgid ""
+"Virtual machine installation cannot be started inside the UML machine.\n"
+"Start installation in the host system.\n"
+msgstr ""
+"Nie można uruchomić instalacji wirtualnego komputera w komputerze UML.\n"
+"Proszę uruchomić instalację w systemie hoście.\n"
+
+#. error - xen kernel must be running to start a new Xen domain,
+#. ask user to configure the first (management) Xen domain
+#: src/xen.ycp:48
+msgid ""
+"A Xen virtual machine can be started only\n"
+"from the VM Server (domain 0),\n"
+"which is not running now.\n"
+"\n"
+"Configure the VM Server now?"
+msgstr ""
+"Maszynę wirtualną Xen można uruchomić \n"
+"wyłącznie z serwera VM (domain0), \n"
+"który w tej chwili nie działa.\n"
+"\n"
+"Czy skonfigurować teraz serwer VM?"
+
+#: src/xen_auto.ycp:72
+msgid "Options"
+msgstr "Opcje"
+
+#: control/vm_install.glade:14
+msgid "Xen Virtual Machine Settings"
+msgstr "Ustawienia wirtualnego komputera Xen"
 
 #. combobox item
 #: src/VM_Common.ycp:45
@@ -39,44 +2170,11 @@ msgstr "Ręcznie"
 msgid "On Boot"
 msgstr "Podczas uruchamiania systemu"
 
-#: src/VM_Common.ycp:95
-msgid "Paravirtualization"
-msgstr "Parawirtualizacja"
-
-#: src/VM_Common.ycp:95
-msgid "Full Virtualization"
-msgstr "Pełna wirtualizacja"
-
 #. proposal items
 #: src/VM_Common.ycp:164
 #, ycp-format
 msgid "AutoYast Profile: %1"
 msgstr "Profil programu AutoYaST: %1"
-
-#. none AutoYast profile has been selected
-#: src/VM_Common.ycp:166
-msgid "<I>none</I>"
-msgstr "<I>Brak</>"
-
-#. warning text in proposal dialog
-#: src/VM_Common.ycp:177
-msgid "The AutoYaST profile for VM cannot be configured here in full virtualization mode.<BR>Configure it inside the VM after boot."
-msgstr "Nie można skonfigurować w tym miejscu profilu programu AutoYaST dla komputera wirtualnego, w trybie pełnej wirtualizacji.<br>Proszę skonfigurować profil po uruchomieniu, wewnątrz komputera wirtualnego."
-
-#. restart mode - when the virtual machine is restarted
-#: src/VM_Common.ycp:215
-msgid "Always"
-msgstr "Zawsze"
-
-#. restart mode - when the virtual machine is restarted
-#: src/VM_Common.ycp:217
-msgid "Never"
-msgstr "Nigdy"
-
-#. restart mode - when the virtual machine is restarted
-#: src/VM_Common.ycp:219
-msgid "On Reboot"
-msgstr "Podczas ponownego uruchomienia"
 
 #. %1 = kernel image file
 #: src/VM_Common.ycp:281
@@ -84,66 +2182,11 @@ msgstr "Podczas ponownego uruchomienia"
 msgid "Kernel Image: %1"
 msgstr "Obraz jądra: %1"
 
-#. %1 = intrd file name
-#: src/VM_Common.ycp:286
-#, ycp-format
-msgid "RAM Disk Image: %1"
-msgstr "Obraz RAM-dysku: %1"
-
-#. installation proposal header
-#: src/VM_Common.ycp:304
-msgid "Custom Installation Source"
-msgstr "Inne źródło instalacji"
-
-#. installation proposal header
-#: src/VM_Common.ycp:309
-msgid "SLP Installation Source"
-msgstr "Źródło instalacji SLP"
-
 #. %1 = installation source description or URL
 #: src/VM_Common.ycp:313
 #, ycp-format
 msgid "OS Image Source: %1"
 msgstr "Źródło obrazu systemu: %1"
-
-#. error message in proposal
-#: src/VM_Common.ycp:327
-msgid "OS installation source is not configured"
-msgstr "Nie skonfigurowano źródła instalacji systemu"
-
-#: src/VM_Common.ycp:639
-#, ycp-format
-msgid "Control file %1 was not found."
-msgstr "Nie znaleziono pliku kontrolnego %1."
-
-#. part of proposal - MAC address is not specified, assign random
-#: src/VM_Common.ycp:648
-msgid "Random MAC address"
-msgstr "Losowy adres MAC"
-
-#. Proposal for virtual machine installation
-#: src/VM_XEN.ycp:191
-#, ycp-format
-msgid "Name of Virtual Machine: %1"
-msgstr "Nazwa komputera wirtualnego: %1"
-
-#. Proposal for virtual machine installation
-#: src/VM_XEN.ycp:194
-#, ycp-format
-msgid "Memory Size: %1 MB"
-msgstr "Wielkość pamięci: %1 MB"
-
-#. Proposal for virtual machine installation - %1 is a start mode (On boot/Manually)
-#: src/VM_XEN.ycp:199
-#, ycp-format
-msgid "Activation: %1"
-msgstr "Aktywacja: %1"
-
-#. restart mode is not known
-#: src/VM_XEN.ycp:200
-#: src/VM_XEN.ycp:217
-msgid "Unknown"
-msgstr "Nieznany"
 
 #. part of proposal text, %1 are extra kernel options
 #: src/VM_XEN.ycp:205
@@ -169,12 +2212,6 @@ msgstr "Tryb ponownego uruchomienia: %1"
 msgid "Not enough free memory (%1MB available)."
 msgstr "Za mało wolnej pamięci (dostępne %1 MB)."
 
-#: src/VM_XEN.ycp:283
-#: src/inst_vm_disks.ycp:432
-#: src/inst_vm_disks.ycp:435
-msgid "Sparse File"
-msgstr "Rzadki plik"
-
 #: src/VM_XEN.ycp:288
 #: src/inst_vm_disks.ycp:435
 msgid "Read Only"
@@ -185,52 +2222,12 @@ msgstr "Tylko do odczytu"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#. %1 are options, e.g. Read only
-#: src/VM_XEN.ycp:303
-#, ycp-format
-msgid "(%1)"
-msgstr "(%1)"
-
-#. %1 = disk, e.g. /dev/hda4
-#: src/VM_XEN.ycp:311
-#, ycp-format
-msgid "Use Disk %1"
-msgstr "Proszę użyć dysku %1"
-
-#: src/VM_XEN.ycp:315
-#, ycp-format
-msgid "Create %1 MB Image"
-msgstr "Utwórz obraz %1 MB"
-
-#: src/VM_XEN.ycp:319
-#, ycp-format
-msgid "Use Image %1"
-msgstr "Proszę użyć obrazu %1"
-
 #. Disk name for installation proposal
 #. %1 is a number, %2 size of disk, %3 is "(sparse image)" if it's set
 #: src/VM_XEN.ycp:324
 #, ycp-format
 msgid "Disk /dev/%1: %2 %3"
 msgstr "Dysk /dev/%1: %2 %3"
-
-#. %1 is device name (e.g. hda, sda...)
-#: src/VM_XEN.ycp:347
-#, ycp-format
-msgid "Disk <tt>%1</tt> cannot be used"
-msgstr "Nie można użyć dysku <tt>%1</tt>"
-
-#: src/VM_XEN.ycp:360
-msgid "Disk <tt>hdc</tt> cannot be used with CD-ROM emulation"
-msgstr "Nie można użyć dysku <tt>hdc</tt> z emulacją CD-ROM"
-
-#: src/VM_XEN.ycp:380
-msgid "Boot Device: "
-msgstr "Urządzenie rozruchowe:"
-
-#: src/VM_XEN.ycp:380
-msgid "Hard Disk"
-msgstr "Dysk twardy"
 
 #: src/VM_XEN.ycp:380
 msgid "CD-ROM"
@@ -240,20 +2237,9 @@ msgstr "CD-ROM"
 msgid "CD-ROM Image: "
 msgstr "Obraz dysku CD-ROM:"
 
-#. Proposal item - %1 is number of virtual network card the virtual machine
-#: src/VM_XEN.ycp:413
-#, ycp-format
-msgid "Number of Virtual Network Cards: %1"
-msgstr "Ilość wirtualnych kart sieciowych: %1"
-
 #: src/VM_XEN.ycp:418
 msgid "Use DHCP for network configuration"
 msgstr "Użyj DHCP do konfiguracji sieci"
-
-#. error in the installation proposal - don't allow to continue
-#: src/VM_XEN.ycp:430
-msgid "Network configuration is not valid."
-msgstr "Konfiguracja sieci jest nieprawidłowa."
 
 #: src/cmdline.ycp:85
 #, ycp-format
@@ -263,11 +2249,6 @@ msgstr "Nie można ustawić typu VMM na: %1"
 #: src/cmdline.ycp:91
 msgid "Mandatory option 'vm' is missing."
 msgstr "Brak obowiązkowej opcji 'vm'."
-
-#. progress stage
-#: src/dom0_setup.ycp:25
-msgid "Install Packages"
-msgstr "Instalacja pakietów"
 
 #. progress stage
 #: src/dom0_setup.ycp:27
@@ -312,34 +2293,6 @@ msgstr ""
 #: src/dom0_setup.ycp:54
 msgid "<P>When the configuration is successfully finished, it is possible to boot Xen from the boot loader menu.</P>"
 msgstr "<P>Jeśli konfiguracja zostanie zakończona pomyślnie, możliwe będzie uruchomienie Xen z menu programu rozruchowego.</P>"
-
-#. error popup
-#: src/dom0_setup.ycp:57
-msgid "An error occurred during installation."
-msgstr "Wystąpił błąd podczas instalacji."
-
-#. error popup
-#. part of an error message
-#: src/dom0_setup.ycp:59
-#: src/inst_vm_kickoff.ycp:60
-msgid "The installation will be aborted."
-msgstr "Instalacja zostanie przerwana."
-
-#. progressbar title - check whether Xen packages are installed
-#: src/dom0_setup.ycp:79
-msgid "Checking packages..."
-msgstr "Sprawdzanie pakietów..."
-
-#. progressbar title - install the required packages
-#: src/dom0_setup.ycp:83
-msgid "Installing packages..."
-msgstr "Instalowanie pakietów..."
-
-#. error popup
-#: src/dom0_setup.ycp:90
-#: src/inst_vm_kickoff.ycp:64
-msgid "Cannot install required packages."
-msgstr "Nie można zainstalować wymaganych pakietów."
 
 #. progressbar title - read bootloader settings
 #: src/dom0_setup.ycp:98
@@ -421,10 +2374,6 @@ msgstr "Profil programu AutoYaST"
 msgid "AutoYast &Profile"
 msgstr "Pro&fil AutoYaST"
 
-#: src/inst_vm_autoyast.ycp:34
-msgid "Select Profile..."
-msgstr "Wybierz profil..."
-
 #. help text for autoyast settings (1/3)
 #: src/inst_vm_autoyast.ycp:40
 msgid "<p><b>AutoYast Profile Setup</b><br></p>"
@@ -465,16 +2414,6 @@ msgstr ""
 "Nie można wczytać profilu '%1'\n"
 "do aktualnego systemu.\n"
 "Plik profilu może być uszkodzony."
-
-#. ask user to load VM settings from the profile
-#: src/inst_vm_autoyast.ycp:101
-msgid "Load the virtual machine configuration from the profile?"
-msgstr "Czy wczytać konfigurację wirtualnego komputera z profilu?"
-
-#. dialog title - virtual disk configuration
-#: src/inst_vm_disks.ycp:22
-msgid "Virtual Disks"
-msgstr "Dyski wirtualne"
 
 #: src/inst_vm_disks.ycp:32
 msgid ""
@@ -524,16 +2463,6 @@ msgstr "Wielkość &dysku w MB:"
 msgid "&Virtual Machine Device"
 msgstr "Dysk komputera &wirtualnego"
 
-#: src/inst_vm_disks.ycp:67
-#: src/inst_vm_disks.ycp:164
-#: src/inst_vm_disks.ycp:275
-msgid "&Read-Only Access"
-msgstr "Tylko do &odczytu"
-
-#: src/inst_vm_disks.ycp:69
-msgid "Create &Sparse Image File"
-msgstr "Utwórz &rzadki plik obrazu"
-
 #: src/inst_vm_disks.ycp:75
 msgid "Location of Disk Images"
 msgstr "Lokalizacja obrazów dysku"
@@ -565,10 +2494,6 @@ msgstr "Nieprawidłowa wielkość dysku."
 msgid "<P><B>Use Virtual Disk Image</B>: An existing disk image can used by the virtual machine.</P>"
 msgstr "<P><B>Użycie wirtualnego obrazu dysku</B>: istniejący obraz dysku może być użyty w komputerze wirtualnym.</P>"
 
-#: src/inst_vm_disks.ycp:150
-msgid "&Disk Image File"
-msgstr "&Plik obrazu dysku"
-
 #: src/inst_vm_disks.ycp:154
 #: src/inst_vm_source.ycp:106
 #: src/inst_vm_source.ycp:116
@@ -586,10 +2511,6 @@ msgstr "Brak nazwy pliku źródłowego."
 #, ycp-format
 msgid "File %1 does not exist."
 msgstr "Plik %1 nie istnieje."
-
-#: src/inst_vm_disks.ycp:213
-msgid "Select Disk Image"
-msgstr "Proszę wybrać obraz dysku"
 
 #: src/inst_vm_disks.ycp:252
 msgid "<P><B>Block Device</B>: The virtual machine can use only block devices accessible from domain 0.</P>"
@@ -627,33 +2548,14 @@ msgstr "<P><B>Konfiguracja pliku pętli zwrotnej (loopback)</B></P><P>Istniejąc
 msgid "Disk Image"
 msgstr "Obraz dysku"
 
-#: src/inst_vm_disks.ycp:338
-msgid "&Create New Disk Image"
-msgstr "Utwórz &nowy obraz dysku"
-
-#: src/inst_vm_disks.ycp:340
-msgid "&Use Existing Disk Image"
-msgstr "Użyj &istniejącego obrazu dysku"
-
 #: src/inst_vm_disks.ycp:347
 msgid "Configuration of Disk Image"
 msgstr "Konfiguracja obrazu dysku"
 
 #. table - column heading
-#: src/inst_vm_disks.ycp:432
-#: src/inst_vm_disks.ycp:435
-msgid "Disk Size (MB)"
-msgstr "Wielkość dysku (MB)"
-
-#. table - column heading
 #: src/inst_vm_disks.ycp:435
 msgid "Virtual Device"
 msgstr "Urządzenie wirtualne"
-
-#: src/inst_vm_disks.ycp:435
-#: src/xen_auto.ycp:74
-msgid "Source"
-msgstr "Źródło"
 
 #. add dots - %1 is translated 'Add' button label
 #: src/inst_vm_disks.ycp:443
@@ -683,40 +2585,10 @@ msgstr ""
 "<P>Tutaj można skonfigurować ilość i wielkość dysków wirtualnych.\n"
 "Zawartość każdego z wirtualnego dysków jest zapisana w pliku systemu głównego.</P>\n"
 
-#. error popup
-#: src/inst_vm_disks.ycp:509
-msgid "At least one disk is required."
-msgstr "Wymagany jest co najmniej jeden dysk."
-
-#. progress stage
-#: src/inst_vm_kickoff.ycp:23
-msgid "Install packages"
-msgstr "Instalacja pakietów"
-
-#. progress stage
-#: src/inst_vm_kickoff.ycp:25
-msgid "Prepare virtual machine environment"
-msgstr "Przygotowanie środowiska komputera wirtualnego"
-
-#. progress stage
-#: src/inst_vm_kickoff.ycp:27
-msgid "Write virtual machine configuration"
-msgstr "Zapis konfiguracji komputera wirtualnego"
-
-#. progress stage
-#: src/inst_vm_kickoff.ycp:29
-msgid "Start the virtual machine"
-msgstr "Uruchomienie komputera wirtualnego"
-
 #. progress stage
 #: src/inst_vm_kickoff.ycp:34
 msgid "Update the configuration"
 msgstr "Aktualizacja konfiguracji"
-
-#. Headline for virtual machine installation
-#: src/inst_vm_kickoff.ycp:41
-msgid "Preparing Installation of the Virtual Machine"
-msgstr "Przygotowanie instalacji komputera wirtualnego"
 
 #. help text
 #: src/inst_vm_kickoff.ycp:44
@@ -726,18 +2598,6 @@ msgstr "<P><B>Instalacja</B></P><P>Przygotowanie komputera wirtualnego do instal
 #: src/inst_vm_kickoff.ycp:46
 msgid "An error occurred during installation of the virtual machine."
 msgstr "Wystąpił błąd podczas instalacji komputera wirtualnego."
-
-#: src/inst_vm_kickoff.ycp:74
-msgid "Cannot prepare the virtual machine environment."
-msgstr "Nie można przygotować środowiska komputera wirtualnego."
-
-#: src/inst_vm_kickoff.ycp:83
-msgid "Cannot write the configuration of the virtual machine."
-msgstr "Nie można zapisać konfiguracji komputera wirtualnego."
-
-#: src/inst_vm_kickoff.ycp:118
-msgid "Cannot start the virtual machine."
-msgstr "Nie można uruchomić komputera wirtualnego."
 
 #. TODO: check VM_Common::root_device
 #. help text
@@ -761,10 +2621,6 @@ msgstr "Urządzenie główne"
 msgid "Cannot prepare the virtual machine for reboot."
 msgstr "Nie można przygotować komputera wirtualnego do ponownego uruchomienia."
 
-#: src/inst_vm_kickoff.ycp:155
-msgid "Cannot update the configuration of the virtual machine."
-msgstr "Nie można zaktualizować konfiguracji komputera wirtualnego."
-
 #. ask user to start the virtual machine again (to continue the installation or configuration)
 #: src/inst_vm_kickoff.ycp:165
 msgid ""
@@ -774,49 +2630,15 @@ msgstr ""
 "Komputer wirtualny został wyłączony.\n"
 "Czy uruchomić go ponownie?"
 
-#: src/inst_vm_network.ycp:42
-msgid "Random Address"
-msgstr "Adres losowy"
-
-#: src/inst_vm_network.ycp:47
-msgid "Default Bridge"
-msgstr "Domyślny mostek"
-
 #. heading in a popup dialog
 #: src/inst_vm_network.ycp:70
 msgid "Virtual Network Card Configuration"
 msgstr "Konfiguracja wirtualnej karty sieciowej"
 
-#. text entry label
-#: src/inst_vm_network.ycp:73
-msgid "&MAC Address"
-msgstr "Adres &MAC"
-
-#: src/inst_vm_network.ycp:75
-msgid "&Bridge Name"
-msgstr "Nazwa &mostka"
-
-#. error message
-#: src/inst_vm_network.ycp:106
-msgid "The MAC address entered is not valid."
-msgstr "Podany adres MAC jest nieprawidłowy."
-
 #. screen title for network options
 #: src/inst_vm_network.ycp:122
 msgid "Network Settings"
 msgstr "Ustawienia sieci"
-
-#: src/inst_vm_network.ycp:129
-msgid "No."
-msgstr "Nr"
-
-#: src/inst_vm_network.ycp:129
-msgid "MAC Address"
-msgstr "Adres MAC"
-
-#: src/inst_vm_network.ycp:129
-msgid "Bridge"
-msgstr "Mostek"
 
 #: src/inst_vm_network.ycp:136
 msgid "Use DHCP for Network Configuration"
@@ -903,22 +2725,6 @@ msgstr ""
 msgid "Invalid amount of memory."
 msgstr "Nieprawidłowy rozmiar pamięci."
 
-#. TODO: else if (mem < available memory)
-#. error message: requested memory size is greater that available free memory
-#: src/inst_vm_options.ycp:149
-#, ycp-format
-msgid ""
-"The requested memory size is larger than the amount of space currently available.\n"
-"There is %1MB free memory available."
-msgstr ""
-"Żądany rozmiar pamięci jest większy niż aktualnie dostępny.\n"
-"Dostępnych jest %1MB wolnej pamięci."
-
-#. screen title - installation source configuration
-#: src/inst_vm_source.ycp:26
-msgid "Installation Source"
-msgstr "Źródło instalacji"
-
 #: src/inst_vm_source.ycp:81
 msgid "<P><B>Operating System</B></P>"
 msgstr "<p><b>System operacyjny</b></p>"
@@ -994,35 +2800,6 @@ msgstr ""
 "Czy ustawić domyślne parametry instalacyjne SUSE Linux dla jądra?\n"
 "%1"
 
-#. radio button label
-#: src/inst_vm_source.ycp:228
-msgid "&Configured Installation Source"
-msgstr "S&konfigurowane źródło instalacji"
-
-#. table column heading
-#: src/inst_vm_source.ycp:234
-msgid "Name"
-msgstr "Nazwa"
-
-#: src/inst_vm_source.ycp:234
-msgid "URL"
-msgstr "URL"
-
-#. push button label
-#. installation source configuration module
-#. is started when it's pressed
-#: src/inst_vm_source.ycp:239
-msgid "C&onfigure..."
-msgstr "K&onfiguracja..."
-
-#: src/inst_vm_source.ycp:242
-msgid "Custom &Installation Source"
-msgstr "Inne źródło &instalacyjne"
-
-#: src/inst_vm_source.ycp:245
-msgid "&URL of Installation Source"
-msgstr "&URL źródła instalacyjnego"
-
 #. help text for backup dialog during update 1/7
 #: src/inst_vm_source.ycp:257
 msgid "<P><B>Installation Source</B></P>"
@@ -1031,16 +2808,6 @@ msgstr "<P><B>Źródło instalacyjne</B></P>"
 #: src/inst_vm_source.ycp:258
 msgid "<P>Select the installation source from which to install the virtual machine.</P>"
 msgstr "<P>Proszę wybrać źródło instalacyjne, z którego ma być zainstalowany wirtualny komputer.</P>"
-
-#: src/inst_vm_source.ycp:316
-msgid "Entered URL value is not valid."
-msgstr "Wprowadzony URL jest nieprawidłowy."
-
-#. format CD device name: %1 is model name (e.g. "TOSHIBA DVD-ROM SD-M1402"), %2 is device name (e.g. /dev/hdc)
-#: src/inst_vm_source.ycp:399
-#, ycp-format
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #: src/inst_vm_source.ycp:408
 msgid "Boot System From"
@@ -1053,14 +2820,6 @@ msgstr "Napęd CD-ROM"
 #: src/inst_vm_source.ycp:414
 msgid "Device Name"
 msgstr "Nazwa urządzenia"
-
-#: src/inst_vm_source.ycp:418
-msgid "&ISO Image File"
-msgstr "Plik obrazu &ISO"
-
-#: src/inst_vm_source.ycp:421
-msgid "&File Name"
-msgstr "Nazwa &pliku"
 
 #: src/inst_vm_source.ycp:430
 msgid "Virtual Hard Disk"
@@ -1087,28 +2846,10 @@ msgstr ""
 "zostanie uruchomiony z dysku CD-ROM. W tym przypadku komputer wirtualny jest\n"
 "uruchamiany z twardego dysku po instalacji. </p>\n"
 
-#. error - entered empty ISO image file name
-#: src/inst_vm_source.ycp:486
-msgid "Select an ISO image file for CD-ROM emulation."
-msgstr "Proszę wybrać obraz ISO dla emulacji płyty CD-ROM."
-
-#: src/inst_vm_source.ycp:499
-msgid "Select ISO Image"
-msgstr "Obraz ISO"
-
 #. screen title for the Xen mode selection
 #: src/inst_xen_mode.ycp:25
 msgid "Xen Virtualization"
 msgstr "Wirtualizacja Xen"
-
-#. this is a heading
-#. this is a menu entry
-#: src/inst_xen_mode.ycp:33
-#: src/xen_auto.ycp:71
-#: src/xen_mode_proposal.ycp:48
-#: src/xen_mode_proposal.ycp:50
-msgid "Virtualization Mode"
-msgstr "Tryb wirtualizacji"
 
 #: src/inst_xen_mode.ycp:36
 msgid "Paravirtualization (Requires Modified Guest OS)"
@@ -1166,39 +2907,6 @@ msgstr ""
 msgid "AutoYast"
 msgstr "AutoYaST"
 
-#. this is a heading
-#: src/vm_disks_proposal.ycp:62
-#: src/xen_auto.ycp:73
-msgid "Disks"
-msgstr "Dyski"
-
-#. this is a menu entry
-#: src/vm_disks_proposal.ycp:64
-msgid "&Disks"
-msgstr "&Dyski"
-
-#. progress step title
-#: src/vm_finish.ycp:42
-msgid "Configuring the virtual machine..."
-msgstr "Konfigurowanie komputera wirtualnego..."
-
-#. this is a heading
-#: src/vm_network_proposal.ycp:52
-#: src/xen_auto.ycp:75
-msgid "Network"
-msgstr "Sieć"
-
-#. this is a menu entry
-#: src/vm_network_proposal.ycp:54
-msgid "&Network"
-msgstr "Si&eć"
-
-#. this is a heading
-#: src/vm_options_proposal.ycp:49
-#: src/xen_auto.ycp:72
-msgid "Options"
-msgstr "Opcje"
-
 #. this is a menu entry
 #: src/vm_options_proposal.ycp:51
 msgid "&Options"
@@ -1249,15 +2957,6 @@ msgstr "Utwórz rzadki plik z obrazem dysku"
 msgid "MAC address of the virtual ethernet card"
 msgstr "Adres MAC wirtualnej karty ethernet"
 
-#. we are already in UML, nested virtual machine is not supported
-#: src/xen.ycp:79
-msgid ""
-"Virtual machine installation cannot be started inside the UML machine.\n"
-"Start installation in the host system.\n"
-msgstr ""
-"Nie można uruchomić instalacji wirtualnego komputera w komputerze UML.\n"
-"Proszę uruchomić instalację w systemie hoście.\n"
-
 #. error - xen kernel must be running to start a new Xen domain,
 #. ask user to configure the first (management) Xen domain
 #: src/xen.ycp:90
@@ -1274,17 +2973,24 @@ msgstr ""
 "\n"
 "Czy skonfigurować teraz domenę zarządzającą?"
 
-#. error - the installation runs in xterm, we need access to a X server
-#: src/xen.ycp:114
-msgid "Virtual machine installation requires access to a graphical environment."
-msgstr "Instalacja wirtualnego komputera wymaga dostępu do środowiska graficznego."
+#~ msgid "Details"
+#~ msgstr "Szczegóły"
+#~ msgid "Continue"
+#~ msgstr "Kontynuuj"
+#~ msgid "Cancel"
+#~ msgstr "Anuluj"
+#~ msgid "Finish"
+#~ msgstr "Zakończ"
 
-msgid ""
-"<p>It is possible to install the virtual machine using AutoYast.\n"
-"You can set all installation options in AutoYast and store them into a profile\n"
-"file that can be used later for automatic installation.</p>\n"
-msgstr ""
-"<p>Możliwa jest instalacja wirtualnego komputera przy pomocy programu AutoYaST.\n"
-"Należy ustawić w AutoYaST wszystkie opcje instalacyjne i zapisać je w pliku \n"
-"profilu, który może być później użyty do automatycznej instalacji.</p>\n"
+#, fuzzy
+#~ msgid "<p><b><big>%1</big></b><br></p>"
+#~ msgstr "<p><b><big>Użytkownicy</big></b></p>"
+#~ msgid ""
+#~ "<p>It is possible to install the virtual machine using AutoYast.\n"
+#~ "You can set all installation options in AutoYast and store them into a profile\n"
+#~ "file that can be used later for automatic installation.</p>\n"
+#~ msgstr ""
+#~ "<p>Możliwa jest instalacja wirtualnego komputera przy pomocy programu AutoYaST.\n"
+#~ "Należy ustawić w AutoYaST wszystkie opcje instalacyjne i zapisać je w pliku \n"
+#~ "profilu, który może być później użyty do automatycznej instalacji.</p>\n"
 
