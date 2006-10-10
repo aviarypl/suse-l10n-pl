@@ -9,15 +9,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: online-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-21 10:44+0100\n"
-"PO-Revision-Date: 2006-04-11 16:08+0200\n"
-"Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
+"POT-Creation-Date: 2006-09-22 09:55+0200\n"
+"PO-Revision-Date: 2006-06-14 23:03+0100\n"
+"Last-Translator: Wadim Dziedzic <nikdo@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Poedit-Bookmarks: 107,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
 "X-Generator: KBabel 1.9.1\n"
 
@@ -49,47 +48,137 @@ msgstr "Piątek"
 msgid "Saturday"
 msgstr "Sobota"
 
-#: src/AutoOnlineUpdate.ycp:235
+#: src/AutoOnlineUpdate.ycp:238
 msgid "Scheduled Online Update Enabled"
 msgstr "Włączona aktualizacja planowa"
 
-#: src/AutoOnlineUpdate.ycp:236 src/AutoOnlineUpdate.ycp:263
-#: src/AutoOnlineUpdate.ycp:265
+#: src/AutoOnlineUpdate.ycp:239 src/AutoOnlineUpdate.ycp:266
+#: src/AutoOnlineUpdate.ycp:268
 msgid "Yes"
 msgstr "Tak"
 
-#: src/AutoOnlineUpdate.ycp:236 src/AutoOnlineUpdate.ycp:263
-#: src/AutoOnlineUpdate.ycp:265
+#: src/AutoOnlineUpdate.ycp:239 src/AutoOnlineUpdate.ycp:266
+#: src/AutoOnlineUpdate.ycp:268
 msgid "No"
 msgstr "Nie"
 
 #. radibutton label
-#: src/AutoOnlineUpdate.ycp:244 src/OnlineUpdateDialogs.ycp:111
+#: src/AutoOnlineUpdate.ycp:247 src/OnlineUpdateDialogs.ycp:111
 msgid "Daily"
 msgstr "Codziennie"
 
-#: src/AutoOnlineUpdate.ycp:251
+#: src/AutoOnlineUpdate.ycp:254
 #, ycp-format
 msgid "%1 at %2:%3"
 msgstr "%1 o %2:%3"
 
-#: src/AutoOnlineUpdate.ycp:255
+#: src/AutoOnlineUpdate.ycp:258
 #, ycp-format
 msgid "%1 at a Random Time"
 msgstr "%1 w losowym czasie"
 
-#: src/AutoOnlineUpdate.ycp:258
+#: src/AutoOnlineUpdate.ycp:261
 msgid "Time of Scheduled Online Update"
 msgstr "Czas zaplanowanych uaktualnień online"
 
 #. checkbox label
-#: src/AutoOnlineUpdate.ycp:262 src/OnlineUpdateDialogs.ycp:130
+#: src/AutoOnlineUpdate.ycp:265 src/OnlineUpdateDialogs.ycp:130
 msgid "Only Download Patches"
 msgstr "Tylko pobieraj poprawki"
 
-#: src/AutoOnlineUpdate.ycp:264
+#: src/AutoOnlineUpdate.ycp:267
 msgid "Skip packages with preinstall information?"
 msgstr "Pominąć pakiety z informacją przedinstalacyjną?"
+
+#. popup message
+#: src/OnlineUpdate.ycp:50
+#, fuzzy
+msgid ""
+"Packages for package management were updated.\n"
+"Finishing and restarting now."
+msgstr ""
+"W czasie aktualizacji został zaktualizowany program YaST.\n"
+"Teraz nastąpi zakończenie jego działania i ponowne uruchomienie."
+
+#. progress log item (%1 is name of package)
+#: src/OnlineUpdateCallbacks.ycp:112
+#, ycp-format
+msgid "Retrieving %1..."
+msgstr "Pobieranie %1..."
+
+#. progress bar label
+#: src/OnlineUpdateCallbacks.ycp:117
+#, fuzzy
+msgid "Package Download Progress"
+msgstr "Pakiety z problemami"
+
+#. progress log item (%1 is name of package, %2 is summary)
+#: src/OnlineUpdateCallbacks.ycp:131
+#, ycp-format
+msgid "Installing %1: \"%2\" "
+msgstr "Instalowanie %1: \"%2\" "
+
+#. progress bar label
+#: src/OnlineUpdateCallbacks.ycp:136
+#, fuzzy
+msgid "Package Installation Progress"
+msgstr "Instalacja pakietów"
+
+#. progress log item (=previous action finished correctly)
+#: src/OnlineUpdateCallbacks.ycp:150
+msgid "OK"
+msgstr "OK"
+
+#: src/OnlineUpdateCallbacks.ycp:206
+#, fuzzy, ycp-format
+msgid "Downloading delta RPM %1"
+msgstr "Pobieranie: %1"
+
+#. progress bar label
+#: src/OnlineUpdateCallbacks.ycp:211
+msgid "Delta RPM Download Progress"
+msgstr ""
+
+#. progress log item (previous action failed(%1 is reason)
+#: src/OnlineUpdateCallbacks.ycp:237
+#, fuzzy, ycp-format
+msgid "Failed to download delta RPM: %1"
+msgstr "Dezaktywacja %1 nie powiodła się."
+
+#. progress log item (%1 is name of delta RPM)
+#: src/OnlineUpdateCallbacks.ycp:248
+#, fuzzy, ycp-format
+msgid "Applying delta RPM: %1"
+msgstr "Nakładanie delta"
+
+#. progress bar label
+#: src/OnlineUpdateCallbacks.ycp:253
+#, fuzzy
+msgid "Delta RPM Application Progress"
+msgstr "Kolejność stosowania"
+
+#. progress log item (previous action failed(%1 is reason)
+#: src/OnlineUpdateCallbacks.ycp:279
+#, fuzzy, ycp-format
+msgid "Failed to apply delta RPM: %1"
+msgstr "Zastosowanie pliku schematu %1 nie powiodło się."
+
+#: src/OnlineUpdateCallbacks.ycp:293
+#, fuzzy, ycp-format
+msgid "Downloading patch RPM %1"
+msgstr "Pobieranie: %1"
+
+#. progress bar label
+#: src/OnlineUpdateCallbacks.ycp:298
+#, fuzzy
+msgid "Patch RPM Download Progress"
+msgstr "Postęp poprawki"
+
+#. progress log item (previous action failed(%1 is reason)
+#: src/OnlineUpdateCallbacks.ycp:324
+#, fuzzy, ycp-format
+msgid "Failed to download patch RPM: %1"
+msgstr "Dezaktywacja %1 nie powiodła się."
 
 #. dialog header
 #: src/OnlineUpdateDialogs.ycp:21
@@ -144,48 +233,52 @@ msgstr "Co tydzień"
 
 #. checkbox label
 #: src/OnlineUpdateDialogs.ycp:138
+msgid "Skip Interactive Patches"
+msgstr "Pomiń poprawki interaktywne"
+
+#: src/OnlineUpdateDialogs.ycp:139
 msgid "Skip Patches with Preinstall Information"
 msgstr "Pomiń pakiety z informacją przedinstalacyjną"
 
-#: src/OnlineUpdateDialogs.ycp:263
+#: src/OnlineUpdateDialogs.ycp:264
 msgid "No details available."
 msgstr "Szczegóły nie są dostępne."
 
-#: src/OnlineUpdateDialogs.ycp:265
+#: src/OnlineUpdateDialogs.ycp:266
 msgid "&Details <<"
 msgstr "Szcze&góły <<"
 
-#: src/OnlineUpdateDialogs.ycp:266
+#: src/OnlineUpdateDialogs.ycp:267
 msgid "&Details >>"
 msgstr "Szcze&góły >>"
 
-#: src/OnlineUpdateDialogs.ycp:270
+#: src/OnlineUpdateDialogs.ycp:271
 msgid "Error"
 msgstr "Błąd"
 
-#: src/OnlineUpdateDialogs.ycp:276
+#: src/OnlineUpdateDialogs.ycp:277
 msgid "Try again"
 msgstr "Spróbuj ponownie"
 
-#: src/OnlineUpdateDialogs.ycp:277 src/OnlineUpdateDialogs.ycp:537
+#: src/OnlineUpdateDialogs.ycp:278 src/OnlineUpdateDialogs.ycp:541
 msgid "Skip Patch"
 msgstr "Pomiń poprawkę"
 
-#: src/OnlineUpdateDialogs.ycp:278
+#: src/OnlineUpdateDialogs.ycp:279
 msgid "Skip All"
 msgstr "Pomiń wszystko"
 
-#: src/OnlineUpdateDialogs.ycp:279 src/OnlineUpdateDialogs.ycp:285
-#: src/OnlineUpdateDialogs.ycp:293
+#: src/OnlineUpdateDialogs.ycp:280 src/OnlineUpdateDialogs.ycp:286
+#: src/OnlineUpdateDialogs.ycp:294
 msgid "Abort Update"
 msgstr "Przerwij aktualizację"
 
-#: src/OnlineUpdateDialogs.ycp:288
+#: src/OnlineUpdateDialogs.ycp:289
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
 #. Warning text for aborting the update before a patch is installed
-#: src/OnlineUpdateDialogs.ycp:372
+#: src/OnlineUpdateDialogs.ycp:373
 msgid ""
 "If you abort the installation now, no patch will be installed.\n"
 "Your installation will remain untouched.\n"
@@ -195,7 +288,7 @@ msgstr ""
 "System pozostanie niezmieniony.\n"
 
 #. Warning text for aborting if some patches are installed, some not
-#: src/OnlineUpdateDialogs.ycp:379
+#: src/OnlineUpdateDialogs.ycp:380
 msgid ""
 "Patch download and installation in progress.\n"
 "If you abort the installation now, the update is incomplete.\n"
@@ -207,7 +300,7 @@ msgstr ""
 "ponowić aktualizację lub pobieranie poprawek.\n"
 
 #. Warning text for aborting an installation during the install process
-#: src/OnlineUpdateDialogs.ycp:387
+#: src/OnlineUpdateDialogs.ycp:388
 msgid ""
 "If you abort the installation now,\n"
 "at least one patch is not installed correctly.\n"
@@ -219,7 +312,7 @@ msgstr ""
 "przeprowadzona ponownie."
 
 #. Warning text for aborting an installation without running SuSEconfig
-#: src/OnlineUpdateDialogs.ycp:394
+#: src/OnlineUpdateDialogs.ycp:395
 msgid ""
 "If you abort the installation now, SuSEconfig will\n"
 "not be run. The patches have been installed\n"
@@ -233,47 +326,47 @@ msgstr ""
 "mogą nie działać zgodnie z oczekiwaniami."
 
 #. Confirm user request to abort installation
-#: src/OnlineUpdateDialogs.ycp:414
+#: src/OnlineUpdateDialogs.ycp:415
 msgid "Really abort YaST Online Update?"
 msgstr "Naprawdę przerwać prac·ę YaST Online Update?"
 
 #. Button that will really abort the installation
-#: src/OnlineUpdateDialogs.ycp:421
+#: src/OnlineUpdateDialogs.ycp:422
 msgid "&Abort Update"
 msgstr "&Przerwij aktualizację"
 
 #. Button that will continue with the installation
-#: src/OnlineUpdateDialogs.ycp:425
+#: src/OnlineUpdateDialogs.ycp:426
 msgid "&Continue Update"
 msgstr "&Kontynuuj aktualizację"
 
-#: src/OnlineUpdateDialogs.ycp:500
+#: src/OnlineUpdateDialogs.ycp:501
 #, ycp-format
 msgid "<b>Patch:</b> %1<br>"
 msgstr "<b>Poprawka:</b> %1<br>"
 
-#: src/OnlineUpdateDialogs.ycp:501
+#: src/OnlineUpdateDialogs.ycp:502
 #, ycp-format
 msgid "<b>Summary:</b> %1<br>"
 msgstr "<b>Podsumowanie</b> %1<br>"
 
-#: src/OnlineUpdateDialogs.ycp:510
+#: src/OnlineUpdateDialogs.ycp:513
 msgid "<b>Packages:</b>"
 msgstr "<b>Pakiety:</b>"
 
-#: src/OnlineUpdateDialogs.ycp:521
+#: src/OnlineUpdateDialogs.ycp:525
 msgid "Patch &Details <<"
 msgstr "&Szczegóły poprawki <<"
 
-#: src/OnlineUpdateDialogs.ycp:522
+#: src/OnlineUpdateDialogs.ycp:526
 msgid "Patch &Details >>"
 msgstr "&Szczegóły poprawki >>"
 
-#: src/OnlineUpdateDialogs.ycp:536
+#: src/OnlineUpdateDialogs.ycp:540
 msgid "Install Patch"
 msgstr "Zainstaluj poprawkę"
 
-#: src/inst_you.ycp:42
+#: src/inst_you.ycp:70
 msgid ""
 "YaST2\n"
 "Initializing ..."
@@ -282,7 +375,7 @@ msgstr ""
 "inicjalizacja..."
 
 #. message popup
-#: src/inst_you.ycp:142
+#: src/inst_you.ycp:212
 msgid ""
 "The kernel has been updated. The system will\n"
 "reboot now then continue the installation.\n"
@@ -290,96 +383,62 @@ msgstr ""
 "Zaktualizowane zostało jądro systemu. System zostanie teraz\n"
 "uruchomiony ponownie, po czym instalacja będzie kontynuowana.\n"
 
-#. message popup
-#: src/inst_you.ycp:149
-msgid ""
-"During online update, YaST was updated.\n"
-"Finishing and restarting now."
-msgstr ""
-"W czasie aktualizacji został zaktualizowany program YaST.\n"
-"Teraz nastąpi zakończenie jego działania i ponowne uruchomienie."
+#. progress stage label
+#: src/online_update.ycp:63
+#, fuzzy
+msgid "Initialize the target system"
+msgstr "Inicjalizuj system docelowy"
 
-#. dummy message, which will be used in the future, but have to be
-#. translated into other languages.
-#: src/online_update.ycp:25
-msgid "Dialing...."
-msgstr "Dzwonienie...."
+#. progress stage label
+#: src/online_update.ycp:65
+#, fuzzy
+msgid "Refresh update sources"
+msgstr "Odczytaj skonfigurowane źródła"
 
-#: src/online_update.ycp:26
-msgid "Hang up...."
-msgstr "Rozłączanie...."
+#. progress step label
+#: src/online_update.ycp:69
+#, fuzzy
+msgid "Initializing the target system..."
+msgstr "Inicjalizacja systemu docelowego..."
 
-#: src/online_update.ycp:27
-msgid "Could not dial to the Internet. Check your settings."
-msgstr "Nie można połączyć się z siecią Internet. Proszę sprawdzić ustawienia."
+#. progress step label
+#: src/online_update.ycp:71
+#, fuzzy
+msgid "Refreshing update sources ..."
+msgstr "Odczytywanie zasobów..."
 
-#: src/online_update.ycp:28
-msgid "Could not dial to the Internet. Connect manually."
-msgstr "Nie można połączyć się z siecią Internet. Proszę połączyć się ręcznie."
+#. final progress step label
+#: src/online_update.ycp:73
+msgid "Finished"
+msgstr "Zakończono"
 
-#: src/online_update.ycp:29
-msgid "Error occured while closing the connection to the Internet."
-msgstr "Wystąpił błąd przy zamykaniu połączenia z siecią Internet."
+#. dialog caption
+#: src/online_update.ycp:77
+#, fuzzy
+msgid "Initializing Online Update"
+msgstr "Aktywacja Aktualizacji Online"
 
-#: src/online_update.ycp:31
-msgid "Do not show this message again."
-msgstr "Nie pokazuj więcej tego komunikatu."
-
-#: src/online_update.ycp:32
-msgid "Skip"
-msgstr "Pomiń"
-
-#: src/online_update.ycp:33
-msgid "Continue"
-msgstr "Kontynuuj"
-
-#: src/online_update.ycp:34
-msgid "Install"
-msgstr "Zainstaluj"
-
-#: src/online_update.ycp:35
-#, ycp-format
-msgid ""
-"The package \"%1\" is not a SuSE package.\n"
-"Install anyway?\n"
-msgstr ""
-"Pakiet \"%1\" nie jest pakietem SUSE.\n"
-"Czy na pewno go zainstalować?\n"
-
-#: src/online_update.ycp:38
-msgid "There is no connection to the Internet. Trying to connect."
-msgstr "Brak połączenia z siecią Internet. Próba połączenia..."
-
-#: src/online_update.ycp:40
-msgid ""
-"Cannot check the packages because no GPG configuration\n"
-"or key has been found. SuSE cannot guarantee that the\n"
-"packages were created by SuSE.\n"
-msgstr ""
-"Nie można sprawdzić pakietów, ponieważ nie znaleziono\n"
-"konfiguracji GPG albo właściwych kluczy.\n"
-"SUSE nie może gwarantować, że pakiety te zostały \n"
-"przygotowane przez SUSE.\n"
-
-#: src/online_update_install.ycp:44
+#. progress window label
+#: src/online_update_install.ycp:27
 msgid "Progress Log"
 msgstr "Dziennik postępu"
 
-#: src/online_update_install.ycp:46
-msgid "Patch Progress"
+#. progress bar label
+#: src/online_update_install.ycp:30
+#, fuzzy
+msgid "Package Progress"
 msgstr "Postęp poprawki"
 
-#: src/online_update_install.ycp:48
+#. progress bar label
+#: src/online_update_install.ycp:34 src/online_update_install.ycp:68
 msgid "Total Progress"
 msgstr "Postęp całkowity"
 
-#: src/online_update_install.ycp:50
-msgid "&Remove Source Packages after Update"
-msgstr "&Usuń pakiety źródłowe po aktualizacji"
-
-#: src/online_update_install.ycp:57
+#. help text for online update
+#: src/online_update_install.ycp:40
+#, fuzzy
 msgid ""
-"<p>After connecting to the SuSE update server,\n"
+"<p>After connecting to the update server,\n"
 "YaST2 will download all selected patches.\n"
 "This could take some time. Download details are shown in the log window.</p>"
 msgstr ""
@@ -388,11 +447,11 @@ msgstr ""
 "Może to zająć trochę czasu. Szczegóły związane z pobieraniem \n"
 "widoczne są w oknie postępu.</p>"
 
-#: src/online_update_install.ycp:61
+#. help text for online update
+#: src/online_update_install.ycp:45
 msgid ""
 "<p>When the download has finished successfully, the\n"
-"patches will be installed. The progress is shown in the log window. If "
-"there\n"
+"patches will be installed. The progress is shown in the log window. If there\n"
 "are special messages associated with patches, they will be shown in an\n"
 "extra dialog when the patch is being installed.</p>\n"
 msgstr ""
@@ -401,24 +460,34 @@ msgstr ""
 "Jeśli z jakimiś poprawkami związane są specjalne komunikaty, będą one \n"
 "wyświetlone w dodatkowym oknie podczas instalacji poprawki.</p>\n"
 
-#: src/online_update_install.ycp:67
-msgid ""
-"<p>After patches are installed, the downloaded\n"
-"data is no longer needed. To delete this data, activate \n"
-"<b>Remove Source Packages after Update</b>.</p>\n"
-msgstr ""
-"<p>Po zainstalowaniu poprawek, pobrane dane\n"
-"nie będą już potrzebne. Aby je usunąć, należy zaznaczyć opcję\n"
-"<b>Usuń pakiety źródłowe po aktualizacji</b>.</p>\n"
-
 #. using SetContents (define in online_update.ycp)
-#: src/online_update_install.ycp:75
+#: src/online_update_install.ycp:54
 msgid "Patch Download and Installation"
 msgstr "Pobieranie i instalacja poprawek"
 
-#: src/online_update_install.ycp:88
+#. progress information
+#: src/online_update_install.ycp:79
+msgid "Installation finished.\n"
+msgstr "Instalacja zakończona.\n"
+
+#. error message
+#: src/online_update_install.ycp:84
 msgid "Patch processing failed."
 msgstr "Przetwarzanie poprawki zakończone niepowodzeniem."
+
+#: src/online_update_select.ycp:26 src/online_update_start.ycp:201
+msgid "Initializing for CD update..."
+msgstr "Inicjalizacja aktualizacji z płyty CD..."
+
+#. error popup: cancel/retry buttons follow
+#: src/online_update_select.ycp:35 src/online_update_start.ycp:495
+msgid ""
+"Initialization failed. Check that\n"
+"you have inserted the correct CD.\n"
+msgstr ""
+"Inicjalizacja zakończona niepowodzeniem.\n"
+"Proszę sprawdzić, czy w napędzie\n"
+"znajduje się właściwa płyta CD.\n"
 
 #: src/online_update_start.ycp:30
 msgid "&Username:"
@@ -459,10 +528,6 @@ msgstr "Proszę podać dane rejestracyjne."
 #: src/online_update_start.ycp:186
 msgid "User-Defined Location"
 msgstr "Lokalizacja zdefiniowana przez użytkownika"
-
-#: src/online_update_start.ycp:201
-msgid "Initializing for CD update..."
-msgstr "Inicjalizacja aktualizacji z płyty CD..."
 
 #: src/online_update_start.ycp:204
 #, ycp-format
@@ -576,29 +641,22 @@ msgstr ""
 #: src/online_update_start.ycp:372
 msgid ""
 "<p>\n"
-"If <b>Manually Select Patches</b> is checked, all available patches will be "
-"shown\n"
+"If <b>Manually Select Patches</b> is checked, all available patches will be shown\n"
 "from which to select the patches to install.<br>\n"
-"If <b>Reload All Patches from Server</b> is checked, all patches will be "
-"fetched\n"
-"from the server even when they already are locally available from a "
-"previous\n"
+"If <b>Reload All Patches from Server</b> is checked, all patches will be fetched\n"
+"from the server even when they already are locally available from a previous\n"
 "download.\n"
 "</p>\n"
 msgstr ""
 "<p>\n"
-"Opcja <b>Wybierz poprawki ręcznie</b> pozwala wybrać poprawki z listy "
-"wszystkich dostępnych poprawek.<br>Opcja <b>Odczytaj ponownie wszystkie "
-"poprawki z serwera</b> powoduje ponowne pobranie z serwera informacji o "
-"wszystkich dostępnych poprawkach.\n"
+"Opcja <b>Wybierz poprawki ręcznie</b> pozwala wybrać poprawki z listy wszystkich dostępnych poprawek.<br>Opcja <b>Odczytaj ponownie wszystkie poprawki z serwera</b> powoduje ponowne pobranie z serwera informacji o wszystkich dostępnych poprawkach.\n"
 "</p>\n"
 
 #: src/online_update_start.ycp:381
 msgid ""
 "<p>After clicking <b>New Server</b>, select a local\n"
 "installation source instead of an FTP or HTTP server or select\n"
-"another FTP or HTTP server. Click <b>Edit Server</b> to edit the location of "
-"the\n"
+"another FTP or HTTP server. Click <b>Edit Server</b> to edit the location of the\n"
 "selected server.</p>\n"
 msgstr ""
 "<p>Po naciśnięciu przycisku <b>Nowy serwer</b> należy wybrać \n"
@@ -630,15 +688,6 @@ msgstr ""
 "Logowanie nie powiodło się. Proszę sprawdzić\n"
 "poprawność nazwy użytkownika i hasła.\n"
 
-#: src/online_update_start.ycp:495
-msgid ""
-"Initialization failed. Check that\n"
-"you have inserted the correct CD.\n"
-msgstr ""
-"Inicjalizacja zakończona niepowodzeniem.\n"
-"Proszę sprawdzić, czy w napędzie\n"
-"znajduje się właściwa płyta CD.\n"
-
 #: src/online_update_start.ycp:500
 msgid ""
 "Initialization failed. Try again.\n"
@@ -655,7 +704,7 @@ msgid ""
 "Signature check for patch info files failed.\n"
 "Cannot load patch information.\n"
 msgstr ""
-"Kotrola sygnatur plików informacji o poprawkach\n"
+"Kontrola sygnatur plików informacji o poprawkach\n"
 "zakończona niepowodzeniem. Nie można pobrać \n"
 "informacji o poprawkach.\n"
 
@@ -669,6 +718,67 @@ msgstr ""
 "Pobieranie informacji o poprawkach\n"
 "zakończone niepowodzeniem."
 
-msgid "To install patches for your system in text mode, use the rug command."
-msgstr "Aby zainstalować aktualizacje w trybie tekstowym, proszę użyć polecenia \"rug\"."
+#~ msgid "Please wait..."
+#~ msgstr "Proszę czekać..."
 
+#~ msgid "Dialing...."
+#~ msgstr "Dzwonienie...."
+
+#~ msgid "Hang up...."
+#~ msgstr "Rozłączanie...."
+
+#~ msgid "Could not dial to the Internet. Check your settings."
+#~ msgstr "Nie można połączyć się z siecią Internet. Proszę sprawdzić ustawienia."
+
+#~ msgid "Could not dial to the Internet. Connect manually."
+#~ msgstr "Nie można połączyć się z siecią Internet. Proszę połączyć się ręcznie."
+
+#~ msgid "Error occured while closing the connection to the Internet."
+#~ msgstr "Wystąpił błąd przy zamykaniu połączenia z siecią Internet."
+
+#~ msgid "Do not show this message again."
+#~ msgstr "Nie pokazuj więcej tego komunikatu."
+
+#~ msgid "Skip"
+#~ msgstr "Pomiń"
+
+#~ msgid "Continue"
+#~ msgstr "Kontynuuj"
+
+#~ msgid "Install"
+#~ msgstr "Zainstaluj"
+
+#~ msgid ""
+#~ "The package \"%1\" is not a SuSE package.\n"
+#~ "Install anyway?\n"
+#~ msgstr ""
+#~ "Pakiet \"%1\" nie jest pakietem SUSE.\n"
+#~ "Czy na pewno go zainstalować?\n"
+
+#~ msgid "There is no connection to the Internet. Trying to connect."
+#~ msgstr "Brak połączenia z siecią Internet. Próba połączenia..."
+
+#~ msgid ""
+#~ "Cannot check the packages because no GPG configuration\n"
+#~ "or key has been found. SuSE cannot guarantee that the\n"
+#~ "packages were created by SuSE.\n"
+#~ msgstr ""
+#~ "Nie można sprawdzić pakietów, ponieważ nie znaleziono\n"
+#~ "konfiguracji GPG albo właściwych kluczy.\n"
+#~ "SUSE nie może gwarantować, że pakiety te zostały \n"
+#~ "przygotowane przez SUSE.\n"
+
+#~ msgid "&Remove Source Packages after Update"
+#~ msgstr "&Usuń pakiety źródłowe po aktualizacji"
+
+#~ msgid ""
+#~ "<p>After patches are installed, the downloaded\n"
+#~ "data is no longer needed. To delete this data, activate \n"
+#~ "<b>Remove Source Packages after Update</b>.</p>\n"
+#~ msgstr ""
+#~ "<p>Po zainstalowaniu poprawek, pobrane dane\n"
+#~ "nie będą już potrzebne. Aby je usunąć, należy zaznaczyć opcję\n"
+#~ "<b>Usuń pakiety źródłowe po aktualizacji</b>.</p>\n"
+
+#~ msgid "To install patches for your system in text mode, use the rug command."
+#~ msgstr "Aby zainstalować aktualizacje w trybie tekstowym, proszę użyć polecenia \"rug\"."

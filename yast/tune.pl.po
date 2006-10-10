@@ -12,15 +12,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tune\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-03-13 14:23+0100\n"
+"POT-Creation-Date: 2006-09-22 10:03+0200\n"
 "PO-Revision-Date: 2006-04-11 14:19+0200\n"
 "Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: KBabel 1.9.1\n"
 
 #. default is "/dev/fd0" floppy device (used when floppy detection is skipped as a fallback)
@@ -739,7 +738,8 @@ msgstr "Karta DVB-T"
 msgid "TV card"
 msgstr "Karta TV"
 
-#: hwinfo/src/classnames.ycp:310
+#. tree node string - generic device name
+#: hwinfo/src/classnames.ycp:310 hwinfo/src/routines.ycp:241
 msgid "Partition"
 msgstr "Partycja"
 
@@ -781,17 +781,12 @@ msgid ""
 "<P>The <B>Hardware Information</B> module displays the hardware\n"
 "details of your computer. Click any node for more information.</p>\n"
 msgstr ""
-"<P>Moduł <B>Informacje o urządzeniach</B> wyświetla szczegółowe informacje o "
-"urządzeniach w komputerze użytkownika.\n"
+"<P>Moduł <B>Informacje o urządzeniach</B> wyświetla szczegółowe informacje o urządzeniach w komputerze użytkownika.\n"
 "Proszę wybrać element, aby uzyskać dodatkowe informacje.</p>\n"
 
 #: hwinfo/src/hwinfo.ycp:276
-msgid ""
-"<P>You can save hardware information to a file. Click <B>Save to File</B> "
-"and enter the filename.</P>"
-msgstr ""
-"<P>Aby zapisać informacje o wybranym urządzeniu do pliku, proszę nacisnąć "
-"<B>Zapisz do pliku</B> i podać nazwę pliku.</P>"
+msgid "<P>You can save hardware information to a file. Click <B>Save to File</B> and enter the filename.</P>"
+msgstr "<P>Aby zapisać informacje o wybranym urządzeniu do pliku, proszę nacisnąć <B>Zapisz do pliku</B> i podać nazwę pliku.</P>"
 
 #. this is a menu entry
 #: hwinfo/src/hwinfo_proposal.ycp:53
@@ -810,12 +805,8 @@ msgstr "Sz&czegóły"
 
 #. help text
 #: hwinfo/src/inst_hwinfo.ycp:128
-msgid ""
-"<P><B>Details</B></P><P>The details of the selected hardware component are "
-"displayed here.</P>"
-msgstr ""
-"<P><B>Szczegóły</B></P><P>Wyświetlenie szczegółów związanych z wybranym "
-"urządzeniem.</P>"
+msgid "<P><B>Details</B></P><P>The details of the selected hardware component are displayed here.</P>"
+msgstr "<P><B>Szczegóły</B></P><P>Wyświetlenie szczegółów związanych z wybranym urządzeniem.</P>"
 
 #. heading text, %1 is component name (e.g. "USB UHCI Root Hub")
 #: hwinfo/src/inst_hwinfo.ycp:131
@@ -867,30 +858,22 @@ msgstr "Zapisz na &dyskietkę..."
 
 #. help text - part 1/3
 #: hwinfo/src/inst_hwinfo.ycp:235
-msgid ""
-"<P><B>Detected Hardware</B><BR>This table contains all hardware components "
-"detected in your system.</P>"
-msgstr ""
-"<P><B>Wykryte urządzenia</B><BR>Tabela zawiera wszystkie urządzenia wykryte "
-"w komputerze użytkownika.</P>"
+msgid "<P><B>Detected Hardware</B><BR>This table contains all hardware components detected in your system.</P>"
+msgstr "<P><B>Wykryte urządzenia</B><BR>Tabela zawiera wszystkie urządzenia wykryte w komputerze użytkownika.</P>"
 
 #. help text - part 2/3
 #: hwinfo/src/inst_hwinfo.ycp:237
-msgid ""
-"<P><B>Details</B><BR>Select a component and press <B>Details</B> to see a "
-"more detailed description of the component.</P>"
+msgid "<P><B>Details</B><BR>Select a component and press <B>Details</B> to see a more detailed description of the component.</P>"
 msgstr "<P><B>Szczegóły</B><BR>Proszę zaznaczyć komponent i nacisnąć <B>Szczegóły</B>, aby zobaczyć bardziej szczegółowy opis komponentu.</P>"
 
 #. help text - part 3/3
 #: hwinfo/src/inst_hwinfo.ycp:239
 msgid ""
 "<P><B>Save to File</B><BR>You can save\n"
-"    hardware information (<I>hwinfo</I> output) to a file or floppy disk. "
-"Select the target type in <B>Save to File</B>.</P>"
+"    hardware information (<I>hwinfo</I> output) to a file or floppy disk. Select the target type in <B>Save to File</B>.</P>"
 msgstr ""
 "<P><B>Zapisz do pliku</B><BR>\n"
-"Informacje o sprzęcie (format <I>hwinfo</I>) można zapisać do pliku albo na "
-"dyskietkę. Docelowe miejsce zapisu można wybrać w menu <B>Zapisz do pliku</B>.</P>"
+"Informacje o sprzęcie (format <I>hwinfo</I>) można zapisać do pliku albo na dyskietkę. Docelowe miejsce zapisu można wybrać w menu <B>Zapisz do pliku</B>.</P>"
 
 #. heading text
 #: hwinfo/src/inst_hwinfo.ycp:247
@@ -1017,50 +1000,28 @@ msgstr "<P><B>Konfiguracja identyfikatora PCI (PCI ID)<B></P>"
 
 #. PCI ID help text
 #: hwinfo/src/newid.ycp:340
-msgid ""
-"<P>It is possible to add a PCI ID to a device driver to extend its internal "
-"database of known supported devices.</P>"
-msgstr ""
-"<P>Możliwe jest dodanie identyfikatora PCI do sterownika w celu rozszerzenia jego "
-"wewnętrznej bazy obsługiwanych urządzeń.</P>"
+msgid "<P>It is possible to add a PCI ID to a device driver to extend its internal database of known supported devices.</P>"
+msgstr "<P>Możliwe jest dodanie identyfikatora PCI do sterownika w celu rozszerzenia jego wewnętrznej bazy obsługiwanych urządzeń.</P>"
 
 #. PCI ID help text
 #: hwinfo/src/newid.ycp:342
-msgid ""
-"<P>PCI ID numbers are entered and displayed as hexadecimal numbers. <b>SysFS "
-"Dir.</b> is the directory name in the /sys/bus/pci/drivers directory. If it "
-"is empty, the driver name is used as the directory name.</P>"
-msgstr ""
-"<P>Numery (identyfikatory) PCI ID są podawane i wyświetlane jako liczby szesnastkowe. "
-"<b>Katalog SysFS</b> jest nazwą podkatalogu w katalogu /sys/bus/pci/drivers. "
-"Jeśli jest ona pusta, jako nazwa podkatalogu będzie użyta nazwa sterownika.</P>"
+msgid "<P>PCI ID numbers are entered and displayed as hexadecimal numbers. <b>SysFS Dir.</b> is the directory name in the /sys/bus/pci/drivers directory. If it is empty, the driver name is used as the directory name.</P>"
+msgstr "<P>Numery (identyfikatory) PCI ID są podawane i wyświetlane jako liczby szesnastkowe. <b>Katalog SysFS</b> jest nazwą podkatalogu w katalogu /sys/bus/pci/drivers. Jeśli jest ona pusta, jako nazwa podkatalogu będzie użyta nazwa sterownika.</P>"
 
 #. PCI ID help text
 #: hwinfo/src/newid.ycp:344
-msgid ""
-"<P>If the driver is compiled into the kernel, leave the driver name empty "
-"and enter the SysFS directory name instead.</P>"
-msgstr ""
-"<P>Jeśli sterownik jest wkompilowany w jądro, należy pozostawić nazwę "
-"sterownika pustą i zamiast niej podać nazwę katalogu SysFS.</P>"
+msgid "<P>If the driver is compiled into the kernel, leave the driver name empty and enter the SysFS directory name instead.</P>"
+msgstr "<P>Jeśli sterownik jest wkompilowany w jądro, należy pozostawić nazwę sterownika pustą i zamiast niej podać nazwę katalogu SysFS.</P>"
 
 #. PCI ID help text
 #: hwinfo/src/newid.ycp:346
-msgid ""
-"<P>Use the buttons below the table to change the list of PCI IDs. Press "
-"<b>OK</b> to activate the settings.</P>"
-msgstr ""
-"<P>Proszę użyć przycisków pod tabelą aby zmienić listę identyfikatorów PCI ID. Aby "
-"aktywować ustawienia należy nacisnąć <b>OK</b>."
+msgid "<P>Use the buttons below the table to change the list of PCI IDs. Press <b>OK</b> to activate the settings.</P>"
+msgstr "<P>Proszę użyć przycisków pod tabelą aby zmienić listę identyfikatorów PCI ID. Aby aktywować ustawienia należy nacisnąć <b>OK</b>."
 
 #. PCI ID help text
 #: hwinfo/src/newid.ycp:348
-msgid ""
-"<P><B>Warning:</B> This is an expert configuration. Only continue if you "
-"know what you are doing.</P>"
-msgstr ""
-"<P><B>Uwaga:</B> To konfiguracja zaawansowana. Należy kontynuować tylko "
-"jeżeli dokładnie wiadomo, co się robi.</P>"
+msgid "<P><B>Warning:</B> This is an expert configuration. Only continue if you know what you are doing.</P>"
+msgstr "<P><B>Uwaga:</B> To konfiguracja zaawansowana. Należy kontynuować tylko jeżeli dokładnie wiadomo, co się robi.</P>"
 
 #. tree node string
 #: hwinfo/src/routines.ycp:25
@@ -1235,7 +1196,8 @@ msgid "Display"
 msgstr "Urządzenie wyświetlające"
 
 #. tree node string
-#: hwinfo/src/routines.ycp:111
+#. tree node string - generic device name
+#: hwinfo/src/routines.ycp:111 hwinfo/src/routines.ycp:243
 msgid "Floppy Disk"
 msgstr "Dyskietka"
 
@@ -1275,7 +1237,8 @@ msgid "Network Devices"
 msgstr "Urządzenia sieciowe"
 
 #. tree node string
-#: hwinfo/src/routines.ycp:133
+#. tree node string - generic device name
+#: hwinfo/src/routines.ycp:133 hwinfo/src/routines.ycp:237
 msgid "Network Interface"
 msgstr "Interfejs sieciowy"
 
@@ -1454,32 +1417,79 @@ msgstr "Bluetooth"
 msgid "DSL"
 msgstr "DSL"
 
+#. tree node string - generic device name
+#: hwinfo/src/routines.ycp:235
+#, fuzzy
+msgid "Ethernet Network Interface"
+msgstr "Interfejsy sieciowe jądra"
+
+#. tree node string - generic device name
+#: hwinfo/src/routines.ycp:239
+#, fuzzy
+msgid "Loopback Network Interface"
+msgstr "Interfejs sieciowy"
+
+#. tree node string - generic device name
+#: hwinfo/src/routines.ycp:245
+#, fuzzy
+msgid "Floppy Disk Controller"
+msgstr "Kontroler stacji dyskietek"
+
+#. tree node string - generic device name
+#: hwinfo/src/routines.ycp:247
+#, fuzzy
+msgid "PnP Unclassified Device"
+msgstr "Niesklasyfikowane urządzenie"
+
+#. tree node string - generic device name
+#: hwinfo/src/routines.ycp:249
+msgid "Main Memory"
+msgstr "Pamięć główna"
+
+#. tree node string - generic device name
+#: hwinfo/src/routines.ycp:251
+#, fuzzy
+msgid "UHCI Host Controller"
+msgstr "Kontroler PCI Hotplug"
+
+#. tree node string - generic device name
+#: hwinfo/src/routines.ycp:253
+#, fuzzy
+msgid "EHCI Host Controller"
+msgstr "Kontroler PCI Hotplug"
+
+#. tree node string - generic device name
+#: hwinfo/src/routines.ycp:255
+#, fuzzy
+msgid "OHCI Host Controller"
+msgstr "Kontroler PCI Hotplug"
+
 #. yes/no strings
-#: hwinfo/src/routines.ycp:354
+#: hwinfo/src/routines.ycp:378
 msgid "Yes"
 msgstr "Tak"
 
-#: hwinfo/src/routines.ycp:354
+#: hwinfo/src/routines.ycp:378
 msgid "No"
 msgstr "Nie"
 
 #. Linux kernel modules (drivers)
-#: hwinfo/src/routines.ycp:403
+#: hwinfo/src/routines.ycp:427
 msgid "Modules"
 msgstr "Moduły"
 
 #. window title
-#: hwinfo/src/routines.ycp:559
+#: hwinfo/src/routines.ycp:583
 msgid "Save hwinfo Output to File"
 msgstr "Zapis wyników hwinfo do pliku"
 
 #. progress window content
-#: hwinfo/src/routines.ycp:565
+#: hwinfo/src/routines.ycp:589
 msgid "Saving hardware information..."
 msgstr "Zapisywanie informacji o urządzeniach..."
 
 #. error popup message
-#: hwinfo/src/routines.ycp:572
+#: hwinfo/src/routines.ycp:596
 #, ycp-format
 msgid "Saving output to the file '%1' failed."
 msgstr "Zapis do pliku '%1' nie powiódł się."
@@ -1525,14 +1535,11 @@ msgstr "Włącz klawisze &SysRq"
 msgid ""
 "<p><b><big>Enable SysRq Keys</big></b><br>\n"
 "If you enable SysRq Keys, you will have some control over the system even\n"
-"if it crashes (such as during kernel debugging). For further information, "
-"see\n"
+"if it crashes (such as during kernel debugging). For further information, see\n"
 "<tt>/usr/src/linux/Documentation/sysrq.txt</tt>.</p>\n"
 msgstr ""
 "<p><b><big>Włącz klawisze SysRq</big></b><br>\n"
-"Ustawienie tej opcji pozwala na zachowanie pewnej kontroli nad systemem "
-"nawet w przypadku zawieszenia (np. podczas debuggowania jądra). Szczegółowe "
-"informacje znajdują się w pliku <tt>/usr/src/linux/Documentation/sysrq.txt</tt>.</p>\n"
+"Ustawienie tej opcji pozwala na zachowanie pewnej kontroli nad systemem nawet w przypadku zawieszenia (np. podczas debuggowania jądra). Szczegółowe informacje znajdują się w pliku <tt>/usr/src/linux/Documentation/sysrq.txt</tt>.</p>\n"
 
 #: hwinfo/src/system_settings_dialogs.ycp:131
 msgid "Serial Console"
@@ -1771,8 +1778,7 @@ msgstr ""
 msgid ""
 "<P>The table contains information about all attached IDE devices. \n"
 "<B>Current DMA Mode</B> shows the actual settings. <B>Required DMA\n"
-"Mode</B> shows settings that will be applied after <B>Finish</B> is pressed "
-"and\n"
+"Mode</B> shows settings that will be applied after <B>Finish</B> is pressed and\n"
 "after each boot.</P>"
 msgstr ""
 "<P>Tabela zawiera informacje o wszystkich dołączonych urządzeniach IDE. \n"
@@ -1784,8 +1790,7 @@ msgstr ""
 #: idedma/src/helps.ycp:67
 msgid ""
 "<P><B><BIG>Changing the IDE DMA Mode</BIG></B><BR>\n"
-"Select a device in the table then select the desired DMA mode from <B>DMA "
-"Mode</b>.\n"
+"Select a device in the table then select the desired DMA mode from <B>DMA Mode</b>.\n"
 "</P>\n"
 msgstr ""
 "<P><B><BIG>Zmień tryb IDE DMA</BIG></B><BR>\n"
@@ -1893,4 +1898,3 @@ msgstr ""
 #: idedma/src/ui.ycp:402
 msgid "Initializing ..."
 msgstr "Inicjalizacja ..."
-
