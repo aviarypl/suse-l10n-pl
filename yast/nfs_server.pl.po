@@ -1,23 +1,24 @@
-# translation of nfs_server.po to 
+# translation of nfs_server.po to
 # translation of nfs_server.po to polski
 # Polish message file for YaST2 (@memory@).
 # Copyright (C) 2003 SuSE Linux AG.
+#
 # Stanisław Małolepszy <smalolepszy@aviary.pl>, 2006.
 # Wojciech Kapusta <wojciech@aviary.pl>, 2006.
-# 
+# Maciek Walkowiak <walkow@ie.tu.koszalin.pl>, 2006.
 msgid ""
 msgstr ""
 "Project-Id-Version: nfs_server\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-09-22 10:14+0200\n"
-"PO-Revision-Date: 2006-04-03 23:36+0200\n"
-"Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
-"Language-Team:  <pl@li.org>\n"
+"PO-Revision-Date: 2006-10-26 16:48+0100\n"
+"Last-Translator: Stanisław Małolepszy <smalolepszy@aviary.pl>\n"
+"Language-Team: polski <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. not fatal - write other dirs.
 #: src/NfsServer.ycp:170
@@ -26,8 +27,8 @@ msgid ""
 "Unable to create a missing directory:\n"
 "%1"
 msgstr ""
-"Nie można utworzyć brakującego katalogu\n"
-"'%1'"
+"Nie można utworzyć brakującego katalogu:\n"
+"'%1"
 
 #. error popup message
 #: src/NfsServer.ycp:179
@@ -106,12 +107,14 @@ msgid "Required packages (%1) are not installed."
 msgstr "Wymagane pakiety nie są zainstalowane (%1)."
 
 #. error
-#: src/nfs_server.ycp:179 src/nfs_server.ycp:217
+#: src/nfs_server.ycp:179
+#: src/nfs_server.ycp:217
 msgid "No mount point specified."
 msgstr "Nie podano punktu montowania."
 
 #. error popup message
-#: src/nfs_server.ycp:185 src/ui.ycp:89
+#: src/nfs_server.ycp:185
+#: src/ui.ycp:89
 msgid ""
 "The exports table already\n"
 "contains this directory."
@@ -147,7 +150,7 @@ msgstr "Dodaj katalog do wyeksportowania"
 #. command line action help
 #: src/nfs_server.ycp:265
 msgid "Delete a directory from export"
-msgstr "Usuń eksportowany katalog"
+msgstr "Usuń katalog z listy eksportu"
 
 #. command line option help
 #: src/nfs_server.ycp:272
@@ -179,7 +182,7 @@ msgid ""
 msgstr ""
 "Nieprawidłowy wzorzec albo opcja.\n"
 "Określenie musi być krótsze niż 70 znaków \n"
-"i nie może zawierać odstępów (spacji).\n"
+"i nie może zawierać spacji.\n"
 
 #. error popup message
 #: src/routines.ycp:130
@@ -194,7 +197,7 @@ msgstr ""
 #: src/routines.ycp:162
 #, ycp-format
 msgid "Unknown option: '%1'"
-msgstr "Nieznana opcja: %1"
+msgstr "Nieznana opcja: '%1'"
 
 #. error popup message
 #: src/routines.ycp:169
@@ -210,6 +213,8 @@ msgid ""
 "for %1.\n"
 "Probably there is spurious whitespace in the configuration file."
 msgstr ""
+"W opcjach eksportu dla %1 wykryto niezamknięty nawias.\n"
+"Prawdopodobnie przyczyną jest zbędna spacja w pliku konfiguracyjnym."
 
 #. text entry label
 #: src/ui.ycp:62
@@ -229,9 +234,9 @@ msgid ""
 "with spaces in their names.\n"
 "Use the kernel-based server (%2) to do that."
 msgstr ""
-"Serwer NFS trybu użytkownika (%1) nie może eksportować\n"
+"Serwer NFS (%1) w trybie użytkownika nie może eksportować\n"
 "katalogów ze spacjami w nazwie.\n"
-"Żeby to zrobić, trzeba zastosować serwer działający na poziomie jądra (%2)."
+"Żeby to zrobić, trzeba wykorzystać serwer (%2) działający na poziomie jądra."
 
 #. the dir does not exist
 #: src/ui.ycp:104
@@ -239,7 +244,7 @@ msgid ""
 "The directory does not exist.\n"
 "Create it?"
 msgstr ""
-"Katalog nie istnieje.\n"
+"Nie ma takiego katalogu.\n"
 "Czy go utworzyć?"
 
 #. title in the file selection dialog
@@ -290,12 +295,12 @@ msgstr "Serwer NFS"
 #. radio button label
 #: src/ui.ycp:258
 msgid "&Start"
-msgstr "Włą&czony"
+msgstr "Włą&cz"
 
 #. radio button label
 #: src/ui.ycp:260
 msgid "&Do Not Start"
-msgstr "W&yłączony"
+msgstr "&Nie włączaj"
 
 #. frame label
 #: src/ui.ycp:264
@@ -315,8 +320,8 @@ msgid ""
 "mount this directory.</P>\n"
 msgstr ""
 "<P>Górne pole zawiera wszystkie katalogi, które zostaną wyeksportowane.\n"
-"Po wybraniu katalogu w dolnym polu zostaną pokazane komputery dozwolone do \n"
-"zamontowania tego katalogu.</P>\n"
+"Po wybraniu katalogu, w dolnym polu zostaną pokazane komputery, na których dozwolone będzie\n"
+"zamontowanie tego katalogu.</P>\n"
 
 #. Help, part 2 of 4
 #: src/ui.ycp:345
@@ -388,3 +393,4 @@ msgstr "U&suń"
 #: src/ui.ycp:395
 msgid "Directories to Export"
 msgstr "Katalogi do wyeksportowania"
+
