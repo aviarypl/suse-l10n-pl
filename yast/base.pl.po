@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: base\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-06 16:41+0200\n"
+"POT-Creation-Date: 2006-10-26 15:43+0200\n"
 "PO-Revision-Date: 2006-09-22 23:26+0100\n"
 "Last-Translator: Wadim Dziedzic <nikdo@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -233,6 +233,7 @@ msgstr "Docelowa nazwa pliku jest pusta ('xmlfile' opcja). Proszę użyć opcji 
 
 #. translators: fallback name for a module at command line
 #: library/commandline/src/CommandLine.ycp:794
+#: library/network/src/NetworkDevices.ycp:202
 msgid "unknown"
 msgstr "nieznany"
 
@@ -961,32 +962,32 @@ msgstr "Zapisz dziennik jako..."
 #. TRANSLATORS: popup question (with continue / cancel buttons)
 #. %1 is the filesystem path
 #: library/modules/FileUtils.ycp:257
-#, ycp-format
+#, fuzzy, ycp-format
 msgid ""
 "Although the path %1 exists, it is not a directory.\n"
-"Would you like to continue or cancel the operation?"
+"Continue or cancel the operation?\n"
 msgstr ""
 "Ścieżka %1 istnieje lecz nie wskazuje na katalog.\n"
 "Czy kontynuować operację?"
 
 #. TRANSLATORS: question popup (with yes / no buttons). A user entered non-existent path
 #. for a share, %1 is entered path
-#: library/modules/FileUtils.ycp:267
-#, ycp-format
+#: library/modules/FileUtils.ycp:269
+#, fuzzy, ycp-format
 msgid ""
 "The path %1 does not exist.\n"
-"Would you like to create it now?"
+"Create it now?\n"
 msgstr ""
-"Ścieżka %1 nie istnieje.\n"
-"Czy utworzyć ją teraz?"
+"Katalog nie %1 istnieje.\n"
+"Czy go utworzyć?\n"
 
 #. TRANSLATORS: popup question (with continue / cancel buttons)
 #. %1 is the name (path) of the directory
-#: library/modules/FileUtils.ycp:281
-#, ycp-format
+#: library/modules/FileUtils.ycp:285
+#, fuzzy, ycp-format
 msgid ""
 "Failed to create the directory %1.\n"
-"Would you like to continue or cancel the current operation?"
+"Continue or cancel the current operation?\n"
 msgstr ""
 "Tworzenie katalogu %1 nie powiodło się.\n"
 "Czy kontynuować operację?"
@@ -1731,6 +1732,67 @@ msgstr "&Szczegóły zapory sieciowej"
 msgid "Firewall is open"
 msgstr "Zapora sieciowa jest otwarta"
 
+#: library/network/src/NetworkDevices.ycp:191
+#, fuzzy
+msgid "network card"
+msgstr "Karta sieciowa"
+
+#: library/network/src/NetworkDevices.ycp:194
+#, fuzzy
+msgid "modem"
+msgstr "Modem"
+
+#: library/network/src/NetworkDevices.ycp:197
+msgid "ISDN"
+msgstr "ISDN"
+
+#: library/network/src/NetworkDevices.ycp:200
+msgid "DSL"
+msgstr "DSL"
+
+#: library/network/src/NetworkPopup.ycp:49
+msgid "DHCP address"
+msgstr "Adres DHCP"
+
+#. translators: table header - details about the network device
+#: library/network/src/NetworkPopup.ycp:58
+#, fuzzy
+msgid "Device Type"
+msgstr "Typ urzą&dzenia"
+
+#: library/network/src/NetworkPopup.ycp:58
+msgid "Device Name"
+msgstr "Nazwa urządzenia"
+
+#: library/network/src/NetworkPopup.ycp:58
+msgid "IP Address"
+msgstr "Adres IP"
+
+#: library/network/src/NetworkPopup.ycp:58
+msgid "Device ID"
+msgstr "Identyfikator urządzenia"
+
+#. label message
+#: library/network/src/NetworkPopup.ycp:98
+#: library/network/src/NetworkPopup.ycp:129
+msgid "Scanning for hosts on this LAN..."
+msgstr "Wyszukiwanie komputerów w sieci LAN..."
+
+#. selection box label
+#: library/network/src/NetworkPopup.ycp:114
+msgid "&NFS Servers"
+msgstr "Serwery &NFS"
+
+#. selection box label
+#: library/network/src/NetworkPopup.ycp:140
+msgid "Re&mote Hosts"
+msgstr "&Zdalne hosty"
+
+#. selection box label
+#: library/network/src/NetworkPopup.ycp:161
+msgid "&Exported Directories"
+msgstr "&Katalogi wyeksportowane"
+
 #. TRANSLATORS: pop-up question when reading the service configuration
 #: library/network/src/NetworkService.ycp:116
 msgid ""
@@ -1883,14 +1945,15 @@ msgstr "Zapisanie ustawień nie powiodło się"
 
 #. TRANSLATORS: description of the valid network definition
 #: library/network/src/SuSEFirewallExpertRules.ycp:113
+#, fuzzy
 msgid ""
-"Valid network definition can contain either the IP\n"
-"or IP/Netmask or IP/Netmask_Bits or 0/0 for all networks.\n"
+"A valid network definition can contain the IP,\n"
+"IP/Netmask, IP/Netmask_Bits, or 0/0 for all networks.\n"
 "\n"
 "Examples:\n"
 "IP: 192.168.0.1\n"
 "IP/Netmask: 192.168.0.0/255.255.255.0\n"
-"IP/Netmask_Bits: 192.168.0.0/24 or 192.168.0.1/32"
+"IP/Netmask_Bits: 192.168.0.0/24 or 192.168.0.1/32\n"
 msgstr ""
 "Poprawna definicja sieci może zawierać numery IP,\n"
 "IP/maskę, IP/bity maski lub 0/0 dla wszystkch sieci\n"
@@ -2126,25 +2189,21 @@ msgid "Unknown service '%1'"
 msgstr "Nieznana usługa '%1'"
 
 #: library/packages/src/PackageLock.ycp:33
+#, fuzzy
 msgid ""
 "Another process is accessing the package database.\n"
-"Package management will not work!"
+"Package management cannot be used now.\n"
 msgstr ""
 "Inny uruchomiony proces korzysta z bazy danych o pakietach.\n"
 "Zarządzanie oprogramowaniem nie może zostać uruchomione."
 
-#. Popup when initializing the package manager
-#: library/packages/src/PackageSystem.ycp:82
-msgid "Reading package information..."
-msgstr "Odczytywanie informacji o pakietach..."
-
 #. Error message, no packages sources found
-#: library/packages/src/PackageSystem.ycp:112
+#: library/packages/src/PackageSystem.ycp:96
 msgid "No package source defined."
 msgstr "Nie zdefiniowano źródła pakietów."
 
 #. popup heading, with rich text widget and Yes/No buttons
-#: library/packages/src/PackageSystem.ycp:146
+#: library/packages/src/PackageSystem.ycp:130
 msgid "Do you accept this license agreement?"
 msgid_plural "Do you accept these license agreements?"
 msgstr[0] "Czy akceptują Państwo tę umowę licencyjną?"
@@ -2152,12 +2211,12 @@ msgstr[1] "Czy akceptują Państwo te umowy licencyjne?"
 msgstr[2] "Czy te umowy licencyjne są akceptowane?"
 
 #. error report
-#: library/packages/src/PackageSystem.ycp:282
+#: library/packages/src/PackageSystem.ycp:266
 msgid "Installing required packages failed."
 msgstr "Instalacja wymaganych pakietów nie powiodła się."
 
 #. continue/cancel popup
-#: library/packages/src/PackageSystem.ycp:288
+#: library/packages/src/PackageSystem.ycp:272
 msgid ""
 "Installing required packages failed. If you continue\n"
 "without installing required packages,\n"
@@ -2168,12 +2227,12 @@ msgstr ""
 "program YaST może nie pracować poprawnie.\n"
 
 #. error report
-#: library/packages/src/PackageSystem.ycp:300
+#: library/packages/src/PackageSystem.ycp:284
 msgid "Cannot continue without installing required packages."
 msgstr "Nie można kontynuować bez instalacji wymaganych pakietów."
 
 #. continue/cancel popup
-#: library/packages/src/PackageSystem.ycp:306
+#: library/packages/src/PackageSystem.ycp:290
 msgid ""
 "If you continue without installing required \n"
 "packages, YaST may not work properly.\n"
@@ -2285,9 +2344,10 @@ msgstr "&Sterownik / moduł, który należy wczytać"
 
 #. describe valid MAC address
 #: library/types/src/Address.ycp:67
+#, fuzzy
 msgid ""
 "A valid MAC address consists of six pairs of hexadecimal\n"
-"digits separated by colon."
+"digits separated by colons."
 msgstr ""
 "Prawidłowy numer MAC składa się z sześciu par liczb \n"
 "szesnastkowych rozdzielonych dwukropkami."
@@ -2397,27 +2457,6 @@ msgstr "Czy na pewno usunąć zaznaczony wpis?"
 msgid "Really delete '%1'?"
 msgstr "Na pewno usunąć %1?"
 
-#. label message
-#: library/wizard/src/NetworkPopup.ycp:89
-#: library/wizard/src/NetworkPopup.ycp:120
-msgid "Scanning for hosts on this LAN..."
-msgstr "Wyszukiwanie komputerów w sieci LAN..."
-
-#. selection box label
-#: library/wizard/src/NetworkPopup.ycp:105
-msgid "&NFS Servers"
-msgstr "Serwery &NFS"
-
-#. selection box label
-#: library/wizard/src/NetworkPopup.ycp:131
-msgid "Re&mote Hosts"
-msgstr "&Zdalne hosty"
-
-#. selection box label
-#: library/wizard/src/NetworkPopup.ycp:152
-msgid "&Exported Directories"
-msgstr "&Katalogi wyeksportowane"
-
 #. button text
 #: library/wizard/src/Wizard.ycp:153 library/wizard/src/Wizard.ycp:319
 msgid "&Apply"
@@ -2509,6 +2548,16 @@ msgstr "Wyszukiwanie komputerów w sieci lokalnej..."
 #: remote/remoteinstall.ycp:29
 msgid "Select the Serial &Interface to Use:"
 msgstr "&Interfejs szeregowy do użycia:"
+
+#~ msgid ""
+#~ "The path %1 does not exist.\n"
+#~ "Would you like to create it now?"
+#~ msgstr ""
+#~ "Ścieżka %1 nie istnieje.\n"
+#~ "Czy utworzyć ją teraz?"
+
+#~ msgid "Reading package information..."
+#~ msgstr "Odczytywanie informacji o pakietach..."
 
 #~ msgid "Firewall is %1enabled%2"
 #~ msgstr "Zapora sieciowa jest %1włączona%2"

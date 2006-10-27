@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: packager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-06 16:42+0200\n"
+"POT-Creation-Date: 2006-10-26 15:48+0200\n"
 "PO-Revision-Date: 2006-10-22 21:02+0200\n"
 "Last-Translator: Maciek Walkowiak <walkow@ie.tu.koszalin.pl>\n"
 "Language-Team: polski <pl@li.org>\n"
@@ -24,146 +24,574 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#. Scanning network for SLP servers
-#. translators: popup busy message
-#: src/modules/SourceManager.ycp:120
-msgid "Scanning network..."
-msgstr "Skanowanie sieci..."
+#: doc/display_driver_popup.ycp:75
+msgid "Add-On Product Installation"
+msgstr "Instalacja produktów dodatkowych"
 
-#. error popup
-#: src/modules/SourceManager.ycp:132
+#: doc/display_driver_popup.ycp:75
+msgid "Adding software which fits to your system."
+msgstr "Dodawanie oprogramowania pasującego do systemu."
+
+#: doc/display_driver_popup.ycp:94
+msgid "No package has been selected for installation."
+msgstr "Nie wybrano żadnych pakietów do zainstalowania."
+
+#: doc/display_driver_popup.ycp:100
+#, ycp-format
 msgid ""
-"No SLP catalogs have been found on your network.\n"
-"This could be caused by a running SuSEfirewall2,\n"
-"which probably blocks the network scanning."
+"Following packages will be installed:\n"
+"\n"
+"%1\n"
+"\n"
+"Continue installation ?"
 msgstr ""
-"W sieci lokalnej nie znaleziono serwera SLP.\n"
-"Może to być spowodowane przez działającą zaporę sieciową\n"
-"SuSEfirewall2, która prawdopodobnie blokuje skanowanie sieci."
+"Zostaną zainstalowane następujące pakiety:\n"
+"\n"
+"%1\n"
+"\n"
+"Kontynuować instalację?"
 
+#. module description
+#: src/clients/checkmedia.ycp:36
+msgid "Check CD or DVD media integrity"
+msgstr "Sprawdź integralność nośnika CD lub DVD"
+
+#. error report
 #. error popup
-#: src/modules/SourceManager.ycp:140
-msgid "No SLP catalogs have been found on your network."
-msgstr "W sieci lokalnej nie znaleziono serwera SLP."
+#: src/clients/dirinstall.ycp:58 src/clients/inst_custom_packages.ycp:39
+msgid "Could not read package information."
+msgstr "Nie udało się odczytać informacji o pakietach."
 
-#. translators: popup heading
-#: src/modules/SourceManager.ycp:158
-msgid "Choose SLP Catalog"
-msgstr "Proszę wybrać katalog SLP"
+#. message popup, %1 is product name
+#: src/clients/dirinstall.ycp:69 src/modules/Packages.ycp:928
+#, ycp-format
+msgid "Insert %1 CD 1"
+msgstr "Proszę umieścić w napędzie płytę CD 1 systemu %1"
 
-#. table header
-#: src/modules/SourceManager.ycp:164
+#. screen title for installation into directory options
+#: src/clients/dirinstall_options.ycp:19
+msgid "Directory Install Options"
+msgstr "Opcje instalacji do katalogu"
+
+#. text entry
+#: src/clients/dirinstall_options.ycp:28
+msgid "&Root Directory (not \"/\"):"
+msgstr "Katalog &główny (nie \"/\"):"
+
+#. check box
+#: src/clients/dirinstall_options.ycp:30
+msgid "Run &YaST and SuSEconfig on First Boot"
+msgstr "Uruchom YaST i SuSEconfig przy pierwszym uruchomieniu"
+
+#. check box
+#: src/clients/dirinstall_options.ycp:32
+msgid "Create Ima&ge"
+msgstr "Utwórz &obraz"
+
+#. text entry
+#: src/clients/dirinstall_options.ycp:34
+msgid "Ima&ge Name:"
+msgstr "&Nazwa obrazu:"
+
+#. text entry
+#: src/clients/dirinstall_options.ycp:38
+msgid "&Image Directory:"
+msgstr "&Katalog obrazu:"
+
+#. push button
+#: src/clients/dirinstall_options.ycp:42
+msgid "Select &Directory"
+msgstr "Wybierz &katalog"
+
+#. help text for dirinstall options 1/2
+#: src/clients/dirinstall_options.ycp:50
+msgid ""
+"<p>Choose a directory to which to install. Depending on the software selection, make sure\n"
+"enough space is available.</p>\n"
+msgstr "<p>W tym miejscu należy wybrać katalog docelowy instalacji. W zależności od wybranego oprogramowania, należy sprawdzić czy na dysku jest wystarczająca ilość wolnego miejsca.</p>\n"
+
+#. help text for dirinstall options 2/2
+#: src/clients/dirinstall_options.ycp:54
+msgid ""
+"<p>Additionally, you can create an archive image of the directory using tar. To create an \n"
+"image, specify the name and the location in the respective fields.</p>\n"
+msgstr ""
+"<p>Dodatkowo, za pomocą programu tar, można utworzyć archiwalny obraz katalogu. Aby\n"
+"utworzyć obraz, należy podać w odpowiednich polach nazwę i położenie pliku obrazu.</p>\n"
+
+#. directory selection header
+#: src/clients/dirinstall_options.ycp:89
+msgid "Select Directory"
+msgstr "Proszę wybrać katalog"
+
+#. popup message
+#: src/clients/dirinstall_options.ycp:107
+msgid "Specify a root directory. This does not mean /"
+msgstr "Proszę podać katalog główny. (Nie /)"
+
+#. this is a heading
+#: src/clients/dirinstall_options_proposal.ycp:63
+msgid "Options"
+msgstr "Opcje"
+
+#. this is a menu entry
+#: src/clients/dirinstall_options_proposal.ycp:65
+msgid "&Options"
+msgstr "&Opcje"
+
+#. dialog caption
+#: src/clients/do_not_show_again_editor.ycp:59
+msgid "Editor for 'Do Not Show Again'"
+msgstr "Edytor dla 'Nie pokazuj ponownie'"
+
+#. help text
+#: src/clients/do_not_show_again_editor.ycp:62
+msgid ""
+"<p>You can remove entries by selecting them\n"
+"in the table and clicking the <b>Delete</b> button.\n"
+"The entry will be removed immediately from the current configuration.</p>"
+msgstr ""
+"<p>Zaznaczone wpisy można usunąć za pomocą przycisku <b>Usuń</b>.\n"
+"Wpisy zostaną natychmiast usunięte z bieżącej konfiguracji.</p>"
+
+#: src/clients/do_not_show_again_editor.ycp:70
 msgid "Type"
 msgstr "Typ"
 
-#. table header
-#: src/modules/SourceManager.ycp:166
-msgid "URL"
-msgstr "URL"
+#: src/clients/do_not_show_again_editor.ycp:71
+msgid "Popup Ident."
+msgstr "Ident. okna"
 
-#. SourceManager read dialog caption
-#: src/modules/SourceManager.ycp:213
-msgid "Initializing Available Catalogs"
-msgstr "Inicjowanie dostępnych katalogów"
+#: src/clients/do_not_show_again_editor.ycp:72
+msgid "Additional Info"
+msgstr "Informacje dodatkowe"
 
-#. Progress stage 1/3
-#: src/modules/SourceManager.ycp:221
-msgid "Read configured catalogs"
-msgstr "Odczytywanie skonfigurowanych katalogów"
+#. FIXME: Add filter
+#. `PushButton(`id(`filter), _("&Filter...")),
+#. `HSpacing(2),
+#: src/clients/do_not_show_again_editor.ycp:80
+msgid "&Delete"
+msgstr "&Usuń"
 
-#. Progress stage 2/3
-#: src/modules/SourceManager.ycp:223
-msgid "Detect available catalogs via SLP"
-msgstr "Wykrywanie dostępnych katalogów poprzez SLP"
-
-#. Progress step 1/3
-#: src/modules/SourceManager.ycp:226
-msgid "Reading configured catalogs..."
-msgstr "Oczytywanie skonfigurowanych katalogów..."
-
-#. Progress step 2/3
-#: src/modules/SourceManager.ycp:228
-msgid "Detecting available catalogs..."
-msgstr "Wykrywanie dostępnych katalogów..."
-
-#. Progress finished
-#: src/modules/SourceManager.ycp:230 src/modules/SourceManager.ycp:317
-msgid "Finished"
-msgstr "Zakończono"
-
-#. Error message
-#: src/modules/SourceManager.ycp:241
-msgid "Cannot read catalogs."
-msgstr "Nie można odczytać katalogów."
-
-#. Error message
-#: src/modules/SourceManager.ycp:249
-msgid "Cannot detect availabe catalogs."
-msgstr "Nie można wykryć dostępnych katalogów."
-
-#. popup message header
-#: src/modules/SourceManager.ycp:275
+#. explanation text for GNOME
+#: src/clients/inst_desktop.ycp:56
 msgid ""
-"Unable to save changes to the catalog\n"
-"                    repository.\n"
-msgstr "Nie można zapisać zmian w repozytorium katalogów.\n"
-
-#. popup message, after message header, header of details
-#: src/modules/SourceManager.ycp:279 src/modules/SourceManager.ycp:564
-msgid "Details:"
-msgstr "Szczegóły:"
-
-#. end of popup message, question
-#: src/modules/SourceManager.ycp:281 src/modules/SourceManager.ycp:566
-msgid "Try again?"
-msgstr "Czy spróbować ponownie?"
-
-#. SourceManager read dialog caption
-#: src/modules/SourceManager.ycp:304
-msgid "Saving Catalog Configuration"
-msgstr "Zapisywanie konfiguracji katalogów"
-
-#. Progress stage 1/1
-#: src/modules/SourceManager.ycp:311
-msgid "Write catalog settings"
-msgstr "Zapisywanie ustawień katalogów"
-
-#. Progress step 1/1
-#: src/modules/SourceManager.ycp:314
-msgid "Writing the settings..."
-msgstr "Zapisywanie ustawień..."
-
-#. Popup::NoHeadline(),
-#. popup headline
-#: src/modules/SourceManager.ycp:386
-msgid "Reading Media Description Failed"
-msgstr "Nie powiódł się odczyt opisu nośnika."
-
-#. popup message, %1 is filename
-#: src/modules/SourceManager.ycp:389
-#, ycp-format
-msgid ""
-"Cannot read media description for %1.\n"
-"                            Packages from this media cannot be installed."
+"GNOME is a powerful and intuitive desktop\n"
+"environment that uses Evolution as its mailer,\n"
+"Firefox as its browser, and Nautilus as its\n"
+"file manager."
 msgstr ""
-"Nie można odczytać opisu nośnika dla %1.\n"
-"                            Pakiety z tego nośnika nie mogą zostać zainstalowane."
+"GNOME to wydajne i proste w obsłudze środowisko\n"
+"graficzne, z programem Evolution jako klientem poczty,\n"
+"Firefoksem jako przeglądarką i Nautilusem jako\n"
+"menedżerem plików."
 
-#: src/modules/SourceManager.ycp:548
-msgid "Adding catalog..."
-msgstr "Dodawanie katalogu..."
+#. explanation text for KDE
+#: src/clients/inst_desktop.ycp:63
+msgid ""
+"KDE is a powerful and intuitive desktop\n"
+"environment that uses Kontact as its mailer,\n"
+"Konqueror as its file manager, and offers\n"
+"both Firefox and Konqueror as its Web browser."
+msgstr ""
+"KDE to wydajne i proste w obsłudze środowisko\n"
+"graficzne, z programem Kontact jako\n"
+"klientem poczty oraz Konquerorem lub \n"
+"Firefoksem jako przeglądarką."
 
-#: src/modules/SourceManager.ycp:561
+#. help text 1/3
+#: src/clients/inst_desktop.ycp:69
+msgid ""
+"<p>Both <b>KDE</b> and <b>GNOME</b> are powerful and intuitive\n"
+"desktop environments. They combine ease of use\n"
+"and attractive graphical interfaces with their\n"
+"own sets of perfectly integrated applications.</p>"
+msgstr ""
+"<p>Zarówno <b>KDE</b>, jak i <b>GNOME</b> to wydajne\n"
+"i intuicyjne środowiska graficzne. Łączą one\n"
+"prostotę obsługi i atrakcyjne interfejsy użytkownika \n"
+"z własnymi zbiorami doskonale zintegrowanych aplikacji.</p>"
+
+#. help text 2/3
+#: src/clients/inst_desktop.ycp:75
+msgid ""
+"<p>Choosing the default <b>GNOME</b> or <b>KDE</b> desktop\n"
+"environment installs a broad set of the\n"
+"most important desktop applications on your\n"
+"system.</p>"
+msgstr ""
+"<p>Wybranie domyślnego środowiska <b>GNOME</b> lub <b>KDE</b>\n"
+"spowoduje zainstalowanie w systemie bogatego zestawu\n"
+"najważniejszych aplikacji.\n"
+"</p>"
+
+#. help text 3/3
+#: src/clients/inst_desktop.ycp:81
+msgid ""
+"<p>Choose <b>Other</b> then press <b>Select</b> to select\n"
+"an alternative, such as a text-only system or a minimal graphical\n"
+"system with a basic window manager.</p>"
+msgstr "<p>Aby zainstalować alternatywne środowiska (system działający w trybie tekstowym albo minimalne środowisko graficzne), należy nacisnąć <b>Inne</b>, a następnie <b>Wybierz</b>.</p>"
+
+#. radio button
+#: src/clients/inst_desktop.ycp:88
+msgid "&KDE"
+msgstr "&KDE"
+
+#. radio button
+#: src/clients/inst_desktop.ycp:103
+msgid "&GNOME"
+msgstr "&GNOME"
+
+#. radio button
+#: src/clients/inst_desktop.ycp:129
+msgid "&Other"
+msgstr "&Inne"
+
+#. push button
+#: src/clients/inst_desktop.ycp:135
+msgid "&Select..."
+msgstr "Wy&bierz..."
+
+#. frame
+#: src/clients/inst_desktop.ycp:146
+msgid "Alternate Desktops"
+msgstr "Środowiska alternatywne"
+
+#. radio button
+#: src/clients/inst_desktop.ycp:150
+msgid "Minimal &Graphical System"
+msgstr "Minimalne środowisko &graficzne"
+
+#. radio button
+#: src/clients/inst_desktop.ycp:153
+msgid "&Text Mode"
+msgstr "&Tryb tekstowy"
+
+#. dialog caption
+#: src/clients/inst_desktop.ycp:163
+msgid "Desktop Selection"
+msgstr "Wybór środowiska graficznego"
+
+#. popup message
+#: src/clients/inst_desktop.ycp:195
+msgid ""
+"No desktop was selected. Select the\n"
+"desktop to install."
+msgstr "Nie wybrano środowiska graficznego. Proszę wybrać środowisko do zainstalowania."
+
+#. progress stages
+#: src/clients/inst_dirinstall_finish.ycp:31
+msgid "Finalize system configuration"
+msgstr "Kończenie konfiguracji systemu"
+
+#. progress stages
+#: src/clients/inst_dirinstall_finish.ycp:33
+msgid "Prepare system for initial boot"
+msgstr "Przygotowywanie systemu do pierwszego uruchomienia"
+
+#. progress stage
+#: src/clients/inst_dirinstall_finish.ycp:40
+msgid "Create image file"
+msgstr "Tworzenie pliku obrazu"
+
+#. help text
+#: src/clients/inst_dirinstall_finish.ycp:48
+msgid "<p>Please wait while the system is being configured.</p>"
+msgstr "<p>Proszę czekać, aż system zostanie skonfigurowany.</p>"
+
+#. Headline for last dialog of base installation: Install LILO etc.
+#: src/clients/inst_dirinstall_finish.ycp:52
+msgid "Finishing Directory Installation"
+msgstr "Kończenie instalacji do katalogu"
+
+#. progress title
+#: src/clients/inst_dirinstall_finish.ycp:62
+msgid "Configuring installed system"
+msgstr "Konfigurowanie zainstalowanego systemu"
+
+#. progress title
+#: src/clients/inst_dirinstall_finish.ycp:125
+msgid "Building directory image..."
+msgstr "Tworzenie obrazu katalogu..."
+
+#. part of item in summary
+#: src/clients/inst_media.ycp:30 src/clients/inst_media.ycp:31
+#: src/modules/SourceManager.ycp:605 src/modules/SourceManager.ycp:663
+msgid "Unknown"
+msgstr "Nieznany"
+
+#. screen title
+#. this is a heading
+#: src/clients/inst_media.ycp:37 src/clients/media_proposal.ycp:86
+msgid "Installation Media"
+msgstr "Nośniki instalacyjne"
+
+#. label for showing installation sources
+#: src/clients/inst_media.ycp:40 src/clients/inst_mediacopy.ycp:46
+#, fuzzy
+msgid "Registered Catalogs"
+msgstr "Skonfigurowane katalogi"
+
+#. help text for dialog to show installation sources
+#: src/clients/inst_media.ycp:43
+msgid ""
+"<p>All registered installation sources are shown here.\n"
+"</p>\n"
+msgstr ""
+"<p>Wszystkie zarejestrowane źródła instalacji są wyświetlone w tym miejscu.\n"
+"</p>\n"
+
+#. table header
+#: src/clients/inst_media.ycp:56 src/clients/inst_mediacopy.ycp:56
+#: src/clients/inst_source.ycp:272
+msgid "Name"
+msgstr "Nazwa"
+
+#. table header
+#: src/clients/inst_media.ycp:58 src/clients/inst_mediacopy.ycp:57
+msgid "Version"
+msgstr "Wersja"
+
+#. dialog heading
+#: src/clients/inst_mediacopy.ycp:39
+msgid "Copy Installation Media"
+msgstr "Kopiowanie nośnika instalacyjnego"
+
+#. help text
+#: src/clients/inst_mediacopy.ycp:41
+msgid ""
+"<p>The installation CDs will be copied into the system\n"
+"to create an installation source that can be used to install\n"
+"other systems.</p>\n"
+msgstr ""
+"<p>Instalacyjne płyty CD zostaną skopiowane do systemu,\n"
+"w celu utworzenia źródła instalacji, które może zostać wykorzystane\n"
+"do instalacji innych systemów.</p>\n"
+
+#. feedback popup 1/2
+#: src/clients/inst_mediacopy.ycp:108
+msgid "Copying CD contents to a local directory..."
+msgstr "Kopiowanie zawartości płyt CD do katalogu lokalnego..."
+
+#. feedback popup 2/2
+#: src/clients/inst_mediacopy.ycp:110
+msgid "Please wait..."
+msgstr "Proszę czekać..."
+
+#: src/clients/inst_packages.ycp:70
+msgid ""
+"<p>\n"
+"\t\t This dialog allows you to define this system's tasks and what software to install.\n"
+"\t\t Available tasks and software for this system are shown by category in the left\n"
+"\t\t column.  To view a description for an item, select it in the list.\n"
+"\t\t </p>"
+msgstr ""
+"<p>\n"
+"\t\t To okno pozwala zdefiniować zadania systemu i oprogramowanie do zainstalowania.\n"
+"\t\t Dostępne zadania i oprogramowanie wyświetlone są w kategoriach w lewej kolumnie\n"
+"\t\t Aby zobaczyć opis elementu, należy go zaznaczyć.\n"
+"\t\t </p>"
+
+#: src/clients/inst_packages.ycp:75
+msgid ""
+"<p>\n"
+"\t\t Change the status of an item by clicking its status icon\n"
+"\t\t or right-click any icon for a context menu.\n"
+"\t\t With the context menu, you can also change the status of all items.\n"
+"\t\t </p>"
+msgstr ""
+"<p>\n"
+"\t\t Status elementu można zmienić klikając na jego ikonie\n"
+"\t\t lub za pomocą menu kontekstowego (prawy przycisk myszy).\n"
+"\t\t Za pomocą menu kontektowego można zmienić status\n"
+"\t\t wszystkich elementów.\n"
+"\t\t </p>"
+
+#: src/clients/inst_packages.ycp:80
+msgid ""
+"<p>\n"
+"\t\t <b>Details</b> opens the detailed software package selection\n"
+"\t\t where you can view and select individual software packages.\n"
+"\t\t </p>"
+msgstr ""
+"<p>\n"
+"\t\t <b>Szczegóły</b> - okno szczegółowego wyboru pakietów, gdzie można\n"
+"\t\t pracować z pojedynczymi pakietami.\n"
+"\t\t </p>"
+
+#: src/clients/inst_packages.ycp:84
+msgid ""
+"<p>\n"
+"\t\t The disk usage display in the lower right corner shows the remaining disk space\n"
+"\t\t after all requested changes will have been performed.\n"
+"\t\t Hard disk partitions that are full or nearly full can degrade\n"
+"\t\t system performance and in some cases even cause serious problems.\n"
+"\t\t The system needs some available disk space to run properly.\n"
+"\t\t </p>"
+msgstr ""
+"<p>\n"
+"\t\tPole Użycie dysku wyświetla ilość wolnej przestrzeni na dysku po wykonaniu wszystkich żadanych operacji.\n"
+"\t\tPartycje prawie lub całkowicie zapełnione mogą spowodować spadek wydajności systemu oraz w pewnych \t\tprzypadkach nawet poważne problemy. Do poprawnego funkcjonowania systemu wymagana jest pewna ilość \t\twolnego miejsca na dyskach.\n"
+"</p>"
+
+#. Dialog title
+#. Hint for German translation: "Softwareauswahl und Einsatzzweck des Systems"
+#: src/clients/inst_packages.ycp:96
+msgid "Software Selection and System Tasks"
+msgstr "Wybór oprogramowania i zadania systemu"
+
+#. error report
+#: src/clients/inst_rpmcopy.ycp:168
+msgid "Error occurred while switching the service pack catalog."
+msgstr "Podczas przełączania katalogu Service Pack wystąpił błąd."
+
+#. error report
+#: src/clients/inst_rpmcopy.ycp:189
+msgid ""
+"Error occurred while switching the cached \n"
+"source back to CD."
+msgstr ""
+"Napotkano błąd podczas przełączania\n"
+"buforowanego źródła na CD."
+
+#. error report
+#: src/clients/inst_rpmcopy.ycp:282
 #, ycp-format
 msgid ""
-"Unable to create catalog\n"
+"Error occurred while creating directory %1:\n"
+"%2"
+msgstr ""
+"Napotkano błąd podczas tworzenia katalogu %1:\n"
+"%2"
+
+#. error report
+#: src/clients/inst_rpmcopy.ycp:296
+#, ycp-format
+msgid ""
+"Error occurred while getting temporary directory.\n"
+"%1"
+msgstr ""
+"Napotkano błąd podczas dostępu do katalogu tymczasowego.\n"
+"%1"
+
+#. error report
+#: src/clients/inst_rpmcopy.ycp:322
+#, ycp-format
+msgid "Error occurred while getting temporary directory. %1"
+msgstr "Napotkano błąd podczas dostępu do katalogu tymczasowego. %1"
+
+#. error report
+#: src/clients/inst_rpmcopy.ycp:416
+msgid "Error occurred while getting the directory with updated packages"
+msgstr "Napotkano błąd podczas dostępu do katalogu z zaktualizowanymi pakietami"
+
+#. 3. Copy <cached_source_datadir>/<arch>/<package> from cached source to Installation::destdir+"/{var?}/tmp"
+#. translators: this is an information popup, %1 is a number
+#: src/clients/inst_rpmcopy.ycp:423
+#, ycp-format
+msgid "Copying files from CD %1 to disk..."
+msgstr "Kopiowanie plików z CD %1 na dysk..."
+
+#. error report
+#: src/clients/inst_rpmcopy.ycp:439
+#, ycp-format
+msgid ""
+"Error occurred while copying packages\n"
+"from the source CD to the disk"
+msgstr ""
+"Napotkano błąd przy kopiowaniu pakietów\n"
+"ze źródłowego dysku CD na dysk twardy"
+
+#. error report
+#: src/clients/inst_rpmcopy.ycp:463
+#, ycp-format
+msgid ""
+"Error occurred while copying packages\n"
+"from the source CD to the disk cache"
+msgstr ""
+"Napotkano błąd przy kopiowaniu pakietów\n"
+"ze źródłowego dysku CD do bufora dyskowego"
+
+#. error report
+#: src/clients/inst_rpmcopy.ycp:492
+msgid "Switching to disk cache failed."
+msgstr "Napotkano błąd podczas przełączania na bufor dyskowy."
+
+#. error report, %1 is number
+#: src/clients/inst_rpmcopy.ycp:549
+#, ycp-format
+msgid "Failed to select %1 packages for installation."
+msgstr "Nie udało się zaznaczyć %1 pakietów do instalacji."
+
+#. continue-cancel popup
+#: src/clients/inst_rpmcopy.ycp:788
+msgid "Initializing the target directory failed"
+msgstr "Błąd podczas inicjalizacji katalogu docelowego"
+
+#. dialog caption
+#: src/clients/inst_source.ycp:41 src/clients/sw_single.ycp:36
+#, fuzzy
+msgid "Initializing..."
+msgstr "Inicjalizacja katalogów..."
+
+#. corresponds to the "Enable/Disable" button
+#: src/clients/inst_source.ycp:77 src/clients/inst_source.ycp:78
+#: src/clients/inst_source.ycp:483 src/clients/inst_source.ycp:506
+#: src/modules/SourceManager.ycp:602
+msgid "On"
+msgstr "Włączone"
+
+#. corresponds to the "Enable/Disable" button
+#: src/clients/inst_source.ycp:77 src/clients/inst_source.ycp:78
+#: src/clients/inst_source.ycp:483 src/clients/inst_source.ycp:506
+#: src/modules/SourceManager.ycp:604
+msgid "Off"
+msgstr "Wyłączone"
+
+#. translators: unknown name for a given source
+#. translators: name of a source if no other idenfication found
+#: src/clients/inst_source.ycp:80 src/modules/SourceManager.ycp:583
+msgid "unknown"
+msgstr "nieznany"
+
+#. message part 1
+#: src/clients/inst_source.ycp:118
+#, fuzzy, ycp-format
+msgid ""
+"Unable to create installation source\n"
 "from URL '%1'."
 msgstr ""
 "Nie można utworzyć katalogu\n"
 "z adresu URL: '%1'."
 
+#. FIXME Pkg::LastErrorId always returns 'ok'
+#. string err = Pkg::LastErrorId();
+#. if ( err != "ok" ) {
+#. if ( err == "instsrc_duplicate" )
+#. // message part 2 alt. 1
+#. _msg2 = _("A catalog for this product already exists.");
+#. else
+#. }
+#.
+#. message part 2 alt. 2 followed by description
+#. popup message part 2 followed by other info
+#. popup message, after message header, header of details
+#: src/clients/inst_source.ycp:130 src/clients/inst_source.ycp:399
+#: src/modules/SourceManager.ycp:197 src/modules/SourceManager.ycp:482
+msgid "Details:"
+msgstr "Szczegóły:"
+
+#. message part 3
+#. popup message part 3
+#. end of popup message, question
+#: src/clients/inst_source.ycp:132 src/clients/inst_source.ycp:402
+#: src/modules/SourceManager.ycp:199 src/modules/SourceManager.ycp:484
+msgid "Try again?"
+msgstr "Czy spróbować ponownie?"
+
 #. continue-back popup
-#: src/modules/SourceManager.ycp:584
+#: src/clients/inst_source.ycp:150 src/modules/SourceManager.ycp:502
 msgid ""
 "There is no product information available at the given location.\n"
 "If you expected to address a product, return back and enter\n"
@@ -177,72 +605,2258 @@ msgstr ""
 "Proszę kontynuować, aby dodać pakiety rpm umieszczone\n"
 "w podanym miejscu do listy wyboru pakietów."
 
+#: src/clients/inst_source.ycp:221
+msgid "Synchronizing with ZENworks"
+msgstr ""
+
+#. yes/no popup
+#: src/clients/inst_source.ycp:229
+msgid ""
+"Source synchronization with ZMD failed.\n"
+"Save changes anyway?"
+msgstr ""
+"Synchronizacja źródeł z ZMD zakończona\n"
+"niepowodzeniem.\n"
+"Zapisać zmiany mimo wszystko?"
+
+#. pusg button
+#: src/clients/inst_source.ycp:255
+msgid "&Replace..."
+msgstr "&Zamień..."
+
+#. pusg button
+#: src/clients/inst_source.ycp:257
+msgid "Re&fresh Now..."
+msgstr "&Odśwież..."
+
+#. pusg button
+#: src/clients/inst_source.ycp:259
+msgid "Enab&le or Disable"
+msgstr "&Włącz albo wyłącz"
+
+#. push button
+#: src/clients/inst_source.ycp:261
+msgid "Refre&sh On or Off"
+msgstr "Odś&wieżanie wł./wył."
+
+#. `opt( `keepSorting ),
+#. table header
+#. progress bar label
+#: src/clients/inst_source.ycp:268 src/modules/PackageCallbacks.ycp:1362
+#: src/modules/PackageCallbacks.ycp:1446 src/modules/PackageCallbacks.ycp:1521
+msgid "Status"
+msgstr "Status"
+
+#. table header
+#: src/clients/inst_source.ycp:270
+msgid "Refresh"
+msgstr "Odświeżanie"
+
+#. table header
+#: src/clients/inst_source.ycp:274
+msgid "URL"
+msgstr "URL"
+
+#. Checkbox label
+#: src/clients/inst_source.ycp:281
+msgid "Synchronize Changes with &ZENworks"
+msgstr ""
+
+#. menu button label
+#: src/clients/inst_source.ycp:292
+msgid "Source Settings"
+msgstr "Ustawienia źródeł"
+
+#. dialog caption
+#: src/clients/inst_source.ycp:302
+#, fuzzy
+msgid "Configured Software Catalogs"
+msgstr "Skonfigurowane katalogi"
+
+#. string title = _("Media Containing the Software Catalog");
+#. help
+#: src/clients/inst_source.ycp:306
+msgid ""
+"<p>\n"
+"In this dialog, manage configured software catalogs.</p>"
+msgstr "<p>W tym oknie można zarządzać katalogami oprogramowania.</p>"
+
+#: src/clients/inst_source.ycp:309
+msgid ""
+"<p>\n"
+"<b>Adding a New Catalog</b><br>\n"
+"To add a new catalog, use <b>Add</b> and specify the software catalog.\n"
+"</p>"
+msgstr ""
+"<p>\n"
+"<b>Dodawanie nowego katalogu</b><br>\n"
+"Aby dodać nowy katalog, należy nacisnąć przycisk <b>Dodaj</b> i podać szczegóły katalogu oprogramowania.\n"
+"</p>"
+
+#. help, continued
+#: src/clients/inst_source.ycp:315
+msgid ""
+"<p>\n"
+"To install packages from <b>CD</b>,\n"
+"have the &product; CD set or the DVD available.\n"
+"</p>\n"
+msgstr ""
+"<p>\n"
+"Aby zainstalować pakiety z dysku <b>CD</b>,\n"
+"potrzebny jest zestaw płyt CD/DVD &product;.\n"
+"</p>\n"
+
+#. help, continued
+#: src/clients/inst_source.ycp:322
+msgid ""
+"<p>\n"
+"The &product; CDs can be copied to the <b>hard disk</b>.\n"
+"Then use that as the installation source.\n"
+"Insert the path name where the first\n"
+"CD is located, for example, /data1/<b>CD1</b>.\n"
+"Only the base path is required if all CDs are copied\n"
+"into one directory.\n"
+"</p>\n"
+msgstr ""
+"<p>\n"
+"Płyty CD &product; można skopiować na \n"
+"<b>dysk twardy</b>, a potem użyć kopii jako\n"
+"źródła instalacji. W takim przypadku, należy podać ścieżkę\n"
+"do miejsca gdzie znajduje się pierwsza płyta CD, np.\n"
+"/data1/<b>CD1</b>. Jeśli wszystkie płyty CD\n"
+"zostały skopiowane do tego jednego katalogu,\n"
+"wystarczy podać tylko nazwę tego katalogu. </p>\n"
+
+#. help, continued
+#: src/clients/inst_source.ycp:333
+msgid ""
+"<p>\n"
+"<b>Network</b> installation requires a working network connection.\n"
+"Configure YaST2's \"Network Devices\" module first,\n"
+"if required.  Specify the directory where the packages from\n"
+"the first CD are located, such as /data1/CD1.\n"
+"Only the base path is\n"
+"required if packages are not divided, for example, /usr/full-i386.\n"
+"The directory must be listed in the file <i>/etc/exports</i>\n"
+"on the NFS server.\n"
+"</p>\n"
+msgstr ""
+"<p>\n"
+"Instalacja <b>sieciowa</b> wymaga działającego połączenia sieciowego.\n"
+"Jeśli trzeba, to najpierw należy skonfigurować moduł YaST2 \"Urządzenia sieciowe\"Należy podać katalog, w którym znajdują się pakiety z pierwszej płyty CD\n"
+"np. /data1/CD1. Jeśli pakiety nie są podzielone, to\n"
+"wystarczy podać tylko ścieżkę podstawową, np. /usr/full-i386.\n"
+"Katalog musi być wymieniony w pliku <i>/etc/exports</i>\n"
+"na serwerze NFS.\n"
+"</p>\n"
+
+#. help, continued
+#: src/clients/inst_source.ycp:346
+msgid ""
+"<p>\n"
+"<b>Modifying a Catalog</b>\n"
+"To change a catalog media, use <b>Edit</b>. To remove a catalog, use\n"
+"<b>Delete</b>. To enable or disable the catalog, set refreshing on the\n"
+"initialization time on or off, or refresh it immediatelly, use \n"
+"<b>Source Settings</b>."
+msgstr ""
+"<p>\n"
+"<b>Modyfikacja katalogu</b>\n"
+"Aby zmienić tryb katalogu, należy nacisnąć przycisk <b>Edytuj</b>. Aby usunąć katalog, należy skorzystać z przycisku <b>Usuń</b>. Aby włączyć/wyłączyć katalog, odświeżanie podczas inicjalizacji lub odświeżyćkatalog natychmiast, należy nacisnąć przycisk <b>Ustawienia źródła</b>."
+
+#. help, continued
+#: src/clients/inst_source.ycp:354
+msgid ""
+"<p>\n"
+"<b>Synchronize Changes with ZENworks</b> will call <tt>rug</tt>\n"
+"to perform the changes also in that package management system.</p>"
+msgstr ""
+
+#. popup message part 1
+#: src/clients/inst_source.ycp:395
+msgid ""
+"Unable to save changes to installation source\n"
+"configuration."
+msgstr ""
+"Nie można zapisać zmian konfiguracji źródła\n"
+"instalacji."
+
+#. popup headline
+#: src/clients/inst_source.ycp:414
+#, fuzzy
+msgid "Abort Catalog Configuration"
+msgstr "Zapisywanie konfiguracji katalogów"
+
+#. popup message
+#: src/clients/inst_source.ycp:416
+msgid ""
+"Abort the catalog configuration?\n"
+"All changes will be lost."
+msgstr ""
+"Przerwać konfigurację katalogów?\n"
+"Wszystkie zmiany zostaną utracone."
+
+#. yes-no popup
+#: src/clients/inst_source.ycp:472
+msgid "Delete the selected catalog from the list?"
+msgstr "Na pewno usunąć wybrany katalog z listy?"
+
+#. popup message
+#: src/clients/inst_source.ycp:498
+msgid ""
+"For the selected source, refresh\n"
+"cannot be set."
+msgstr ""
+"Dla wybranego źródła nie można\n"
+"ustawić odświeżania."
+
+#: src/clients/inst_source.ycp:545
+msgid ""
+"There were errors when restoring the source configuration.\n"
+"Not all sources are available for configuration.\n"
+msgstr ""
+"Podczas przywracania konfiguracji źródeł wystąpiły błędy.\n"
+"Nie wszystkie źródła będą dostępne dla konfiguracji.\n"
+
+#. intermediate popup while initializing internal packagemanagement
+#: src/clients/media_proposal.ycp:33
+msgid "Reading package information. One moment please..."
+msgstr "Odczytywanie informacji o pakietach. Proszę czekać..."
+
+#. Proposal for system to update, part of the richtext
+#: src/clients/media_proposal.ycp:45
+msgid "No Valid Installation Media"
+msgstr "Brak prawidłowych nośników instalacyjnych"
+
+#. this is a menu entry
+#: src/clients/media_proposal.ycp:88
+msgid "&Media"
+msgstr "&Nośniki"
+
+#. progress step title
+#: src/clients/pkg_finish.ycp:42
+#, fuzzy
+msgid "Saving package manager configuration..."
+msgstr "Zapisywanie konfiguracji katalogów"
+
+#. the language_changed flag has NOT been set by the NLD frame
+#: src/clients/software_proposal.ycp:68
+#: src/clients/software_simple_proposal.ycp:36
+msgid "The software proposal is reset to default values."
+msgstr "Przywrócony został domyślny wybór pakietów."
+
+#. warning text
+#: src/clients/software_proposal.ycp:76
+#: src/clients/software_simple_proposal.ycp:44
+msgid "Cannot solve dependencies automatically. Manual intervention is required."
+msgstr "Nie można automatycznie rozwiązać zależności. Konieczna jest interwencja ręczna."
+
+#. this is a heading
+#: src/clients/software_proposal.ycp:119
+msgid "Software"
+msgstr "Oprogramowanie"
+
+#. this is a menu entry
+#: src/clients/software_proposal.ycp:121
+msgid "&Software"
+msgstr "&Oprogramowanie"
+
+#. error popup, %1 is the name of the .rpm package
+#: src/clients/sw_single.ycp:132 src/modules/PackageCallbacks.ycp:195
+#, ycp-format
+msgid "Package %1 was not found on the medium."
+msgstr "Pakiet %1 nie został znaleziony na nośniku."
+
+#: src/clients/sw_single.ycp:172
+msgid "There was an error in installation source initialization."
+msgstr "Napotkano błąd podczas inicjalizacji źródła instalacji."
+
+#: src/clients/sw_single.ycp:177
+msgid ""
+"No installation source is defined.\n"
+"Only installed packages are displayed."
+msgstr ""
+"Brak zdefiniowanych źródeł instalacji.\n"
+"Wyświetlono tylko zainstalowane pakiety."
+
+#: src/clients/sw_single.ycp:242
+msgid ""
+"During the last package installation,\n"
+"several package failed to install.\n"
+"Install them now?\n"
+msgstr ""
+"Podczas ostatniej instalacji pakietów nie\n"
+"udało się zainstalować wielu pakietów.\n"
+"Zainstalować je teraz?\n"
+
+#. error report, %1 is a list of packages
+#: src/clients/sw_single.ycp:276
+#, ycp-format
+msgid ""
+"Following packages haven't been found on the medium:\n"
+"%1"
+msgstr ""
+"Następujące pakiety nie zostały odnalezione na nośniku:\n"
+"%1"
+
+#. Popup dialog contents
+#: src/clients/sw_single.ycp:332
+msgid "Install or remove more packages?"
+msgstr "Zainstalować lub usunąć więcej pakietów?"
+
+#: src/config/dirinstall.glade:16
+msgid "Directory Installation"
+msgstr "Instalacja do katalogu"
+
+#: src/config/dirinstall.glade:35
+msgid "Installation"
+msgstr "Instalacja"
+
+#: src/config/dirinstall.glade:39
+msgid "Settings"
+msgstr "Ustawienia"
+
+#: src/config/dirinstall.glade:44 src/config/dirinstall.glade:48
+msgid "Prepare Installation"
+msgstr "Przygotowanie instalacji"
+
+#: src/config/dirinstall.glade:52
+msgid "Install Packages"
+msgstr "Instalacja pakietów"
+
+#: src/config/dirinstall.glade:56
+msgid "Finish Installation"
+msgstr "Zakończenie instalacji"
+
+#. rich text message, %1 medium number, e.g. CD1,CD2...
+#: src/include/checkmedia/ui.ycp:75
+#, ycp-format
+msgid "<UL><LI>Medium: %1</LI></UL>"
+msgstr "<UL><LI>Nośnik: %1</LI></UL>"
+
+#. rich text message, %1 = size of the medium
+#: src/include/checkmedia/ui.ycp:77
+#, ycp-format
+msgid "<UL><LI>Size: %1</LI></UL>"
+msgstr "<UL><LI>Rozmiar: %1</LI></UL>"
+
+#. rich text message, %1 = result of the check
+#. the check has been canceled
+#: src/include/checkmedia/ui.ycp:79 src/include/checkmedia/ui.ycp:481
+#, ycp-format
+msgid "<UL><LI>Result: %1</LI></UL>"
+msgstr "<UL><LI>Status: %1</LI></UL>"
+
+#. rich text -  error message
+#: src/include/checkmedia/ui.ycp:81
+msgid "The drive does not contain a medium or the ISO file system is broken."
+msgstr "Napęd nie zawiera nośnika lub system plików ISO jest uszkodzony."
+
+#. result of the check - success
+#: src/include/checkmedia/ui.ycp:91
+msgid "<B>OK</B>"
+msgstr "<B>OK</B>"
+
+#. wrong MD5
+#: src/include/checkmedia/ui.ycp:96
+msgid "<B>Error</B> -- MD5 sum does not match<BR>The medium should not be used."
+msgstr "<B>Błąd</B> -- Niezgodne sumy MD5<BR>Nośnik nie powinien być używany."
+
+#. the correct MD5 is unknown
+#: src/include/checkmedia/ui.ycp:101
+msgid "<B>Unknown</B> -- The correct MD5 sum of the medium is unknown."
+msgstr "<B>Nieznany</B> -- Nieznana poprawna suma MD5."
+
+#. warning popup - the CD/DVD drive doesn't contain the first medium (CD1/DVD1)
+#: src/include/checkmedia/ui.ycp:257
+msgid "Insert the first installation medium."
+msgstr "Proszę włożyć pierwszy nośnik instalacyjny."
+
+#. dialog header
+#: src/include/checkmedia/ui.ycp:299
+msgid "Media Check"
+msgstr "Sprawdzanie nośnika"
+
+#. help text - media check (header) 1/7
+#: src/include/checkmedia/ui.ycp:302
+msgid "<P><B>Media Check</B></P>"
+msgstr "<P><B>Sprawdzanie nośnika</B></P>"
+
+#. help text - media check 2/7
+#: src/include/checkmedia/ui.ycp:304
+msgid ""
+"<P>When you have a problem with\n"
+"installation and are using a CD or DVD installation medium, you should check\n"
+"whether the medium could be broken.</P>\n"
+msgstr "<P>W razie problemów z instalacją z użyciem CD albo DVD jako nośnika instalacyjnego, należy sprawdzić czy nośnik nie jest uszkodzony.</P>\n"
+
+#. help text - media check 3/7
+#: src/include/checkmedia/ui.ycp:310
+msgid ""
+"<P>Select a drive, insert a medium into the drive, and press <B>Start Check</B>\n"
+"to perform the check. The check can take several minutes depending on\n"
+"speed of the drive and size of the medium. The check verifies the MD5 checksum.</P>\n"
+msgstr ""
+"<P>Należy wybrać napęd, umieścić w nim płytę i nacisnąć przycisk <B>Rozpocznij sprawdzanie</B>. Może to potrwać dłuższy czas, w zależności od\n"
+"prędkości napędu i rozmiaru nośnika. Sprawdzona zostanie suma kontrolna MD5.</P>\n"
+
+#. help text - media check 4/7
+#: src/include/checkmedia/ui.ycp:316
+msgid ""
+"<P>If the check of the medium fails, you should not continue the installation.\n"
+"It may fail or you may lose your data. You should replace the broken\n"
+"medium.</P>\n"
+msgstr ""
+"<P>Jeśli sprawdzanie nośnika wykaże błędy, nie należy kontynuować instalacji.\n"
+"Może się ona nie powieść lub może nastąpić utrata danych. W takim przypadku zaleca się wymianę uszkodzonego nośnika.</P>\n"
+
+#. help text - media check 5/7
+#: src/include/checkmedia/ui.ycp:322
+msgid ""
+"After the check you can insert the next medium and start the procedure again.\n"
+"The order of the media is irrelevant."
+msgstr ""
+"Po sprawdzeniu można umieścić kolejny nośnik w napędzie i powtórzyć procedurę.\n"
+"Kolejność nośników nie ma znaczenia."
+
+#. help text - media check 6/7
+#: src/include/checkmedia/ui.ycp:326
+msgid ""
+"<P><B>Note:</B> You cannot change the medium if it is used by the system. If\n"
+"it happens during installation, start manual installation and select the media\n"
+"verification item in the menu.</P> \n"
+msgstr "<P><B>Uwaga:</B> Nie można wymienić nośnika, jeśli jest używany przez system. W takim przypadku proszę uruchomić instalację ręczną i wybrać z menu weryfikację nośnika.</P> \n"
+
+#. help text - media check 7/6
+#: src/include/checkmedia/ui.ycp:332
+msgid "<P>If you burn the media yourself, use the <B>pad</B> option in your recording software. It avoids read errors at the end of media during the check.</P>\n"
+msgstr "<P>Przy własnoręcznym nagrywaniu nośników należy użyć opcji <B>pad</B> w programie nagrywającym. Zapobiega się w ten sposób błędom odczytu na końcu nośnika podczas sprawdzania.</P>\n"
+
+#. advice check of the media
+#: src/include/checkmedia/ui.ycp:336
+msgid "It is recommended to check all installation media to avoid installation problems."
+msgstr "Aby uniknąć problemów podczas instalacji zaleca się sprawdzenie wszystkich nośników instalacyjnych."
+
+#. combo box
+#: src/include/checkmedia/ui.ycp:342
+msgid "&CD or DVD Drive"
+msgstr "Napęd &CD lub DVD"
+
+#. widget label
+#: src/include/checkmedia/ui.ycp:345
+msgid "Status Information"
+msgstr "Status"
+
+#. progress bar label
+#: src/include/checkmedia/ui.ycp:349
+msgid "Progress"
+msgstr "Postęp"
+
+#. push button label
+#: src/include/checkmedia/ui.ycp:353
+msgid "&Start Check"
+msgstr "Rozpocznij &sprawdzanie"
+
+#. error message: the medium cannot be read or no medium in the drive; %1 = drive, e.g. /dev/hdc
+#: src/include/checkmedia/ui.ycp:420
+#, ycp-format
+msgid "Cannot read medium in the drive %1."
+msgstr "Nie można odczytać nośnika w napędzie %1."
+
+#: src/include/checkmedia/ui.ycp:481
+msgid "<B>Canceled</B>"
+msgstr "<B>Anulowano</B>"
+
+#: src/modules/DefaultDesktop.ycp:57
+msgid "KDE"
+msgstr "KDE"
+
+#: src/modules/DefaultDesktop.ycp:58
+msgid "GNOME"
+msgstr "GNOME"
+
+#: src/modules/DefaultDesktop.ycp:59
+msgid "Minimal Graphical System"
+msgstr "Minimalne środowisko graficzne"
+
+#: src/modules/DefaultDesktop.ycp:60
+msgid "Text Mode"
+msgstr "Tryb tekstowy"
+
+#. Proposal for dirinstall installation
+#: src/modules/DirInstall.ycp:65
+#, ycp-format
+msgid "Target Directory: %1"
+msgstr "Katalog docelowy: %1"
+
+#. Proposal for backup during update
+#: src/modules/DirInstall.ycp:68
+#, ycp-format
+msgid "Run YaST and SuSEconfig at First Boot: %1"
+msgstr "Uruchom YaST i SuSEconfig przy pierwszym uruchomieniu: %1"
+
+#. part of label in proposal
+#: src/modules/DirInstall.ycp:70 src/modules/DirInstall.ycp:74
+msgid "Yes"
+msgstr "Tak"
+
+#. part of label in proposal
+#: src/modules/DirInstall.ycp:72 src/modules/DirInstall.ycp:74
+msgid "No"
+msgstr "Nie"
+
+#. Proposal for dirinstall installation
+#: src/modules/DirInstall.ycp:74
+#, ycp-format
+msgid "Create Image: %1"
+msgstr "Utwórz obraz: %1"
+
+#: src/modules/PackageCallbacks.ycp:62 src/modules/PackageCallbacks.ycp:1122
+msgid "Package: "
+msgstr "Pakiet: "
+
+#: src/modules/PackageCallbacks.ycp:63
+msgid "Size: "
+msgstr "Rozmiar: "
+
+#: src/modules/PackageCallbacks.ycp:90
+#, ycp-format
+msgid "Downloading package %1 (%2)..."
+msgstr "Pobieranie pakietu %1 (%2)..."
+
+#. popup heading
+#: src/modules/PackageCallbacks.ycp:94
+msgid "Downloading Package"
+msgstr "Pobieranie pakietu"
+
+#. check box
+#: src/modules/PackageCallbacks.ycp:134
+msgid "Show &details"
+msgstr "Pokaż &szczegóły"
+
+#. command line mode - ask user whether installation of the failed package should be retried
+#: src/modules/PackageCallbacks.ycp:206 src/modules/PackageCallbacks.ycp:392
+msgid "Retry installation of the package?"
+msgstr "Ponowić próbę instalacji pakietu?"
+
+#. command line mode - ask user whether the installation should be aborted
+#: src/modules/PackageCallbacks.ycp:215 src/modules/PackageCallbacks.ycp:401
+msgid "Abort the installation?"
+msgstr "Przerwać instalację?"
+
+#: src/modules/PackageCallbacks.ycp:236 src/modules/PackageCallbacks.ycp:256
+#, ycp-format
+msgid "Error: %1:"
+msgstr ""
+
+#: src/modules/PackageCallbacks.ycp:313
+#, ycp-format
+msgid "Uninstalling package %1 (%2)..."
+msgstr "Deinstalacja pakietu %1 (%2)..."
+
+#: src/modules/PackageCallbacks.ycp:314
+#, ycp-format
+msgid "Installing package %1 (%2)..."
+msgstr "Instalowanie pakietu %1 (%2)..."
+
+#: src/modules/PackageCallbacks.ycp:319
+msgid "Uninstalling Package"
+msgstr "Deinstalacja pakietu"
+
+#: src/modules/PackageCallbacks.ycp:320
+msgid "Installing Package"
+msgstr "Instalowanie pakietu"
+
+#. error popup during package installation, %1 is the name of the package
+#: src/modules/PackageCallbacks.ycp:377
+#, ycp-format
+msgid "Removal of package %1 failed."
+msgstr "Usunięcie pakietu %1 nie powiodło się."
+
+#. error popup during package installation, %1 is the name of the package
+#: src/modules/PackageCallbacks.ycp:379
+#, ycp-format
+msgid "Installation of package %1 failed."
+msgstr "Instalacja pakietu %1 nie powiodła się."
+
+#. error report
+#: src/modules/PackageCallbacks.ycp:508
+msgid ""
+"<p>The source at the specified URL now provides a different media ID.\n"
+"If the URL is correct, this indicates that the source content has changed. To \n"
+"continue using this source, start <b>Change Source of Installation</b> from \n"
+"the YaST control center and refresh the installation source.</p>\n"
+msgstr ""
+"<p>Źródło pod podanym adresem URL dostarcza obecnie nośnik o innym ID.\n"
+"Jeśli URL jest prawidłowy, oznacza to, że zawartość źródła uległa zmianie. Aby \n"
+"kontynuować wykorzystywanie tego źródła, należy uruchomić <i>Zmień źródło instalacji</i> z \n"
+"centrum sterowania YaST i odświeżyć źródło instalacji.</p>\n"
+
+#. media is double sided, we want the user to insert the 'Side A' of the media
+#. the complete string will be "<product> <media> <number>, <side>"
+#. e.g. "'SuSE Linux 9.0' DVD 1, Side A"
+#: src/modules/PackageCallbacks.ycp:535
+msgid "Side A"
+msgstr "Strona A"
+
+#. media is double sided, we want the user to insert the 'Side B' of the media
+#: src/modules/PackageCallbacks.ycp:539
+msgid "Side B"
+msgstr "Strona B"
+
+#. prompt to insert product (%1 == "SuSE Linux version 9.2 CD 2")
+#: src/modules/PackageCallbacks.ycp:549
+#, ycp-format
+msgid ""
+"Insert\n"
+"'%1'"
+msgstr ""
+"Proszę umieścić w napędzie \n"
+"'%1'"
+
+#. report error while accessing local directory with product (%1 == "SuSE Linux ...")
+#: src/modules/PackageCallbacks.ycp:554
+#, ycp-format
+msgid ""
+"Cannot access installation media\n"
+"%1.\n"
+"Check that the directory is accessible."
+msgstr ""
+"Nie można uzyskać dostępu do nośnika instalacyjnego\n"
+"%1.\n"
+"Proszę sprawdzić, czy katalog jest dostępny."
+
+#. report error while accessing network media of product (%1 == "SuSE Linux ...")
+#: src/modules/PackageCallbacks.ycp:560
+#, ycp-format
+msgid ""
+"Cannot access installation media \n"
+"%1.\n"
+"Check that the server is accessible."
+msgstr ""
+"Nie można uzyskać dostępu do nośnika instalacyjnego \n"
+"%1.\n"
+"Proszę sprawdzić, czy serwer jest dostępny."
+
+#. currently unused
+#: src/modules/PackageCallbacks.ycp:565
+msgid "The correct catalog medium could not be mounted."
+msgstr "Nie udało się zamontować właściwego nośnika katalogu."
+
+#. push button label during media change popup, user can skip
+#. this media (CD) so no packages from this media will be installed
+#: src/modules/PackageCallbacks.ycp:581
+msgid "&Skip"
+msgstr "&Pomiń"
+
+#. push button label during media change popup, user can eject the CD/DVD
+#: src/modules/PackageCallbacks.ycp:586 src/modules/SourceManager.ycp:1389
+msgid "&Eject"
+msgstr "&Wysuń"
+
+#. command line mode - ask user whether installation of the failed package should be retried
+#: src/modules/PackageCallbacks.ycp:600
+msgid "Retry the installation?"
+msgstr "Ponowić próbę instalacji?"
+
+#. command line mode - ask user whether the installation should be aborted
+#: src/modules/PackageCallbacks.ycp:609
+msgid "Skip the medium?"
+msgstr "Pominąć nośnik?"
+
+#. otherwise ignore the medium
+#: src/modules/PackageCallbacks.ycp:617
+msgid "Ignoring the bad medium..."
+msgstr "Ignorowanie uszkodzonego nośnika..."
+
+#. TextEntry label
+#. text entry
+#: src/modules/PackageCallbacks.ycp:628 src/modules/PackageCallbacks.ycp:647
+#: src/modules/SourceDialogs.ycp:217
+#, fuzzy
+msgid "&URL"
+msgstr "URL"
+
+#. ellipsis appended to a truncated text (if it's too long)
+#: src/modules/PackageCallbacks.ycp:735
+msgid "..."
+msgstr "..."
+
+#. popup label (%1 is source URL)
+#: src/modules/PackageCallbacks.ycp:797 src/modules/PackageCallbacks.ycp:804
+#, ycp-format
+msgid "Creating source %1"
+msgstr "Tworzenie źródła %1"
+
+#. error message - a label followed by a richtext with details
+#: src/modules/PackageCallbacks.ycp:819
+msgid "Error occurred while creating the catalog."
+msgstr "Błąd podczas tworzenia katalogu."
+
+#. error message - a label followed by a richtext with details
+#: src/modules/PackageCallbacks.ycp:823 src/modules/PackageCallbacks.ycp:933
+#: src/modules/PackageCallbacks.ycp:1023
+msgid "Unable to retrieve the remote catalog description."
+msgstr "Nie można pobrać opisu zdalnego katalogu."
+
+#. error message - a label followed by a richtext with details
+#: src/modules/PackageCallbacks.ycp:826 src/modules/PackageCallbacks.ycp:936
+#: src/modules/PackageCallbacks.ycp:1026
+msgid "An error occurred while retrieving the new metadata."
+msgstr "Podczas pobierania nowych metadanych wystąpił błąd."
+
+#. error message - a label followed by a richtext with details
+#: src/modules/PackageCallbacks.ycp:829 src/modules/PackageCallbacks.ycp:939
+#: src/modules/PackageCallbacks.ycp:1029
+msgid "The source is not valid."
+msgstr "Źródło jest nieprawidłowe."
+
+#. error message - a label followed by a richtext with details
+#: src/modules/PackageCallbacks.ycp:832
+msgid "The source metadata is invalid."
+msgstr "Metadane źródła są nieprawidłowe."
+
+#. command line mode - ask user whether the source refreshment should be retried
+#: src/modules/PackageCallbacks.ycp:846 src/modules/PackageCallbacks.ycp:959
+#: src/modules/PackageCallbacks.ycp:1043
+msgid "Retry?"
+msgstr "Ponowić?"
+
+#. popup label (%1 is source URL)
+#: src/modules/PackageCallbacks.ycp:895 src/modules/PackageCallbacks.ycp:903
+#, ycp-format
+msgid "Probing source %1"
+msgstr "Wykrywanie źródła %1"
+
+#: src/modules/PackageCallbacks.ycp:902
+msgid "Probing source..."
+msgstr "Wykrywanie źródła..."
+
+#. error message - a label followed by a richtext with details
+#: src/modules/PackageCallbacks.ycp:929
+msgid "Error occurred while probing the source."
+msgstr "Błąd podczas wykrywania źródła."
+
+#. error message - a label followed by a richtext with details
+#: src/modules/PackageCallbacks.ycp:942
+msgid "Source probing details."
+msgstr "Szczegóły wykrywania źródła."
+
+#. error message - a label followed by a richtext with details
+#: src/modules/PackageCallbacks.ycp:945
+msgid "Source metadata is invalid."
+msgstr "Metadane źródła są nieprawidłowe."
+
+#. error message - a label followed by a richtext with details
+#: src/modules/PackageCallbacks.ycp:1019
+#, ycp-format
+msgid "Source %1"
+msgstr "Źródło %1"
+
+#: src/modules/PackageCallbacks.ycp:1093
+#, ycp-format
+msgid "Downloading delta RPM package %1 (%2)..."
+msgstr "Pobieranie delta RPM pakietu %1 (%2)..."
+
+#. popup heading
+#: src/modules/PackageCallbacks.ycp:1099
+msgid "Downloading Delta RPM package"
+msgstr "Pobieranie pakietu Delta RPM"
+
+#: src/modules/PackageCallbacks.ycp:1113
+#, ycp-format
+msgid "Applying delta RPM package %1..."
+msgstr "Nakładanie pakietu delta RPM %1..."
+
+#. popup heading
+#: src/modules/PackageCallbacks.ycp:1120
+msgid "Applying delta RPM package"
+msgstr "Nakładanie pakietu delta RPM"
+
+#: src/modules/PackageCallbacks.ycp:1143
+#, ycp-format
+msgid "Downloading patch RPM package %1 (%2)..."
+msgstr "Pobieranie pakietu RPM %1 (%2)..."
+
+#. popup heading
+#: src/modules/PackageCallbacks.ycp:1149
+msgid "Downloading Patch RPM Package"
+msgstr "Pobieranie pakietu RPM"
+
+#. close popup
+#: src/modules/PackageCallbacks.ycp:1166
+msgid "Failed to download delta RPM"
+msgstr "Pobranie delta RPM nie powiodło się"
+
+#. close popup
+#: src/modules/PackageCallbacks.ycp:1171
+msgid "Failed to apply delta RPM"
+msgstr "Nakładanie pakietu delta RPM nie powiodło się"
+
+#. close popup
+#: src/modules/PackageCallbacks.ycp:1176
+msgid "Failed to download patch RPM"
+msgstr "Pobranie poprawki RPM nie powiodło się"
+
+#: src/modules/PackageCallbacks.ycp:1209
+#, ycp-format
+msgid "Starting script %1 (patch %2)..."
+msgstr ""
+
+#. popup heading
+#: src/modules/PackageCallbacks.ycp:1216
+msgid "Running Script"
+msgstr ""
+
+#. label, script name follows
+#: src/modules/PackageCallbacks.ycp:1221
+msgid "Script: "
+msgstr ""
+
+#. label, patch name follows
+#: src/modules/PackageCallbacks.ycp:1228
+msgid "Patch: "
+msgstr ""
+
+#. label
+#: src/modules/PackageCallbacks.ycp:1236
+msgid "Output of the Script"
+msgstr ""
+
+#. label, %1 is patch name with version and architecture
+#: src/modules/PackageCallbacks.ycp:1297
+#, ycp-format
+msgid ""
+"Patch: %1\n"
+"\n"
+msgstr ""
+
+#. heading of popup
+#: src/modules/PackageCallbacks.ycp:1344
+msgid "Download"
+msgstr "Pobieranie"
+
+#. message in a progress popup
+#: src/modules/PackageCallbacks.ycp:1347
+#, ycp-format
+msgid "Downloading: %1"
+msgstr "Pobieranie: %1"
+
+#. error message, %1 is the cause for the error
+#: src/modules/PackageCallbacks.ycp:1407 src/modules/PackageCallbacks.ycp:1413
+#, ycp-format
+msgid ""
+"Download failed:\n"
+"%1"
+msgstr ""
+"Pobieranie nie powiodło się\n"
+"%1"
+
+#. heading of popup
+#: src/modules/PackageCallbacks.ycp:1440 src/modules/PackageCallbacks.ycp:1508
+msgid "Checking Package Database"
+msgstr "Sprawdzanie bazy pakietów"
+
+#. message in a progress popup
+#: src/modules/PackageCallbacks.ycp:1443
+msgid "Rebuilding package database. This process can take some time."
+msgstr "Przebudowa bazy pakietów. Proces ten może być czasochłonny."
+
+#. error message, %1 is the cause for the error
+#: src/modules/PackageCallbacks.ycp:1479
+#, ycp-format
+msgid ""
+"Rebuilding of package database failed:\n"
+"%1"
+msgstr ""
+"Przebudowa bazy pakietów nie powiodła się:\n"
+"%1"
+
+#. error popup
+#: src/modules/PackageCallbacks.ycp:1490
+#, ycp-format
+msgid ""
+"Error rebuilding database:\n"
+"%1"
+msgstr ""
+"Błąd podczas przebudowy bazy danych:\n"
+"%1"
+
+#. message in a progress popup
+#: src/modules/PackageCallbacks.ycp:1511
+msgid "Converting package database. This process can take some time."
+msgstr "Konwersja bazy pakietów. Proces ten może być czasochłonny."
+
+#. error message, %1 is the cause for the error
+#: src/modules/PackageCallbacks.ycp:1546
+#, ycp-format
+msgid ""
+"Conversion of package database failed:\n"
+"%1"
+msgstr ""
+"Konwersja bazy pakietów nie powiodła się:\n"
+"%1"
+
+#. error popup
+#: src/modules/PackageCallbacks.ycp:1560
+#, ycp-format
+msgid "Package %1 is already present in the new database."
+msgstr "Pakiet %1 jest już w nowej bazie danych."
+
+#. yes-no popup
+#: src/modules/PackageCallbacks.ycp:1569
+msgid ""
+"Error reading from old database.\n"
+"Ignore this error and continue?"
+msgstr ""
+"Błąd odczytu ze starej bazy danych.\n"
+"Zignorować ten błąd i kontynuować?"
+
+#. error popup
+#: src/modules/PackageCallbacks.ycp:1577
+msgid "Error writing to new database"
+msgstr "Błąd podczas zapisu do nowej bazy danych"
+
+#. button label
+#: src/modules/PackageInstallation.ycp:36
+msgid "&Show Failed Packages List"
+msgstr "&Pokaż listę błędnych pakietów"
+
+#. button label
+#: src/modules/PackageInstallation.ycp:39
+msgid "&Show Full Log"
+msgstr "&Pokaż dziennik"
+
+#. dialog headline
+#: src/modules/PackageInstallation.ycp:48
+msgid "Installation of Some Packages Failed"
+msgstr "Instalacja niektórych pakietów nie powiodła się."
+
+#. Just for safety
+#. Yes/No MsgBox; default: Yes
+#. Ask for a formatted floppy to save the package selection
+#: src/modules/PackageSelectionIO.ycp:41
+msgid ""
+"The current package selection will be saved\n"
+"on a floppy disk.  Insert a formatted floppy.\n"
+"\n"
+"Write data to the floppy disk now?\n"
+msgstr ""
+"Aktualny zestaw pakietów zostanie zapisany \n"
+"na dyskietce. Proszę umieścić sformatowaną \n"
+"dyskietkę w napędzie.\n"
+"\n"
+"Zapisać teraz dane na dyskietce?\n"
+
+#. msgbox
+#. data saved to floppy disk
+#: src/modules/PackageSelectionIO.ycp:60
+msgid "Your settings have been saved to the floppy disk."
+msgstr "Ustawienia zostały zapisane na dyskietce."
+
+#. text of a error popup: error occured while saving settings to the floppy
+#: src/modules/PackageSelectionIO.ycp:66
+msgid ""
+"Error while saving settings to the floppy disk.\n"
+"Verify that the floppy is formatted\n"
+"and is not write protected.\n"
+msgstr ""
+"Napotkano błąd podczas zapisywania ustawień.\n"
+"Proszę sprawdzić czy dyskietka jest sformatowana\n"
+"i czy nie jest zabezpieczona przed zapisem.\n"
+
+#. Popup with a 'Retry', a 'Cancel' button and a 'Format floppy' button.
+#. Check inserted floppy.
+#. headline
+#: src/modules/PackageSelectionIO.ycp:77
+msgid "Could not find a formatted floppy disk."
+msgstr "Nie znaleziono sformatowanej dyskietki."
+
+#. popup contents
+#: src/modules/PackageSelectionIO.ycp:79
+msgid ""
+"Are you sure you inserted a floppy disk\n"
+"into the correct drive?\n"
+"If so, is the disk formatted and verified?\n"
+msgstr ""
+"Czy na pewno umieszczono dyskietkę \n"
+"w odpowiednim napędzie?\n"
+"Czy dyskietka jest sformatowana \n"
+"i sprawdzona?\n"
+
+#. push button
+#: src/modules/PackageSelectionIO.ycp:84
+msgid "&Format floppy"
+msgstr "&Formatuj dyskietkę"
+
+#. text of a message popup: package selection is written correctly
+#: src/modules/PackageSelectionIO.ycp:114
+msgid "Your package selections have been written to the hard disk."
+msgstr "Wybrany zestaw pakietów został zapisany na twardym dysku."
+
+#. text of en error popup: error while writing data
+#: src/modules/PackageSelectionIO.ycp:119
+msgid "Error while saving package selections to the hard disk."
+msgstr "Napotkano błąd podczas zapisu zestawu pakietów na twardy dysk."
+
+#. text of a popup with 'Yes' and 'No' button
+#: src/modules/PackageSelectionIO.ycp:136
+msgid "Do you really want to reset your settings?"
+msgstr "Czy na pewno przywrócić domyślne ustawienia?"
+
+#. Just for safety
+#. Yes/No MsgBox; default: Yes
+#. Ask for the floppy with the package selection.
+#: src/modules/PackageSelectionIO.ycp:145
+msgid ""
+"The current package selection will be loaded\n"
+"from a floppy disk.  Insert the floppy.\n"
+"\n"
+"Read data from the floppy disk now?\n"
+msgstr ""
+"Aktualny zestaw pakietów będzie załadowany \n"
+"z dyskietki. Proszę umieścić dyskietkę w napędzie.\n"
+"\n"
+"Odczytać dane z dyskietki?\n"
+
+#. text of an error popup: can't read settings from floppy
+#: src/modules/PackageSelectionIO.ycp:166
+msgid ""
+"Error while loading settings from the floppy disk.\n"
+"Verify that the correct floppy has been inserted\n"
+"and that the path name has been written correctly.\n"
+msgstr ""
+"Błąd podczas odczytu ustawień z dyskietki.\n"
+"Proszę sprawdzić czy użyto właściwej dyskietki \n"
+"i czy podana ścieżka jest prawidłowa.\n"
+
+#. text of an error poup: can't read settings from hard disk
+#: src/modules/PackageSelectionIO.ycp:182
+msgid ""
+"Error while loading settings from the hard disk.\n"
+"Verify that the path name has been written correctly.\n"
+msgstr ""
+"Błąd podczas odczytu ustawień z dysku twardego.\n"
+"Proszę sprawdzić czy podano prawidłową ścieżkę.\n"
+
+#. Headline of a popup with a 'Cancel', a 'Load' and a 'Save' button.
+#. A user defined selection of packages can be loaded or saved.
+#: src/modules/PackageSelectionIO.ycp:210
+msgid "Load or save package selection"
+msgstr "Odczytaj lub zapisz zestaw pakietów"
+
+#. Radio button for saving/loading from harddisk
+#: src/modules/PackageSelectionIO.ycp:218
+msgid "&Harddisk"
+msgstr "Dysk &twardy"
+
+#. Radio button for saving/loading from floppy
+#: src/modules/PackageSelectionIO.ycp:223
+msgid "&Floppy"
+msgstr "&Dyskietka"
+
+#. Input field label for the filename
+#: src/modules/PackageSelectionIO.ycp:229
+msgid "&Path name"
+msgstr "Ś&cieżka"
+
+#. push button
+#: src/modules/PackageSelectionIO.ycp:238
+msgid "&Load"
+msgstr "&Otwórz"
+
+#. push button
+#: src/modules/PackageSelectionIO.ycp:240
+msgid "&Save"
+msgstr "Zapi&sz"
+
+#. warning text
+#: src/modules/Packages.ycp:178
+msgid "Your computer is a 64-bit x86-64 system. However, you are trying to install a 32-bit distribution."
+msgstr "Ten komputer posiada architekturę 64 bitową x86-64. Pomimo tego podjęto próbę zainstalowania dystrybucji 32 bitowej."
+
+#. part of summary, %1 is size of packages (in MB or GB)
+#: src/modules/Packages.ycp:205
+#, ycp-format
+msgid "Size of Packages to Install: %1"
+msgstr "Rozmiar pakietów do zainstalowania: %1"
+
+#. summary warning
+#: src/modules/Packages.ycp:250
+msgid "Not enough disk space."
+msgstr "Brak miejsca na dysku."
+
+#. summary warning
+#: src/modules/Packages.ycp:252
+msgid "Not enough disk space. Remove some packages in the single selection."
+msgstr "Brak miejsca na dysku. Należy zrezygnować z części wybranych pakietów."
+
+#: src/modules/Packages.ycp:271
+#, ycp-format
+msgid "Only %1 (%2%%) free space available on partition %3.<BR>"
+msgstr "Na partycji %3 dostępne jest tylko %1 (%2%%) wolnego miejsca.<BR>"
+
+#: src/modules/Packages.ycp:715
+msgid "Failed to initialize the catalog. Try again?"
+msgstr "Inicjalizacja katalogu nie powiodła się. Spróbować ponownie?"
+
+#. error in proposal, %1 is URL
+#: src/modules/Packages.ycp:722
+#, ycp-format
+msgid "No catalog found at '%1'."
+msgstr "Nie znaleziono katalogu pod adresem '%1'."
+
+#. popup - information label
+#: src/modules/Packages.ycp:804
+msgid "Integrating booted media..."
+msgstr "Integracja nośnika..."
+
+#: src/modules/Packages.ycp:822
+msgid "Failed to integrate service pack source."
+msgstr "Integracja źródła service pack zakończona niepowodzeniem."
+
+#. popup - information label
+#. popup progress information
+#: src/modules/Packages.ycp:862 src/modules/SourceManager.ycp:1117
+msgid "Initializing catalogs..."
+msgstr "Inicjalizacja katalogów..."
+
+#: src/modules/Packages.ycp:930
+#, ycp-format
+msgid "%1 CD 1 not found"
+msgstr "Nie znaleziono %1 CD1"
+
+#. an error message
+#: src/modules/Packages.ycp:1011
+#, ycp-format
+msgid ""
+"Error while initializing package descriptions.\n"
+"Check the log file %1 for more details."
+msgstr ""
+"Błąd podczas inicjowania opisów pakietów.\n"
+"Szczegóły dot. błędu znadują się w pliku dziennika %1."
+
+#. popup label
+#: src/modules/Packages.ycp:1220
+msgid "Evaluating package selection..."
+msgstr "Sprawdzanie listy pakietów..."
+
+#. Standard text strings
+#. GnuPG fingerprint used as "Fingerprint: AAA BBB CCC"
+#: src/modules/SignatureCheckDialogs.ycp:228
+msgid "Fingerprint"
+msgstr "Odcisk"
+
+#. GnuPG key ID used as "Key ID: 1144AAAA444"
+#: src/modules/SignatureCheckDialogs.ycp:230
+msgid "Key ID"
+msgstr "Identyfikator (ID) klucza"
+
+#. popup question, %1 stands for the package name
+#: src/modules/SignatureCheckDialogs.ycp:362
+#, ycp-format
+msgid ""
+"The package %1 is not digitally signed. This means that the origin\n"
+"and integrity of the package cannot be verified. Installing the package\n"
+"may put the integrity of your system at risk.\n"
+"\n"
+"Install it anyway?"
+msgstr ""
+"Pakiet %1 nie posiada podpisu cyfrowego. Oznacza to, że nie można\n"
+"zweryfikować pochodzenia i integralności pakietu. Instalacja takiego\n"
+"pakietu może stanowić ryzyko dla systemu.\n"
+"\n"
+"Zainstalować ten pakiet?"
+
+#. popup question, %1 stands for the filename
+#: src/modules/SignatureCheckDialogs.ycp:369
+#, ycp-format
+msgid ""
+"The file %1\n"
+"is not digitally signed. This means that the origin and integrity of the file\n"
+"cannot be verified. Using the file may put the integrity of your system at risk.\n"
+"\n"
+"Use it anyway?"
+msgstr ""
+"Plik %1\n"
+"nie posiada podpisu cyfrowego. Oznacza to, że nie można\n"
+"zweryfikować pochodzenia i integralności plliku. Użycie takiego\n"
+"pliku może stanowić ryzyko dla systemu.\n"
+"\n"
+"Użyć tego pliku?"
+
+#. popup heading
+#: src/modules/SignatureCheckDialogs.ycp:382
+msgid "Signature Check Failed"
+msgstr "Kontrola sygnatury zakończona niepowodzeniem"
+
+#. popup question, %1 stands for the package name
+#: src/modules/SignatureCheckDialogs.ycp:417
+#, ycp-format
+msgid ""
+"No checksum for package %1 was found in the source.\n"
+"This means that the package is part of the signed source, but the list of checksums\n"
+"on this source does not mention this package. Installing the package may put\n"
+"the integrity of your system at risk.\n"
+"\n"
+"Install it anyway?"
+msgstr ""
+"Nie znaleziono sumy kontrolnej dla pakietu %1.\n"
+"Oznacza to, że pakiet jest częścią podpisanego źródła, lecz lista\n"
+"sum kontrolnych nie zawiera danych tego pakietu. Instalacja pakietu\n"
+"może stanowić ryzyko dla systemu.\n"
+"\n"
+"Zainstalować ten pakiet?"
+
+#. popup question, %1 stands for the filename
+#: src/modules/SignatureCheckDialogs.ycp:425
+#, ycp-format
+msgid ""
+"No checksum for file %1\n"
+"was found in the source. This means that the file is part of the signed source,\n"
+"but the list of checksums on this source does not mention this file. Using the file\n"
+"may put the integrity of your system at risk.\n"
+"\n"
+"Use it anyway?"
+msgstr ""
+"Nie znaleziono sumy kontrolnej dla pliku %1.\n"
+"Oznacza to, że plik ten jest częścią podpisanego źródła, lecz lista\n"
+"sum kontrolnych nie zawiera danych tego pliku. Użycie pliku\n"
+"może stanowić ryzyko dla systemu.\n"
+"\n"
+"Użyć tego pliku?"
+
+#. popup heading
+#: src/modules/SignatureCheckDialogs.ycp:439
+msgid "No Checksum Found"
+msgstr "Brak sumy kontrolnej"
+
+#. popup question, %1 stands for the package name, %2 for the complete description of the GnuPG key (multiline)
+#: src/modules/SignatureCheckDialogs.ycp:476
+#, ycp-format
+msgid ""
+"Package %1 is signed with the following GnuPG key, but the integrity check failed: %2\n"
+"\n"
+"This means that the package has been changed by accident or by an attacker\n"
+"since the repository creator signed it. Installing it is a big risk\n"
+"for the integrity and security of your system.\n"
+"\n"
+"Install it anyway?"
+msgstr ""
+"Pakiet %1 jest podpisany poniższym kluczem GnuPG, lecz sprawdzanie jego integralności\n"
+"zakończyło się niepowodzeniem: %2\n"
+"\n"
+"Oznacza to, że pakiet został zmieniony przypadkowo lub przez atakującego,\n"
+"ponieważ twórca repozytorium podpisał pakiet. Instalacja pakietu stanowi poważne\n"
+"ryzyko dla systemu.\n"
+"\n"
+"Zainstalować ten pakiet?"
+
+#. popup question, %1 stands for the filename, %2 for the complete description of the GnuPG key (multiline)
+#: src/modules/SignatureCheckDialogs.ycp:485
+#, ycp-format
+msgid ""
+"File %1\n"
+"is signed with the following GnuPG key, but the integrity check failed: %2\n"
+"\n"
+"This means that the file has been changed by accident or by an attacker\n"
+"since the repository creator signed it. Using it is a big risk\n"
+"for the integrity and security of your system.\n"
+"\n"
+"Use it anyway?"
+msgstr ""
+"Plik %1 jest podpisany poniższym kluczem GnuPG, lecz sprawdzanie jego integralności\n"
+"zakończyło się niepowodzeniem: %2\n"
+"\n"
+"Oznacza to, że plik został zmieniony przypadkowo lub przez atakującego,\n"
+"ponieważ twórca repozytorium podpisał plik. Użycie pliku stanowi poważne\n"
+"ryzyko dla systemu.\n"
+"\n"
+"Użyć tego pliku?"
+
+#. Part of the GnuPG key description in popup, %1 is a GnuPG key ID
+#: src/modules/SignatureCheckDialogs.ycp:497
+#: src/modules/SignatureCheckDialogs.ycp:562
+#: src/modules/SignatureCheckDialogs.ycp:702
+#: src/modules/SignatureCheckDialogs.ycp:801
+#, ycp-format
+msgid "ID: %1"
+msgstr "ID: %1"
+
+#. Part of the GnuPG key description in popup, %1 is a GnuPG key fingerprint
+#: src/modules/SignatureCheckDialogs.ycp:500
+#: src/modules/SignatureCheckDialogs.ycp:565
+#: src/modules/SignatureCheckDialogs.ycp:705
+#: src/modules/SignatureCheckDialogs.ycp:804
+#, ycp-format
+msgid "Fingerprint: %1"
+msgstr "Odcisk: %1"
+
+#. Part of the GnuPG key description in popup, %1 is a GnuPG key name
+#: src/modules/SignatureCheckDialogs.ycp:502
+#: src/modules/SignatureCheckDialogs.ycp:707
+#: src/modules/SignatureCheckDialogs.ycp:806
+#, ycp-format
+msgid "Name: %1"
+msgstr "Nazwa: %1"
+
+#: src/modules/SignatureCheckDialogs.ycp:511
+msgid "Validation Check Failed"
+msgstr "Sprawdzenie poprawności zakończone niepowodzeniem"
+
+#. popup question, %1 stands for the package name, %2 for the complex multiline description of the GnuPG key
+#: src/modules/SignatureCheckDialogs.ycp:540
+#, ycp-format
+msgid ""
+"The package %1 is digitally signed\n"
+"with the following unknown GnuPG key: %2.\n"
+"\n"
+"This means that a trust relationship to the creator of the package\n"
+"cannot be established. Installing the package may put the integrity\n"
+"of your system at risk.\n"
+"\n"
+"Install it anyway?"
+msgstr ""
+"Pakiet %1 jest podpisany nieznanym kluczem GnuPG: %2\n"
+"\n"
+"Oznacza to, że nie można nawiązać relacji zaufania z twórcą\n"
+"pakietu. Instalacja pakietu może stanowić ryzyko dla systemu.\n"
+"\n"
+"Zainstalować ten pakiet?"
+
+#. popup question, %1 stands for the filename, %2 for the complex multiline description of the GnuPG key
+#: src/modules/SignatureCheckDialogs.ycp:550
+#, ycp-format
+msgid ""
+"The file %1\n"
+"is digitally signed with the following unknown GnuPG key: %2.\n"
+"\n"
+"This means that a trust relationship to the creator of the file\n"
+"cannot be established. Using the file may put the integrity\n"
+"of your system at risk.\n"
+"\n"
+"Use it anyway?"
+msgstr ""
+"Plik %1\n"
+"jest podpisany nieznanym kluczem GnuPG: %2\n"
+"\n"
+"Oznacza to, że nie można nawiązać relacji zaufania z twórcą\n"
+"pliku. Uzycie pliku może stanowić ryzyko dla systemu.\n"
+"\n"
+"Użyć tego pliku?"
+
+#. popup heading
+#: src/modules/SignatureCheckDialogs.ycp:574
+msgid "Unknown GnuPG Key"
+msgstr "Nieznany klucz GnuPG"
+
+#. popup question, %1 stands for the package name, %2 for the key ID, %3 for the key name
+#: src/modules/SignatureCheckDialogs.ycp:613
+#, ycp-format
+msgid ""
+"The package %1 is digitally signed\n"
+"with key '%2 (%3)'.\n"
+"\n"
+"There is no trust relationship to the owner of the key.\n"
+"If you trust the owner, import the key into your set of\n"
+"trusted keys with Import Key then proceed\n"
+"with the installation.\n"
+"\n"
+"Installing a package from an unknown source can put\n"
+"the integrity of your system at risk. It is safest\n"
+"to skip the package."
+msgstr ""
+"Pakiet %1 jest podpisany cyfrowo\n"
+"kluczem '%2 (%3)'.\n"
+"\n"
+"Brak relacji zaufania z właścicielem klucza.\n"
+"Jeśli jest on godny zaufania, należy zaimportować\n"
+"klucz do zbioru zaufanych kluczy, a następnie\n"
+"kontynuować instalację.\n"
+"\n"
+"Instalacja pakietu z nieznanego źródła może stanowić\n"
+"ryzyko dla systemu. Najbezpieczniej jest pominąć\n"
+"ten pakiet."
+
+#. popup question, %1 stands for the filename, %2 for the key ID, %3 for the key name
+#: src/modules/SignatureCheckDialogs.ycp:626
+#, ycp-format
+msgid ""
+"The file %1 is digitally signed\n"
+"with key '%2 (%3)'.\n"
+"\n"
+"There is no trust relationship to the owner of the key.\n"
+"If you trust the owner, import the key into your set of\n"
+"trusted keys with Import Key then proceed with\n"
+"the installation.\n"
+"\n"
+"Installing a file from an unknown source can put\n"
+"the integrity of your system at risk. It is safest\n"
+"to skip it."
+msgstr ""
+"Plik %1 jest podpisany cyfrowo\n"
+"kluczem '%2 (%3)'.\n"
+"\n"
+"Brak relacji zaufania z właścicielem klucza.\n"
+"Jeśli jest on godny zaufania, należy zaimportować\n"
+"klucz do zbioru zaufanych kluczy, a następnie\n"
+"kontynuować instalację.\n"
+"\n"
+"Instalacja pliku z nieznanego źródła może stanowić\n"
+"ryzyko dla systemu. Najbezpieczniej jest pominąć\n"
+"ten plik."
+
+#. popup heading
+#: src/modules/SignatureCheckDialogs.ycp:645
+msgid "Signed with Untrusted Public Key"
+msgstr "Podpisano niezaufanym kluczem publicznym"
+
+#. push button
+#: src/modules/SignatureCheckDialogs.ycp:651
+msgid "&Import Key..."
+msgstr "&Importuj klucz..."
+
+#. push button
+#: src/modules/SignatureCheckDialogs.ycp:654
+msgid "Install &Anyway"
+msgstr "Zainstaluj &mimo wszystko"
+
+#. push button
+#: src/modules/SignatureCheckDialogs.ycp:657
+msgid "&Skip Package"
+msgstr "&Pomiń pakiet"
+
+#. additional Richtext (HTML) warning text (kind of help), 1/2
+#: src/modules/SignatureCheckDialogs.ycp:681
+#: src/modules/SignatureCheckDialogs.ycp:781
+msgid ""
+"<p>The owner of the key may distribute updates,\n"
+"packages, and package repositories that your system will trust and offer\n"
+"for installation and update without any further warning. In this way,\n"
+"importing the key into your keyring of trusted keys allows the key owner\n"
+"to have a certain amount of control over the software on your system.</p>"
+msgstr "<p>Właściciel klucza może dystrybuować aktualizacje, pakiety i repozytoria pakietów, które będą uznane za godne zaufania. Ich instalacja będzie odbywać się bez dalszych ostrzeżeń. Poprzez zaimportowanie klucza do zbioru zaufanych właściciel klucza uzyskuje pewną kontrolę nad oprogramowaniem tego systemu.</p>"
+
+#. additional Richtext (HTML) warning text (kind of help), 2/2, %1 stands for the GnuPG key ID
+#: src/modules/SignatureCheckDialogs.ycp:688
+#: src/modules/SignatureCheckDialogs.ycp:788
+#, ycp-format
+msgid ""
+"<p>A warning dialog opens for every package that\n"
+"is not signed by a trusted (imported) key. If you do not import the key,\n"
+"packages created by the owner of key <tt>%1</tt> show this warning.</p>"
+msgstr "<p>Dla każdego pakietu niepodpisanego zaufanym kluczem wyświetlone zostanie okno z ostrzeżeniem. Jeśli klucz <tt>%1</tt> nie zostanie zaimportowany, dla wszystkich pakietów utworzone przez jego właściciela wyświetlone będzie ostrzeżenie.</p>"
+
+#. popup message, %1 stands for GPG key complete multiline description, %2 for key location (URL or ...)
+#: src/modules/SignatureCheckDialogs.ycp:693
+#, ycp-format
+msgid ""
+"The GnuPG key %1\n"
+"has been found at %2.\n"
+"\n"
+"You can choose to import it into your keyring of trusted\n"
+"public keys, meaning that you trust the owner of the key.\n"
+"You should be sure that you can trust the owner and that\n"
+"the key really belongs to that owner before importing it."
+msgstr ""
+"Znaleziono klucz GnuPG %1\n"
+"w %2.\n"
+"\n"
+"Można zaimportować go do zbioru zaufanych kluczy publicznych.\n"
+"Przed importem należy upewnić się czy można ufać \n"
+"właścicielowi klucza oraz czy jest to faktycznie klucz należący\n"
+"do niego."
+
+#. popup heading
+#: src/modules/SignatureCheckDialogs.ycp:730
+msgid "Import Public GnuPG Key"
+msgstr "Import klucza publicznego GnuPG"
+
+#. push button
+#: src/modules/SignatureCheckDialogs.ycp:741
+#: src/modules/SignatureCheckDialogs.ycp:839
+msgid "&Import"
+msgstr "&Importuj"
+
+#. push button
+#. `PushButton(`id(`details), _("&Details...")),
+#. `HSpacing(1),
+#. push button
+#: src/modules/SignatureCheckDialogs.ycp:747
+#: src/modules/SignatureCheckDialogs.ycp:845
+msgid "Do &Not Import"
+msgstr "&Nie importuj"
+
+#. popup message, %1 stands for string "GPG key ID\nfingerprint", %2 for key name
+#: src/modules/SignatureCheckDialogs.ycp:793
+#, ycp-format
+msgid ""
+"The following GnuPG key has been found: %1\n"
+"\n"
+"You can choose to import it into your keyring of trusted\n"
+"public keys, meaning that you trust the owner of the key.\n"
+"You should be sure that you can trust the owner and that\n"
+"the key really belongs to that owner before importing it."
+msgstr ""
+"Znaleziono klucz GnuPG: %1\n"
+"\n"
+"Można zaimportować go do zbioru zaufanych kluczy publicznych.\n"
+"Przed importem należy upewnić się czy można ufać \n"
+"właścicielowi klucza oraz czy jest to faktycznie klucz należący\n"
+"do niego."
+
+#. popup heading
+#: src/modules/SignatureCheckDialogs.ycp:828
+msgid "Import Untrusted GnuPG Key"
+msgstr "Import niezaufanego klucza GnuPG"
+
+#. When data throughput goes downhill (stalled network connection etc.),
+#. cut off the predicted time at a reasonable maximum.
+#. "%1" is a predefined maximum time.
+#: src/modules/SlideShow.ycp:258
+#, ycp-format
+msgid ">%1"
+msgstr ">%1"
+
+#. Nothing more to install from this CD (very concise - little space!!)
+#: src/modules/SlideShow.ycp:279 src/modules/SlideShow.ycp:300
+msgid "Done."
+msgstr "Zakończono."
+
+#. (Short!) headline for the total remaining time or MBs to install
+#: src/modules/SlideShow.ycp:314
+#, ycp-format
+msgid ""
+"Remaining:\n"
+"%1"
+msgstr ""
+"Pozostało:\n"
+"%1"
+
+#. Status line informing about the next CD that will be used
+#. %1: Media type ("CD" / "DVD", ???)
+#. %2: Media name ("SuSE Linux Professional CD 2" )
+#. %3: Time remaining until this media will be needed
+#: src/modules/SlideShow.ycp:337
+#, ycp-format
+msgid "Next %1: %2 -- %3"
+msgstr "Następne %1: %2 -- %3"
+
+#. Status line informing about the next CD that will be used
+#. %1: Media type ("CD" / "DVD", ???)
+#. %2: Media name ("SuSE Linux Professional CD 2" )
+#: src/modules/SlideShow.ycp:345
+#, ycp-format
+msgid "Next %1: %2"
+msgstr "Następne %1: %2"
+
+#: src/modules/SlideShow.ycp:698
+#, ycp-format
+msgid "Applying delta RPM: %1"
+msgstr "Aktualizacja pakietu: %1"
+
+#. message in the installatino log, %1 is package name,
+#. %2 is package size
+#: src/modules/SlideShow.ycp:717
+#, ycp-format
+msgid "Downloading %1 (download size %2)"
+msgstr "Pobieranie pakietu %1 (rozmiar: %2)"
+
+#. List column header for total remaining MB and time to install
+#. Progress bar for overall progress of software package installation
+#: src/modules/SlideShow.ycp:956 src/modules/SlideShow.ycp:1407
+msgid "Total"
+msgstr "Razem"
+
+#. Heading for the progress bar for the current package
+#. while it is deleted. "%1" is the package name.
+#: src/modules/SlideShow.ycp:1273
+#, ycp-format
+msgid "Deleting %1"
+msgstr "Usuwanie %1"
+
+#. Table headings for CD statistics during installation
+#: src/modules/SlideShow.ycp:1452
+msgid "Media"
+msgstr "Nośnik"
+
+#. Table headings for CD statistics during installation
+#: src/modules/SlideShow.ycp:1454
+msgid "Size"
+msgstr "Rozmiar"
+
+#. Table headings for CD statistics during installation
+#: src/modules/SlideShow.ycp:1456
+msgid "Packages"
+msgstr "Pakiety"
+
+#. Table headings for CD statistics during installation
+#: src/modules/SlideShow.ycp:1458
+msgid "Time"
+msgstr "Czas"
+
+#. Help text while software packages are being installed (displayed only in rare cases)
+#: src/modules/SlideShow.ycp:1517
+msgid "<p>Please wait while packages are installed.</p>"
+msgstr "<p>Proszę czekać, trwa instalacja pakietów.</p>"
+
+#. tab
+#: src/modules/SlideShow.ycp:1536
+msgid "Slide Sho&w"
+msgstr "&Prezentacja..."
+
+#. tab
+#: src/modules/SlideShow.ycp:1538
+#, fuzzy
+msgid "&Details"
+msgstr "Szczegóły:"
+
+#. Dialog heading while software packages are being installed
+#: src/modules/SlideShow.ycp:1561 src/modules/SlideShow.ycp:1593
+msgid "Package Installation"
+msgstr "Instalacja pakietów"
+
+#. popup yes-no
+#: src/modules/SlideShowCallbacks.ycp:46
+msgid ""
+"Do you really want\n"
+"to quit the installation?"
+msgstr ""
+"Czy na pewno\n"
+"zakończyć instalację?"
+
+#: src/modules/SlideShowCallbacks.ycp:61
+msgid "Aborted"
+msgstr "Przerwano"
+
+#. message in the installation log widget, %1 is a patch name which contains the script
+#: src/modules/SlideShowCallbacks.ycp:136
+#, ycp-format
+msgid "Starting script %1"
+msgstr ""
+
+#. label, %1 is patch name with version and architecture
+#: src/modules/SlideShowCallbacks.ycp:187
+#, ycp-format
+msgid ""
+"Patch %1\n"
+"\n"
+msgstr ""
+
+#. yes-no popup
+#: src/modules/SlideShowCallbacks.ycp:228
+msgid ""
+"The disk space is nearly exhausted.\n"
+"Continue with the installation?"
+msgstr ""
+"Przestrzeń dyskowa na wyczerpaniu.\n"
+"Czy kontynuować instalację?"
+
+#: src/modules/SlideShowCallbacks.ycp:304
+#, ycp-format
+msgid "Downloading delta RPM %1 (download size %2)"
+msgstr "Pobieranie pakietu delta RPM %1 (rozmiar: %2)"
+
+#: src/modules/SlideShowCallbacks.ycp:321
+#, ycp-format
+msgid "Downloading patch RPM %1 (download size %2)"
+msgstr "Pobieranie pakietu RPM %1 (rozmiar: %2)"
+
+#. error in installation log, %1 is detail error description
+#: src/modules/SlideShowCallbacks.ycp:344
+#, ycp-format
+msgid "Failed to download delta RPM: %1"
+msgstr "Ściąganie pakietu przyrostowego %1 nie powiodło się."
+
+#. error in installation log, %1 is detail error description
+#: src/modules/SlideShowCallbacks.ycp:350
+#, ycp-format
+msgid "Failed to apply delta RPM: %1"
+msgstr "Zastosowanie pliku przyrostowego %1 nie powiodło się."
+
+#. error in installation log, %1 is detail error description
+#: src/modules/SlideShowCallbacks.ycp:356
+#, ycp-format
+msgid "Failed to download patch RPM: %1"
+msgstr "Nie powiodło sie pobieranie poprawki %1."
+
+#. *
+#. * Help text suffix for some types of the medias
+#.
+#: src/modules/SourceDialogs.ycp:42
+msgid ""
+"<p>If the location is a file holding an ISO image\n"
+"of the media, set <b>ISO Image</b>.</p>"
+msgstr ""
+"<p>Jeśli podane położenie to plik z obrazem ISO\n"
+"nośnika, to należy ustawić <b>Obraz ISO</b>.</p>"
+
+#. *
+#. * Help text suffix for some types of the medias
+#.
+#: src/modules/SourceDialogs.ycp:48
+msgid ""
+"<p>If the catalog is on multiple medias,\n"
+"set the location of the first media of the set.</p>"
+msgstr ""
+"<p>Jeśli katalog znajduje się na wielu nośnikach,\n"
+"należy ustawić położenie pierwszego z nich.</p>"
+
+#. popup message
+#: src/modules/SourceDialogs.ycp:202
+msgid "URL cannot be empty."
+msgstr "URL nie może być pusty."
+
+#. help text
+#: src/modules/SourceDialogs.ycp:224
+msgid ""
+"<p><big><b>Catalog URL</b></big><br>\n"
+"Use <b>URL</b> to specify the URL of the catalog.<p>"
+msgstr ""
+"<p><big><b>URL katalogu</b></big><br>\n"
+"Proszę użyć pola <b>URL</b>, aby określić adres URL katalogu.</p>"
+
+#. text entry
+#: src/modules/SourceDialogs.ycp:273
+msgid "&Server Name"
+msgstr "Nazwa &serwera"
+
+#. text entry
+#: src/modules/SourceDialogs.ycp:275 src/modules/SourceDialogs.ycp:400
+#: src/modules/SourceDialogs.ycp:463
+msgid "&Path to Directory or ISO Image"
+msgstr "Ścieżka do katalogu lub obrazu ISO"
+
+#. checkbox label
+#: src/modules/SourceDialogs.ycp:277 src/modules/SourceDialogs.ycp:408
+#: src/modules/SourceDialogs.ycp:466
+msgid "ISO Image"
+msgstr "Obraz ISO"
+
+#. help text
+#: src/modules/SourceDialogs.ycp:282
+msgid ""
+"<p><big><b>NFS Server</b></big><br>\n"
+"Use <b>Server Name</b> and <b>Path to Directory or ISO Image</b>\n"
+"to specify the NFS server host name and path on the server.<p>"
+msgstr ""
+"<p><big><b>Serwer NFS</b></big><br>\n"
+"Nazwę hosta i ścieżkę na serwerze można określić w polach<b>Nazwa serwera</b>\n"
+" i <b>Ścieżka do katalogu lub obrazu ISO</b>.<p>"
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:328
+msgid "&CD-ROM"
+msgstr "&CD-ROM"
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:330
+msgid "&DVD-ROM"
+msgstr "&DVD-ROM"
+
+#: src/modules/SourceDialogs.ycp:334
+msgid ""
+"<p><big><b>CD or DVD Media</b></big><br>\n"
+"Set <b>CD-ROM</b> or <b>DVD-ROM</b> to specify the type of media.</p>"
+msgstr ""
+"<p><big><b>Nośnik CD lub DVD</b></big><br>\n"
+"Proszę użyć pola <b>CD-ROM</b> lub <b>DVD-ROM<b>, aby określić typ nośnika.</p>"
+
+#. dialog caption
+#: src/modules/SourceDialogs.ycp:382
+msgid "ISO Image File"
+msgstr "Plik obrazu ISO"
+
+#. dialog caption
+#: src/modules/SourceDialogs.ycp:384
+msgid "Local Directory"
+msgstr "Katalog lokalny"
+
+#. push button
+#: src/modules/SourceDialogs.ycp:404
+msgid "&Browse..."
+msgstr "Przeg&lądaj..."
+
+#: src/modules/SourceDialogs.ycp:414
+msgid ""
+"<p><big><b>Local Directory or ISO</b></big><br>\n"
+"Ise <b>Path to Directory or ISO Image</b> to specify the path to the\n"
+"directory or the file holding the ISO image of the installation media.</p>"
+msgstr ""
+"<p><big><b>Katalog lokalny lub ISO</b></big><br>\n"
+"Pole <b>Ścieżka do katalogu lub obrazu ISO</b> służy do określenia\n"
+"katalogu lub pliku zawierającego obraz ISO nośnika instalacyjnego.</p>"
+
+#. text entry
+#: src/modules/SourceDialogs.ycp:454
+msgid "Server &Name"
+msgstr "&Nazwa serwera"
+
+#. text entry
+#: src/modules/SourceDialogs.ycp:457
+msgid "&Share"
+msgstr "W&spółdziel"
+
+#. text entry
+#: src/modules/SourceDialogs.ycp:469
+msgid "&Directory on Server"
+msgstr "&Katalog na serwerze"
+
+#. frame
+#: src/modules/SourceDialogs.ycp:473
+msgid "Au&thentication"
+msgstr "Au&toryzacja"
+
+#. check box
+#: src/modules/SourceDialogs.ycp:476
+msgid "&Anonymous"
+msgstr "Dostęp &anonimowy"
+
+#: src/modules/SourceDialogs.ycp:480
+msgid "Workgroup or Domain"
+msgstr "Grupa robocza lub domena"
+
+#. text entry
+#: src/modules/SourceDialogs.ycp:483
+msgid "&User Name"
+msgstr "Nazwa &użytkownika"
+
+#. password entry
+#: src/modules/SourceDialogs.ycp:485
+msgid "&Password"
+msgstr "Ha&sło"
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:513
+msgid "&FTP"
+msgstr "&FTP"
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:516
+msgid "H&TTP"
+msgstr "H&TTP"
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:523
+msgid "HTT&PS"
+msgstr "HTT&PS"
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:529 src/modules/SourceDialogs.ycp:718
+msgid "&SMB/CIFS"
+msgstr "&SMB/CIFS"
+
+#. frame
+#: src/modules/SourceDialogs.ycp:652
+msgid "P&rotocol"
+msgstr "P&rotokół"
+
+#: src/modules/SourceDialogs.ycp:662
+msgid ""
+"<p><big><b>Server and Directory</b></big><br>\n"
+"Use <b>Server Name</b> and <b>Path to Directory or ISO Image</b>\n"
+"to specify the NFS server host name and path on the server.\n"
+"To enable authentication, uncheck <b>Anonymous</b> and specify the\n"
+"<b>User Name</b> and the <b>Password</b>.<p>\n"
+"<p>\n"
+"For SMB/CIFS source, specify <b>Share</b> name and <b>Path to Directory\n"
+"or ISO Image</b>. \n"
+"If the location is a file holding an ISO image\n"
+"of the media, set <b>ISO Image</b>.</p>"
+msgstr ""
+"<p><big><b>Serwer i katalog</b></big><br>\n"
+"Nazwę hosta i ścieżkę na serwerze można określić w polach<b>Nazwa serwera</b>\n"
+" i <b>Ścieżka do katalogu lub obrazu ISO</b>.<p>Aby włączyć uwierzytelnianie, należy odnaczyć pole<b>Anonimowy</b> i podać\n"
+"<b>Nazwę użytkownika</b> i <b>Hasło</b>.<p>\n"
+"<p>\n"
+"Dla źródeł SMB/CIFS, należy podać nazwę <b>Udziału</b> i <b>Ścieżkę do katalogu\n"
+"lub obrazu ISO</b>. \n"
+"Jeśli podane położenie określa plik z obrazem ISO, należy zaznaczyć opcję <b>Obraz ISO</b>.</p>"
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:710
+msgid "&Scan Using SLP..."
+msgstr "&Skanuj używając SLP..."
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:712
+msgid "&FTP..."
+msgstr "&FTP..."
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:714
+msgid "&HTTP..."
+msgstr "&HTTP..."
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:716
+msgid "HTT&PS..."
+msgstr "HTT&PS..."
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:720
+msgid "&NFS..."
+msgstr "&NFS..."
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:722 src/modules/SourceDialogs.ycp:739
+msgid "&CD..."
+msgstr "&CD..."
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:724 src/modules/SourceDialogs.ycp:741
+msgid "&DVD..."
+msgstr "&DVD..."
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:726 src/modules/SourceDialogs.ycp:743
+msgid "&Local Directory..."
+msgstr "Katalog &lokalny..."
+
+#. radio button
+#: src/modules/SourceDialogs.ycp:728 src/modules/SourceDialogs.ycp:745
+msgid "Specify &URL..."
+msgstr "Określ &URL..."
+
+#. help text
+#: src/modules/SourceDialogs.ycp:757
+msgid ""
+"<p><big><b>Catalog Media</b></big><br>\n"
+"The software catalog can be located on CD, on a network server,\n"
+"or on the hard disk.</p>"
+msgstr ""
+"<p><big><b>Nośnik katalogu</b></big><br>\n"
+"Katalog oprogramowania może znajdować się na płycie CD,\n"
+"na serwerze sieciowym lub na twardym dysku.</p>"
+
+#. help, continued
+#: src/modules/SourceDialogs.ycp:762
+msgid ""
+"<p>\n"
+"To add  <b>CD</b> or <b>DVD</b>,\n"
+"have the product CD set or the DVD available.</p>"
+msgstr ""
+"<p>\n"
+"Aby dodać katalog z <b>CD</b> lub <b>DVD</b> wymagane są odpowiednie płyty.</p>"
+
+#. help, continued
+#: src/modules/SourceDialogs.ycp:767
+msgid ""
+"<p>\n"
+"The product CDs can be copied to the hard disk.\n"
+"Insert the path where the first\n"
+"CD is located, for example, /data1/<b>CD1</b>.\n"
+"Only the base path is required if all CDs are copied\n"
+"into one directory.</p>\n"
+msgstr ""
+"<p>\n"
+"Płyty CD produktów można skopiować na <b>dysk twardy</b>.\n"
+"Proszę podać ścieżkę do miejsca, gdzie znajduje się pierwsza\n"
+"płyta CD, na przykład: /data1/<b>CD1</b>.\n"
+"Jeśli wszystkie płyty CD zostały skopiowane do tego samego\n"
+"katalogu, wystarczy podać tylko jego nazwę. </p>\n"
+
+#. help, continued
+#: src/modules/SourceDialogs.ycp:776
+msgid ""
+"<p>\n"
+"Network installation requires a working network connection.\n"
+"Specify the directory where the packages from\n"
+"the first CD are located, such as /data1/CD1.</p>\n"
+msgstr ""
+"<p>\n"
+"Instalacja sieciowa wymaga działającego połączenia z siecią.\n"
+"Należy określić katalog, w którym znajdują się pakiety\n"
+"z pierwszego dysku CD, np. /data1/CD1.</p>\n"
+
+#. error popup
+#: src/modules/SourceDialogs.ycp:789
+msgid "Select the media type."
+msgstr "Proszę wybrać typ nośnika."
+
+#: src/modules/SourceDialogs.ycp:796
+msgid "Insert the add-on product CD"
+msgstr "Proszę umieścić w napędzie płytę CD produktu dodatkowego"
+
+#: src/modules/SourceDialogs.ycp:797
+msgid "Insert the add-on product DVD"
+msgstr "Proszę umieścić w napędzie płytę DVD produktu dodatkowego"
+
+#. label / dialog caption
+#: src/modules/SourceDialogs.ycp:879
+msgid "Catalog URL"
+msgstr "URL katalogu"
+
+#. label / dialog caption
+#: src/modules/SourceDialogs.ycp:881
+msgid "NFS Server"
+msgstr "Serwer NFS"
+
+#. label / dialog caption
+#: src/modules/SourceDialogs.ycp:883 src/modules/SourceDialogs.ycp:885
+msgid "CD or DVD Media"
+msgstr "Typ nośnika CD/DVD"
+
+#. label / dialog caption
+#: src/modules/SourceDialogs.ycp:887 src/modules/SourceDialogs.ycp:889
+msgid "Local Directory or ISO"
+msgstr "Katalog lokalny lub ISO"
+
+#. label / dialog caption
+#: src/modules/SourceDialogs.ycp:891 src/modules/SourceDialogs.ycp:893
+#: src/modules/SourceDialogs.ycp:895 src/modules/SourceDialogs.ycp:897
+#: src/modules/SourceDialogs.ycp:899
+msgid "Server and Directory"
+msgstr "Serwer i katalog"
+
+#. dialog caption
+#: src/modules/SourceDialogs.ycp:1001
+msgid "Media Type"
+msgstr "Typ nośnika"
+
+#. SourceManager read dialog caption
+#: src/modules/SourceManager.ycp:131
+msgid "Initializing Available Catalogs"
+msgstr "Inicjowanie dostępnych katalogów"
+
+#. Progress stage 1/3
+#: src/modules/SourceManager.ycp:139
+msgid "Read configured catalogs"
+msgstr "Odczytywanie skonfigurowanych katalogów"
+
+#. Progress stage 2/3
+#: src/modules/SourceManager.ycp:141
+msgid "Detect available catalogs via SLP"
+msgstr "Wykrywanie dostępnych katalogów poprzez SLP"
+
+#. Progress step 1/3
+#: src/modules/SourceManager.ycp:144
+msgid "Reading configured catalogs..."
+msgstr "Oczytywanie skonfigurowanych katalogów..."
+
+#. Progress step 2/3
+#: src/modules/SourceManager.ycp:146
+msgid "Detecting available catalogs..."
+msgstr "Wykrywanie dostępnych katalogów..."
+
+#. Progress finished
+#: src/modules/SourceManager.ycp:148 src/modules/SourceManager.ycp:235
+msgid "Finished"
+msgstr "Zakończono"
+
+#. Error message
+#: src/modules/SourceManager.ycp:159
+msgid "Cannot read catalogs."
+msgstr "Nie można odczytać katalogów."
+
+#. Error message
+#: src/modules/SourceManager.ycp:167
+#, fuzzy
+msgid "Cannot detect available catalogs."
+msgstr "Nie można wykryć dostępnych katalogów."
+
+#. popup message header
+#: src/modules/SourceManager.ycp:193
+msgid ""
+"Unable to save changes to the catalog\n"
+"                    repository.\n"
+msgstr "Nie można zapisać zmian w repozytorium katalogów.\n"
+
+#. SourceManager read dialog caption
+#: src/modules/SourceManager.ycp:222
+msgid "Saving Catalog Configuration"
+msgstr "Zapisywanie konfiguracji katalogów"
+
+#. Progress stage 1/1
+#: src/modules/SourceManager.ycp:229
+msgid "Write catalog settings"
+msgstr "Zapisywanie ustawień katalogów"
+
+#. Progress step 1/1
+#: src/modules/SourceManager.ycp:232
+msgid "Writing the settings..."
+msgstr "Zapisywanie ustawień..."
+
+#. Popup::NoHeadline(),
+#. popup headline
+#: src/modules/SourceManager.ycp:304
+msgid "Reading Media Description Failed"
+msgstr "Nie powiódł się odczyt opisu nośnika."
+
+#. popup message, %1 is filename
+#: src/modules/SourceManager.ycp:307
+#, ycp-format
+msgid ""
+"Cannot read media description for %1.\n"
+"                            Packages from this media cannot be installed."
+msgstr ""
+"Nie można odczytać opisu nośnika dla %1.\n"
+"                            Pakiety z tego nośnika nie mogą zostać zainstalowane."
+
+#: src/modules/SourceManager.ycp:466
+msgid "Adding catalog..."
+msgstr "Dodawanie katalogu..."
+
+#: src/modules/SourceManager.ycp:479
+#, ycp-format
+msgid ""
+"Unable to create catalog\n"
+"from URL '%1'."
+msgstr ""
+"Nie można utworzyć katalogu\n"
+"z adresu URL: '%1'."
+
 #. status info, to be used inside summary
-#: src/modules/SourceManager.ycp:658
+#: src/modules/SourceManager.ycp:576
 msgid "Enabled"
 msgstr "Włączone"
 
 #. status info, to be used inside summary
-#: src/modules/SourceManager.ycp:660
+#: src/modules/SourceManager.ycp:578
 msgid "Disabled"
 msgstr "Wyłączone"
 
-#. translators: name of a source if no other idenfication found
-#: src/modules/SourceManager.ycp:665
-msgid "unknown"
-msgstr "nieznany"
-
-#. corresponds to the "Enable/Disable" button
-#: src/modules/SourceManager.ycp:684
-msgid "On"
-msgstr "Włączone"
-
-#. corresponds to the "Enable/Disable" button
-#: src/modules/SourceManager.ycp:686
-msgid "Off"
-msgstr "Wyłączone"
-
-#. part of item in summary
-#: src/modules/SourceManager.ycp:687 src/modules/SourceManager.ycp:745
-msgid "Unknown"
-msgstr "Nieznany"
-
 #. summary header
-#: src/modules/SourceManager.ycp:729
+#: src/modules/SourceManager.ycp:647
 msgid "Configured Catalogs"
 msgstr "Skonfigurowane katalogi"
 
 #. part of item in summary meaning "switched on"
-#: src/modules/SourceManager.ycp:747
+#: src/modules/SourceManager.ycp:665
 msgid " On "
 msgstr "Włączone"
 
 #. rug is a command name
-#: src/modules/SourceManager.ycp:1062
+#: src/modules/SourceManager.ycp:980
 msgid "Your service was added successfully in YaST, but could not be synchronized with ZenWorks."
 msgstr "Usługa została dodana w programie YaST, lecz synchronizacja z ZenWorks nie powiodła się."
 
-#: src/modules/SourceManager.ycp:1063
+#: src/modules/SourceManager.ycp:981
 msgid "Your service was deleted successfully in YaST, but could not be synchronized with ZenWorks."
 msgstr "Usługa została usunięta w programie YaST, lecz synchronizacja z ZenWorks nie powiodła się."
 
 #. error message
 #. FIXME "ms" or plural gettext
-#: src/modules/SourceManager.ycp:1072
+#: src/modules/SourceManager.ycp:990
 #, ycp-format
 msgid "Command timed out after %1 milliseconds."
 msgstr "Czas wykonania polecenia przekroczył %1 milisekund."
 
-#. popup progress information
-#: src/modules/SourceManager.ycp:1192
-msgid "Initializing catalogs..."
-msgstr "Inicjalizacja katalogów..."
-
-#: src/modules/SourceManager.ycp:1435
+#: src/modules/SourceManager.ycp:1376
 msgid "&Drive to eject"
 msgstr "Napęd z wysuwalnym nośnikiem"
 
-#: src/modules/SourceManager.ycp:1448
-msgid "&Eject"
-msgstr "&Wysuń"
+#. translators: popup heading (progress popup)
+#: src/modules/SourceManagerSLP.ycp:45
+msgid "SLP Search"
+msgstr ""
 
+#. progress information
+#: src/modules/SourceManagerSLP.ycp:64
+msgid "Scanning network for installation services..."
+msgstr ""
+
+#. frame label
+#: src/modules/SourceManagerSLP.ycp:79
+msgid "Filter Form"
+msgstr ""
+
+#. push button
+#: src/modules/SourceManagerSLP.ycp:84
+msgid "&Filter"
+msgstr "&Filtr"
+
+#. translators: popup heading
+#: src/modules/SourceManagerSLP.ycp:110
+msgid "Choose SLP Catalog"
+msgstr "Proszę wybrać katalog SLP"
+
+#. tree label (tree of available products)
+#: src/modules/SourceManagerSLP.ycp:119
+msgid "Available Installation Products"
+msgstr ""
+
+#: src/modules/SourceManagerSLP.ycp:123
+#, fuzzy
+msgid "Details..."
+msgstr "Szczegóły:"
+
+#. error popup
+#. message popup
+#: src/modules/SourceManagerSLP.ycp:158 src/modules/SourceManagerSLP.ycp:164
+msgid "No details are available."
+msgstr ""
+
+#: src/modules/SourceManagerSLP.ycp:173
+#, fuzzy
+msgid "Catalog Details"
+msgstr "Szczegóły:"
+
+#. table header item
+#: src/modules/SourceManagerSLP.ycp:179
+msgid "Key"
+msgstr "Klucz"
+
+#. table header item
+#: src/modules/SourceManagerSLP.ycp:181
+msgid "Value"
+msgstr "Wartość"
+
+#. message popup
+#: src/modules/SourceManagerSLP.ycp:263
+msgid ""
+"Please, select one of offered options.\n"
+"This product has more installation sources available."
+msgstr ""
+
+#. popup error
+#: src/modules/SourceManagerSLP.ycp:276
+msgid ""
+"An internal error occurred.\n"
+"The selected source has no URL."
+msgstr ""
+
+#. progress information, %1 stands for number of services
+#: src/modules/SourceManagerSLP.ycp:332
+#, ycp-format
+msgid "Collecting information of %1 services found..."
+msgstr ""
+
+#. error popup
+#: src/modules/SourceManagerSLP.ycp:388
+msgid ""
+"No SLP catalogs have been found on your network.\n"
+"This could be caused by a running SuSEfirewall2,\n"
+"which probably blocks the network scanning."
+msgstr ""
+"W sieci lokalnej nie znaleziono serwera SLP.\n"
+"Może to być spowodowane przez działającą zaporę sieciową\n"
+"SuSEfirewall2, która prawdopodobnie blokuje skanowanie sieci."
+
+#. error popup
+#: src/modules/SourceManagerSLP.ycp:395
+msgid "No SLP catalogs have been found on your network."
+msgstr "W sieci lokalnej nie znaleziono serwera SLP."
+
+#. Warning message, e.g.: Partition /usr needs 35 MB more disk space
+#: src/modules/SpaceCalculation.ycp:421
+#, ycp-format
+msgid "Partition \"%1\" needs %2 more disk space."
+msgstr "Na partycji \"%1\" brakuje %2 miejsca."
+
+#. popup message
+#: src/modules/SpaceCalculation.ycp:438
+msgid ""
+"Deselect some packages or delete some data\n"
+"or temporary files before updating the system."
+msgstr ""
+"Należy odznaczyć niektóre pakiety lub usunąć część danych\n"
+"albo pliki tymczasowe przed aktualizacją systemu."
+
+#. popup message
+#: src/modules/SpaceCalculation.ycp:444
+msgid "Please deselect some packages."
+msgstr "Proszę zrezygnować z niektórych pakietów."
+
+#~ msgid "Scanning network..."
+#~ msgstr "Skanowanie sieci..."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sound\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-06 16:41+0200\n"
+"POT-Creation-Date: 2006-10-26 15:56+0200\n"
 "PO-Revision-Date: 2006-10-14 00:00+0200\n"
 "Last-Translator: Łukasz Suchenek <drottnar@oaza.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -130,7 +130,7 @@ msgid "Reading previously saved configuration..."
 msgstr "Wczytywanie poprzednio zapisanej konfiguracji..."
 
 #. progress step label
-#: sound/src/Sound.ycp:684 sound/src/sound_proposal.ycp:38
+#: sound/src/Sound.ycp:684 sound/src/sound_proposal.ycp:39
 msgid "Detecting sound cards..."
 msgstr "Wykrywanie kart dźwiękowych..."
 
@@ -156,7 +156,7 @@ msgid "Configured as %1."
 msgstr "Skonfigurowano jako: %1."
 
 #. table header (card name)
-#: sound/src/Sound.ycp:1051 sound/src/joystick.ycp:148
+#: sound/src/Sound.ycp:1086 sound/src/joystick.ycp:148
 msgid "Sound card"
 msgstr "Karta dźwiękowa"
 
@@ -175,7 +175,7 @@ msgid "Not configured"
 msgstr "Nieskonfigurowane"
 
 #. popup question text
-#: sound/src/complex.ycp:221
+#: sound/src/complex.ycp:222
 msgid ""
 "To apply changes, the sound system\n"
 "must be restarted.\n"
@@ -185,7 +185,7 @@ msgstr ""
 "ponownie uruchomić podsystem dźwięku.\n"
 "Czy uruchomić podsystem dźwięku ponownie?\n"
 
-#: sound/src/complex.ycp:233
+#: sound/src/complex.ycp:234
 msgid ""
 "Restart of the sound systen has failed.\n"
 "Check options of the driver."
@@ -194,38 +194,49 @@ msgstr ""
 "Proszę sprawdzić ustawienia sterownika."
 
 #. frame label
-#: sound/src/complex.ycp:293
+#: sound/src/complex.ycp:294
 msgid "Advanced Options"
 msgstr "Opcje z&aawansowane"
 
 #. check box label
-#. menu item
-#: sound/src/complex.ycp:298 sound/src/complex.ycp:347
+#: sound/src/complex.ycp:299
 msgid "&Start sequencer"
 msgstr "Uruchom &sekwencer"
 
 #. menu item
-#. volume slider label
-#: sound/src/complex.ycp:345 sound/src/volume.ycp:52 sound/src/volume.ycp:58
-msgid "&Volume"
+#: sound/src/complex.ycp:383
+#, fuzzy
+msgid "&Volume..."
 msgstr "&Głośność"
 
 #. menu item
-#: sound/src/complex.ycp:353
+#: sound/src/complex.ycp:385
+#, fuzzy
+msgid "&Start Sequencer"
+msgstr "Uruchom &sekwencer"
+
+#. menu item
+#: sound/src/complex.ycp:387
+#, fuzzy
+msgid "Set as the &Primary Card"
+msgstr "Utwórz jako partycję podstawową"
+
+#. menu item
+#: sound/src/complex.ycp:393
 msgid "&Install soundfonts..."
 msgstr "Za&instaluj pliki soundfonts..."
 
 #. dialog title
-#: sound/src/complex.ycp:357
+#: sound/src/complex.ycp:397
 msgid "Sound Configuration"
 msgstr "Konfiguracja dźwięku"
 
 #. table header
-#: sound/src/complex.ycp:360
+#: sound/src/complex.ycp:400
 msgid "Number"
 msgstr "Numer"
 
-#: sound/src/complex.ycp:360
+#: sound/src/complex.ycp:400
 msgid "Card Model"
 msgstr "Model karty"
 
@@ -867,12 +878,12 @@ msgid "Volume value for the sound card (0-100)"
 msgstr "Wartość głośności karty dźwiękowej (0-100)"
 
 #. section name in proposal dialog
-#: sound/src/sound_proposal.ycp:73
+#: sound/src/sound_proposal.ycp:75
 msgid "Sound"
 msgstr "Dźwięk"
 
 #. section name in proposal - menu item
-#: sound/src/sound_proposal.ycp:75
+#: sound/src/sound_proposal.ycp:77
 msgid "&Sound"
 msgstr "Dźwię&k"
 
@@ -1372,9 +1383,10 @@ msgstr ""
 "</P>\n"
 
 #: sound/src/texts.ycp:281
+#, fuzzy
 msgid ""
 "<p>\n"
-"Use <b>Advanced</b> to set the volume of the selected card or configure\n"
+"Use <b>Other</b> to set the volume of the selected card or configure\n"
 "module loading for playing MIDI files. These modules can be loaded on demand.\n"
 "</p>\n"
 msgstr ""
@@ -1383,11 +1395,24 @@ msgstr ""
 "Moduły te mogą być wczytywane na żądanie.\n"
 "</p>\n"
 
-#: sound/src/texts.ycp:288 sound/src/texts.ycp:313
+#: sound/src/texts.ycp:287
+msgid ""
+"<p>The sound device with index 0 is the default device used by system and applications.\n"
+"Use <b>Other</b> to set the selected sound device as the primary device.</p>"
+msgstr ""
+
+#: sound/src/texts.ycp:290
+msgid ""
+"The applications which use OSS (Open Sound System) can use the software\n"
+"mixer by using aoss wrapper. Use command <tt>aoss &lt;application&gt;</tt> to\n"
+"start the application."
+msgstr ""
+
+#: sound/src/texts.ycp:296 sound/src/texts.ycp:321
 msgid "<p>An error has occurred. </p>"
 msgstr "<p>Wystąpił błąd. </p>"
 
-#: sound/src/texts.ycp:290
+#: sound/src/texts.ycp:298
 msgid ""
 "<p>\n"
 "If the the problem persists, try passing \n"
@@ -1403,7 +1428,7 @@ msgstr ""
 " <i>OSS/Free</i> albo innego.\n"
 "</p>\n"
 
-#: sound/src/texts.ycp:301
+#: sound/src/texts.ycp:309
 msgid ""
 "<p>\n"
 "This is the complete sound card list. Use the <b>Finish</b> button \n"
@@ -1415,7 +1440,7 @@ msgstr ""
 "o kartach dźwiękowych, należy nacisnąć przycisk <b>Zakończ</b>.\n"
 "</p>\n"
 
-#: sound/src/texts.ycp:307
+#: sound/src/texts.ycp:315
 msgid ""
 "<p>\n"
 "Use <b>Delete</b> to remove a configured sound card. \n"
@@ -1427,7 +1452,7 @@ msgstr ""
 "Aby dodawać kartę dźwiękową, należy nacisnąć przycisk <b>Dodaj kartę dźwiękową</b>.\n"
 "</p>\n"
 
-#: sound/src/texts.ycp:314
+#: sound/src/texts.ycp:322
 msgid "<p>You can try to pass some <b>options</b> to the module.</p>"
 msgstr "<p>Można spróbować przekazać do modułu odpowiednie <b>opcje</b>.</p>"
 
@@ -1461,6 +1486,11 @@ msgstr "konfiguracja karty dźwiękowej"
 #: sound/src/ui.ycp:216
 msgid "&More detailed installation of sound cards"
 msgstr "&Bardziej szczegółowa instalacja karty dźwiękowej"
+
+#. volume slider label
+#: sound/src/volume.ycp:52 sound/src/volume.ycp:58
+msgid "&Volume"
+msgstr "&Głośność"
 
 #. dialog title
 #: sound/src/volume.ycp:67
@@ -1517,4 +1547,3 @@ msgstr ""
 #: sound/src/wizards.ycp:64
 msgid "Do you really want to delete this entry?"
 msgstr "Czy na pewno usunąć tę pozycję?"
-

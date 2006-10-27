@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: autoinst\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-09-22 10:06+0200\n"
+"POT-Creation-Date: 2006-10-26 16:06+0200\n"
 "PO-Revision-Date: 2006-09-22 23:17+0100\n"
 "Last-Translator: Wadim Dziedzic <nikdo@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -96,7 +96,7 @@ msgid ""
 msgstr "Proszę wprowadzić nazwę pliku i jego zawartość.\n"
 
 #: src/clients/files_auto.ycp:171 src/dialogs/script_dialogs.ycp:239
-#: src/include/conftree.ycp:433
+#: src/include/conftree.ycp:434
 msgid "Select a file to load."
 msgstr "Proszę wybrać plik do odczytania."
 
@@ -206,10 +206,6 @@ msgstr "Instalowanie pliku obrazu..."
 #: src/clients/inst_autoimage.ycp:41
 msgid "Installing image into system..."
 msgstr "Instalowanie obrazu w systemie..."
-
-#: src/clients/inst_autoimage.ycp:51
-msgid "Error while retrieving image."
-msgstr "Błąd podczas odzyskiwania obrazu."
 
 #: src/clients/inst_autoinit.ycp:38
 msgid "Processing Profiles and Rules"
@@ -459,18 +455,6 @@ msgstr ""
 msgid "Reading package database..."
 msgstr "Odczytywanie bazy pakietów..."
 
-#. Frame caption for software selection
-#: src/clients/software_auto.ycp:142
-msgid "Software"
-msgstr "Oprogramowanie"
-
-#. Push button that will pop up the detailed
-#. software selection (e.g. Multimedia, Games,
-#. KDE, Gnome, ... - not the individual packages!)
-#: src/clients/software_auto.ycp:154
-msgid "&Detailed selection..."
-msgstr "&Szczegółowy wybór oprogramowania..."
-
 #: src/dialogs/autoinst_dialogs.ycp:22
 msgid ""
 "<p>\n"
@@ -651,12 +635,12 @@ msgstr ""
 "Błąd podczas wczytywania pliku Kickstart. Proszę sprawdzić\n"
 "składnię pliku i spróbować ponownie."
 
-#: src/dialogs/dialogs.ycp:314 src/include/conftree.ycp:445
+#: src/dialogs/dialogs.ycp:314 src/include/conftree.ycp:446
 msgid "Reading configuration data"
 msgstr "Odczytywanie danych konfiguracyjnych"
 
-#: src/dialogs/dialogs.ycp:314 src/include/conftree.ycp:445
-#: src/modules/Profile.ycp:209 src/tests/autoinst_test_clone.ycp:10
+#: src/dialogs/dialogs.ycp:314 src/include/conftree.ycp:446
+#: src/modules/Profile.ycp:210 src/tests/autoinst_test_clone.ycp:10
 msgid "This may take a while"
 msgstr "To może chwilę potrwać"
 
@@ -687,30 +671,27 @@ msgid "Warning"
 msgstr "Ostrzeżenie"
 
 #: src/dialogs/dialogs.ycp:380
-msgid "Checking XML without DTD validation..."
+#, fuzzy
+msgid "Checking XML without validation..."
 msgstr "Sprawdzanie XML bez walidacji DTD..."
 
-#: src/dialogs/dialogs.ycp:384
-msgid "Checking XML with DTD validation..."
-msgstr "Sprawdzanie XML z walidacją DTD..."
-
-#: src/dialogs/dialogs.ycp:388
+#: src/dialogs/dialogs.ycp:390 src/modules/Profile.ycp:636
 msgid "Checking XML with RNG validation..."
 msgstr "Sprawdzanie XML z walidacją RNG..."
 
-#: src/dialogs/dialogs.ycp:394
+#: src/dialogs/dialogs.ycp:396 src/modules/Profile.ycp:644
 msgid "Checking XML with RNC validation..."
 msgstr "Sprawdzanie XML z walidacją RNC..."
 
 #. the autoyast interface can check if the profile is logical or if important stuff is missing
 #. the missing stuff is under the Label "Logic"
-#: src/dialogs/dialogs.ycp:426
+#: src/dialogs/dialogs.ycp:427
 msgid "Logic"
 msgstr "Logiczny"
 
 #. the autoyast config frontend can check if a root password is configured
 #. and can warn the user if it is missing
-#: src/dialogs/dialogs.ycp:430
+#: src/dialogs/dialogs.ycp:431
 msgid "No root password configured"
 msgstr "Nieskonfigurowane hasło administratora"
 
@@ -723,7 +704,8 @@ msgid "AutoYaST Second Stage"
 msgstr "Etap drugi działania programu AutoYaST"
 
 #: src/dialogs/general_dialogs.ycp:51
-msgid "Turn off the machine after first stage"
+#, fuzzy
+msgid "Turn Off the Machine after the First Stage"
 msgstr "Wyłącz komputer po pierwszzej fazie"
 
 #: src/dialogs/general_dialogs.ycp:52 src/modules/AutoinstGeneral.ycp:119
@@ -731,23 +713,28 @@ msgid "Signature Handling"
 msgstr "Obsługa podpisów"
 
 #: src/dialogs/general_dialogs.ycp:53
-msgid "Accept &unsigned files"
+#, fuzzy
+msgid "Accept &Unsigned Files"
 msgstr "Akceptuj &niepodpisane pliki"
 
 #: src/dialogs/general_dialogs.ycp:54
-msgid "Accept files without a &checksum"
+#, fuzzy
+msgid "Accept Files without a &Checksum"
 msgstr "Akceptuj pliki bez sumy &kontrolnej"
 
 #: src/dialogs/general_dialogs.ycp:55
-msgid "Accept failed &verifications"
+#, fuzzy
+msgid "Accept Failed &Verifications"
 msgstr "Akceptuj pliki niez&weryfikowane"
 
 #: src/dialogs/general_dialogs.ycp:56
-msgid "Accept unknown &GPG Keys"
+#, fuzzy
+msgid "Accept Unknown &GPG Keys"
 msgstr "Akceptuj nieznane klucze &GPG"
 
 #: src/dialogs/general_dialogs.ycp:57
-msgid "Import &new GPG Keys"
+#, fuzzy
+msgid "Import &New GPG Keys"
 msgstr "Importuj &nowe klucze GnuPG"
 
 #: src/dialogs/general_dialogs.ycp:61
@@ -789,9 +776,10 @@ msgstr ""
 "W przypadku wyłączenia drugiego etapu pracy programu AutoYaST, instalacja będzie kontynuowana w trybie ręcznym, po pierwszym ponownym uruchomieniu komputera (po instalacji pakietów).</P>\n"
 
 #: src/dialogs/general_dialogs.ycp:79
+#, fuzzy
 msgid ""
 "<P>\n"
-"For the signature handling, please read the AutoYaST documentation.\n"
+"For signature handling, read the AutoYaST documentation.\n"
 "</P>\n"
 msgstr ""
 "<P>\n"
@@ -1016,12 +1004,12 @@ msgstr "Grupa woluminów"
 msgid "Logical Volume Name"
 msgstr "Nazwa logicznego woluminu"
 
-#: src/dialogs/partition_dialogs.ycp:449
+#: src/dialogs/partition_dialogs.ycp:450
 msgid "The partition ID must be between 0x00 and 0xff."
 msgstr "Identyfikator partycji musi być ustawiony pomiędzy 0x00 i 0xff."
 
-#: src/dialogs/partition_dialogs.ycp:473
-#: src/dialogs/partition_dialogs.ycp:1032
+#: src/dialogs/partition_dialogs.ycp:474
+#: src/dialogs/partition_dialogs.ycp:1033
 msgid ""
 "No additional partitions can be added.\n"
 "The last partition created ends at the disk boundaries\n"
@@ -1031,15 +1019,16 @@ msgstr ""
 "Ostatnia partycja kończy się na końcu dysku \n"
 "ze względu na opcję \"maks.\".\n"
 
-#: src/dialogs/partition_dialogs.ycp:493
+#: src/dialogs/partition_dialogs.ycp:494
 msgid "Enter the partition size or a partition number."
 msgstr "Proszę podać rozmiar albo numer partycji."
 
-#: src/dialogs/partition_dialogs.ycp:497
-msgid "You want to reuse a partition. Please enter the partition number."
+#: src/dialogs/partition_dialogs.ycp:498
+#, fuzzy
+msgid "To reuse a partition, the partition number is required."
 msgstr "Proszę podać numer partycji do ponownego użycia."
 
-#: src/dialogs/partition_dialogs.ycp:660
+#: src/dialogs/partition_dialogs.ycp:661
 msgid ""
 "\n"
 "<P>\n"
@@ -1051,19 +1040,19 @@ msgstr ""
 "W tym miejscu można tworzyć i edytować grupy woluminów. Po edycji należy przypisać fizyczne partycje do grup woluminów w oknie konfiguracji partycji fizycznego dysku twardego. Dla takich partycji należy ustawić identyfikator 0x8e.\n"
 "</P>\n"
 
-#: src/dialogs/partition_dialogs.ycp:665
+#: src/dialogs/partition_dialogs.ycp:666
 msgid "Configure Volume Groups"
 msgstr "Konfiguruj grupę woluminów"
 
-#: src/dialogs/partition_dialogs.ycp:670
+#: src/dialogs/partition_dialogs.ycp:671
 msgid "&Volume Group"
 msgstr "Grupa w&oluminów"
 
-#: src/dialogs/partition_dialogs.ycp:690 src/dialogs/partition_dialogs.ycp:843
+#: src/dialogs/partition_dialogs.ycp:691 src/dialogs/partition_dialogs.ycp:844
 msgid "Help"
 msgstr "Pomoc"
 
-#: src/dialogs/partition_dialogs.ycp:718
+#: src/dialogs/partition_dialogs.ycp:719
 msgid ""
 "This volume group is already configured.\n"
 "Select or enter another name.\n"
@@ -1071,7 +1060,7 @@ msgstr ""
 "Ta grupa woluminów już została skonfigurowana.\n"
 "Proszę wybrać inną grupę lub nazwę.\n"
 
-#: src/dialogs/partition_dialogs.ycp:783
+#: src/dialogs/partition_dialogs.ycp:784
 msgid ""
 "\n"
 "<P>\n"
@@ -1090,35 +1079,35 @@ msgstr ""
 "<p>\n"
 "Więcej informacji znajduje się w dokumentacji.</p>\n"
 
-#: src/dialogs/partition_dialogs.ycp:792
+#: src/dialogs/partition_dialogs.ycp:793
 msgid "Configure Drives"
 msgstr "Konfiguracja napędów"
 
-#: src/dialogs/partition_dialogs.ycp:799
+#: src/dialogs/partition_dialogs.ycp:800
 msgid "&Drive"
 msgstr "Napę&d"
 
-#: src/dialogs/partition_dialogs.ycp:809
+#: src/dialogs/partition_dialogs.ycp:810
 msgid "Use available &free space only"
 msgstr "Użyj tylko dostępnego, &wolnego miejsca"
 
-#: src/dialogs/partition_dialogs.ycp:814
+#: src/dialogs/partition_dialogs.ycp:815
 msgid "&Reuse all existing partitions"
 msgstr "Wykorzystaj ponownie wszystkie istniejące pa&rtycje"
 
-#: src/dialogs/partition_dialogs.ycp:819
+#: src/dialogs/partition_dialogs.ycp:820
 msgid "&Use the following (comma separated) partitions"
 msgstr "&Użyj następujących (oddzielonych przecinkiem) partycji"
 
-#: src/dialogs/partition_dialogs.ycp:831
+#: src/dialogs/partition_dialogs.ycp:832
 msgid "&Partition Numbers (i.e.,  3,4,5)"
 msgstr "Numery &partycji (np. 3, 4, 5)"
 
-#: src/dialogs/partition_dialogs.ycp:837
+#: src/dialogs/partition_dialogs.ycp:838
 msgid "Initialize hard dri&ve"
 msgstr "Inicjalizuj twardy d&ysk"
 
-#: src/dialogs/partition_dialogs.ycp:899
+#: src/dialogs/partition_dialogs.ycp:900
 msgid ""
 "This device is already configured.\n"
 "Select or enter another device name.\n"
@@ -1126,55 +1115,55 @@ msgstr ""
 "To urządzenie już zostało skonfigurowane.\n"
 "Proszę wybrać inną nazwę urządzenia.\n"
 
-#: src/dialogs/partition_dialogs.ycp:949
+#: src/dialogs/partition_dialogs.ycp:950
 msgid "Device"
 msgstr "Urządzenie"
 
-#: src/dialogs/partition_dialogs.ycp:949
+#: src/dialogs/partition_dialogs.ycp:950
 msgid "Mount"
 msgstr "Montuj"
 
-#: src/dialogs/partition_dialogs.ycp:949
+#: src/dialogs/partition_dialogs.ycp:950
 msgid "  Size  "
 msgstr "Rozmiar"
 
-#: src/dialogs/partition_dialogs.ycp:949
+#: src/dialogs/partition_dialogs.ycp:950
 msgid "  Type  "
 msgstr "Typ"
 
-#: src/dialogs/partition_dialogs.ycp:949
+#: src/dialogs/partition_dialogs.ycp:950
 msgid "  File System  "
 msgstr "System plików"
 
-#: src/dialogs/partition_dialogs.ycp:949
+#: src/dialogs/partition_dialogs.ycp:950
 msgid "Region   "
 msgstr "Region"
 
-#: src/dialogs/partition_dialogs.ycp:953
+#: src/dialogs/partition_dialogs.ycp:954
 msgid "Add Dri&ve"
 msgstr "D&odaj napęd"
 
-#: src/dialogs/partition_dialogs.ycp:954
+#: src/dialogs/partition_dialogs.ycp:955
 msgid "Add Volume Group"
 msgstr "Dodaj grupę woluminów"
 
-#: src/dialogs/partition_dialogs.ycp:955
+#: src/dialogs/partition_dialogs.ycp:956
 msgid "Add &Partition"
 msgstr "Dodaj &partycję"
 
-#: src/dialogs/partition_dialogs.ycp:956 src/include/classes.ycp:61
+#: src/dialogs/partition_dialogs.ycp:957 src/include/classes.ycp:61
 msgid "&Edit"
 msgstr "&Edytuj"
 
-#: src/dialogs/partition_dialogs.ycp:957 src/include/classes.ycp:62
+#: src/dialogs/partition_dialogs.ycp:958 src/include/classes.ycp:62
 msgid "&Delete"
 msgstr "&Usuń"
 
-#: src/dialogs/partition_dialogs.ycp:961
+#: src/dialogs/partition_dialogs.ycp:962
 msgid "Partition Plans"
 msgstr "Plan partycji"
 
-#: src/dialogs/partition_dialogs.ycp:1043
+#: src/dialogs/partition_dialogs.ycp:1044
 msgid "Select a drive first."
 msgstr "Najpierw proszę wybrać dysk."
 
@@ -1570,128 +1559,128 @@ msgstr "Nie ma profili w tej klasie"
 msgid "Select at least one class configuration.\n"
 msgstr "Proszę wybrać przynajmniej jedną klasę konfiguracji.\n"
 
-#: src/include/conftree.ycp:25 src/include/conftree.ycp:513
+#: src/include/conftree.ycp:25 src/include/conftree.ycp:514
 msgid "Save as..."
 msgstr "Zapisz jako..."
 
-#: src/include/conftree.ycp:31 src/include/conftree.ycp:526
+#: src/include/conftree.ycp:31 src/include/conftree.ycp:527
 #, ycp-format
 msgid "File %1 was saved successfully."
 msgstr "Plik %1 zapisano pomyślnie."
 
-#: src/include/conftree.ycp:39 src/include/conftree.ycp:531
+#: src/include/conftree.ycp:40 src/include/conftree.ycp:533
 msgid "An error occured while saving the file."
 msgstr "Wystąpił błąd podczas zapisywania pliku."
 
 #. push button label
-#: src/include/conftree.ycp:94
+#: src/include/conftree.ycp:95
 msgid "Reset Confi&guration"
 msgstr "Przywróć do&myślne"
 
 #. push button label
-#: src/include/conftree.ycp:97
+#: src/include/conftree.ycp:98
 msgid "Configur&e"
 msgstr "Kon&figuracja"
 
-#: src/include/conftree.ycp:146
+#: src/include/conftree.ycp:147
 msgid "The module returned invalid data."
 msgstr "Moduł zwrócił nieprawidłowe dane."
 
-#: src/include/conftree.ycp:210
+#: src/include/conftree.ycp:211
 msgid "&File"
 msgstr "&Plik"
 
-#: src/include/conftree.ycp:211
+#: src/include/conftree.ycp:212
 msgid "&View"
 msgstr "&Widok"
 
-#: src/include/conftree.ycp:212
+#: src/include/conftree.ycp:213
 msgid "&Classes"
 msgstr "&Klasy"
 
-#: src/include/conftree.ycp:213
+#: src/include/conftree.ycp:214
 msgid "&Tools"
 msgstr "Na&rzędzia"
 
-#: src/include/conftree.ycp:215
+#: src/include/conftree.ycp:216
 msgid "&New"
 msgstr "&Nowy"
 
-#: src/include/conftree.ycp:217
+#: src/include/conftree.ycp:218
 msgid "&Open"
 msgstr "&Otwórz"
 
-#: src/include/conftree.ycp:219
+#: src/include/conftree.ycp:220
 msgid "&Save"
 msgstr "Zapi&sz"
 
-#: src/include/conftree.ycp:221
+#: src/include/conftree.ycp:222
 msgid "Save &As"
 msgstr "Zapisz j&ako"
 
-#: src/include/conftree.ycp:223
+#: src/include/conftree.ycp:224
 msgid "Im&port"
 msgstr "Im&portuj"
 
-#: src/include/conftree.ycp:225
+#: src/include/conftree.ycp:226
 msgid "Import &Kickstart File"
 msgstr "Importuj plik &Kickstart"
 
-#: src/include/conftree.ycp:227
+#: src/include/conftree.ycp:228
 msgid "Settin&gs"
 msgstr "Usta&wienia"
 
-#: src/include/conftree.ycp:229
+#: src/include/conftree.ycp:230
 msgid "E&xit"
 msgstr "Za&kończ"
 
-#: src/include/conftree.ycp:231
+#: src/include/conftree.ycp:232
 msgid "Configu&ration Tree"
 msgstr "Drzewo konfigu&racji"
 
-#: src/include/conftree.ycp:233
+#: src/include/conftree.ycp:234
 msgid "So&urce"
 msgstr "Kod źró&dłowy"
 
-#: src/include/conftree.ycp:235
+#: src/include/conftree.ycp:236
 msgid "Cla&sses"
 msgstr "Kla&sy"
 
-#: src/include/conftree.ycp:237
+#: src/include/conftree.ycp:238
 msgid "Me&rge Classes"
 msgstr "P&ołącz klasy"
 
-#: src/include/conftree.ycp:240
+#: src/include/conftree.ycp:241
 msgid "Create Reference Pro&file"
 msgstr "Utwórz pro&fil referencyjny"
 
-#: src/include/conftree.ycp:242
+#: src/include/conftree.ycp:243
 msgid "Check &Validity of Profile"
 msgstr "Sprawdź p&oprawność profilu"
 
-#: src/include/conftree.ycp:290
+#: src/include/conftree.ycp:291
 msgid "No modules available in this group."
 msgstr "Nie ma dostępnych modułów w tej grupie."
 
-#: src/include/conftree.ycp:310
+#: src/include/conftree.ycp:311
 msgid "Source"
 msgstr "Źródło"
 
-#: src/include/conftree.ycp:328 src/include/conftree.ycp:390
-#: src/include/conftree.ycp:419 src/include/conftree.ycp:486
+#: src/include/conftree.ycp:329 src/include/conftree.ycp:391
+#: src/include/conftree.ycp:420 src/include/conftree.ycp:487
 msgid "Available modules"
 msgstr "Dostępne moduły"
 
 #. opening/parsing the xml file failed
-#: src/include/conftree.ycp:466
+#: src/include/conftree.ycp:467
 msgid "An error occured while opening/parsing the XML file."
 msgstr "Wystąpił błąd podczas otwierania/parsowania pliku XML."
 
-#: src/include/conftree.ycp:573
+#: src/include/conftree.ycp:575
 msgid "Control file changed."
 msgstr "Plik kontrolny został zmieniony."
 
-#: src/include/conftree.ycp:574
+#: src/include/conftree.ycp:576
 #, ycp-format
 msgid "Save the changes to %1?"
 msgstr "Zapisać zmiany do %1?"
@@ -1764,7 +1753,7 @@ msgid "Parsing the rules file failed. XML parser reports:\n"
 msgstr "Parsowanie pliku reguł nie powiodło się. Odpowiedź parsera XML:\n"
 
 #. autoyast has read the autoyast configuration file but something went wrong
-#: src/modules/AutoInstallRules.ycp:687 src/modules/Profile.ycp:570
+#: src/modules/AutoInstallRules.ycp:687 src/modules/Profile.ycp:571
 msgid "The XML parser reported an error while parsing the autoyast profile. The error message is:\n"
 msgstr "Parser XML zgłasza błąd podczas parsowania profilu AutoYaST. Komunikat błędu:\n"
 
@@ -1886,47 +1875,58 @@ msgid "Second Stage of AutoYaST"
 msgstr "Etap drugi działania programu AutoYaST"
 
 #: src/modules/AutoinstGeneral.ycp:115
-msgid "Halt the machine after stage one"
+#, fuzzy
+msgid "Halting the machine after stage one"
 msgstr "Zatrzymaj komputer po pierwszej fazie"
 
 #: src/modules/AutoinstGeneral.ycp:121
-msgid "Accept unsigned files"
+#, fuzzy
+msgid "Accepting unsigned files"
 msgstr "Akceptuj niepodpisane pliki"
 
 #: src/modules/AutoinstGeneral.ycp:121
-msgid "Don't accept unsigned files"
+#, fuzzy
+msgid "Not accepting unsigned files"
 msgstr "Nie akceptuj niepodpisanych plików"
 
 #: src/modules/AutoinstGeneral.ycp:123
-msgid "Accept files without a checksum"
+#, fuzzy
+msgid "Accepting files without a checksum"
 msgstr "Akceptuj pliki bez sum kontrolnych"
 
 #: src/modules/AutoinstGeneral.ycp:123
-msgid "Don't accept files without a checksum"
+#, fuzzy
+msgid "Not accepting files without a checksum"
 msgstr "Nie akceptuj plików bez sum kontrolnych"
 
 #: src/modules/AutoinstGeneral.ycp:125
-msgid "Accept failed verifications"
+#, fuzzy
+msgid "Accepting failed verifications"
 msgstr "Akceptuj pliki niezweryfikowane"
 
 #: src/modules/AutoinstGeneral.ycp:125
-msgid "Don't accept failed verifications"
+#, fuzzy
+msgid "Not accepting failed verifications"
 msgstr "Nie akceptuj plików niezweryfikowanych"
 
 #: src/modules/AutoinstGeneral.ycp:127
-msgid "Accept unknown GPG Keys"
+#, fuzzy
+msgid "Accepting unknown GPG keys"
 msgstr "Akceptuj nieznane klucze GnuPG"
 
 #: src/modules/AutoinstGeneral.ycp:127
-msgid "Don't accept unknown GPG Keys"
+#, fuzzy
+msgid "Not accepting unknown GPG Keys"
 msgstr "Nie akceptuj nieznanych kluczy GnuPG"
 
 #: src/modules/AutoinstGeneral.ycp:129
-msgid "Import new GPG Keys"
+#, fuzzy
+msgid "Importing new GPG keys"
 msgstr "Importuj nowe klucze GPG"
 
 #: src/modules/AutoinstGeneral.ycp:129
-msgid "Don't import new GPG Keys"
+#, fuzzy
+msgid "Not importing new GPG Keys"
 msgstr "Nie importuj nowych kluczy GPG"
 
 #: src/modules/AutoinstScripts.ycp:211
@@ -1966,7 +1966,7 @@ msgid "Unknown"
 msgstr "Nieznane"
 
 #. warning text during the installation. %1 is a list of package names
-#: src/modules/AutoinstSoftware.ycp:95
+#: src/modules/AutoinstSoftware.ycp:90
 #, ycp-format
 msgid ""
 "These packages could not be found on the installation source:\n"
@@ -1975,45 +1975,32 @@ msgstr ""
 "Wymienionych pakietów nie można znaleźć w źródłach instalacyjnych:\n"
 "%1"
 
-#: src/modules/AutoinstSoftware.ycp:199
-msgid "Base Selection"
-msgstr "Wybór podstawowy"
-
-#: src/modules/AutoinstSoftware.ycp:202
-msgid "Add-on Selections"
-msgstr "Wybór dodatkowy"
-
-#: src/modules/AutoinstSoftware.ycp:216
+#: src/modules/AutoinstSoftware.ycp:193
 msgid "Selected Patterns"
 msgstr "Wybrane wzorce"
 
-#: src/modules/AutoinstSoftware.ycp:230
+#: src/modules/AutoinstSoftware.ycp:206
 msgid "Individually Selected Packages"
 msgstr "Indywidualnie wybrane pakiety"
 
-#: src/modules/AutoinstSoftware.ycp:234
+#: src/modules/AutoinstSoftware.ycp:210
 msgid "Packages to Remove"
 msgstr "Pakiety do usunięcia"
 
-#: src/modules/AutoinstSoftware.ycp:240
+#: src/modules/AutoinstSoftware.ycp:216
 msgid "Force Kernel Package"
 msgstr "Wymuś pakiet jądra systemu"
 
-#: src/modules/AutoinstSoftware.ycp:381
-#, ycp-format
-msgid "Could not set base selection: %1"
-msgstr "Nie można ustawić wyboru podstawowego: %1"
+#: src/modules/AutoinstSoftware.ycp:366
+#, fuzzy, ycp-format
+msgid "Could not set patterns: %1."
+msgstr "Nie można określić wzorców/wyboru: %1"
 
-#: src/modules/AutoinstSoftware.ycp:431
-#, ycp-format
-msgid "Could not set patterns or selections: %1"
-msgstr "Nie można określić wzorców lub wyboru: %1"
-
-#: src/modules/AutoinstStorage.ycp:535
+#: src/modules/AutoinstStorage.ycp:566
 msgid "Drives"
 msgstr "Napędy"
 
-#: src/modules/AutoinstStorage.ycp:537
+#: src/modules/AutoinstStorage.ycp:568
 #, ycp-format
 msgid "Total of %1 drive"
 msgid_plural "Total of %1 drives"
@@ -2021,20 +2008,20 @@ msgstr[0] "Suma: %1 napęd"
 msgstr[1] "Suma: %1 napędy"
 msgstr[2] "W sumie %1 napędów"
 
-#: src/modules/AutoinstStorage.ycp:540
+#: src/modules/AutoinstStorage.ycp:571
 msgid "No specific device configured"
 msgstr "Nie skonfigurowano żadnego urządzenia"
 
-#: src/modules/AutoinstStorage.ycp:557
+#: src/modules/AutoinstStorage.ycp:588
 msgid "Evaluating root partition. One moment please..."
 msgstr "Wykrywanie partycji głównej (root). Proszę czekać..."
 
 #. a popup
-#: src/modules/AutoinstStorage.ycp:565
+#: src/modules/AutoinstStorage.ycp:596
 msgid "No Linux root partition found."
 msgstr "Nie znaleziono żadnej linuksowej partycji głównej."
 
-#: src/modules/AutoinstStorage.ycp:579
+#: src/modules/AutoinstStorage.ycp:610
 msgid ""
 "Multiple root partitions found, but you did not configure\n"
 "which root partition should be used.  Automatic installation not possible.\n"
@@ -2042,7 +2029,7 @@ msgstr ""
 "Znaleziono kilka partycji głównych, ale nie skonfigurowano,\n"
 "która ma zostać użyta. Automatyczna instalacja nie jest możliwa.\n"
 
-#: src/modules/Profile.ycp:208
+#: src/modules/Profile.ycp:209
 msgid "Collecting configuration data..."
 msgstr "Zbieranie danych konfiguracyjnych..."
 
@@ -2055,8 +2042,29 @@ msgstr "Wystąpił błąd podczas pobierania profilu:\n"
 msgid "Reading configuration data..."
 msgstr "Odczytywanie danych konfiguracyjnych..."
 
-#~ msgid "Could not set patterns/selections: %1"
-#~ msgstr "Nie można określić wzorców/wyboru: %1"
+#~ msgid "Error while retrieving image."
+#~ msgstr "Błąd podczas odzyskiwania obrazu."
+
+#~ msgid "Software"
+#~ msgstr "Oprogramowanie"
+
+#~ msgid "&Detailed selection..."
+#~ msgstr "&Szczegółowy wybór oprogramowania..."
+
+#~ msgid "Checking XML with DTD validation..."
+#~ msgstr "Sprawdzanie XML z walidacją DTD..."
+
+#~ msgid "Base Selection"
+#~ msgstr "Wybór podstawowy"
+
+#~ msgid "Add-on Selections"
+#~ msgstr "Wybór dodatkowy"
+
+#~ msgid "Could not set base selection: %1"
+#~ msgstr "Nie można ustawić wyboru podstawowego: %1"
+
+#~ msgid "Could not set patterns or selections: %1"
+#~ msgstr "Nie można określić wzorców lub wyboru: %1"
 
 #~ msgid "Sunday"
 #~ msgstr "niedziela"

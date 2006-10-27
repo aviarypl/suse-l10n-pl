@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: runlevel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2006-10-06 16:42+0200\n"
+"POT-Creation-Date: 2006-10-26 16:19+0200\n"
 "PO-Revision-Date: 2006-04-11 15:50+0200\n"
 "Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -105,7 +105,7 @@ msgid "Unchanged"
 msgstr "Niezmieniony"
 
 #. Rich text title
-#: src/RunlevelEd.ycp:696 src/runlevel_proposal.ycp:122
+#: src/RunlevelEd.ycp:696 src/runlevel_proposal.ycp:264
 msgid "Default Runlevel"
 msgstr "Domyślny poziom pracy"
 
@@ -128,7 +128,7 @@ msgstr "Błąd: usługa \"%1\" nie została znaleziona."
 
 #. translators: table headers
 #. table header
-#: src/runlevel.ycp:112 src/ui.ycp:1074 src/ui.ycp:1345 src/ui.ycp:1562
+#: src/runlevel.ycp:112 src/ui.ycp:1042 src/ui.ycp:1313 src/ui.ycp:1530
 msgid "Service"
 msgstr "Usługa"
 
@@ -137,7 +137,7 @@ msgid "Runlevels"
 msgstr "Poziomy pracy"
 
 #. headers in table
-#: src/runlevel.ycp:112 src/ui.ycp:1082 src/ui.ycp:1345 src/ui.ycp:1570
+#: src/runlevel.ycp:112 src/ui.ycp:1050 src/ui.ycp:1313 src/ui.ycp:1538
 msgid "Description"
 msgstr "Opis"
 
@@ -201,18 +201,101 @@ msgstr "Wyświetlenie domyślnych poziomów pracy zamiast bieżącego"
 msgid "Saving default runlevel..."
 msgstr "Zapisywanie domyślnego poziomu pracy..."
 
-#. Heading label
-#: src/runlevel_proposal.ycp:37
+#. popup question, %1 means the current runlevel (number)
+#: src/runlevel_proposal.ycp:49
+#, ycp-format
+msgid ""
+"VNC needs runlevel 5 to run correctly.\n"
+"No graphical system login will be available\n"
+"after the computer is rebooted.\n"
+"\n"
+"Are you sure you want to use runlevel %1 instead?"
+msgstr ""
+
+#. popup question, %1 means the current runlevel (number)
+#: src/runlevel_proposal.ycp:63
+#, ycp-format
+msgid ""
+"SSH needs running network.\n"
+"You have selected a non-network runlevel.\n"
+"Recommended runlevels are 3 or 5.\n"
+"\n"
+"Are you sure you want to use %1 instead?"
+msgstr ""
+
+#. dialog caption
+#: src/runlevel_proposal.ycp:98
 msgid "Set Default Runlevel"
 msgstr "Domyślny poziom pracy"
 
-#. ComboBox label
-#: src/runlevel_proposal.ycp:40
-msgid "&Default Runlevel:"
-msgstr "&Domyślny poziom pracy:"
+#. frame label
+#: src/runlevel_proposal.ycp:103
+#, fuzzy
+msgid "Available Runlevels"
+msgstr "Dostępne moduły"
+
+#. made by rwalter@novell.com, bug #206664 comment #8
+#. help for runlevel - installation proposal, part 1
+#: src/runlevel_proposal.ycp:115
+#, fuzzy
+msgid "<p><b><big>Selecting the Default Runlevel</big</b></p>"
+msgstr "<p><b><big>Wybranie członkostwa Samby</big></b></p>"
+
+#. help for runlevel - installation proposal, part 2
+#: src/runlevel_proposal.ycp:118
+msgid ""
+"<p>The runlevel is the setting that helps determine which services are\n"
+"available by default. Select the level that includes the services this system\n"
+"should allow when the system starts.</p>"
+msgstr ""
+
+#. help for runlevel - installation proposal, part 3
+#: src/runlevel_proposal.ycp:123
+msgid ""
+"<p>Runlevel <b>2</b> allows multiple users to log in to the system locally, but\n"
+"no network or network services are available.  This setting is rarely used as\n"
+"the default.</p>"
+msgstr ""
+
+#. help for runlevel - installation proposal, part 4
+#: src/runlevel_proposal.ycp:128
+msgid ""
+"<p>Runlevel <b>3</b> allows both local and remote logins and enables the\n"
+"network and any configured network services.  This setting does not start the\n"
+"graphical login manager, so graphical user interfaces cannot be used\n"
+"immediately.</p>"
+msgstr ""
+
+#. help for runlevel - installation proposal, part 5
+#: src/runlevel_proposal.ycp:134
+msgid ""
+"<p>Runlevel <b>5</b> is the most common default runlevel for workstations.  In\n"
+"addition to the network, it starts the X display manager, which allows\n"
+"graphical logins.  It also starts any other configured services.</p>"
+msgstr ""
+
+#. help for runlevel - installation proposal, part 6
+#: src/runlevel_proposal.ycp:139
+msgid ""
+"<p>If you are not sure what to select, runlevel <b>5</b> is generally a good\n"
+"choice for workstations.  Runlevel <b>3</b> is often used on servers that do\n"
+"not have a monitor and should not use graphical interfaces.</p>"
+msgstr ""
+
+#. proposal warning, VNC needs runlevel 5, but the selected one is not 5
+#: src/runlevel_proposal.ycp:230
+msgid ""
+"<li>VNC needs runlevel 5 to run correctly.\n"
+"No graphical system login will be available after the computer is rebooted.</li>"
+msgstr ""
+
+#. proposal warning, SSH needs runlevel 3 or 5, but the selected one is neither one of them
+#: src/runlevel_proposal.ycp:236
+msgid "<li>SSH needs runlevel 3 or 5, but you have currently selected a non-network one.</li>"
+msgstr ""
 
 #. MenuButton title
-#: src/runlevel_proposal.ycp:124
+#: src/runlevel_proposal.ycp:266
 msgid "Default &Runlevel"
 msgstr "Domyślny poziom p&racy"
 
@@ -291,32 +374,32 @@ msgstr "stan programu lub usługi jest nieznany"
 #. translators: substituted into a message like
 #. "To enable/disable foo IN ALL RUNLEVELS, this must be done..."
 #. (do not include the trailing comma here)
-#: src/ui.ycp:323
+#: src/ui.ycp:291
 msgid "in all runlevels"
 msgstr "we wszystkich poziomach pracy"
 
 #. translators: substituted into a message like
 #. "To enable/disable foo IN RUNLEVELS 3, 5, this must be done..."
 #. (do not include the trailing comma here)
-#: src/ui.ycp:331
+#: src/ui.ycp:299
 #, ycp-format
 msgid "in runlevels %1"
 msgstr "w poziomach pracy %1"
 
-#: src/ui.ycp:331
+#: src/ui.ycp:299
 #, ycp-format
 msgid "in runlevel %1"
 msgstr "w %1. poziomie pracy"
 
 #. is the service started?
 #. TRANSLATORS: Service status presented in table, Enabled: Yes
-#: src/ui.ycp:342 src/ui.ycp:363
+#: src/ui.ycp:310 src/ui.ycp:331
 msgid "Yes"
 msgstr "Tak"
 
 #. is the service started?
 #. TRANSLATORS: Service status presented in table, Enabled: No
-#: src/ui.ycp:345 src/ui.ycp:366
+#: src/ui.ycp:313 src/ui.ycp:334
 msgid "No"
 msgstr "Nie"
 
@@ -324,12 +407,12 @@ msgstr "Nie"
 #. ???: we do not know yet what is the service state
 #. TRANSLATORS: Unknown service status, presented in table
 #. TRANSLATORS: Unknown service status presented in table
-#: src/ui.ycp:348 src/ui.ycp:358 src/ui.ycp:361
+#: src/ui.ycp:316 src/ui.ycp:326 src/ui.ycp:329
 msgid "???"
 msgstr "???"
 
 #. help text
-#: src/ui.ycp:559
+#: src/ui.ycp:527
 msgid ""
 "<P><BIG><B>System Service (Runlevel) Initialization</B></BIG><BR>\n"
 "Please wait...</P>\n"
@@ -338,7 +421,7 @@ msgstr ""
 "Proszę czekać...</P>\n"
 
 #. warning
-#: src/ui.ycp:564
+#: src/ui.ycp:532
 msgid ""
 "<p><b>Note:</b> The system services (runlevel editor) is an expert tool. Only change settings if\n"
 " you know what you are doing.  Otherwise your system might not function properly afterwards.</p>\n"
@@ -349,7 +432,7 @@ msgstr ""
 
 #. continue-cancel popup when enabling a service
 #. %1 is a list of unsatisfied dependencies
-#: src/ui.ycp:636
+#: src/ui.ycp:604
 #, ycp-format
 msgid ""
 "These required services are missing:\n"
@@ -363,7 +446,7 @@ msgstr ""
 #. continue-cancel popup
 #. translators: %2 is "in runlevel(s) 3, 5"
 #. or "in all runlevels"
-#: src/ui.ycp:712
+#: src/ui.ycp:680
 #, ycp-format
 msgid ""
 "To disable service %1 %2,\n"
@@ -380,7 +463,7 @@ msgstr ""
 #. continue-cancel popup
 #. translators: %2 is "in runlevel(s) 3, 5"
 #. or "in all runlevels"
-#: src/ui.ycp:720
+#: src/ui.ycp:688
 #, ycp-format
 msgid ""
 "To enable service %1 %2,\n"
@@ -394,7 +477,7 @@ msgstr ""
 
 #. *stop*
 #. continue-cancel popup
-#: src/ui.ycp:726
+#: src/ui.ycp:694
 #, ycp-format
 msgid ""
 "To stop service %1,\n"
@@ -407,7 +490,7 @@ msgstr ""
 
 #. *start*
 #. continue-cancel popup
-#: src/ui.ycp:732
+#: src/ui.ycp:700
 #, ycp-format
 msgid ""
 "To start service %1,\n"
@@ -424,7 +507,7 @@ msgstr ""
 #. continue-cancel popup
 #. translators: %2 is "in runlevel(s) 3, 5"
 #. or "in all runlevels"
-#: src/ui.ycp:740
+#: src/ui.ycp:708
 #, ycp-format
 msgid ""
 "To stop service %1 and disable it %2,\n"
@@ -441,7 +524,7 @@ msgstr ""
 #. continue-cancel popup
 #. translators: %2 is "in runlevel(s) 3, 5"
 #. or "in all runlevels"
-#: src/ui.ycp:748
+#: src/ui.ycp:716
 #, ycp-format
 msgid ""
 "To start service %1 and enable it %2,\n"
@@ -455,20 +538,20 @@ msgstr ""
 "%3."
 
 #. popup heading
-#: src/ui.ycp:792
+#: src/ui.ycp:760
 msgid "An error has occurred."
 msgstr "Wystąpił błąd."
 
 #. %1 service, %2 command,
 #. %3 exit status, %4 status description, %5 stdout
 #. added a colon
-#: src/ui.ycp:905
+#: src/ui.ycp:873
 #, ycp-format
 msgid "<p><b>/etc/init.d/%1 %2</b> returned %3 (%4):<br>%5</p>"
 msgstr "<p>Polecenie <b>/etc/init.d/%1 %2</b> zwróciło %3 (%4):<br>%5</p>"
 
 #. list of services will follow
-#: src/ui.ycp:995
+#: src/ui.ycp:963
 msgid ""
 "Following services run in current\n"
 "runlevel although they should not:"
@@ -477,7 +560,7 @@ msgstr ""
 "mimo że nie powinny, następujące usługi:"
 
 #. list of services will follow
-#: src/ui.ycp:1002
+#: src/ui.ycp:970
 msgid ""
 "Following services do not run in current\n"
 "runlevel although they should:"
@@ -486,17 +569,17 @@ msgstr ""
 "mimo że powinny, następujące usługi:"
 
 #. radio button label
-#: src/ui.ycp:1022
+#: src/ui.ycp:990
 msgid "&Simple Mode"
 msgstr "Tryb pro&sty"
 
 #. radio button label
-#: src/ui.ycp:1026
+#: src/ui.ycp:994
 msgid "&Expert Mode"
 msgstr "Tryb &zaawansowany"
 
 #. help text
-#: src/ui.ycp:1041
+#: src/ui.ycp:1009
 msgid ""
 "<p>Assign system services to runlevels by selecting the list entry of the respective service then\n"
 "checking or unchecking the <b>check boxes B-S</b> for the runlevel.</p>\n"
@@ -505,12 +588,12 @@ msgstr ""
 "pozycje z listy i zaznaczając albo odznaczając pola wyboru<b>B-S</b> dla poziomu pracy.</p>\n"
 
 #. help text
-#: src/ui.ycp:1046
+#: src/ui.ycp:1014
 msgid "<p><b>Start/Stop/Refresh:</b> Use this to start or stop services individually.</p>"
 msgstr "<p>Poszczególne usługi można uruchamiać lub zatrzymywać za pomocą przycisku <b>Uruchom / Zatrzymaj / Odśwież</b>. </p>"
 
 #. help text
-#: src/ui.ycp:1049
+#: src/ui.ycp:1017
 msgid ""
 "<P><B>Set and Reset:</B>\n"
 "Select runlevels in which to run the currently selected service.<ul>\n"
@@ -527,12 +610,12 @@ msgstr ""
 "</ul></p>\n"
 
 #. The change does not occur immediately. After a reboot the system boots into the specified runlevel.
-#: src/ui.ycp:1058
+#: src/ui.ycp:1026
 msgid "<p>Changes to the <b>default runlevel</b> will take effect next time you boot your computer.</p>"
 msgstr "<p>Zmiany w <b>domyślnym poziomie pracy</b> zadziałają przy następnym uruchomieniu komputera.</p>"
 
 #. table header. is a service running?
-#: src/ui.ycp:1076
+#: src/ui.ycp:1044
 msgid "Running"
 msgstr "Uruchomiona"
 
@@ -544,70 +627,70 @@ msgstr "Uruchomiona"
 #. ),
 #.
 #. combo box label
-#: src/ui.ycp:1101 src/ui.ycp:1574
+#: src/ui.ycp:1069 src/ui.ycp:1542
 msgid "&Set default runlevel after booting to:"
 msgstr "U&staw domyślny poziom pracy po uruchomieniu systemu na:"
 
 #. label above checkboxes
 #. label above checkboxed
-#: src/ui.ycp:1116 src/ui.ycp:1583
+#: src/ui.ycp:1084 src/ui.ycp:1551
 msgid "Service will be started in following runlevels:"
 msgstr "Usługa będzie uruchamiana w następujących poziomach pracy:"
 
 #. menubutton label
-#: src/ui.ycp:1121
+#: src/ui.ycp:1089
 msgid "S&tart/Stop/Refresh"
 msgstr "Uruchom / Za&trzymaj / Odśwież"
 
 #. menu item
-#: src/ui.ycp:1123
+#: src/ui.ycp:1091
 msgid "&Start now ..."
 msgstr "Uru&chom teraz..."
 
 #. menu item
-#: src/ui.ycp:1125
+#: src/ui.ycp:1093
 msgid "S&top now ..."
 msgstr "Zatrzymaj &teraz..."
 
 #. menu item
-#: src/ui.ycp:1127
+#: src/ui.ycp:1095
 msgid "&Refresh status ..."
 msgstr "Odśwież &stan... "
 
 #. menubutton label
-#: src/ui.ycp:1133
+#: src/ui.ycp:1101
 msgid "Set/&Reset"
 msgstr "Włącz / W&yłącz"
 
 #. menu item
 #. `opt (`key_F3),
-#: src/ui.ycp:1135
+#: src/ui.ycp:1103
 msgid "&Enable the service"
 msgstr "Włącz &usługę"
 
 #. menu item
 #. `opt (`key_F5),
-#: src/ui.ycp:1137
+#: src/ui.ycp:1105
 msgid "&Disable the service"
 msgstr "W&yłącz usługę"
 
 #. menu item
-#: src/ui.ycp:1146
+#: src/ui.ycp:1114
 msgid "Enable &all services"
 msgstr "Włącz wszystkie usłu&gi"
 
 #. menu item
-#: src/ui.ycp:1151
+#: src/ui.ycp:1119
 msgid "Save Dependency &Graph"
 msgstr "Zap&isz wykres zależności"
 
 #. dialog caption.
-#: src/ui.ycp:1158 src/ui.ycp:1599
+#: src/ui.ycp:1126 src/ui.ycp:1567
 msgid "System Services (Runlevel): Details"
 msgstr "Usługi systemowe (poziomy pracy): szczegóły"
 
 #. yes-no popup
-#: src/ui.ycp:1217 src/ui.ycp:1429
+#: src/ui.ycp:1185 src/ui.ycp:1397
 msgid ""
 "Now the changes to runlevels \n"
 "will be saved."
@@ -616,12 +699,12 @@ msgstr ""
 "zostaną teraz zapisane."
 
 #. yes-no popup
-#: src/ui.ycp:1265
+#: src/ui.ycp:1233
 msgid "Really enable all services?"
 msgstr "Czy na pewno włączyć wszystkie usługi?"
 
 #. message popup
-#: src/ui.ycp:1272
+#: src/ui.ycp:1240
 msgid ""
 "Each service was enabled\n"
 "in the appropriate runlevels."
@@ -630,7 +713,7 @@ msgstr ""
 "w odpowiednich poziomach pracy."
 
 #. yes-no popup. the user wants to stop xdm
-#: src/ui.ycp:1281
+#: src/ui.ycp:1249
 msgid ""
 "This may kill your X session.\n"
 "\n"
@@ -642,12 +725,12 @@ msgstr ""
 
 #. Simple mode dialog
 #. help text
-#: src/ui.ycp:1319
+#: src/ui.ycp:1287
 msgid "<p>Here, specify which system services should be started.</p>"
 msgstr "<p>W tym miejscu można określić, które usługi systemowe powinny być uruchamiane.</p>"
 
 #. warning
-#: src/ui.ycp:1322
+#: src/ui.ycp:1290
 msgid ""
 "<p><b>Warning:</b> The system services (runlevel editor) is an expert tool. Only change settings if you know\n"
 " what you are doing.  Otherwise your system might not function properly afterwards.</p>\n"
@@ -659,7 +742,7 @@ msgstr ""
 
 #. help text
 #. Activate is a button
-#: src/ui.ycp:1328
+#: src/ui.ycp:1296
 msgid ""
 "<p><b>Activate</b> starts the selected service and services\n"
 "that it depends on and enables them to start at system boot time.\n"
@@ -672,71 +755,71 @@ msgstr ""
 "oraz wyłącza ich uruchamianie podczas uruchamiania systemu.</p>"
 
 #. help text
-#: src/ui.ycp:1334
+#: src/ui.ycp:1302
 msgid "<p>An asterisk (*) after a service status means that the service is enabled but not running or is disabled but running now.</p>"
 msgstr "<p>Gwiazdka (*) obok stanu usługi oznacza, że usługa jest włączona, ale nie jest obecnie uruchomiona, albo że jest wyłączona, a mimo to jest w tej chwili uruchomiona.</p>"
 
 #. help text
-#: src/ui.ycp:1337
+#: src/ui.ycp:1305
 msgid "<p>To change the behavior of runlevels and system services in detail, click <b>Expert Mode</b>.</p>\n"
 msgstr "<p>Aby zmienić szczegóły zachowania poziomów pracy i usług systemowych, należy wybrać <b>Tryb zaawansowany</b>.</p>\n"
 
-#: src/ui.ycp:1345
+#: src/ui.ycp:1313
 msgid "Enabled"
 msgstr "Włączone"
 
 #. Button label
-#: src/ui.ycp:1356
+#: src/ui.ycp:1324
 msgid "Ena&ble"
 msgstr "Włą&cz"
 
 #. Button label
-#: src/ui.ycp:1358
+#: src/ui.ycp:1326
 msgid "&Disable"
 msgstr "W&yłącz"
 
 #. dialog caption.
-#: src/ui.ycp:1362
+#: src/ui.ycp:1330
 msgid "System Services (Runlevel): Services"
 msgstr "Usługi systemowe (poziomy pracy): usługi"
 
 #. help text
-#: src/ui.ycp:1466
+#: src/ui.ycp:1434
 msgid "<p><b>Prepare data for autoinstallation.</b></p>"
 msgstr "<p><b>Przygotowywanie danych do automatycznej instalacji.</b></p>"
 
 #. help text
-#: src/ui.ycp:1469
+#: src/ui.ycp:1437
 msgid "<p>Change the services to requested state. Only services marked as changed will really be changed in the target system.</p>"
 msgstr "<p>Proszę zmienić usługi w żądany sposób. Tylko usługi oznaczone jako zmienione zostaną naprawdę zmienione w docelowym systemie.</p>"
 
 #. help text
-#: src/ui.ycp:1472
+#: src/ui.ycp:1440
 msgid "<p>If you made a mistake and want to undo the change, press <b>Clear</b> or <b>Clear all</b>.</p>"
 msgstr "<p>W przypadku popełnienia błędu, zmiany można odwołać za pomocą przycisków <b>Wyczyść</b> oraz <b>Wyczyść wszystko</b>.</p>"
 
 #. dialog heading
-#: src/ui.ycp:1482
+#: src/ui.ycp:1450
 msgid "Add service"
 msgstr "Dodawanie usługi"
 
 #. text entry
-#: src/ui.ycp:1485
+#: src/ui.ycp:1453
 msgid "Service &name"
 msgstr "&Nazwa usługi"
 
 #. label
-#: src/ui.ycp:1487
+#: src/ui.ycp:1455
 msgid "Starts in these runlevels by default:"
 msgstr "Uruchom domyślnie w poziomach pracy:"
 
 #. text entry
-#: src/ui.ycp:1491
+#: src/ui.ycp:1459
 msgid "&Description (optional)"
 msgstr "Opis (nieobowiązkowy)"
 
 #. message popup
-#: src/ui.ycp:1511
+#: src/ui.ycp:1479
 msgid ""
 "Invalid service name. You did not specify service\n"
 "name or the name specified is already in use."
@@ -745,32 +828,32 @@ msgstr ""
 "nie została podana albo jest już używana."
 
 #. table header. has the service state changed?
-#: src/ui.ycp:1564
+#: src/ui.ycp:1532
 msgid "Changed"
 msgstr "Zmienione"
 
 #. button label
-#: src/ui.ycp:1588
+#: src/ui.ycp:1556
 msgid "A&dd"
 msgstr "&Dodaj"
 
 #. button label
-#: src/ui.ycp:1591
+#: src/ui.ycp:1559
 msgid "&Clear"
 msgstr "Wy&czyść"
 
 #. button label
-#: src/ui.ycp:1593
+#: src/ui.ycp:1561
 msgid "Clea&r All"
 msgstr "Wyczyść w&szystko"
 
 #. button label
-#: src/ui.ycp:1595
+#: src/ui.ycp:1563
 msgid "D&efault"
 msgstr "D&omyślnie"
 
 #. yes-no popup
-#: src/ui.ycp:1640
+#: src/ui.ycp:1608
 #, ycp-format
 msgid ""
 "Service portmap, which is required by\n"
@@ -787,6 +870,5 @@ msgstr ""
 "Czy portmap ma pozostać\n"
 "wyłączony?\n"
 
-#, fuzzy
-#~ msgid "Available Runlevels"
-#~ msgstr "Dostępne moduły"
+#~ msgid "&Default Runlevel:"
+#~ msgstr "&Domyślny poziom pracy:"
