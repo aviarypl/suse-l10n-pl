@@ -1,21 +1,22 @@
+# translation of apparmor-utils.pl.po to Polish
 # translation of apparmor-utils.po to
-# translation of apparmor-utils.po to Polish
+#
 # Wojciech Kapusta <wojciech@aviary.pl>, 2006.
 # Sławomir Guz <urugan@interia.pl>, 2006.
-#
+# Maciej Pilichowski <macias@mat.uni.torun.pl>, 2006.
 msgid ""
 msgstr ""
-"Project-Id-Version: apparmor-utils\n"
+"Project-Id-Version: apparmor-utils.pl\n"
 "Report-Msgid-Bugs-To: apparmor-general@forge.novell.com\n"
 "POT-Creation-Date: 2006-09-22 10:57-0600\n"
-"PO-Revision-Date: 2006-10-21 00:15+0200\n"
-"Last-Translator: \n"
-"Language-Team:  <pl@li.org>\n"
+"PO-Revision-Date: 2006-11-07 00:24+0100\n"
+"Last-Translator: Stanisław Małolepszy <smalolepszy@aviary.pl>\n"
+"Language-Team: Polish <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: KBabel 1.10.2\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../genprof:55
 msgid "SubDomain does not appear to be started.  Please enable SubDomain and try again."
@@ -28,17 +29,22 @@ msgstr "Proszę podać program do profilowania: "
 #: ../genprof:87
 #, perl-format
 msgid "Can't find %s in the system path list.  If the name of the application is correct, please run 'which %s' in the other window in order to find the fully-qualified path."
-msgstr "Nie można odnaleźć %s w ścieżkach systemowych. Jeśli nazwa aplikacji jest prawidłowa, proszę uruchomić polecenie 'which %s' w innym oknie, aby odnaleźć pełną ścieżkę."
+msgstr "Nie można odnaleźć %s w katalogach systemowych. Jeśli nazwa aplikacji jest prawidłowa, proszę uruchomić polecenie 'which %s' w innym oknie, aby odnaleźć pełną ścieżkę."
 
-#: ../genprof:89 ../autodep:117 ../audit:112 ../complain:112 ../enforce:111
+#: ../genprof:89
+#: ../autodep:117
+#: ../audit:112
+#: ../complain:112
+#: ../enforce:111
 #, perl-format
 msgid "%s does not exist, please double-check the path."
 msgstr "%s nie istnieje, proszę ponownie sprawdzić ścieżkę."
 
-#: ../genprof:100 ../autodep:99
+#: ../genprof:100
+#: ../autodep:99
 #, perl-format
 msgid "%s is currently marked as a program that should not have it's own profile.  Usually, programs are marked this way if creating a profile for them is likely to break the rest of the system.  If you know what you're doing and are certain you want to create a profile for this program, edit the corresponding entry in the [qualifiers] section in /etc/apparmor/logprof.conf."
-msgstr "Program %s jest określony jako program bez własnego profilu. W ten sposób oznaczane są programy, których profile mogłyby uszkodzić system. W przypadku absolutnej pewności, profil dla tego programu można utworzyć edytując sekcję [qualifiers] w pliku /etc/apparmor/logprof.conf."
+msgstr "Program %s jest określony jako program bez własnego profilu. W ten sposób oznaczane są programy, których profile mogłyby uszkodzić system. Jeżeli mimo wszystko, chcesz utworzyć profil dla tego programu, zmień wpis w sekcji [qualifiers] w pliku /etc/apparmor/logprof.conf."
 
 #: ../genprof:121
 msgid ""
@@ -52,12 +58,12 @@ msgid ""
 "opportunity to choose whether the access should be  \n"
 "allowed or denied."
 msgstr ""
-"Proszę uruchomić w innym oknie aplikację, która ma być profilowana. \n"
+"Proszę uruchomić w innym oknie aplikację, która ma być profilowana i sprawdź jej funkcje. \n"
 "\n"
 "Po zakończeniu proszę nacisnąć przycisk \"Szukaj\", \n"
-"aby przeszukać dzienniki systemowe pod kątem zdarzeń AppArmor.\n"
+"aby wyszukać zdarzenia AppArmor w dziennikach systemowych.\n"
 "\n"
-"Dla każdego zdarzenia AppArmora będzie można określić, czy\n"
+"Dla każdego zdarzenia AppArmor będzie można określić, czy\n"
 "dostęp ma być dozwolony czy zabroniony."
 
 #: ../genprof:140
@@ -81,7 +87,7 @@ msgstr "użycie: %s [ -d /ścieżka/do/profili ] [ -f /scieżka/dziennika] [ pro
 #: ../logprof:75
 #, perl-format
 msgid "usage: %s [ -d /path/to/profiles ] [ -f /path/to/logfile ] [ -m \"mark in log to start processing after\""
-msgstr "użycie: %s [ -d /ścieżka/do/profili ] [ -f /scieżka/dziennika] [ -m \"znak w dzienniku, od którego zacznie się przetwarzanie\" ]"
+msgstr "użycie: %s [ -d /ścieżka/do/profili ] [ -f /scieżka/dziennika] [ -m \"oznaczenie w dzienniku, od którego zacznie się przetwarzanie\" ]"
 
 #: ../autodep:64
 #, perl-format
@@ -95,12 +101,15 @@ msgstr "Proszę podać program, dla którego ma być stworzony profil:"
 #: ../autodep:107
 #, perl-format
 msgid "Profile for %s already exists - skipping."
-msgstr "Profil dla %s już istnieje - pominięcie."
+msgstr "Profil dla %s już istnieje - pominięto."
 
-#: ../autodep:114 ../audit:109 ../complain:109 ../enforce:108
+#: ../autodep:114
+#: ../audit:109
+#: ../complain:109
+#: ../enforce:108
 #, perl-format
 msgid "Can't find %s in the system path list.  If the name of the application is correct, please run 'which %s' as a user with the correct PATH environment set up in order to find the fully-qualified path."
-msgstr "Nie można odnaleźć %s w ścieżkach systemowych. Jeśli nazwa aplikacji jest prawidłowa, to aby znaleźć pełną ścieżkę do programu proszę uruchomić polecenie 'which %s' jako użytkownik z poprawnie ustawionymi ścieżkami systemowymi "
+msgstr "Nie można odnaleźć %s w katalogach systemowych. Jeśli nazwa aplikacji jest prawidłowa, proszę uruchomić 'which %s' przy poprawnie ustawionej zmiennej środowiskowej PATH, aby znaleźć pełną ścieżkę do programu. "
 
 #: ../audit:102
 #, perl-format
@@ -114,23 +123,25 @@ msgstr "użycie: %s [ -d /ścieżka/do/profili ] [ program do przełączenia w t
 
 #: ../complain:67
 msgid "Please enter the program to switch to complain mode: "
-msgstr "Proszę podać program do przełączenia w tryb głośny:"
+msgstr "Proszę podać program do przełączenia w tryb szczegółowy:"
 
-#: ../complain:102 ../SubDomain.pm:426
+#: ../complain:102
+#: ../SubDomain.pm:426
 #, perl-format
 msgid "Setting %s to complain mode."
-msgstr "Ustawianie %s w tryb głośny."
+msgstr "Ustawianie %s w tryb szczegółowy."
 
 #: ../complain:121
 #, perl-format
 msgid "usage: %s [ -d /path/to/profiles ] [ program to switch to complain mode ]"
-msgstr "użycie: %s [ -d /ścieżka/do/profili ] [ program do przełączenia w tryb głośny ]"
+msgstr "użycie: %s [ -d /ścieżka/do/profili ] [ program do przełączenia w tryb szczegółowy ]"
 
 #: ../enforce:67
 msgid "Please enter the program to switch to enforce mode: "
 msgstr "Proszę podać program do przełączenia w tryb wymuszania:"
 
-#: ../enforce:101 ../SubDomain.pm:440
+#: ../enforce:101
+#: ../SubDomain.pm:440
 #, perl-format
 msgid "Setting %s to enforce mode."
 msgstr "Ustawianie %s w tryb wymuszania."
@@ -146,7 +157,6 @@ msgid "Usage: %s [ --paranoid ]\n"
 msgstr "Użycie: %s [ --paranoid ]\n"
 
 #: ../unconfined:57
-#, fuzzy
 msgid "SubDomain does not appear to be started. Please enable SubDomain and try again."
 msgstr "Program SubDomain nie jest uruchomiony. Proszę go włączyć i spróbować ponownie."
 
@@ -154,65 +164,79 @@ msgstr "Program SubDomain nie jest uruchomiony. Proszę go włączyć i spróbow
 msgid "Can't read /proc\n"
 msgstr "Nie mogę odczytać z /proc\n"
 
-#: ../unconfined:91 ../unconfined:93
+#: ../unconfined:91
+#: ../unconfined:93
 msgid "not confined\n"
-msgstr "nieograniczany\n"
+msgstr "nie ograniczony\n"
 
-#: ../unconfined:102 ../unconfined:104
+#: ../unconfined:102
+#: ../unconfined:104
 msgid "confined by"
-msgstr "ograniczany przez"
+msgstr "ograniczony przez"
 
-#: ../SubDomain.pm:421 ../SubDomain.pm:435
+#: ../SubDomain.pm:421
+#: ../SubDomain.pm:435
 #, perl-format
 msgid "Can't find %s."
 msgstr "Nie można znaleźć %s."
 
-#: ../SubDomain.pm:703 ../SubDomain.pm:742
+#: ../SubDomain.pm:703
+#: ../SubDomain.pm:742
 msgid "(Y)es"
 msgstr "(T)ak"
 
-#: ../SubDomain.pm:704 ../SubDomain.pm:743
+#: ../SubDomain.pm:704
+#: ../SubDomain.pm:743
 msgid "(N)o"
 msgstr "(N)ie"
 
 # cancel button label
 #: ../SubDomain.pm:744
-#, fuzzy
 msgid "(C)ancel"
-msgstr "Anuluj"
+msgstr "(A)nuluj"
 
-#: ../SubDomain.pm:1010 ../SubDomain.pm:1201 ../SubDomain.pm:1630
+#: ../SubDomain.pm:1010
+#: ../SubDomain.pm:1201
+#: ../SubDomain.pm:1630
 #: ../SubDomain.pm:1827
 msgid "Profile"
 msgstr "Profil"
 
 #: ../SubDomain.pm:1012
-#,fuzzy
 msgid "Default Hat"
-msgstr "Domyślny hat"
+msgstr "Domyślny podprofil"
 
 #: ../SubDomain.pm:1014
-#,fuzzy
 msgid "Requested Hat"
-msgstr "Żądany hat"
+msgstr "Żądany Hat"
 
-#: ../SubDomain.pm:1044 ../SubDomain.pm:1230 ../SubDomain.pm:1664
+#: ../SubDomain.pm:1044
+#: ../SubDomain.pm:1230
+#: ../SubDomain.pm:1664
 #: ../SubDomain.pm:1962
 msgid "Are you sure you want to abandon this set of profile changes and exit?"
 msgstr "Czy na pewno porzucić zmiany w profilu i wyjść?"
 
-#: ../SubDomain.pm:1046 ../SubDomain.pm:1233 ../SubDomain.pm:1660
-#: ../SubDomain.pm:1666 ../SubDomain.pm:1964
+#: ../SubDomain.pm:1046
+#: ../SubDomain.pm:1233
+#: ../SubDomain.pm:1660
+#: ../SubDomain.pm:1666
+#: ../SubDomain.pm:1964
 msgid "Abandoning all changes."
 msgstr "Porzucanie wszystkich zmian."
 
-#: ../SubDomain.pm:1051 ../SubDomain.pm:1238 ../SubDomain.pm:1680
+#: ../SubDomain.pm:1051
+#: ../SubDomain.pm:1238
+#: ../SubDomain.pm:1680
 #: ../SubDomain.pm:1969
 msgid "Are you sure you want to save the current set of profile changes and exit?"
 msgstr "Czy na pewno zapisać zmiany w profilu i wyjść?"
 
-#: ../SubDomain.pm:1053 ../SubDomain.pm:1240 ../SubDomain.pm:1675
-#: ../SubDomain.pm:1682 ../SubDomain.pm:1971
+#: ../SubDomain.pm:1053
+#: ../SubDomain.pm:1240
+#: ../SubDomain.pm:1675
+#: ../SubDomain.pm:1682
+#: ../SubDomain.pm:1971
 msgid "Saving all changes."
 msgstr "Zapisywanie wszystkich zmian."
 
@@ -224,9 +248,11 @@ msgstr "Program"
 msgid "Execute"
 msgstr "Wykonaj"
 
-#: ../SubDomain.pm:1206 ../SubDomain.pm:1632 ../SubDomain.pm:1839
+#: ../SubDomain.pm:1206
+#: ../SubDomain.pm:1632
+#: ../SubDomain.pm:1839
 msgid "Severity"
-msgstr "Drastyczność"
+msgstr "Dokuczliwość"
 
 #: ../SubDomain.pm:1247
 msgid ""
@@ -238,7 +264,7 @@ msgid ""
 "of LD_PRELOAD or LD_LIBRARY_PATH."
 msgstr ""
 "Czy AppArmor powinien wyzerować środowisko \n"
-"w momencie przełączania profili?\n"
+"przy przełączaniu profili?\n"
 "\n"
 "Jest to bardziej bezpieczne, ale niektóre aplikacje\n"
 "wymagają obecności LD_PRELOAD lub LD_LIBRARY_PATH."
@@ -258,7 +284,7 @@ msgstr ""
 "\n"
 "Jest to bardziej bezpieczne, ale ta aplikacja wydaje się\n"
 "używać zmiennych LD_PRELOAD lub LD_LIBRARY_PATH \n"
-"i wyzerowanie ich może spowodować problemy z funkcjonalnością."
+"i wyzerowanie ich może spowodować problemy z działaniem."
 
 #: ../SubDomain.pm:1256
 #, perl-format
@@ -269,7 +295,7 @@ msgid ""
 "Are you absolutely certain you wish to remove all\n"
 "AppArmor protection when executing %s?"
 msgstr ""
-"Uruchamianie procesów w stanie nieograniczanym jest bardzo \n"
+"Uruchamianie procesów w stanie nieograniczonym jest bardzo \n"
 "niebezpieczne i może powodować poważne luki bezpieczeństwa.\n"
 "\n"
 "Czy jesteś absolutnie pewien, że chcesz usunąć \n"
@@ -353,7 +379,8 @@ msgstr "Tryb"
 msgid "Adding #include <%s> to profile."
 msgstr "Dodawanie #include <%s> do profilu."
 
-#: ../SubDomain.pm:1876 ../SubDomain.pm:1901
+#: ../SubDomain.pm:1876
+#: ../SubDomain.pm:1901
 #, perl-format
 msgid "Deleted %s previous matching profile entries."
 msgstr "Usunięto %s poprzednich pasujących wpisów z profilu."
@@ -397,8 +424,12 @@ msgstr ""
 msgid "No unhandled AppArmor events were found in the system log."
 msgstr "W dziennikach systemowych nie znaleziono nieobsłużonych zdarzeń AppArmor."
 
-#: ../SubDomain.pm:2205 ../SubDomain.pm:2235 ../SubDomain.pm:2249
-#: ../SubDomain.pm:2284 ../SubDomain.pm:2304 ../SubDomain.pm:2341
+#: ../SubDomain.pm:2205
+#: ../SubDomain.pm:2235
+#: ../SubDomain.pm:2249
+#: ../SubDomain.pm:2284
+#: ../SubDomain.pm:2304
+#: ../SubDomain.pm:2341
 #: ../SubDomain.pm:2628
 #, perl-format
 msgid "%s contains syntax errors."
@@ -419,7 +450,9 @@ msgstr "Zapisywanie uaktualnionego profilu dla %s."
 msgid "Include %s contains invalid regexp %s."
 msgstr "Dołączenie %s zawiera nieprawidłowe wyrażenie regularne %s."
 
-#: ../Reports.pm:266 ../Reports.pm:374 ../Reports.pm:1490
+#: ../Reports.pm:266
+#: ../Reports.pm:374
+#: ../Reports.pm:1490
 #, perl-format
 msgid "DBI Execution failed: %s."
 msgstr "Uruchomienie DBI nie powiodło się: %s"
@@ -481,7 +514,9 @@ msgstr "Błąd krytyczny. Nie znaleziono katalogu %s. Zakończenie."
 msgid "Fatal Error.  Couldn't open %s.  Exiting"
 msgstr "Błąd krytyczny. Otwarcie %s nie powiodło się. Zakończenie."
 
-#: ../Reports.pm:803 ../Reports.pm:816 ../Reports.pm:826
+#: ../Reports.pm:803
+#: ../Reports.pm:816
+#: ../Reports.pm:826
 #, perl-format
 msgid "DBI Execution failed: %s"
 msgstr "Uruchomienie DBI nie powiodło się: %s"
