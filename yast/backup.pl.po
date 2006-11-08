@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: backup\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2006-10-26 16:07+0200\n"
-"PO-Revision-Date: 2006-11-07 23:07+0100\n"
+"PO-Revision-Date: 2006-11-08 23:01+0100\n"
 "Last-Translator: Marek Stepien <marcoos@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -322,9 +322,8 @@ msgid "Really abort the backup?"
 msgstr "Czy na pewno przerwać tworzenie kopii zapasowej?"
 
 #: src/functions.ycp:165
-#, fuzzy
 msgid "Select a directory to be included..."
-msgstr "Wybierz katalog."
+msgstr "Wybierz katalog, który ma być włączony..."
 
 #. e-mail subject - %1 is profile name
 #: src/functions.ycp:610
@@ -683,10 +682,15 @@ msgid ""
 "If you do not select any directory or if you delete all already listed ones,\n"
 "the entire file system is searched and backed up.</p>"
 msgstr ""
+"<p><big><b>Włączone katalogi</b></big><br>\n"
+"Istnieje możliwość ograniczenia wyszukiwania do wskazanych katalogów.\n"
+"Aby dodać nowy katalog, należy nacisnąć <b>Dodaj</b> i wskazać katalog.\n"
+"Aby usunąć lub zmienić katalog, należy go wskazać i wybrać <b>Edytuj</b> lub <b>Usuń</b>.\n"
+"Jeśli żaden katalog nie zostanie włączony, albo jeśli aktualnie wybrane katalogi zostaną usunięte,\n"
+"przeszukany i zarchiwizowany zostanie cały system plików.</p>"
 
 #. For translators: help text in exclude directory dialog - part 2/5
 #: src/help_texts.ycp:271
-#, fuzzy
 msgid ""
 "<P><BIG><B>Constraints</B></BIG>\n"
 "<BR>It is possible to exclude some files from the backup.\n"
@@ -694,7 +698,12 @@ msgid ""
 "Use <b>Edit</b> to modify an existing constraint.\n"
 "<b>Delete</b> removes the selected constrain.\n"
 "To add a new constraint, click <b>Add</b> then select the type of constraint. </P>"
-msgstr "<P><BIG><B>Kryteria</B></BIG><BR>Możliwe jest wykluczenie określonych plików z archiwum. Kryteria wyszukiwania mogą zawierać katalogi, systemy plików lub wyrażenia regularne. Polecenie <b>Edytuj</b> służy do zmiany istniejących kryteriów. <b>Usuń</b> usuwa wybrane kryterium. Aby dodać nowe kryterium, należy nacisnąć <b>Dodaj</b> i wybrać rodzaj kryterium.</P>"
+msgstr ""
+"<P><BIG><B>Kryteria</B></BIG>\n"
+"<BR>Możliwe jest wykluczenie określonych plików z archiwum. \n"
+"Kryteria wyszukiwania mogą zawierać katalogi, systemy plików lub wyrażenia regularne. \n"
+"Polecenie <b>Edytuj</b> służy do zmiany istniejących kryteriów. <b>Usuń</b> usuwa wybrane kryterium. \n"
+"Aby dodać nowe kryterium, należy nacisnąć <b>Dodaj</b> i wybrać rodzaj kryterium.</P>"
 
 #. For translators: help text in exclude directory dialog - part 3/5
 #: src/help_texts.ycp:279
@@ -703,14 +712,17 @@ msgstr "<P><B>Katalogi</B><BR>Wszystkie pliki znajdujące się w podanych katalo
 
 #. For translators: help text in exclude directory dialog - part 4/5
 #: src/help_texts.ycp:282
-#, fuzzy
 msgid ""
 "<P><B>File System</B>: It is possible to exclude all files located\n"
 "on a certain type of file system (such as ReiserFS or Ext2).\n"
 "The root directory will always be searched, even if its file system is selected.\n"
 "File systems that cannot be used on local disk, such as network file systems,\n"
 "are excluded by default.</P>"
-msgstr "<P><B>System plików</B><BR>Możliwe jest wyłączenie z kopii zapasowej wszystkich plików znajdujących się na określonym systemie plików (np. ReiserFS, ext2). Katalog główny zostanie jednak zawsze przeszukany, nawet jeśli został wybrany jego system plików. Z drugiej strony, systemy plików, których nie można używać na dyskach lokalnych (takie jak sieciowe systemu plików), są domyślnie wykluczone.</P>"
+msgstr ""
+"<P><B>System plików</B>: Możliwe jest wyłączenie z kopii zapasowej wszystkich plików znajdujących się na określonym systemie plików (np. ReiserFS, Ext2).\n"
+"Katalog główny zostanie jednak zawsze przeszukany, nawet jeśli został wybrany jego system plików. \n"
+"Z drugiej strony, systemy plików, których nie można używać na dyskach lokalnych\n"
+"(takie jak sieciowe systemu plików), są domyślnie wykluczone.</P>"
 
 #. For translators: help text in exclude directory dialog - part 5/5
 #: src/help_texts.ycp:289
@@ -1663,13 +1675,12 @@ msgstr "Wykrywanie typów systemów plików..."
 #. dialog header
 #: src/ui.ycp:3771
 msgid "Search Constraints"
-msgstr "Warunki wyszukiwania"
+msgstr "Kryteria wyszukiwania"
 
 #. selection box
 #: src/ui.ycp:3776
-#, fuzzy
 msgid "Directories Included in Search"
-msgstr "Elementy wykluczone z wyszukiwania"
+msgstr "Katalogi włączone do wyszukiwania"
 
 #. push button label
 #: src/ui.ycp:3781
@@ -1754,9 +1765,8 @@ msgid "&Edit"
 msgstr "&Edytuj"
 
 #: src/ui.ycp:3983
-#, fuzzy
 msgid "&Edit Included Directory"
-msgstr "&Edytuj dołączony katalog"
+msgstr "&Edytuj włączony katalog"
 
 #~ msgid "Number of Files: "
 #~ msgstr "Liczba plików: "
