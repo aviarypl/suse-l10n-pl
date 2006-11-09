@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: apparmor-parser\n"
 "Report-Msgid-Bugs-To: apparmor-general@forge.novell.com\n"
-"POT-Creation-Date: 2006-09-26 13:01-0600\n"
+"POT-Creation-Date: 2006-09-22 10:46-0600\n"
 "PO-Revision-Date: 2006-11-07 01:37+0100\n"
 "Last-Translator: Stanisław Małolepszy <smalolepszy@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -22,51 +22,53 @@ msgstr ""
 "X-Generator: KBabel 1.11.2\n"
 
 #: ../parser_include.c:95
-#, c-format
-msgid "Error: Could not read profile %s: %s.\n"
+#, fuzzy, c-format
+msgid "Error: couldn't read profile %s: %s\n"
 msgstr "Błąd: Nie mogę odczytać profilu %s: %s.\n"
 
 #: ../parser_include.c:114
-msgid "Error: Could not allocate temporary file.\n"
+#, fuzzy
+msgid "Error couldn't allocate temporary file\n"
 msgstr "Błąd: Przydzielenie pliku tymczasowego nie powiodło się.\n"
 
 #: ../parser_include.c:165
-msgid "Error: Out of memory.\n"
+#, fuzzy
+msgid "Error: Out of Memory\n"
 msgstr "Błąd: Brak pamięci.\n"
 
 #: ../parser_include.c:175
-#, c-format
-msgid "Error: basedir %s is not a directory, skipping.\n"
+#, fuzzy, c-format
+msgid "basedir %s is not a directory, skipping\n"
 msgstr "Błąd: ścieżka podana jako katalog bazowy basedir %s nie jest katalogiem i została pominięta.\n"
 
 #: ../parser_include.c:189
-#, c-format
-msgid "Error: Could not add directory %s to search path.\n"
+#, fuzzy, c-format
+msgid "Error: Can't add directory %s to search path\n"
 msgstr "Błąd: Dodanie katalogu %s do ścieżki wyszukiwania nie powiodło się.\n"
 
 #: ../parser_include.c:199
-msgid "Error: Could not allocate memory.\n"
+#, fuzzy
+msgid "Error: Could not allocate memory\n"
 msgstr "Błąd: Przydzielenie pamięci nie powiodło się.\n"
 
 #: ../parser_include.c:332
-#, c-format
-msgid "Error: Could not allocate buffer for include at line %d in %s.\n"
+#, fuzzy, c-format
+msgid "Error: could not allocate buffer for include. line %d in %s\n"
 msgstr "Błąd: Przydzielenie buforu do dołączenia w linii %d pliku %s nie powiodło się.\n"
 
-#: ../parser_include.c:348
-#: ../parser_include.c:368
-#, c-format
-msgid "Error: Bad include at line %d in %s.\n"
+#: ../parser_include.c:348 ../parser_include.c:368
+#, fuzzy, c-format
+msgid "Error: bad include. line %d in %s\n"
 msgstr "Błąd: Nieprawidłowe dołączenie: linia %d w %s.\n"
 
 #: ../parser_include.c:398
-#, c-format
-msgid "Error: Exceeded %d levels of includes.  Not processing %s include.\n"
+#, fuzzy, c-format
+msgid "Error: exceeded %d levels of includes.  NOT processing %s include\n"
 msgstr "Błąd: Przekroczono %d poziomów dołączeń. %s NIE zostanie przetworzone.\n"
 
 #: ../parser_include.c:423
-#, c-format
-msgid "Error: #include %s%c not found at line %d in %s.\n"
+#, fuzzy, c-format
+msgid "Error: #include %s%c not found. line %d in %s\n"
 msgstr "Błąd: Nie znaleziono #include %s%c: linia %d w %s.\n"
 
 #: ../parser_interface.c:65
@@ -129,8 +131,7 @@ msgstr "%s: Usunięcie \"%s\" nie powiodło się."
 msgid "%s: Unable to write to stdout\n"
 msgstr "%s: Zapis na wyjście standardowe (stdout) nie powiódł się\n"
 
-#: ../parser_interface.c:128
-#: ../parser_interface.c:151
+#: ../parser_interface.c:128 ../parser_interface.c:151
 #, c-format
 msgid "%s: ASSERT: Invalid option: %d\n"
 msgstr "%s: ASSERT: Nieprawidłowa opcja: %d\n"
@@ -174,9 +175,7 @@ msgstr "Serializowanie profilu %s nie powiodło się\n"
 msgid "%s: Unable to write entire profile entry\n"
 msgstr "%s: Zapis całego profilu nie powiódł się\n"
 
-#: parser_lex.l:119
-#: parser_lex.l:221
-#: parser_lex.l:347
+#: parser_lex.l:119 parser_lex.l:221 parser_lex.l:347
 #, c-format
 msgid "Found unexpected character: '%s'"
 msgstr " Napotkano nieoczekiwany znak: '%s'"
@@ -300,14 +299,12 @@ msgstr "Błędny znacznik wykonania 'i'. Wcześniej użyto sprzecznego znacznika
 msgid "Unconstrained exec qualifier (%c%c) allows some dangerous environment variables to be passed to the unconfined process; 'man 5 apparmor.d' for details.\n"
 msgstr "Niewymuszony znacznik wykonania (%c%c) pozwala na przekazanie do nieograniczanego procesu pewnych niebezpiecznych zmiennych systemowych; szczegóły: 'man 5 apparmor.d' . \n"
 
-#: ../parser_misc.c:334
-#: ../parser_misc.c:355
+#: ../parser_misc.c:334 ../parser_misc.c:355
 #, c-format
 msgid "Exec qualifier '%c' must be followed by 'x'"
 msgstr "Za znacznikiem wykonania '%c' należy umieścić 'x'"
 
-#: ../parser_misc.c:337
-#: ../parser_misc.c:358
+#: ../parser_misc.c:337 ../parser_misc.c:358
 #, c-format
 msgid "Exec qualifier '%c' invalid, conflicting qualifier already specified"
 msgstr "Błędny znacznik wykonania '%c', wcześniej użyto sprzecznego znacznika."
@@ -321,31 +318,15 @@ msgstr "Błędny tryb, znacznik 'x' należy poprzedzić znacznikiem wykonania  '
 msgid "Internal: unexpected mode character '%c' in input"
 msgstr "Błąd wewnętrzny: na wejściu napotkano nieoczekiwany znak trybu '%c'"
 
-#: ../parser_misc.c:426
-#: parser_yacc.y:222
-#: parser_yacc.y:315
-#: parser_yacc.y:327
-#: parser_yacc.y:387
-#: parser_yacc.y:521
-#: parser_yacc.y:533
-#: parser_yacc.y:553
-#: parser_yacc.y:591
-#: parser_yacc.y:623
-#: parser_yacc.y:637
-#: parser_yacc.y:651
-#: parser_yacc.y:665
-#: parser_yacc.y:679
-#: parser_yacc.y:707
-#: parser_yacc.y:737
-#: parser_yacc.y:775
-#: parser_yacc.y:792
-#: parser_yacc.y:806
+#: ../parser_misc.c:426 parser_yacc.y:222 parser_yacc.y:315 parser_yacc.y:327
+#: parser_yacc.y:387 parser_yacc.y:521 parser_yacc.y:533 parser_yacc.y:553
+#: parser_yacc.y:591 parser_yacc.y:623 parser_yacc.y:637 parser_yacc.y:651
+#: parser_yacc.y:665 parser_yacc.y:679 parser_yacc.y:707 parser_yacc.y:737
+#: parser_yacc.y:775 parser_yacc.y:792 parser_yacc.y:806
 msgid "Memory allocation error."
 msgstr "Błąd przydzielenia pamięci."
 
-#: ../parser_misc.c:738
-#: ../parser_symtab.c:555
-#: ../parser_regex.c:488
+#: ../parser_misc.c:738 ../parser_symtab.c:555 ../parser_regex.c:488
 #: ../parser_variable.c:227
 #, c-format
 msgid "AppArmor parser error: %s\n"
@@ -398,8 +379,7 @@ msgstr "Wpisy sieciowe mogą zawierać tylko jeden adres DO."
 msgid "Network entries can only have one FROM address."
 msgstr "Wpisy sieciowe mogą zawierać tylko jeden adres OD."
 
-#: parser_yacc.y:712
-#: parser_yacc.y:743
+#: parser_yacc.y:712 parser_yacc.y:743
 #, c-format
 msgid "`%s' is not a valid ip address."
 msgstr "'%s' nie jest prawidłowym adresem IP."
@@ -414,8 +394,7 @@ msgstr "'/%d' nie jest prawidłową maską podsieci"
 msgid "`%s' is not a valid netmask."
 msgstr "'%s' nie jest prawidłową maską podsieci"
 
-#: parser_yacc.y:789
-#: parser_yacc.y:809
+#: parser_yacc.y:789 parser_yacc.y:809
 #, c-format
 msgid "ports must be between %d and %d"
 msgstr "numer portu musi zawierać się pomiędzy %d a %d"
@@ -516,9 +495,7 @@ msgstr "BŁĄÐ w profilu %s. Wczytywanie nie powiodło się.\n"
 msgid "%s: Errors found in combining rules postprocessing. Aborting.\n"
 msgstr "%s: Napotkano błędy w łączonym przetwarzaniu reguł. Przerwanie.\n"
 
-#: ../parser_policy.c:420
-#: ../parser_policy.c:427
+#: ../parser_policy.c:420 ../parser_policy.c:427
 #, c-format
 msgid "%s: Errors found during regex postprocess.  Aborting.\n"
 msgstr "%s: Napotkano błędy w przetwarzaniu wyrażeń regularnych. Przerwanie.\n"
-
