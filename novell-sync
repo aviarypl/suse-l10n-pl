@@ -21,29 +21,75 @@ then
 else
 
 TRUNK=`pwd | sed 's/^.*\///'`
-#TS=`date +%s`
+TS=`date +%s`
 
   if [ "$1" = "aviary" ] 
   then 
     if [ "$TRUNK" = "trunk" ]
     then
-      echo ""
-      echo "Pobieranie najnowszych plików z katalogu lcn z repozytorium Novella:"
-      svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/lcn/pl/po ./lcn/ --force
-      echo ""
-      echo "Pobieranie najnowszych plików z katalogu yast z repozytorium Novella:"
-      svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/yast/pl/po ./yast/ --force
-      #echo ""
-      #echo "Pobieranie plików pot z repozytorium Novella"
-      #svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/lcn/50-pot pot-$TS/
-      #svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/yast/50-pot pot-$TS/
-      echo ""
-      echo "Zmiany w katalogu lcn:"
-      svn status ./lcn/
-      echo ""
-      echo "Zmiany w katalogu yast:"
-      svn status ./yast/
-      echo ""
+      if [ -z "$2" ]
+      then 
+        echo ""
+        # Pobierz najnowsze poty z repozytorium Novella
+        echo "Pobieranie plików pot z repozytorium Novella"
+        svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/lcn/50-pot ${TS}-lcn-pot/
+        svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/yast/50-pot ${TS}-yast-pot/
+        
+        # Pobierz najnowsze po z repozytorium Aviary.pl
+        echo ""
+        echo "Pobieranie plików po z repozytorium Aviary.pl"
+        svn export svn://aviary.pl:143/aviarypl/suse/trunk/lcn ${TS}-lcn-po/
+        svn export svn://aviary.pl:143/aviarypl/suse/trunk/yast ${TS}-yast-po/
+        rm ${TS}-yast-po/Makefile
+        
+        # Zmień rozszerzenia potów, by nazwy pasowały do plików po
+        rename 's/\.pot/\.pl\.pot/' ${TS}-lcn-pot/*
+        rename 's/\.pot/\.pl\.pot/' ${TS}-yast-pot/*
+        
+        # Merge
+        cd ${TS}-lcn-po/
+        find . -name '*' -exec msgmerge -o ../lcn/{} --no-wrap {} ../${TS}-lcn-pot/{}t \;
+        cd ../${TS}-yast-po/
+        find . -name '*' -exec msgmerge -o ../yast/{} --no-wrap {} ../${TS}-yast-pot/{}t \;
+        
+        # Skopiuj html-help-*, które nie mają swoich potów.
+        cd ..
+        cp ${TS}-lcn-po/html-help-* lcn/
+        
+        # Posprzątaj
+        rm ${TS}-* -Rf
+        
+        echo ""
+        echo "Zmiany w katalogu lcn:"
+        svn status ./lcn/
+        echo ""
+        echo "(Proszę zignorować komunikaty o błędach dotyczących plików html-help-*"
+        echo "Spowodowane są one brakiem potów dla tych dwu plików.)"
+        echo ""
+        echo "Zmiany w katalogu yast:"
+        svn status ./yast/
+        echo ""
+        
+      elif [ "$2" = "--no-merge" ]
+      then
+        echo ""
+        echo "Pobieranie najnowszych plików z katalogu lcn z repozytorium Novella:"
+        svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/lcn/pl/po ./lcn/ --force
+        echo ""
+        
+        echo "Pobieranie najnowszych plików z katalogu yast z repozytorium Novella:"
+        svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/yast/pl/po ./yast/ --force
+        echo ""
+        
+        echo "Zmiany w katalogu lcn:"
+        svn status ./lcn/
+        echo ""
+        echo "Zmiany w katalogu yast:"
+        svn status ./yast/
+        echo ""
+      else
+        echo "Niepoprawny drugi argument."
+      fi
     else 
       echo "Skrypt należy wykonać w katalogu trunk kopii lokalnej repozytorium Aviary.pl"
     fi
