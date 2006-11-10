@@ -1,0 +1,86 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+  echo ""
+  echo "Składnia: novell-sync [aviary|forge]"
+  echo ""
+  echo "Skrypt służy do synchronizowania wskazanego przez argument"
+  echo "repozytorium. Zazwyczaj właściwym argumentem jest 'aviary'."
+  echo "W takim przypadku, skrypt należy wykonać w katalogu trunk"
+  echo "kopii lokalnej repozytorium Aviary.pl (a zatem tam,"
+  echo "gdzie powinien się już znajdować). Do katalogów lcn i yast"
+  echo "pobrane zostaną z repozytorium Novell forge najnowsze pliki."
+  echo ""
+  echo "Argument 'forge' interesuje osoby, które mają prawo zapisu"
+  echo "w repozytorium Novell forge."
+  echo ""
+  echo "Przykłady:"
+  echo "   novell-sync aviary"
+  echo ""
+else
+
+TRUNK=`pwd | sed 's/^.*\///'`
+
+  if [ "$1" = "aviary" ] 
+  then 
+    if [ "$TRUNK" = "trunk" ]
+    then
+      echo ""
+      echo "Pobieranie najnowszych plików z katalogu lcn z repozytorium Novella:"
+      svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/lcn/pl/po ./lcn/ --force
+      echo ""
+      echo "Pobieranie najnowszych plików z katalogu yast z repozytorium Novella:"
+      svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/yast/pl/po ./yast/ --force
+      echo ""
+      echo "Zmiany w katalogu lcn:"
+      svn status ./lcn/
+      echo ""
+      echo "Zmiany w katalogu yast:"
+      svn status ./yast/
+      echo ""
+    else 
+      echo "Skrypt należy wykonać w katalogu trunk kopii lokalnej repozytorium Aviary.pl"
+    fi
+
+# UWAGA: poniższa część skryptu wymaga, by pliki w kopii lokalnej repozytorium
+# Novell forge miały następującą strukturę katalogów:
+#
+# -- forge // nie podlega zarządzaniu wersji 
+#    |-- lcn // podlega zarządzaniu wersji 
+#        |-- ...
+#    |   |-- ... // pliki po
+#        |-- ...
+#    |-- yast // podlega zarządzaniu wersji 
+#        |-- ...
+#    |   |-- ... // pliki po
+#        |-- ...    
+
+  elif [ "$1" = "forge" ] 
+  then
+    if [ "$TRUNK" = "forge" ]
+    then
+      echo ""
+      echo "Pobieranie najnowszych plików z katalogu lcn z repozytorium Aviary.pl:"
+      svn export svn://aviary.pl:143/aviarypl/suse/trunk/lcn/ ./lcn/ --force
+      echo ""
+      echo "Pobieranie najnowszych plików z katalogu yast z repozytorium Novella:"
+      svn export svn://aviary.pl:143/aviarypl/suse/trunk/yast/ ./yast/ --force
+      rm ./yast/Makefile
+      echo ""
+      echo "Zmiany w katalogu lcn:"
+      svn status ./lcn/
+      echo ""
+      echo "Zmiany w katalogu yast:"
+      svn status ./yast/
+      echo ""
+    else 
+      echo "Skrypt należy wykonać w katalogu forge kopii lokalnej repozytorium Novell Forge"
+    fi
+    
+  else
+    echo "Nieprawidłowy argument. Które repozytorium chcesz zsynchronizować?"
+    echo "Podaj argument: [aviary|forge]"
+  fi
+  
+fi
