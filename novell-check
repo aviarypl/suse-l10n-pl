@@ -1,0 +1,42 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+  echo ""
+  for i in `find . -name '*.po'`
+  do 
+    i=`echo $i | sed 's/^\.\///'`
+    echo "$i:"
+    msgfmt --check --stat $i
+    echo ""
+  done
+  echo ""
+
+elif [[ "$1" = "--help" || "$1" = "-h" ]]
+then
+    echo ""
+    echo "Składnia: novell-check [OSOBA]"
+    echo ""
+    echo "Skrypt służy do sprawdzania poprawności składniowej"
+    echo "plików lokalizacyjnych oraz wyświetle statystyki tłumaczeń"
+    echo "dla poszczególnych plików."
+    echo ""
+    echo "Z argumentem o postaci ${PIERWSZA_LITERA_IMIENIA}${NAZWISKO}"
+    echo "wyświetla dane tylko dla plików spisanych w odpowiednim pliku"
+    echo "w katalogu ludzie."
+    echo ""
+    echo "Przykłady:"
+    echo "   novell-check"
+    echo "   novell-check smalolepszy"
+    echo ""
+
+else
+  echo ""
+  for i in `ls -1 \`cat ludzie/$1\``
+  do 
+    echo "$i:"
+    msgfmt --check --stat $i
+    echo ""
+  done
+  rm messages.mo
+fi

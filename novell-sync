@@ -21,6 +21,7 @@ then
 else
 
 TRUNK=`pwd | sed 's/^.*\///'`
+#TS=`date +%s`
 
   if [ "$1" = "aviary" ] 
   then 
@@ -32,6 +33,10 @@ TRUNK=`pwd | sed 's/^.*\///'`
       echo ""
       echo "Pobieranie najnowszych plików z katalogu yast z repozytorium Novella:"
       svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/yast/pl/po ./yast/ --force
+      #echo ""
+      #echo "Pobieranie plików pot z repozytorium Novella"
+      #svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/lcn/50-pot pot-$TS/
+      #svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/yast/50-pot pot-$TS/
       echo ""
       echo "Zmiany w katalogu lcn:"
       svn status ./lcn/
