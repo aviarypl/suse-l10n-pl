@@ -43,17 +43,24 @@ TS=`date +%s`
         rm ${TS}-yast-po/Makefile
         
         # Zmień rozszerzenia potów, by nazwy pasowały do plików po
-        rename 's/\.pot/\.pl\.pot/' ${TS}-lcn-pot/*
-        rename 's/\.pot/\.pl\.pot/' ${TS}-yast-pot/*
+        # rename 's/\.pot/\.pl\.pot/' ${TS}-lcn-pot/*
+        # rename 's/\.pot/\.pl\.pot/' ${TS}-yast-pot/*
         
         # Merge
-        cd ${TS}-lcn-po/
-        find . -name '*' -exec msgmerge -o ../lcn/{} --no-wrap {} ../${TS}-lcn-pot/{}t \;
-        cd ../${TS}-yast-po/
-        find . -name '*' -exec msgmerge -o ../yast/{} --no-wrap {} ../${TS}-yast-pot/{}t \;
+        for i in `find ${TS}-lcn-po/ -name '*.pl.po'`
+        do 
+          k=`basename $i .pl.po`
+          msgmerge -o lcn/${k}.pl.po --no-wrap ${TS}-lcn-po/${k}.pl.po ${TS}-lcn-pot/${k}.pot
+        done
+        
+        for i in `find ${TS}-yast-po/ -name '*.pl.po'`
+        do 
+          k=`basename $i .pl.po`
+          msgmerge -o yast/${k}.pl.po --no-wrap ${TS}-yast-po/${k}.pl.po ${TS}-yast-pot/${k}.pot
+        done
         
         # Skopiuj html-help-*, które nie mają swoich potów.
-        cd ..
+        
         cp ${TS}-lcn-po/html-help-* lcn/
         
         # Posprzątaj
