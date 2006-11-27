@@ -30,7 +30,7 @@ msgstr "Użytkownik nie zaakceptował licencji"
 
 #: src/BundleContent.cs:324
 msgid "User cancellation"
-msgstr ""
+msgstr "Anulowane przez użytkownika"
 
 #: src/BundleContent.cs:428
 msgid "You must be superuser to be able to import this key."
@@ -139,9 +139,8 @@ msgid "Installing Software..."
 msgstr "Instalowanie oprogramowania"
 
 #: src/InstallerWindow.cs:56
-#, fuzzy
 msgid "install"
-msgstr "Do instalacji"
+msgstr "Zainstaluj"
 
 #: src/InstallerWindow.cs:70 src/RemoverWindow.cs:63 src/UpdaterWindow.cs:78
 #, fuzzy
@@ -153,12 +152,12 @@ msgid "Content"
 msgstr "Zawartość"
 
 #: src/InstallerWindow.cs:77 src/RemoverWindow.cs:81
-#, csharp-format
+#, fuzzy, csharp-format
 msgid ""
 "Version: {0}\n"
 "\n"
 "{1}"
-msgstr ""
+msgstr "Wersja: "
 
 #: src/InstallerWindow.cs:83 src/InstallerWindow.cs:189
 #, fuzzy
@@ -183,19 +182,19 @@ msgid "<b>Getting install list...</b>"
 msgstr "<b>Pobieranie listy instalacji...</b>"
 
 #: src/InstallerWindow.cs:118 src/UpdaterWindow.cs:187
-#, csharp-format
+#, fuzzy, csharp-format
 msgid "'{0}' is not a valid catalog."
-msgstr ""
+msgstr "'{0}' nie jest prawidłowym typem usługi"
 
 #: src/InstallerWindow.cs:125
 #, csharp-format
 msgid "'{0}' is already installed."
-msgstr ""
+msgstr "Pakiet '{0}' jest już zainstalowany."
 
 #: src/InstallerWindow.cs:127
 #, fuzzy, csharp-format
 msgid "'{0}' is not available for installation."
-msgstr "Niedostępne lub w pełni zaktualizowane"
+msgstr "'{0}' nie jest dostępny lub jest w najnowszej wersji."
 
 #: src/InstallerWindow.cs:139
 msgid "You must have superuser privileges to install local packages."
@@ -207,9 +206,9 @@ msgid "{0} does not exist."
 msgstr "Plik '{0}' nie istnieje."
 
 #: src/InstallerWindow.cs:153
-#, csharp-format
+#, fuzzy, csharp-format
 msgid "{0} is not a valid rpm."
-msgstr ""
+msgstr "'{0}' nie jest prawidłowym typem usługi"
 
 #: src/PreferencePage.cs:48
 msgid "Loading preferences..."
@@ -224,8 +223,9 @@ msgid "Value"
 msgstr "Wartość"
 
 #: src/PreferencePage.cs:61
+#, fuzzy
 msgid "Locked"
-msgstr ""
+msgstr "Zablokuj"
 
 #: src/PreferencePage.cs:120
 #, fuzzy
@@ -269,9 +269,9 @@ msgid "<b>Getting removal list...</b>"
 msgstr "<b>Wczytywanie list usuwania...</b>"
 
 #: src/RemoverWindow.cs:113
-#, fuzzy, csharp-format
+#, csharp-format
 msgid "'{0}' is not installed."
-msgstr "Plik '{0}' nie istnieje."
+msgstr "Pakiet '{0}' nie jest zainstalowany."
 
 #: src/ServiceAddWindow.cs:33
 msgid "Novell Customer Center Registration"
@@ -333,16 +333,15 @@ msgstr "_Usuń usługę"
 
 #: src/ServicePage.cs:99
 msgid "URI"
-msgstr ""
+msgstr "URI"
 
 #: src/ServicePage.cs:100
-#, fuzzy
 msgid "Type"
-msgstr "Typy:"
+msgstr "Typ"
 
 #: src/ServicePage.cs:101
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: src/ServicePage.cs:207
 msgid "Loading services..."
@@ -387,9 +386,8 @@ msgid "Failed to locate su application"
 msgstr "Nie znaleziono programu su."
 
 #: src/ServiceUtility.cs:41
-#, fuzzy
 msgid "Add a service"
-msgstr "Dodaj usługę"
+msgstr "Dodaje usługę"
 
 #: src/ServiceUtility.cs:44
 #, fuzzy
@@ -408,15 +406,17 @@ msgstr "_Dodaj użytkownika"
 #: src/ServiceUtility.cs:53
 #, fuzzy
 msgid "Add a superuser"
-msgstr "_Dodaj administratora"
+msgstr "Dodaje nowego użytkownika"
 
 #: src/ServiceUtility.cs:56
+#, fuzzy
 msgid "The service uri"
-msgstr ""
+msgstr "Usługa inetd"
 
 #: src/ServiceUtility.cs:59
+#, fuzzy
 msgid "The service type of service"
-msgstr ""
+msgstr "Usuń usługę"
 
 #: src/ServiceUtility.cs:62
 msgid "The service name (YUM and ZYPP services)"
@@ -425,7 +425,7 @@ msgstr ""
 #: src/ServiceUtility.cs:65
 #, fuzzy
 msgid "A registration key"
-msgstr "Klucz rejestracyjny:"
+msgstr "Kod rejestracyjny"
 
 #: src/ServiceUtility.cs:68
 msgid "A signature key id"
@@ -454,7 +454,7 @@ msgstr "Usunięcie usługi zakończone sukcesem."
 #: src/ServiceUtility.cs:189
 #, fuzzy
 msgid "Failed to import key."
-msgstr "Usunięcie usługi nie powiodło się."
+msgstr "Parsowanie nie powiodło się: %s"
 
 #: src/ServiceUtility.cs:237
 msgid "Invalid service operation."
@@ -471,7 +471,7 @@ msgstr "Należy podać adres URI do usunięcia."
 #: src/TrayIcon.cs:136
 #, fuzzy
 msgid "Software Updater - ZMD is not running"
-msgstr "Aktualizacja oprogramowania"
+msgstr "Demon ZMD nie jest uruchomiony."
 
 #: src/TrayIcon.cs:201
 msgid "_Configure..."
@@ -480,7 +480,7 @@ msgstr "_Konfiguruj..."
 #: src/TrayIcon.cs:204
 #, fuzzy
 msgid "_Refresh"
-msgstr "_Odśwież..."
+msgstr "Odśwież"
 
 #: src/TrayIcon.cs:208
 msgid "_Quit"
@@ -501,8 +501,9 @@ msgid "ZMD is not running"
 msgstr "Demon ZMD nie jest uruchomiony."
 
 #: src/TrayIcon.cs:305
+#, fuzzy
 msgid "Unable to refresh while updating."
-msgstr ""
+msgstr "Nie można wysunąć nośnika."
 
 #: src/TrayIcon.cs:316
 msgid "Refreshing services..."
@@ -535,9 +536,8 @@ msgid "Updating Software..."
 msgstr "Aktualizacja oprogramowania"
 
 #: src/UpdaterWindow.cs:64
-#, fuzzy
 msgid "update"
-msgstr "Aktualizacja"
+msgstr "aktualizacja"
 
 #: src/UpdaterWindow.cs:91 src/ZenInstaller.cs:110 src/ZenInstaller.cs:113
 #: src/ZenRemover.cs:103 src/ZenRemover.cs:106 src/ZenUpdater.cs:120
@@ -551,9 +551,9 @@ msgid "<b>Software {0} for update:</b>"
 msgstr "<b>Programy {0} do aktualizacji:</b>"
 
 #: src/UpdaterWindow.cs:110
-#, csharp-format
+#, fuzzy, csharp-format
 msgid "Installed Version: {0}\n"
-msgstr ""
+msgstr "Zainstalowane poprawki:"
 
 #: src/UpdaterWindow.cs:111
 #, csharp-format
@@ -569,9 +569,9 @@ msgid "<b>Getting update list...</b>"
 msgstr "<b>Pobieranie list aktualizacji...</b>"
 
 #: src/UpdaterWindow.cs:194
-#, csharp-format
+#, fuzzy, csharp-format
 msgid "The latest version of '{0}' is already installed."
-msgstr ""
+msgstr "Pakiet '{0}' jest już zainstalowany."
 
 #: src/UpdaterWindow.cs:196
 #, fuzzy, csharp-format
@@ -583,8 +583,9 @@ msgid "<b>There are no software updates available</b>"
 msgstr "<b>Brak dostępnych aktualizacji</b>"
 
 #: src/UpdaterWindow.cs:304
+#, fuzzy
 msgid "<b>The following updates are required:</b>"
-msgstr ""
+msgstr "Następujące zestawy zostaną usunięte:"
 
 #: src/Util.cs:92
 msgid "Information"
@@ -794,8 +795,9 @@ msgid "usage: zen-installer [options] [pkg] [catalog:pkg] [<pkg1.rpm> <pkg2.rpm>
 msgstr ""
 
 #: src/ZenInstaller.cs:42 src/ZenRemover.cs:41 src/ZenUpdater.cs:45
+#, fuzzy
 msgid "Options:"
-msgstr ""
+msgstr "Opcje"
 
 #: src/ZenInstaller.cs:43 src/ZenUpdater.cs:46
 msgid "Show this message and exit."
@@ -818,9 +820,9 @@ msgid "Show all package versions, not just the latest."
 msgstr ""
 
 #: src/ZenInstaller.cs:86 src/ZenRemover.cs:80 src/ZenUpdater.cs:89
-#, csharp-format
+#, fuzzy, csharp-format
 msgid "Unknown argument '{0}'"
-msgstr ""
+msgstr "Nieznany użytkownik '{0}'"
 
 #: src/ZenRemover.cs:40
 msgid "usage: zen-remover [options] [<pkg1> <pkg2> ...]"
@@ -874,6 +876,9 @@ msgstr "Nie ładuj ikony w polu systemowym"
 #~ msgid "Filter By:"
 #~ msgstr "Filtr:"
 
+#~ msgid "Install"
+#~ msgstr "Do instalacji"
+
 #~ msgid "_Details"
 #~ msgstr "_Szczegóły"
 
@@ -894,6 +899,9 @@ msgstr "Nie ładuj ikony w polu systemowym"
 
 #~ msgid "The installation was successful."
 #~ msgstr "Instalacja zakończona powodzeniem."
+
+#~ msgid "is not available or fully up to date."
+#~ msgstr "Niedostępne lub w pełni zaktualizowane"
 
 #~ msgid "<b>No results were found.</b>"
 #~ msgstr "<b>Brak rezultatów</b>"
@@ -916,6 +924,9 @@ msgstr "Nie ładuj ikony w polu systemowym"
 #~ msgid "You must have superuser privileges to change preferences."
 #~ msgstr "Do zmiany preferencji wymagane są uprawnienia administratora."
 
+#~ msgid "Types:"
+#~ msgstr "Typy:"
+
 #~ msgid "Preparing Removals..."
 #~ msgstr "Przygotowywanie usuwania..."
 
@@ -930,6 +941,12 @@ msgstr "Nie ładuj ikony w polu systemowym"
 
 #~ msgid "Unable to add service"
 #~ msgstr "Dodanie usługi nie powiodło się"
+
+#~ msgid "_Refresh..."
+#~ msgstr "_Odśwież..."
+
+#~ msgid "Update"
+#~ msgstr "Aktualizacja"
 
 #~ msgid "Importance"
 #~ msgstr "Ważność"
