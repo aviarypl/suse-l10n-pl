@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: xen-vm-install\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-01-16 17:08-0700\n"
-"PO-Revision-Date: 2007-02-09 13:33+0100\n"
+"PO-Revision-Date: 2007-02-13 17:16+0100\n"
 "Last-Translator: \n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -92,11 +92,11 @@ msgstr "Nazwa maszyny wirtualnej nie może rozpoczynać się od cyfry."
 msgid ""
 "Failed to open a console because DISPLAY is not set.  Please connect a VNC "
 "viewer to %s:%d."
-msgstr ""
+msgstr "Otwarcie konsoli nie powiodło się, ponieważ zmienna DISPLAY nie jest ustawiona. Proszę podłączyć wyświetlacz VNC do %s:%d."
 
 #: src/msg.py:49
 msgid "Failed to open a console.  Please open a console manually."
-msgstr "Uruchomienie terminala nie powiodło się. Proszę uruchomić go ręcznie."
+msgstr "Otwarcie konsoli nie powiodło się. Proszę uruchomić go ręcznie."
 
 #: src/msg.py:52
 msgid "An error occurred in Xen."
@@ -105,11 +105,12 @@ msgstr "Wystąpił błąd w programi Xen."
 #: src/msg.py:53
 #, fuzzy
 msgid "The hypervisor is not running."
-msgstr "Demon ZMD nie jest uruchomiony."
+msgstr "Hiperwizor nie został uruchomiony."
 
 #: src/msg.py:54
+#, fuzzy
 msgid "An incompatible version of the hypervisor is running."
-msgstr ""
+msgstr "Uruchomiona została niekompatybilna wersja hiperwizora."
 
 #: src/msg.py:55
 msgid "Unable to connect to xend."
@@ -161,7 +162,7 @@ msgstr "Nie określono żadnego źródła instalacji"
 
 #: src/msg.py:71
 msgid "A CD-ROM or DVD must be specified to boot from."
-msgstr ""
+msgstr "Należy określić napęd CD-ROM lub DVD, z którego zostanie uruchomiony system."
 
 #: src/msg.py:74
 msgid ""
@@ -197,7 +198,7 @@ msgstr "Dostęp zabroniony"
 
 #: src/msg.py:85
 msgid "Two of the virtual disks have conflicting virtual names or physical devices."
-msgstr ""
+msgstr "Dwa dyski wirtualne o takich samych nazwach lub o przypisanym tym samym urządzeniu są ze sobą w konflikcie."
 
 #: src/msg.py:88
 msgid "The job is already running."
@@ -213,7 +214,7 @@ msgstr "Zadanie nie zostało znalezione."
 
 #: src/msg.py:91
 msgid "A valid boot sector was not found.  The installation may have failed."
-msgstr ""
+msgstr "Nie znaleziono poprawnego sektora rozruchowego. Instalacja mogła nie powieść się."
 
 #: src/msg.py:92
 msgid "No kernel was found.  The installation may have failed."
@@ -341,11 +342,11 @@ msgstr "Zakończono."
 
 #: src/msg.py:131
 msgid "Paravirtualized"
-msgstr ""
+msgstr "W trybie parawirtualizacji"
 
 #: src/msg.py:132
 msgid "Fully virtualized"
-msgstr ""
+msgstr "W trybie pełnej wirtualizacji"
 
 #: src/msg.py:133
 msgid "Paravirtualization"
@@ -491,72 +492,71 @@ msgid ""
 "Paravirtualization is faster but requires operating system support.  Full "
 "virtualization runs a broader range of operating systems but requires "
 "hardware support.  Which do you prefer?"
-msgstr ""
+msgstr "Maszyny wirtualne mogą działac w trybie parawirtualizacji lub w trybie pełnej wirtualizacji.  Tryb parawirtualizacji jest bardziej wydajny, ale do działania wymaga wsparcia systemu operacyjnego.  Z kolei tryb pełnej wirtualizacji obsługuje większą liczbę systemów operacyjnych, lecz wymaga wsparcia sprzętowego.  W jakim trybie ma działać tworzona maszya wirtualna?"
 
 #: src/msg.py:169
 msgid ""
 "Please specify the type of operating system that will run within the virtual "
 "machine.  This defines many defaults, and helps decide how to start "
 "paravirtualized operating systems."
-msgstr ""
+msgstr "Proszę określić typ systemu operacyjnego, który będzie działał na maszynie wirtualnej. Pozwoli to wybrać odpowiednie ustawienia domyślne oraz pomoże w ustaleniu, w jaki sposób mają być uruchamiane systemu operacyjne działające w trybie parawirtualizacji."
 
 #: src/msg.py:170
 msgid ""
 "Some operating systems support automating the installation by specifying a "
 "URL or file(s).  Select a directory to include multiple files."
-msgstr ""
+msgstr "Niektóre systemy operacyjne pozwalają na automatyzację procesu instalacji poprzez podanie odpowiedniego adresu URL lub pliku. Aby wybrać więcej niż jeden plik, proszę zaznaczyć cały katalog."
 
 #: src/msg.py:171
 msgid ""
 "Some operating systems accept additional arguments, used to customize the "
 "installation or boot process."
-msgstr ""
+msgstr "Niektóre systemy operacyjne obsługują dodatkowe argumenty, które służą do zmiany domyślnych ustawień procesów istalacji i uruchamiania systemu."
 
 #: src/msg.py:172
 msgid ""
 "Please indicate where the installation media is available for the operating "
 "system that you would like to install."
-msgstr ""
+msgstr "Proszę określić, gdzie znajduje się nośnik instalacyjny systemu operacyjnego, który ma zostać zainstalowany."
 
 #: src/msg.py:173
 msgid "Please specify the settings for the virtual disk."
-msgstr ""
+msgstr "Proszę wybrać ustawienia dla dysku wirtualnego."
 
 #: src/msg.py:174
-#, fuzzy
 msgid "Please specify the settings for the virtual network adapter."
-msgstr "Proszę wybrać typ karty sieciowej."
+msgstr "Proszę wybrać ustawienia dla wirtualnej karty sieciowej."
 
 #: src/msg.py:177
 msgid "Specify the amount of memory and number of processors to allocate for the VM."
-msgstr ""
+msgstr "Proszę określić ilość pamięci oraz liczbę procesorów, które zostaną przydzielone maszynie wirtualnej."
 
 #: src/msg.py:178
 msgid ""
 "For best performance, the number of virtual processors should be less than "
 "or equal to the number of physical processors."
-msgstr ""
+msgstr "Aby zapewnić najwyższą wydajność, liczba procesorów wirtualnych powinna być mniejsza lub równa liczbie procesorów fizycznych."
 
 #: src/msg.py:181
 msgid ""
 "Paravirtualized graphics require that an appropriate driver is installed in "
 "the operating system."
-msgstr ""
+msgstr "Do obsługi grafiki w trybie parawirtualizacji wymagane jest, aby w systemie operacyjnym zainstalowany był odpowiedni sterownik."
 
 #: src/msg.py:182
 msgid ""
 "The VM will operate like a server without a monitor.  You may still access "
 "the operating system via a virtual serial cable, or through any operating "
 "system supported services such as ssh or VNC."
-msgstr ""
+msgstr "Maszyna wirtualna będzie działać jak serwer bez monitora. Dostęp do systemu operacyjnego jest wciąż możliwy poprzez wirtualny kabel seryjny lub poprzez obsługiwane przez system usługi, takie jak ssh i VNC."
 
 #: src/msg.py:183
 msgid "Please specify the type of virtualized graphics hardware."
-msgstr ""
+msgstr "Proszę okreslić rodzaj wirtualizowanej karty graficznej."
 
 #: src/msg.py:184
 msgid "Paravirtualized Graphics Adapter"
-msgstr ""
+msgstr "Parawirtualizowana karta graficzna"
 
 #: src/msg.py:185
 msgid "VESA VGA"
@@ -568,7 +568,7 @@ msgstr "Cirrus Logic GD5446 VGA"
 
 #: src/msg.py:187
 msgid "No Graphics Support"
-msgstr ""
+msgstr "Bez obsługi grafiki"
 
 #: src/msg.py:191
 msgid "Virtual Disks"
@@ -584,9 +584,8 @@ msgid "Create Sparse Image File"
 msgstr "Utwórz nowy profil"
 
 #: src/msg.py:194
-#, fuzzy
 msgid "Read-Only Access"
-msgstr "Zdalny dostęp"
+msgstr "Tylko do odczytu"
 
 # menu entry for hard disk installation
 #: src/msg.py:195
@@ -603,19 +602,19 @@ msgstr "Napęd dyskietek"
 
 #: src/msg.py:200
 msgid "Fully Virtualized AMD PCnet 32"
-msgstr ""
+msgstr "AMD PCnet 32 w trybie pełnej wirtualizacji"
 
 #: src/msg.py:201
 msgid "Fully Virtualized NE2000 (ISA Bus)"
-msgstr ""
+msgstr "NE2000 (ISA Bus) w trybie pełnej wirtualizacji"
 
 #: src/msg.py:202
 msgid "Fully Virtualized NE2000 (PCI Bus)"
-msgstr ""
+msgstr "NE2000 (PCI Bus) w trybie pełnej wirtualizacji"
 
 #: src/msg.py:203
 msgid "Fully Virtualized Realtek 8139"
-msgstr ""
+msgstr "Realtek 8139 w trybie pełnej wirtualizacji"
 
 #: src/msg.py:204
 msgid "MAC Address"
@@ -634,8 +633,9 @@ msgid "Additional Arguments"
 msgstr "Argumenty dodatkowe"
 
 #: src/msg.py:210
+#, fuzzy
 msgid "Network URL"
-msgstr ""
+msgstr "Adres URL"
 
 #: src/msg.py:211
 msgid "Memory"
@@ -699,11 +699,11 @@ msgstr "Tworzenie maszyny wirtualnej"
 
 #: src/msg.py:230
 msgid "Locate Operating System Settings File"
-msgstr ""
+msgstr "Położenie pliku ustawień systemu operacyjego"
 
 #: src/msg.py:231
 msgid "Locate Disk or Disk Image"
-msgstr ""
+msgstr "Położenie dysku lub obrazu dysku "
 
 # power-off message
 #: src/msg.py:234
@@ -711,19 +711,18 @@ msgid "Do you want to add another virtual disk?"
 msgstr "Czy dodać kolejny dysk wirtualny? "
 
 #: src/msg.py:235
-#, fuzzy
 msgid "Do you want to add another virtual network adapter?"
-msgstr "Proszę wybrać typ karty sieciowej."
+msgstr "Czy dodać następną kartę sieciową?"
 
 #: src/msg.py:236
 msgid "What type of virtual disk do you want to add?"
-msgstr ""
+msgstr "Proszę wybrać typ dysku wirtualnego do dodania:"
 
 #: src/msg.py:237
 msgid "Where will the virtual disk physically reside?"
-msgstr ""
+msgstr "Gdzie (fizycznie) będzie przechowywany tworzony dysk wirtualny?"
 
 #: src/msg.py:238
 msgid "What type of virtual network adapter do you want to add?"
-msgstr ""
+msgstr "Proszę wybrać typ karty sieciowej do dodania:"
 
