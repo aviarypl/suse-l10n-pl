@@ -1,0 +1,167 @@
+#!/bin/bash
+
+#Np. P='/mnt/sled10'
+P=''
+
+PLIKI_LCN="$P/opt/gnome/share/locale/pl/LC_MESSAGES/control-center-2.0.mo \
+$P/opt/gnome/share/locale/pl/LC_MESSAGES/gnome-main-menu.mo \
+$P/opt/gnome/share/locale/pl/LC_MESSAGES/gnome-power-manager.mo \
+$P/opt/gnome/share/locale/pl/LC_MESSAGES/libgnomesu-1.0.mo \
+$P/opt/gnome/share/locale/pl/LC_MESSAGES/resapplet.mo \
+$P/opt/gnome/share/locale/pl/LC_MESSAGES/tomboy.mo \
+$P/opt/gnome/share/locale/pl/LC_MESSAGES/xgl-settings.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/banshee.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/beagle.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/CheckHardware.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/cracklib.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/f-spot.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/Linux-PAM.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/pam_pwcheck.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/pam_unix2.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/power-management.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/rug.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/zen-updater.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/zmd.mo \
+$P/usr/share/locale/pl/LC_MESSAGES/zypp.mo \
+$P/usr/share/locale/pl_PL/LC_MESSAGES/sax.mo \
+$P/usr/share/NetworkManager-openvpn/locale/pl/LC_MESSAGES/NetworkManager-openvpn.mo \
+$P/usr/share/NetworkManager-vpnc/locale/pl/LC_MESSAGES/NetworkManager-vpnc.mo"
+PLIKI_YAST="$P/usr/share/YaST2/locale/pl/LC_MESSAGES/autoinst.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/backup.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/base.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/bluetooth.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/bootloader.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/CASA.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/control-center.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/control.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/country.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/firewall.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/firstboot.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/inetd.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/installation.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/ipsec.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/irda.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/iscsi-client.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/iso-countries.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/iso-languages.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/kerberos.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/languages_db.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/ldap-client.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/mail.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/mouse.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/network.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/nfs.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/nis.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/ntp-client.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/online-update.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/packagemanager.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/packager.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/packages.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/packages-qt.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/pam.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/phone-services.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/power-management.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/printer.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/profile-manager.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/repair.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/restore.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/rpm-groups.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/runlevel.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/samba-client.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/samba-server.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/samba-users.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/scanner.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/security.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/slp.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/sound_db.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/sound.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/storage.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/support.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/sysconfig.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/timezone_db.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/tune.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/tv.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/update.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/users.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/vm.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/wol.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/x11.mo \
+$P/usr/share/YaST2/locale/pl/LC_MESSAGES/yast2-apparmor.mo"
+
+function renameFiles1 {
+	mv ./lcn/banshee.po ./lcn/banshee.pl.po
+	mv ./lcn/beagle.po ./lcn/beagle.pl.po
+	mv ./lcn/control-center2.pl.po ./lcn/control-center-2.0.pl.po
+	mv ./lcn/libgnomesu.pl.po ./lcn/libgnomesu-1.0.pl.po
+}
+
+function renameFiles2 {
+	mv ./lcn/banshee.pl.po ./lcn/banshee.po
+	mv ./lcn/beagle.pl.po ./lcn/beagle.po
+	mv ./lcn/control-center-2.0.pl.po ./lcn/control-center2.pl.po
+	mv ./lcn/libgnomesu-1.0.pl.po ./lcn/libgnomesu.pl.po
+}
+
+
+if [ "$#" == 0 ]
+then
+	echo ""
+	echo "Skrypt należy uruchamiać jako root w katalogu branches/SLED10SP1."
+	echo ""
+	echo "UWAGA! Przed testowaniem tłumaczeń wykonaj kopię zapasową obecnych plików *.mo. Służy do tego opcja bkp:"
+	echo "# $0 bkp"
+	echo ""
+	echo "Następnie skompiluj i podmień pliki *.mo wydając polecenie:"
+	echo "# $0 make"
+	echo ""
+	echo "Aby przywrócić tłumaczenia z kopii zapasowych, wydaj polecenie:"
+	echo "# $0 restore"
+	echo "Aby jednocześnie usunąć pliki kopii zapasowych po ich przywróceniu, użyj:"
+	echo "# $0 restore clean"
+	echo ""
+
+elif [ `whoami` != "root" ]
+then
+	echo "Uruchom skrypt jako root."
+
+elif [ "$1" == "bkp" ]
+then
+	echo "Tworzenie kopii zapasowych plików *.mo..."
+	for k in $PLIKI_LCN $PLIKI_YAST
+	do 
+		cp $k ${k}.bkp	
+	done
+	echo "Gotowe."
+
+elif [ "$1" == "restore" ]
+then
+	echo "Przywracanie kopii zapasowych plików *.mo..."
+	for k in $PLIKI_LCN $PLIKI_YAST
+	do 
+		cp ${k}.bkp $k
+	done
+	if [ "$2" == "clean" ]
+	then
+		for k in $PLIKI_LCN $PLIKI_YAST
+		do 
+			rm ${k}.bkp
+		done
+	fi
+	echo "Gotowe."
+
+elif [ "$1" == "make" ]
+then
+	renameFiles1
+	for k in $PLIKI_LCN
+	do 
+		i=`basename $k .mo`
+		msgfmt ./lcn/${i}.pl.po -o $k	
+	done
+
+	for k in $PLIKI_YAST
+	do 
+		i=`basename $k .mo`
+		msgfmt ./yast/${i}.pl.po -o $k	
+	done
+	renameFiles2
+fi
