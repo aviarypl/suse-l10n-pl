@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: base\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-01-15 16:17+0100\n"
+"POT-Creation-Date: 2007-02-09 15:34+0100\n"
 "PO-Revision-Date: 2007-02-14 23:24+0100\n"
 "Last-Translator: \n"
 "Language-Team:  <pl@li.org>\n"
@@ -51,7 +51,7 @@ msgstr "Opuść tryb interaktywny i zapisz zmiany"
 msgid "Abort interactive mode without saving the changes"
 msgstr "Opuść tryb interaktywny bez zapisywania zmian"
 
-#. translators:  command line "help" option
+#. translators:  command line "help" option 
 #: library/commandline/src/CommandLine.ycp:60
 msgid "Print the help for this command"
 msgstr "Pokaż pomoc dla tego polecenia"
@@ -755,12 +755,12 @@ msgid "YaST2 Control Center"
 msgstr "Centrum sterowania YaST2"
 
 #. NCurses (textmode) Control Center headline
-#: library/desktop/src/menu.ycp:111
+#: library/desktop/src/menu.ycp:126
 msgid "Controlling YaST2 ncurses with the Keyboard"
 msgstr "Nawigacja w YaST2 ncurses przy użyciu klawiatury"
 
 #. NCurses Control Center help 1/
-#: library/desktop/src/menu.ycp:114
+#: library/desktop/src/menu.ycp:129
 msgid ""
 "<p>1) <i>General</i><br>\n"
 "Navigate through the dialog elements with [TAB] to go to\n"
@@ -776,7 +776,7 @@ msgstr ""
 "trzeba użyć klawiszy ze strzałkami.</p>"
 
 #. NCurses Control Center help 2/9
-#: library/desktop/src/menu.ycp:121
+#: library/desktop/src/menu.ycp:136
 msgid ""
 "<p>Buttons are equipped with shortcut keys (the highlighted\n"
 "letter). Use [ALT] and the letter to activate the button.</p>"
@@ -786,7 +786,7 @@ msgstr ""
 "nacisnąć przycisk.</p>"
 
 #. NCurses Control Center help 3/9
-#: library/desktop/src/menu.ycp:125
+#: library/desktop/src/menu.ycp:140
 msgid ""
 "<p>Press [ESC] to close selection pop-ups (e.g., from\n"
 "menu buttons) without choosing anything.</p>\n"
@@ -796,7 +796,7 @@ msgstr ""
 "[ESC].</p>\n"
 
 #. NCurses Control Center help 4/9
-#: library/desktop/src/menu.ycp:130
+#: library/desktop/src/menu.ycp:145
 msgid ""
 "<p>2) <i>Substitution of Keystrokes</i><br>\n"
 "<p>Because the environment can affect the use of the keyboard,\n"
@@ -811,7 +811,7 @@ msgstr ""
 "można spróbować [CTRL] + [F], a z powrotem [CTRL] + [B].</p>"
 
 #. NCurses Control Center help 5/9
-#: library/desktop/src/menu.ycp:137
+#: library/desktop/src/menu.ycp:152
 msgid ""
 "<p>If [ALT] + [letter] does not work,\n"
 "try [ESC] + [letter]. Example: [ESC] + [H] for [ALT] + [H].\n"
@@ -822,7 +822,7 @@ msgstr ""
 "[ESC] + [TAB] jest też zamiennikiem [ALT] + [TAB].</p>"
 
 #. NCurses Control Center help 6/9
-#: library/desktop/src/menu.ycp:142
+#: library/desktop/src/menu.ycp:157
 msgid ""
 "<p>3) <i>Function Keys</i><br>\n"
 "F keys provide a quick access to main functions.\n"
@@ -834,12 +834,12 @@ msgstr ""
 "nacisnąć F1.</p>"
 
 #. NCurses Control Center help 7/9
-#: library/desktop/src/menu.ycp:147
+#: library/desktop/src/menu.ycp:162
 msgid "<p>The F keys are usually connected to a certain action:</p>"
 msgstr "<p>Klawisze funkcyjne są zwykle połączone z określonym działaniem:</p>"
 
 #. NCurses Control Center help 8/9
-#: library/desktop/src/menu.ycp:150
+#: library/desktop/src/menu.ycp:165
 msgid ""
 "F1  = Help<br>\n"
 "F2  = Info or Description<br>\n"
@@ -864,7 +864,7 @@ msgstr ""
 "F10 = OK, Dalej, Zakończ albo Akceptuj<br>"
 
 #. NCurses Control Center help 9/9
-#: library/desktop/src/menu.ycp:162
+#: library/desktop/src/menu.ycp:177
 msgid ""
 "<p>In some environments, all or some\n"
 "F keys are not available.</p>"
@@ -1528,6 +1528,11 @@ msgstr "Czy na pewno przerwać?"
 msgid "All changes will be lost!"
 msgstr "Wszystkie zmiany zostaną utracone."
 
+#. button label
+#: library/modules/Popup.ycp:770
+msgid "&Details..."
+msgstr ""
+
 #. translators: summary header for messages generated through autoinstallation
 #: library/modules/Report.ycp:82
 msgid "Messages"
@@ -1830,45 +1835,57 @@ msgstr "ISDN"
 msgid "DSL"
 msgstr "DSL"
 
-#: library/network/src/NetworkPopup.ycp:49
+#. TRANSLATORS: Informs that device name is not known
+#: library/network/src/NetworkPopup.ycp:46
+#, fuzzy
+msgid "Unknown device"
+msgstr "Nieznana usługa '%1'"
+
+#. TRANSLATORS: Informs that the IP address is assigned via DHCP
+#: library/network/src/NetworkPopup.ycp:53
 msgid "DHCP address"
 msgstr "Adres DHCP"
 
-#. translators: table header - details about the network device
+#. TRANSLATORS: table item, informing that device has no IP address
 #: library/network/src/NetworkPopup.ycp:58
+msgid "No IP address assigned"
+msgstr ""
+
+#. translators: table header - details about the network device
+#: library/network/src/NetworkPopup.ycp:69
 msgid "Device Type"
 msgstr "Typ urządzenia"
 
-#: library/network/src/NetworkPopup.ycp:58
+#: library/network/src/NetworkPopup.ycp:69
 msgid "Device Name"
 msgstr "Nazwa urządzenia"
 
-#: library/network/src/NetworkPopup.ycp:58
+#: library/network/src/NetworkPopup.ycp:69
 msgid "IP Address"
 msgstr "Adres IP"
 
-#: library/network/src/NetworkPopup.ycp:58
+#: library/network/src/NetworkPopup.ycp:69
 msgid "Device ID"
 msgstr "Identyfikator urządzenia"
 
 #. label message
-#: library/network/src/NetworkPopup.ycp:98
-#: library/network/src/NetworkPopup.ycp:129
+#: library/network/src/NetworkPopup.ycp:109
+#: library/network/src/NetworkPopup.ycp:140
 msgid "Scanning for hosts on this LAN..."
 msgstr "Wyszukiwanie komputerów w sieci LAN..."
 
 #. selection box label
-#: library/network/src/NetworkPopup.ycp:114
+#: library/network/src/NetworkPopup.ycp:125
 msgid "&NFS Servers"
 msgstr "Serwery &NFS"
 
 #. selection box label
-#: library/network/src/NetworkPopup.ycp:140
+#: library/network/src/NetworkPopup.ycp:151
 msgid "Re&mote Hosts"
 msgstr "&Zdalne hosty"
 
 #. selection box label
-#: library/network/src/NetworkPopup.ycp:161
+#: library/network/src/NetworkPopup.ycp:172
 msgid "&Exported Directories"
 msgstr "&Katalogi wyeksportowane"
 
@@ -2489,23 +2506,23 @@ msgstr "TB"
 #. the suggested load command
 #.
 #. This is the heading of the popup box
-#: library/wizard/src/Confirm.ycp:50
+#: library/wizard/src/Confirm.ycp:59
 msgid "Confirm Hardware Detection"
 msgstr "Proszę zatwierdzić wykryte urządzenia"
 
 #. This is in information message. Next come the
 #. hardware class name (network cards).
-#: library/wizard/src/Confirm.ycp:54
+#: library/wizard/src/Confirm.ycp:63
 msgid "YaST2 will detect the following hardware:"
 msgstr "Program YaST2 podejmie próbę wykrycia następujących urządzeń:"
 
 #. PushButton label
-#: library/wizard/src/Confirm.ycp:62
+#: library/wizard/src/Confirm.ycp:71
 msgid "&Skip"
 msgstr "&Pomiń"
 
 #. Message in a continue/cancel popup
-#: library/wizard/src/Confirm.ycp:102
+#: library/wizard/src/Confirm.ycp:113
 msgid ""
 "This module must be run as root.\n"
 "If you continue now, the module may not function properly.\n"
@@ -2518,17 +2535,17 @@ msgstr ""
 "i jest mało prawdopodobne, że będą mogły być zapisane.\n"
 
 #. Popup headline
-#: library/wizard/src/Confirm.ycp:108
+#: library/wizard/src/Confirm.ycp:119
 msgid "Root Privileges Needed"
 msgstr "Wymagane uprawnienia administratora"
 
 #. Popup question
-#: library/wizard/src/Confirm.ycp:127
+#: library/wizard/src/Confirm.ycp:138
 msgid "Really delete selected entry?"
 msgstr "Czy na pewno usunąć zaznaczony wpis?"
 
 #. Popup question, %1 is an item to delete (or filename, etc.)
-#: library/wizard/src/Confirm.ycp:143
+#: library/wizard/src/Confirm.ycp:154
 #, ycp-format
 msgid "Really delete '%1'?"
 msgstr "Na pewno usunąć %1?"
@@ -2624,4 +2641,3 @@ msgstr "Wyszukiwanie komputerów w sieci lokalnej..."
 #: remote/remoteinstall.ycp:29
 msgid "Select the Serial &Interface to Use:"
 msgstr "&Interfejs szeregowy do użycia:"
-
