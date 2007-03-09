@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: online-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-02-09 15:38+0100\n"
+"POT-Creation-Date: 2007-03-06 13:17+0100\n"
 "PO-Revision-Date: 2007-02-28 21:34+0100\n"
 "Last-Translator: Marek Stepien <marcoos@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -21,72 +21,98 @@ msgstr ""
 "X-Generator: KBabel 1.9.1\n"
 
 #: src/AutoOnlineUpdate.ycp:103
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:106
 msgid "Sunday"
 msgstr "Niedziela"
 
 #: src/AutoOnlineUpdate.ycp:104
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:107
 msgid "Monday"
 msgstr "Poniedziałek"
 
 #: src/AutoOnlineUpdate.ycp:105
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:108
 msgid "Tuesday"
 msgstr "Wtorek"
 
 #: src/AutoOnlineUpdate.ycp:106
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:109
 msgid "Wednesday"
 msgstr "Środa"
 
 #: src/AutoOnlineUpdate.ycp:107
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:110
 msgid "Thursday"
 msgstr "Czwartek"
 
 #: src/AutoOnlineUpdate.ycp:108
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:111
 msgid "Friday"
 msgstr "Piątek"
 
 #: src/AutoOnlineUpdate.ycp:109
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:112
 msgid "Saturday"
 msgstr "Sobota"
 
+#. summary item (yes/no follows)
 #: src/AutoOnlineUpdate.ycp:238
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:263
 msgid "Scheduled Online Update Enabled"
 msgstr "Włączona aktualizacja planowa"
 
-#: src/AutoOnlineUpdate.ycp:239
-#: src/AutoOnlineUpdate.ycp:266
+#: src/AutoOnlineUpdate.ycp:239 src/AutoOnlineUpdate.ycp:266
 #: src/AutoOnlineUpdate.ycp:268
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:264
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:296
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:300
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:304
 msgid "Yes"
 msgstr "Tak"
 
-#: src/AutoOnlineUpdate.ycp:239
-#: src/AutoOnlineUpdate.ycp:266
+#: src/AutoOnlineUpdate.ycp:239 src/AutoOnlineUpdate.ycp:266
 #: src/AutoOnlineUpdate.ycp:268
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:264
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:296
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:300
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:304
 msgid "No"
 msgstr "Nie"
 
 #. radibutton label
-#: src/AutoOnlineUpdate.ycp:247
-#: src/OnlineUpdateDialogs.ycp:111
+#. when the cronjob is executed
+#. radibutton label
+#: src/AutoOnlineUpdate.ycp:247 src/OnlineUpdateDialogs.ycp:111
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:273
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:125
 msgid "Daily"
 msgstr "Codziennie"
 
+#. time string: %1 is Daily/Weekly string, %2:%3 is time (HH:MM)
 #: src/AutoOnlineUpdate.ycp:254
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:282
 #, ycp-format
 msgid "%1 at %2:%3"
 msgstr "%1 o %2:%3"
 
 #: src/AutoOnlineUpdate.ycp:258
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:286
 #, ycp-format
 msgid "%1 at a Random Time"
 msgstr "%1 w losowym czasie"
 
+#. summary item (time string follows)
 #: src/AutoOnlineUpdate.ycp:261
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:290
 msgid "Time of Scheduled Online Update"
 msgstr "Czas zaplanowanych uaktualnień online"
 
 #. checkbox label
-#: src/AutoOnlineUpdate.ycp:265
-#: src/OnlineUpdateDialogs.ycp:130
+#. summary item (yes/no follows)
+#. checkbox label
+#: src/AutoOnlineUpdate.ycp:265 src/OnlineUpdateDialogs.ycp:130
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:295
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:144
 msgid "Only Download Patches"
 msgstr "Tylko pobieraj poprawki"
 
@@ -102,6 +128,13 @@ msgid ""
 msgstr ""
 "W czasie aktualizacji został zaktualizowany program YaST.\n"
 "Teraz nastąpi zakończenie jego działania i ponowne uruchomienie."
+
+#. popup message
+#: src/OnlineUpdate.ycp:57
+msgid ""
+"At least one of the updates installed requires a system reboot to function\n"
+"properly. Reboot the system."
+msgstr ""
 
 #. progress log item (%1 is name of package)
 #: src/OnlineUpdateCallbacks.ycp:112
@@ -202,11 +235,13 @@ msgstr ""
 
 #. dialog header
 #: src/OnlineUpdateDialogs.ycp:21
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:21
 msgid "Automatic Online Update Setup"
 msgstr "Konfiguracja automatycznej aktualizacji online"
 
 #. help text
 #: src/OnlineUpdateDialogs.ycp:24
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:24
 msgid ""
 "Automatic update is executed by a daily cronjob. \n"
 "A network connection must be available when\n"
@@ -218,6 +253,7 @@ msgstr ""
 "połączenie sieciowe."
 
 #: src/OnlineUpdateDialogs.ycp:63
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:64
 msgid "Set Random Time"
 msgstr "Ustaw losowy czas"
 
@@ -228,79 +264,97 @@ msgstr "Zezwól na aktualizację automatyczną"
 
 #. label text
 #: src/OnlineUpdateDialogs.ycp:90
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:104
 msgid "Time when update is performed:"
 msgstr "Czas wykonywania aktualizacji:"
 
 #. IntField label
 #: src/OnlineUpdateDialogs.ycp:97
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:111
 msgid "Hour"
 msgstr "Godzina"
 
 #. IntField label
 #: src/OnlineUpdateDialogs.ycp:99
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:113
 msgid "Minute"
 msgstr "Minuta"
 
 #. combobox label
 #: src/OnlineUpdateDialogs.ycp:101
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:115
 msgid "Day:"
 msgstr "Dzień:"
 
 #. radibutton label
 #: src/OnlineUpdateDialogs.ycp:119
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:133
 msgid "Weekly"
 msgstr "Co tydzień"
 
 #. checkbox label
 #: src/OnlineUpdateDialogs.ycp:138
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:152
 msgid "Skip Interactive Patches"
 msgstr "Pomiń poprawki interaktywne"
 
 #: src/OnlineUpdateDialogs.ycp:139
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:153
 msgid "Skip Patches with Preinstall Information"
 msgstr "Pomiń pakiety z informacją przedinstalacyjną"
 
 #: src/OnlineUpdateDialogs.ycp:264
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:285
 msgid "No details available."
 msgstr "Szczegóły nie są dostępne."
 
 #: src/OnlineUpdateDialogs.ycp:266
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:287
 msgid "&Details <<"
 msgstr "Szcze&góły <<"
 
 #: src/OnlineUpdateDialogs.ycp:267
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:288
 msgid "&Details >>"
 msgstr "Szcze&góły >>"
 
 #: src/OnlineUpdateDialogs.ycp:271
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:292
 msgid "Error"
 msgstr "Błąd"
 
 #: src/OnlineUpdateDialogs.ycp:277
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:298
 msgid "Try again"
 msgstr "Spróbuj ponownie"
 
-#: src/OnlineUpdateDialogs.ycp:278
-#: src/OnlineUpdateDialogs.ycp:541
+#: src/OnlineUpdateDialogs.ycp:278 src/OnlineUpdateDialogs.ycp:541
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:299
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:562
 msgid "Skip Patch"
 msgstr "Pomiń poprawkę"
 
 #: src/OnlineUpdateDialogs.ycp:279
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:300
 msgid "Skip All"
 msgstr "Pomiń wszystko"
 
-#: src/OnlineUpdateDialogs.ycp:280
-#: src/OnlineUpdateDialogs.ycp:286
+#: src/OnlineUpdateDialogs.ycp:280 src/OnlineUpdateDialogs.ycp:286
 #: src/OnlineUpdateDialogs.ycp:294
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:301
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:307
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:315
 msgid "Abort Update"
 msgstr "Przerwij aktualizację"
 
 #: src/OnlineUpdateDialogs.ycp:289
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:310
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
 #. Warning text for aborting the update before a patch is installed
 #: src/OnlineUpdateDialogs.ycp:373
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:394
 msgid ""
 "If you abort the installation now, no patch will be installed.\n"
 "Your installation will remain untouched.\n"
@@ -311,6 +365,7 @@ msgstr ""
 
 #. Warning text for aborting if some patches are installed, some not
 #: src/OnlineUpdateDialogs.ycp:380
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:401
 msgid ""
 "Patch download and installation in progress.\n"
 "If you abort the installation now, the update is incomplete.\n"
@@ -323,6 +378,7 @@ msgstr ""
 
 #. Warning text for aborting an installation during the install process
 #: src/OnlineUpdateDialogs.ycp:388
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:409
 msgid ""
 "If you abort the installation now,\n"
 "at least one patch is not installed correctly.\n"
@@ -335,6 +391,7 @@ msgstr ""
 
 #. Warning text for aborting an installation without running SuSEconfig
 #: src/OnlineUpdateDialogs.ycp:395
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:416
 msgid ""
 "If you abort the installation now, SuSEconfig will\n"
 "not be run. The patches have been installed\n"
@@ -349,44 +406,76 @@ msgstr ""
 
 #. Confirm user request to abort installation
 #: src/OnlineUpdateDialogs.ycp:415
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:436
 msgid "Really abort YaST Online Update?"
 msgstr "Naprawdę przerwać prac·ę YaST Online Update?"
 
 #. Button that will really abort the installation
 #: src/OnlineUpdateDialogs.ycp:422
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:443
 msgid "&Abort Update"
 msgstr "&Przerwij aktualizację"
 
 #. Button that will continue with the installation
 #: src/OnlineUpdateDialogs.ycp:426
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:447
 msgid "&Continue Update"
 msgstr "&Kontynuuj aktualizację"
 
 #: src/OnlineUpdateDialogs.ycp:501
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:522
 #, ycp-format
 msgid "<b>Patch:</b> %1<br>"
 msgstr "<b>Poprawka:</b> %1<br>"
 
 #: src/OnlineUpdateDialogs.ycp:502
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:523
 #, ycp-format
 msgid "<b>Summary:</b> %1<br>"
 msgstr "<b>Podsumowanie</b> %1<br>"
 
 #: src/OnlineUpdateDialogs.ycp:513
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:534
 msgid "<b>Packages:</b>"
 msgstr "<b>Pakiety:</b>"
 
 #: src/OnlineUpdateDialogs.ycp:525
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:546
 msgid "Patch &Details <<"
 msgstr "&Szczegóły poprawki <<"
 
 #: src/OnlineUpdateDialogs.ycp:526
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:547
 msgid "Patch &Details >>"
 msgstr "&Szczegóły poprawki >>"
 
 #: src/OnlineUpdateDialogs.ycp:540
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:561
 msgid "Install Patch"
 msgstr "Zainstaluj poprawkę"
+
+#. summary item (yes/no follows)
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:299
+#, fuzzy
+msgid "Skip packages with preinstall information"
+msgstr "Pominąć pakiety z informacją przedinstalacyjną?"
+
+#. summary item (yes/no follows)
+#: src/during-autoinstallation/AutoOnlineUpdate.ycp:303
+msgid "Install patches during installation"
+msgstr ""
+
+#. checkbox label
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:80
+#, fuzzy
+msgid "&Install Patches during installation"
+msgstr "Pomiń pakiety z informacją przedinstalacyjną"
+
+#. checkbox label
+#: src/during-autoinstallation/OnlineUpdateDialogs.ycp:92
+#, fuzzy
+msgid "&Enable Automatic Update"
+msgstr "Zezwól na aktualizację automatyczną"
 
 #: src/inst_you.ycp:70
 msgid ""
@@ -406,34 +495,51 @@ msgstr ""
 "uruchomiony ponownie, po czym instalacja będzie kontynuowana.\n"
 
 #. progress stage label
-#: src/online_update.ycp:63
+#: src/online_update-selection.ycp:63 src/online_update.ycp:72
 msgid "Initialize the target system"
 msgstr "Inicjalizacja systemu docelowego"
 
 #. progress stage label
-#: src/online_update.ycp:65
+#: src/online_update-selection.ycp:65 src/online_update.ycp:74
 msgid "Refresh update sources"
 msgstr "Odświeżenie źródeł aktualizacji"
 
 #. progress step label
-#: src/online_update.ycp:69
+#: src/online_update-selection.ycp:69 src/online_update.ycp:78
 msgid "Initializing the target system..."
 msgstr "Uruchamianie systemu docelowego..."
 
 #. progress step label
-#: src/online_update.ycp:71
+#: src/online_update-selection.ycp:71 src/online_update.ycp:80
 msgid "Refreshing update sources ..."
 msgstr "Odświeżanie źródeł aktualizacji..."
 
 #. final progress step label
-#: src/online_update.ycp:73
+#: src/online_update-selection.ycp:73 src/online_update.ycp:82
 msgid "Finished"
 msgstr "Zakończono"
 
 #. dialog caption
-#: src/online_update.ycp:77
+#: src/online_update-selection.ycp:77 src/online_update.ycp:86
 msgid "Initializing Online Update"
 msgstr "Uruchamianie aktualizacji online"
+
+#. unknown name for a given source
+#: src/online_update-selection.ycp:112
+msgid "unknown"
+msgstr ""
+
+#. long urls
+#. MultiSelectionBox label (list of sources follows)
+#: src/online_update-selection.ycp:120
+#, fuzzy
+msgid "Select the Update &Sources"
+msgstr "Odświeżenie źródeł aktualizacji"
+
+#. help text for online-update initialization
+#: src/online_update.ycp:68
+msgid "<p>The system is initializing the installation and update sources. Installation and update sources can be altered in the <b>Installation Source</b> module.</p>"
+msgstr ""
 
 #. progress window label
 #: src/online_update_install.ycp:27
@@ -446,8 +552,7 @@ msgid "Package Progress"
 msgstr "Postęp pakietu"
 
 #. progress bar label
-#: src/online_update_install.ycp:34
-#: src/online_update_install.ycp:68
+#: src/online_update_install.ycp:34 src/online_update_install.ycp:68
 msgid "Total Progress"
 msgstr "Postęp całkowity"
 
@@ -491,14 +596,12 @@ msgstr "Instalacja zakończona.\n"
 msgid "Patch processing failed."
 msgstr "Przetwarzanie poprawki zakończone niepowodzeniem."
 
-#: src/online_update_select.ycp:26
-#: src/online_update_start.ycp:201
+#: src/online_update_select.ycp:26 src/online_update_start.ycp:201
 msgid "Initializing for CD update..."
 msgstr "Inicjalizacja aktualizacji z płyty CD..."
 
 #. error popup: cancel/retry buttons follow
-#: src/online_update_select.ycp:35
-#: src/online_update_start.ycp:495
+#: src/online_update_select.ycp:35 src/online_update_start.ycp:495
 msgid ""
 "Initialization failed. Check that\n"
 "you have inserted the correct CD.\n"
@@ -738,38 +841,51 @@ msgstr ""
 
 #~ msgid "Please wait..."
 #~ msgstr "Proszę czekać..."
+
 #~ msgid ""
 #~ "During online update, YaST was updated.\n"
 #~ "Finishing and restarting now."
 #~ msgstr ""
 #~ "W czasie aktualizacji został zaktualizowany program YaST.\n"
 #~ "Teraz nastąpi zakończenie jego działania i ponowne uruchomienie."
+
 #~ msgid "Dialing...."
 #~ msgstr "Dzwonienie...."
+
 #~ msgid "Hang up...."
 #~ msgstr "Rozłączanie...."
+
 #~ msgid "Could not dial to the Internet. Check your settings."
 #~ msgstr "Nie można połączyć się z siecią Internet. Proszę sprawdzić ustawienia."
+
 #~ msgid "Could not dial to the Internet. Connect manually."
 #~ msgstr "Nie można połączyć się z siecią Internet. Proszę połączyć się ręcznie."
+
 #~ msgid "Error occured while closing the connection to the Internet."
 #~ msgstr "Wystąpił błąd przy zamykaniu połączenia z siecią Internet."
+
 #~ msgid "Do not show this message again."
 #~ msgstr "Nie pokazuj więcej tego komunikatu."
+
 #~ msgid "Skip"
 #~ msgstr "Pomiń"
+
 #~ msgid "Continue"
 #~ msgstr "Kontynuuj"
+
 #~ msgid "Install"
 #~ msgstr "Zainstaluj"
+
 #~ msgid ""
 #~ "The package \"%1\" is not a SuSE package.\n"
 #~ "Install anyway?\n"
 #~ msgstr ""
 #~ "Pakiet \"%1\" nie jest pakietem SUSE.\n"
 #~ "Czy na pewno go zainstalować?\n"
+
 #~ msgid "There is no connection to the Internet. Trying to connect."
 #~ msgstr "Brak połączenia z siecią Internet. Próba połączenia..."
+
 #~ msgid ""
 #~ "Cannot check the packages because no GPG configuration\n"
 #~ "or key has been found. SuSE cannot guarantee that the\n"
@@ -779,10 +895,13 @@ msgstr ""
 #~ "konfiguracji GPG albo właściwych kluczy.\n"
 #~ "SUSE nie może gwarantować, że pakiety te zostały \n"
 #~ "przygotowane przez SUSE.\n"
+
 #~ msgid "Patch Progress"
 #~ msgstr "Postęp poprawki"
+
 #~ msgid "&Remove Source Packages after Update"
 #~ msgstr "&Usuń pakiety źródłowe po aktualizacji"
+
 #~ msgid ""
 #~ "<p>After connecting to the SuSE update server,\n"
 #~ "YaST2 will download all selected patches.\n"
@@ -792,6 +911,7 @@ msgstr ""
 #~ "pobrane zostaną wszystkie wybrane poprawki.\n"
 #~ "Może to zająć trochę czasu. Szczegóły związane z pobieraniem \n"
 #~ "widoczne są w oknie postępu.</p>"
+
 #~ msgid ""
 #~ "<p>After patches are installed, the downloaded\n"
 #~ "data is no longer needed. To delete this data, activate \n"
@@ -800,6 +920,6 @@ msgstr ""
 #~ "<p>Po zainstalowaniu poprawek, pobrane dane\n"
 #~ "nie będą już potrzebne. Aby je usunąć, należy zaznaczyć opcję\n"
 #~ "<b>Usuń pakiety źródłowe po aktualizacji</b>.</p>\n"
+
 #~ msgid "To install patches for your system in text mode, use the rug command."
 #~ msgstr "Aby zainstalować aktualizacje w trybie tekstowym, proszę użyć polecenia \"rug\"."
-
