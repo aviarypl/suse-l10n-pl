@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: iscsi-client\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-09 15:45+0100\n"
-"PO-Revision-Date: 2007-03-15 10:07+0100\n"
-"Last-Translator: Wojciech Kapusta <wkapusta@aviary.pl>\n"
+"PO-Revision-Date: 2007-03-28 14:58+0100\n"
+"Last-Translator: Stanisław Małolepszy <smalolepszy@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,20 +25,21 @@ msgid ""
 "Old initiatorname will be replaced by value from iBFT and create a backup.\n"
 "If you want to use different initiatorname change it in BIOS."
 msgstr ""
-"Nazwa klienta z iBFT jest różna od tej z /etc/iscsi/initiatorname.iscsi.\n"
-"Stara nazwa klienta zostanie zastąpiona wartością z iBFT, utworzona zostanie także kopia zapasowa.\n"
-"Jeśli istnieje potrzeba stosowania innej nazwy klienta, należy ją zmienić w BIOS."
+"Nazwa modułu inicjującego z iBFT jest różna od tej z /etc/iscsi/initiatorname.iscsi.\n"
+"Stara nazwa modułu inicjującego zostanie zastąpiona wartością z iBFT, utworzona zostanie także kopia zapasowa.\n"
+"Jeśli istnieje potrzeba stosowania innej nazwy modułu inicjującego, należy ją zmienić w BIOS."
 
 #: src/IscsiClient.ycp:304
 #, ycp-format
 msgid "<p>To configure the iSCSI initiator, the <b>%1</b> package must be installed.</p>"
-msgstr "<p>Aby skonfigurować klienta iSCSI, należy zainstalować pakiet <b>%1</b>.</p>"
+msgstr "<p>Aby skonfigurować moduł inicjujący iSCSI, należy zainstalować pakiet <b>%1</b>.</p>"
 
 #: src/IscsiClient.ycp:305
 msgid "<p>Install it now?</p>"
 msgstr "<p>Czy zainstalować go teraz?</p>"
 
-#: src/IscsiClient.ycp:375 src/IscsiClient.ycp:384
+#: src/IscsiClient.ycp:375
+#: src/IscsiClient.ycp:384
 msgid "Error:"
 msgstr "Błąd:"
 
@@ -53,7 +54,7 @@ msgstr "podczas logowania do"
 #. IscsiClient read dialog caption
 #: src/IscsiClient.ycp:435
 msgid "Initializing iSCSI Initiator Configuration"
-msgstr "Inicjalizacja konfiguracji klienta iSCSI"
+msgstr "Inicjalizacja konfiguracji modułu inicjującego iSCSI"
 
 #. Progress stage 1/3
 #: src/IscsiClient.ycp:447
@@ -86,14 +87,15 @@ msgid "Detecting the devices..."
 msgstr "Wykrywanie urządzeń..."
 
 #. Progress finished
-#: src/IscsiClient.ycp:460 src/IscsiClient.ycp:536
+#: src/IscsiClient.ycp:460
+#: src/IscsiClient.ycp:536
 msgid "Finished"
 msgstr "Zakończono"
 
 #. IscsiClient read dialog caption
 #: src/IscsiClient.ycp:515
 msgid "Saving iSCSI Initiator Configuration"
-msgstr "Zapisywanie konfiguracji klienta iSCSI"
+msgstr "Zapisywanie konfiguracji modułu inicjującego iSCSI"
 
 #. Progress stage 1/2
 #: src/IscsiClient.ycp:527
@@ -144,19 +146,23 @@ msgstr "Ręcznie"
 #. `HSpacing(7),
 #: src/dialogs.ycp:48
 msgid "Initiator Name"
-msgstr "Nazwa klienta"
+msgstr "Nazwa modułu inicjującego"
 
 #: src/dialogs.ycp:51
 msgid "Save Name"
 msgstr "Zapisz nazwę"
 
-#: src/dialogs.ycp:66 src/dialogs.ycp:86 src/dialogs.ycp:107
+#: src/dialogs.ycp:66
+#: src/dialogs.ycp:86
+#: src/dialogs.ycp:107
 msgid "Portal Address"
 msgstr "Adres portalu"
 
-#: src/dialogs.ycp:66 src/dialogs.ycp:86 src/dialogs.ycp:107
+#: src/dialogs.ycp:66
+#: src/dialogs.ycp:86
+#: src/dialogs.ycp:107
 msgid "Target Name"
-msgstr "Nazwa serwera"
+msgstr "Nazwa modułu docelowego"
 
 #: src/dialogs.ycp:66
 msgid "Start-Up"
@@ -174,7 +180,8 @@ msgstr "Wyloguj"
 msgid "Toggle Start-Up"
 msgstr "Przełącz uruchamianie"
 
-#: src/dialogs.ycp:86 src/dialogs.ycp:107
+#: src/dialogs.ycp:86
+#: src/dialogs.ycp:107
 msgid "Connected"
 msgstr "Połączono"
 
@@ -190,25 +197,32 @@ msgstr "Zaloguj "
 msgid "Connect"
 msgstr "Połącz"
 
-#: src/dialogs.ycp:124 src/dialogs.ycp:148
+#: src/dialogs.ycp:124
+#: src/dialogs.ycp:148
 msgid "No Authentication"
 msgstr "Brak uwierzytelniania"
 
-#: src/dialogs.ycp:126 src/dialogs.ycp:150
+#: src/dialogs.ycp:126
+#: src/dialogs.ycp:150
 msgid "Incoming Authentication"
 msgstr "Uwierzytelnianie przychodzących"
 
-#: src/dialogs.ycp:128 src/dialogs.ycp:133 src/dialogs.ycp:152
+#: src/dialogs.ycp:128
+#: src/dialogs.ycp:133
+#: src/dialogs.ycp:152
 #: src/dialogs.ycp:157
 msgid "Username"
 msgstr "Nazwa użytkownika"
 
-#: src/dialogs.ycp:128 src/dialogs.ycp:133 src/dialogs.ycp:152
+#: src/dialogs.ycp:128
+#: src/dialogs.ycp:133
+#: src/dialogs.ycp:152
 #: src/dialogs.ycp:157
 msgid "Password"
 msgstr "Hasło"
 
-#: src/dialogs.ycp:131 src/dialogs.ycp:155
+#: src/dialogs.ycp:131
+#: src/dialogs.ycp:155
 msgid "Outgoing Authentication"
 msgstr "Uwierzytelnianie wychodzących"
 
@@ -234,26 +248,31 @@ msgstr "Usługa"
 
 #: src/dialogs.ycp:218
 msgid "Connected Targets"
-msgstr "Podłączone serwery"
+msgstr "Podłączone moduły docelowe"
 
 #: src/dialogs.ycp:236
 msgid "Discovered Targets"
-msgstr "Odnalezione serwery"
+msgstr "Wykryte moduły docelowe"
 
 #: src/dialogs.ycp:274
 msgid "iSCSI Initiator Overview"
-msgstr "Przegląd klienta iSCSI"
+msgstr "Przegląd modułu inicjującego iSCSI"
 
 #. discovery new target
 #. dialog for all targets from portal (connected/disconnected)
 #. authentification dialog for add/discovery target
-#: src/dialogs.ycp:282 src/helps.ycp:89 src/helps.ycp:97 src/helps.ycp:101
+#: src/dialogs.ycp:282
+#: src/helps.ycp:89
+#: src/helps.ycp:97
+#: src/helps.ycp:101
 msgid "<h1>iSCSI Initiator</h1>"
-msgstr "<h1>Klient iSCSI</h1>"
+msgstr "<h1>Moduł inicjujący iSCSI</h1>"
 
-#: src/dialogs.ycp:298 src/dialogs.ycp:331 src/dialogs.ycp:354
+#: src/dialogs.ycp:298
+#: src/dialogs.ycp:331
+#: src/dialogs.ycp:354
 msgid "iSCSI Initiator Discovery"
-msgstr "Wyszukiwanie klientów iSCSI"
+msgstr "Wyszukiwanie modułów inicjujących iSCSI"
 
 #. Read dialog help 1/2
 #: src/helps.ycp:20
@@ -261,7 +280,7 @@ msgid ""
 "<p><b><big>Initializing iSCSI Initiator Configuration</big></b><br>\n"
 "Please wait...<br></p>\n"
 msgstr ""
-"<p><b><big>Inicjalizacja konfiguracji klienta iSCSI</big></b><br>\n"
+"<p><b><big>Inicjalizacja konfiguracji modułu inicjującego iSCSI</big></b><br>\n"
 "Proszę czekać...<br></p>\n"
 
 #. Read dialog help 2/2
@@ -279,7 +298,7 @@ msgid ""
 "<p><b><big>Saving iSCSI Initiator Configuration</big></b><br>\n"
 "Please wait...<br></p>\n"
 msgstr ""
-"<p><b><big>Zapisywanie konfiguracji klienta iSCSI</big></b><br>\n"
+"<p><b><big>Zapisywanie konfiguracji modułu inicjującego iSCSI</big></b><br>\n"
 "Proszę czekać...<br></p>\n"
 
 #. Write dialog help 2/2
@@ -301,8 +320,8 @@ msgid ""
 "<p><b><big>iSCSI Initiator Configuration</big></b><br>\n"
 "Configure an iSCSI initiator here.<br></p>\n"
 msgstr ""
-"<p><b><big>Konfiguracja klienta iSCSI</big></b><br>\n"
-"W tym miejscu można skonfigurować klienta iSCSI.<br></p>\n"
+"<p><b><big>Konfiguracja modułu inicjującego iSCSI</big></b><br>\n"
+"W tym miejscu można skonfigurować moduł inicjujący iSCSI.<br></p>\n"
 
 #. Summary dialog help 2/3
 #: src/helps.ycp:47
@@ -312,9 +331,9 @@ msgid ""
 "If your iSCSI initiator was not detected, use <b>Other (not detected)</b>.\n"
 "Then press <b>Configure</b>.</p>\n"
 msgstr ""
-"<p><b><big>Dodawanie klienta iSCSI:</big></b><br>\n"
-"Proszę wybrać klienta iSCSI z listy wykrytych klientów.\n"
-"Jeśli właściwy klient iSCSI nie został wykryty automatycznie, należy użyć opcji <b>Inny (niewykryty)</b>.\n"
+"<p><b><big>Dodawanie modułu inicjującego iSCSI:</big></b><br>\n"
+"Proszę wybrać moduł inicjujący iSCSI z listy wykrytych modułów inicjujących .\n"
+"Jeśli właściwy moduł inicjujący iSCSI nie został wykryty automatycznie, należy użyć opcji <b>Inny (niewykryty)</b>.\n"
 "Następnie należy nacisnąć przycisk <b>Konfiguruj</b>.</p>\n"
 
 #. Summary dialog help 3/3
@@ -335,9 +354,9 @@ msgid ""
 "Obtain an overview of installed iSCSI initiators. Additionally\n"
 "edit their configurations.<br></p>\n"
 msgstr ""
-"<p><b><big>Przegląd konfiguracji klienta iSCSI</big></b><br>\n"
+"<p><b><big>Przegląd konfiguracji modułu inicjującego iSCSI</big></b><br>\n"
 "W tym oknie dostępny jest przegląd informacji na temat\n"
-"zainstalowanych klientów iSCSI. Ponadto\n"
+"zainstalowanych modułów inicjujących iSCSI. Ponadto\n"
 "możliwe jest dokonanie zmian w ich konfiguracji.<br></p>\n"
 
 #. Ovreview dialog help 2/3
@@ -346,8 +365,8 @@ msgid ""
 "<p><b><big>Adding an iSCSI Initiator</big></b><br>\n"
 "Press <b>Add</b> to configure an iSCSI initiator.</p>\n"
 msgstr ""
-"<p><b><big>Dodawanie klienta iSCSI:</big></b><br>\n"
-"Aby skonfigurować klienta iSCSI, należy nacisnąć przycisk <b>Dodaj</b></p>\n"
+"<p><b><big>Dodawanie modułu inicjującego iSCSI:</big></b><br>\n"
+"Aby skonfigurować moduł inicjujący iSCSI, należy nacisnąć przycisk <b>Dodaj</b></p>\n"
 
 #. Ovreview dialog help 3/3
 #: src/helps.ycp:71
@@ -357,7 +376,7 @@ msgid ""
 "Then press <b>Edit</b> or <b>Delete</b> as desired.</p>\n"
 msgstr ""
 "<p><b><big>Edytowanie lub usuwanie:</big></b><br>\n"
-"Aby zmienić lub usunąć klienta iSCSI, należy wybrać go,\n"
+"Aby zmienić lub usunąć moduł inicjujący iSCSI, należy wybrać go,\n"
 "a następnie nacisnąć odpowiednio przycisk <b>Edytuj</b> albo <b>Usuń</b>.</p>\n"
 
 #. table of connected targets
@@ -367,22 +386,24 @@ msgid ""
 "To remove one, select it and press <b>Log Out</b>.\n"
 "To change start-up status, press <b>Toggle</b>.\n"
 msgstr ""
-"Lista bieżących sesji. Aby dodać nowy serwer, należy nacisnąć przycisk <b>Dodaj</b>.\n"
-"Aby usunąć serwer, należy go zaznaczyć i nacisnąć przycisk <b>Wyloguj</b>.\n"
+"Lista bieżących sesji. Aby dodać nowy moduł docelowy, należy nacisnąć przycisk <b>Dodaj</b>.\n"
+"Aby usunąć moduł docelowy, należy go zaznaczyć i nacisnąć przycisk <b>Wyloguj</b>.\n"
 "Aby zmienić status uruchamiania, należy nacisnąć <b>Przełącz</b>\n"
 
 #. Warning
-#: src/helps.ycp:83 src/helps.ycp:94
+#: src/helps.ycp:83
+#: src/helps.ycp:94
 msgid "<h1>Warning</h1>"
 msgstr "<h1>Uwaga</h1>"
 
-#: src/helps.ycp:83 src/helps.ycp:94
+#: src/helps.ycp:83
+#: src/helps.ycp:94
 msgid "<p>When accessing an iSCSI device <b>READ</b>/<b>WRITE</b>, make sure that this access is exclusive. Otherwise there is a potential risk of data corruption.</p>\n"
 msgstr "<p>Podczas korzystania z urządzenia iSCSI w trybie <b>READ</b>/<b>WRITE</b>, proszę upewnić się, że dostęp do urządzenia jest wyłączny. W przeciwnym razie istnieje ryzyko utraty danych.</p>\n"
 
 #: src/helps.ycp:86
 msgid "<p><b>InitiatorName</b> is value from /etc/initiatorname.iscsi. In case you have iBFT this value will be replaced from there and you are not able to change it (do it in BIOS Setup).</p><p>When you want to change this value, use <b>Save Name</b> button. This value is not saved automatically.</p>"
-msgstr "<p><b>Nazwa klienta</b> to wartość z /etc/initiatorname.iscsi. W przypadku obecności iBFT, nazwa ta zostanie z niego pobrana i nie ma możliwości jej zmiany (możliwie jest to jedynie w ustawieniach BIOS).</p><p>Jeśli konieczna jest zmiana tej wartości, należy skorzystać z przycisku <b>Zapisz nazwę</b>. Wartość ta nie jest zapisywana automatycznie.</p>"
+msgstr "<p><b>InitiatorName</b> (nazwa modułu inicjującego) to wartość z /etc/initiatorname.iscsi. W przypadku obecności iBFT, nazwa ta zostanie z niego pobrana i nie ma możliwości jej zmiany (możliwie jest to jedynie w ustawieniach BIOS).</p><p>Jeśli konieczna jest zmiana tej wartości, należy skorzystać z przycisku <b>Zapisz nazwę</b>. Wartość ta nie jest zapisywana automatycznie.</p>"
 
 #: src/helps.ycp:89
 msgid ""
@@ -397,7 +418,7 @@ msgstr ""
 
 #: src/helps.ycp:98
 msgid "List of nodes offered by the iSCSI target. Select one item and click <b>Connect</b>.  "
-msgstr "Lista węzłów oferowanych przez serwer iSCSI. Należy wskazać jeden element i nacisnąć przycisk <b>Połącz</b>.  "
+msgstr "Lista węzłów oferowanych przez moduł docelowy iSCSI. Należy wskazać jeden element i nacisnąć przycisk <b>Połącz</b>.  "
 
 #: src/helps.ycp:101
 msgid "Select the type of authentication and enter the <b>Username</b> and <b>Password</b>."
@@ -406,7 +427,7 @@ msgstr "Należy wskazać typ uwierzytelniania i podać <b>Nazwę użytkownika</b
 #. list of discovered targets
 #: src/helps.ycp:104
 msgid "List of discovered targets. Start a new <b>Discovery</b> or <b>Connect</b> to any target."
-msgstr "Lista wykrytych serwerów. Można uruchomić nowe <b>Wyszukiwanie</b> lub <b>Połączyć</b> z danym serwerem."
+msgstr "Lista wykrytych modułów docelowych. Można uruchomić nowe <b>Wykrywanie</b> lub <b>Połączyć</b> z wybranym modułem docelowym."
 
 #: src/helps.ycp:106
 msgid "<h1>iBTF</h1>"
@@ -415,7 +436,7 @@ msgstr "<h1>iBTF</h1>"
 #. Command line help text for the Xiscsi-client module
 #: src/iscsi-client.ycp:34
 msgid "Configuration of an iSCSI initiator"
-msgstr "Konfiguracja klienta iSCSI"
+msgstr "Konfiguracja modułu inicjującego iSCSI"
 
 #. progress step title
 #: src/iscsi-client_finish.ycp:41
@@ -425,22 +446,24 @@ msgstr "Zapisywanie konfiguracji iSCSI..."
 #. Rich text title for IscsiClient in proposals
 #: src/iscsi-client_proposal.ycp:65
 msgid "iSCSI Initiator"
-msgstr "Klient iSCSI"
+msgstr "Moduł inicjujący iSCSI"
 
 #. Menu title for IscsiClient in proposals
 #: src/iscsi-client_proposal.ycp:67
 msgid "&iSCSI Initiator"
-msgstr "Klient &iSCSI"
+msgstr "Moduł inicjujący &iSCSI"
 
 #: src/widgets.ycp:26
 msgid "Command timed-out"
 msgstr "Limit czasu dla polecenia:"
 
-#: src/widgets.ycp:65 src/widgets.ycp:77
+#: src/widgets.ycp:65
+#: src/widgets.ycp:77
 msgid "Insert the username."
 msgstr "Wstaw nazwę użytkownika"
 
-#: src/widgets.ycp:70 src/widgets.ycp:82
+#: src/widgets.ycp:70
+#: src/widgets.ycp:82
 msgid "Insert the password."
 msgstr "Wstaw hasło"
 
@@ -450,13 +473,14 @@ msgstr "Podczas łączenia z iscsid wystąpił błąd"
 
 #: src/widgets.ycp:133
 msgid "Really log out from the selected target?"
-msgstr "Czy na pewno wylogować z wybranego serwera?"
+msgstr "Czy na pewno wylogować z wybranego modułu docelowego?"
 
 #: src/widgets.ycp:134
 msgid "Error occurred while logging out from the selected target."
-msgstr "Podczas wylogowywania z wybranego serwera wystąpił błąd."
+msgstr "Podczas wylogowywania z wybranego modułu docelowego wystąpił błąd."
 
-#: src/widgets.ycp:139 src/widgets.ycp:158
+#: src/widgets.ycp:139
+#: src/widgets.ycp:158
 msgid "No record found."
 msgstr "Nie znaleziono rekordów."
 
@@ -468,36 +492,43 @@ msgstr "Wstaw adres IP"
 msgid "Insert the port."
 msgstr "Wstaw port"
 
-#: src/widgets.ycp:363 src/widgets.ycp:419 src/widgets.ycp:430
+#: src/widgets.ycp:363
+#: src/widgets.ycp:419
+#: src/widgets.ycp:430
 msgid "True"
 msgstr "prawda"
 
-#: src/widgets.ycp:363 src/widgets.ycp:419
+#: src/widgets.ycp:363
+#: src/widgets.ycp:419
 msgid "False"
 msgstr "fałsz"
 
-#: src/widgets.ycp:385 src/widgets.ycp:444
+#: src/widgets.ycp:385
+#: src/widgets.ycp:444
 msgid "The target with this TargetName is already connected. Make sure that Multipathing is enabled to prevent data corruption."
-msgstr "Serwer z tą nazwą TargetName jest już podłączony. Aby zapobiec uszkodzeniu danych, należy się upewnić, czy włączona jest opcja Multipathing."
+msgstr "Moduł docelowy o tej nazwie (TargetName) jest już podłączony. Aby zapobiec uszkodzeniu danych, należy upewnić się, czy włączona jest opcja Multipathing."
 
-#: src/widgets.ycp:385 src/widgets.ycp:444
+#: src/widgets.ycp:385
+#: src/widgets.ycp:444
 msgid "Continue"
 msgstr "Kontynuuj"
 
-#: src/widgets.ycp:385 src/widgets.ycp:444
+#: src/widgets.ycp:385
+#: src/widgets.ycp:444
 msgid "Cancel"
 msgstr "Anuluj"
 
 #: src/widgets.ycp:439
 msgid "The target is already connected."
-msgstr "Serwer został już podłączony"
+msgstr "Moduł docelowy jest już podłączony."
 
 #. Initialization dialog caption
 #: src/wizards.ycp:123
 msgid "iSCSI Initiator Configuration"
-msgstr "Konfiguracja klienta iSCSI"
+msgstr "Konfiguracja modułu inicjującego iSCSI"
 
 #. Initialization dialog contents
 #: src/wizards.ycp:125
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
