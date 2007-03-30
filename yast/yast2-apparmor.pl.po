@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: yast2-apparmor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-02-13 16:48-0800\n"
-"PO-Revision-Date: 2007-03-30 02:30+0100\n"
+"PO-Revision-Date: 2007-03-30 16:40+0100\n"
 "Last-Translator: Stanisław Małolepszy <smalolepszy@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -915,7 +915,7 @@ msgstr "<ul><li>Jeśli zdefiniowana jest opcja [_POSIX_ACL], ignoruje wszelkie o
 
 #: include/subdomain/capabilities.ycp:39
 msgid "<ul><li>Overrides all restrictions about allowed operations on files, where file owner ID must be equal to the user ID, except where CAP_FSETID is applicable. It doesn't override MAC and DAC restrictions. </li></ul>"
-msgstr "<ul><li>Ignoruje wszelkich ograniczeń dotyczących dozwolonych operacji na plikach, w przypadku których identyfikator (ID) właściciela musi być równy identyfikatorowi użytkownika, za wyjątkiem tych, dla których zastosowanie ma CAP_FSETID. Nie następuje nadpisanie ograniczeń MAC i DAC. </li></ul>"
+msgstr "<ul><li>Ignoruje wszelkie ograniczenia dotyczące dozwolonych operacji na plikach, w przypadku których identyfikator (ID) właściciela musi być równy identyfikatorowi użytkownika, za wyjątkiem tych, dla których zastosowanie ma CAP_FSETID. Nie dotyczy ograniczeń MAC i DAC. </li></ul>"
 
 #: include/subdomain/capabilities.ycp:45
 msgid "<ul><li>Overrides the following restrictions that the effective user ID shall match the file owner ID when setting the S_ISUID and S_ISGID bits on that file; that the effective group ID (or one of the supplementary group IDs) shall match the file owner ID when setting the S_ISGID bit on that file; that the S_ISUID and S_ISGID bits are cleared on successful return from chown(2) (not implemented). </li></ul>"
@@ -1022,7 +1022,7 @@ msgstr "<ul><li> Zezwala na przejmowanie dzierżawienia plików </li></ul>"
 
 #: include/subdomain/config_complain.ycp:14
 msgid "<p><b>Profile Mode Configuration</b><br>This tool allows you to set AppArmor profiles to either complain or enforce mode.</p><p>Complain mode is a profile training state that logs application activity, but does not restrict the application's behavior.</p><p>Profiles in enforce mode are protected by AppArmor.</p>"
-msgstr "<p><b>Konfiguracja trybu profilu</b><br>Narzędzie to zezwala na ustawienie profili programu AppArmor w tryb treningu lub ochrony.</p><p>W trybie treningu działanie aplikacji jest monitorowane i zapisywane w dzienniku, jednak w żaden sposób nie ograniczane, co pozwala przetestować profil.</p><p>Profile w trybie ochrony są chronione przez AppArmor.</p>"
+msgstr "<p><b>Konfiguracja trybu profilu</b><br>Narzędzie to zezwala na ustawienie profili programu AppArmor w tryb treningu lub ochrony.</p><p>W trybie <i>complain</i> (tryb  treningu) działanie aplikacji jest monitorowane i zapisywane w dzienniku, jednak w żaden sposób nie ograniczane, co pozwala przetestować profil.</p><p>Profile w trybie <i>enforce</i> (tryb ochrony) są chronione przez AppArmor.</p>"
 
 #: include/subdomain/config_complain.ycp:28
 msgid "Couldn't recognize profile name: "
@@ -1068,11 +1068,11 @@ msgstr "Przełącz tryb"
 
 #: include/subdomain/config_complain.ycp:109
 msgid "Set All to Enforce"
-msgstr "Wszystkie: ochrona"
+msgstr "Wszystkie: enforce"
 
 #: include/subdomain/config_complain.ycp:110
 msgid "Set All to Complain"
-msgstr "Wszystkie: trening"
+msgstr "Wszystkie: complain"
 
 #: include/subdomain/config_complain.ycp:131
 msgid "Profile Mode Configuration"
