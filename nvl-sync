@@ -38,8 +38,8 @@ TS=`date +%s`
         # Pobierz najnowsze po z repozytorium Aviary.pl
         echo ""
         echo "Pobieranie plików po z repozytorium Aviary.pl"
-        svn export svn://aviary.pl:143/aviarypl/suse/trunk/lcn ${TS}-lcn-po/
-        svn export svn://aviary.pl:143/aviarypl/suse/trunk/yast ${TS}-yast-po/
+        svn export http://svn.aviary.pl/suse/trunk/lcn ${TS}-lcn-po/
+        svn export http://svn.aviary.pl/suse/trunk/yast ${TS}-yast-po/
         rm ${TS}-yast-po/Makefile
         
         # Zmień rozszerzenia potów, by nazwy pasowały do plików po
@@ -120,10 +120,10 @@ TS=`date +%s`
     then
       echo ""
       echo "Pobieranie najnowszych plików z katalogu lcn z repozytorium Aviary.pl:"
-      svn export svn://aviary.pl:143/aviarypl/suse/trunk/lcn/ ./lcn/ --force
+      svn export http://svn.aviary.pl/suse/trunk/lcn/ ./lcn/ --force
       echo ""
       echo "Pobieranie najnowszych plików z katalogu yast z repozytorium Novella:"
-      svn export svn://aviary.pl:143/aviarypl/suse/trunk/yast/ ./yast/ --force
+      svn export http://svn.aviary.pl/suse/trunk/yast/ ./yast/ --force
       rm ./yast/Makefile
       echo ""
       echo "Zmiany w katalogu lcn:"
