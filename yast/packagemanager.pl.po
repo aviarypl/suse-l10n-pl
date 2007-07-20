@@ -1,0 +1,682 @@
+# translation of packagemanager.po to
+# Polish message file for YaST2 (@memory@).
+# Copyright (C) 2003 SuSE Linux AG.
+#
+# Wojciech Kapusta <wojciech@aviary.pl>, 2006.
+# Wojciech Kapusta <wkapusta@aviary.pl>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: packagemanager\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2007-07-19 14:55+0200\n"
+"PO-Revision-Date: 2007-03-14 17:09+0100\n"
+"Last-Translator: Wojciech Kapusta <wkapusta@aviary.pl>\n"
+"Language-Team:  <pl@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: KBabel 1.11.4\n"
+
+#. /////////////////////////////////////////////////////////////////
+#: src/PMError.cc:39
+msgid "ERROR"
+msgstr "BŁĄD"
+
+#. "ERROR(some text or number)"
+#. initialized in header!
+#. initialized in header!
+#: src/PMError.cc:43
+msgid "OK"
+msgstr "OK"
+
+#: src/PMError.cc:44
+msgid "error"
+msgstr "błąd"
+
+#: src/online_update.cc:70
+#, c-format
+msgid "Error (type: %s): %s"
+msgstr "Błąd (typ: %s): %s"
+
+#: src/online_update.cc:72
+#, c-format
+msgid "Details: %s"
+msgstr "Szczegóły: %s"
+
+#: src/online_update.cc:88
+msgid ""
+"NOTE: THIS PATCH HAS BEEN SKIPPED\n"
+"      (option --skip-pre and patch contains preinstall information)"
+msgstr ""
+"UWAGA: TA POPRAWKA ZOSTAŁA POMINIĘTA\n"
+"      (opcja --skip-pre i poprawka zawiera informacje przedinstalacyjne)"
+
+#: src/online_update.cc:119
+#, c-format
+msgid "patch wants to execute ycp script %s but that is not supported with this tool"
+msgstr "poprawka chce uruchomić skrypt ycp %s, ale to narzędzie tego nie obsługuje"
+
+#: src/online_update.cc:147
+msgid "Usage: online-update [options] [types]"
+msgstr "Użycie: online-update [opcje] [typy]"
+
+#: src/online_update.cc:149
+msgid ""
+"-u, --url URL            Base URL of directory tree from which to get patches.\n"
+"                         Supported protocols: http, ftp, smb, nfs, cd, dvd, file.\n"
+"                         If no protocol is given, a local file is assumed.\n"
+"                         Examples: 'ftp://ftp.suse.com/pub/suse', 'cd:///',\n"
+"                                   'file:/var/lib/YaST2/you/mnt'\n"
+"                                   '/var/lib/YaST2/you/mnt'"
+msgstr ""
+"-u, --url URL            Podstawowy URL drzewa katalogów, z którego będą \n"
+"                         pobierane poprawki.\n"
+"                         Obsługiwane protokoły: http, ftp, smb, nfs, cd, dvd, file.\n"
+"                         Domyślny protokół - poprawki w plikach lokalnych.\n"
+"                         Przykłady: 'ftp://ftp.suse.com/pub/suse', 'cd:///',\n"
+"                                   'file:/var/lib/YaST2/you/mnt'\n"
+"                                   '/var/lib/YaST2/you/mnt'"
+
+#: src/online_update.cc:156
+msgid "-g, --download-only      Only download patches. Do not install."
+msgstr "-g, --download-only      Tylko pobierz poprawki. Nie instaluj."
+
+#: src/online_update.cc:157
+msgid ""
+"-G, --get-all            Retrieve all available patches and packages for the\n"
+"                         given product. Do not install."
+msgstr ""
+"-G, --get-all            Pobierz wszystkie dostępne poprawki i pakiety dla\n"
+"                         danego produktu. Nie instaluj."
+
+#: src/online_update.cc:159
+msgid "-i, --install-only       Install downloaded patches. Do not download."
+msgstr "-i, --install-only       Zainstaluj pobrane poprawki. Nie pobieraj."
+
+#: src/online_update.cc:161
+msgid ""
+"-q, --quick-check        Quick check for new updates. Does not check for types\n"
+"                         of updates."
+msgstr ""
+"-q, --quick-check        Szybkie sprawdzenie, czy są nowe poprawki. Nie sprawdza\n"
+"                         rodzaju poprawek."
+
+#: src/online_update.cc:163
+msgid "-k, --check              Check for new updates."
+msgstr "-k, --check              Sprawdź, czy są nowe poprawki."
+
+#: src/online_update.cc:165
+msgid "-c, --show-config        Show configuration. Do not do anything."
+msgstr "-c, --show-config        Pokaż konfigurację. Nie rób nic więcej."
+
+#: src/online_update.cc:166
+msgid "-I, --show-installed     Show installed patches. Do nothing else."
+msgstr "-I, --show-installed     Pokaż zainstalowane poprawki. Nie rób nic więcej."
+
+#: src/online_update.cc:168
+msgid "-p, --product PRODUCT    Name of product for which to get patches."
+msgstr "-p, --product PRODUKT    Nazwa produktu, dla którego należy pobrać poprawki."
+
+#: src/online_update.cc:169
+msgid "-v, --version VERSION    Version of product for which to get patches."
+msgstr "-v, --version WERSJA     Wersja produktu, dla którego należy pobrać poprawki."
+
+#: src/online_update.cc:170
+msgid "-a, --architecture ARCH  Base architecture of product for which to get patches."
+msgstr "-a, --architecture ARCH  Architektura produktu, dla którego należy pobrać poprawki."
+
+#: src/online_update.cc:171
+msgid "-l, --language LANGCODE  Language used to show patch descriptions."
+msgstr "-l, --language KOD       Kod języka, w którym należy pokazać opisy poprawek."
+
+#: src/online_update.cc:173
+msgid "-r, --reload             Reload patches from server."
+msgstr "-r, --reload             Wczytaj ponownie poprawki z serwera."
+
+#: src/online_update.cc:174
+msgid "-d, --dry-run            Dry run. Only get patches, but do not install them."
+msgstr "-d, --dry-run            Pobierz poprawki, ale ich nie instaluj."
+
+#: src/online_update.cc:175
+msgid "-n, --no-sig-check       No signature check of downloaded files."
+msgstr "-n, --no-sig-check       Nie sprawdzaj sygnatur pobranych plików."
+
+#: src/online_update.cc:177
+msgid ""
+"-s, --show-patches       Show list of patches (Additionaly use -d only to show list\n"
+"                         of patches without installing them)."
+msgstr ""
+"-s, --show-patches       Pokaż listę poprawek (wraz z opcją -d pokazuje tylko listę poprawek,\n"
+"                         bez ich instalowania)."
+
+#: src/online_update.cc:179
+msgid "-V, --verbose            Be verbose."
+msgstr "-V, --verbose            Wyświetl więcej informacji."
+
+#: src/online_update.cc:180
+msgid "-D, --debug              Debug output."
+msgstr "-D, --debug              Śledzenie wyjścia."
+
+#: src/online_update.cc:182
+msgid "-S, --select-patches <list of patches>"
+msgstr "-S, --select-patches <lista poprawek>"
+
+#: src/online_update.cc:183
+msgid ""
+"                         Select patches for download and installation. Patches are\n"
+"                         specified as a comma-separated list of patch names. Only patches\n"
+"                         that would also be selected by the default selection algorithm\n"
+"                         can be selected (this behavior is overriden by the --force option)."
+msgstr ""
+"                         Proszę wybrać poprawki do pobrania i instalacji. Poprawki należy\n"
+"                         podać jako oddzieloną przecinkami listę nazw. Można wybrać \n"
+"                         tylko pakiety, które byłyby wybrane przez domyślny algorytm\n"
+"                         wyboru (zachowanie to można zmienić opcją --force)."
+
+#: src/online_update.cc:187
+msgid "-f, --force              Force installation of a selected patch."
+msgstr "-f, --force              Wymuś instalację wybranych pakietów."
+
+#: src/online_update.cc:188
+msgid ""
+"-P, --skip-pre           Skip patches with preinstall information (e.g., kernel updates).\n"
+"                         Instead, a message is generated.\n"
+"                         (Do not use together with -s)"
+msgstr ""
+"-P, --skip-pre           Pomiń poprawki z informacjami przedinstalacyjnymi (np. aktualizacje jądra).\n"
+"                         Zamiast tego zostanie wygenerowana wiadomość.\n"
+"                         (Nie należy używać tego razem z opcją -s)"
+
+#: src/online_update.cc:193
+msgid "Types of patches to install."
+msgstr "Typy poprawek do zainstalowania."
+
+#: src/online_update.cc:342
+msgid "Error parsing command line."
+msgstr "Błąd podczas analizy wiersza polecenia."
+
+#: src/online_update.cc:353
+msgid ""
+"You need root permissions to run this command. Use the -q or -k\n"
+"options to check for the availabilty of updates without needing\n"
+"root permissions."
+msgstr ""
+"Do uruchomienia tego polecenia konieczne są uprawnienia\n"
+"administratora (root). Aby sprawdzić dostępność aktualizacji\n"
+"bez tych uprawnień, należy użyć opcji -q lub -k."
+
+#: src/online_update.cc:449
+msgid "Product "
+msgstr "Produkt"
+
+#: src/online_update.cc:451
+msgid " (primary product)"
+msgstr " (produkt główny)"
+
+#: src/online_update.cc:454
+msgid "  Name:      "
+msgstr "  Nazwa:     "
+
+#: src/online_update.cc:455
+msgid "  Version:      "
+msgstr "  Wersja:         "
+
+#: src/online_update.cc:456
+msgid "  Architecture: "
+msgstr "  Architektura: "
+
+#: src/online_update.cc:458
+msgid "  Arch List: "
+msgstr "  Lista arch: "
+
+#: src/online_update.cc:465
+msgid "  Business Product: "
+msgstr "  Produkt biznesowy: "
+
+#: src/online_update.cc:466
+msgid "Yes"
+msgstr "Tak"
+
+#: src/online_update.cc:466
+msgid "No"
+msgstr "Nie"
+
+#: src/online_update.cc:467
+msgid "  Distribution: "
+msgstr "  Dystrybucja: "
+
+#: src/online_update.cc:468
+msgid "  YOU Path: "
+msgstr "  Poprawka YOU: "
+
+#: src/online_update.cc:472
+msgid "Language:     "
+msgstr "Język:    "
+
+#: src/online_update.cc:473
+msgid "Directory:    "
+msgstr "Katalog:     "
+
+#: src/online_update.cc:487
+msgid "Error: URL '"
+msgstr "Błąd: URL '"
+
+#: src/online_update.cc:487
+msgid "' is not valid."
+msgstr "' jest nieprawidłowy."
+
+#: src/online_update.cc:496
+msgid "Error while requesting servers: "
+msgstr "Błąd podczas połączenia z serwerami: "
+
+#: src/online_update.cc:506
+msgid "Server URL: "
+msgstr "URL serwera: "
+
+#: src/online_update.cc:507
+msgid "Server Name: "
+msgstr "Nazwa serwera: "
+
+#: src/online_update.cc:508
+msgid "Directory File: "
+msgstr "Plik katalogu: "
+
+#: src/online_update.cc:512
+msgid "Path "
+msgstr "Ścieżka "
+
+#: src/online_update.cc:519
+msgid "Unable to check for updates."
+msgstr "Nie można sprawdzić dostępności poprawek."
+
+#: src/online_update.cc:522
+msgid "No new updates available."
+msgstr "Brak nowych poprawek."
+
+#: src/online_update.cc:525
+msgid "1 new update available."
+msgstr "Dostępna 1 nowa poprawka."
+
+#: src/online_update.cc:528
+msgid " new updates available."
+msgstr "dostępne nowe poprawki."
+
+#: src/online_update.cc:550
+msgid "Error retrieving patches: "
+msgstr "Błąd przy pobieraniu poprawek: "
+
+#: src/online_update.cc:577
+msgid "Patches:"
+msgstr "Poprawki:"
+
+#: src/online_update.cc:583
+msgid "Security updates available."
+msgstr "Dostępne poprawki związane z bezpieczeństwem."
+
+#: src/online_update.cc:586
+msgid "Updates available."
+msgstr "Poprawki są dostępne."
+
+#: src/online_update.cc:589
+msgid "No updates available."
+msgstr "Brak dostępnych poprawek."
+
+#: src/online_update.cc:600 src/you/InstYou.cc:884
+msgid "No patches have been installed."
+msgstr "Nie zostały zainstalowane żadne poprawki."
+
+#: src/online_update.cc:602
+msgid "Patches have been installed."
+msgstr "Poprawki zostały zainstalowane."
+
+#: src/online_update.cc:607
+msgid "Error processing patches: "
+msgstr "Błąd przetwarzania poprawek: "
+
+#: src/online_update.cc:612
+msgid "Got patches."
+msgstr "Poprawki zostały pobrane."
+
+#. translator: filename, md5sum, md5sum
+#: src/pkg/PMPackage.cc:121 src/you/InstYou.cc:110
+#, c-format
+msgid "%s has an md5sum of '%s' but '%s' was expected"
+msgstr "%s ma sumę MD5 '%s', podczas gdy oczekiwano '%s'"
+
+#: src/you/InstYou.cc:578
+msgid "Show Preinstallation Messages...\n"
+msgstr "Pokaż komunikaty przedinstalacyjne...\n"
+
+#: src/you/InstYou.cc:597
+msgid "No patches have been selected for installation.\n"
+msgstr "Nie wybrano żadnych poprawek do zainstalowania.\n"
+
+#: src/you/InstYou.cc:644
+#, c-format
+msgid "Retrieving %s: \"%s\""
+msgstr "Pobieranie %s: \"%s\" "
+
+#: src/you/InstYou.cc:650 src/you/InstYou.cc:682 src/you/InstYou.cc:686
+#: src/you/InstYou.cc:926
+msgid "Skipped\n"
+msgstr "Pominięto\n"
+
+#: src/you/InstYou.cc:657 src/you/InstYou.cc:769 src/you/InstYou.cc:844
+#: src/you/InstYou.cc:932
+msgid "Ok\n"
+msgstr "OK\n"
+
+#: src/you/InstYou.cc:662 src/you/InstYou.cc:678
+msgid "Aborted\n"
+msgstr "Przerwano\n"
+
+#: src/you/InstYou.cc:669
+#, c-format
+msgid ""
+"Error downloading patch '%s'.\n"
+"Try again to download the patch, skip this patch, or\n"
+"abort the update?"
+msgstr ""
+"Błąd pobierania poprawki '%s'.\n"
+"Próbować pobrać poprawkę jeszcze raz, pominąć poprawkę,\n"
+"czy przerwać aktualizację?"
+
+#: src/you/InstYou.cc:691
+msgid "Retry\n"
+msgstr "Spróbuj ponownie\n"
+
+#: src/you/InstYou.cc:695
+msgid "Error: Cannot get files.\n"
+msgstr "Błąd: nie można pobrać plików.\n"
+
+#: src/you/InstYou.cc:698
+msgid "Error: Signature check failed.\n"
+msgstr "Błąd: Kontrola sygnatury zakończona niepowodzeniem.\n"
+
+#: src/you/InstYou.cc:700 src/you/InstYou.cc:935
+msgid "Error\n"
+msgstr "Błąd\n"
+
+#: src/you/InstYou.cc:716
+msgid "Download aborted."
+msgstr "Pobieranie przerwane."
+
+#: src/you/InstYou.cc:718
+msgid "Download failed."
+msgstr "Pobieranie zakończone niepowodzeniem."
+
+#: src/you/InstYou.cc:721
+msgid "Download finished. You may disconnect from the Internet now."
+msgstr "Pobieranie zakończone. Teraz można rozłączyć połączenie z Internetem."
+
+#: src/you/InstYou.cc:747
+#, c-format
+msgid "Fetching package %s from installation medium"
+msgstr "Pobieranie pakietu %s z medium instalacyjnego"
+
+#: src/you/InstYou.cc:753
+#, c-format
+msgid "Failed: %s\n"
+msgstr "Nieudane: %s\n"
+
+#: src/you/InstYou.cc:763
+#, c-format
+msgid "file '%s' has wrong MD5 checksum"
+msgstr "plik '%s' ma nieprawidłową sumę kontrolną MD5"
+
+#: src/you/InstYou.cc:800
+msgid "Applying delta"
+msgstr "Nakładanie delta"
+
+#: src/you/InstYou.cc:849
+msgid "File integrity check failed: "
+msgstr "Sprawdzanie integralności pliku zakończyło się niepowodzeniem: "
+
+#: src/you/InstYou.cc:876
+msgid "Show Postinstallation Messages...\n"
+msgstr "Pokaż komunikaty poinstalacyjne...\n"
+
+#: src/you/InstYou.cc:880
+msgid "Installation finished.\n"
+msgstr "Instalacja zakończona.\n"
+
+#: src/you/InstYou.cc:886
+msgid "1 patch has been installed."
+msgstr "Zainstalowano 1 poprawkę."
+
+#: src/you/InstYou.cc:888
+#, c-format
+msgid "%d patches have been installed."
+msgstr "Zainstalowano %d poprawek."
+
+#: src/you/InstYou.cc:893 src/you/YouError.cc:69
+msgid "Installation failed."
+msgstr "Instalacja zakończona niepowodzeniem."
+
+#: src/you/InstYou.cc:920
+#, c-format
+msgid "Installing %s: \"%s\" "
+msgstr "Instalacja %s: \"%s\" "
+
+#: src/you/InstYou.cc:939
+msgid ""
+"Installation of patch was aborted by user.\n"
+"\n"
+"Warning: This can cause an inconsistent system. Select \n"
+"'Try Again' to repeat installation of this patch."
+msgstr ""
+"Instalacja poprawki przerwana przez użytkownika.\n"
+"\n"
+"Ostrzeżenie: Może to doprowadzić do niespójności systemu.\n"
+"Proszę nacisnąć przycisk 'Spróbuj ponownie', aby ponowić\n"
+"instalację tej poprawki."
+
+#: src/you/InstYou.cc:943
+#, c-format
+msgid ""
+"Error installing patch '%s'.\n"
+"\n"
+"Skip this patch or abort\n"
+"the update?"
+msgstr ""
+"Błąd instalacji poprawki '%s'.\n"
+"\n"
+"Pominąć tę poprawkę czy\n"
+"przerwać aktualizację?"
+
+#: src/you/InstYou.cc:953
+msgid "Installation aborted."
+msgstr "Instalacja przerwana."
+
+#. Translator: filename, md5sum, md5sum
+#: src/you/InstYou.cc:1792
+#, c-format
+msgid "File '%s' has the wrong MD5 checksum: '%s' != '%s'"
+msgstr "Plik '%s' ma nieprawidłową sumę MD5: '%s' != '%s'"
+
+#: src/you/InstYou.cc:2293
+#, c-format
+msgid "Request media %d."
+msgstr "Żądanie nośnika %d."
+
+#: src/you/InstYou.cc:2303
+msgid "Media not found"
+msgstr "Nośnik nie znaleziony"
+
+#: src/you/InstYou.cc:2304
+msgid "YOU Patch CD"
+msgstr "Płyta CD z poprawkami YOU"
+
+#: src/you/InstYou.cc:2311
+msgid "Ok.\n"
+msgstr "OK\n"
+
+#: src/you/InstYou.cc:2314
+msgid "Ignore.\n"
+msgstr "Ignoruj.\n"
+
+#: src/you/InstYou.cc:2318
+msgid "Skip.\n"
+msgstr "Pomiń.\n"
+
+#: src/you/InstYou.cc:2321
+msgid "Abort.\n"
+msgstr "Przerwij.\n"
+
+#: src/you/InstYou.cc:2324
+msgid "Eject media.\n"
+msgstr "Wysuń nośnik.\n"
+
+#. new URL
+#: src/you/InstYou.cc:2329
+msgid "New URL:\n"
+msgstr "Nowy URL:\n"
+
+#: src/you/InstYou.cc:2337
+msgid "Failed.\n"
+msgstr "Nieudane.\n"
+
+#: src/you/PMYouPatch.cc:133
+msgid "Recommended"
+msgstr "Zalecana"
+
+#: src/you/PMYouPatch.cc:135
+msgid "Security"
+msgstr "Bezpieczeństwo"
+
+#: src/you/PMYouPatch.cc:137
+msgid "Patch Level"
+msgstr "Poziom poprawki"
+
+#: src/you/PMYouPatch.cc:139
+msgid "Optional"
+msgstr "Opcjonalna"
+
+#: src/you/PMYouPatch.cc:141
+msgid "Document"
+msgstr "Dokument"
+
+#: src/you/PMYouPatch.cc:143
+msgid "YaST2"
+msgstr "YaST2"
+
+#: src/you/PMYouPatch.cc:145
+msgid "unknown"
+msgstr "nieznany"
+
+#: src/you/PMYouPatch.cc:210
+msgid "Installing this patch will have no effect, because it"
+msgstr "Instalacja tej poprawki nie przyniesie żadnych efektów, ponieważ"
+
+#: src/you/PMYouPatch.cc:211
+msgid "does not contain any updates for installed packages."
+msgstr "nie zawiera ona żadnych uaktualnień dla zainstalowanych pakietów."
+
+#: src/you/PMYouPatchInfo.cc:125
+msgid "No filename.  Skipping this package."
+msgstr "Brak nazwy pliku. Ten pakiet zostanie pominięty."
+
+#: src/you/PMYouPatchInfo.cc:311
+#, c-format
+msgid "Patch %s: unexpected end of file"
+msgstr "Poprawka %s: nieoczekiwany koniec pliku"
+
+#: src/you/PMYouPatchInfo.cc:325
+#, c-format
+msgid "Patch %s: parse error in line %d"
+msgstr "Poprawka %s: błąd przetwarzania w linii %d"
+
+#. /////////////////////////////////////////////////////////////////
+#. Error messages for YOU in package manager
+#.
+#. more specific errors start here:
+#. case E_some_err:	return N_("some text");
+#. /////////////////////////////////////////////////////////////////
+#: src/you/YouError.cc:55
+msgid "File has invalid signature."
+msgstr "Plik ma nieprawidłową sygnaturę."
+
+#: src/you/YouError.cc:56
+msgid "RPM has invalid signature."
+msgstr "RPM ma nieprawidłową sygnaturę."
+
+#: src/you/YouError.cc:57
+msgid "Error getting youservers file."
+msgstr "Błąd pobierania pliku serwerów YOU."
+
+#: src/you/YouError.cc:58
+msgid "Error writing youservers file."
+msgstr "Błąd zapisu pliku serwerów YOU."
+
+#: src/you/YouError.cc:59
+msgid "Error reading youservers file."
+msgstr "Błąd odczytu pliku serwerów YOU."
+
+#: src/you/YouError.cc:60
+msgid "User aborted operation."
+msgstr "Użytkownik przerwał operację."
+
+#: src/you/YouError.cc:61
+msgid "User selected skip."
+msgstr "Użytkownik wybrał pominięcie."
+
+#: src/you/YouError.cc:62
+msgid "User selected skip all."
+msgstr "Użytkownik wybrał pominięcie wszystkiego."
+
+#: src/you/YouError.cc:63
+msgid "User selected retry."
+msgstr "Użytkownik wybrał ponowienie."
+
+#: src/you/YouError.cc:64
+msgid "Error parsing patch description."
+msgstr "Błąd podczas analizy opisu poprawki."
+
+#: src/you/YouError.cc:65
+msgid "Script failed."
+msgstr "Wykonanie skryptu zakończone niepowodzeniem."
+
+#: src/you/YouError.cc:66
+msgid "Prescript failed."
+msgstr "Wykonanie skryptu przedinstalacyjnego zakończone niepowodzeniem."
+
+#: src/you/YouError.cc:67
+msgid "Postscript failed."
+msgstr "Wykonanie skryptu poinstalacyjnego zakończone niepowodzeniem."
+
+#: src/you/YouError.cc:68
+msgid "rpm failed."
+msgstr "błąd rpm."
+
+#: src/you/YouError.cc:70
+msgid "Package location is empty."
+msgstr "Lokalizacja pakietu jest pusta."
+
+#: src/you/YouError.cc:71
+msgid "Error getting media.1/patches file."
+msgstr "Błąd pobierania pliku nośnika.1/patches."
+
+#: src/you/YouError.cc:72
+msgid "No callback function is set."
+msgstr "Nie podano funkcji callback."
+
+#: src/you/YouError.cc:73
+msgid "Missing signature."
+msgstr "Brak sygnatury."
+
+#: src/you/YouError.cc:74
+msgid "Wrong media."
+msgstr "Zły nośnik."
+
+#: src/you/YouError.cc:75
+msgid "MD5 checksum does not match."
+msgstr "Sumy MD5 nie zgadzają się."
+
+#: src/you/YouError.cc:76
+msgid "Could not create directory."
+msgstr "Nie udało się utworzyć katalogu."
+
+#: src/you/YouError.cc:77
+msgid "Could not reassemble RPM from delta."
+msgstr "Nie udało się ponownie złożyć pakietu RPM z delty."
