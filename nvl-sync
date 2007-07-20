@@ -20,6 +20,14 @@ then
   echo ""
 else
 
+if [ -z "$2" ] 
+then
+  DIR="."
+else
+  DIR="$2"
+  mkdir -p $DIR
+fi
+
 TRUNK=`pwd | sed 's/^.*\///'`
 TS=`date +%s`
 
@@ -27,8 +35,6 @@ TS=`date +%s`
   then 
     if [ "$TRUNK" = "trunk" ]
     then
-      if [ -z "$2" ]
-      then 
         echo ""
         # Pobierz najnowsze poty z repozytorium Novella
         echo "Pobieranie plików pot z repozytorium Novella"
@@ -47,16 +53,18 @@ TS=`date +%s`
         # rename 's/\.pot/\.pl\.pot/' ${TS}-yast-pot/*
         
         # Merge
-        for i in `find ${TS}-lcn-po/ -name '*.pl.po'`
+        for i in `find ${TS}-lcn-pot/ -name '*.pot'`
         do 
-          k=`basename $i .pl.po`
-          msgmerge -o lcn/${k}.pl.po --no-wrap ${TS}-lcn-po/${k}.pl.po ${TS}-lcn-pot/${k}.pot
+          k=`basename $i .pot`
+          msgmerge -o ${DIR}/lcn/${k}.pl.po --no-wrap ${TS}-lcn-po/${k}.pl.po 
+${TS}-lcn-pot/${k}.pot
         done
         
-        for i in `find ${TS}-yast-po/ -name '*.pl.po'`
+        for i in `find ${TS}-yast-pot/ -name '*.pot'`
         do 
-          k=`basename $i .pl.po`
-          msgmerge -o yast/${k}.pl.po --no-wrap ${TS}-yast-po/${k}.pl.po ${TS}-yast-pot/${k}.pot
+          k=`basename $i .pot`
+          msgmerge -o ${DIR}/yast/${k}.pl.po --no-wrap ${TS}-yast-po/${k}.pl.po 
+${TS}-yast-pot/${k}.pot
         done
         
         # Skopiuj html-help-*, które nie mają swoich potów.
@@ -76,9 +84,12 @@ TS=`date +%s`
         echo "Zmiany w katalogu yast:"
         svn status ./yast/
         echo ""
-        
-      elif [ "$2" = "--no-merge" ]
-      then
+     fi
+
+ elif [ "$1" = "aviary-nomerge" ]
+ then
+     if [ "$TRUNK" = "trunk" ]
+     then
         echo ""
         echo "Pobieranie najnowszych plików z katalogu lcn z repozytorium Novella:"
         svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/lcn/pl/po ./lcn/ --force
@@ -94,12 +105,10 @@ TS=`date +%s`
         echo "Zmiany w katalogu yast:"
         svn status ./yast/
         echo ""
-      else
-        echo "Niepoprawny drugi argument."
+      else 
+        echo "Skrypt należy wykonać w katalogu trunk kopii lokalnej repozytorium Aviary.pl"
       fi
-    else 
-      echo "Skrypt należy wykonać w katalogu trunk kopii lokalnej repozytorium Aviary.pl"
-    fi
+ 
 
 # UWAGA: poniższa część skryptu wymaga, by pliki w kopii lokalnej repozytorium
 # Novell forge miały następującą strukturę katalogów:
