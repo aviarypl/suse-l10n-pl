@@ -4,18 +4,19 @@
 #
 # Stanisław Małolepszy <smalolepszy@aviary.pl>, 2006.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2007.
+# Karol Sikora <elektrrrus@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: samba-client\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-07-19 14:55+0200\n"
-"PO-Revision-Date: 2007-03-14 18:01+0100\n"
-"Last-Translator: Wojciech Kapusta <wkapusta@aviary.pl>\n"
+"PO-Revision-Date: 2007-07-26 19:39+0200\n"
+"Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #. Samba-client read dialog caption
@@ -176,7 +177,6 @@ msgstr "Nie"
 
 #. help text, do not translate 'winbind uid', 'winbind gid'
 #: src/dialogs.ycp:48
-#, fuzzy
 msgid "<p>Specify the <b>range</b> for Samba user and group IDs (<tt>winbind uid</tt> and <tt>winbind gid</tt> values).</p>"
 msgstr "Proszę określić zakres dla identyfikatorów użytkownika i grupy Samby (wartości <tt>winbind uid</tt> oraz <tt>winbind gid</tt>)."
 
@@ -373,6 +373,9 @@ msgid ""
 "hostname changes with DHCP are problematic.\n"
 "Disable hostname changes with DHCP?"
 msgstr ""
+"W środowisku sieciowym Microsoft \n"
+"zmiana nazy hosta poprzez DHCP może działać nieprawidłowo.\n"
+"Wyłączyć zmianę nazwy hosta poprzez DHCP?"
 
 #: src/dialogs.ycp:430
 msgid ""
@@ -432,15 +435,13 @@ msgstr "<p><b><big>Wybór przynależności do domeny Windows</big></b></p>"
 
 #. translators: Samba workgroup dialog help 1/3
 #: src/helps.ycp:44
-#, fuzzy
 msgid ""
 "<p>A Linux client can be a member of a workgroup, NT domain, or Active Directory domain.\n"
 "Here, specify the name of the membership.</p>\n"
 msgstr ""
 "<p>Komputer z systemem Linux może należeć do grupy roboczej, domeny NT lub domeny Active Directory.\n"
 "W tym miejscu należy określić nazwę grupy. <b>Przeglądaj</b> \n"
-"wyświetla listę wszystkich grup i domen odnalezionych\n"
-"w sieci.</p>\n"
+"wyświetla listę wszystkich grup odnalezionych w sieci.</p>\n"
 
 #. Samba role dialog help 2/3
 #: src/helps.ycp:49
@@ -462,9 +463,8 @@ msgstr ""
 
 #. translators: Samba membership dialog help 1/2 (installation)
 #: src/helps.ycp:61
-#, fuzzy
 msgid "<p>Specify the name of the NT or Active Directory domain.</p>\n"
-msgstr "<p>Należy podać serwery dla dodatkowych domen</p>."
+msgstr "<p>Należy podać nazwę NT lub domenę Active Directory</p>\n"
 
 #. translators: Samba membership dialog help 2/2 (installation)
 #: src/helps.ycp:64
@@ -537,7 +537,7 @@ msgstr ""
 "pozostawić te pola puste."
 
 #. Translators: Information popup, %1 is the name of the domain
-#. translators: result message for joindomain command line action 
+#. translators: result message for joindomain command line action
 #: src/routines.ycp:130 src/samba-client.ycp:112
 #, ycp-format
 msgid "Domain %1 joined successfully."
@@ -594,12 +594,12 @@ msgstr "Inne usługi współdzielenia są dostępne. Zatrzymać je również?"
 #. check box label
 #: src/routines.ycp:231
 msgid "Retrieve WINS server via &DHCP"
-msgstr ""
+msgstr "Pobierz adres serwera WINS poprzez &DHCP"
 
 #. help text ("Retrieve WINS server via DHCP" is a checkbox label)
 #: src/routines.ycp:240
 msgid "<p>Check <b>Retrieve WINS server via DHCP</b> to use a WINS server provided by DHCP.</p>"
-msgstr ""
+msgstr "<p>Proszę wybrać <b>Pobierz adres serwera WINS poprzez DHCP</b> aby używać serwera WINS określanego przez DHCP</p>"
 
 #. frame label
 #: src/routines.ycp:255
@@ -648,26 +648,26 @@ msgid "<p>To permit access to user shares without authentication, enable <b>Allo
 msgstr "<p>Aby zezwolić na dostęp do udziałów bez uwierzytelnienia, należy włączyć <b>Zezwól na dostęp dla gości</b>.</p>"
 
 #. user must provide the domain name to be tested
-#. error message for isdomainmember command line action 
+#. error message for isdomainmember command line action
 #. must provide the domain name to be joined
-#. error message for joindomain command line action 
+#. error message for joindomain command line action
 #: src/samba-client.ycp:58 src/samba-client.ycp:99
 #, ycp-format
 msgid "Enter the name of a domain."
 msgstr "Proszę podać nazwę domeny."
 
-#. translators: error message for isdomainmember command line action 
+#. translators: error message for isdomainmember command line action
 #: src/samba-client.ycp:71
 msgid "Cannot test domain membership."
 msgstr "Nie można sprawdzić przynależności do domeny."
 
-#. translators: result message for isdomainmember command line action 
+#. translators: result message for isdomainmember command line action
 #: src/samba-client.ycp:77
 #, ycp-format
 msgid "This machine is a member of %1"
 msgstr "Ten komputer jest członkiem %1"
 
-#. translators: result message for isdomainmember command line action 
+#. translators: result message for isdomainmember command line action
 #: src/samba-client.ycp:80
 #, ycp-format
 msgid "This machine is not a member of %1"
@@ -703,22 +703,22 @@ msgstr "Dołącza ten komputer do domeny"
 msgid "Change the global settings of Samba"
 msgstr "Zmienia globalne ustawienia Samby"
 
-#. translators: command line help text for winbind enable option 
+#. translators: command line help text for winbind enable option
 #: src/samba-client.ycp:183
 msgid "Enable the service"
 msgstr "Włącza usługę"
 
-#. translators: command line help text for winbind disable option 
+#. translators: command line help text for winbind disable option
 #: src/samba-client.ycp:187
 msgid "Disable the service"
 msgstr "Wyłącz usługę"
 
-#. translators: command line help text for domain to be checked/joined 
+#. translators: command line help text for domain to be checked/joined
 #: src/samba-client.ycp:191
 msgid "The name of a domain to join"
 msgstr "Nazwa domeny do dołączenia się"
 
-#. translators: command line help text for joindomain user option 
+#. translators: command line help text for joindomain user option
 #: src/samba-client.ycp:196
 msgid ""
 "The user used for joining the domain. If omitted, YaST2 will\n"
@@ -728,12 +728,12 @@ msgstr ""
 "nie zostanie podana, YaST2 spróbuje dołączyć do domeny bez określenia\n"
 "nazwy użytkownika i hasła."
 
-#. translators: command line help text for joindomain password option 
+#. translators: command line help text for joindomain password option
 #: src/samba-client.ycp:202
 msgid "The password used for the user when joining the domain"
 msgstr "Hasło używane przez użytkownika przy dołączaniu się do domeny"
 
-#. translators: command line help text for the workgroup name option 
+#. translators: command line help text for the workgroup name option
 #: src/samba-client.ycp:207
 msgid "The name of a workgroup"
 msgstr "Nazwa grupy roboczej"
@@ -748,24 +748,3 @@ msgstr "Konfiguracja klienta Samby"
 msgid "Initializing..."
 msgstr "Inicjalizacja ..."
 
-#~ msgid "Br&owse..."
-#~ msgstr "Prze&glądaj..."
-
-#~ msgid ""
-#~ "<p>Specify the name of the NT or Active Directory domain. <b>Browse</b>\n"
-#~ "presents the list of all domains found in the network.</p>\n"
-#~ msgstr ""
-#~ "<p>Należy określić nazwę domeny NT lub domeny Active Directory. <b>Przeglądaj</b>\n"
-#~ "wyświetla listę wszystkich domen odnalezionych w sieci.</p>\n"
-
-#~ msgid "Looking for available workgroups and domains..."
-#~ msgstr "Poszukiwanie dostępnych grup roboczych i domen..."
-
-#~ msgid " (Domain)"
-#~ msgstr " (domena)"
-
-#~ msgid "&Existing Domains"
-#~ msgstr "&Istniejące domeny"
-
-#~ msgid "&Existing Neighbours"
-#~ msgstr "&Istniejący sąsiedzi"
