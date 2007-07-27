@@ -5,18 +5,19 @@
 # Wojciech Kapusta <w_kapusta@poczta.onet.pl>, 2006.
 # Wojciech Kapusta <wojciech@aviary.pl>, 2006.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2007.
+# Karol Sikora <elektrrrus@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-07-19 14:56+0200\n"
-"PO-Revision-Date: 2007-03-14 18:34+0100\n"
-"Last-Translator: Wojciech Kapusta <wkapusta@aviary.pl>\n"
+"PO-Revision-Date: 2007-07-27 14:20+0200\n"
+"Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
 #. Proposal for backup during update
@@ -367,9 +368,10 @@ msgstr ""
 
 #. error message in proposal
 #: src/clients/update_proposal.ycp:402
-#, fuzzy
 msgid "The installed product is not compatible with the product on the installation media."
-msgstr "Zainstalowany produkt jest niekompatybilny z produktem znajdującym się na nośniku instalacyjnym."
+msgstr ""
+"Zainstalowany produkt jest niekompatybilny z produktem znajdującym się na \n"
+"nośniku instalacyjnym."
 
 #. Can't find any software data, probably a installation media error
 #. error message
@@ -381,9 +383,8 @@ msgstr "Nie można odczytać danych dotyczących pakietów z nośnika instalacyj
 #. TRANSLATORS: unknown product name
 #: src/clients/update_proposal.ycp:419 src/clients/update_proposal.ycp:427
 #: src/clients/update_proposal.ycp:456 src/clients/update_proposal.ycp:458
-#, fuzzy
 msgid "Unknown product"
-msgstr "Nieznany procesor"
+msgstr "Nieznany produkt"
 
 #. TRANSLATORS: proposal error, %1 is the version of installed system
 #. %2 is the version being installed
@@ -394,34 +395,34 @@ msgid ""
 "Please, boot from the installation media and use a normal upgrade\n"
 "or disable installation sources of products with different versions."
 msgstr ""
+"Aktualizacja systemu do innej wersji (%1 -> %2) nie jest możliwa na działającym systemie<br>\n"
+"Proszę uruchomić komputer z płyty instalacyjnej i użyć normalnej aktualizacji\n"
+"lub wyłączyć źródła instalacji dostrczające produktów w róźnych wersjach."
 
 #. TRANSLATORS: proposal warning, both %1 and %2 are replaced with product names
 #: src/clients/update_proposal.ycp:454
 #, ycp-format
 msgid "Warning: Updating from '%1' to '%2', products do not exactly match."
-msgstr ""
+msgstr "Ostrzeżenie: Aktualizacja z '%1' do '%2' może spowodowac problemy. "
 
 #. Proposal for removing packages which are not maintained any more
 #: src/clients/update_proposal.ycp:475
-#, fuzzy
 msgid "Delete unmaintained packages"
-msgstr "&Usuń nieutrzymywane pakiety"
+msgstr "Usuń niewspierane pakiety"
 
 #. Proposal for backup during update
 #: src/clients/update_proposal.ycp:480
-#, fuzzy
 msgid "Only update installed packages"
-msgstr "Zaktualizuj tylko zainstalowane pakiety"
+msgstr "Aktualizuj tylko zainstalowane pakiety"
 
 #. proposal string
 #: src/clients/update_proposal.ycp:488
-#, fuzzy
 msgid "Update based on patterns"
 msgstr "Aktualizacja na podstawie wzorców"
 
 #. Proposal for selection during update, %1 stands for selection name
 #: src/clients/update_proposal.ycp:504
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "Update based on selection \"%1\""
 msgstr "Aktualizacja na podstawie wyboru \"%1\""
 
@@ -433,6 +434,11 @@ msgid ""
 "Whether only installed packages should be updated or also new ones should be installed\n"
 "(the default selection) and whether unmaintained packages should be deleted.</p>"
 msgstr ""
+"<p><b><big>Opcje aktualizacji</big></b>\n"
+"Można tutaj dokonać wyboru sposobu aktualizacji systemu\n"
+"Możliwe opcje to: aktualizacja tylko zainstalowanych pakietów, instalowanie także\n"
+"nowych pakietów\n"
+"(domyślnie), usuwanie niewspieranych pakietów.</p>"
 
 #. this is a menu entry
 #: src/clients/update_proposal.ycp:559
@@ -635,9 +641,8 @@ msgstr "Sprawdzanie systemu plików na %1..."
 
 #. popup headline
 #: src/modules/RootPart.ycp:420
-#, fuzzy
 msgid "File System Check Failed"
-msgstr "Kontrola sygnatury zakończona niepowodzeniem"
+msgstr "Kontrola systemu plików zakończona niepowodzeniem"
 
 #. popup question (continue/cancel dialog)
 #. %1 is a device name such as /dev/hda5
@@ -654,9 +659,8 @@ msgstr ""
 
 #. button
 #: src/modules/RootPart.ycp:430
-#, fuzzy
 msgid "&Skip Mounting"
-msgstr "&Pomiń konfigurację"
+msgstr "&Pomiń montowanie"
 
 #. yes-no popup
 #: src/modules/RootPart.ycp:808
@@ -670,6 +674,7 @@ msgstr "Ostrzeżenie"
 
 #: src/modules/RootPart.ycp:900
 #, ycp-format
+#, fuzzy
 msgid ""
 "Your /boot partition is too small (%1 MB).\n"
 "Recommended size is not less than %2 MB. It may happen that the\n"
@@ -678,6 +683,12 @@ msgid ""
 "\n"
 "Would you like to continue in updating the current system?"
 msgstr ""
+"Partycja /boot jest za mała (%1 MB).\n"
+"Rekomonduje się nie mniej niż %2 MB. Może się zdarzyć, że\n"
+"nowe jądro nie zmieści się na tej partycji. Zalecane jest zwiększanie rozmiaru partycji\n"
+"lub nie używanie całej partycji /boot.\n"
+"\n"
+"Kontynuować aktualizację systemu?"
 
 #. label in a popup, %1 is device (eg. /dev/hda1), %2 is output of the 'mount' command
 #: src/modules/RootPart.ycp:972
@@ -783,18 +794,11 @@ msgstr "Sprawdzane partycji głównej (root). Proszę czekać..."
 
 #. TRANSLATORS: "Update to: $product_name"
 #: src/modules/Update.ycp:332
-#, fuzzy
 msgid "Unknown Product"
-msgstr "Nieznany procesor"
+msgstr "Nieznany produkt"
 
 #. TRANSLATORS: check-box, it might happen that we need to downgrade some packages during update
 #: src/modules/Update.ycp:745
-#, fuzzy
 msgid "Allow Package Downgrade"
-msgstr "Wszystkie pakiety"
+msgstr "Zezwól na zainstalowanie straszych pakietów"
 
-#~ msgid "Reading package information. One moment please..."
-#~ msgstr "Odczytywanie informacji o pakietach. Proszę czekać..."
-
-#~ msgid "Updating to another version is not supported from the running system."
-#~ msgstr "Aktualizacja do innej wersji nie jest możliwa w działającym systemie."
