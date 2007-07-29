@@ -4,14 +4,14 @@
 # Copyright (C) 2003 SuSE Linux AG.
 # Stanisław Małolepszy <smalolepszy@aviary.pl>, 2006.
 # Wojciech Kapusta <wojciech@aviary.pl>, 2006.
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: nfs_server\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-07-19 15:01+0200\n"
-"PO-Revision-Date: 2006-04-03 23:36+0200\n"
-"Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
+"PO-Revision-Date: 2007-07-29 02:32+0100\n"
+"Last-Translator: Piotr Pacholak <obi_gl@o2.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,36 +76,32 @@ msgid "Writing NFS server settings. Please wait..."
 msgstr "Zapisywanie ustawień serwera NFS. Proszę czekać..."
 
 #: src/NfsServer.ycp:275
-#, fuzzy
 msgid "Unable to write to idmapd.conf."
-msgstr "Nie można zapisać pliku /etc/modules.conf."
+msgstr "Nie można zapisać pliku idmapd.conf."
 
 #: src/NfsServer.ycp:328
-#, fuzzy
 msgid "Unable to start idmapd. Please check your domain setting."
-msgstr "Nie znaleziono bazy danych o kartach dźwiękowych. Proszę sprawdzić instalację."
+msgstr "Nie można uruchomić demona idmapd. Proszę sprawdzić ustawienia domeny."
 
 #: src/NfsServer.ycp:336
-#, fuzzy
 msgid "Unable to restart idmapd"
-msgstr "Nie udaje się zrestartować demona lpd."
+msgstr "Nie można uruchomić ponownie demona idmapd."
 
 #: src/NfsServer.ycp:347
-#, fuzzy
 msgid "Unable to stop idmapd"
-msgstr "Nie można dołączyć do domeny."
+msgstr "Nie można zatrzymać demona idmapd."
 
 #: src/NfsServer.ycp:359
 msgid "Unable to start svcgssd. Please ensure your kerberos and gssapi (nfs-utils) set up is fine."
-msgstr ""
+msgstr "Nie można uruchomić svcgssd. Proszę upewnić się, że instalacja kerbos oraz gssapi (nfs-utils) jest poprawna."
 
 #: src/NfsServer.ycp:367
 msgid "'svcgssd' is already running. Unable to restart it."
-msgstr ""
+msgstr "'svcgssd' jest już uruchomiony. Nie można uruchomić go ponownie."
 
 #: src/NfsServer.ycp:378
 msgid "'svcgssd' is running. Unable to stop it."
-msgstr ""
+msgstr "'svcgssd' jest uruchomiony. Nie można zatrzymać go. "
 
 #. error popup message
 #: src/NfsServer.ycp:403
@@ -119,12 +115,12 @@ msgstr ""
 #. summary header; directories exported by NFS
 #: src/NfsServer.ycp:430
 msgid "NFS Exports"
-msgstr "Eksporty NFS"
+msgstr "Eksportowane katalogi NFS"
 
 #: src/NfsServer.ycp:447
-#, ycp-format
+#, fuzzy, ycp-format
 msgid "And the NFSv4 domain for idmapping is %1."
-msgstr ""
+msgstr "Domena NFSv4 dla mapowania id to %1."
 
 #. summary text
 #: src/nfs_server.ycp:109
@@ -143,7 +139,8 @@ msgid "Required packages (%1) are not installed."
 msgstr "Wymagane pakiety nie są zainstalowane (%1)."
 
 #. error
-#: src/nfs_server.ycp:179 src/nfs_server.ycp:217
+#: src/nfs_server.ycp:179
+#: src/nfs_server.ycp:217
 msgid "No mount point specified."
 msgstr "Nie podano punktu montowania."
 
@@ -157,11 +154,11 @@ msgstr ""
 
 #: src/nfs_server.ycp:257
 msgid "Domain can not be set without enabling NFSv4. Please use 'set enablev4' command."
-msgstr ""
+msgstr "Domena nie może być ustawiona bez włączenia NFSv4. Proszę użyć polecenia 'set enablev4'."
 
 #: src/nfs_server.ycp:264
 msgid "Command set must be used as in 'set option=value'. Please use 'set help' to know the options."
-msgstr ""
+msgstr "Polecenie set musi być używane według wzorca 'set opcja=wartość'. Proszę użyć 'set help' w celu poznania opcji."
 
 #. Command line help text for the nfs-server module
 #: src/nfs_server.ycp:275
@@ -191,7 +188,7 @@ msgstr "Usuń eksportowany katalog"
 
 #: src/nfs_server.ycp:303
 msgid "Set parameters - domain, security and enablev4"
-msgstr ""
+msgstr "Ustawia parametry - domena, bezpieczeństwo, włączenie wersji 4."
 
 #: src/nfs_server.ycp:309
 msgid "Directory to export"
@@ -207,23 +204,27 @@ msgid "Export options (see 'man exports')"
 msgstr "Opcje eksportu (zobacz 'man exports')"
 
 #: src/nfs_server.ycp:322
+#, fuzzy
 msgid "Domain specification for NFSv4 Idmapping, such as 'localdomain' or 'abc.com' etc."
-msgstr ""
+msgstr "Specyfikacja domeny dla mapowania id NFSv4, takiej jak 'localdomain' lub 'abc.com' etc."
 
 #: src/nfs_server.ycp:326
 msgid "Yes/No option for enabling/disabling support for NFSv4"
-msgstr ""
+msgstr "Opcja Tak/Nie włączająca/wyłączająca wsparcie dla NFSv4"
 
 #: src/nfs_server.ycp:330
 msgid "Yes/No option for enabling/disabling secure NFS"
-msgstr ""
+msgstr "Opcja Tak/Nie włączająca/wyłączająca bezpieczny NFS"
 
-#: src/routines.ycp:246 src/routines.ycp:250
+#: src/routines.ycp:246
+#: src/routines.ycp:250
 #, ycp-format
 msgid ""
 "%3 and %4 are both exported with the option fsid=0\n"
 "for the same client '%1' (contained in '%2')"
 msgstr ""
+"%3 i %4 są razem eksportowane z opcją fsid=0\n"
+"dla tego samego klienta '%1' (zawartego w '%2')"
 
 #. selection box label
 #: src/routines.ycp:351
@@ -286,15 +287,12 @@ msgstr "Przeg&lądaj..."
 
 #: src/ui.ycp:88
 msgid "Please enter a non-empty export path. Eg: /exports"
-msgstr ""
+msgstr "Proszę wprowadzić nie pustą ścieżkę eksportów. Np. /eksporty"
 
 #. error popup message
 #: src/ui.ycp:97
-#, fuzzy
 msgid "The exports table already contains this directory."
-msgstr ""
-"Tabela eksportów zawiera \n"
-"już ten katalog."
+msgstr "Tabela eksportów zawiera już ten katalog."
 
 #. message popup; %1, %2 are package names
 #: src/ui.ycp:104
@@ -333,6 +331,8 @@ msgid ""
 "'fsid=0'is not a valid option unless \n"
 "NFSv4 is enabled (previous page)"
 msgstr ""
+"'fsid=0' nie jest poprawną opcją jeśli\n"
+"NFSv4 jest włączony (poprzednia strona)"
 
 #. error popup message
 #: src/ui.ycp:267
@@ -345,7 +345,7 @@ msgstr ""
 
 #: src/ui.ycp:304
 msgid "Unable to read /etc/idmapd.conf file. Defaulting the domain to 'localdomain'"
-msgstr ""
+msgstr "Nie można odczytać pliku /etc/idmapd.conf. Powracanie do domyślnego ustawienia 'localdomain'"
 
 #. Help, part 1 of 2
 #: src/ui.ycp:322
@@ -364,17 +364,23 @@ msgstr ""
 "okno konfiguracyjne, w którym można podać katalogi do wyeksportowania.</P>"
 
 #: src/ui.ycp:333
+#, fuzzy
 msgid ""
 "<P>If the server needs to handle NFSv4 clients, enable the option <B>Enable NFSv4</B>,\n"
 "and fillin the NFSv4 domain name in the text entry, for id mapping daemon to use. Please leave\n"
 "it as localdomain or refer to man page for idmapd and idmapd.conf if you are not sure.</P>"
 msgstr ""
+"<P>Jeśli serwer musi obsłużyć klientów NFSv4, proszę włączyć opcje <B>Włącz NFSv4</B>\n"
+"i wpisać nazwe domeny NFSv4 w polu tekstowym, dla demona mapowania id. W przypadku braku\n"
+"pewności proszę to zostawić jako localdomain lub sprawdzić strony podręcznia systemowego idmap i idmap.con</P>"
 
 #: src/ui.ycp:338
 msgid ""
 "<P>If the server and client must authenticate using GSS library, please enable the <B>Enable GSS Security</B> \n"
 "checkbox. For being able to use GSS API, currently you need to have kerberos and gssapi (nfs-utils > 1.0.7) on your system</P>"
 msgstr ""
+"<P>Jeśli serwer i klient musi być uwierzytelniony za pomocą biblioteki GSS, proszę zaznaczyć opcje <B>Włącz zabezpieczenie GSS</B> \n"
+"Do używania GSS API obecnie wymagane jest zainstalowany kerberos i gssapi (nfs-utils > 1.0.7).</P>"
 
 #. frame label
 #: src/ui.ycp:345
@@ -388,7 +394,6 @@ msgstr "Włą&czony"
 
 #. radio button label
 #: src/ui.ycp:351
-#, fuzzy
 msgid "Do &Not Start"
 msgstr "W&yłączony"
 
@@ -398,24 +403,20 @@ msgid "Firewall"
 msgstr "Zapora sieciowa"
 
 #: src/ui.ycp:361
-#, fuzzy
 msgid "Enable NFSv4"
-msgstr "Włącz SCPM"
+msgstr "Włącz NFSv4"
 
 #: src/ui.ycp:364
-#, fuzzy
 msgid "Enable NFS&v4"
-msgstr "Włącz SCPM"
+msgstr "Włącz NFS&v4"
 
 #: src/ui.ycp:366
-#, fuzzy
 msgid "Enter NFSv4 do&main name:"
-msgstr "Nazwa &Domeny NIS:"
+msgstr "Nazwa Do&meny NFSv4:"
 
 #: src/ui.ycp:373
-#, fuzzy
 msgid "Enable &GSS Security"
-msgstr "Włącz obsługę skryptów &PHP5"
+msgstr "Włącz zabezpieczenie &GSS "
 
 #. dialog title
 #: src/ui.ycp:389
@@ -457,11 +458,12 @@ msgstr "<p>Proszę pozostawić to pole puste, na oznaczenie wszystkich komputer�
 #. Help, part 4 of 5, caution about fsid=0 in case NFSv4 is enabled.
 #: src/ui.ycp:507
 msgid "<p>The NFSv4 option is enabled in the previous page. Make sure that only one exported filesystem is marked with fsid=0 option for a particular client.</p>"
-msgstr ""
+msgstr "<p>NFSv4 jest włączony na poprzedniej stronie. Proszę się upewnić, że tylko jeden eksportowany system plików jest zaznaczony z opcją fsid=0 dla poszczególnego klienta.</p>"
 
 #: src/ui.ycp:509
+#, fuzzy
 msgid "<p>In case of multiple exports to a NFSv4 client, there is a need to bind the exported paths (not with fsid=0) to the one with fsid=0. To do this, simply add another export option, bind=/target/path where /target/path amounts to some directory existing below the fsid=0 - exported tree.</p>"
-msgstr ""
+msgstr "<p>W wypadku wielokrotnych eksportów do klienta NFSv4 należy związać wyeksportowane ścieżki (bez fsid=0) z jedną z fsid=0. W tym celu proszę dodać opcje eksportu bind=/docelowa/ścieżka gdzie /docelowa/ścieżka "
 
 #. Help, part 5 of 5
 #: src/ui.ycp:513
@@ -512,3 +514,4 @@ msgstr "U&suń"
 #: src/ui.ycp:550
 msgid "Directories to Export"
 msgstr "Katalogi do wyeksportowania"
+
