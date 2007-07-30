@@ -1,23 +1,23 @@
-# translation of ldap-server.po to 
-# translation of ldap-server.po to
+# translation of ldap-server.po to Polish
 # Polish message file for YaST2 (@memory@).
 # Copyright (C) 2005 SUSE Linux Products GmbH.
 # Copyright (C) 2003 SuSE Linux AG.
-# Wojciech Kapusta <wojciech@aviary.pl>, 2006.
 #
+# Wojciech Kapusta <wojciech@aviary.pl>, 2006.
+# Piotr Leszczyński <piotr@kontury.pl>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: ldap-server\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-07-19 14:56+0200\n"
-"PO-Revision-Date: 2006-06-14 23:00+0100\n"
-"Last-Translator: Wadim Dziedzic <nikdo@aviary.pl>\n"
-"Language-Team:  <pl@li.org>\n"
+"PO-Revision-Date: 2007-07-30 21:10+0200\n"
+"Last-Translator: Piotr Leszczyński <piotr@kontury.pl>\n"
+"Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. error message
 #: src/LdapServer.pm:140 src/LdapServer.pm:145
@@ -175,19 +175,18 @@ msgid "Creating Password Policy Objects"
 msgstr "Tworzenie obiektów reguł ustawiania haseł"
 
 #: src/LdapServer.pm:731 src/LdapServer.pm:733
-#, fuzzy
 msgid "Check password policy objects"
 msgstr "Sprawdzanie obiektów reguł ustawiania haseł"
 
 #: src/LdapServer.pm:769
-#, fuzzy, perl-format
+#, perl-format
 msgid ""
 "The default password policy object for\n"
 "'%s' does not exist.\n"
 "\n"
 "Create that object now?\n"
 msgstr ""
-"Domyślny obiekt regulujący ustawiania haseł dla\n"
+"Domyślny obiekt reguł ustawiania haseł dla\n"
 "'%s' nie istnieje.\n"
 "\n"
 "Czy go utworzyć?\n"
@@ -198,7 +197,8 @@ msgid ""
 "Authentication failed. The password is probably incorrect.\n"
 "The error message was: '%s'.\n"
 "Try again? \n"
-msgstr "Uwierzytelnianie nie powiodło się. Prawdopodobnie hasło było nieprawidłowe.\n"
+msgstr ""
+"Uwierzytelnianie nie powiodło się. Prawdopodobnie hasło było nieprawidłowe.\n"
 "Komunikat błędu: '%s'.\n"
 "Czy ponowić próbę? \n"
 
@@ -227,7 +227,7 @@ msgstr "Aby ustawić hasło, należy zdefiniować \"rootdn\"."
 #: src/YaPI/LdapServer.pm:393 src/YaPI/LdapServer.pm:679
 #: src/YaPI/LdapServer.pm:684
 msgid "Define 'passwd'."
-msgstr "Proszę zdefiniować \"hasła\"."
+msgstr "Proszę zdefiniować \"hasło\"."
 
 #. parameter check failed
 #: src/YaPI/LdapServer.pm:403 src/YaPI/LdapServer.pm:694
@@ -765,9 +765,8 @@ msgid "<p>In this dialog, edit some parameters of this database.<p>"
 msgstr "<p>W tym miejscu można edytować niektóre parametry bazy danych.<p>"
 
 #: src/helps.ycp:174
-#, fuzzy
 msgid "<h4>General Settings</h4>"
-msgstr "Ustawienia ogólne"
+msgstr "<h4>Ustawienia ogólne</h4>"
 
 #: src/helps.ycp:175
 msgid "<p>With <b>Root DN</b>, change the DN for the administrator."
@@ -786,13 +785,12 @@ msgid "<p>The password fields are initially empty, even if a password is already
 msgstr "<p>Pola haseł są początkowo puste, nawet jeśli hasło jest już ustawione w pliku konfiguracyjnym.</p>"
 
 #: src/helps.ycp:179
-#, fuzzy
 msgid "<h4>Password Policy Settings</h4>"
-msgstr "Ustawienia reguł haseł"
+msgstr "<h4>Ustawienia reguł haseł</h4>"
 
 #: src/helps.ycp:180
 msgid "<p>To make use of password policies for this database, enable <b>Enable Password Policies</b>.<p>"
-msgstr "<p>Aby umożliwić ustawienia reguł haseł dla tej bazy danych, wybierz <b>Zezwól na ustawienia reguł haseł</b>.</p>"
+msgstr "<p>Aby umożliwić ustawienia reguł haseł dla tej bazy danych, należy wybrać opcję <b>Zezwól na ustawienia reguł haseł</b>.</p>"
 
 #: src/helps.ycp:181
 msgid ""
@@ -801,6 +799,10 @@ msgid ""
 "model, but may be needed to compensate for LDAP clients that do not use the password modify extended operation to \n"
 "manage passwords.</p>\n"
 msgstr ""
+"<p>Proszę zaznaczyć <b>Szyfrowanie haseł z otwartym tekstem</b>, aby serwer OpenLDAP szyfrował hasła obecne w\n"
+"żądaniach dodawania i modyfikacji, przed umieszczeniem ich w bazie danych. Uwaga: jest to sprzeczne z modelem informacji X.500/LDAP,\n"
+"ale może być konieczne w przypadku klientów LDAP, które nie używają rozszerzonej operacji modyfikowania haseł do\n"
+"zarządzania hasłami.</p>\n"
 
 #: src/helps.ycp:186
 msgid ""
@@ -808,24 +810,24 @@ msgid ""
 "get a notification that their account is locked. This notification might provide useful information\n"
 "to an attacker. Sites that are sensitive to security issues should not enable this option.</p>\n"
 msgstr ""
+"<p>Jeśli wybrana została opcja <b>ujawnienia stanu \"Konta zamkniętego\"</b>, użytkownicy korzystający z\n"
+"uwierzytelniania konta otrzymają komunikat o tym fakcie. Komunikat ten może stanowić przydatną informację dla\n"
+"niepożądanych użytkowników. Na witrynach, w których ważną rolę odgrywa bezpieczeństwo danych, nie powinno się wybierać tej opcji.</p>\n"
 
 #: src/helps.ycp:190
 msgid "<p>Enter the name of the default policy object in <b>Default Policy Object DN</b>.</p>"
-msgstr "Wprowadź nazwę domyślnego obiektu reguł w <b>DN domyślnego obiektu reguł</b>.</p>"
+msgstr "<p>Proszę wprowadzić nazwę domyślnego obiektu reguł w polu <b>DN domyślnego obiektu reguł</b>.</p>"
 
 #: src/ldap-server.ycp:73
-#, fuzzy
 msgid "basedn exists or not available"
 msgstr "basedn już istnieje albo nie jest dostępny"
 
 #: src/ldap-server.ycp:105
-#, fuzzy
 msgid "Error while adding the database"
-msgstr "Wystąpił błąd podczas tworzenia bazy danych.\n"
+msgstr "Wystąpił błąd w trakcie dodawania bazy danych"
 
 #. error: wrong input (probably string or negative integer)
 #: src/ldap-server.ycp:137 src/ldap-server.ycp:176
-#, fuzzy
 msgid "The value for pos must be a positive integer."
 msgstr "Wartością rozbieżności czasu musi być dodatnia liczba całkowita."
 
@@ -835,22 +837,18 @@ msgid "Configuration of LDAP server"
 msgstr "Konfiguracja serwera LDAP"
 
 #: src/ldap-server.ycp:210
-#, fuzzy
 msgid "Enable/Disable the service"
 msgstr "Włączenie/Wyłączenie usługi"
 
 #: src/ldap-server.ycp:214
-#, fuzzy
 msgid "Add a new Database"
-msgstr "Dodawanie nowych baz danych"
+msgstr "Dodawanie nowej bazy danych"
 
 #: src/ldap-server.ycp:218
-#, fuzzy
 msgid "Show a List of currently available Databases"
-msgstr "Wyświetlenie bieżącego stanu usług sieciowych"
+msgstr "Wyświetlenie listy dostępnych baz danych"
 
 #: src/ldap-server.ycp:222
-#, fuzzy
 msgid "Show a List of currently configured schemas"
 msgstr "Przegląd listy skonfigurowanych schematów"
 
@@ -859,9 +857,8 @@ msgid "Add a schema to the list"
 msgstr "Dodawanie schematów do listy"
 
 #: src/ldap-server.ycp:230
-#, fuzzy
 msgid "Delete a schema from the list"
-msgstr "Czy na pewno usunąć wybrany schemat z listy?"
+msgstr "Usunięcie schematu z listy"
 
 #: src/ldap-server.ycp:234
 msgid "Enable the service"
@@ -872,24 +869,20 @@ msgid "Disable the service"
 msgstr "Wyłączenie usługi"
 
 #: src/ldap-server.ycp:237
-#, fuzzy
 msgid "Base DN for the database"
 msgstr "Base DN dla bazy danych"
 
 #: src/ldap-server.ycp:241
-#, fuzzy
 msgid "DN for the administrator login"
 msgstr "DN dla konta administratora"
 
 #: src/ldap-server.ycp:245
-#, fuzzy
 msgid "Administrator password"
-msgstr "&Hasło administracyjne"
+msgstr "&Hasło administratora"
 
 #: src/ldap-server.ycp:253
-#, fuzzy
 msgid "Directory for the database"
-msgstr "Odczytywanie bazy danych"
+msgstr "Katalog bazy danych"
 
 #: src/ldap-server.ycp:257
 msgid "File"
@@ -1064,7 +1057,7 @@ msgstr "Dostępne bazy danych:"
 #. directory selection dialog heading
 #: src/tree_structure.ycp:586
 msgid "Select Database Directory"
-msgstr "Katalog z bazą danych"
+msgstr "Wybór katalogu bazy danych"
 
 #. error popup
 #: src/tree_structure.ycp:628
@@ -1310,26 +1303,23 @@ msgstr "Dodaj B&ase DN"
 #. Textentry description
 #: src/tree_structure.ycp:1170
 msgid "&Database Directory"
-msgstr "Katalog z bazą &danych"
+msgstr "Katalog bazy &danych"
 
 #: src/tree_structure.ycp:1176 src/tree_structure.ycp:1241
-#, fuzzy
 msgid "Password Policy Settings"
-msgstr "Ustawienia haseł"
+msgstr "Ustawienia reguł haseł"
 
 #: src/tree_structure.ycp:1178 src/tree_structure.ycp:1243
-#, fuzzy
 msgid "Enable Password Policies"
-msgstr "Włącz zab&ezpieczenie hasłem programu ładującego system"
+msgstr "Włącz &ustawienia reguł haseł"
 
 #: src/tree_structure.ycp:1181 src/tree_structure.ycp:1246
-#, fuzzy
 msgid "Hash Clear Text Passwords"
-msgstr "Wstaw hasło"
+msgstr "Szyfrowanie haseł z otwartym tekstem"
 
 #: src/tree_structure.ycp:1184 src/tree_structure.ycp:1249
 msgid "Disclose \"Account Locked\" Status"
-msgstr "Pokaż stan \"Konta zamkniętego\""
+msgstr "Ujawnij stan \"Konta zamkniętego\""
 
 #: src/tree_structure.ycp:1187 src/tree_structure.ycp:1253
 msgid "Default Policy Object DN"
@@ -1344,3 +1334,4 @@ msgstr "Edycja bazy danych"
 #: src/wizards.ycp:58 src/wizards.ycp:135
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
