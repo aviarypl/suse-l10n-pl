@@ -1,27 +1,26 @@
-# translation of dhcp-server.po to 
 # translation of dhcp-server.po to
 # translation of dhcp-server.pl-k.po to
 # translation of dhcp-server.pl-k.po to
-# translation of dhcp-server.po to polski
 # Polish message file for YaST2 (@memory@).
 # Copyright (C) 2003 SuSE Linux AG.
+#
 # Wojciech Kapusta <w_kapusta@poczta.onet.pl>, 2005.
 # Stanisław Małolepszy <smalolepszy@aviary.pl>, 2006.
 # Wojciech Kapusta <wojciech@aviary.pl>, 2006.
-#
+# Karol Sikora <elektrrrus@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: dhcp-server\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-07-19 14:59+0200\n"
-"PO-Revision-Date: 2006-04-11 18:16+0200\n"
-"Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
+"PO-Revision-Date: 2007-07-31 19:42+0200\n"
+"Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: KBabel 1.9.1\n"
+"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #. Dhcp-server read dialog caption
 #: src/DhcpServer.pm:1372
@@ -197,7 +196,7 @@ msgstr "Nazwa domeny usługi DHCP nie została określona."
 msgid "Error occurred while creating %1."
 msgstr "Wystąpił błąd podczas tworzenia %1."
 
-#. error report, %1 is LDAP record key 
+#. error report, %1 is LDAP record key
 #: src/DhcpServer.pm:2713
 msgid "Error occurred while updating %1."
 msgstr "Wystąpił błąd podczas aktualizacji %1."
@@ -600,14 +599,16 @@ msgstr "Adres DHCP"
 msgid "At least one network interface must be selected."
 msgstr "Trzeba wybrać przynajmniej jeden interfejs sieciowy."
 
-#. TRANSLATORS: popup error, DHCP Server requires selected interface to have 
-#. at least minimal configuration 
+#. TRANSLATORS: popup error, DHCP Server requires selected interface to have
+#. at least minimal configuration
 #: src/dialogs2.ycp:277
 msgid ""
 "Selected network interface has currently no configuration (no assigned IP address \n"
 "and netmask). Using it in DHCP server configuration may not work.\n"
 "Really use this interface?"
 msgstr ""
+"Wybrany interfejs sieciowy nie jest skonfigurowany (nie jest przypisany do adresu IP i maski sieci). Serwera DHCP użyty z tym interfejsem może nie działać prawidłowo.\n"
+"Użyć tego interfejsu?"
 
 #. check box
 #: src/dialogs2.ycp:292 src/widgets.ycp:994
@@ -616,9 +617,8 @@ msgstr "Obsługa &LDAP"
 
 #. FATE #227, comments #5 and #17
 #: src/dialogs2.ycp:295
-#, fuzzy
 msgid "DHCP Server &Name (optional)"
-msgstr "Parametry (opcjonalnie)"
+msgstr "&Nazwa serwera DHCP (opcjonalnie)"
 
 #. Textentry with name of the domain
 #: src/dialogs2.ycp:305
@@ -674,9 +674,8 @@ msgstr "Podana wartość nie jest prawidłową nazwą komputera w sieci ani adre
 
 #. frame
 #: src/dialogs2.ycp:669
-#, fuzzy
 msgid "Subnet Information"
-msgstr "Konfiguracja podsieci"
+msgstr "Informacje o podsieci"
 
 #. TRANSLATORS: informative text entry (filled up, disabled)
 #: src/dialogs2.ycp:674
@@ -1073,9 +1072,8 @@ msgid "Save Settings and Restart DHCP Server Now"
 msgstr "Zapisz ustawienia i uruchom ponownie serwer DHCP"
 
 #: src/dialogs2.ycp:1874
-#, fuzzy
 msgid "DHCP Server Start-Up Arguments"
-msgstr "Serwer DHCP: uruchamianie"
+msgstr "Argumenty uruchamiania serwera DHCP"
 
 #. dialog caption, %1 is step number
 #: src/dialogs2.ycp:1908
@@ -2126,6 +2124,8 @@ msgid ""
 "Optionally, you can also specify <b>DHCP server name</b>\n"
 "(the name of dhcpServer LDAP object), if it is different from your hostname."
 msgstr ""
+"Opcjonalnie może podać <b>Nazwę serwera DHCP</b>\n"
+"(nazwa obiektu LDAP serwera dhcp), jeśli jest różna od nazwy hosta."
 
 #. Wizard Installation - Step 2 1/9
 #: src/helps.ycp:146
@@ -2206,10 +2206,13 @@ msgid ""
 "netmask and minimum and maximum IP addresses available for the clients.\n"
 "</p>"
 msgstr ""
+"<p><b><big>Informacje o podsieci</big></b></br>\n"
+"Można tutaj zobaczyć informacje o aktualnej podsieci, takie jak adres,\n"
+"maska sieci i minimalny i maksymalny adres IP dostępny dla klientów.\n"
+"</p>"
 
 #. Wizard Installation - Step 3 2/4
 #: src/helps.ycp:187
-#, fuzzy
 msgid ""
 "<p><b><big>IP Address Range</big></b><br>\n"
 "Set the <b>First IP Address</b> and the <b>Last IP Address</b>\n"
@@ -2221,11 +2224,12 @@ msgstr ""
 "<p><b><big>Zakres adresów IP</big></b><br>\n"
 "Tu należy ustalić <b>pierwszy adres IP</b> i <b>ostatni adres IP</b>, jakie\n"
 "mają być wydzierżawiane klientom.<br> Adresy te muszą mieć tę samą\n"
-"maskę sieci, na przykład <tt>192.168.1.1</tt> i <tt>192.168.1.64</tt>.</p>"
+"maskę sieci, na przykład <tt>192.168.1.1</tt> i <tt>192.168.1.64</tt> Proszę sprawdzić\n "
+"flagę <b>Zezwól na dynamiczny BOOTP</b> we wprowadzonym zakresie może być\n"
+"dynamicznie przydzielana do klienta BOOTP tak samo jak DHCP </p>"
 
 #. Wizard Installation - Step 3 3/4
 #: src/helps.ycp:195
-#, fuzzy
 msgid ""
 "<p><b><big>Lease Time</big></b><br>\n"
 "Set the <b>Default</b> lease time for the current IP address range,\n"
@@ -2630,10 +2634,3 @@ msgstr "&Podstawowy serwer DNS"
 msgid "DHCP Server &Expert Configuration..."
 msgstr "Zaawan&sowana konfiguracja serwera DHCP..."
 
-#~ msgid ""
-#~ "<p><b><big>Network Card Selection</big></b><br>\n"
-#~ "Select one of listed network cards to use for the DHCP server.</p>"
-#~ msgstr ""
-#~ "<p><b><big>Wybór karty sieciowej</big></b><br>\n"
-#~ "Tu można wybrać jedną z wyświetlonych kart sieciowych do użytku \n"
-#~ "dla tego serwera DHCP.</p>"

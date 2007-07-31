@@ -6,18 +6,19 @@
 # Stanisław Małolepszy <smalolepszy@aviary.pl>, 2006.
 # Wojciech Kapusta <wojciech@aviary.pl>, 2006.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2007.
+# Karol Sikora <elektrrrus@gmail.com>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: base\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-07-19 14:50+0200\n"
-"PO-Revision-Date: 2007-03-14 13:02+0100\n"
-"Last-Translator: Wojciech Kapusta <wkapusta@aviary.pl>\n"
+"PO-Revision-Date: 2007-07-31 18:47+0200\n"
+"Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Poedit-Bookmarks: 125,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
 "X-Generator: KBabel 1.11.4\n"
 
@@ -51,7 +52,7 @@ msgstr "Opuść tryb interaktywny i zapisz zmiany"
 msgid "Abort interactive mode without saving the changes"
 msgstr "Opuść tryb interaktywny bez zapisywania zmian"
 
-#. translators:  command line "help" option 
+#. translators:  command line "help" option
 #: library/commandline/src/CommandLine.ycp:60
 msgid "Print the help for this command"
 msgstr "Pokaż pomoc dla tego polecenia"
@@ -166,6 +167,8 @@ msgid ""
 "\n"
 "    Options of the [string] type must be written in the form 'option=value'."
 msgstr ""
+"\n"
+"    Opcje typu string muszą być wprowadzone w formie 'opcja=wartość'."
 
 #. translators: example title for command line
 #: library/commandline/src/CommandLine.ycp:526
@@ -320,9 +323,8 @@ msgid "No workflow defined for this installation mode."
 msgstr "Nie zdefiniowano przebiegu dla tego trybu instalacji."
 
 #: library/control/src/WorkflowManager.ycp:1055
-#, fuzzy
 msgid "An internal error occured when integrating additional workflow."
-msgstr "Wystąpił błąd wewnętrzny. Proszę zapoznać się z dziennikiem zdarzeń."
+msgstr "Wystąpił błąd wewnętrzny podczas dodawania zadania."
 
 #. message popup, %1 is a label of some widget
 #: library/cwm/src/CWM.ycp:631
@@ -359,7 +361,7 @@ msgstr ""
 #. %3 is eg. "Start Service via xinetd"
 #. (both without quotes)
 #: library/cwm/src/CWMServiceStart.ycp:212
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "<p><b><big>Service Start</big></b><br>\n"
 "To start the service every time your computer is booted, set\n"
@@ -368,7 +370,8 @@ msgid ""
 msgstr ""
 "<p><b><big>Uruchomienie usługi</big></b><br>\n"
 "Aby uruchamiać tę usługę zawsze podczas uruchomienia systemu,\n"
-"proszę ustawić <b>%1</b>. W przeciwnym przypadku należy ustawić\n"
+"proszę ustawić <b>%1</b>.Aby uruchamiać tę usługę poprzez xinetd, proszę\n"
+"wybrać<b>%3</b>. W innym przypadku należy ustawić\n"
 "<b>%2</b>.</p>"
 
 #. part of help text - radio button label, NO SHORTCUT!!!
@@ -389,15 +392,13 @@ msgstr "Ręcznie"
 
 #. part of help text - radio button label, NO SHORTCUT!!!
 #: library/cwm/src/CWMServiceStart.ycp:241
-#, fuzzy
 msgid "Via xinetd"
-msgstr "&xinetd"
+msgstr "Poprzez xinetd"
 
 #. radio button
 #: library/cwm/src/CWMServiceStart.ycp:288
-#, fuzzy
 msgid "Via &xinetd"
-msgstr "&xinetd"
+msgstr "Poprzez &xintetd"
 
 #. frame
 #: library/cwm/src/CWMServiceStart.ycp:320
@@ -800,7 +801,6 @@ msgid "YaST2 Control Center"
 msgstr "Centrum sterowania YaST2"
 
 #: library/desktop/src/menu.ycp:89
-#, fuzzy
 msgid ""
 "YaST2 Control Center is not running as root.\n"
 "You will only see modules which do not require root privileges."
@@ -2055,9 +2055,8 @@ msgstr "Sprawdzenie usług mogących powodować konflikty"
 
 #. TRANSLATORS: Progress step
 #: library/network/src/SuSEFirewall.ycp:2274
-#, fuzzy
 msgid "Read dynamic definitions of installed services"
-msgstr "Odczytywanie listy zainstalowanych pakietów..."
+msgstr "Odczytywanie dynamicznych definicji zainstalowanych usług"
 
 #. TRANSLATORS: Progress step
 #: library/network/src/SuSEFirewall.ycp:2278
@@ -2076,9 +2075,8 @@ msgstr "Sprawdzanie usług mogących powodować konflikty..."
 
 #. TRANSLATORS: Progress step
 #: library/network/src/SuSEFirewall.ycp:2284
-#, fuzzy
 msgid "Reading dynamic definitions of installed services..."
-msgstr "Odczytywanie listy zainstalowanych pakietów..."
+msgstr "Odczytywanie dynamicznych definicji zainstalowanych usług..."
 
 #. TRANSLATORS: Dialog caption
 #: library/network/src/SuSEFirewall.ycp:2429
@@ -2112,21 +2110,18 @@ msgstr "Zapisanie ustawień nie powiodło się"
 
 #. protocol name
 #: library/network/src/SuSEFirewall.ycp:3147
-#, fuzzy
 msgid "TCP"
-msgstr "RTC"
+msgstr "TCP"
 
 #. protocol name
 #: library/network/src/SuSEFirewall.ycp:3149
-#, fuzzy
 msgid "UDP"
-msgstr "UPS"
+msgstr "UDP"
 
 #. protocol name
 #: library/network/src/SuSEFirewall.ycp:3151
-#, fuzzy
 msgid "RPC"
-msgstr "PC"
+msgstr "RPC"
 
 #. protocol name
 #: library/network/src/SuSEFirewall.ycp:3153
@@ -2135,9 +2130,9 @@ msgstr "IP"
 
 #. table item, %1 stands for the buggy protocol name
 #: library/network/src/SuSEFirewall.ycp:3171
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "Unknown protocol (%1)"
-msgstr "Nieznany protokół %1."
+msgstr "Nieznany protokół (%1)"
 
 #. TRANSLATORS: description of the valid network definition
 #: library/network/src/SuSEFirewallExpertRules.ycp:113
@@ -2172,44 +2167,38 @@ msgstr "Znaleziono nowe urządzenie sieciowe: '%1', dodano jako zewnętrzny inte
 
 #. TRANSLATORS: Proposal informative text
 #: library/network/src/SuSEFirewallProposal.ycp:379
-#, fuzzy
 msgid "SuSEfirewall2 package is not installed, firewall will be disabled."
-msgstr "Pakiet nie jest i nie będzie zainstalowany."
+msgstr "Pakiet SuSEfirewall2 nie jest zainstalowany, firewall zostanie wyłączony."
 
 #. TRANSLATORS: Proposal informative text "Firewall is enabled (disable)" with link around
 #. IMPORTANT: Please, do not change the HTML link <a href="...">...</a>, only visible text
 #: library/network/src/SuSEFirewallProposal.ycp:395
-#, fuzzy
 msgid "Firewall is enabled (<a href=\"firewall--disable_firewall_in_proposal\">disable</a>)"
-msgstr "Zapora sieciowa jest <a href=\"firewall--disable_firewall_in_proposal\">włączona</a>"
+msgstr "Zapora sieciowa jest włączona(<a href=\"firewall--disable_firewall_in_proposal\">wyłączona</a>)"
 
 #. TRANSLATORS: Proposal informative text "Firewall is disabled (enable)" with link around
 #. IMPORTANT: Please, do not change the HTML link <a href="...">...</a>, only visible text
 #: library/network/src/SuSEFirewallProposal.ycp:399
-#, fuzzy
 msgid "Firewall is disabled (<a href=\"firewall--enable_firewall_in_proposal\">enable</a>)"
-msgstr "Zapora sieciowa jest <a href=\"firewall--disable_firewall_in_proposal\">włączona</a>"
+msgstr "Zapora sieciowa jest wyłączona (<a href=\"firewall--disable_firewall_in_proposal\">włączona</a>)"
 
 #. TRANSLATORS: Network proposal informative text with link around
 #. IMPORTANT: Please, do not change the HTML link <a href="...">...</a>, only visible text
 #: library/network/src/SuSEFirewallProposal.ycp:427
-#, fuzzy
 msgid "SSH port is open (<a href=\"firewall--disable_ssh_in_proposal\">close</a>)"
-msgstr "Port SSH jest <a href=\"firewall--disable_ssh_in_proposal\">otwarty</a>"
+msgstr "Port SSH jest otwarty (<a href=\"firewall--disable_ssh_in_proposal\">zamknięty</a>)"
 
 #. TRANSLATORS: Network proposal informative text with link around
 #. IMPORTANT: Please, do not change the HTML link <a href="...">...</a>, only visible text
 #: library/network/src/SuSEFirewallProposal.ycp:431
-#, fuzzy
 msgid "SSH port is blocked (<a href=\"firewall--enable_ssh_in_proposal\">open</a>)"
-msgstr "Port SSH jest <a href=\"firewall--disable_ssh_in_proposal\">otwarty</a>"
+msgstr "Port SSH zamknięty (<a href=\"firewall--disable_ssh_in_proposal\">otwarty</a>)"
 
 #. TRANSLATORS: Network proposal informative text with link around
 #. IMPORTANT: Please, do not change the HTML link <a href="...">...</a>, only visible text
 #: library/network/src/SuSEFirewallProposal.ycp:443
-#, fuzzy
 msgid "SSH port is open (<a href=\"firewall--disable_ssh_in_proposal\">close</a>), but there are still no network interfaces configured"
-msgstr "Port SSH jest <a href=\"firewall--disable_ssh_in_proposal\">otwarty</a> lecz nie znaleziono skonfigurowanych interfejsów sieciowych."
+msgstr "Port SSH jest otwarty (<a href=\"firewall--disable_ssh_in_proposal\">zamknięty</a>), lecz nie znaleziono skonfigurowanych interfejsów sieciowych."
 
 #. TRANSLATORS: This is a warning message. Installation over SSH without SSH allowed on firewall
 #: library/network/src/SuSEFirewallProposal.ycp:450
@@ -2219,16 +2208,14 @@ msgstr "Odbywa się instalacja systemu przez SSH, ale nie otwarto portu SSH w za
 #. TRANSLATORS: Network proposal informative text "Remote Administration (VNC) is enabled" with link around
 #. IMPORTANT: Please, do not change the HTML link <a href="...">...</a>, only visible text
 #: library/network/src/SuSEFirewallProposal.ycp:468
-#, fuzzy
 msgid "Remote Administration (VNC) ports are open (<a href=\"firewall--disable_vnc_in_proposal\">close</a>)"
-msgstr "Porty zdalnej administracji (VNC) <a href=\"firewall--disable_vnc_in_proposal\">otwarte</a>"
+msgstr "Porty zdalnej administracji (VNC) są otwarte (<a href=\"firewall--disable_vnc_in_proposal\">zamknięte</a>)"
 
 #. TRANSLATORS: Network proposal informative text "Remote Administration (VNC) is disabled" with link around
 #. IMPORTANT: Please, do not change the HTML link <a href="...">...</a>, only visible text
 #: library/network/src/SuSEFirewallProposal.ycp:472
-#, fuzzy
 msgid "Remote Administration (VNC) ports are blocked (<a href=\"firewall--enable_vnc_in_proposal\">open</a>)"
-msgstr "Porty zdalnej administracji (VNC) <a href=\"firewall--disable_vnc_in_proposal\">otwarte</a>"
+msgstr "Porty zdalnej administracji (VNC) są zamknięte (<a href=\"firewall--disable_vnc_in_proposal\">otwarte</a>)"
 
 #. TRANSLATORS: This is a warning message. Installation over VNC without VNC allowed on firewall
 #: library/network/src/SuSEFirewallProposal.ycp:477
@@ -2392,7 +2379,7 @@ msgstr "Serwer iSCSI"
 
 #. Fallback for presented service
 #: library/network/src/SuSEFirewallServices.ycp:371
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "Service: %1"
 msgstr "Usługa %1"
 
@@ -2405,11 +2392,10 @@ msgstr "Nieznana usługa '%1'"
 #. TRANSLATORS: a popup headline
 #: library/packages/src/PackageLock.ycp:44
 msgid "Accessing the Package Management Failed"
-msgstr ""
+msgstr "Błąd podczas dostępu do zarządzania pakietami"
 
 #. TRANSLATORS: an error message with question
 #: library/packages/src/PackageLock.ycp:46
-#, fuzzy
 msgid ""
 "Another process is accessing the package database.\n"
 "Package management cannot be used now.\n"
@@ -2419,6 +2405,9 @@ msgid ""
 msgstr ""
 "Inny proces korzysta z bazy danych o pakietach.\n"
 "Zarządzanie oprogramowaniem nie może zostać uruchomione.\n"
+"\n"
+"Kontunuować bez dostępu do zarządzania pakietami\n"
+"czy próbować ponowanie?\n"
 
 #. Error message, no packages sources found
 #: library/packages/src/PackageSystem.ycp:96
@@ -3241,7 +3230,7 @@ msgstr "TB"
 #: library/types/src/String.ycp:157
 #, ycp-format
 msgid "%1/s"
-msgstr ""
+msgstr "%1/s"
 
 #. format download rate message
 #. %1 - input message (e.g. "Downloading Package")
@@ -3249,9 +3238,9 @@ msgstr ""
 #. %3 - average download rate since start
 #. example - "Downloading Package - 237.34 KB/s (avg. 243.21 KB/s)"
 #: library/types/src/String.ycp:178
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "%1 - %2 (avg. %3)"
-msgstr "%1 %2 na %3"
+msgstr "%1 - %2 (średnio %3)"
 
 #. ellipsis - used to replace part of text to make it shorter
 #. example: "/really/very/long/file/name", "/.../file/name")
@@ -3401,5 +3390,3 @@ msgstr "Wyszukiwanie komputerów w sieci lokalnej..."
 msgid "Select the Serial &Interface to Use:"
 msgstr "&Interfejs szeregowy do użycia:"
 
-#~ msgid "KB"
-#~ msgstr "KB"
