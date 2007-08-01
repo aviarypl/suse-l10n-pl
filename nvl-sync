@@ -25,7 +25,8 @@ then
   DIR="."
 else
   DIR="$2"
-  mkdir -p $DIR
+  mkdir -p $DIR/yast
+  mkdir -p $DIR/lcn
 fi
 
 TRUNK=`pwd | sed 's/^.*\///'`
@@ -56,15 +57,13 @@ TS=`date +%s`
         for i in `find ${TS}-lcn-pot/ -name '*.pot'`
         do 
           k=`basename $i .pot`
-          msgmerge -o ${DIR}/lcn/${k}.pl.po --no-wrap ${TS}-lcn-po/${k}.pl.po 
-${TS}-lcn-pot/${k}.pot
+          msgmerge -o ${DIR}/lcn/${k}.pl.po --no-wrap ${TS}-lcn-po/${k}.pl.po ${TS}-lcn-pot/${k}.pot
         done
         
         for i in `find ${TS}-yast-pot/ -name '*.pot'`
         do 
           k=`basename $i .pot`
-          msgmerge -o ${DIR}/yast/${k}.pl.po --no-wrap ${TS}-yast-po/${k}.pl.po 
-${TS}-yast-pot/${k}.pot
+          msgmerge -o ${DIR}/yast/${k}.pl.po --no-wrap ${TS}-yast-po/${k}.pl.po ${TS}-yast-pot/${k}.pot
         done
         
         # Skopiuj html-help-*, które nie mają swoich potów.
