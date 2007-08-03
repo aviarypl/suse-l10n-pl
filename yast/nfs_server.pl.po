@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: nfs_server\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-07-19 15:01+0200\n"
-"PO-Revision-Date: 2007-07-29 02:32+0100\n"
-"Last-Translator: Piotr Pacholak <obi_gl@o2.pl>\n"
+"PO-Revision-Date: 2007-08-03 19:17+0100\n"
+"Last-Translator: wadim dziedzic <wdziedzic@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -118,7 +118,7 @@ msgid "NFS Exports"
 msgstr "Eksportowane katalogi NFS"
 
 #: src/NfsServer.ycp:447
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "And the NFSv4 domain for idmapping is %1."
 msgstr "Domena NFSv4 dla mapowania id to %1."
 
@@ -139,7 +139,8 @@ msgid "Required packages (%1) are not installed."
 msgstr "Wymagane pakiety nie są zainstalowane (%1)."
 
 #. error
-#: src/nfs_server.ycp:179 src/nfs_server.ycp:217
+#: src/nfs_server.ycp:179
+#: src/nfs_server.ycp:217
 msgid "No mount point specified."
 msgstr "Nie podano punktu montowania."
 
@@ -203,9 +204,8 @@ msgid "Export options (see 'man exports')"
 msgstr "Opcje eksportu (zobacz 'man exports')"
 
 #: src/nfs_server.ycp:322
-#, fuzzy
 msgid "Domain specification for NFSv4 Idmapping, such as 'localdomain' or 'abc.com' etc."
-msgstr "Specyfikacja domeny dla mapowania id NFSv4, takiej jak 'localdomain' lub 'abc.com' etc."
+msgstr "Określenie domeny dla mapowania id NFSv4, takiej jak 'localdomain' lub 'abc.com' etc."
 
 #: src/nfs_server.ycp:326
 msgid "Yes/No option for enabling/disabling support for NFSv4"
@@ -215,7 +215,8 @@ msgstr "Opcja Tak/Nie włączająca/wyłączająca wsparcie dla NFSv4"
 msgid "Yes/No option for enabling/disabling secure NFS"
 msgstr "Opcja Tak/Nie włączająca/wyłączająca bezpieczny NFS"
 
-#: src/routines.ycp:246 src/routines.ycp:250
+#: src/routines.ycp:246
+#: src/routines.ycp:250
 #, ycp-format
 msgid ""
 "%3 and %4 are both exported with the option fsid=0\n"
@@ -362,15 +363,14 @@ msgstr ""
 "okno konfiguracyjne, w którym można podać katalogi do wyeksportowania.</P>"
 
 #: src/ui.ycp:333
-#, fuzzy
 msgid ""
 "<P>If the server needs to handle NFSv4 clients, enable the option <B>Enable NFSv4</B>,\n"
 "and fillin the NFSv4 domain name in the text entry, for id mapping daemon to use. Please leave\n"
 "it as localdomain or refer to man page for idmapd and idmapd.conf if you are not sure.</P>"
 msgstr ""
 "<P>Jeśli serwer musi obsłużyć klientów NFSv4, proszę włączyć opcje <B>Włącz NFSv4</B>\n"
-"i wpisać nazwe domeny NFSv4 w polu tekstowym, dla demona mapowania id. W przypadku braku\n"
-"pewności proszę to zostawić jako localdomain lub sprawdzić strony podręcznia systemowego idmap i idmap.con</P>"
+"i wpisać nazwe domeny dla demona mapowania id NFSv4 w polu tekstowym. W przypadku braku\n"
+"pewności proszę pozostawić wpis localdomain lub sprawdzić strony podręcznika systemowego idmap i idmap.con</P>"
 
 #: src/ui.ycp:338
 msgid ""
@@ -459,9 +459,8 @@ msgid "<p>The NFSv4 option is enabled in the previous page. Make sure that only 
 msgstr "<p>NFSv4 jest włączony na poprzedniej stronie. Proszę się upewnić, że tylko jeden eksportowany system plików jest zaznaczony z opcją fsid=0 dla poszczególnego klienta.</p>"
 
 #: src/ui.ycp:509
-#, fuzzy
 msgid "<p>In case of multiple exports to a NFSv4 client, there is a need to bind the exported paths (not with fsid=0) to the one with fsid=0. To do this, simply add another export option, bind=/target/path where /target/path amounts to some directory existing below the fsid=0 - exported tree.</p>"
-msgstr "<p>W wypadku wielokrotnych eksportów do klienta NFSv4 należy związać wyeksportowane ścieżki (bez fsid=0) z jedną z fsid=0. W tym celu proszę dodać opcje eksportu bind=/docelowa/ścieżka gdzie /docelowa/ścieżka "
+msgstr "<p>W wypadku wielokrotnych eksportów do klienta NFSv4 należy związać wyeksportowane ścieżki (bez fsid=0) z jedną z fsid=0. W tym celu proszę dodać opcje eksportu bind=/docelowa/ścieżka gdzie /docelowa/ścieżka wskazuje na katalog istniejący w wyeksportowanym drzewie z fsid=0"
 
 #. Help, part 5 of 5
 #: src/ui.ycp:513
@@ -512,3 +511,4 @@ msgstr "U&suń"
 #: src/ui.ycp:550
 msgid "Directories to Export"
 msgstr "Katalogi do wyeksportowania"
+
