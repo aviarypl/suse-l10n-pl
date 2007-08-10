@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: instserver\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-19 15:00+0200\n"
+"POT-Creation-Date: 2007-08-10 13:42+0200\n"
 "PO-Revision-Date: 2006-03-23 23:17+0100\n"
 "Last-Translator: Wojciech Kapusta <wojciech@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -49,7 +49,8 @@ msgstr "Wczytaj plik konfiguracyjny"
 
 #. Progress stage 2/2
 #: src/Instserver.ycp:696
-msgid "Look for new source media"
+#, fuzzy
+msgid "Look for a new repository"
 msgstr "Szukaj nowego nośnika źródłowego"
 
 #. Progress step 1/2
@@ -59,7 +60,8 @@ msgstr "Wczytywanie pliku konfiguracyjnego..."
 
 #. Progress step 2/2
 #: src/Instserver.ycp:701
-msgid "Looking for new source media..."
+#, fuzzy
+msgid "Looking for a new repository..."
 msgstr "Szukanie nowego nośnika źródłowego..."
 
 #. Progress finished
@@ -104,14 +106,16 @@ msgstr "Nie można zapisać ustawień."
 
 #. TODO: report more details (stderr)
 #: src/Instserver.ycp:887 src/dialogs.ycp:699
-msgid "Error while moving installation source content."
+#, fuzzy
+msgid "Error while moving repository content."
 msgstr "Błąd podczas przenoszenia zawartości serwera instalacyjnego"
 
 #: src/Instserver.ycp:992
-msgid "Configured Sources"
+#, fuzzy
+msgid "Configured Repositories"
 msgstr "Skonfigurowane źródła"
 
-#. source overview - %1 is product name (e.g. "SUSE LINUX Version 10.0")
+#. repository overview - %1 is product name (e.g. "SUSE LINUX Version 10.0")
 #: src/complex.ycp:82
 #, ycp-format
 msgid "Label: %1"
@@ -179,12 +183,12 @@ msgstr "Proszę umieścić w napędzie płytę CD %1 z %2."
 msgid "Select ISO image %1 of %2."
 msgstr "Proszę wybrać obraz ISO %1 z %2."
 
-#. add-on medium (e.g. service pack) doesn't match configured source
+#. add-on medium (e.g. service pack) doesn't match configured repository
 #: src/dialogs.ycp:544
-#, ycp-format
+#, fuzzy, ycp-format
 msgid ""
 "The medium requires product %1, which is not provided\n"
-"by the current installation source.\n"
+"by the current repository.\n"
 "\n"
 "Select the base product medium first."
 msgstr ""
@@ -203,7 +207,8 @@ msgstr "To może chwilę potrwać..."
 
 #. Instserver configuration dialog caption
 #: src/dialogs.ycp:876 src/dialogs.ycp:1066
-msgid "Source Configuration"
+#, fuzzy
+msgid "Repository Configuration"
 msgstr "Konfiguracja źródła"
 
 #: src/dialogs.ycp:888
@@ -244,15 +249,17 @@ msgstr ""
 
 #. for translators: popup question (prefer more shorter lines than few long lines)
 #: src/dialogs.ycp:996
+#, fuzzy
 msgid ""
 "Add an additional product (Service Pack, Additional\n"
-"Package CD, etc.) to the source?"
+"Package CD, etc.) to the repository?"
 msgstr ""
 "Czy dodać produkt dodatkowy (Service-Packi, płyty z pakietami\n"
 "dodatkowymi itp.) do źródła?"
 
 #: src/dialogs.ycp:1075
-msgid "Source &Name:"
+#, fuzzy
+msgid "Repository &Name:"
 msgstr "&Nazwa źródła:"
 
 #: src/dialogs.ycp:1078
@@ -260,23 +267,24 @@ msgid "A&nnounce as Installation Service with SLP"
 msgstr "&Ogłoś jako usługę instalacyjną SLP"
 
 #: src/dialogs.ycp:1115
-msgid "Invalid source name."
+#, fuzzy
+msgid "Invalid repository name."
 msgstr "Nieprawidłowa nazwa źródła."
 
-#. an error message - entered source name already exists
+#. an error message - entered repository name already exists
 #: src/dialogs.ycp:1121
-#, ycp-format
+#, fuzzy, ycp-format
 msgid ""
-"Source '%1' already exists,\n"
+"Repository '%1' already exists,\n"
 "enter another name."
 msgstr ""
 "Źródło '%1' już istnieje, \n"
 "proszę wprowadzić inną nazwę."
 
 #: src/dialogs.ycp:1131
-#, ycp-format
+#, fuzzy, ycp-format
 msgid ""
-"Error while creating 'source' directory.\n"
+"Error while creating 'repository' directory.\n"
 "Verify that the directory \n"
 " %1 \n"
 "is writable and try again."
@@ -296,19 +304,23 @@ msgid "Do Not Configure Any Net&work Services"
 msgstr "Nie konfiguruj żadnych usług siecio&wych."
 
 #: src/dialogs.ycp:1192
-msgid "Di&rectory to Contain Sources:"
+#, fuzzy
+msgid "Di&rectory to Contain Repositories:"
 msgstr "Katalog z ź&ródłami:"
 
 #: src/dialogs.ycp:1207
-msgid "&Configure as HTTP Source"
+#, fuzzy
+msgid "&Configure as HTTP Repository"
 msgstr "S&konfiguruj jako źródło HTTP"
 
 #: src/dialogs.ycp:1210
-msgid "&Configure as FTP Source"
+#, fuzzy
+msgid "&Configure as FTP Repository"
 msgstr "Skonfiguruj jako źródło &FTP"
 
 #: src/dialogs.ycp:1213
-msgid "&Configure as NFS Source"
+#, fuzzy
+msgid "&Configure as NFS Repository"
 msgstr "Skonfiguruj jako źródło &NFS"
 
 #: src/dialogs.ycp:1272
@@ -371,8 +383,9 @@ msgstr ""
 "</p>"
 
 #: src/helps.ycp:23
+#, fuzzy
 msgid ""
-"<p>Select one of the server options and specify where all the sources\n"
+"<p>Select one of the server options and specify where all the repositories\n"
 "should be hosted on the local system.\n"
 "</p>"
 msgstr ""
@@ -432,9 +445,10 @@ msgstr ""
 "</p>\n"
 
 #: src/helps.ycp:50
+#, fuzzy
 msgid ""
-"<p>The source will be available at the following URL:\n"
-"<tt>nfs://Host_IP/Source_Name</tt></p>"
+"<p>The repository will be available at the following URL:\n"
+"<tt>nfs://Host_IP/Repository_Name</tt></p>"
 msgstr ""
 "<p>Źródło będzie dostępne pod następującym adresem URL:\n"
 "<tt>nfs://&lt;IP_hosta&gt;/&lt;Nazwa_źródła&gt;</tt></p>"
@@ -478,8 +492,9 @@ msgstr ""
 "</p>\n"
 
 #: src/helps.ycp:70
+#, fuzzy
 msgid ""
-"<p><tt>ftp://&lt;Host IP&gt;/&lt;Source Name&gt;</tt>\n"
+"<p><tt>ftp://&lt;Host IP&gt;/&lt;Repository Name&gt;</tt>\n"
 "</p>"
 msgstr ""
 "<p><tt>ftp://&lt;Host IP&gt;/&lt;Nazwa źródła&gt;</tt>\n"
@@ -504,33 +519,37 @@ msgstr ""
 "serwera instalacji zostanie wykorzystany alias.</p>\n"
 
 #: src/helps.ycp:80
+#, fuzzy
 msgid ""
 "<p>Select a short and easy to remember alias. For example, if you select\n"
-"<em>SUSE</em> as the alias, the sources will be available as shown below:</p>\n"
+"<em>SUSE</em> as the alias, the repositories will be available as shown below:</p>\n"
 msgstr ""
 "<p>Należy wybrać krótki i łatwy do zapamiętania alias. Na przykład, jeśli jako alias\n"
 "zostanie wybrany <em>SUSE</em>, źródła będą dostępne pod poniższym adresem:</p>\n"
 
 #: src/helps.ycp:84
+#, fuzzy
 msgid ""
-"<p><tt>http://&lt;Host IP&gt;/SUSE/&lt;Source Name&gt;</tt>\n"
+"<p><tt>http://&lt;Host IP&gt;/SUSE/&lt;Repository Name&gt;</tt>\n"
 "</p>"
 msgstr ""
 "<p><tt>http://&lt;IP hosta&gt;/SUSE/&lt;Nazwa źródła&gt;</tt>\n"
 "</p>"
 
 #: src/helps.ycp:87 src/helps.ycp:101
+#, fuzzy
 msgid ""
-"<p><b><big>Configuration of the Installation Source</big></b><br>\n"
+"<p><b><big>Configuration of the Repository</big></b><br>\n"
 "</p>\n"
 msgstr ""
 "<p><b><big>Konfiguracja serwera instalacyjnego</big></b><br>\n"
 "</p>\n"
 
 #: src/helps.ycp:91
+#, fuzzy
 msgid ""
-"<p>The source name is used to create a directory under which all product\n"
-"CDs are copied and managed. The installation source is accessed using the\n"
+"<p>The repository name is used to create a directory under which all product\n"
+"CDs are copied and managed. The repository is accessed using the\n"
 "configured protocol (NFS, FTP, or HTTP)</p> "
 msgstr ""
 "<p>Nazwa źródła jest używana do tworzenia katalogu, do którego są kopiowane\n"
@@ -541,9 +560,10 @@ msgid "<p><b><big>SLP Support</big></b></p>"
 msgstr "<p><b><big>Obsługa SLP</big></b></p>"
 
 #: src/helps.ycp:97
+#, fuzzy
 msgid ""
 "<p>SLP (Service Location Protocol) makes finding an installation server easier. \n"
-"If checked, the installation source will be announced on the network using SLP.</p>\n"
+"If checked, the repository will be announced on the network using SLP.</p>\n"
 msgstr ""
 "<p>SLP (Service Location Protocol) ułatwia znalezienie serwera instalacyjnego.\n"
 "Po włączeniu tej opcji serwer instalacyjny będzie ogłaszał swoje istnienie w sieci używając SLP.</p>\n"
@@ -555,9 +575,10 @@ msgid ""
 msgstr "<p>Należy wybrać napęd źródłowy z listy, a następnie umieścić w napędzie pierwszy nośnik podstawowego produktu i nacisnąć <b>Dalej</b>, aby skopiować zawartość do lokalnego repozytorium.</p>\n"
 
 #: src/helps.ycp:109
+#, fuzzy
 msgid ""
 "<p>When the base media are copied to the local repository, you can add additional\n"
-"CDs to the installation source (for example, Service Pack CDs or any add-on CDs).</p>\n"
+"CDs to the repository (for example, Service Pack CDs or any add-on CDs).</p>\n"
 msgstr "<p>Gdy podstawowe nośniki zostaną skopiowane do lokalnego repozytorium, można dodać do serwera instalacyjnego dodatkowe płyty CD (np. płyty Service Pack CD lub inne dodatkowe płyty).</p>\n"
 
 #: src/helps.ycp:113
@@ -590,8 +611,9 @@ msgstr ""
 
 #. Write dialog help 1/2
 #: src/helps.ycp:131
+#, fuzzy
 msgid ""
-"<p><b><big>Saving Source Configuration</big></b><br>\n"
+"<p><b><big>Saving Repository Configuration</big></b><br>\n"
 "Please wait...<br></p>\n"
 msgstr ""
 "<p><b><big>Zapisywanie konfiguracji źródła</big></b><br>\n"
@@ -612,8 +634,9 @@ msgstr ""
 
 #. Summary dialog help 1/3
 #: src/helps.ycp:143
+#, fuzzy
 msgid ""
-"<p><b><big>Installation Source Configuration</big></b><br>\n"
+"<p><b><big>Repository Configuration</big></b><br>\n"
 "Configure the installation server here.<br></p>\n"
 msgstr ""
 "<p><b><big>Konfiguracja serwera instalacyjnego</big></b><br>\n"
@@ -621,12 +644,13 @@ msgstr ""
 
 #. Summary dialog help 2/3
 #: src/helps.ycp:148
+#, fuzzy
 msgid ""
-"<p><b><big>Adding an Installation Source:</big></b><br>\n"
-"A search is made in the source repository for \n"
+"<p><b><big>Adding a Repository:</big></b><br>\n"
+"A search is made in the repository directory for \n"
 "unconfigured directories, which are then made \n"
 "available for configuration.\n"
-"Choose a source from the list of sources found. \n"
+"Choose a repository from the list of found repositories. \n"
 "Then press <b>Configure</b>.</p>\n"
 msgstr ""
 "<p><b><big>Dodawanie serwera instalacyjnego:</big></b><br>\n"
@@ -648,9 +672,10 @@ msgstr ""
 
 #. Ovreview dialog help 1/3
 #: src/helps.ycp:163
+#, fuzzy
 msgid ""
-"<p><b><big>Installation Sources Overview</big></b><br>\n"
-"Obtain an overview of configured installation sources. Additionally\n"
+"<p><b><big>Repositories Overview</big></b><br>\n"
+"Obtain an overview of configured repositories. Additionally\n"
 "edit their configuration.<br></p>\n"
 msgstr ""
 "<p><b><big>Przegląd konfiguracji serwera instalacyjnego</big></b><br>\n"
@@ -659,18 +684,20 @@ msgstr ""
 
 #. Ovreview dialog help 2/3
 #: src/helps.ycp:169
+#, fuzzy
 msgid ""
-"<p><b><big>Adding an Installation Source:</big></b><br>\n"
-"Press <b>Add</b> to configure an installation source.</p>"
+"<p><b><big>Adding a Repository:</big></b><br>\n"
+"Press <b>Add</b> to configure a repository.</p>"
 msgstr ""
 "<p><b><big>Dodawanie serwera instalacyjnego:</big></b><br>\n"
 "Aby skonfigurować nowy serwer instalacyjny, należy nacisnąć <b>Dodaj</b>.</p>"
 
 #. Ovreview dialog help 3/3
 #: src/helps.ycp:173
+#, fuzzy
 msgid ""
 "<p><b><big>Editing or Deleting:</big></b><br>\n"
-"Choose an installation source to change or remove.\n"
+"Choose a repository to change or remove.\n"
 "Then press <b>Edit</b> or <b>Delete</b> as desired.</p>\n"
 msgstr ""
 "<p><b><big>Modyfikacja albo usuwanie:</big></b><br>\n"

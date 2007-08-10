@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: packages-qt\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-19 14:49+0200\n"
+"POT-Creation-Date: 2007-08-10 13:31+0200\n"
 "PO-Revision-Date: 2007-07-24 19:19+0100\n"
 "Last-Translator: Piotr Pacholak <obi_gl@o2.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -20,8 +20,8 @@ msgstr ""
 "X-Poedit-Bookmarks: 219,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#. Column headers for installation source list
-#: src/QY2DiskUsageList.cc:44 src/pkg/YQPkgInstSrcList.cc:48
+#. Column headers for repository list
+#: src/QY2DiskUsageList.cc:44 src/pkg/YQPkgRepoList.cc:49
 msgid "Name"
 msgstr "Nazwa"
 
@@ -100,7 +100,7 @@ msgstr "&OK"
 #: src/pkg/YQPackageSelectorBase.cc:175 src/pkg/YQPackageSelectorBase.cc:237
 #: src/pkg/YQPackageSelectorBase.cc:284 src/pkg/YQPatternSelector.cc:252
 #: src/pkg/YQPkgConflictDialog.cc:135 src/pkg/YQPkgConflictDialog.cc:367
-#: src/pkg/YQPkgSearchFilterView.cc:203 src/pkg/YQPkgTextDialog.cc:229
+#: src/pkg/YQPkgSearchFilterView.cc:203 src/pkg/YQPkgTextDialog.cc:243
 #: src/pkg/YQSimplePatchSelector.cc:183
 msgid "&Cancel"
 msgstr "&Anuluj"
@@ -237,7 +237,7 @@ msgstr "Wzorce"
 msgid "Selections"
 msgstr "Zestawy"
 
-#: src/pkg/YQPackageSelector.cc:347 src/pkg/YQPkgInstSrcFilterView.cc:123
+#: src/pkg/YQPackageSelector.cc:347 src/pkg/YQPkgRepoFilterView.cc:123
 #: src/pkg/YQPkgRpmGroupTagsFilterView.cc:37
 msgid "Package Groups"
 msgstr "Grupy pakietów"
@@ -250,11 +250,11 @@ msgstr "Języki"
 msgid "Repositories"
 msgstr "Repozytoria"
 
-#: src/pkg/YQPackageSelector.cc:385 src/pkg/YQPkgInstSrcFilterView.cc:135
+#: src/pkg/YQPackageSelector.cc:385 src/pkg/YQPkgRepoFilterView.cc:135
 msgid "Search"
 msgstr "Szukaj"
 
-#: src/pkg/YQPackageSelector.cc:394 src/pkg/YQPkgInstSrcFilterView.cc:150
+#: src/pkg/YQPackageSelector.cc:394 src/pkg/YQPkgRepoFilterView.cc:150
 msgid "Installation Summary"
 msgstr "Podsumowanie instalacji"
 
@@ -303,8 +303,9 @@ msgstr "&Sprawdź"
 msgid "A&utocheck"
 msgstr "Kontrola a&utomatyczna"
 
+#. Translators: "Accept" here refers to licenses or similar
 #: src/pkg/YQPackageSelector.cc:583 src/pkg/YQPatternSelector.cc:260
-#: src/pkg/YQPkgTextDialog.cc:229 src/pkg/YQSimplePatchSelector.cc:191
+#: src/pkg/YQPkgTextDialog.cc:243 src/pkg/YQSimplePatchSelector.cc:191
 msgid "&Accept"
 msgstr "A&kceptuj"
 
@@ -349,7 +350,7 @@ msgstr "Paki&et"
 #. Translators: Unlike the "all in this list" submenu, this submenu
 #. refers to all packages globally, not only to those that are
 #. currently visible in the packages list.
-#: src/pkg/YQPackageSelector.cc:697 src/pkg/YQPkgInstSrcFilterView.cc:114
+#: src/pkg/YQPackageSelector.cc:697 src/pkg/YQPkgRepoFilterView.cc:114
 msgid "All Packages"
 msgstr "Wszystkie pakiety"
 
@@ -972,17 +973,6 @@ msgstr "Ostrzeżenie -- miejsce na dysku"
 msgid "%1 files total"
 msgstr "Razem plików: %1"
 
-#. Translators: This is a combo box where the user can apply a secondary filter
-#. in addition to the primary filter by installation source - one of
-#. "all packages", "RPM groups", "search", "summary"
-#: src/pkg/YQPkgInstSrcFilterView.cc:99
-msgid "&Secondary Filter:"
-msgstr "Filtr &drugorzędny:"
-
-#: src/pkg/YQPkgInstSrcList.cc:49 src/pkg/YQPkgVersionsView.cc:58
-msgid "URL"
-msgstr "URL"
-
 #. Translators: Table column heading for language ISO code like "de_DE", "en_US"
 #. Please keep this short to avoid stretching the column too wide!
 #: src/pkg/YQPkgLangList.cc:43
@@ -999,13 +989,13 @@ msgstr "Język"
 msgid "Package"
 msgstr "Pakiet"
 
-#: src/pkg/YQPkgList.cc:48 src/pkg/YQPkgPatchList.cc:57
+#: src/pkg/YQPkgList.cc:48 src/pkg/YQPkgPatchList.cc:58
 #: src/pkg/YQPkgProductList.cc:43
 msgid "Summary"
 msgstr "Podsumowanie"
 
 #: src/pkg/YQPkgList.cc:49 src/pkg/YQPkgList.cc:399
-#: src/pkg/YQPkgPatchList.cc:59
+#: src/pkg/YQPkgPatchList.cc:60
 msgid "Size"
 msgstr "Rozmiar"
 
@@ -1017,7 +1007,7 @@ msgstr "Dostępny"
 msgid "Inst. Ver."
 msgstr "Zainstalowany"
 
-#: src/pkg/YQPkgList.cc:58 src/pkg/YQPkgPatchList.cc:60
+#: src/pkg/YQPkgList.cc:58 src/pkg/YQPkgPatchList.cc:61
 #: src/pkg/YQPkgProductList.cc:44 src/pkg/YQPkgVersionsView.cc:54
 msgid "Version"
 msgstr "Wersja"
@@ -1027,7 +1017,7 @@ msgid "Source"
 msgstr "Źródło"
 
 #: src/pkg/YQPkgList.cc:186 src/pkg/YQPkgList.cc:293
-#: src/pkg/YQPkgObjList.cc:491 src/pkg/YQPkgPatchList.cc:414
+#: src/pkg/YQPkgObjList.cc:491 src/pkg/YQPkgPatchList.cc:471
 msgid "&All in This List"
 msgstr "&Wszytko z tej listy"
 
@@ -1136,64 +1126,69 @@ msgstr "Zerwane zależności"
 msgid "All dependencies satisfied"
 msgstr "Wszystkie zależności są zadowalające"
 
-#: src/pkg/YQPkgPatchFilterView.cc:66
+#: src/pkg/YQPkgPatchFilterView.cc:67
 msgid "&Show Patch Category:"
 msgstr "&Pokaż kategorię poprawki:"
 
-#: src/pkg/YQPkgPatchFilterView.cc:71
+#. Translators: This is about patches that patch the update engine (libzypp, YaST) itself
+#: src/pkg/YQPkgPatchFilterView.cc:76
+msgid "Update Stack Patches"
+msgstr ""
+
+#: src/pkg/YQPkgPatchFilterView.cc:78
 msgid "Installable Patches"
 msgstr "Dostępne poprawki"
 
-#: src/pkg/YQPkgPatchFilterView.cc:72
+#: src/pkg/YQPkgPatchFilterView.cc:79
 msgid "Installable and Installed Patches"
 msgstr "Dostępne i zainstalowane poprawki "
 
-#: src/pkg/YQPkgPatchFilterView.cc:73
+#: src/pkg/YQPkgPatchFilterView.cc:80
 msgid "All Patches"
 msgstr "Wszystkie poprawki"
 
-#: src/pkg/YQPkgPatchFilterView.cc:90
+#: src/pkg/YQPkgPatchFilterView.cc:97
 msgid "Patch Description"
 msgstr "Opis poprawki"
 
-#: src/pkg/YQPkgPatchFilterView.cc:102
+#: src/pkg/YQPkgPatchFilterView.cc:109
 msgid "Estimated Download Size:"
 msgstr "Szacowany rozmiar danych do pobrania:"
 
-#: src/pkg/YQPkgPatchList.cc:56
+#: src/pkg/YQPkgPatchList.cc:57
 msgid "Patch"
 msgstr "Poprawka"
 
-#: src/pkg/YQPkgPatchList.cc:58
+#: src/pkg/YQPkgPatchList.cc:59
 msgid "Category"
 msgstr "Kategoria"
 
-#: src/pkg/YQPkgPatchList.cc:236
+#: src/pkg/YQPkgPatchList.cc:265
 msgid "No patches available."
 msgstr "Brak dostępnych poprawek."
 
-#: src/pkg/YQPkgPatchList.cc:312
+#: src/pkg/YQPkgPatchList.cc:341
 msgid "Script"
 msgstr "Skrypt"
 
 #. Translators: These are patch categories
-#: src/pkg/YQPkgPatchList.cc:512
+#: src/pkg/YQPkgPatchList.cc:569
 msgid "YaST"
 msgstr "YaST"
 
-#: src/pkg/YQPkgPatchList.cc:513
+#: src/pkg/YQPkgPatchList.cc:570
 msgid "security"
 msgstr "bezpieczeństwo"
 
-#: src/pkg/YQPkgPatchList.cc:514
+#: src/pkg/YQPkgPatchList.cc:571
 msgid "recommended"
 msgstr "zalecany"
 
-#: src/pkg/YQPkgPatchList.cc:515
+#: src/pkg/YQPkgPatchList.cc:572
 msgid "optional"
 msgstr "opcjonalny"
 
-#: src/pkg/YQPkgPatchList.cc:516
+#: src/pkg/YQPkgPatchList.cc:573
 msgid "document"
 msgstr "dokument"
 
@@ -1219,6 +1214,17 @@ msgstr "Produkt"
 #: src/pkg/YQPkgProductList.cc:45
 msgid "Vendor"
 msgstr "Producent"
+
+#. Translators: This is a combo box where the user can apply a secondary filter
+#. in addition to the primary filter by repository - one of
+#. "all packages", "RPM groups", "search", "summary"
+#: src/pkg/YQPkgRepoFilterView.cc:99
+msgid "&Secondary Filter:"
+msgstr "Filtr &drugorzędny:"
+
+#: src/pkg/YQPkgRepoList.cc:50 src/pkg/YQPkgVersionsView.cc:58
+msgid "URL"
+msgstr "URL"
 
 #: src/pkg/YQPkgRpmGroupTagsFilterView.cc:41
 msgid "zzz All"
@@ -1397,9 +1403,13 @@ msgid "Authors:"
 msgstr "Autorzy:"
 
 #. Dialog title
-#: src/pkg/YQPkgTextDialog.cc:77
+#: src/pkg/YQPkgTextDialog.cc:79
 msgid "YaST2"
 msgstr "YaST2"
+
+#: src/pkg/YQPkgTextDialog.cc:241
+msgid "If you would like to print this license, check the EULA.txt file on the first media"
+msgstr ""
 
 #: src/pkg/YQPkgUpdateProblemFilterView.cc:38
 msgid ""
