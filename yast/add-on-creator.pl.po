@@ -1,3 +1,4 @@
+# translation of add-on-creator.po to Polish
 # translation of add-on-creator.po to
 # Polish message file for YaST2 (@memory@).
 # Copyright (C) 2005 SUSE Linux Products GmbH.
@@ -8,14 +9,15 @@
 # Marcin Piszczałka <bzzbee@o2.pl>, 2006.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2007.
 # Karol Sikora <elektrrrus@gmail.com>, 2007.
+# Piotr Leszczyński <piotr@kontury.pl>, 2007.
 msgid ""
 msgstr ""
 "Project-Id-Version: add-on-creator\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-10 13:39+0200\n"
-"PO-Revision-Date: 2007-07-31 21:35+0100\n"
-"Last-Translator: wadim dziedzic <wdziedzic@aviary.pl>\n"
-"Language-Team:  <pl@li.org>\n"
+"PO-Revision-Date: 2007-08-15 01:43+0200\n"
+"Last-Translator: Piotr Leszczyński <piotr@kontury.pl>\n"
+"Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -75,7 +77,7 @@ msgstr "Producent (nazwa potoczna)"
 #. label of content file key
 #: src/AddOnCreator.ycp:103
 msgid "Resolvables that must be installed"
-msgstr "Zależności, które muszą zainstalowane"
+msgstr "Obiekty, które muszą być zainstalowane"
 
 #. help text for content file 'REQUIRES' key
 #: src/AddOnCreator.ycp:105
@@ -83,8 +85,8 @@ msgid ""
 "<p>Resolvables that must be installed on the system to meet the needs of this product.</p>\n"
 "<p>This is a space-separated list of names or <tt>kind:name</tt> pairs optionally followed by version constraints. Just a name denotes a dependency to a package, such as <tt>sles-release</tt> or <tt>sles-release-10</tt>. The kind can be package, pattern, or product, such as <tt>pattern:basesystem</tt>.</p>"
 msgstr ""
-"<p>Zależności, które muszą być zainstalowane w systemie aby spełnić wymagania określone przez ten produkt.</p>\n"
-"<p>Jest to oddzielona odstępami lista nazw lub pary <tt>kind:name</tt>, z opcjonalnym ograniczeniem wersji. Jedynie nazwa wskazuje na zależności pakietu tak jak <tt>sles-release</tt> lub <tt>sles-release-10</tt>. Rodzaj może być następujący: pakiet, wzorzec lub produkt, na przykład <tt>pattern:basesystem</tt>.</p>"
+"<p>Obiekty, które muszą być zainstalowane w systemie aby spełnić wymagania określone przez ten produkt.</p>\n"
+"<p>Jest to oddzielona odstępami lista nazw lub par <tt>kind:name</tt>, czasami z wymogami wersji umieszczonymi na ostatnim miejscu. Nazwa na liście wskazuje na przynależność do pakietu, np.: <tt>sles-release</tt> lub <tt>sles-release-10</tt>. Rodzaj może być następujący: pakiet, wzorzec lub produkt, na przykład <tt>pattern:basesystem</tt>.</p>"
 
 #. label of content file key
 #: src/AddOnCreator.ycp:113
@@ -109,22 +111,22 @@ msgstr "Katalog danych pakietu (względem katalogu produktu)."
 #. label of content file key
 #: src/AddOnCreator.ycp:131
 msgid "Minimum architecture base supported"
-msgstr "Minimalna wspierana architektura."
+msgstr "Minimalna obsługiwana architektura"
 
 #. help text for content file 'DEFAULTBASE' key
 #: src/AddOnCreator.ycp:133
 msgid "Minimum architecture base supported by this product. The default is the base architecture if no matching <b>ARCH.base</b> is found."
-msgstr "Minimalna architektura bazowa wspierana przez ten produkt. Domyślną jest architektura bazowa, jeśli nie można znaleźć <b>ARCH.base</b>."
+msgstr "Minimalna architektura bazowa obsługiwana przez ten produkt. Domyślną jest architektura bazowa, jeśli nie można znaleźć odpowiedniej <b>ARCH.base</b>."
 
 #. labeliption of content file PREREQUIRES key
 #: src/AddOnCreator.ycp:141
 msgid "Resolvables needed before installation"
-msgstr "Zależności wymagane przed instalacją"
+msgstr "Obiekty wymagane przed instalacją"
 
 #. help text for content file 'PREREQUIRES' key
 #: src/AddOnCreator.ycp:143
 msgid "Resolvables that must be installed on the system before installation of this product. The syntax is the same as for <b>REQUIRES</b>."
-msgstr "Zależności, które muszą być zainstalowane w systemie przed instalacją tego produktu. Składnia jest taka sama jak dla <b>REQUIRES</b>."
+msgstr "Obiekty, które muszą być zainstalowane w systemie przed instalacją tego produktu. Składnia jest taka sama jak dla <b>REQUIRES</b>."
 
 #. label of content file key
 #: src/AddOnCreator.ycp:148
@@ -139,47 +141,47 @@ msgstr "Etykieta zakodowana w UTF-8. Jest domyślną etykietą, jeśli <b>LINGUA
 #. label of content file PROVIDES key
 #: src/AddOnCreator.ycp:155
 msgid "Resolvables provided"
-msgstr "Dostarczane zależności"
+msgstr "Obiekty zapewnione"
 
 #. help text for content file 'PROVIDES' key
 #: src/AddOnCreator.ycp:157
 msgid "Capabilities this product provides. They can be used to match <b>REQUIRES</b> from others. Every resolvable has a provides by default--its own name and edition. For example, package <i>bar-1.42-1</i> provides the capability <tt>bar = 1.42-1</tt>."
-msgstr "Możliwości, które ten produkt dostarcza. Mogą być użyte aby sprostać <b>REQUIRES</b> innych. Każda zależność zapewnia domyślnie własną nazwę i edycje. Np. paczka <i>bar-1.42-1</i> zapewnia możliwości  <tt>bar = 1.42-1</tt>."
+msgstr "Właściwości, jakie ten produkt posiada. Mogą być one wykorzystane, żeby spełnić <b>REQUIRES</b> innych obiektów. Każdy obiekt posiada domyślnie własną nazwę i numer wydania. Stąd np. pakiet <i>bar-1.42-1</i> ma właściwość <tt>bar = 1.42-1</tt>."
 
 #. label of content file 'CONFLICTS' key
 #: src/AddOnCreator.ycp:162
 msgid "Conflicting resolvables"
-msgstr "Konflikty zależności"
+msgstr "Konflikty obiektów"
 
 #. help text for content file 'CONFLICTS' key
 #: src/AddOnCreator.ycp:164
 msgid "This resolvable cannot be installed if the specified resolvable or one that provides the capability is installed."
-msgstr "Ta zależność nie może być zainstalowana, jeśli określona zależność lub ta, której możliwości zapewnia, jest zainstalowana"
+msgstr "Ten obiekt został wcześniej zainstalowany lub zainstalowano już obiekt zapewniający daną właściwość."
 
 #. label of content file 'OBSOLETES' key
 #: src/AddOnCreator.ycp:169
 msgid "Resolvables made obsolete"
-msgstr "Nieaktualne zależności"
+msgstr "Obiekty nieaktualne"
 
 #. help text for content file 'OBSOLETES' key
 #: src/AddOnCreator.ycp:171
 msgid "When this resolvable is installed, it uninstalls any other resolvable with a name matching this keyword."
-msgstr "Kiedy ta zależność jest zainstalowana, odinstalowuje wszystkie inne, których nazwa pasuje do nazwy zależności."
+msgstr "Instalacja tego obiektu powoduje odinstalowanie pozostałych obiektów, zgodnych z jego nazwą."
 
 #. label of content file 'RECOMMENDS' key
 #: src/AddOnCreator.ycp:176
 msgid "Recommended resolvables"
-msgstr "Zalecane zależności"
+msgstr "Obiekty zalecane"
 
 #. help text for content file 'RECOMMENDS' key
 #: src/AddOnCreator.ycp:178
 msgid "A weak version of <b>REQUIRES</b>. An attempt is made to fulfill <b>RECOMMENDS</b>, but they are silently ignored if no match is possible."
-msgstr "Kiepska wersja <b>REQUIRES</b>. Została powzięta próba aby wypełnić <b>RECOMMENDS</b>, jednak jeśli nie można ich dopasować są one zignorowane - bez powiadomienia."
+msgstr "Łagodna wersja <b>REQUIRES</b>. Podjęta zostanie próba spełnienia wymagań <b>RECOMMENDS</b>, a jeśli w jej trakcie nie będzie można znaleźć odpowiednich obiektów, zakończy się dyskretnym zignorowaniem tych wymagań."
 
 #. label of content file 'SUGGESTS' key
 #: src/AddOnCreator.ycp:183
 msgid "Suggested resolvables"
-msgstr "Sugerowane zależności."
+msgstr "Obiekty sugerowane"
 
 #. help text for content file 'SUGGESTS' key
 #. help text for 'Prs' pattern key
@@ -191,22 +193,22 @@ msgstr "Są to jedynie wskazówki dla aplikacji i nie są brane pod uwagę podcz
 #. label of content file 'SUPPLEMENTS' key
 #: src/AddOnCreator.ycp:190
 msgid "Supplemented resolvables"
-msgstr "Dodatkowe zależności"
+msgstr "Obiekty dodatkowe"
 
 #. help text for content file 'SUPPLEMENTS' key
 #: src/AddOnCreator.ycp:192
 msgid "A reverse <b>RECOMMENDS</b>. This product is installed if the specified capability is provided by an installed resolvable. The dependency resolver installs it. Uninstalling it is silently accepted."
-msgstr "Wsteczne <b>RECOMMENDS</b>. Ten produkt jest instalowany, jeśli określona możliwość jest zapewniona przez zainstalowaną zależność. Analizator zależności instaluje ją. Odinstalowanie jej jest zaakceptowane bez komunikatu."
+msgstr "Odwrotność <b>RECOMMENDS</b>. Ten produkt zostanie zainstalowany, jeśli określona właściwość będzie zapewniona przez zainstalowany wcześniej obiekt. Konfigurator zależności zainstaluje produkt. Odinstalowanie go będzie zaakceptowane bez komunikatu."
 
 #. label of content file 'ENHANCES' key
 #: src/AddOnCreator.ycp:197
 msgid "Enhanced resolvables"
-msgstr "Rozszerzone zależności"
+msgstr "Obiekty rozszerzone"
 
 #. help text for content file 'ENHANCES' key
 #: src/AddOnCreator.ycp:199
 msgid "A reverse <b>SUGGESTS</b>. This product can be installed if this capability is provided by an installed resolvable. It is just a hint for an application. For example, <i>SuSEplugger</i> can suggest packages for installation if specific hardware is found."
-msgstr "Wsteczne <b>SUGGESTS</b>. Ten produkt może zostać zainstalowany, jeśli te możliwości są zapewnione przez zainstalowaną zależność. Jest to jedynie wskazówka dla aplikacji. Np. <i>SuSEplugger</i> może zasugerować pakiety do instalacji, jeśli określony sprzęt nie został znaleziony"
+msgstr "Odwrotność <b>SUGGESTS</b>. Ten produkt może zostać zainstalowany, jeśli ta właściwość będzie zapewniona przez zainstalowany już obiekt. Jest to jedynie wskazówka dla aplikacji. Np. <i>SuSEplugger</i> może zasugerować pakiety do instalacji, jeśli został znaleziony określony sprzęt."
 
 #. label of content file 'LINGUAS' key
 #: src/AddOnCreator.ycp:204
@@ -216,7 +218,7 @@ msgstr "Języki"
 #. help text for content file 'LINGUAS' key
 #: src/AddOnCreator.ycp:206
 msgid "ISO language code or language code_country code."
-msgstr "Kodowanie języka ISO lub kod języka kod_kraj."
+msgstr "Kod języka ISO lub kod języka kod_kraj."
 
 #. label of content file 'LANGUAGE' key
 #: src/AddOnCreator.ycp:212
@@ -246,7 +248,7 @@ msgstr "Znaczniki"
 #. help text for content file 'FLAGS' key
 #: src/AddOnCreator.ycp:230
 msgid "Product-specific capabilities."
-msgstr "Specjalne możliwości produktu."
+msgstr "Specyficzne właściwości produktu."
 
 #. label of content file 'UPDATEURLS' key
 #: src/AddOnCreator.ycp:235
@@ -256,12 +258,12 @@ msgstr "Adres URL aktualizacji"
 #. help text for content file 'UPDATEURLS' key
 #: src/AddOnCreator.ycp:237
 msgid "URL of the update source."
-msgstr "Adres URL aktualizacji kodu źródłowego."
+msgstr "Adres URL źródła aktualizacji."
 
 #. label of content file LABEL.lang key
 #: src/AddOnCreator.ycp:246
 msgid "Language-specific label"
-msgstr "Specjalna etykieta języka"
+msgstr "Etykieta dla określonego języka"
 
 #. help text for content file 'LABEL.lang' key
 #: src/AddOnCreator.ycp:248
@@ -298,7 +300,7 @@ msgstr "Podsumowanie"
 #. help text for 'Sum' pattern key
 #: src/AddOnCreator.ycp:297
 msgid "One line label in the default language"
-msgstr "Krótka nazwa w domyślnym języku"
+msgstr "Krótka nazwa w języku domyślnym"
 
 #. help text for 'Sum.lang' pattern key
 #: src/AddOnCreator.ycp:299
@@ -315,12 +317,12 @@ msgstr "Opis"
 #. help text for 'Des' pattern key
 #: src/AddOnCreator.ycp:307
 msgid "Multiple line description in the default language"
-msgstr "Wieloliniowy opis w domyślnym języku."
+msgstr "Pełny opis w języku domyślnym"
 
 #. help text for 'Des.lang' pattern key
 #: src/AddOnCreator.ycp:309
 msgid "Multiple line description, language specific."
-msgstr "Wieloliniowy opis dla konkretnego języka."
+msgstr "Pełny opis dla określonego języka."
 
 #. label for 'Cat' pattern key
 #: src/AddOnCreator.ycp:313
@@ -335,7 +337,7 @@ msgstr "Nazwa kategorii w domyślnym języku używana do grupowania wzorców. Ka
 #. help text for 'Cat.lang' pattern key
 #: src/AddOnCreator.ycp:317
 msgid "Language-specific version of the category."
-msgstr "Określona językowo wersja kategorii."
+msgstr "Wersja kategorii dla określonego języka."
 
 #. label for 'Vis' pattern key
 #: src/AddOnCreator.ycp:322
@@ -360,7 +362,7 @@ msgstr "Lista pakietów do instalacji."
 #. label for 'Prc' pattern key
 #: src/AddOnCreator.ycp:339
 msgid "Recommended packages"
-msgstr "Zalecane pakiety"
+msgstr "Pakiety zalecane"
 
 #. help text for 'Prc' pattern key
 #: src/AddOnCreator.ycp:341
@@ -370,7 +372,7 @@ msgstr "Te pakiety są zainstalowane domyślnie, ale mogą być usunięte bez os
 #. label for 'Prs' pattern key
 #: src/AddOnCreator.ycp:347
 msgid "Suggested packages"
-msgstr "Sugerowane pakiety"
+msgstr "Pakiety sugerowane"
 
 #. label for 'Ico' pattern key
 #: src/AddOnCreator.ycp:355
@@ -383,8 +385,8 @@ msgid ""
 "If unspecified, the pattern name is used \n"
 " instead (with blanks in the name replaced by underscores). If the filename does not include a .png or .jpg extension, .png is appended. If no path is specified, icons are searched for in the theme icon path (first /usr/share/YaST2/theme/current/icons/32x32/apps/ then /usr/share/YaST2/theme/current/icons/48x48/apps/). Absolute and relative paths (to the theme path /usr/share/YaST2/theme/current/) are allowed."
 msgstr ""
-"W przypadku nieokreślenia, użyta będzie nazwa wzorca \n"
-"(spacje w nazwie zastąpione podkreśleniami). Jeśli nazwa pliku nie zawiera rozszerzenia .png lub .jpg, dodane zostanie rozszerzenie .png. Jeśli nie ma określonej ścieżki, ikony są szukane w ścieżce motywu ikon (najpierw /usr/share/YaST2/theme/current/icons/32x32/apps/ następnie /usr/share/YaST2/theme/current/icons/48x48/apps/) Dozwolone są ścieżki bezwzględne i względne ścieżki (względem  ścieżki motywu /usr/share/YaST2/theme/current/)."
+"Jeśli użytkownik nie określi jej, użyta będzie nazwa wzorca \n"
+"(spacje w nazwie zastąpione podkreśleniami). Jeśli nazwa pliku nie zawiera rozszerzenia .png lub .jpg, dodane zostanie rozszerzenie .png. Jeśli nie ma określonej ścieżki, ikony będą wyszukiwane w ścieżce ikon motywu (najpierw /usr/share/YaST2/theme/current/icons/32x32/apps/, a następnie /usr/share/YaST2/theme/current/icons/48x48/apps/). Dozwolone są ścieżki bezwzględne i względne (wobec ścieżki motywu /usr/share/YaST2/theme/current/)."
 
 #. label for 'Ord' pattern key
 #: src/AddOnCreator.ycp:365
@@ -399,7 +401,7 @@ msgstr "Ta trzycyfrowa wartość liczbowa definiuje kolejność wzorców podczas
 #. label for 'Req' pattern key
 #: src/AddOnCreator.ycp:375
 msgid "Required patterns"
-msgstr "Wymagane wzorce"
+msgstr "Wzorce wymagane"
 
 #. help text for 'Req' pattern key
 #: src/AddOnCreator.ycp:377
@@ -409,12 +411,12 @@ msgstr "Wzorce, które trzeba zainstalować wraz z tym wzorcem."
 #. label for 'Prv' pattern key
 #: src/AddOnCreator.ycp:383
 msgid "Provided patterns"
-msgstr "Dostarczone wzorce"
+msgstr "Wzorce zapewnione"
 
 #. help text for 'Prv' pattern key
 #: src/AddOnCreator.ycp:385
 msgid "Capabilities this pattern provides. They can be used to match <b>REQUIRES</b> from others. Every resolvable has a provide by default--its own name and edition. For example, package <i>bar-1.42-1</i> provides the capability <tt>bar = 1.42-1</tt>."
-msgstr "Przedstawienie możliwości, które ten wzorzec zapewnia. Mogą być one użyte, aby dopasować <b>REQUIRES</b> od innych. Każda zależność zapewnia domyślnie własną nazwę i edycję. Np: pakiet <i>bar-1.42-1</i> zapewnia możliwości <tt>bar = 1.42-1</tt>."
+msgstr "Przedstawienie właściwości, jakie ten wzorzec posiada. Mogą być one użyte, aby spełnić <b>REQUIRES</b> innych obiektów. Każdy obiekt ma domyślnie własną nazwę i numer wydania. Np: pakiet <i>bar-1.42-1</i> posiada właściwość <tt>bar = 1.42-1</tt>."
 
 #. label for 'Con' pattern key
 #: src/AddOnCreator.ycp:391
@@ -429,39 +431,39 @@ msgstr "Ten wzorzec nie może zostać zainstalowany, jeśli określona zależno�
 #. label for 'Obs' pattern key
 #: src/AddOnCreator.ycp:399
 msgid "Patterns made obsolete"
-msgstr "Nieaktualne wzorce"
+msgstr "Wzorce nieaktualne"
 
 #. help text for 'Obs' pattern key
 #: src/AddOnCreator.ycp:401
 msgid ""
 "When this pattern is installed, it uninstalls any \n"
 "other patterns marked as obsolete here."
-msgstr "W przypadku instalacji tego wzorca, odinstalowuje on inne wzorce zaznaczone tutaj jako nieaktualne."
+msgstr "W przypadku instalacji tego wzorca, odinstalowuje on inne wzorce zaznaczone w tym miejscu jako nieaktualne."
 
 #. label for 'Rec' pattern key
 #: src/AddOnCreator.ycp:408
 msgid "Recommended patterns"
-msgstr "Zalecane wzorce"
+msgstr "Wzorce zalecane"
 
 #. help text for 'Rec' pattern key
 #: src/AddOnCreator.ycp:410
 msgid "A weak version of REQUIRES. If recommended patterns cannot be installed, no error is shown."
-msgstr "Łagodna wersja WYMAGA. Błąd nie zostanie wyświetlony, jeśli zalecane wzorce nie mogą być zainstalowane."
+msgstr "Łagodna wersja REQUIRES. Jeśli zalecane wzorce nie będą mogły być zainstalowane, nie zostaną wyświetlone żadne komunikaty o błędach."
 
 #. label for 'Sup' pattern key
 #: src/AddOnCreator.ycp:416
 msgid "Supplemented patterns"
-msgstr "Dopełnione wzorce"
+msgstr "Wzorce dodatkowe"
 
 #. help text for 'Sup' pattern key
 #: src/AddOnCreator.ycp:418
 msgid "A reverse <b>Rec</b>. This pattern is installed if the specified capability is provided by an installed resolvable. The dependency resolver installs it. Uninstalling it is silently accepted."
-msgstr "Odwrotność <b>Rec</b>. Ten wzorzec zostanie zainstalowany, jeśli określona możliwość jest zapewniona przez zainstalowaną zależność. Analizator zależności instaluje go. Odinstalowanie jest akceptowane bez pytania."
+msgstr "Odwrotność <b>Rec</b>. Ten wzorzec zostanie zainstalowany, jeśli określona właściwość jest zapewniona przez zainstalowany obiekt. Konfigurator zależności instaluje go. Odinstalowanie jest akceptowane bez pytania."
 
 #. label for 'Sug' pattern key
 #: src/AddOnCreator.ycp:424
 msgid "Suggested patterns"
-msgstr "Sugerowane wzorce"
+msgstr "Wzorce sugerowane"
 
 #. label for 'Fre' pattern key
 #: src/AddOnCreator.ycp:432
@@ -471,7 +473,7 @@ msgstr "Odświeżanie"
 #. help text for 'Fre' pattern key
 #: src/AddOnCreator.ycp:434
 msgid "The current pattern is only considered for installation is the pattern specified here is installed."
-msgstr "Wzorzec określony tutaj jest rozważany do instalacji tylko gdy określony wzorzec jest zainstalowany."
+msgstr "Aktualny wzorzec jest rozważany do instalacji, tylko gdy określony w tym miejscu wzorzec jest zainstalowany."
 
 #. label for 'Pkg' key
 #. table header
@@ -482,32 +484,32 @@ msgstr "Pakiet"
 #. help text for 'Des' key
 #: src/AddOnCreator.ycp:455
 msgid "Multiple line package description."
-msgstr "Obszerny opis pakietu"
+msgstr "Pełny opis pakietu."
 
 #. help text for 'Sum' key
 #: src/AddOnCreator.ycp:463
 msgid "The package summary (label), a one line description of the package."
-msgstr "Podsumowanie pakietu (etykieta), opis pakietu w rozmiarze jednej linii."
+msgstr "Podsumowanie pakietu (etykieta), skrócony opis pakietu."
 
 #. label for 'Ins' key
 #: src/AddOnCreator.ycp:469
 msgid "Installation Notification"
-msgstr "Powiadomienie instalacji"
+msgstr "Powiadomienie instalacyjne"
 
 #. help text for 'Ins' key
 #: src/AddOnCreator.ycp:471
 msgid "An informal message shown to the user if the package is selected, such as a test version warning or a commercial license."
-msgstr "Wiadomość pokazywana użytkownikowi, jeśli pakiet został zaznaczony. Np. ostrzeżenie o wersji testowej lub licencja komercyjna."
+msgstr "Wiadomość pokazywana użytkownikowi, jeśli pakiet został zaznaczony. Np. ostrzeżenie wersji testowej lub licencja komercyjna."
 
 #. label for 'Del' key
 #: src/AddOnCreator.ycp:476
 msgid "Deletion Notification"
-msgstr "Powiadomienie usuwania"
+msgstr "Powiadomienie o usuwaniu"
 
 #. help text for 'Del' key
 #: src/AddOnCreator.ycp:478
 msgid "An informal message shown to the user if the package is selected for deletion, such as a warning that the system is unusable without the package."
-msgstr "Wiadomość pokazywana użytkownikowi, jeśli pakiet jest wybrany do usunięcia. Np: ostrzeżenie, że system jest niestabilny bez tego pakietu."
+msgstr "Wiadomość pokazywana użytkownikowi, jeśli pakiet jest wybrany do usunięcia. Np: ostrzeżenie, że system nie może działać bez tego pakietu."
 
 #. label for 'Eul' key
 #: src/AddOnCreator.ycp:483
@@ -522,7 +524,7 @@ msgstr "Tekst licencji użytkownika końcowego. Ten tekst jest wyświetlany prze
 #. error message
 #: src/AddOnCreator.ycp:1853
 msgid "Signing of the product failed."
-msgstr "Podpisywanie produktu zakończone niepowodzeniem"
+msgstr "Podpisywanie produktu zakończone niepowodzeniem."
 
 #. AddOnCreator read dialog caption
 #: src/AddOnCreator.ycp:1926
@@ -572,7 +574,7 @@ msgstr "Zapisywanie wzorców..."
 #. Progress step
 #: src/AddOnCreator.ycp:1948
 msgid "Copying the packages..."
-msgstr "Kopiowanie wzorców...."
+msgstr "Kopiowanie pakietów..."
 
 #. Progress step
 #: src/AddOnCreator.ycp:1950
@@ -606,13 +608,13 @@ msgstr "Nie można utworzyć wynikowej struktury katalogu."
 
 #. error message, %1 is path
 #: src/add-on-creator.ycp:53
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "File %1 does not exist."
 msgstr "Plik %1 nie istnieje."
 
 #. error message, %1 is path
 #: src/add-on-creator.ycp:58
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "Directory %1 does not exist."
 msgstr "Katalog %1 nie istnieje."
 
@@ -640,7 +642,7 @@ msgstr "Ścieżka do katalogu z pakietami nie istnieje."
 #. error message
 #: src/add-on-creator.ycp:327
 msgid "Path to content file is missing."
-msgstr "Ścieżka do pliku zawartości nie istnieje."
+msgstr "Ścieżka do pliku content nie istnieje."
 
 #. error message
 #: src/add-on-creator.ycp:344
@@ -670,7 +672,7 @@ msgstr "Tworzy produkt dodatkowy bazując na istniejącym"
 #. command line help text for 'create' action
 #: src/add-on-creator.ycp:399
 msgid "Sign unsigned Add-On Product"
-msgstr "Podpisuje produkt dodatkowy"
+msgstr "Podpisuje (nieszyfrowany) produkt dodatkowy"
 
 #. command line help text for 'rpm_dir' option
 #: src/add-on-creator.ycp:405
@@ -685,12 +687,12 @@ msgstr "Ścieżka do pliku zawartości"
 #. command line help text for 'existing' option
 #: src/add-on-creator.ycp:415
 msgid "Path to directory with existing Add-On Product"
-msgstr "Ścieżka do katalogu z istniejącymi produktami dodatkowymi"
+msgstr "Ścieżka do katalogu z istniejącym produktem dodatkowym"
 
 #. command line help text for 'generate_descriptions' option
 #: src/add-on-creator.ycp:420
 msgid "Generate new package descriptions (do not copy)"
-msgstr "Utwórz nowy opis pakietu (nie można kopiować)"
+msgstr "Tworzenie nowych opisów pakietów (proszę nie kopiować)"
 
 #. command line help text for 'package_descriptions_dir' option
 #: src/add-on-creator.ycp:424
@@ -710,7 +712,7 @@ msgstr "Scieżka do katalogu docelowego"
 #. command line help text for 'create_iso' option
 #: src/add-on-creator.ycp:439
 msgid "Create the ISO image"
-msgstr "Tworzenia obrazu ISO"
+msgstr "Tworzenie obrazu ISO"
 
 #. command line help text for 'iso_name' option
 #: src/add-on-creator.ycp:443
@@ -725,12 +727,12 @@ msgstr "Ścieżka do katalogu w którym zostanie zapisany obraz ISO"
 #. command line help text for 'do_not_sign' option
 #: src/add-on-creator.ycp:453
 msgid "Do not sign the product"
-msgstr "Nie podpisuj produktu"
+msgstr "Produkt pozostanie niepodpisany"
 
 #. command line help text for 'gpg_key' option
 #: src/add-on-creator.ycp:457
 msgid "GPG key ID used to sign a product"
-msgstr "Indentyfikator klucza GPG użytego do podpisania produktu"
+msgstr "Identyfikator klucza GPG użytego do podpisania produktu"
 
 #. command line help text for 'passphrase' option
 #: src/add-on-creator.ycp:462
@@ -745,7 +747,7 @@ msgstr "Ścieżka do pliku z hasłami dla kluczów GPG"
 #. command line help text for 'passphrase' option
 #: src/add-on-creator.ycp:472
 msgid "Resign all packages with selected key"
-msgstr ""
+msgstr "Ponowne podpisywanie pakietów z użyciem wybranego klucza"
 
 #. command line help text for 'workflow' option
 #: src/add-on-creator.ycp:476
@@ -755,7 +757,7 @@ msgstr "Ścieżka do pliku opisującego instalację (installation.xml)"
 #. command line help text for 'y2update' option
 #: src/add-on-creator.ycp:481
 msgid "Path to workflow dialogs archive (y2update.tgz)"
-msgstr "Ścieżka do archiwum opisującego dialogi instalacji (y2update.tgz)"
+msgstr "Ścieżka do archiwum opisującego okna dialogowe instalacji (y2update.tgz)"
 
 #. command line help text for 'y2update_packages_dir' option
 #: src/add-on-creator.ycp:486
@@ -764,20 +766,18 @@ msgstr "Ścieżka do katalogu z pakietami YaST-a do automatycznej instalacji"
 
 #. command line help text for 'license' option
 #: src/add-on-creator.ycp:491
-#, fuzzy
 msgid "Path to file with license texts (license.zip or license.tar.gz)"
-msgstr "Ścieżka do pliku z tekstem licencji (license.zip)"
+msgstr "Ścieżka do pliku z tekstem licencji (license.zip lub license.tar.gz)"
 
 #. command line help text for 'info' option
 #: src/add-on-creator.ycp:496
-#, fuzzy
 msgid "Path to file with 'info' text (media.1/info.txt)"
-msgstr "Ścieżka do pliku z tekstem licencji (license.zip)"
+msgstr "Ścieżka do pliku z tekstem 'info' (media.1/info.txt)"
 
 #. command line help text for 'extra_prov' option
 #: src/add-on-creator.ycp:501
 msgid "Path to file with additional dependencies (EXTRA_PROV)"
-msgstr ""
+msgstr "Ścieżka do pliku z dodatkowymi zależnościami (EXTRA_PROV)"
 
 #. command line help text for 'addon-dir' option
 #: src/add-on-creator.ycp:506
@@ -787,7 +787,7 @@ msgstr "Ścieżka do katalogu z produktem dodatkowym"
 #. Rich text title for AddOnCreator in proposals
 #: src/add-on-creator_proposal.ycp:85
 msgid "Add-On Creator"
-msgstr "Kreator produktów dodatkowych"
+msgstr "Kreator dodatków"
 
 #. Menu title for AddOnCreator in proposals
 #: src/add-on-creator_proposal.ycp:87
@@ -821,15 +821,13 @@ msgstr "Utwórz &opisy pakietów"
 
 #. textentry label
 #: src/complex.ycp:218
-#, fuzzy
 msgid "&Add-On Product Name"
-msgstr "Kreator produktów dodatkowych"
+msgstr "N&azwa produktu dodatkowego"
 
 #. textentry label
 #: src/complex.ycp:220
-#, fuzzy
 msgid "&Version"
-msgstr "Wersja"
+msgstr "&Wersja"
 
 #: src/complex.ycp:223
 msgid "Required Product"
@@ -842,9 +840,8 @@ msgstr "SUSE Linux &Enterprise Server 10"
 
 #. radio button label
 #: src/complex.ycp:233
-#, fuzzy
 msgid "SUSE &Linux Enterprise Server 10 SP1"
-msgstr "SUSE Linux &Enterprise Server 10"
+msgstr "SUSE &Linux Enterprise Server 10 SP1"
 
 #. radio button label
 #: src/complex.ycp:237
@@ -853,15 +850,13 @@ msgstr "SUSE Linux Enterprise &Desktop 10"
 
 #. radio button label
 #: src/complex.ycp:241
-#, fuzzy
 msgid "SUSE L&inux Enterprise &Desktop 10 SP1"
-msgstr "SUSE Linux Enterprise &Desktop 10"
+msgstr "SUSE L&inux Enterprise Desktop 10 SP1"
 
 #. radio button label
 #: src/complex.ycp:245
-#, fuzzy
 msgid "S&USE Linux Enterprise 10 SP1"
-msgstr "SUSE Linux &Enterprise Server 10"
+msgstr "S&USE Linux Enterprise 10 SP1"
 
 #. radio button label
 #: src/complex.ycp:250
@@ -1000,7 +995,7 @@ msgstr "I&mportuj"
 #. popup for file selection dialog
 #: src/complex.ycp:970
 msgid "Choose the file with the text to be imported"
-msgstr ""
+msgstr "Proszę wybrać plik z tekstem do zaimportowania"
 
 #. dialog caption
 #: src/complex.ycp:999
@@ -1024,14 +1019,13 @@ msgstr "Atrybut"
 
 #. textentry label
 #: src/complex.ycp:1101
-#, fuzzy
 msgid "Location of the File with Additional &Dependencies"
-msgstr "&Lokalizacja pliku opisu schematu działania"
+msgstr "&Lokalizacja pliku z dodatkowymi zależnościami"
 
 #. popup for file selection dialog
 #: src/complex.ycp:1167
 msgid "Choose the New Package Description File"
-msgstr "Nowy plik opisu pakietu"
+msgstr "Proszę wybrać nowy plik opisu pakietu"
 
 #. error popup (correct name is 'packages.*')
 #: src/complex.ycp:1177
@@ -1044,18 +1038,17 @@ msgstr ""
 
 #. popup for file selection dialog
 #: src/complex.ycp:1257
-#, fuzzy
 msgid "Choose the Path to EXTRA_PROV File"
-msgstr "Proszę podać ścieżka do pliku y2update.tgz"
+msgstr "Proszę podać ścieżkę do pliku EXTRA_PROV"
 
 #. error popup
 #: src/complex.ycp:1268
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "The file '%1' does not exist.\n"
 "Choose another one."
 msgstr ""
-"Plik opisu pakietu jest nazwany niewłaściwie.\n"
+"Plik '%1' nie istnieje.\n"
 "Proszę wybrać inny."
 
 #. frame label
@@ -1130,7 +1123,7 @@ msgid ""
 "the OS a chance to collect more entropy.\n"
 msgstr ""
 "Jeśli trwa to zbyt długo, proszę zająć się czymś innym, aby \n"
-"zgromadzić więcej entropii.\n"
+"system mógł zgromadzić więcej entropii.\n"
 
 #. dialog caption
 #: src/complex.ycp:1383
@@ -1149,18 +1142,17 @@ msgstr "&Utwórz..."
 
 #. password entry label (verification)
 #: src/complex.ycp:1407
-#, fuzzy
 msgid "&Passphrase Verification"
-msgstr "&Hasło"
+msgstr "&Weryfikacja hasła"
 
 #: src/complex.ycp:1411
 msgid "Re&sign all packages with selected key"
-msgstr ""
+msgstr "Ponowne podpi&sywanie pakietów z użyciem wybranego klucza"
 
 #. error message
 #: src/complex.ycp:1444
 msgid "Passwords do not match. Try again."
-msgstr ""
+msgstr "Hasła nie są zgodne. Proszę wprowadzić je ponownie."
 
 #. dialog caption
 #: src/complex.ycp:1478
@@ -1425,15 +1417,13 @@ msgstr "<p>W przypadku oparcia nowego produktu na istniejącym, należy zaznaczy
 
 #. help text for initial data (paragraph title)
 #: src/helps.ycp:61
-#, fuzzy
 msgid "<p><b>Name and Version</b></p>"
-msgstr "<p><b>Wymagany produkt</b></p>"
+msgstr "<p><b>Nazwa i wersja</b></p>"
 
 #. help text for initial data, cont.
 #: src/helps.ycp:64
-#, fuzzy
 msgid "<p>Enter the name and version of add-on product.</p>"
-msgstr "<p>W tym miejscu można utworzyć oraz edytować wzorce dla produktu dodatkowego.</p>"
+msgstr "<p>Proszę wprowadzić nazwę i numer wersji produktu dodatkowego.</p>"
 
 #. help text for initial data, cont.
 #: src/helps.ycp:67
@@ -1443,12 +1433,12 @@ msgstr "<p><b>Wymagany produkt</b></p>"
 #. help text for initial data, cont.
 #: src/helps.ycp:70
 msgid "<p>Select the product to which the new add-on product can be applied. This selection forms the <b>REQUIRES</b> value of the <tt>content</tt> file.</p>"
-msgstr "<p>Proszę wybrać produkt, do którego można zastosować nowy produkt dodatkowy. Wybór ten utworzy wartość <b>REQUIRES</b> pliku <tt>content</tt>.</p>"
+msgstr "<p>Proszę przypisać nowy produkt dodatkowy do wybranego produktu. Wybór ten utworzy wartość <b>REQUIRES</b> pliku <tt>content</tt>.</p>"
 
 #. help text for initial data (paragraph title), cont.
 #: src/helps.ycp:72
 msgid "<p><b>Add-On Packages</b></p>"
-msgstr "<p><b>Pakiety dodatkowe</b></p>"
+msgstr "<p><b>Pakiety dodatków</b></p>"
 
 #. help text for initial data, cont.
 #: src/helps.ycp:75
@@ -1463,7 +1453,7 @@ msgstr "<p><b>Wymagane pakiety produktu</b></p>"
 #. help text for initial data, cont.
 #: src/helps.ycp:81
 msgid "<p>Optionally, choose the path to the directory containing the RPM packages from the product the add-on product should be based on. These packages will not be contained in the add-on product, but could be used for creating the patterns later in the workflow.</p>"
-msgstr "<p>Opcjonalne proszę wybrać ścieżkę do katalogu zawierającego pakiety RPM produktu, na którym powinien opierać się produkt dodatkowy. pakiety te nie będą zawarte w produkcie dodatkowym, ale mogą być użyte do późniejszego tworzenia wzorców w schemacie działania.</p>"
+msgstr "<p>Można też wybrać ścieżkę do katalogu zawierającego pakiety RPM produktu, na którym powinien opierać się produkt dodatkowy. Pakiety te nie będą zawarte w produkcie dodatkowym, ale mogą być użyte do późniejszego tworzenia wzorców w schemacie działania.</p>"
 
 #. help text for content file editor (<tt>content</tt> is a name of file)
 #: src/helps.ycp:84
@@ -1498,7 +1488,7 @@ msgstr "<p>Aby zmodyfikować opisy wpisów dla zaznaczonych pakietów, należy u
 #. help text for package description files, cont.
 #: src/helps.ycp:101
 msgid "<p>Optionally, choose the path for the file providing <b>Additional Package Dependencies</b> (EXTRA_PROV).</p>"
-msgstr ""
+msgstr "<p>Można również wybrać ścieżkę do pliku zawierającego <b>Dodatkowe zależności pakietów</b> (EXTRA_PROV).</p>"
 
 #. help text for patterns
 #: src/helps.ycp:104
@@ -1563,17 +1553,19 @@ msgstr "<p>Pliki <tt>COPYRIGHT</tt> oraz <tt>COPYING</tt> mogą mieć modyfikacj
 #. help text for signing dialog
 #: src/helps.ycp:140
 msgid "<p>Here, configure the signing of the add-on product. Choose a secret key from the list of keys available or create a new one with <b>Create</b>.</p>"
-msgstr "<p>Tutaj można skonfigurować podpis produktu dodatkowego. Proszę wybrać tajny klucz z listy kluczy dostępnych albo utworzyć nowy za pomocą <b>Utwórz</b>.</p>"
+msgstr "<p>Tutaj można skonfigurować podpis produktu dodatkowego. Proszę wybrać poufny klucz z listy dostępnych kluczy albo utworzyć nowy za pomocą <b>Utwórz</b>.</p>"
 
 #. help text for signing dialog, cont.
 #: src/helps.ycp:143
 msgid "<p>Enter the passphrase needed to unlock the secret key.</p>"
-msgstr "<p>Proszę podać hasło potrzebne do odblokowania tajnego klucza.</p>"
+msgstr "<p>Proszę podać hasło potrzebne do odblokowania poufnego klucza.</p>"
 
 #. help text for signing dialog, cont.
 #: src/helps.ycp:146
 msgid "<p>Select if you want to <b>sign all packages</b> of the add-on product with selected key. All previous package signatures will be removed.</p>"
 msgstr ""
+"<p>Proszę wybrać tę opcję, aby <b>podpisać wszystkie pakiety</b> przypisane "
+"do tego produktu dodatkowego, korzystając z wybranego klucza. Wszystkie dotychczasowe sygnatury będą usunięte.</p>"
 
 #. help text for generating new key dialog
 #: src/helps.ycp:149
@@ -1583,12 +1575,12 @@ msgstr "<p>Proszę podać wartości potrzebne do utworzenia nowej głównej pary
 #. help text for generating new key dialog, cont.
 #: src/helps.ycp:152
 msgid "<p>The default size of a DSA key is 1024 bits. RSA keys may be between 1024 and 4096 bits long.</p>"
-msgstr "<p>Domyślny rozmiar klucza DSA wynosi 1024 bity. Rozmiar kluczy RSA może być pomiędzy 1024 a 4096 bitami.</p>"
+msgstr "<p>Domyślny rozmiar klucza DSA to 1024 bity. Rozmiar kluczy RSA może mieć od 1024 do 4096 bitów.</p>"
 
 #. help text for generating new key dialog, cont.
 #: src/helps.ycp:155
 msgid "<p>As <b>Expiration Date</b>, enter the number of days after which the key expires. If the number is followed by <tt>w</tt>,<tt>m</tt>, or <tt>y</tt>, it indicates the number of weeks, months, or years. Leave the entry empty for a key that never expires.</p>"
-msgstr "<p>Jako <b>Datę wygaśnięcia</b> należy wprowadzić liczbę dni po której klucz traci ważność. Jeśli po liczbie następuje <tt>w</tt>,<tt>m</tt>, lub <tt>y</tt>, to wskazuje na liczbę tygodni, miesięcy lub lat. Wpis pusty oznacza klucz który nigdy nie straci ważności.</p>"
+msgstr "<p>Jako <b>Datę wygaśnięcia</b> należy wprowadzić liczbę dni, po której klucz traci ważność. Jeśli po liczbie następuje <tt>w</tt>,<tt>m</tt>, lub <tt>y</tt>, to wskazuje na liczbę tygodni, miesięcy lub lat. Wpis pusty oznacza klucz który nigdy nie straci ważności.</p>"
 
 #. help text for generating new key dialog, cont.
 #: src/helps.ycp:158
@@ -1648,7 +1640,7 @@ msgstr ""
 #. dialog caption
 #: src/patterns.ycp:214
 msgid "Editor for Patterns"
-msgstr "Edytor dla wzorców"
+msgstr "Edytor wzorców"
 
 #. table header
 #: src/patterns.ycp:220
@@ -1663,7 +1655,7 @@ msgstr "Pełna nazwa"
 #. check box label
 #: src/patterns.ycp:244
 msgid "R&equired pattern"
-msgstr "W&ymagane wzorce"
+msgstr "&Wymagany wzorzec"
 
 #. popup for file selection dialog
 #: src/patterns.ycp:284
@@ -1680,5 +1672,3 @@ msgstr "Tworzenie pliku 'content'..."
 msgid "Importing product..."
 msgstr "Importowanie produktu..."
 
-#~ msgid "Enter the path to the directory with packages."
-#~ msgstr "Proszę podać ścieżkę do katalogu z pakietami."
