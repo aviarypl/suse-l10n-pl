@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-07-20 15:06+0200\n"
+"POT-Creation-Date: 2007-08-14 18:04+0200\n"
 "PO-Revision-Date: 2007-08-01 22:45+0100\n"
 "Last-Translator: wadim dziedzic <wdziedzi@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -76,12 +76,46 @@ msgstr "Aby ustawić opcję \"bigcrypt\" proszę użyć etc/default/passwd\n"
 msgid "Please use /etc/default/passwd to set 'blowfish' option\n"
 msgstr "Aby ustawić opcję \"blowfish\" proszę użyć etc/default/passwd\n"
 
-#: src/mod_pam_mount.c:78
+#: src/mod_pam_cryptpass.c:128
 #, c-format
-msgid "Management group %s not supported by pam_mount.so"
-msgstr "Grupa zarządzania %s nie jest obsługiwana przez pam_mount.so"
+msgid "ERROR: pam_mount.so is not enabled for service '%s', but needed by pam_cryptpass.so\n"
+msgstr ""
 
-#: src/mod_pam_unix.c:98
+#: src/mod_pam_cryptpass.c:146
+#, c-format
+msgid "ERROR: Could not add pam_cryptpass.so to service '%s'"
+msgstr ""
+
+#: src/mod_pam_mount.c:149 src/pam-config.c:310
+#, c-format
+msgid ""
+"\n"
+"Couldn't load config file '%s', aborted!\n"
+msgstr ""
+"\n"
+"Nie można wczytać pliku konfiguracyjnego %s. Przerwano.\n"
+
+#: src/mod_pam_mount.c:155
+#, c-format
+msgid "ERROR: Module pam_thinkfinger.so is enabled. Disable it first.\n"
+msgstr ""
+
+#: src/mod_pam_thinkfinger.c:103
+#, c-format
+msgid "WARNING: Found no service files in '%s'.\n"
+msgstr ""
+
+#: src/mod_pam_thinkfinger.c:113
+#, fuzzy, c-format
+msgid "WARNING: Found module '%s' in file '%s'.\n"
+msgstr "UWAGA: moduł %s nie jest zainstalowany.\n"
+
+#: src/mod_pam_thinkfinger.c:138
+#, c-format
+msgid "ERROR: pam_mount.so is enabled. In order to use pam_thinkfinger.so you need to disable it first!\n"
+msgstr ""
+
+#: src/mod_pam_unix.c:116
 #, c-format
 msgid ""
 "INFO: Both options 'md5' and 'bigcrypt' found in service %s.\n"
@@ -90,7 +124,7 @@ msgstr ""
 "INFO: w usłudze %s odnaleziono obie opcje \"md5\" i \"bigcrypt\".\n"
 "INFO: opcja \"md5\" znosi \"bigcrypt\". Aby włączyć \"bigcrypt\", trzeba usunąć \"md5\".\n"
 
-#: src/mod_pam_unix.c:122
+#: src/mod_pam_unix.c:140
 #, c-format
 msgid ""
 "INFO: Both options 'audit' and 'debug' found in service %s.\n"
@@ -99,12 +133,12 @@ msgstr ""
 "INFO: w usłudze %s odnaleziono obie opcje \"audit\" i \"debug\".\n"
 "INFO: opcja \"audit\" znosi \"debug\". Aby włączyć \"debug\", trzeba usunąć \"audit\".\n"
 
-#: src/pam-config.c:47
+#: src/pam-config.c:38
 #, c-format
 msgid "Usage: %s -a|-c|-d [...]\n"
 msgstr "Użycie: %s -a|-c|-d [...]\n"
 
-#: src/pam-config.c:56
+#: src/pam-config.c:47
 #, c-format
 msgid ""
 "Copyright (C) %s Thorsten Kukuk.\n"
@@ -116,12 +150,12 @@ msgstr ""
 "Na oprogramowanie to nie udziela się ŻADNEJ gwarancji; ani na PRZYDATNOŚĆ\n"
 "DO SPRZEDAŻY, ani na PRZYDATNOŚĆ DO KONKRETNYCH ZASTOSOWAŃ.\n"
 
-#: src/pam-config.c:68
+#: src/pam-config.c:59
 #, c-format
 msgid "Try `%s --help' or `%s --usage' for more information.\n"
 msgstr "Polecenie `%s --help' lub `%s --usage', wyświetla pomoc.\n"
 
-#: src/pam-config.c:76
+#: src/pam-config.c:67
 #, c-format
 msgid ""
 "%s - create PAM config files\n"
@@ -130,54 +164,54 @@ msgstr ""
 "%s - tworzy pliki konfiguracyjne PAM\n"
 "\n"
 
-#: src/pam-config.c:78
+#: src/pam-config.c:69
 msgid "  -a, --add         Add options/PAM modules\n"
 msgstr "  -a, --add         Dodaje opcje/moduły PAM\n"
 
-#: src/pam-config.c:79
+#: src/pam-config.c:70
 msgid "  -c, --create      Create new configuration\n"
 msgstr "  -c, --create      Tworzy nową konfigurację\n"
 
-#: src/pam-config.c:80
+#: src/pam-config.c:71
 msgid "  -d, --delete      Remove options/PAM modules\n"
 msgstr "  -d, --delete      Usuwa opcje/moduły PAM\n"
 
-#: src/pam-config.c:81
+#: src/pam-config.c:72
 msgid "      --initialize  Convert old config and create new one\n"
 msgstr "      --initialize  Konweruje starą konfigurację na nową\n"
 
-#: src/pam-config.c:83
+#: src/pam-config.c:74
 msgid "  --service config  Service to modify config of\n"
 msgstr "  --service konfiguracja  Usługa, której konfiguracja ma być modyfikowana\n"
 
-#: src/pam-config.c:85
+#: src/pam-config.c:76
 msgid "      --update      Read current config and write them new\n"
 msgstr "      --update      Odczytuje bieżącą konfigurację i zapisuje ją na nowo\n"
 
-#: src/pam-config.c:87
+#: src/pam-config.c:78
 msgid "  -q, --query       Query for installed modules and options\n"
 msgstr "  -q, --query       Wyszukuje zainstalowane moduły i opcje\n"
 
-#: src/pam-config.c:89
+#: src/pam-config.c:80
 msgid "      --help        Give this help list\n"
 msgstr "  --help         Wyświetla tę pomoc\n"
 
-#: src/pam-config.c:90
+#: src/pam-config.c:81
 msgid "  -u, --usage       Give a short usage message\n"
 msgstr "  --usage        Pokazuje krótką wiadomość dot. używania\n"
 
-#: src/pam-config.c:91
+#: src/pam-config.c:82
 msgid "  -v, --version     Print program version\n"
 msgstr "  --version      Wyświetla wersję programu\n"
 
-#: src/pam-config.c:102 src/pam-config.c:139 src/pam-config.c:1247
-#: src/pam-config.c:1257 src/pam-config.c:1267 src/pam-config.c:1278
+#: src/pam-config.c:102 src/pam-config.c:139 src/pam-config.c:1324
+#: src/pam-config.c:1334 src/pam-config.c:1344 src/pam-config.c:1355
 #, c-format
 msgid "Error activating %s (%m)\n"
 msgstr "Błąd aktywacji %s (%m)\n"
 
-#: src/pam-config.c:104 src/pam-config.c:141 src/pam-config.c:1249
-#: src/pam-config.c:1259 src/pam-config.c:1269 src/pam-config.c:1280
+#: src/pam-config.c:104 src/pam-config.c:141 src/pam-config.c:1326
+#: src/pam-config.c:1336 src/pam-config.c:1346 src/pam-config.c:1357
 #, c-format
 msgid "New config from %s is not in use!\n"
 msgstr "Nowa konfiguracja z %s nie jest używana.\n"
@@ -192,7 +226,7 @@ msgstr "Plik %s nie jest dowiązaniem do %s.\n"
 msgid "New config from %s is is not in use!\n"
 msgstr "Nowa konfiguracja z %s nie jest używana.\n"
 
-#: src/pam-config.c:249 src/pam-config.c:285
+#: src/pam-config.c:252 src/pam-config.c:288
 #, c-format
 msgid ""
 "\n"
@@ -201,19 +235,27 @@ msgstr ""
 "\n"
 "Nie można wczytać pliku konfiguracyjnego. Przerwano.\n"
 
-#: src/pam-config.c:307
+#: src/pam-config.c:1153
+#, c-format
+msgid "Supported common modules:\n"
+msgstr ""
+
+#: src/pam-config.c:1155
 #, c-format
 msgid ""
 "\n"
-"Couldn't load config file '%s', aborted!\n"
+"Supported service modules:\n"
 msgstr ""
-"\n"
-"Nie można wczytać pliku konfiguracyjnego %s. Przerwano.\n"
 
-#: src/pam-config.c:1111
+#: src/pam-config.c:1175
 #, c-format
 msgid "%s: Too many arguments.\n"
 msgstr "%s: Zbyt wiele parametrów.\n"
+
+#: src/pam-config.c:1279
+#, fuzzy, c-format
+msgid "Cannot access '%s': %m\n"
+msgstr "Nie można utworzyć  %s: %m\n"
 
 #. TRANSLATORS: first argument is name of a PAM module
 #: src/pam-module.c:99
@@ -259,22 +301,30 @@ msgstr ""
 msgid "ERR: Failed to disable pam_unix.so.\n"
 msgstr "BŁĄD: Nie można wyłączyć disable pam_unix.so.\n"
 
-#: src/single_config.c:118 src/write_config.c:51
+#: src/single_config.c:227
+#, fuzzy, c-format
+msgid "Cannot stat '%s': %m\n"
+msgstr "Nie można utworzyć  %s: %m\n"
+
+#: src/single_config.c:237 src/write_config.c:63
 #, c-format
 msgid "Cannot set permissions for '%s': %m\n"
 msgstr "Nie można ustawić praw dla \"%s\": %m\n"
 
-#: src/single_config.c:127 src/write_config.c:58
+#: src/single_config.c:246 src/write_config.c:70
 #, c-format
 msgid "Cannot change owner/group for `%s': %m\n"
 msgstr "Nie można zmienić właściciela/grupy dla \"%s\": %m\n"
 
-#: src/single_config.c:137
+#: src/single_config.c:256
 #, c-format
 msgid "Cannot create file handle: %m\n"
 msgstr "Nie można utworzyć uchwytu pliku: %m\n"
 
-#: src/write_config.c:66
+#: src/write_config.c:78
 #, c-format
 msgid "Cannot create %s: %m\n"
 msgstr "Nie można utworzyć  %s: %m\n"
+
+#~ msgid "Management group %s not supported by pam_mount.so"
+#~ msgstr "Grupa zarządzania %s nie jest obsługiwana przez pam_mount.so"
