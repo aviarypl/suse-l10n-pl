@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: ntp-client\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2007-08-10 13:43+0200\n"
-"PO-Revision-Date: 2007-08-17 21:25+0100\n"
-"Last-Translator: wadim dziedzic <nikdo@aviary.pl>\n"
+"PO-Revision-Date: 2007-08-24 09:04+0100\n"
+"Last-Translator: wadim dziedzic <wdziedzic@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,7 +44,9 @@ msgid "Reading NTP settings..."
 msgstr "Odczytywanie ustawień NTP..."
 
 #. progress step
-#: src/NtpClient.ycp:300 src/NtpClient.ycp:496 src/NtpClient.ycp:644
+#: src/NtpClient.ycp:300
+#: src/NtpClient.ycp:496
+#: src/NtpClient.ycp:644
 #: src/NtpClient.ycp:804
 msgid "Finished"
 msgstr "Zakończono"
@@ -224,7 +226,8 @@ msgid "EES M201 MSF Receiver"
 msgstr "Odbiornik EES M201 MSF"
 
 #. local clock type name
-#: src/clocktypes.ycp:99 src/clocktypes.ycp:159
+#: src/clocktypes.ycp:99
+#: src/clocktypes.ycp:159
 msgid "TrueTime generic receivers"
 msgstr "Odbiorniki TrueTime"
 
@@ -369,12 +372,14 @@ msgid "NTP daemon is disabled."
 msgstr "Usługa NTP wyłączona."
 
 #. table cell, NTP relationship type
-#: src/commandline.ycp:111 src/widgets.ycp:415
+#: src/commandline.ycp:111
+#: src/widgets.ycp:415
 msgid "Server"
 msgstr "Serwer"
 
 #. table cell, NTP relationship type
-#: src/commandline.ycp:113 src/widgets.ycp:417
+#: src/commandline.ycp:113
+#: src/widgets.ycp:417
 msgid "Peer"
 msgstr "Partner"
 
@@ -389,13 +394,15 @@ msgid "Accepting Broadcasts"
 msgstr "Akceptowanie rozgłaszania"
 
 #. table cell, %1 is integer 0-3
-#: src/commandline.ycp:130 src/widgets.ycp:434
+#: src/commandline.ycp:130
+#: src/widgets.ycp:434
 #, ycp-format
 msgid "Unit Number: %1"
 msgstr "Numer jednostki: %1"
 
 #. table cell, NTP relationship type
-#: src/commandline.ycp:136 src/widgets.ycp:440
+#: src/commandline.ycp:136
+#: src/widgets.ycp:440
 msgid "Local Radio Clock"
 msgstr "Lokalny zegar radiowy"
 
@@ -527,12 +534,14 @@ msgid "NTP Server"
 msgstr "Serwer NTP"
 
 #. TRANSLATORS: frame label
-#: src/dialogs.ycp:291 src/widgets.ycp:1249
+#: src/dialogs.ycp:291
+#: src/widgets.ycp:1249
 msgid "Local NTP Server"
 msgstr "Lokalny serwer NTP"
 
 #. TRANSLATORS: frame label
-#: src/dialogs.ycp:337 src/widgets.ycp:1250
+#: src/dialogs.ycp:337
+#: src/widgets.ycp:1250
 msgid "Public NTP Server"
 msgstr "Publiczny serwer NTP"
 
@@ -548,13 +557,15 @@ msgstr "Lokalny zegar referencyjny"
 
 #. dialog caption
 #. table cell, NTP relationship type
-#: src/dialogs.ycp:461 src/widgets.ycp:419
+#: src/dialogs.ycp:461
+#: src/widgets.ycp:419
 msgid "Outgoing Broadcast"
 msgstr "Rozgłaszanie wychodzące"
 
 #. dialog caption
 #. table cell, NTP relationship type
-#: src/dialogs.ycp:486 src/widgets.ycp:421
+#: src/dialogs.ycp:486
+#: src/widgets.ycp:421
 msgid "Incoming Broadcast"
 msgstr "Rozgłaszanie przychodzące"
 
@@ -679,6 +690,12 @@ msgid ""
 "in servers overview table. This option is not available if NTP is \n"
 "configured via DHCP.</p>"
 msgstr ""
+"<p><b><big>Konfiguracja zabezpieczonego NTP</big></b><br>\n"
+"Poprzez zaznaczenie opcji <b>Ogranicz usługę NTP do skonfigurowanych serwerów</b>\n"
+" można zabronić wszystkim zdalnym hostom przeglądania i zmieniania ustawień NTP na\n"
+"tym komputerze. W takim przypadku usługa NTP jest ograniczona do serwerów wymienionych w  <i>/etc/ntp.conf</i> i localhost.<br> \n"
+"Szczegóły ustawień dostępu można dopasować edytując dany wpis w tabeli serwerów. \n"
+"Te opcje nie są dostępne jeśli NTP konfigurowane jest poprzez DHCP.</p>"
 
 #. help text 3/5
 #: src/helps.ycp:58
@@ -885,6 +902,13 @@ msgid ""
 "<b>Restrict NTP Service to Configured Servers Only</b> option in\n"
 "<b>Security Settings</b>.</p>\n"
 msgstr ""
+"<p><b><big>Opcje kontroli dostępu</big></b><br>\n"
+"W tym miejscu można zdefiniować flagi dostępu (<b>dyrektywa <i>restrict</i></b> w\n"
+"<i>/etc/ntp.conf</i>) dla tego serwera włącznie z  czynnościami jakie zdalne hosty\n"
+"mogą wykonać wykonać na demonie NTP. Wartości domyślna to <i>notrap\n"
+"nomodify noquery</i> Opcja ta jest dostępna tylko gdy zaznaczono opcję\n"
+"<b>Ogranicz usługę NTP do skonfigurowanych serwerów</b> w\n"
+"<b>Ustawieniach bezpieczeństwa</b>.</p>\n"
 
 #. help text 1/6
 #: src/helps.ycp:156
@@ -1109,13 +1133,15 @@ msgid "Select the Device"
 msgstr "Proszę wybrać urządzenie"
 
 #. selection box header
-#: src/widgets.ycp:900 src/widgets.ycp:1440
+#: src/widgets.ycp:900
+#: src/widgets.ycp:1440
 msgid "Public NTP &Servers"
 msgstr "Publiczne &serwery NTP"
 
 #. message report (no server selected)
 #. report message
-#: src/widgets.ycp:913 src/widgets.ycp:1010
+#: src/widgets.ycp:913
+#: src/widgets.ycp:1010
 msgid "Select an NTP server."
 msgstr "Proszę wybrać serwer NTP."
 
@@ -1125,7 +1151,8 @@ msgid "All Countries"
 msgstr "Wszystkie kraje"
 
 #. combo box header
-#: src/widgets.ycp:964 src/widgets.ycp:1436
+#: src/widgets.ycp:964
+#: src/widgets.ycp:1436
 msgid "&Country"
 msgstr "K&raj"
 
@@ -1153,7 +1180,8 @@ msgstr "W sieci lokalnej nie znaleziono serwera NTP."
 
 #. combo box label
 #. table header
-#: src/widgets.ycp:1065 src/widgets.ycp:1269
+#: src/widgets.ycp:1065
+#: src/widgets.ycp:1269
 msgid "Address"
 msgstr "Adres"
 
@@ -1200,7 +1228,7 @@ msgstr "Uruchom demona NTP w środowisku &chroot"
 #. TRANSLATORS:
 #: src/widgets.ycp:1205
 msgid "&Restrict NTP Service to Configured Servers Only "
-msgstr ""
+msgstr "&Ogranicz usługę NTP do skonfigurowanych serwerów"
 
 #. check box
 #: src/widgets.ycp:1214
@@ -1215,7 +1243,9 @@ msgstr "Użyj &losowych serwerów z pool.ntp.org"
 #. text entry label
 #. text entry
 #. combo box label
-#: src/widgets.ycp:1232 src/widgets.ycp:1243 src/widgets.ycp:1412
+#: src/widgets.ycp:1232
+#: src/widgets.ycp:1243
+#: src/widgets.ycp:1412
 msgid "&Address"
 msgstr "&Adres"
 
@@ -1225,7 +1255,9 @@ msgid "&Select..."
 msgstr "Wy&bierz..."
 
 #. push button
-#: src/widgets.ycp:1257 src/widgets.ycp:1452 src/widgets.ycp:1460
+#: src/widgets.ycp:1257
+#: src/widgets.ycp:1452
+#: src/widgets.ycp:1460
 msgid "&Test"
 msgstr "&Test"
 
@@ -1326,3 +1358,4 @@ msgstr "Inicjalizacja..."
 
 #~ msgid "Apply Access Control for This Server"
 #~ msgstr "Zatwierdź liste praw dostępu dla tego serwera"
+
