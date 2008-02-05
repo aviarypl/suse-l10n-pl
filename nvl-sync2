@@ -1,0 +1,153 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+  echo ""
+  echo "Składnia: novell-sync [aviary|forge]"
+  echo ""
+  echo "Skrypt służy do synchronizowania wskazanego przez argument"
+  echo "repozytorium. Zazwyczaj właściwym argumentem jest 'aviary'."
+  echo "W takim przypadku, skrypt należy wykonać w katalogu trunk"
+  echo "kopii lokalnej repozytorium Aviary.pl (a zatem tam,"
+  echo "gdzie powinien się już znajdować). Do katalogów lcn i yast"
+  echo "pobrane zostaną z repozytorium Novell forge najnowsze pliki."
+  echo ""
+  echo "Argument 'forge' interesuje osoby, które mają prawo zapisu"
+  echo "w repozytorium Novell forge."
+  echo ""
+  echo "Przykłady:"
+  echo "   novell-sync aviary"
+  echo ""
+else
+
+if [ -z "$2" ] 
+then
+  DIR="."
+else
+  DIR="$2"
+  mkdir -p $DIR/yast
+  mkdir -p $DIR/lcn
+fi
+
+#TRUNK=`pwd | sed 's/^.*\///'`
+TRUNK=trunk
+TS=`date +%s`
+
+  if [ "$1" = "aviary" ] 
+  then 
+    if [ "$TRUNK" = "trunk" ]
+    then
+        echo ""
+        # Pobierz najnowsze poty z repozytorium Novella
+        echo "Pobieranie plików pot z repozytorium Novella"
+        svn export https://forgesvn1.novell.com/svn/suse-i18n/branches/SLE10SP2/lcn/50-pot ${TS}-lcn-pot/
+        svn export https://forgesvn1.novell.com/svn/suse-i18n/branches/SLE10SP2/yast/50-pot ${TS}-yast-pot/
+        
+        # Pobierz najnowsze po z repozytorium Aviary.pl
+        echo ""
+        echo "Pobieranie plików po z repozytorium Aviary.pl"
+        svn export http://svn.aviary.pl/suse/branches/SLED10SP2/lcn ${TS}-lcn-po/
+        svn export http://svn.aviary.pl/suse/branches/SLED10SP2/yast ${TS}-yast-po/
+        rm ${TS}-yast-po/Makefile
+        
+        # Zmień rozszerzenia potów, by nazwy pasowały do plików po
+        # rename 's/\.pot/\.pl\.pot/' ${TS}-lcn-pot/*
+        # rename 's/\.pot/\.pl\.pot/' ${TS}-yast-pot/*
+        
+        # Merge
+        for i in `find ${TS}-lcn-pot/ -name '*.pot'`
+        do 
+          k=`basename $i .pot`
+          msgmerge -o ${DIR}/lcn/${k}.pl.po --no-wrap ${TS}-lcn-po/${k}.pl.po ${TS}-lcn-pot/${k}.pot
+        done
+        
+        for i in `find ${TS}-yast-pot/ -name '*.pot'`
+        do 
+          k=`basename $i .pot`
+          msgmerge -o ${DIR}/yast/${k}.pl.po --no-wrap ${TS}-yast-po/${k}.pl.po ${TS}-yast-pot/${k}.pot
+        done
+        
+        # Skopiuj html-help-*, które nie mają swoich potów.
+        
+        cp ${TS}-lcn-po/html-help-* lcn/
+        
+        # Posprzątaj
+        rm ${TS}-* -Rf
+        
+        echo ""
+        echo "Zmiany w katalogu lcn:"
+        svn status ./lcn/
+        echo ""
+        echo "(Proszę zignorować komunikaty o błędach dotyczących plików html-help-*"
+        echo "Spowodowane są one brakiem potów dla tych dwu plików.)"
+        echo ""
+        echo "Zmiany w katalogu yast:"
+        svn status ./yast/
+        echo ""
+     fi
+
+ elif [ "$1" = "aviary-nomerge" ]
+ then
+     if [ "$TRUNK" = "trunk" ]
+     then
+        echo ""
+        echo "Pobieranie najnowszych plików z katalogu lcn z repozytorium Novella:"
+        svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/lcn/pl/po ./lcn/ --force
+        echo ""
+        
+        echo "Pobieranie najnowszych plików z katalogu yast z repozytorium Novella:"
+        svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/yast/pl/po ./yast/ --force
+        echo ""
+        
+        echo "Zmiany w katalogu lcn:"
+        svn status ./lcn/
+        echo ""
+        echo "Zmiany w katalogu yast:"
+        svn status ./yast/
+        echo ""
+      else 
+        echo "Skrypt należy wykonać w katalogu trunk kopii lokalnej repozytorium Aviary.pl"
+      fi
+ 
+
+# UWAGA: poniższa część skryptu wymaga, by pliki w kopii lokalnej repozytorium
+# Novell forge miały następującą strukturę katalogów:
+#
+# -- forge // nie podlega zarządzaniu wersji 
+#    |-- lcn // podlega zarządzaniu wersji 
+#        |-- ...
+#    |   |-- ... // pliki po
+#        |-- ...
+#    |-- yast // podlega zarządzaniu wersji 
+#        |-- ...
+#    |   |-- ... // pliki po
+#        |-- ...    
+
+  elif [ "$1" = "forge" ] 
+  then
+    if [ "$TRUNK" = "forge" ]
+    then
+      echo ""
+      echo "Pobieranie najnowszych plików z katalogu lcn z repozytorium Aviary.pl:"
+      svn export http://svn.aviary.pl/suse/trunk/lcn/ ./lcn/ --force
+      echo ""
+      echo "Pobieranie najnowszych plików z katalogu yast z repozytorium Novella:"
+      svn export http://svn.aviary.pl/suse/trunk/yast/ ./yast/ --force
+      rm ./yast/Makefile
+      echo ""
+      echo "Zmiany w katalogu lcn:"
+      svn status ./lcn/
+      echo ""
+      echo "Zmiany w katalogu yast:"
+      svn status ./yast/
+      echo ""
+    else 
+      echo "Skrypt należy wykonać w katalogu forge kopii lokalnej repozytorium Novell Forge"
+    fi
+    
+  else
+    echo "Nieprawidłowy argument. Które repozytorium chcesz zsynchronizować?"
+    echo "Podaj argument: [aviary|forge]"
+  fi
+  
+fi
