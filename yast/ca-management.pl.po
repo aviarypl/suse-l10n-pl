@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ca-management\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-17 13:19+0100\n"
+"POT-Creation-Date: 2008-02-27 12:16+0100\n"
 "PO-Revision-Date: 2008-02-05 18:57+0100\n"
 "Last-Translator: Marek Stępień <mstepien@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -591,7 +591,7 @@ msgstr "<p>Szczegółowe informacje o aktualnych CA są zapewniane przez <b>Cert
 
 #. popup window header
 #: src/ca.ycp:125 src/certificate.ycp:205 src/common_cert.ycp:65
-#: src/crl.ycp:121 src/request.ycp:211
+#: src/crl.ycp:122 src/request.ycp:211
 msgid "Description"
 msgstr "Opis"
 
@@ -637,7 +637,7 @@ msgstr ""
 msgid "&Advanced..."
 msgstr "Z&aawansowane..."
 
-#: src/ca.ycp:213 src/certificate.ycp:352 src/crl.ycp:199
+#: src/ca.ycp:213 src/certificate.ycp:352 src/crl.ycp:200
 msgid "&View"
 msgstr "&Zobacz"
 
@@ -960,7 +960,7 @@ msgstr "[ustawione ręcznie]"
 msgid "[root password]"
 msgstr "[hasło administratora (root)]"
 
-#: src/ca_mgm_proposal.ycp:200 src/dialog-ca.ycp:165
+#: src/ca_mgm_proposal.ycp:200 src/crlExport.ycp:264 src/dialog-ca.ycp:165
 msgid "CA Name: "
 msgstr "Nazwa CA: "
 
@@ -1287,7 +1287,8 @@ msgstr "Od&wołaj"
 msgid "&Delete"
 msgstr "&Usuń"
 
-#: src/certificate.ycp:357 src/crl.ycp:202
+#. Fate (#2613)
+#: src/certificate.ycp:357 src/crl.ycp:204
 msgid "Export"
 msgstr "Eksportuj"
 
@@ -1296,7 +1297,7 @@ msgid "Export to File"
 msgstr "Eksportuj do pliku"
 
 #. popup window header
-#: src/certificate.ycp:360 src/util.ycp:390
+#: src/certificate.ycp:360 src/crlExport.ycp:273 src/util.ycp:390
 msgid "Export to LDAP"
 msgstr "Eksportuj do LDAP"
 
@@ -1350,39 +1351,39 @@ msgid "Common Server Certificate"
 msgstr "Wspólny certyfikat dla serwera"
 
 #. help text 1/4
-#: src/crl.ycp:30
+#: src/crl.ycp:31
 msgid "<p>Here, see the most important values of the CRL.</p>"
 msgstr "<p>Tutaj można obejrzeć najważniejsze wartości listy CRL.</p>"
 
 #. help text 2/4
-#: src/crl.ycp:32
+#: src/crl.ycp:33
 msgid "<p>With <b>Generate CRL</b>, a new CRL will be generated.</p>"
 msgstr "<p>Opcja <b>Generuj CRL</b> generuje nową listę CRL.</p>"
 
 #. help text 3/4
-#: src/crl.ycp:34
+#: src/crl.ycp:35
 msgid "<p><b>View</b> shows a complete description.</p>"
 msgstr "<p><b>Podgląd</b> pokazuje kompletny opis.</p>"
 
 #. help text 4/4
-#: src/crl.ycp:36
+#: src/crl.ycp:37
 msgid "<p>You can <b>Export</b> the CRL to a file or LDAP Directory.</p>"
 msgstr "<p>Można <b>wyeksportować</b> listę CRL do pliku lub LDAP.</p>"
 
 #. popup window header
-#: src/crl.ycp:56
+#: src/crl.ycp:57
 msgid "Generate New CRL"
 msgstr "Wygeneruj nową listę CRL"
 
-#: src/crl.ycp:58
+#: src/crl.ycp:59
 msgid "&Valid to (days):"
 msgstr "Waż&ne do (dni):"
 
-#: src/crl.ycp:159
+#: src/crl.ycp:160
 msgid "<p><b>Certificate Revocation List (CRL):</b></p>"
 msgstr "<p><b>Lista certyfikatów unieważnionych (CRL):</b></p>"
 
-#: src/crl.ycp:164
+#: src/crl.ycp:165
 msgid ""
 "\n"
 "\n"
@@ -1392,7 +1393,7 @@ msgstr ""
 "\n"
 "Ostatnia aktualizacja: "
 
-#: src/crl.ycp:165
+#: src/crl.ycp:166
 msgid ""
 "\n"
 "Next Update: "
@@ -1400,7 +1401,7 @@ msgstr ""
 "\n"
 "Następna aktualizacja: "
 
-#: src/crl.ycp:170
+#: src/crl.ycp:171
 msgid ""
 "\n"
 "\n"
@@ -1410,21 +1411,13 @@ msgstr ""
 "\n"
 "Odwołane certyfikaty:"
 
-#: src/crl.ycp:198
+#: src/crl.ycp:199
 msgid "&Generate CRL"
 msgstr "&Generuj CRL"
 
-#: src/crl.ycp:200 src/new_cert_advanced.ycp:95
+#: src/crl.ycp:201 src/new_cert_advanced.ycp:95
 msgid "&Default"
 msgstr "&Domyślnie"
-
-#: src/crl.ycp:204
-msgid "to &File"
-msgstr "do &pliku"
-
-#: src/crl.ycp:205
-msgid "to &LDAP"
-msgstr "do &LDAP"
 
 #. help text 1/3
 #: src/crlDefault.ycp:112
@@ -1466,6 +1459,134 @@ msgstr "Nazwa"
 #: src/crlDefault.ycp:171
 msgid "Default CRL Settings"
 msgstr "Domyślne ustawienia CRL"
+
+#. Translators: window caption 
+#: src/crlExport.ycp:64
+#, fuzzy
+msgid "Security Information"
+msgstr "Wczytanie informacji serwera"
+
+#. Translators: long help text - security information
+#: src/crlExport.ycp:66
+msgid "Warning!<br>Activating the automatic creation and export of a CRL will write the CA password to a configuration file on disk. The password will be stored there in plain text as it is needed to create a CRL. The file will only be readable for the root user."
+msgstr ""
+
+#: src/crlExport.ycp:206 src/crlExport.ycp:284
+#, fuzzy
+msgid "Export CRL"
+msgstr "Eksportuj"
+
+#: src/crlExport.ycp:212
+msgid "<p>Export the CRL of this CA once by selecting <b>Export once</b>.</p>"
+msgstr ""
+
+#: src/crlExport.ycp:213
+msgid "<p>To setup a repeated recreation of the CRL select <b>Repeated recreation and export</b>. In this case set the interval for the recreation in <b>Periodic interval</b>. If you set the interval to 24 hours you can additionally select the hour when the export should happen. Please make sure you read and understood the <b>Security Information</b>.</p>"
+msgstr ""
+
+#: src/crlExport.ycp:214
+msgid "<p>You can activate an export of the CRL to a local file or to a LDAP server or both. Setup the respective parameters in <b>Export to local file</b> and <b>Export to LDAP</b>.</p>"
+msgstr ""
+
+#: src/crlExport.ycp:220
+#, fuzzy
+msgid "Export once"
+msgstr "Eksportuj do pliku"
+
+#: src/crlExport.ycp:221
+msgid "Repeated recreation and export"
+msgstr ""
+
+#: src/crlExport.ycp:226 src/util.ycp:392
+msgid "&Host Name:"
+msgstr "Nazwa &hosta:"
+
+#: src/crlExport.ycp:227 src/util.ycp:393
+msgid "&Port:"
+msgstr "&Port:"
+
+#. `HBox (`HWeight (1, `ComboBox( `id(`dn), `opt(`editable), _("&DN:"), []))),
+#: src/crlExport.ycp:229 src/util.ycp:394
+msgid "&DN:"
+msgstr "&DN:"
+
+#: src/crlExport.ycp:230 src/util.ycp:395
+msgid "&Bind DN:"
+msgstr "&Bind DN:"
+
+#: src/crlExport.ycp:231
+#, fuzzy
+msgid "Pass&word"
+msgstr "Hasło"
+
+#: src/crlExport.ycp:235
+msgid "Save &as"
+msgstr ""
+
+#: src/crlExport.ycp:240 src/util.ycp:523 src/util.ycp:686 src/util.ycp:794
+msgid "Export Format"
+msgstr "Format eksportu"
+
+#: src/crlExport.ycp:241
+#, fuzzy
+msgid "PEM Format"
+msgstr "Format &PEM"
+
+#: src/crlExport.ycp:242
+#, fuzzy
+msgid "DER Format"
+msgstr "Format &DER"
+
+#: src/crlExport.ycp:249
+msgid "Periodic interval"
+msgstr ""
+
+#. `HSquash( `IntField( `id(`interval_days), "&days", 0, 100, 30 )),
+#. Translators: this is used to express a setting of  "every XX hour(s)"
+#: src/crlExport.ycp:253
+msgid "every"
+msgstr ""
+
+#. Translators: in case "every XX hour(s)" is set to 24, the user can set "at XX o'clock"
+#: src/crlExport.ycp:256
+msgid "at"
+msgstr ""
+
+#: src/crlExport.ycp:259
+msgid "&Security Information"
+msgstr ""
+
+#: src/crlExport.ycp:270
+#, fuzzy
+msgid "Export to file"
+msgstr "Eksportuj do pliku"
+
+#: src/crlExport.ycp:306
+msgid "Save as"
+msgstr ""
+
+#: src/crlExport.ycp:368
+#, fuzzy
+msgid "Export to file failed"
+msgstr "Eksportowanie nie powiodło się."
+
+#: src/crlExport.ycp:368 src/crlExport.ycp:388
+msgid "Do you want to retry?"
+msgstr ""
+
+#: src/crlExport.ycp:373
+#, fuzzy
+msgid "Saved to file successfully"
+msgstr "Pomyślnie zapisano do LDAP."
+
+#: src/crlExport.ycp:384 src/util.ycp:500
+msgid "Saved to LDAP successfully."
+msgstr "Pomyślnie zapisano do LDAP."
+
+#: src/crlExport.ycp:388
+#, fuzzy
+msgid "Export to LDAP failed"
+msgstr "Eksportuj do LDAP"
 
 #. When no dialog defined for this tab (software error)
 #: src/dialog-ca.ycp:74
@@ -2052,34 +2173,10 @@ msgstr ""
 msgid "P&assword:"
 msgstr "H&asło:"
 
-#: src/util.ycp:392
-msgid "&Host Name:"
-msgstr "Nazwa &hosta:"
-
-#: src/util.ycp:393
-msgid "&Port:"
-msgstr "&Port:"
-
-#: src/util.ycp:394
-msgid "&DN:"
-msgstr "&DN:"
-
-#: src/util.ycp:395
-msgid "&Bind DN:"
-msgstr "&Bind DN:"
-
-#: src/util.ycp:500
-msgid "Saved to LDAP successfully."
-msgstr "Pomyślnie zapisano do LDAP."
-
 #. popup window header
 #: src/util.ycp:521
 msgid "Export CA to File"
 msgstr "Wyeksportuj CA do pliku"
-
-#: src/util.ycp:523 src/util.ycp:686 src/util.ycp:794
-msgid "Export Format"
-msgstr "Format eksportu"
 
 #: src/util.ycp:527
 msgid "O&nly the Certificate in PEM Format"
@@ -2267,6 +2364,12 @@ msgstr ""
 #: src/util.ycp:1415
 msgid "CA has been imported."
 msgstr "CA został zaimportowany."
+
+#~ msgid "to &File"
+#~ msgstr "do &pliku"
+
+#~ msgid "to &LDAP"
+#~ msgstr "do &LDAP"
 
 #~ msgid "Invalid value for parameter"
 #~ msgstr "Niewłaściwa wartość dla parametru"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ldap-server\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-17 13:22+0100\n"
+"POT-Creation-Date: 2008-02-27 17:09+0100\n"
 "PO-Revision-Date: 2008-02-05 23:22+0100\n"
 "Last-Translator: Marek Stępień <mstepien@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -427,14 +427,14 @@ msgid "&Disable Server"
 msgstr "W&yłącz serwer"
 
 #. textentry description
-#: src/dialogs.ycp:285 src/tree_structure.ycp:1148 src/tree_structure.ycp:1219
+#: src/dialogs.ycp:285 src/tree_structure.ycp:1180 src/tree_structure.ycp:1251
 msgid "&Base DN"
 msgstr "&Base DN"
 
 #. textentry description
 #. Textentry description
 #. textentry description
-#: src/dialogs.ycp:288 src/tree_structure.ycp:1151 src/tree_structure.ycp:1222
+#: src/dialogs.ycp:288 src/tree_structure.ycp:1183 src/tree_structure.ycp:1254
 msgid "&Root DN"
 msgstr "&Root DN"
 
@@ -446,21 +446,21 @@ msgstr "D&odaj Base DN"
 #. textentry description
 #. Textentry description
 #. textentry description
-#: src/dialogs.ycp:296 src/tree_structure.ycp:1160 src/tree_structure.ycp:1231
+#: src/dialogs.ycp:296 src/tree_structure.ycp:1192 src/tree_structure.ycp:1263
 msgid "LDAP &Password"
 msgstr "Hasło LDA&P"
 
 #. textentry description
 #. Textentry description
 #. textentry description
-#: src/dialogs.ycp:298 src/tree_structure.ycp:1163 src/tree_structure.ycp:1234
+#: src/dialogs.ycp:298 src/tree_structure.ycp:1195 src/tree_structure.ycp:1266
 msgid "&Validate Password"
 msgstr "Spra&wdzenie hasła"
 
 #. combobox text
 #. Combobox description
 #. combobox text
-#: src/dialogs.ycp:300 src/tree_structure.ycp:1166 src/tree_structure.ycp:1237
+#: src/dialogs.ycp:300 src/tree_structure.ycp:1198 src/tree_structure.ycp:1269
 msgid "&Encryption"
 msgstr "Szyfrowani&e"
 
@@ -1025,238 +1025,247 @@ msgstr "Nie można zapisać ustawień dla bieżącej bazy danych."
 msgid "Unable to read settings for the current database."
 msgstr "Nie można odczytać ustawień bieżącej bazy danych."
 
+#: src/tree_structure.ycp:977
+msgid ""
+"The LDAP Database contains at least one \"shadowAccount\" object.\n"
+"Using OpenLDAP's Password Policies and \"shadowAccount\" objects\n"
+"together with pam_ldap can have unexpected effects, as they provide\n"
+"overlapping functionality.\n"
+"Do you really want to enable Password Policies?"
+msgstr ""
+
 #. Tree item
-#: src/tree_structure.ycp:984
+#: src/tree_structure.ycp:1016
 msgid "Global Settings"
 msgstr "Ustawienia globalne"
 
 #. Tree item
-#: src/tree_structure.ycp:989
+#: src/tree_structure.ycp:1021
 msgid "Schema Files"
 msgstr "Pliki schematu"
 
 #. Tree item
-#: src/tree_structure.ycp:1015
+#: src/tree_structure.ycp:1047
 msgid "Log Level Settings"
 msgstr "Ustawienia poziomu dziennika zdarzeń"
 
 #. Multi select box header
-#: src/tree_structure.ycp:1018
+#: src/tree_structure.ycp:1050
 msgid "Select &Log Level Flags:"
 msgstr "Wy&bierz znaczniki poziomu dziennika zdarzeń:"
 
 #. Multi select box item 1/12
-#: src/tree_structure.ycp:1020
+#: src/tree_structure.ycp:1052
 msgid "Trace Function Calls"
 msgstr "Śledź wywołania funkcji"
 
 #. Multi select box item 2/12
-#: src/tree_structure.ycp:1022
+#: src/tree_structure.ycp:1054
 msgid "Debug Packet Handling"
 msgstr "Debuguj obsługę pakietów"
 
 #. Multi select box item 3/12
-#: src/tree_structure.ycp:1024
+#: src/tree_structure.ycp:1056
 msgid "Heavy Trace Debugging"
 msgstr "Zastosuj debugowanie typu Heavy Trace"
 
 #. Multi select box item 4/12
-#: src/tree_structure.ycp:1026
+#: src/tree_structure.ycp:1058
 msgid "Connection Management"
 msgstr "Zarządzanie połączeniami"
 
 #. Multi select box item 5/12
-#: src/tree_structure.ycp:1028
+#: src/tree_structure.ycp:1060
 msgid "Print Packets Sent and Received"
 msgstr "Wyświetlaj wysłane i odebrane pakiety"
 
 #. Multi select box item 6/12
-#: src/tree_structure.ycp:1030
+#: src/tree_structure.ycp:1062
 msgid "Search Filter Processing"
 msgstr "Przetwarzanie filtrów wyszukiwania"
 
 #. Multi select box item 7/12
-#: src/tree_structure.ycp:1032
+#: src/tree_structure.ycp:1064
 msgid "Configuration File Processing"
 msgstr "Przetwarzanie plików konfiguracyjnych"
 
 #. Multi select box item 8/12
-#: src/tree_structure.ycp:1034
+#: src/tree_structure.ycp:1066
 msgid "Access Control List Processing"
 msgstr "Przetwarzanie list praw dostępu"
 
 #. Multi select box item 9/12
-#: src/tree_structure.ycp:1036
+#: src/tree_structure.ycp:1068
 msgid "Log Connections, Operations, and Result"
 msgstr "Rejestruj połączenia, operacje i wyniki"
 
 #. Multi select box item 10/12
-#: src/tree_structure.ycp:1038
+#: src/tree_structure.ycp:1070
 msgid "Log Entries Sent"
 msgstr "Wysłane pozycje dziennika zdarzeń"
 
 #. Multi select box item 11/12
-#: src/tree_structure.ycp:1040
+#: src/tree_structure.ycp:1072
 msgid "Print Communication with Shell Back-Ends"
 msgstr "Komunikacja drukowania z powłoką"
 
 #. Multi select box item 12/12
-#: src/tree_structure.ycp:1042
+#: src/tree_structure.ycp:1074
 msgid "Entry Parsing"
 msgstr "Parsowanie pozycji"
 
 #. Tree item
-#: src/tree_structure.ycp:1050
+#: src/tree_structure.ycp:1082
 msgid "Allow Settings"
 msgstr "Ustawienia zezwoleń"
 
 #. Multi select box header(allow flags)
-#: src/tree_structure.ycp:1053
+#: src/tree_structure.ycp:1085
 msgid "Select &Allow Flags:"
 msgstr "Proszę wybrać zn&aczniki zezwoleń:"
 
 #. Multi select box item (allow flags) 1/4
-#: src/tree_structure.ycp:1055
+#: src/tree_structure.ycp:1087
 msgid "LDAPv2 Bind Requests"
 msgstr "Żądania LDAPv2 Bind"
 
 #. Multi select box item (allow flags) 2/4
-#: src/tree_structure.ycp:1057
+#: src/tree_structure.ycp:1089
 msgid "Anonymous Bind when Credentials Not Empty"
 msgstr "Anonimowe żądania Bind kiedy uwierzytelnienia niepuste"
 
 #. Multi select box item (allow flags) 3/4
-#: src/tree_structure.ycp:1059
+#: src/tree_structure.ycp:1091
 msgid "Unauthenticated Bind when DN Not Empty"
 msgstr "Nieuwierzytelnione Bind gdy DN niepuste"
 
 #. Multi select box item (allow flags) 4/4
-#: src/tree_structure.ycp:1061
+#: src/tree_structure.ycp:1093
 msgid "Unauthenticated Update Options to Process"
 msgstr "Nieuwierzytelnione opcje aktualizacji do przetworzenia"
 
 #. Tree item
 #. TLS Dialog Headline
-#: src/tree_structure.ycp:1069 src/tree_structure.ycp:1072
+#: src/tree_structure.ycp:1101 src/tree_structure.ycp:1104
 msgid "TLS Settings"
 msgstr "Ustawienia TLS"
 
 #. radiobutton group text
-#: src/tree_structure.ycp:1074
+#: src/tree_structure.ycp:1106
 msgid "TLS Active"
 msgstr "TLS aktywne"
 
 #. Button Text
-#: src/tree_structure.ycp:1080
+#: src/tree_structure.ycp:1112
 msgid "&Select Certificate..."
 msgstr "Wybierz &certyfikat..."
 
 #. certificate type selection dialog Headline
-#: src/tree_structure.ycp:1085
+#: src/tree_structure.ycp:1117
 msgid "Select Type"
 msgstr "Wybór typu"
 
 #. Radiobutton text
-#: src/tree_structure.ycp:1089
+#: src/tree_structure.ycp:1121
 msgid "&Import Certificates"
 msgstr "&Importuj certyfikaty"
 
 #. Radiobutton text
-#: src/tree_structure.ycp:1091
+#: src/tree_structure.ycp:1123
 msgid "Use C&ommon Server Certificate"
 msgstr "Użyj certyfikatu C&ommon Server Certificate"
 
 #. Dialog Headline
-#: src/tree_structure.ycp:1100
+#: src/tree_structure.ycp:1132
 msgid "Import Certificate"
 msgstr "Import certyfikatu"
 
 #. text entry description
-#: src/tree_structure.ycp:1103
+#: src/tree_structure.ycp:1135
 msgid "Certificate &File (PEM Format)"
 msgstr "Plik certyfikatu (w &formacie PEM)"
 
 #. Button Text
 #. Button text
-#: src/tree_structure.ycp:1106 src/tree_structure.ycp:1173
+#: src/tree_structure.ycp:1138 src/tree_structure.ycp:1205
 msgid "&Browse..."
 msgstr "Przeg&lądaj..."
 
 #. text entry description
-#: src/tree_structure.ycp:1110
+#: src/tree_structure.ycp:1142
 msgid "Certificate &Key File (PEM Format -- Unencrypted)"
 msgstr "Plik z &kluczem certyfikatu (w formacie PEM -- niezaszyfrowany)"
 
 #. Button Text
-#: src/tree_structure.ycp:1113
+#: src/tree_structure.ycp:1145
 msgid "B&rowse..."
 msgstr "Prze&glądaj..."
 
 #. text entry description
-#: src/tree_structure.ycp:1117
+#: src/tree_structure.ycp:1149
 msgid "C&A Certificate File (PEM Format)"
 msgstr "Plik certyfikatu C&A (w formacie PEM)"
 
 #. Button Text
-#: src/tree_structure.ycp:1120
+#: src/tree_structure.ycp:1152
 msgid "Bro&wse..."
 msgstr "Przegląda&j..."
 
 #. Tree item
-#: src/tree_structure.ycp:1135
+#: src/tree_structure.ycp:1167
 msgid "Databases"
 msgstr "Bazy danych"
 
 #. Button Text
-#: src/tree_structure.ycp:1139
+#: src/tree_structure.ycp:1171
 msgid "A&dd Database..."
 msgstr "&Dodaj bazę danych..."
 
 #. Dialog Headline
-#: src/tree_structure.ycp:1144
+#: src/tree_structure.ycp:1176
 msgid "Add Database"
 msgstr "Dodawanie bazy danych"
 
 #. Textentry description
 #. textentry description
-#: src/tree_structure.ycp:1147 src/tree_structure.ycp:1218
+#: src/tree_structure.ycp:1179 src/tree_structure.ycp:1250
 msgid "General Settings"
 msgstr "Ustawienia ogólne"
 
 #. checkbox description
 #. checkbox text
-#: src/tree_structure.ycp:1154 src/tree_structure.ycp:1190
-#: src/tree_structure.ycp:1225 src/tree_structure.ycp:1256
+#: src/tree_structure.ycp:1186 src/tree_structure.ycp:1222
+#: src/tree_structure.ycp:1257 src/tree_structure.ycp:1288
 msgid "&Append Base DN"
 msgstr "Dodaj B&ase DN"
 
 #. Textentry description
-#: src/tree_structure.ycp:1170
+#: src/tree_structure.ycp:1202
 msgid "&Database Directory"
 msgstr "Katalog z bazą &danych"
 
-#: src/tree_structure.ycp:1176 src/tree_structure.ycp:1241
+#: src/tree_structure.ycp:1208 src/tree_structure.ycp:1273
 msgid "Password Policy Settings"
 msgstr "Ustawienia grupy reguł haseł"
 
-#: src/tree_structure.ycp:1178 src/tree_structure.ycp:1243
+#: src/tree_structure.ycp:1210 src/tree_structure.ycp:1275
 msgid "Enable Password Policies"
 msgstr "Włącz grupy reguł haseł"
 
-#: src/tree_structure.ycp:1181 src/tree_structure.ycp:1246
+#: src/tree_structure.ycp:1213 src/tree_structure.ycp:1278
 msgid "Hash Clear Text Passwords"
 msgstr "Zabezpiecz hasła funkcją jednokierunkową"
 
-#: src/tree_structure.ycp:1184 src/tree_structure.ycp:1249
+#: src/tree_structure.ycp:1216 src/tree_structure.ycp:1281
 msgid "Disclose \"Account Locked\" Status"
 msgstr "Ujawnij status \"konto zablokowane\""
 
-#: src/tree_structure.ycp:1187 src/tree_structure.ycp:1253
+#: src/tree_structure.ycp:1219 src/tree_structure.ycp:1285
 msgid "Default Policy Object DN"
 msgstr "DN domyślnego obiektu grupy reguł"
 
 #. Dialog Headline
-#: src/tree_structure.ycp:1215
+#: src/tree_structure.ycp:1247
 msgid "Edit Database"
 msgstr "Edycja bazy danych"
 

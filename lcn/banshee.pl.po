@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Banshee\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-01-23 16:46-0500\n"
+"POT-Creation-Date: 2008-02-27 17:52-0500\n"
 "PO-Revision-Date: 2008-02-04 21:03+0100\n"
 "Last-Translator: wadim dziedzic <nikdo@aviary.pl>\n"
 "Language-Team: Polish <dominikowski@gmail.com>\n"
@@ -1305,6 +1305,7 @@ msgid "No available profiles"
 msgstr "Brak dostępnych profili."
 
 #: ../src/Core/Banshee.Base/Banshee.AudioProfiles.Gui/ProfileConfigurationDialog.cs:71
+#: ../src/Plugins/Banshee.Plugins.Podcast/UI/PodcastSubscribeDialog.cs:88
 msgid "Advanced"
 msgstr "Zaawansowane"
 
@@ -2177,7 +2178,11 @@ msgstr "Nie można zainicjować DapCore, ponieważ HalCore nie został zainicjow
 msgid "Device"
 msgstr "Urządzenie"
 
+#. 1. remove everything in the remove queue if it's on the device
+#. 2. Add everything in the tracklist that isn't on the device
+#. 3. Sync playlists?
 #: ../src/Core/Banshee.Base/Dap/Dap.cs:357
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:432
 #, csharp-format
 msgid "Synchronizing {0}"
 msgstr "Synchronizowanie {0}"
@@ -2542,6 +2547,7 @@ msgid "Assembly Name"
 msgstr "Nazwa zestawu"
 
 #: ../src/Core/Banshee.Base/Gui/VersionInformationDialog.cs:69
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:197
 msgid "Version"
 msgstr "Wersja"
 
@@ -2696,7 +2702,7 @@ msgid "Copying from {0}"
 msgstr "Kopiowanie z {0}"
 
 #: ../src/Core/Banshee.Base/Sources/DapSource.cs:193
-#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:464
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:484
 #: ../src/Plugins/Banshee.Plugins.Daap/DaapSource.cs:321
 msgid "Scanning..."
 msgstr "Skanowanie..."
@@ -3120,6 +3126,7 @@ msgstr "Błąd podczas odbudowywania bazy danych iPoda"
 
 #: ../src/Dap/Banshee.Dap.Ipod/IpodDap.cs:99
 #: ../src/Dap/Banshee.Dap.Ipod/IpodDap.cs:102
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:194
 msgid "Model"
 msgstr "Model"
 
@@ -3236,6 +3243,7 @@ msgstr "Usuwanie utworów"
 
 #: ../src/Dap/Banshee.Dap.MassStorage/MassStorageDap.cs:189
 #: ../src/Dap/Banshee.Dap.MassStorage/MassStorageDap.cs:191
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:193
 msgid "Vendor"
 msgstr "Producent"
 
@@ -3305,24 +3313,78 @@ msgstr "Usuwanie {0} z {1}"
 msgid "Audio Device"
 msgstr "Urządzenie dźwiękowe"
 
-#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:178
-msgid "Connecting..."
-msgstr "Łączenie..."
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:97
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:145
+msgid "MTP Support Ignoring Device"
+msgstr ""
 
-#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:236
-msgid "Loading database..."
-msgstr "Wczytywanie bazy danych..."
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:98
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:146
+msgid "Banshee's MTP audio player support can only handle one device at a time."
+msgstr ""
 
-#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:245
-msgid "Cancelled..."
-msgstr "Anulowano..."
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:117
+#, fuzzy
+msgid "Error Initializing MTP Device Support"
+msgstr "Inicjowanie obsługi CD-Audio"
 
-#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:259
-#, csharp-format
-msgid "Loaded {0} files in {1:0.00}sec"
-msgstr "Wczytano {0} plików w czasie {1:0.00}sek"
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:118
+msgid "There was an error intializing MTP device support.  See http://www.banshee-project.org/Guide/DAPs/MTP for more information."
+msgstr ""
 
-#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:463
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:130
+msgid "Error Finding MTP Device Support"
+msgstr ""
+
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:131
+msgid "An MTP device was detected, but Banshee was unable to load support for it."
+msgstr ""
+
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:195
+#, fuzzy
+msgid "Audio Format(s)"
+msgstr "Format dźwiękowy"
+
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:196
+#, fuzzy
+msgid "Album Art"
+msgstr "Album"
+
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:196
+#, fuzzy
+msgid "Yes"
+msgstr "Lat"
+
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:196
+msgid "No"
+msgstr ""
+
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:198
+#, fuzzy
+msgid "Serial Number"
+msgstr "Numer utworu"
+
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:254
+#, fuzzy, csharp-format
+msgid "Loading {0}"
+msgstr "Wczytywanie"
+
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:439
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:446
+msgid "Syncing album art"
+msgstr ""
+
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:451
+#, fuzzy, csharp-format
+msgid "There was an unknown error while synchronizing {0}."
+msgstr "Napotkano nieokreślony błąd."
+
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:467
+#, fuzzy
+msgid "MTP Device Error"
+msgstr "Błąd urządzenia"
+
+#: ../src/Dap/Banshee.Dap.Mtp/MtpDap.cs:483
 #, csharp-format
 msgid "Importing from {0}"
 msgstr "Importowanie z {0}"
@@ -4484,7 +4546,7 @@ msgstr "Nowa stacja"
 msgid "Edit Last.fm Settings"
 msgstr "Zmień ustawienia Last.fm"
 
-#: ../src/Plugins/Banshee.Plugins.LastFM/LastFMSource.cs:252
+#: ../src/Plugins/Banshee.Plugins.LastFM/LastFMSource.cs:257
 msgid "Last.fm (Disconnected)"
 msgstr "Last.fm (rozłączono)"
 
@@ -4638,6 +4700,18 @@ msgstr "Podobny"
 #: ../src/Plugins/Banshee.Plugins.LastFM/StationType.cs:149
 msgid "Similar to:"
 msgstr "Podobny do:"
+
+#~ msgid "Connecting..."
+#~ msgstr "Łączenie..."
+
+#~ msgid "Loading database..."
+#~ msgstr "Wczytywanie bazy danych..."
+
+#~ msgid "Cancelled..."
+#~ msgstr "Anulowano..."
+
+#~ msgid "Loaded {0} files in {1:0.00}sec"
+#~ msgstr "Wczytano {0} plików w czasie {1:0.00}sek"
 
 #~ msgid "Advanced Audio Coding (AAC)"
 #~ msgstr "Advanced Audio Coding (AAC)"
