@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: gnome-panel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-03-13 20:58+0100\n"
+"POT-Creation-Date: 2008-03-13 21:23-0400\n"
 "PO-Revision-Date: 2007-03-22 22:09+0100\n"
 "Last-Translator: wadim dziedzic <wdziedzic@aviary.pl>\n"
 "Language-Team: Polish <translation-team-pl@lists.sourceforge.net>\n"
@@ -49,7 +49,7 @@ msgstr "_Informacje o"
 #: ../applets/wncklet/GNOME_WindowListApplet.xml.h:2
 #: ../applets/wncklet/GNOME_WindowMenuApplet.xml.h:2
 #: ../applets/wncklet/GNOME_WorkspaceSwitcherApplet.xml.h:2
-#: ../gnome-panel/drawer.c:600 ../gnome-panel/panel-action-button.c:741
+#: ../gnome-panel/drawer.c:600 ../gnome-panel/panel-action-button.c:762
 #: ../gnome-panel/panel-context-menu.c:352 ../gnome-panel/panel-menu-bar.c:368
 #: ../gnome-panel/panel-menu-button.c:685
 msgid "_Help"
@@ -179,7 +179,7 @@ msgstr "%H:%M"
 msgid "%A, %B %d %Y"
 msgstr "%A, %d %B %Y"
 
-#: ../applets/clock/clock.c:1885 ../applets/intlclock/intlclock-ui.c:1917
+#: ../applets/clock/clock.c:1885 ../applets/intlclock/intlclock-ui.c:1970
 #, c-format
 msgid "Failed to launch time configuration tool: %s"
 msgstr "Nie można uruchomić narzędzia do konfiguracji czasu: %s"
@@ -572,7 +572,7 @@ msgstr "Określa liczbę ramek wyświetlanych przy animacji rybki."
 msgid "This key specifies the number of seconds each frame will be displayed."
 msgstr "Opcja określająca liczbę sekund wyświetlania każdej ramki."
 
-#: ../applets/intlclock/intlclock.c:181
+#: ../applets/intlclock/intlclock.c:238
 msgid ""
 "%b %%d, %Y\n"
 "%%d:%M <span size=\"smaller\">%p %%s</span>"
@@ -580,7 +580,35 @@ msgstr ""
 "%%d %b %Y\n"
 "%%d:%M <span size=\"smaller\">%p %%s</span>"
 
-#: ../applets/intlclock/intlclock.c:194
+#: ../applets/intlclock/intlclock.c:242
+#, fuzzy
+msgid ""
+"%a %b %%d, %Y\n"
+"%%d:%M:%S"
+msgstr ""
+"%%d %b %Y\n"
+"%%d:%M:%S"
+
+#: ../applets/intlclock/intlclock.c:243
+#, fuzzy
+msgid ""
+"%a %b %%d, %Y\n"
+"%%d:%M"
+msgstr ""
+"%%d %b %Y\n"
+"%%d:%M"
+
+#: ../applets/intlclock/intlclock.c:244
+#, fuzzy
+msgid "%a %b %%d, %%d:%M:%S"
+msgstr "%%d %b %%d:%M:%S"
+
+#: ../applets/intlclock/intlclock.c:245
+#, fuzzy
+msgid "%a %b %%d, %%d:%M"
+msgstr "%%d %b %%d:%M"
+
+#: ../applets/intlclock/intlclock.c:258
 msgid ""
 "%b %%d, %Y\n"
 "%%d:%M:%S"
@@ -588,7 +616,7 @@ msgstr ""
 "%%d %b %Y\n"
 "%%d:%M:%S"
 
-#: ../applets/intlclock/intlclock.c:196
+#: ../applets/intlclock/intlclock.c:260
 msgid ""
 "%b %%d, %Y\n"
 "%%d:%M"
@@ -596,31 +624,36 @@ msgstr ""
 "%%d %b %Y\n"
 "%%d:%M"
 
-#: ../applets/intlclock/intlclock.c:198
+#: ../applets/intlclock/intlclock.c:262
 msgid "%b %%d, %%d:%M:%S"
 msgstr "%%d %b %%d:%M:%S"
 
-#: ../applets/intlclock/intlclock.c:201
+#: ../applets/intlclock/intlclock.c:265
 msgid "%b %%d, %%d:%M"
 msgstr "%%d %b %%d:%M"
 
-#: ../applets/intlclock/intlclock.c:215
+#: ../applets/intlclock/intlclock.c:279
 msgid "%%d:%M:%S"
 msgstr "%%d:%M:%S"
 
-#: ../applets/intlclock/intlclock.c:217
+#: ../applets/intlclock/intlclock.c:281
 msgid "%%d:%M"
 msgstr "%%d:%M"
 
-#: ../applets/intlclock/intlclock.c:229
+#: ../applets/intlclock/intlclock.c:294
 #, c-format
 msgid " <small>%p %%s (%A)</small>"
 msgstr " <small>%p %%s (%A)</small>"
 
-#: ../applets/intlclock/intlclock.c:231
+#: ../applets/intlclock/intlclock.c:300
 #, c-format
 msgid " <small>%p %%s</small>"
 msgstr "<small>%p %%s</small>"
+
+#: ../applets/intlclock/intlclock.c:302
+#, c-format
+msgid "%p %%s"
+msgstr ""
 
 #: ../applets/intlclock/intlclock.glade.h:1
 msgid " "
@@ -731,6 +764,10 @@ msgstr "Ustawienia _czasu"
 msgid "Timezone:"
 msgstr "Strefa czasowa:"
 
+#: ../applets/intlclock/intlclock.glade.h:29
+msgid "Your Calendar Rocks"
+msgstr ""
+
 #: ../applets/intlclock/intlclock.glade.h:30
 msgid "_Copy Date"
 msgstr "Skopiuj _datę"
@@ -748,9 +785,14 @@ msgstr "_Przesuń"
 msgid "_Remove from panel"
 msgstr "U_suń z panelu"
 
-#: ../applets/intlclock/intlclock-ui.c:873
-msgid "Preferences"
-msgstr "Preferencje"
+#: ../applets/intlclock/intlclock.glade.h:36
+msgid "button42"
+msgstr ""
+
+#: ../applets/intlclock/intlclock-ui.c:2041
+#, fuzzy, c-format
+msgid "%s, %s"
+msgstr "%1$s, %2$s"
 
 #: ../applets/notification_area/GNOME_NotificationAreaApplet.server.in.in.h:1
 msgid "Area where notification icons appear"
@@ -967,13 +1009,13 @@ msgid "The Window Selector shows a list of all windows in a menu and lets you br
 msgstr "Wybierak okien wyświetla listę wszystkich okien w menu i pozwala na ich przeglądanie."
 
 #: ../applets/wncklet/workspace-switcher.c:130
-#: ../applets/wncklet/workspace-switcher.c:859
+#: ../applets/wncklet/workspace-switcher.c:879
 #: ../applets/wncklet/workspace-switcher.glade.h:11
 msgid "rows"
 msgstr "wierszach"
 
 #: ../applets/wncklet/workspace-switcher.c:130
-#: ../applets/wncklet/workspace-switcher.c:859
+#: ../applets/wncklet/workspace-switcher.c:879
 msgid "columns"
 msgstr "kolumnach"
 
@@ -1086,7 +1128,7 @@ msgid "_Add to Drawer..."
 msgstr "_Dodaj do szuflady..."
 
 #: ../gnome-panel/drawer.c:594 ../gnome-panel/launcher.c:937
-#: ../gnome-panel/panel-action-button.c:143
+#: ../gnome-panel/panel-action-button.c:161
 #: ../gnome-panel/panel-context-menu.c:263
 msgid "_Properties"
 msgstr "_Właściwości"
@@ -1191,89 +1233,89 @@ msgstr "Dodaje jako szufladę do panelu"
 msgid "Add this as menu to panel"
 msgstr "Dodaje jako menu do panelu"
 
-#: ../gnome-panel/panel-action-button.c:119
+#: ../gnome-panel/panel-action-button.c:137
 msgid "_Activate Screensaver"
 msgstr "_Uaktywnij wygaszacz ekranu"
 
-#: ../gnome-panel/panel-action-button.c:125
+#: ../gnome-panel/panel-action-button.c:143
 msgid "_Lock Screen"
 msgstr "_Zabezpiecz ekran"
 
-#: ../gnome-panel/panel-action-button.c:131
+#: ../gnome-panel/panel-action-button.c:149
 msgid "_Kill Screensaver Daemon"
 msgstr "_Zakończ demona wygaszacza ekranu"
 
-#: ../gnome-panel/panel-action-button.c:137
+#: ../gnome-panel/panel-action-button.c:155
 msgid "Restart _Screensaver Daemon"
 msgstr "_Uruchom ponownie demona wygaszacza ekranu"
 
-#: ../gnome-panel/panel-action-button.c:207
-#: ../gnome-panel/panel-action-button.c:220
-#: ../gnome-panel/panel-action-button.c:244
+#: ../gnome-panel/panel-action-button.c:225
+#: ../gnome-panel/panel-action-button.c:238
+#: ../gnome-panel/panel-action-button.c:262
 #: ../gnome-panel/panel-menu-bar.c:435 ../gnome-panel/panel-menu-button.c:1007
 #: ../gnome-panel/panel-util.c:748
 #, c-format
 msgid "Cannot execute '%s'"
 msgstr "Nie można uruchomić \"%s\""
 
-#: ../gnome-panel/panel-action-button.c:280
+#: ../gnome-panel/panel-action-button.c:298
 msgid "Cannot connect to server"
 msgstr "Nie można połączyć się z serwerem"
 
-#: ../gnome-panel/panel-action-button.c:311
+#: ../gnome-panel/panel-action-button.c:329
 msgid "Lock Screen"
 msgstr "Zablokuj ekran"
 
-#: ../gnome-panel/panel-action-button.c:312
+#: ../gnome-panel/panel-action-button.c:330
 msgid "Protect your computer from unauthorized use"
 msgstr "Zabezpiecza komputer przed nieautoryzowanym dostępem"
 
-#: ../gnome-panel/panel-action-button.c:323
+#: ../gnome-panel/panel-action-button.c:341
 msgid "Log Out"
 msgstr "Wyloguj"
 
-#: ../gnome-panel/panel-action-button.c:324
+#: ../gnome-panel/panel-action-button.c:342
 msgid "Log out of this session to log in as a different user or to shut down the computer"
 msgstr "Kończy bieżącą sesję, pozwalając na zalogowanie się innemu użytkownikowi lub wyłączenie komputera"
 
-#: ../gnome-panel/panel-action-button.c:333
+#: ../gnome-panel/panel-action-button.c:351
 msgid "Run Application..."
 msgstr "Uruchom program..."
 
-#: ../gnome-panel/panel-action-button.c:334
+#: ../gnome-panel/panel-action-button.c:352
 msgid "Run an Application by entering a command"
 msgstr "Uruchamia aplikację po wpisaniu pełnego wiersza polecenia"
 
-#: ../gnome-panel/panel-action-button.c:343
+#: ../gnome-panel/panel-action-button.c:361
 msgid "Search for Files..."
 msgstr "Znajdź pliki..."
 
-#: ../gnome-panel/panel-action-button.c:344
+#: ../gnome-panel/panel-action-button.c:362
 msgid "Find files, folders, and documents on your computer"
 msgstr "Wyszukuje na komputerze pliki, foldery i dokumenty"
 
-#: ../gnome-panel/panel-action-button.c:352
+#: ../gnome-panel/panel-action-button.c:371
 msgid "Take Screenshot..."
 msgstr "Pobierz zrzut ekranu..."
 
-#: ../gnome-panel/panel-action-button.c:353
+#: ../gnome-panel/panel-action-button.c:372
 msgid "Take a screenshot of your desktop"
 msgstr "Pobierz zrzut pulpitu"
 
-#: ../gnome-panel/panel-action-button.c:361
+#: ../gnome-panel/panel-action-button.c:381
 msgid "Force Quit"
 msgstr "Wymuszenie zamknięcia"
 
-#: ../gnome-panel/panel-action-button.c:362
+#: ../gnome-panel/panel-action-button.c:382
 msgid "Force a misbehaving application to quit"
 msgstr "Wymusza zakończenie źle działającej aplikacji"
 
 #. FIXME icon
-#: ../gnome-panel/panel-action-button.c:371
+#: ../gnome-panel/panel-action-button.c:391
 msgid "Connect to Server..."
 msgstr "Połącz z serwerem..."
 
-#: ../gnome-panel/panel-action-button.c:372
+#: ../gnome-panel/panel-action-button.c:392
 msgid "Connect to a remote server"
 msgstr "Łączy ze zdalnym serwerem"
 
@@ -2513,6 +2555,9 @@ msgstr "_Aplet:"
 #: ../libpanel-applet/panel-test-applets.glade.h:5
 msgid "_Prefs Dir:"
 msgstr "_Katalog z ustawieniami:"
+
+#~ msgid "Preferences"
+#~ msgstr "Preferencje"
 
 #~ msgid "Accessories"
 #~ msgstr "Akcesoria"
