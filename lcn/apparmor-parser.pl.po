@@ -15,8 +15,8 @@ msgstr ""
 "Project-Id-Version: apparmor-parser\n"
 "Report-Msgid-Bugs-To: apparmor-general@forge.novell.com\n"
 "POT-Creation-Date: 2008-02-28 03:08-0800\n"
-"PO-Revision-Date: 2007-02-28 20:41+0100\n"
-"Last-Translator: Marek Stepien <marcoos@aviary.pl>\n"
+"PO-Revision-Date: 2008-03-14 22:13+0100\n"
+"Last-Translator: wadim dziedzic <wdziedzic@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -25,54 +25,52 @@ msgstr ""
 "X-Generator: KBabel 1.9.1\n"
 
 #: ../parser_include.c:96
-#, fuzzy, c-format
+#, c-format
 msgid "Error: Could not read profile %s: %s.\n"
-msgstr "Błąd: przydzielenie pamięci nie powiodło się\n"
+msgstr "Błąd: nie można wczytać profilu %s: %s.\n"
 
 #: ../parser_include.c:115
-#, fuzzy
 msgid "Error: Could not allocate temporary file.\n"
-msgstr "Błąd: przydzielenie pliku tymczasowego nie powiodło się\n"
+msgstr "Błąd: przydzielenie pliku tymczasowego nie powiodło się.\n"
 
 #: ../parser_include.c:166
-#, fuzzy
 msgid "Error: Out of memory.\n"
-msgstr "Błąd: brak pamięci\n"
+msgstr "Błąd: brak pamięci.\n"
 
 #: ../parser_include.c:176
 #, c-format
 msgid "Error: basedir %s is not a directory, skipping.\n"
-msgstr ""
+msgstr "Błąd: katalog bazowy %s nie jest katalogiem. Pominięto.\n"
 
 #: ../parser_include.c:190
-#, fuzzy, c-format
+#, c-format
 msgid "Error: Could not add directory %s to search path.\n"
-msgstr "Błąd: dodanie katalogu %s do ścieżki wyszukiwania nie powiodło się\n"
+msgstr "Błąd: dodanie katalogu %s do ścieżki wyszukiwania nie powiodło się.\n"
 
 #: ../parser_include.c:200
-#, fuzzy
 msgid "Error: Could not allocate memory.\n"
-msgstr "Błąd: przydzielenie pamięci nie powiodło się\n"
+msgstr "Błąd: przydzielenie pamięci nie powiodło się.\n"
 
 #: ../parser_include.c:297
-#, fuzzy, c-format
+#, c-format
 msgid "Error: Could not allocate buffer for include at line %d in %s.\n"
-msgstr "Błąd: przydzielenie buforu do dołączenia linii %d do %s nie powiodło się\n"
+msgstr "Błąd: przydzielenie buforu do dołączenia linii %d do %s nie powiodło się.\n"
 
-#: ../parser_include.c:313 ../parser_include.c:333
-#, fuzzy, c-format
+#: ../parser_include.c:313
+#: ../parser_include.c:333
+#, c-format
 msgid "Error: Bad include at line %d in %s.\n"
-msgstr "Błąd: nieprawidłowe dołączenie: linia %d w %s\n"
+msgstr "Błąd: nieprawidłowe dołączenie: linia %d w %s.\n"
 
 #: ../parser_include.c:378
-#, fuzzy, c-format
+#, c-format
 msgid "Error: #include %s%c not found at line %d in %s.\n"
-msgstr "Błąd: Nie znaleziono #include %s%c: linia %d w %s\n"
+msgstr "Błąd: nie znaleziono #include %s%c: linia %d w %s.\n"
 
 #: ../parser_include.c:459
-#, fuzzy, c-format
+#, c-format
 msgid "Error: Exceeded %d levels of includes.  Not processing %s include.\n"
-msgstr "Błąd: przekroczono %d poziomów dołączeń. %s NIE zostanie przetworzone\n"
+msgstr "Błąd: przekroczono %d poziomów dołączeń. %s nie zostanie przetworzone.\n"
 
 #: ../parser_interface.c:69
 msgid "Bad write position\n"
@@ -99,9 +97,8 @@ msgid "Profile does not match signature\n"
 msgstr "Profil nie odpowiada sygnaturze\n"
 
 #: ../parser_interface.c:87
-#, fuzzy
 msgid "Profile version not supported by Apparmor module\n"
-msgstr "Wersja profilu nie jest obsługiwana\n"
+msgstr "Wersja profilu nie jest obsługiwana przez moduł Apparmor\n"
 
 #: ../parser_interface.c:90
 msgid "Profile already exists\n"
@@ -135,7 +132,8 @@ msgstr "%s: usunięcie \"%s\" nie powiodło się."
 msgid "%s: Unable to write to stdout\n"
 msgstr "%s: zapis na wyjście standardowe nie powiódł się\n"
 
-#: ../parser_interface.c:132 ../parser_interface.c:155
+#: ../parser_interface.c:132
+#: ../parser_interface.c:155
 #, c-format
 msgid "%s: ASSERT: Invalid option: %d\n"
 msgstr "%s: ASSERT: nieprawidłowa opcja: %d\n"
@@ -166,9 +164,9 @@ msgid "Unable to open %s - %s\n"
 msgstr "Otwarcie %s  nie powiodło się - %s\n"
 
 #: ../parser_interface.c:754
-#, fuzzy, c-format
+#, c-format
 msgid "Unable to remove ^%s\n"
-msgstr "%s: usunięcie \"%s\" nie powiodło się."
+msgstr "Nie można usunąć ^%s\n"
 
 #: ../parser_interface.c:773
 msgid "unable to create work area\n"
@@ -184,7 +182,9 @@ msgstr "Serializowanie profilu %s nie powiodło się\n"
 msgid "%s: Unable to write entire profile entry\n"
 msgstr "%s: zapis wyłącznego profilu nie powiódł się\n"
 
-#: parser_lex.l:122 parser_lex.l:224 parser_lex.l:380
+#: parser_lex.l:122
+#: parser_lex.l:224
+#: parser_lex.l:380
 #, c-format
 msgid "Found unexpected character: '%s'"
 msgstr " Napotkano nieoczekiwany znak \"%s\""
@@ -195,29 +195,29 @@ msgid "(ip_mode) Found unexpected character: '%s'"
 msgstr "(tryb_ip) napotkano nieoczekiwany znak \"%s\""
 
 #: parser_lex.l:177
-#, fuzzy, c-format
+#, c-format
 msgid "Unexpected character in interface name: '%s'"
-msgstr " Napotkano nieoczekiwany znak \"%s\""
+msgstr "Napotkano nieoczekiwany znak w nazwie interfejsu: \"%s\""
 
 #: parser_lex.l:216
 #, c-format
 msgid "Found unknown flag: '%s'"
-msgstr ""
+msgstr "Napotkano nieznaną flagę: \"%s\""
 
 #: parser_lex.l:265
-#, fuzzy, c-format
+#, c-format
 msgid "(network_mode) Found unexpected character: '%s'"
-msgstr "(tryb_ip) napotkano nieoczekiwany znak \"%s\""
+msgstr "(tryb_sieciowy) napotkano nieoczekiwany znak: \"%s\""
 
 #: parser_lex.l:356
-#, fuzzy, c-format
+#, c-format
 msgid "Found unexpected keyword: '%s'"
-msgstr " Napotkano nieoczekiwany znak \"%s\""
+msgstr "Napotkano nieoczekiwane słowo kluczowe: \"%s\""
 
 #: ../parser_main.c:134
-#, fuzzy, c-format
+#, c-format
 msgid "Warning (%s line %d): %s"
-msgstr "Ostrzeżenie (linia %d):"
+msgstr "Ostrzeżenie (%s linia %d): %s"
 
 #: ../parser_main.c:258
 #, c-format
@@ -230,25 +230,27 @@ msgid ""
 "Warning: unable to find a suitable fs in %s, is it mounted?\n"
 "Use --subdomainfs to override.\n"
 msgstr ""
+"Uwaga: nie można znaleźć systemu plików w %s, czy jest on zamontowany?\n"
+"Opcja --subdomainfs wymusza typ systemu plików.\n"
 
 #: ../parser_main.c:324
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%s: Sorry. You need root privileges to run this program.\n"
 "\n"
 msgstr ""
-"%s: do uruchomienia tego programu wymagane są uprawnienia administratora\n"
+"%s: do uruchomienia tego programu wymagane są uprawnienia administratora.\n"
 "\n"
 
 #: ../parser_main.c:331
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "%s: Warning! You've set this program setuid root.\n"
 "Anybody who can run this program can update your AppArmor profiles.\n"
 "\n"
 msgstr ""
 "%s: uwaga - dla tego programu ustawiono flagę setuid root.\n"
-"Dowolny użytkownik tego programu będzie mógł zmienić profil poddomeny\n"
+"Dowolny użytkownik tego programu będzie mógł zmieniać profile AppArmor\n"
 "\n"
 
 #: ../parser_main.c:409
@@ -256,12 +258,28 @@ msgstr ""
 msgid "%s: Errors found in file. Aborting.\n"
 msgstr "%s: napotkano błędy w pliku. Przerwanie.\n"
 
-#: ../parser_misc.c:267 ../parser_misc.c:598 parser_yacc.y:239
-#: parser_yacc.y:332 parser_yacc.y:344 parser_yacc.y:404 parser_yacc.y:442
-#: parser_yacc.y:616 parser_yacc.y:637 parser_yacc.y:692 parser_yacc.y:732
-#: parser_yacc.y:746 parser_yacc.y:760 parser_yacc.y:774 parser_yacc.y:788
-#: parser_yacc.y:816 parser_yacc.y:846 parser_yacc.y:884 parser_yacc.y:901
-#: parser_yacc.y:915 parser_yacc.y:942 parser_yacc.y:1026
+#: ../parser_misc.c:267
+#: ../parser_misc.c:598
+#: parser_yacc.y:239
+#: parser_yacc.y:332
+#: parser_yacc.y:344
+#: parser_yacc.y:404
+#: parser_yacc.y:442
+#: parser_yacc.y:616
+#: parser_yacc.y:637
+#: parser_yacc.y:692
+#: parser_yacc.y:732
+#: parser_yacc.y:746
+#: parser_yacc.y:760
+#: parser_yacc.y:774
+#: parser_yacc.y:788
+#: parser_yacc.y:816
+#: parser_yacc.y:846
+#: parser_yacc.y:884
+#: parser_yacc.y:901
+#: parser_yacc.y:915
+#: parser_yacc.y:942
+#: parser_yacc.y:1026
 msgid "Memory allocation error."
 msgstr "Błąd przydzielenia pamięci."
 
@@ -269,11 +287,12 @@ msgstr "Błąd przydzielenia pamięci."
 msgid ""
 "Uppercase qualifiers \"RWLIMX\" are deprecated, please convert to lowercase\n"
 "See the apparmor.d(5) manpage for details.\n"
-msgstr ""
+msgstr "Znaczniki zapisane wielkimi literami \"RWLIMX\" nie są już aktualne. Proszę używać=nmałych liter. Szczegóły znajdują się w podręczniku systemowym apparmor.d(5).\n"
 
-#: ../parser_misc.c:460 ../parser_misc.c:467
+#: ../parser_misc.c:460
+#: ../parser_misc.c:467
 msgid "Conflict 'a' and 'w' perms are mutually exclusive."
-msgstr ""
+msgstr "Konflikt - \"a\" i \"w\" wykluczają się wzajemnie."
 
 #: ../parser_misc.c:484
 msgid "Exec qualifier 'i' must be followed by 'x'"
@@ -286,33 +305,36 @@ msgstr "Błędny znacznik wykonania 'i'. Wcześniej użyto sprzecznego znacznika
 #: ../parser_misc.c:498
 #, c-format
 msgid "Unconfined exec qualifier (%c%c) allows some dangerous environment variables to be passed to the unconfined process; 'man 5 apparmor.d' for details.\n"
-msgstr ""
+msgstr "Nieograniczony znacznik wykonania (%c%c) zezwala na przekazywanie niebezpiecznych zmiennych środowiska do procesu. Szczegóły znajdują się w podręczniku systemowym \"man 5 apparmor.d\"."
 
-#: ../parser_misc.c:505 ../parser_misc.c:526
-#, fuzzy, c-format
+#: ../parser_misc.c:505
+#: ../parser_misc.c:526
+#, c-format
 msgid "Exec qualifier '%c' must be followed by 'x'"
-msgstr "Za znacznikiem wykonania 'i' należy umieścić 'x'"
+msgstr "Za znacznikiem wykonania \"%c\" należy umieścić \"x\""
 
-#: ../parser_misc.c:508 ../parser_misc.c:529
-#, fuzzy, c-format
+#: ../parser_misc.c:508
+#: ../parser_misc.c:529
+#, c-format
 msgid "Exec qualifier '%c' invalid, conflicting qualifier already specified"
-msgstr "Błędny znacznik wykonania 'i'. Wcześniej użyto sprzecznego znacznika."
+msgstr "Błędny znacznik wykonania \"%c\". Wcześniej użyto sprzecznego znacznika."
 
 #: ../parser_misc.c:547
-#, fuzzy
 msgid "Invalid mode, 'x' must be preceded by exec qualifier 'i', 'p', or 'u'"
-msgstr "Błędny tryb. Przed 'x' należy użyć znacznika wykonania  'i', 'u' albo 'p'."
+msgstr "Błędny tryb. Przed \"x\" należy użyć znacznika wykonania  \"i\", \"p\" albo \"u\"."
 
 #: ../parser_misc.c:568
-#, fuzzy, c-format
+#, c-format
 msgid "Internal: unexpected mode character '%c' in input"
-msgstr "Błąd wewnętrzny: napotkano nieoczekiwany znak trybu"
+msgstr "Błąd wewnętrzny: napotkano nieoczekiwany znak trybu \"%c\""
 
-#: ../parser_misc.c:918 ../parser_symtab.c:556 ../parser_regex.c:596
+#: ../parser_misc.c:918
+#: ../parser_symtab.c:556
+#: ../parser_regex.c:596
 #: ../parser_variable.c:227
-#, fuzzy, c-format
+#, c-format
 msgid "AppArmor parser error: %s\n"
-msgstr "Błąd parsera subdomen. Linia %d: %s\n"
+msgstr "Błąd parsera AppArmor: %s\n"
 
 #: ../parser_merge.c:65
 msgid "Couldn't merge entries. Out of Memory\n"
@@ -324,9 +346,8 @@ msgid "profile %s: has merged rule %s with multiple x modifiers\n"
 msgstr "profil %s: połączono regułę %s z wieloma modyfikatorami x\n"
 
 #: parser_yacc.y:379
-#, fuzzy
 msgid "flags=(debug) is no longer supported, sorry."
-msgstr "Domyślne dozwolone poddomeny nie są już obsługiwane (domena: %s)"
+msgstr "Wyrażenie flags=(debug) nie już obsługiwane."
 
 #: parser_yacc.y:415
 msgid "Assert: `rule' returned NULL."
@@ -337,14 +358,12 @@ msgid "Assert: `netrule' returned NULL."
 msgstr "Asercja: 'netrule' zwróciło NULL."
 
 #: parser_yacc.y:437
-#, fuzzy
 msgid "Assert: `network_rule' return invalid protocol."
-msgstr "Asercja: 'netrule' zwróciło NULL."
+msgstr "Asercja: \"network_rule\" zwróciło niepoprawny protokół."
 
 #: parser_yacc.y:462
-#, fuzzy
 msgid "Assert: `change_profile' returned NULL."
-msgstr "Asercja: 'netrule' zwróciło NULL."
+msgstr "Asercja: \"change_profile\" zwróciło NULL."
 
 #: parser_yacc.y:477
 msgid "Assert: 'hat rule' returned NULL."
@@ -353,20 +372,22 @@ msgstr "Asercja: 'hat rule' zwróciło NULL."
 #: parser_yacc.y:540
 #, c-format
 msgid "Unset boolean variable %s used in if-expression"
-msgstr ""
+msgstr "Nieustawiona zmienna logiczna %s użyta w wyrażeniu if."
 
-#: parser_yacc.y:591 parser_yacc.y:598
+#: parser_yacc.y:591
+#: parser_yacc.y:598
 msgid "unsafe rule missing exec permissions"
-msgstr ""
+msgstr "niebezpieczna reguła bez uprawnień wykonania"
 
 #: parser_yacc.y:608
 #, c-format
 msgid "missing an end of line character? (entry: %s)"
 msgstr "brak znaku końca linii? (wpis: %s)"
 
-#: parser_yacc.y:652 parser_yacc.y:662
+#: parser_yacc.y:652
+#: parser_yacc.y:662
 msgid "Invalid network entry."
-msgstr ""
+msgstr "Błędny wpis sieciowy."
 
 #: parser_yacc.y:687
 msgid "Assert: `addresses' returned NULL."
@@ -380,7 +401,8 @@ msgstr "Wpisy sieciowe mogą zawierać tylko jeden adres DO."
 msgid "Network entries can only have one FROM address."
 msgstr "Wpisy sieciowe mogą zawierać tylko jeden adres OD."
 
-#: parser_yacc.y:821 parser_yacc.y:852
+#: parser_yacc.y:821
+#: parser_yacc.y:852
 #, c-format
 msgid "`%s' is not a valid ip address."
 msgstr "\"%s\" nie jest prawidłowym adresem IP."
@@ -395,20 +417,21 @@ msgstr "'/%d' nie jest prawidłową maską podsieci"
 msgid "`%s' is not a valid netmask."
 msgstr "\"%s\" nie jest prawidłową maską podsieci"
 
-#: parser_yacc.y:898 parser_yacc.y:918
+#: parser_yacc.y:898
+#: parser_yacc.y:918
 #, c-format
 msgid "ports must be between %d and %d"
 msgstr "numer portu musi zawierać się pomiędzy %d a %d"
 
 #: parser_yacc.y:997
-#, fuzzy, c-format
+#, c-format
 msgid "AppArmor parser error in %s at line %d: %s\n"
-msgstr "Błąd parsera subdomen. Linia %d: %s\n"
+msgstr "Błąd parsera Apparmor: %s linia %d: %s\n"
 
 #: parser_yacc.y:1000
-#, fuzzy, c-format
+#, c-format
 msgid "AppArmor parser error, line %d: %s\n"
-msgstr "Błąd parsera subdomen. Linia %d: %s\n"
+msgstr "Błąd parsera Apparmor: linia %d: %s\n"
 
 #: ../parser_regex.c:283
 #, c-format
@@ -426,9 +449,9 @@ msgid "%s: Regex grouping error: Invalid close }, no matching open { detected\n"
 msgstr "%s: błąd grupowania wyrażeń regularnych: nieprawidłowy znak }; nie znaleziono {\n"
 
 #: ../parser_regex.c:375
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Regex grouping error: Unclosed grouping or character class, expecting close }\n"
-msgstr "%s: Błąd grupowania wyrażeń regularnych: niedomknięte grupowanie; oczekiwano }\n"
+msgstr "%s: Błąd grupowania wyrażeń regularnych: niedomknięte grupowanie; oczekiwano zamykającego }\n"
 
 #: ../parser_regex.c:389
 #, c-format
@@ -461,9 +484,9 @@ msgid "%s: Failed to compile regex '%s' [original: '%s'] - malloc failed\n"
 msgstr "%s: błąd kompilacji wyrażenia regularnego \"%s\" [oryginał: \"%s\"] - błąd malloc\n"
 
 #: ../parser_policy.c:105
-#, fuzzy, c-format
+#, c-format
 msgid "ERROR merging rules for profile %s, failed to load\n"
-msgstr "Błąd w profilu %s. Wczytywanie nie powiodło się.\n"
+msgstr "BŁĄD łączenia reguł dla profilu %s. Wczytywanie nie powiodło się.\n"
 
 #: ../parser_policy.c:137
 #, c-format
@@ -472,26 +495,30 @@ msgid ""
 "\t'*', '?', character ranges, and alternations are not allowed.\n"
 "\t'**' may only be used at the end of a rule.\n"
 msgstr ""
+"BŁĄD: profil %s zawiera elementy zasad, które nie są użyteczne z bieżącym\n"
+"\t jądrem systemu: zakresy znaków \"*\", \"?\" oraz zmiany nie są dozwolone.\n"
+"\t znak \"**\" może być użyty tylko na końcu reguły.\n"
 
 #: ../parser_policy.c:182
-#, fuzzy, c-format
+#, c-format
 msgid "ERROR processing regexs for profile %s, failed to load\n"
-msgstr "Błąd w profilu %s. Wczytywanie nie powiodło się.\n"
+msgstr "BŁĄD przetwarzania wyrażeń regularnych dla profilu %s. Wczytywanie nie powiodło się.\n"
 
 #: ../parser_policy.c:209
-#, fuzzy, c-format
+#, c-format
 msgid "ERROR expanding variables for profile %s, failed to load\n"
-msgstr "Błąd w profilu %s. Wczytywanie nie powiodło się.\n"
+msgstr "BŁĄD rozwijania zmiennych dla profilu %s. Wczytywanie nie powiodło się.\n"
 
 #: ../parser_policy.c:262
 #, c-format
 msgid "ERROR in profile %s, failed to load\n"
 msgstr "Błąd w profilu %s. Wczytywanie nie powiodło się.\n"
 
-#: ../parser_policy.c:433 ../parser_policy.c:447
-#, fuzzy, c-format
+#: ../parser_policy.c:433
+#: ../parser_policy.c:447
+#, c-format
 msgid "%s: Errors found during regex postprocess.  Aborting.\n"
-msgstr "%s: napotkano błędy w przetwarzaniu wyrażeń regularnych. Przerwanie.\n"
+msgstr "%s: Błąd podczas przetwarzania końcowego wyrażenia regularnego. Przerwano.\n"
 
 #: ../parser_policy.c:440
 #, c-format
@@ -500,51 +527,40 @@ msgstr "%s: napotkano błędy w łączonym przetwarzaniu reguł. Przerwanie.\n"
 
 #~ msgid "%s: Could not allocate memory for subdomain mount point\n"
 #~ msgstr "%s: przydzielenie pamięci dla punktu montowania poddomeny nie powiodło się\n"
-
 #~ msgid ""
 #~ "%s: Unable to query modules - '%s'\n"
 #~ "Either modules are disabled or your kernel is too old.\n"
 #~ msgstr ""
 #~ "%s: wyszukiwanie modułów nie powiodło się - '%s'.\n"
 #~ "Moduły mogą być wyłączone lub jądro systemu jest nieaktualne.\n"
-
 #~ msgid "%s: Unable to find "
 #~ msgstr "%s: nie znaleziono"
-
 #~ msgid ""
 #~ "!\n"
 #~ "Ensure that it has been loaded.\n"
 #~ msgstr ""
 #~ "!\n"
 #~ "Proszę upewnić się, że zostały wczytane.\n"
-
 #~ msgid "Default allow subdomains are no longer supported, sorry. (domain: %s^%s)"
 #~ msgstr "Domyślne dozwolone poddomeny nie są już obsługiwane (domena: %s^%s)"
-
 #~ msgid "md5 signature given without execute privilege."
 #~ msgstr "nadano sygnaturę md5 bez prawa uruchamiania"
-
 #~ msgid "Negative subdomain entries are no longer supported, sorry. (entry: %s)"
 #~ msgstr "Ujemne wpisy dla poddomen nie są już obsługiwane (wpis: %s)"
-
 #~ msgid "Exec qualifier 'u' must be followed by 'x'"
 #~ msgstr "Za znacznikiem wykonania 'u' należy umieścić 'x'"
-
 #~ msgid "Exec qualifier 'u' invalid, conflicting qualifier already specified"
 #~ msgstr "Błędny znacznik wykonania 'u'. Wcześniej użyto sprzecznego znacznika."
-
 #~ msgid "Exec qualifier 'p' must be followed by 'x'"
 #~ msgstr "Za znacznikiem wykonania 'p' należy umieścić 'x'"
-
 #~ msgid "Exec qualifier 'p' invalid, conflicting qualifier already specified"
 #~ msgstr "Błędny znacznik wykonania 'p'. Wcześniej użyto sprzecznego znacznika."
-
 #~ msgid "%s: Subdomain '%s' defined, but no parent '%s'.\n"
 #~ msgstr "%s: zdefiniowano poddomenę \"%s\" bez rodzica \"%s\"\n"
-
 #~ msgid "%s: Two SubDomains defined for '%s'.\n"
 #~ msgstr "%s: zdefiniowano dwie poddomeny dla \"%s\".\n"
 
 #, fuzzy
 #~ msgid "Profile for %s already exists - skipping."
 #~ msgstr "Profil już istnieje\n"
+
