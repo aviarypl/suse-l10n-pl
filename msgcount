@@ -1,0 +1,205 @@
+#!/bin/bash
+
+# Lista argumentów przekazanych do skryptu (nie parametrów)
+PLIKI=
+
+UNTR_STRINGS_TOTAL=0
+UNTR_WORDS_TOTAL=0
+FUZZY_STRINGS_TOTAL=0
+FUZZY_WORDS_TOTAL=0
+
+ERRORS=0
+
+TS=`date +%s`
+
+function countwords {
+	PLIK=$1
+	TMP=${TS}.tmp
+	grep -v "msgid_plural" $PLIK | sed 's/msgstr\[0\]/msgstr/' | grep -v "msgstr.[0-9]." > $TMP
+
+	# użyj potool do policzenia statystyk dla fuzzy
+	FUZZY_WORDS=`potool -f f -n str -n cmt ${TMP} 2> /dev/null | grep -v "^#" | sed 's/msgid//' | sed 's/\"//g' | wc -w`
+	FUZZY_STRINGS=`potool -f f -s ${TMP} 2> /dev/null`
+	
+	# użyj potool do policzenia statystyk dla untranslated
+	UNTR_WORDS=`potool -f nt -n str -n cmt ${TMP} 2> /dev/null | grep -v "^#" | sed 's/msgid//' | sed 's/\"//g' | wc -w`
+	UNTR_STRINGS=`potool -f nt -s ${TMP} 2> /dev/null`
+	
+	# usuń plik tymczasowy
+	rm $TMP
+		
+	if [ $UNTR_STRINGS ]; then
+		UNTR_STRINGS_TOTAL=`expr $UNTR_STRINGS_TOTAL + $UNTR_STRINGS 2> /dev/null`; 
+		else ERRORS=`expr $ERRORS + 1`; fi
+	if [ $UNTR_WORDS ]; then
+		UNTR_WORDS_TOTAL=`expr $UNTR_WORDS_TOTAL + $UNTR_WORDS 2> /dev/null`; fi
+	if [ $FUZZY_STRINGS ]; then
+		FUZZY_STRINGS_TOTAL=`expr $FUZZY_STRINGS_TOTAL + $FUZZY_STRINGS 2> /dev/null`; fi
+	if [ $FUZZY_WORDS ]; then
+		FUZZY_WORDS_TOTAL=`expr $FUZZY_WORDS_TOTAL + $FUZZY_WORDS 2> /dev/null`; fi
+}
+
+function wspolne {
+
+	if [ "$OPT_ERR" == 1 ]
+	then
+		echo ; echo "Plików do ręcznego sprawdzenia: " $ERRORS
+	fi
+	
+	if [ "$OPT_STAT" == 1 ]
+	then
+		echo
+		echo "Suma komunikatów nieprzetłumaczonych: " $UNTR_STRINGS_TOTAL "("${UNTR_WORDS_TOTAL}")"
+		echo "Suma komunikatów fuzzy: " $FUZZY_STRINGS_TOTAL "("${FUZZY_WORDS_TOTAL}")"
+		echo
+		STRINGS_TOTAL=`expr $UNTR_STRINGS_TOTAL + $FUZZY_STRINGS_TOTAL`
+		echo "Suma wszystkich komunikatów:" $STRINGS_TOTAL
+		WORDS_TOTAL=`expr $UNTR_WORDS_TOTAL + $FUZZY_WORDS_TOTAL`
+		echo "Suma słów:" $WORDS_TOTAL
+		echo 
+		echo "Średnio słów w komunikacie:" `expr $WORDS_TOTAL / $STRINGS_TOTAL 2> /dev/null`
+		echo
+	fi
+}
+
+# Uporządkuj przekazane argumenty
+for arg in "$@"
+do
+	case $arg in
+	
+	--help )	OPT_HELP=1;;
+	--csv  )	OPT_CSV=1;;
+	--wiki )	OPT_WIKI=1;;
+	--errors )	OPT_ERR=1;;
+	--stat | --statistics )	OPT_STAT=1;;
+	--no-output )	OPT_NO_OUTPUT=1;;
+	--no-fully-translated )	OPT_NO_DONE=1;;
+	--version )	OPT_VER=1;;
+	--*    )	echo "Nieprawidłowy parametr $arg"; exit 1;;
+	-*     )	for k in `echo $arg | sed -e  's/\([a-z]\)/ \1/g'`; do
+				case $k in
+				h )	OPT_HELP=1;;
+				c )	OPT_CSV=1;;
+				w )	OPT_WIKI=1;;
+				e )	OPT_ERR=1;;
+				s )	OPT_STAT=1;;
+				n )	OPT_NO_OUTPUT=1;;
+				z )	OPT_NO_DONE=1;;
+				r )	OPT_R=1;;
+				v )	OPT_VER=1;;
+				[^-])	echo "Nieprawidłowy parametr -$k"; exit 1;;
+				esac
+			done;;
+				
+	*  ) 	PLIKI=$(echo $PLIKI $arg);;
+	
+	esac
+	
+done
+
+
+# Przeszukuj katalogi rekursywnie
+if [ "$OPT_R" == 1 ]
+then
+	# Jeśli włączone jest przeszukiwanie rekursywne, skrypt można uruchomić bez podawania argumentów.
+	# W takim przypadku skrypt rozpocznie od bieżącego katalogu (.)
+	if [ -z "$PLIKI" ]; then PLIKI="."; fi
+	PLIKI=`find $PLIKI -name '*.po'`
+fi
+
+# Jeśli wśród parametrów jest -h, wyświetl pomoc i wyjdź.
+if [ "$OPT_HELP" == 1 ]
+then
+	echo "Tekst pomocy"
+	
+# Jesli nie podano żadnego pliku wejściowego, przypomnij o tym.
+elif [ "$OPT_VER" == 1 ]
+then
+	echo "msgcount - batch statistics for gettext translation catalogues"
+	echo "Wersja: 0.1 (20 listopada 2006)"
+
+# Jesli nie podano żadnego pliku wejściowego, przypomnij o tym.
+elif [ -z "$PLIKI" ]
+then
+	echo "Podaj pliki"
+
+# W przeciwnym wypadku:
+else
+
+	# Jeśli podano opcję --no-output, przelicz pliki, ale nie wyświetlaj wyników na wyjściu. 
+	# Przydatne, by zobaczyć tylko ile plików należy sprawdzić ręcznie lub by wyświetlić statystyki
+	if [ "$OPT_NO_OUTPUT" == 1 ]
+	then
+		for i in $PLIKI
+		do
+			countwords $i
+		done
+		
+		wspolne
+			
+	
+	# Jeśli nie ma opcji dodatkowych, wyświetl dane w formacie "do czytania"
+	elif [[ -z "$OPT_CSV"  && -z "$OPT_WIKI" ]]
+	then
+		echo
+		echo "Legenda: nieprzetłumaczone (w nawiasie słowa), fuzzy (w nawiasie słowa)"
+		echo
+		for i in $PLIKI
+		do
+			countwords $i
+			if  [ "$OPT_NO_DONE" -ne 1 ] || [[ "$UNTR_WORDS" -ne 0 || "$FUZZY_WORDS" -ne 0 ]] ; then
+				echo `basename ${PLIK} .pl.po`: $UNTR_STRINGS "("${UNTR_WORDS}")", $FUZZY_STRINGS "("${FUZZY_WORDS}")"
+			fi
+		done
+		echo 
+		echo "Legenda: nieprzetłumaczone (w nawiasie słowa), fuzzy (w nawiasie słowa)"
+		echo "Suma:" $UNTR_STRINGS_TOTAL "("${UNTR_WORDS_TOTAL}")", $FUZZY_STRINGS_TOTAL "("${FUZZY_WORDS_TOTAL}")"
+	
+		wspolne
+	
+	
+	# Dla opcji --csv, wyświetl dane jako tekst CSV
+	elif [[ "$OPT_CSV" == 1 && -z "$OPT_WIKI" ]]
+	then
+		echo "\"Plik\",\"untr. str\",\"untr. words\",\"fuzzy str\",\"fuzzy words\""
+		for i in $PLIKI
+		do
+			countwords $i
+			if  [ "$OPT_NO_DONE" -ne 1 ] || [[ "$UNTR_WORDS" -ne 0 || "$FUZZY_WORDS" -ne 0 ]] ; then
+				echo \"`basename ${PLIK} .pl.po`\",${UNTR_STRINGS},${UNTR_WORDS},${FUZZY_STRINGS},${FUZZY_WORDS}
+			fi
+		done
+		echo "\"Suma\",${UNTR_STRINGS_TOTAL},${UNTR_WORDS_TOTAL},${FUZZY_STRINGS_TOTAL},${FUZZY_WORDS_TOTAL}"	
+		
+		wspolne
+		
+	# Dla opcji --wiki, wyświetl dane w składni tesktu Wiki
+	elif [[ "$OPT_WIKI" == 1 && -z "$OPT_CSV" ]]
+	then
+		echo "{| border=1 cellspacing=0 cellpadding=5"
+		echo -e "|'''Plik'''\n|'''untr. str'''\n|'''untr. words'''\n|'''fuzzy str'''\n|'''fuzzy words'''"
+		echo "|-"
+		for i in $PLIKI
+		do
+			countwords $i
+			if  [ "$OPT_NO_DONE" -ne 1 ] || [[ "$UNTR_WORDS" -ne 0 || "$FUZZY_WORDS" -ne 0 ]] ; then
+				echo -e "|`basename ${PLIK} .pl.po`\n|${UNTR_STRINGS}\n|${UNTR_WORDS}\n|${FUZZY_STRINGS}\n|${FUZZY_WORDS}"
+				echo "|-"
+			fi
+		done
+		echo -e "|'''Suma'''\n|'''${UNTR_STRINGS_TOTAL}'''\n|'''${UNTR_WORDS_TOTAL}'''\n|'''${FUZZY_STRINGS_TOTAL}'''\n|'''${FUZZY_WORDS_TOTAL}'''"		
+		echo "|}"
+		
+		wspolne
+	
+	# Jeśli podano nieznany parametr, poinformuj o tym użytkownika
+	else
+		echo "Nieprawidłowy argument lub argumenty wykluczają się. Zobacz msgcount -h po więcej informacji."
+	fi
+	
+fi
+
+
+
+
+
