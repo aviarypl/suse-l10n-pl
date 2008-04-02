@@ -28,13 +28,13 @@ then
 	for i in `find ${TS}-lcn-pot/ -name '*.pot'`
 	do 
 	  k=`basename $i .pot`
-	  msgmerge -o ${DIR}/lcn/${k}.pl.po -C ../all.po --no-wrap /dev/null ${TS}-lcn-pot/${k}.pot
+	  msgmerge -o lcn/${k}.pl.po -C ../all.po --no-wrap /dev/null ${TS}-lcn-pot/${k}.pot
 	done
 	
 	for i in `find ${TS}-yast-pot/ -name '*.pot'`
 	do 
 	  k=`basename $i .pot`
-	  msgmerge -o ${DIR}/yast/${k}.pl.po -C ../all.po --no-wrap /dev/null ${TS}-yast-pot/${k}.pot
+	  msgmerge -o yast/${k}.pl.po -C ../all.po --no-wrap /dev/null ${TS}-yast-pot/${k}.pot
 	done
 	
 	# Skopiuj html-help-*, które nie mają swoich potów.
@@ -42,7 +42,7 @@ then
 	cp ${TS}-lcn-po/html-help-* lcn/
 	
 	# Posprzątaj
-	rm ${TS}-* -Rf
+	rm -rf ${TS}-*
 	
 	echo ""
 	echo "Zmiany w katalogu lcn:"
