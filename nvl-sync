@@ -89,6 +89,9 @@ TS=`date +%s`
  then
      if [ "$TRUNK" = "trunk" ]
      then
+     
+     	rm yast/*.po lcn/*.po
+     	
         echo ""
         echo "Pobieranie najnowszych plików z katalogu lcn z repozytorium Novella:"
         svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/lcn/pl/po ./lcn/ --force
