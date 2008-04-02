@@ -1,0 +1,61 @@
+#!/bin/bash
+
+
+TRUNK=`pwd | sed 's/^.*\///'`
+TS=`date +%s`
+
+
+if [ "$TRUNK" = "trunk" ]
+then
+	echo ""
+	# Pobierz najnowsze poty z repozytorium Novella
+	echo "Pobieranie plików pot z repozytorium Novella"
+	svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/lcn/50-pot ${TS}-lcn-pot/
+	svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/yast/50-pot ${TS}-yast-pot/
+	
+	# Pobierz najnowsze po z repozytorium Aviary.pl
+	#echo ""
+	#echo "Pobieranie plików po z repozytorium Aviary.pl"
+	#svn export http://svn.aviary.pl/suse/branches/SLED10SP2/lcn ${TS}-lcn-po/
+	#svn export http://svn.aviary.pl/suse/branches/SLED10SP2/yast ${TS}-yast-po/
+	#rm ${TS}-yast-po/Makefile
+	
+	# Zmień rozszerzenia potów, by nazwy pasowały do plików po
+	# rename 's/\.pot/\.pl\.pot/' ${TS}-lcn-pot/*
+	# rename 's/\.pot/\.pl\.pot/' ${TS}-yast-pot/*
+	
+	# Merge
+	for i in `find ${TS}-lcn-pot/ -name '*.pot'`
+	do 
+	  k=`basename $i .pot`
+	  msgmerge -o ${DIR}/lcn/${k}.pl.po -C ../all.po --no-wrap /dev/null ${TS}-lcn-pot/${k}.pot
+	done
+	
+	for i in `find ${TS}-yast-pot/ -name '*.pot'`
+	do 
+	  k=`basename $i .pot`
+	  msgmerge -o ${DIR}/yast/${k}.pl.po -C ../all.po --no-wrap /dev/null ${TS}-yast-pot/${k}.pot
+	done
+	
+	# Skopiuj html-help-*, które nie mają swoich potów.
+	
+	cp ${TS}-lcn-po/html-help-* lcn/
+	
+	# Posprzątaj
+	rm ${TS}-* -Rf
+	
+	echo ""
+	echo "Zmiany w katalogu lcn:"
+	svn status ./lcn/
+	echo ""
+	echo "(Proszę zignorować komunikaty o błędach dotyczących plików html-help-*"
+	echo "Spowodowane są one brakiem potów dla tych dwu plików.)"
+	echo ""
+	echo "Zmiany w katalogu yast:"
+	svn status ./yast/
+	echo ""
+
+else
+	echo "Wykonaj w trunk/"
+fi
+  
