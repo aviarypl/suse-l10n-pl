@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: instserver\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-10 13:42+0200\n"
+"POT-Creation-Date: 2008-04-01 10:47+0200\n"
 "PO-Revision-Date: 2007-08-17 20:52+0100\n"
 "Last-Translator: wadim dziedzic <nikdo@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -37,77 +37,83 @@ msgstr ""
 "Serwer instalacyjny HTTP wymaga pakietu serwera HTTP. Za chwilę zostanie zainstalowany\n"
 "pakiet apache2."
 
+#: src/Instserver.ycp:450
+msgid ""
+"Directory is already exported via NFS,\n"
+"Leave NFS exports unmodified?"
+msgstr ""
+
 #. Instserver read dialog caption
-#: src/Instserver.ycp:684
+#: src/Instserver.ycp:804
 msgid "Initializing Configuration"
 msgstr "Inicjalizacja konfiguracji"
 
 #. Progress stage 1/2
-#: src/Instserver.ycp:694
+#: src/Instserver.ycp:814
 msgid "Read configuration file"
 msgstr "Wczytaj plik konfiguracyjny"
 
 #. Progress stage 2/2
-#: src/Instserver.ycp:696
+#: src/Instserver.ycp:816
 msgid "Look for a new repository"
 msgstr "Szukanie nowego repozytorium"
 
 #. Progress step 1/2
-#: src/Instserver.ycp:699
+#: src/Instserver.ycp:819
 msgid "Reading configuration file..."
 msgstr "Wczytywanie pliku konfiguracyjnego..."
 
 #. Progress step 2/2
-#: src/Instserver.ycp:701
+#: src/Instserver.ycp:821
 msgid "Looking for a new repository..."
 msgstr "Szukanie nowego repozytorium..."
 
 #. Progress finished
-#: src/Instserver.ycp:703 src/Instserver.ycp:808
+#: src/Instserver.ycp:823 src/Instserver.ycp:930
 msgid "Finished"
 msgstr "Zakończono"
 
 #. Error message
-#: src/Instserver.ycp:751
+#: src/Instserver.ycp:873
 msgid "Cannot read current settings."
 msgstr "Nie można odczytać aktualnych ustawień."
 
 #. Instserver read dialog caption
-#: src/Instserver.ycp:789
+#: src/Instserver.ycp:911
 msgid "Saving Installation Server Configuration"
 msgstr "Zapisywanie konfiguracji serwera instalacyjnego"
 
 #. Progress stage 1/2
-#: src/Instserver.ycp:799
+#: src/Instserver.ycp:921
 msgid "Write the settings"
 msgstr "Zapisz ustawienia"
 
 #. Progress stage 2/2
-#: src/Instserver.ycp:801
+#: src/Instserver.ycp:923
 msgid "Run SuSEconfig"
 msgstr "Uruchom SuSEconfig"
 
 #. Progress step 1/2
-#: src/Instserver.ycp:804
+#: src/Instserver.ycp:926
 msgid "Writing the settings..."
 msgstr "Zapisywanie ustawień..."
 
 #. Progress step 2/2
-#: src/Instserver.ycp:806
+#: src/Instserver.ycp:928
 msgid "Running SuSEconfig..."
 msgstr "Uruchamianie SuSEconfig..."
 
 #. Error message
-#: src/Instserver.ycp:822
+#: src/Instserver.ycp:944
 msgid "Cannot write settings."
 msgstr "Nie można zapisać ustawień."
 
 #. TODO: report more details (stderr)
-#: src/Instserver.ycp:887 src/dialogs.ycp:699
+#: src/Instserver.ycp:1009 src/dialogs.ycp:699
 msgid "Error while moving repository content."
 msgstr "Błąd podczas przenoszenia zawartości repozytorium"
 
-#: src/Instserver.ycp:992
+#: src/Instserver.ycp:1114
 msgid "Configured Repositories"
 msgstr "Skonfigurowane repozytoria"
 
@@ -456,10 +462,11 @@ msgstr ""
 "i uruchomić serwer FTP.</p>\n"
 
 #: src/helps.ycp:59
+#, fuzzy
 msgid ""
-"<p>If the installation source directory chosen is outside\n"
+"<p>If the chosen software repository directory is outside\n"
 "the FTP server hierarchy, a mount entry is added to <tt>/etc/fstab</tt>,\n"
-"which makes the installation source directory available under the\n"
+"which makes the software repository directory available under the\n"
 "FTP server (using the <tt>--bind</tt> option of <tt>mount</tt>).\n"
 "</p>\n"
 msgstr ""
@@ -621,9 +628,10 @@ msgstr ""
 
 #. Summary dialog help 2/3
 #: src/helps.ycp:148
+#, fuzzy
 msgid ""
 "<p><b><big>Adding a Repository:</big></b><br>\n"
-"A search is made in the repository directory for \n"
+"In the repository directory is searched for \n"
 "unconfigured directories, which are then made \n"
 "available for configuration.\n"
 "Choose a repository from the list of found repositories. \n"

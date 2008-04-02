@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mw_RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-17 16:22+0200\n"
+"POT-Creation-Date: 2007-10-11 15:44+0200\n"
 "PO-Revision-Date: 2007-08-18 18:21+0100\n"
 "Last-Translator: wadim dziedzic <nikdo@aviary.pl>\n"
 "Language-Team: polski <pl@li.org>\n"
@@ -167,165 +167,173 @@ msgstr ""
 msgid "To start the gtk flavor of YaST, no matter on which desktop, proceed accordingly, but changing <literal>WANTED_GUI=\"auto\"</literal> to <literal>WANTED_GUI=\"gtk\"</literal>."
 msgstr ""
 
-#: RELEASE-NOTES.xml:260(title)
+#: RELEASE-NOTES.xml:259(title)
 msgid "AppArmor 2.1"
 msgstr ""
 
-#: RELEASE-NOTES.xml:262(para)
+#: RELEASE-NOTES.xml:261(para)
 msgid "Find more detailed information about new features at <ulink url=\"http://en.opensuse.org/AppArmor/Changes_AppArmor_2_1\"/>."
 msgstr ""
 
-#: RELEASE-NOTES.xml:265(para)
+#: RELEASE-NOTES.xml:264(para)
 msgid "The syntax now distinguishes directories from files. There are additional minor syntax bug fixes."
 msgstr ""
 
-#: RELEASE-NOTES.xml:268(para)
+#: RELEASE-NOTES.xml:267(para)
 msgid "The reporting of change_hat related events and information has changed. The log messages and profile state (as available via /proc/&lt;pid&gt;/attr/current) are reported as <literal>/profile//hat</literal>."
 msgstr ""
 
-#: RELEASE-NOTES.xml:273(para)
+#: RELEASE-NOTES.xml:272(para)
 msgid "A new change_profile policy specification has been added. Change_profile is similar to change_hat, but allows changing to any profile (including hats), not just hats. The restriction is that the profiles that can be changed to must be specified. To change to a hat via change_profile instead of change_hat the hat name is specified by separating the profile and hat_name with // ."
 msgstr ""
 
-#: RELEASE-NOTES.xml:282(title)
+#: RELEASE-NOTES.xml:281(title)
 msgid "GAIM Renamed to Pidgin"
 msgstr ""
 
-#: RELEASE-NOTES.xml:283(para)
+#: RELEASE-NOTES.xml:282(para)
 msgid "The GAIM instant messenger has been renamed to Pidgin."
 msgstr ""
 
-#: RELEASE-NOTES.xml:291(title)
+#: RELEASE-NOTES.xml:290(title)
 msgid "Update"
 msgstr "Aktualizacja"
 
-#: RELEASE-NOTES.xml:294(title)
+#: RELEASE-NOTES.xml:293(title)
 #, fuzzy
 msgid "New Location for KDE and GNOME"
 msgstr "Nowa lokalizacja dla KDE oraz Gnome'a"
 
-#: RELEASE-NOTES.xml:296(para)
+#: RELEASE-NOTES.xml:295(para)
 #, fuzzy
 msgid "GNOME 2 is installed under the <filename>/usr</filename> file system hierarchy since openSUSE 10.3 and KDE 4 now follows. KDE 3 will stay in <filename>/opt</filename> for compatibility reasons."
 msgstr "GNOME 2 jest obecnie zainstalowany w <filename>/usr</filename> a KDE 4 niedługo zostanie przyłączone. KDE 3 pozostanie w <filename>/opt</filename> z powodów kompatybilności."
 
-#: RELEASE-NOTES.xml:300(para)
+#: RELEASE-NOTES.xml:299(para)
 #, fuzzy
 msgid "Before starting the update, make sure that there is enough disk space under <filename>/usr</filename> (approx. 2.5GB for both the desktops is required). If you are short on space under <filename>/usr</filename>, resize or rearrange your partitions."
 msgstr "Przed rozpoczęciem aktualizacji upewnij się że masz wystarczjąco dużo miejsca w <filename>/usr</filename> (ok. 2.5 GB jest wymagane dla obu pulpitów). Jeśli nie masz wystarczająco wolnego miejsca w <filename>/usr</filename>, musisz zmienić rozmiar lub zmodyfikować swoje partycje."
 
-#: RELEASE-NOTES.xml:309(title)
+#: RELEASE-NOTES.xml:308(title)
 msgid "Technical"
 msgstr "Techniczne"
 
-#: RELEASE-NOTES.xml:332(title)
+#: RELEASE-NOTES.xml:331(title)
 msgid "libata for IDE Devices"
 msgstr "libata dla urządzeń IDE"
 
-#: RELEASE-NOTES.xml:334(para)
+#: RELEASE-NOTES.xml:333(para)
 #, fuzzy
-msgid "libata uses <filename>/dev/sda</filename> for the first harddisk instead of <filename>/dev/hda</filename>. Disks with more than 15 partitions are not handled automatically right now. To enable support for more than 15 partitions, switch to a virtual console before the partitioner starts and issue the command:"
+msgid "libata uses <filename>/dev/sda</filename> for the first harddisk instead of <filename>/dev/hda</filename>. Disks with more than 15 partitions are not handled automatically right now. You can disable libata support by booting with the following kernel parameter:"
 msgstr "***Uwaga wstępna:*** libata wykorzystuje /dev/sda jako pierwszy dysk, zamiast /dev/hda. Dyski z powyżej 15 partycjami nie są obecnie obsługiwane, wciąż rozważamy, czy jest to dobre rozwiązanie. Aby korzystać ze starego nazewnictwa uruchom system z parametrem:"
 
-#: RELEASE-NOTES.xml:342(screen)
-#, no-wrap
-msgid "activate_dm_linear /dev/sdX"
-msgstr ""
-
-#: RELEASE-NOTES.xml:344(para)
-msgid "<filename>/dev/sdX</filename> has to be replaced with the device node of the disk in question. This command creates device-mapper devices for the disk and each partition, so you can install the system on the device-mapper devices."
-msgstr ""
-
-#: RELEASE-NOTES.xml:350(para)
-msgid "Alternatively, you can disable libata support by booting with the following kernel parameter:"
-msgstr ""
-
-#: RELEASE-NOTES.xml:354(screen)
+#: RELEASE-NOTES.xml:340(screen)
 #, no-wrap
 msgid "hwprobe=-modules.pata"
 msgstr "hwprobe=-modules.pata"
 
-#: RELEASE-NOTES.xml:356(para)
+#: RELEASE-NOTES.xml:342(para)
 msgid "Then you see all the partitions &gt; 15 again and can access them for installation."
 msgstr ""
 
-#: RELEASE-NOTES.xml:362(title)
+#: RELEASE-NOTES.xml:348(title)
 msgid "Changes in Setting up Encrypted Partitions"
 msgstr ""
 
-#: RELEASE-NOTES.xml:364(para)
+#: RELEASE-NOTES.xml:350(para)
 msgid "The back-end technology of <filename>boot.crypto</filename> has been changed from <literal>cryptoloop</literal> to <literal>dm-crypt</literal>."
 msgstr ""
 
-#: RELEASE-NOTES.xml:368(para)
-msgid "Any old <filename>/etc/cryptotab</filename> will work unmodified on openSUSE 10.3 (modulo hdX-&gt;sdX issues due to libata changes—see above). Additionally, <filename>/etc/crypttab</filename> (note the missing 'o') is now supported which also inluding support for LUKS volumes. In contrast to previous releases <filename>boot.crypto</filename> is no longer enabled by default. YaST enables it if you create an encrypted volume with YaST. You can also manually enable it with the following command:"
+#: RELEASE-NOTES.xml:354(para)
+msgid "Any old <filename>/etc/cryptotab</filename> will work unmodified on openSUSE 10.3 (modulo hdX-&gt;sdX issues due to libata changes—see above). Additionally, <filename>/etc/crypttab</filename> (note the missing 'o') is now supported which also including support for LUKS volumes. In contrast to previous releases <filename>boot.crypto</filename> is no longer enabled by default. YaST enables it if you create an encrypted volume with YaST. You can also manually enable it with the following command:"
 msgstr ""
 
-#: RELEASE-NOTES.xml:376(screen)
+#: RELEASE-NOTES.xml:362(screen)
 #, no-wrap
 msgid "chkconfig boot.crypto on"
 msgstr ""
 
-#: RELEASE-NOTES.xml:378(para)
-msgid "It is still possible to use cryptoloop via <command>losetup</command> and <command>mount</command>. Since we dropped the crude loop-AES patch from the util-linux package, some parameters for <command>losetup</command> (such as <literal>itercountk</literal> and <literal>pseed</literal>) no longer exist. If any of these settings are used in <filename>/etc/fstab</filename> the device is cannot be mounted directly any more. Migrate these settings to <filename>/etc/crypttab</filename> where <filename>boot.crypto</filename> contains the necessary compatability code."
+#: RELEASE-NOTES.xml:364(para)
+msgid "It is still possible to use cryptoloop via <command>losetup</command> and <command>mount</command>. Since we dropped the crude loop-AES patch from the util-linux package, some parameters for <command>losetup</command> (such as <literal>itercountk</literal> and <literal>pseed</literal>) no longer exist. If any of these settings are used in <filename>/etc/fstab</filename> the device cannot be mounted directly any more. Migrate these settings to <filename>/etc/crypttab</filename> where <filename>boot.crypto</filename> contains the necessary compatability code."
 msgstr ""
 
-#: RELEASE-NOTES.xml:392(title)
+#: RELEASE-NOTES.xml:378(title)
 msgid "Enabling Quota Support"
 msgstr ""
 
-#: RELEASE-NOTES.xml:393(para)
+#: RELEASE-NOTES.xml:379(para)
 msgid "You now can configure quota for user accounts from within YaST. To enable quota support activate the <quote>Enable quota support</quote> check box in the fstab options when partitioning in the first stage of the installation. Thus, ensure that <filename>/etc/init.d/boot.quota</filename> script is executed at the boot time. Then in the second stage, the advanced options for user accounts provide the quota module where quota rules can be set."
 msgstr ""
 
-#: RELEASE-NOTES.xml:402(para)
+#: RELEASE-NOTES.xml:388(para)
 msgid "If you enable quota support in the partitioner in the running system after the installation, either reboot the system or manually remount the partitions concerned and execute the following command as <literal>root</literal>:"
 msgstr ""
 
-#: RELEASE-NOTES.xml:408(screen)
+#: RELEASE-NOTES.xml:394(screen)
 #, no-wrap
 msgid "/etc/init.d/boot.quota restart"
 msgstr ""
 
-#: RELEASE-NOTES.xml:414(title)
+#: RELEASE-NOTES.xml:400(title)
 msgid "Zeroconf"
 msgstr ""
 
-#: RELEASE-NOTES.xml:415(para)
+#: RELEASE-NOTES.xml:401(para)
 msgid "The Zeroconf service&mdash;also known as Bonjour, Multicast DNS, mDNS, or DNS-SD&mdash;is now provided by the Avahi stack instead of mDNSResponder. However, the mDNSResponder and howl compatibility libraries are still available."
 msgstr ""
 
-#: RELEASE-NOTES.xml:422(para)
+#: RELEASE-NOTES.xml:408(para)
 msgid "To enable mDNS for all network interfaces, use the <quote>Zeroconf/Bonjour Multicast DNS</quote> SuSEfirewall rule."
 msgstr ""
 
-#: RELEASE-NOTES.xml:440(title)
+#: RELEASE-NOTES.xml:426(title)
 msgid "Older Intel Graphics Chips"
 msgstr ""
 
-#: RELEASE-NOTES.xml:442(para)
+#: RELEASE-NOTES.xml:428(para)
 msgid "Older Intel graphics chips are supported by two drivers (<quote>i810</quote> and <quote>intel</quote>). The intel driver is the default on openSUSE 10.3 due to the high demand for features like native mode setting (no longer VESA BIOS based) and RANDR 1.2 support."
 msgstr ""
 
-#: RELEASE-NOTES.xml:447(para)
+#: RELEASE-NOTES.xml:433(para)
 msgid "When updating to openSUSE 10.3, the i810 driver is not exchanged with the intel driver. Use \"<command>sax2 -r</command>\" to switch to the intel driver."
 msgstr ""
 
-#: RELEASE-NOTES.xml:451(para)
+#: RELEASE-NOTES.xml:437(para)
 msgid "The intel driver is still not as stable as i810; use \"<command>sax2 -r -m 0=i810</command>\" to switch back to i810, if you encounter problems that did not occur previously with the i810 driver. In those cases, consider to open a bug report against the intel driver."
 msgstr ""
 
-#: RELEASE-NOTES.xml:460(title)
+#: RELEASE-NOTES.xml:444(title)
+msgid "Intel Wireless Link WiFi Drivers"
+msgstr ""
+
+#: RELEASE-NOTES.xml:446(para)
+msgid "Two drivers are available now: the traditional <literal>ipw3945</literal> driver is installed by default and the new <literal>iwlwifi</literal> driver is an alternative offer. Note the following caveats:"
+msgstr ""
+
+#: RELEASE-NOTES.xml:453(para)
+msgid "<literal>ipw3945</literal> works on hidden networks. It does not survive suspend/resume cycles."
+msgstr ""
+
+#: RELEASE-NOTES.xml:458(para)
+msgid "<literal>iwlwifi</literal> does not work on hidden networks. It supports suspend/resume cycles."
+msgstr ""
+
+#. the package name containing the daemon is ipw3945d
+#: RELEASE-NOTES.xml:465(para)
+msgid "You can change the the default using YaST. Click \"Software\" -&gt; \"Software Management\" and remove the <literal>ipw3945d</literal> package. Then the alternative <literal>iwlwifi</literal> driver gets automatically selected for installation."
+msgstr ""
+
+#: RELEASE-NOTES.xml:475(title)
 #, fuzzy
 msgid "Tools to Write Optical Disc Media (CD-ROM and DVD)"
 msgstr "Wodim - nowy pakiet do zapisywania dysków optycznych (CD-ROM/DVD)"
 
-#: RELEASE-NOTES.xml:462(para)
+#: RELEASE-NOTES.xml:477(para)
 #, fuzzy
 msgid "The cdrecord package has been dropped from the distribution. The new wodim, genisoimage, and icedax packages from the cdrkit project can be used to record data or audio CDs on a CD recorder that conforms with the Orange Book standard. Binaries got renamed as follows:"
 msgstr "Pakiet cdrecord został usunięty z dystrybucji. Nowe pakiety 'wodim', 'genisoimage' orza 'icedax' z projektu cdrkit mogą zostać użyte do nagrania danych lub dźwięku używając nagrywarki zgodnej ze standardem Orange Book. Pakiety zostały przemianowane w sposób:"
 
-#: RELEASE-NOTES.xml:469(screen)
+#: RELEASE-NOTES.xml:484(screen)
 #, fuzzy, no-wrap
 msgid ""
 "cdrecord -&gt; wodim\n"
@@ -339,30 +347,47 @@ msgstr ""
 "mkisofs  -&gt; genisoimage\n"
 "cdda2wav -&gt; icedax\n"
 
-#: RELEASE-NOTES.xml:475(para)
+#: RELEASE-NOTES.xml:490(para)
 msgid "If your application relies on the old names, install the cdrkit-cdrtools-compat package. In long term, however, it would be good to have native support for wodim in all front-end applications, because it offers some improvements:"
 msgstr "Jeśli twoja aplikacja używa starego nazewnictwa, zainstaluj pakiet cdrkit-cdrtools-compat. Jednakże w długim czasie dobrym byłoby natywne wsparcie pakietu wodim we wszystkich aplikacjach, jako że oferuje on kilka usprawnień"
 
-#: RELEASE-NOTES.xml:483(para)
+#: RELEASE-NOTES.xml:498(para)
 msgid "the preferred way of specifying a device is <literal>dev=/dev/cdrecorder</literal>, <literal>dev=/dev/hdc</literal>, <literal>dev=/dev/sr0</literal>, etc."
 msgstr "Preferowanym sposobem specyfikowania urządzeń jest <literal>dev=/dev/cdrecorder</literal>, <literal>dev=/dev/hdc</literal>, <literal>dev=/dev/sr0</literal>, itp."
 
-#: RELEASE-NOTES.xml:488(para)
+#: RELEASE-NOTES.xml:503(para)
 msgid "available devices can be listed with <command>wodim -devices</command>"
 msgstr "dostępne urządzenia mogą zostać wypisane poleceniem <command>wodim -devices</command>"
 
-#: RELEASE-NOTES.xml:492(para)
+#: RELEASE-NOTES.xml:507(para)
 msgid "suid root is not needed"
 msgstr "suid użytkownika root nie jest wymagany"
 
-#: RELEASE-NOTES.xml:496(para)
+#: RELEASE-NOTES.xml:511(para)
 msgid "If you maintain such a front-end or script, consider adding native wodim support."
 msgstr "Jeśli zarządzasz tego rodzaju aplikacją lub skryptem, rozważ dodanie natywnego wsparcia pakietu wodim"
 
-#: RELEASE-NOTES.xml:499(para)
+#: RELEASE-NOTES.xml:514(para)
 #, fuzzy
 msgid "Use <command>growisofs</command> for writing DVDs. The graphical front-ends handle this transparently."
 msgstr "Do zapisu płyt DVD można użyć także narzędzia growisofs. Jest ono obsługiwane transparentnie przez narzędzia graficzne."
+
+#: RELEASE-NOTES.xml:522(title)
+#, fuzzy
+msgid "KDE 4 Applications Path"
+msgstr "Aplikacje internetowe"
+
+#: RELEASE-NOTES.xml:523(para)
+msgid "If you did not install the KDE desktop during the initial openSUSE 10.3 installation, then later install the KDE Base System and KDE 4 Base System patterns, the KDE 4 application path will come before the KDE 3 application path. This means that if you launch a KDE application such as Konqueror, the KDE 4 version of Konqueror loads instead of the KDE 3 version."
+msgstr ""
+
+#: RELEASE-NOTES.xml:533(title)
+msgid "Playing MP3 Files in Kaffeine"
+msgstr ""
+
+#: RELEASE-NOTES.xml:535(para)
+msgid "When you open an MP3 file in Kaffeine, you will see an error message telling you that the software required to play this file is not installed. openSUSE then offers to search for a suitable codec which you can install with YaST. You can also switch the engine from Xine to Gstreamer by clicking \"Settings\" -&gt; \"Player Engine\" to get MP3 support."
+msgstr ""
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
 #: RELEASE-NOTES.xml:0(None)

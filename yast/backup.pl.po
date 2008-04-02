@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: backup\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-10 13:40+0200\n"
+"POT-Creation-Date: 2008-04-01 10:45+0200\n"
 "PO-Revision-Date: 2007-08-17 21:40+0100\n"
 "Last-Translator: wadim dziedzic <nikdo@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -244,7 +244,7 @@ msgstr "MiB"
 
 # U?
 #. %1 is profile name, %2 is filename
-#: src/Backup.ycp:902
+#: src/Backup.ycp:908
 #, ycp-format
 msgid ""
 "cron settings for profile %1\n"
@@ -256,7 +256,7 @@ msgstr ""
 "nie są w pełni obsługiwane.\n"
 
 #. %1 is profile name, %2 is file name
-#: src/Backup.ycp:911
+#: src/Backup.ycp:917
 #, ycp-format
 msgid ""
 "Some time values for profile %1\n"
@@ -269,7 +269,7 @@ msgstr ""
 
 #. TRANSLATORS: An error popup message
 #. %1 is the file name
-#: src/Backup.ycp:1160
+#: src/Backup.ycp:1166
 #, ycp-format
 msgid ""
 "Could not store profiles to the file %1.\n"
@@ -283,55 +283,55 @@ msgstr ""
 #. %H - hour (0..23), %I - hour (0..12)
 #. %M - minute (0..59), %p - `AM' or `PM'
 #. (see man date for more details)
-#: src/Backup.ycp:1422
+#: src/Backup.ycp:1428
 msgid "%I:%M %p"
 msgstr "%H:%M %p"
 
 #. table item - specified time is invalid
-#: src/Backup.ycp:1432
+#: src/Backup.ycp:1438
 msgid "Invalid time"
 msgstr "Nieprawidłowy czas"
 
 #. table item - start backup every day (%1 is time)
-#: src/Backup.ycp:1437
+#: src/Backup.ycp:1443
 #, ycp-format
 msgid "Back up daily at %1"
 msgstr "Twórz kopię zapasową codziennie o %1"
 
 #. table item - start backup every week (%1 is day name, %2 is time)
-#: src/Backup.ycp:1442
+#: src/Backup.ycp:1448
 #, ycp-format
 msgid "Back up weekly (%1 at %2)"
 msgstr "Twórz kopię zapasową co tydzień (%1 o %2)"
 
 #. table item - start backup once a month (%1 is day (ordinal number, e.g. 5th), %2 is time)
-#: src/Backup.ycp:1447
+#: src/Backup.ycp:1453
 #, ycp-format
 msgid "Back up monthly (%1 day at %2)"
 msgstr "Twórz kopię zapasową raz na miesiąc (%1 dzień o %2)"
 
 #. type of device (cdrom, disk, tape...) was not detected
-#: src/Backup.ycp:1550
+#: src/Backup.ycp:1556
 msgid "Unknown device type"
 msgstr "Nieznany typ urządzenia"
 
 #. CD-R or CD-RW writer device
-#: src/Backup.ycp:1587
+#: src/Backup.ycp:1593
 msgid "CD Writer"
 msgstr "Nagrywarka CD"
 
 #. DVD-R, DVD+R... writer device
-#: src/Backup.ycp:1595
+#: src/Backup.ycp:1601
 msgid "DVD Writer"
 msgstr "Nagrywarka DVD"
 
 #. busy message
-#: src/Backup.ycp:1744
+#: src/Backup.ycp:1750
 msgid "Creating the list of files for the backup..."
 msgstr "Tworzenie listy plików, które wejdą w skład kopii zapasowej..."
 
 #. a popup error, %1 is as file name
-#: src/Backup.ycp:1764 src/Backup.ycp:1786
+#: src/Backup.ycp:1770 src/Backup.ycp:1792
 #, ycp-format
 msgid "Cannot write the list of selected files to file %1."
 msgstr "Nie można zapisać listy wybranych plików do pliku %1."
@@ -397,12 +397,12 @@ msgstr "RAPORT TWORZENIA KOPII ZAPASOWEJ dla profilu %1"
 msgid "Problems During Automatic Backup:"
 msgstr "Problemy napotkane podczas automatycznego tworzenia kopii zapasowej:"
 
-#: src/functions.ycp:859
+#: src/functions.ycp:866
 msgid "Unknown file system"
 msgstr "Nieznany system plików"
 
 #. Popup error message, %1 is a directory somewhere under %2, %2 was tested for existency
-#: src/functions.ycp:988
+#: src/functions.ycp:995
 #, ycp-format
 msgid ""
 "Cannot create backup archive in %1.\n"
@@ -716,12 +716,13 @@ msgstr ""
 
 #. For translators: help text in exclude directory dialog - part 2/5
 #: src/help_texts.ycp:271
+#, fuzzy
 msgid ""
 "<P><BIG><B>Constraints</B></BIG>\n"
 "<BR>It is possible to exclude some files from the backup.\n"
 "Search constraints can be a directory, file system, or regular expression.\n"
 "Use <b>Edit</b> to modify an existing constraint.\n"
-"<b>Delete</b> removes the selected constrain.\n"
+"<b>Delete</b> removes the selected constraint.\n"
 "To add a new constraint, click <b>Add</b> then select the type of constraint. </P>"
 msgstr ""
 "<P><BIG><B>Kryteria</B></BIG>\n"
@@ -737,11 +738,12 @@ msgstr "<P><B>Katalogi</B><BR>Wszystkie pliki znajdujące się w podanych katalo
 
 #. For translators: help text in exclude directory dialog - part 4/5
 #: src/help_texts.ycp:282
+#, fuzzy
 msgid ""
 "<P><B>File System</B>: It is possible to exclude all files located\n"
 "on a certain type of file system (such as ReiserFS or Ext2).\n"
 "The root directory will always be searched, even if its file system is selected.\n"
-"File systems that cannot be used on local disk, such as network file systems,\n"
+"File systems that cannot be used on a local disk, such as network file systems,\n"
 "are excluded by default.</P>"
 msgstr ""
 "<P><B>System plików</B>: Możliwe jest wyłączenie z kopii zapasowej wszystkich plików znajdujących się na określonym systemie plików (np. ReiserFS, Ext2).\n"
@@ -755,12 +757,12 @@ msgid "<P><B>Regular Expressions</B>: Any filename that matches any of the regul
 msgstr "<P><B>Wyrażenia regularne</B><BR>Plik, którego nazwa spełnia warunki choćby jednego z wyrażeń regularnych, nie wejdzie w skład kopii zapasowej. Należy używać wyrażeń regularnych z Perla. Na przykład, aby wykluczyć wszystkie pliki <tt>*.bak</tt>, należy dodać następujące wyrażenie regularne: <tt>\\.bak$</tt>.</P>"
 
 #. headline of a popup message
-#: src/ui.ycp:98 src/ui.ycp:128
+#: src/ui.ycp:101 src/ui.ycp:131
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
 #. a popup question - no free space, %1 is the name of the directory
-#: src/ui.ycp:100
+#: src/ui.ycp:103
 #, ycp-format
 msgid ""
 "There is not enough free space in the temporary directory %1.\n"
@@ -770,7 +772,7 @@ msgstr ""
 "Czy mimo to kontynuować?"
 
 #. a popup error message - no free space, %1 is the name of the directory
-#: src/ui.ycp:112 src/ui.ycp:142
+#: src/ui.ycp:115 src/ui.ycp:145
 #, ycp-format
 msgid ""
 "There is not enough free space in the backup target directory %1.\n"
@@ -780,7 +782,7 @@ msgstr ""
 "Tworzenie kopii zapasowej zostało przerwane."
 
 #. a popup question - no free space, %1 is the name of the directory
-#: src/ui.ycp:130
+#: src/ui.ycp:133
 #, ycp-format
 msgid ""
 "There is not enough free space in the backup target directory %1.\n"
@@ -790,22 +792,22 @@ msgstr ""
 "Czy mimo to kontynuować?"
 
 #. type of item (displayed in the table)
-#: src/ui.ycp:216
+#: src/ui.ycp:211
 msgid "File system"
 msgstr "System plików"
 
 #. type of item (displayed in the table)
-#: src/ui.ycp:218
+#: src/ui.ycp:213
 msgid "Directory"
 msgstr "Katalogi"
 
 #. type of item (displayed in the table)
-#: src/ui.ycp:220
+#: src/ui.ycp:215
 msgid "Regular expression"
 msgstr "Wyrażenia regularne"
 
 #. For translators %1 is archive file name (e.g. /tmp/backup.tar)
-#: src/ui.ycp:402
+#: src/ui.ycp:397
 #, ycp-format
 msgid ""
 "File %1 already exists.\n"
@@ -815,79 +817,79 @@ msgstr ""
 "Czy nadpisać go?"
 
 #. dialog header - %1 is profile name
-#: src/ui.ycp:435
+#: src/ui.ycp:430
 #, ycp-format
 msgid "Automatic Backup Options for Profile %1"
 msgstr "Opcje automatycznego tworzenia kopii zapasowych dla profilu %1"
 
 #. check box label
-#: src/ui.ycp:439
+#: src/ui.ycp:434
 msgid "&Start Backup Automatically"
 msgstr "Automatycznie ro&zpoczynaj tworzenie kopii zapasowych"
 
-#: src/ui.ycp:452
+#: src/ui.ycp:447
 msgid "&Frequency"
 msgstr "Czę&stotliwość"
 
-#: src/ui.ycp:453
+#: src/ui.ycp:448
 msgid "Daily"
 msgstr "Codziennie"
 
-#: src/ui.ycp:454
+#: src/ui.ycp:449
 msgid "Weekly"
 msgstr "Co tydzień"
 
-#: src/ui.ycp:455
+#: src/ui.ycp:450
 msgid "Monthly"
 msgstr "Co miesiąc"
 
 #. frame label
-#: src/ui.ycp:466
+#: src/ui.ycp:461
 msgid "Backup Start Time"
 msgstr "Czas rozpoczęcia tworzenia kopii zapasowej"
 
 #. combo box label
-#: src/ui.ycp:472
+#: src/ui.ycp:467
 msgid "Day of the &Week"
 msgstr "Dzień &tygodnia"
 
 #. integer field widget label
-#: src/ui.ycp:475
+#: src/ui.ycp:470
 msgid "&Day of the Month"
 msgstr "&Dzień miesiąca"
 
 #. integer field widget label
-#: src/ui.ycp:482
+#: src/ui.ycp:477
 msgid "&Hour"
 msgstr "&Godzina"
 
 #. integer field widget label
-#: src/ui.ycp:485
+#: src/ui.ycp:480
 msgid "&Minute"
 msgstr "&Minuta"
 
 #. integer field widget label
-#: src/ui.ycp:499
+#: src/ui.ycp:494
 msgid "Ma&ximum Number of Old Backups"
 msgstr "Ma&ksymalna liczba starych archiwów"
 
 #. Checkbox label
-#: src/ui.ycp:504
+#: src/ui.ycp:499
 msgid "S&end Summary Mail to User root"
 msgstr "Wyślij podsumowanie do a&dministratora"
 
 #. TRANSLATORS: Popup question, [Yes] means `cancel the profile creation`
-#: src/ui.ycp:607
+#: src/ui.ycp:602
 msgid "Really cancel the profile creation?"
 msgstr "Czy na pewno anulować tworzenie profilu?"
 
 #. error popup message - NFS mount failed
-#: src/ui.ycp:642 src/ui.ycp:660 src/ui.ycp:939
+#: src/ui.ycp:637 src/ui.ycp:655 src/ui.ycp:934
 msgid "Cannot mount the selected NFS share."
 msgstr "Nie można zamontować wybranego udziału NFS."
 
 #. For translators %1 is volume file name (e.g. /tmp/01_backup.tar)
-#: src/ui.ycp:696 src/ui.ycp:978
+#: src/ui.ycp:691 src/ui.ycp:973
 #, ycp-format
 msgid ""
 "The existing file %1 could become part of new volume set and be overwritten.\n"
@@ -897,100 +899,100 @@ msgstr ""
 "Czy kontynuować?"
 
 #. dialog header
-#: src/ui.ycp:718
+#: src/ui.ycp:713
 msgid "Archive Settings"
 msgstr "Ustawienia archiwum"
 
-#: src/ui.ycp:724
+#: src/ui.ycp:719
 msgid "Backup Location"
 msgstr "Położenia kopii zapasowej"
 
 #. radio button label
-#: src/ui.ycp:730
+#: src/ui.ycp:725
 msgid "&Local File"
 msgstr "Plik &lokalny"
 
 #. radio button label
-#: src/ui.ycp:733
+#: src/ui.ycp:728
 msgid "Network (N&FS)"
 msgstr "Sieć (N&FS)"
 
 #. text entry label
-#: src/ui.ycp:737
+#: src/ui.ycp:732
 msgid "I&P Address or Name of NFS Server"
 msgstr "Adres I&P lub nazwa serwera NFS"
 
 #. Pushbutton label
-#: src/ui.ycp:743
+#: src/ui.ycp:738
 msgid "&Select..."
 msgstr "Wy&bierz..."
 
 #. text entry label
-#: src/ui.ycp:749
+#: src/ui.ycp:744
 msgid "&Remote Directory"
 msgstr "&Katalog zdalny"
 
 #. Pushbutton label
-#: src/ui.ycp:755
+#: src/ui.ycp:750
 msgid "S&elect..."
 msgstr "Wybi&erz..."
 
 #. frame label
-#: src/ui.ycp:767
+#: src/ui.ycp:762
 msgid "Archive Type"
 msgstr "Typ archiwum"
 
-#: src/ui.ycp:772
+#: src/ui.ycp:767
 msgid "Create Backup Archive"
 msgstr "Archiwum kopii zapasowej"
 
 #. combo box label
-#: src/ui.ycp:777
+#: src/ui.ycp:772
 msgid "Archive &Type"
 msgstr "&Typ archiwum"
 
 #. archive type - combo box item
-#: src/ui.ycp:779
+#: src/ui.ycp:774
 msgid "tar with tar-gzip subarchives"
 msgstr "tar z podarchiwami tar-gzip"
 
 #. archive type - combo box item
-#: src/ui.ycp:781
+#: src/ui.ycp:776
 msgid "tar with tar-bzip2 subarchives"
 msgstr "tar z podarchiwami tar-bzip2"
 
 #. archive type - combo box item
-#: src/ui.ycp:783
+#: src/ui.ycp:778
 msgid "tar with tar subarchives"
 msgstr "tar z podarchiwami tar"
 
 #. archive type - combo box item
-#: src/ui.ycp:785
+#: src/ui.ycp:780
 msgid "tar with star-gzip subarchives"
 msgstr "tar z podarchiwami star-gzip"
 
 #. archive type - combo box item
-#: src/ui.ycp:787
+#: src/ui.ycp:782
 msgid "tar with star-bzip2 subarchives"
 msgstr "tar z podarchiwami star-bzip2"
 
 #. archive type - combo box item
-#: src/ui.ycp:789
+#: src/ui.ycp:784
 msgid "tar with star subarchives"
 msgstr "tar z podarchiwami star"
 
 #. push button label
-#: src/ui.ycp:796 src/ui.ycp:3215
+#: src/ui.ycp:791 src/ui.ycp:3240
 msgid "&Options..."
 msgstr "&Opcje..."
 
 #. radiobutton label
-#: src/ui.ycp:802
+#: src/ui.ycp:797
 msgid "Only Create List of Files Found"
 msgstr "Lista znalezionych plików"
 
 #. warning popup message
-#: src/ui.ycp:834
+#: src/ui.ycp:829
 msgid ""
 "You are not logged in as root.\n"
 "Some files can only be read by the user root.\n"
@@ -1010,7 +1012,7 @@ msgstr ""
 "Kopia zapasowa systemowych obszarów twardego dysku \n"
 "może być tworzona tylko przez administratora (użytkownika root).\n"
 
-#: src/ui.ycp:881
+#: src/ui.ycp:876
 msgid ""
 "A server name is required.\n"
 "Enter the server name to use.\n"
@@ -1018,7 +1020,7 @@ msgstr ""
 "Wymagana jest nazwa serwera.\n"
 "Proszę podać nazwę serwera, na którym będzie umieszczona kopia.\n"
 
-#: src/ui.ycp:888
+#: src/ui.ycp:883
 msgid ""
 "A remote directory name is required.\n"
 "Enter the directory name to use.\n"
@@ -1027,7 +1029,7 @@ msgstr ""
 "Proszę podać nazwę katalogu, w którym będzie umieszczona kopia.\n"
 
 #. warning popup message
-#: src/ui.ycp:906
+#: src/ui.ycp:901
 msgid ""
 "An archive filename is required.\n"
 "Enter the filename to use.\n"
@@ -1036,7 +1038,7 @@ msgstr ""
 "Proszę podać nazwę pliku.\n"
 
 #. warning popup message
-#: src/ui.ycp:916
+#: src/ui.ycp:911
 msgid ""
 "Enter the archive filename with\n"
 "its absolute path, as in /tmp/backup.tar."
@@ -1044,163 +1046,163 @@ msgstr ""
 "Proszę podać nazwę pliku archiwum z pełną ścieżką \n"
 "bezwzględną, np. /tmp/backup.tar."
 
-#: src/ui.ycp:1043
+#: src/ui.ycp:1038
 msgid "Enter a server name."
 msgstr "Proszę podać nazwę serwera."
 
 #. combo box item - user defined volume size of archive
-#: src/ui.ycp:1078
+#: src/ui.ycp:1073
 msgid "Custom"
 msgstr "Inny"
 
 #. dialog header
-#: src/ui.ycp:1086
+#: src/ui.ycp:1081
 msgid "Archive File Options"
 msgstr "Opcje pliku archiwum"
 
 #. frame label
-#: src/ui.ycp:1090
+#: src/ui.ycp:1085
 msgid "Multivolume Archive"
 msgstr "Archiwum wieloczęściowe"
 
 #. check box label
-#: src/ui.ycp:1094
+#: src/ui.ycp:1089
 msgid "&Create a Multivolume Archive"
 msgstr "Utwórz ar&chiwum wieloczęściowe"
 
 #. combo box label
-#: src/ui.ycp:1102
+#: src/ui.ycp:1097
 msgid "&Volume Size"
 msgstr "Rozmiar &woluminu"
 
 #. text entry label
-#: src/ui.ycp:1108
+#: src/ui.ycp:1103
 msgid "Custom &Size"
 msgstr "In&ny rozmiar"
 
 #. warning popup message
-#: src/ui.ycp:1165
+#: src/ui.ycp:1160
 msgid "Volume size must be at least 10240 bytes."
 msgstr "Rozmiar woluminu musi wynosić przynajmniej 10240 bajtów."
 
 #. dialog header
-#: src/ui.ycp:1216
+#: src/ui.ycp:1211
 msgid "Backup Options"
 msgstr "Opcje tworzenia kopii zapasowych"
 
 #. rwalter consider whether this frame and the next should be eliminated to simplify the dialog
 #. frame label
 #. dialog header
-#: src/ui.ycp:1220 src/ui.ycp:2177
+#: src/ui.ycp:1215 src/ui.ycp:2173
 msgid "File Selection"
 msgstr "Wybór plików"
 
 #. check box label
-#: src/ui.ycp:1224
+#: src/ui.ycp:1219
 msgid "&Back Up Files Not Belonging to Any Package"
 msgstr "Dołącz pliki &nie należące do żadnego pakietu"
 
 #. check box label
-#: src/ui.ycp:1227
+#: src/ui.ycp:1222
 msgid "Display List of Files Before &Creating Archive"
 msgstr "Wyświetl &listę plików przed utworzeniem kopii zapasowej"
 
 #. frame label
-#: src/ui.ycp:1235
+#: src/ui.ycp:1230
 msgid "Search Options"
 msgstr "Opcje wyszukiwania"
 
 #. frame label
-#: src/ui.ycp:1239
+#: src/ui.ycp:1234
 msgid "Check MD&5 Sum instead of Time or Size"
 msgstr "Sprawdź sumę MD&5 zamiast rozmiaru i daty modyfikacji"
 
 #. multi line widget label
-#: src/ui.ycp:1246
+#: src/ui.ycp:1241
 msgid "Archive &Description"
 msgstr "O&pis kopii zapasowej"
 
-#: src/ui.ycp:1249
+#: src/ui.ycp:1244
 msgid "E&xpert..."
 msgstr "&Zaawansowane..."
 
 #. status message - label
-#: src/ui.ycp:1292
+#: src/ui.ycp:1287
 msgid "Detecting mounted ext2 file systems..."
 msgstr "Wykrywanie zamontowanych systemów plików ext2..."
 
 #. dialog header
-#: src/ui.ycp:1298
+#: src/ui.ycp:1293
 msgid "System Area Backup"
 msgstr "Kopia zapasowa obszarów systemowych"
 
 #. frame label
-#: src/ui.ycp:1302
+#: src/ui.ycp:1297
 msgid "Partition Table"
 msgstr "Tablica partycji"
 
 #. check box label
-#: src/ui.ycp:1306
+#: src/ui.ycp:1301
 msgid "Ba&ck Up Partition Tables"
 msgstr "Utwórz kopię zapasową tablicy &partycji"
 
 #. frame label
-#: src/ui.ycp:1313
+#: src/ui.ycp:1308
 msgid "Ext2 File System Critical Area Backup"
 msgstr "Kopia zapasowa krytycznego obszaru systemu plików ext2"
 
 #. radio button label
-#: src/ui.ycp:1318
+#: src/ui.ycp:1313
 msgid "N&one"
 msgstr "&Brak"
 
 #. radio button label
-#: src/ui.ycp:1321
+#: src/ui.ycp:1316
 msgid "All &Mounted"
 msgstr "Wszystko za&montowane"
 
 #. radio button label
-#: src/ui.ycp:1324
+#: src/ui.ycp:1319
 msgid "&Selected"
 msgstr "Wy&brane"
 
 #. table header
-#: src/ui.ycp:1328
+#: src/ui.ycp:1323
 msgid "Ext2 Partition"
 msgstr "Partycja ext2"
 
-#: src/ui.ycp:1328
+#: src/ui.ycp:1323
 msgid "Mount Point"
 msgstr "Punkt montowania"
 
 #. push button label
-#: src/ui.ycp:1334
+#: src/ui.ycp:1329
 msgid "A&dd..."
 msgstr "&Dodaj..."
 
 #. push button label
-#: src/ui.ycp:1336 src/ui.ycp:3783 src/ui.ycp:3801
+#: src/ui.ycp:1331 src/ui.ycp:3808 src/ui.ycp:3826
 msgid "&Edit..."
 msgstr "&Edytuj..."
 
 #. push button label
-#: src/ui.ycp:1338 src/ui.ycp:3785 src/ui.ycp:3803
+#: src/ui.ycp:1333 src/ui.ycp:3810 src/ui.ycp:3828
 msgid "De&lete"
 msgstr "U&suń"
 
 #. error popup message, %1 is partition name (e.g. /dev/hda1)
-#: src/ui.ycp:1381 src/ui.ycp:1447
+#: src/ui.ycp:1376 src/ui.ycp:1442
 #, ycp-format
 msgid "Partition %1 is already in the list."
 msgstr "Partycja %1 znajduje się już na liście."
 
 #. popup dialog header
-#: src/ui.ycp:1433
+#: src/ui.ycp:1428
 msgid "&Add Ext2 Partition"
 msgstr "Dod&aj partycję ext2"
 
 #. there is no enough space
-#: src/ui.ycp:1553
+#: src/ui.ycp:1548
 #, ycp-format
 msgid ""
 "There is not enough free space in directory %1.\n"
@@ -1210,7 +1212,7 @@ msgstr ""
 "Czy mimo to kontynuować?\n"
 
 #. may be that there is not enough space
-#: src/ui.ycp:1560
+#: src/ui.ycp:1555
 #, ycp-format
 msgid ""
 "There may not be enough free space in directory %1.\n"
@@ -1220,61 +1222,62 @@ msgstr ""
 "Czy mimo to kontynuować?\n"
 
 #. dialog header
-#: src/ui.ycp:1636
+#: src/ui.ycp:1631
 msgid "Searching for Modified Files"
 msgstr "Wyszukiwanie zmodyfikowanych plików"
 
 #. label text, followed by number of files found so far
 #. label text, followed by value
-#: src/ui.ycp:1641 src/ui.ycp:1754 src/ui.ycp:1834 src/ui.ycp:2016
+#: src/ui.ycp:1636 src/ui.ycp:1746 src/ui.ycp:1826 src/ui.ycp:2001
 msgid "Modified Files: "
 msgstr "Liczba znalezionych zmodyfikowanych plików: "
 
 #. label text, followed by sizes of files
 #. label text, followed by value
 #. part of summary text
-#: src/ui.ycp:1646 src/ui.ycp:1753 src/ui.ycp:1839 src/ui.ycp:2015
-#: src/ui.ycp:2924 src/ui.ycp:2931
+#: src/ui.ycp:1641 src/ui.ycp:1745 src/ui.ycp:1831 src/ui.ycp:2000
+#: src/ui.ycp:2949 src/ui.ycp:2956
 msgid "Total Size: "
 msgstr "Całkowity rozmiar: "
 
 #. label text, followed by name of current package
-#: src/ui.ycp:1651 src/ui.ycp:1733
+#: src/ui.ycp:1646 src/ui.ycp:1725
 msgid "Searching in Package: "
 msgstr "Bieżący pakiet:"
 
 #. progress bar label
-#: src/ui.ycp:1660
+#: src/ui.ycp:1655
 msgid "Search"
 msgstr "Postęp wyszukiwania"
 
 #. label text
-#: src/ui.ycp:1679
-msgid "Reading packages available on the installation sources..."
+#: src/ui.ycp:1674
+#, fuzzy
+msgid "Reading packages available at the software repositories..."
 msgstr "Odczytywanie pakietów dostępnych w źródłach instalacyjnych..."
 
 #. label text
-#: src/ui.ycp:1796
+#: src/ui.ycp:1788
 msgid "Reading packages files..."
 msgstr "Odczytywanie plików pakietów..."
 
 #. label text
-#: src/ui.ycp:1804
+#: src/ui.ycp:1796
 msgid "Reading list of installed packages..."
 msgstr "Odczytywanie listy zainstalowanych pakietów..."
 
 #. dialog header
-#: src/ui.ycp:1828
+#: src/ui.ycp:1820
 msgid "Searching Files"
 msgstr "Wyszukiwanie plików"
 
 #. label text, followed by current directory name
-#: src/ui.ycp:1847 src/ui.ycp:2054
+#: src/ui.ycp:1839 src/ui.ycp:2039
 msgid "Searching in Directory: "
 msgstr "Bieżący katalog: "
 
 #. error popup message
-#: src/ui.ycp:1886
+#: src/ui.ycp:1880
 msgid ""
 "Could not start the search script.\n"
 "Aborting the backup.\n"
@@ -1283,117 +1286,122 @@ msgstr ""
 "Tworzenie kopii zapasowej zostało przerwane.\n"
 
 #. busy message
-#: src/ui.ycp:2170
+#: src/ui.ycp:2158
 msgid "Adding files to table..."
 msgstr "Dodawanie plików do tabeli..."
 
 #. label text
-#: src/ui.ycp:2181
+#: src/ui.ycp:2177
 msgid "Files to Back Up"
 msgstr "Pliki, które wejdą w skład kopii zapasowej:"
 
 #. table header
-#: src/ui.ycp:2185
+#: src/ui.ycp:2182
 msgid "Filename"
 msgstr "Nazwa pliku"
 
-#: src/ui.ycp:2185
+#: src/ui.ycp:2182
 msgid "Package"
 msgstr "Pakiet"
 
 #. push button label
-#: src/ui.ycp:2191
+#: src/ui.ycp:2187
 msgid "Select or Deselect &File"
 msgstr "&Zaznacz / odznacz plik"
 
 #. push button label
-#: src/ui.ycp:2193
+#: src/ui.ycp:2189
 msgid "&Select All"
 msgstr "Zaznacz w&szystkie"
 
 #. push button label
-#: src/ui.ycp:2195
+#: src/ui.ycp:2191
 msgid "&Deselect All"
 msgstr "&Odznacz wszystkie"
 
+#: src/ui.ycp:2204
+#, fuzzy
+msgid "Internal error"
+msgstr "Strefa wewnętrzna"
+
 #. busy message
-#: src/ui.ycp:2218
+#: src/ui.ycp:2224
 msgid "Deselecting files..."
 msgstr "Wykluczanie plików..."
 
 #. An informative popup label during selecting all items in the table (can consume a lot of time)
-#: src/ui.ycp:2272
+#: src/ui.ycp:2278
 msgid "Selecting all items..."
 msgstr "Wybieranie wszystkich elementów..."
 
 #. An informative popup label during deselecting all items in the table (can consume a lot of time)
-#: src/ui.ycp:2275
+#: src/ui.ycp:2281
 msgid "Deselecting all items..."
 msgstr "Wykluczanie wszystkich elementów..."
 
 #. create Progress bar
 #. progress stage
-#: src/ui.ycp:2428
+#: src/ui.ycp:2434
 msgid "Store host information"
 msgstr "Zapisywanie informacji o komputerze"
 
 #. progress step
-#: src/ui.ycp:2430
+#: src/ui.ycp:2436
 msgid "Storing host information..."
 msgstr "Zapisywanie informacji o komputerze..."
 
 #. progress stage
-#: src/ui.ycp:2444
+#: src/ui.ycp:2450
 msgid "Create system area backup"
 msgstr "Tworzenie kopii zapasowej obszaru systemowego"
 
 #. progress step
-#: src/ui.ycp:2446
+#: src/ui.ycp:2452
 msgid "Creating system area backup..."
 msgstr "Tworzenie kopii zapasowej obszaru systemowego..."
 
 #. progress stage
-#: src/ui.ycp:2478
+#: src/ui.ycp:2484
 msgid "Create package archives"
 msgstr "Tworzenie archiwum pakietów"
 
 #. progress stage
-#: src/ui.ycp:2480
+#: src/ui.ycp:2486
 msgid "Create target archive"
 msgstr "Tworzenie archiwum docelowego"
 
 #. progress step
-#: src/ui.ycp:2483
+#: src/ui.ycp:2489
 msgid "Creating package archives..."
 msgstr "Tworzenie archiwum pakietów..."
 
 #. progress step
-#: src/ui.ycp:2485
+#: src/ui.ycp:2491
 msgid "Creating target archive..."
 msgstr "Tworzenie archiwum docelowego..."
 
 #. progress stage
-#: src/ui.ycp:2488
+#: src/ui.ycp:2494
 msgid "Write autoinstallation profile"
 msgstr "Zapisywanie profilu automatycznej instalacji"
 
 #. progress step
-#: src/ui.ycp:2490
+#: src/ui.ycp:2496
 msgid "Writing autoinstallation profile..."
 msgstr "Zapisywanie profilu autoinstalacji..."
 
 #. progress
-#: src/ui.ycp:2498
+#: src/ui.ycp:2504
 msgid "Creating Archive"
 msgstr "Tworzenie kopii zapasowej"
 
-#: src/ui.ycp:2537
+#: src/ui.ycp:2543
 #, ycp-format
 msgid "Cannot write comment to file %1."
 msgstr "Nie można zapisać komentarza do pliku %1"
 
 #. error popup message
-#: src/ui.ycp:2550
+#: src/ui.ycp:2578
 msgid ""
 "Could not start archiving script.\n"
 "Aborting the backup.\n"
@@ -1402,18 +1410,18 @@ msgstr ""
 "Tworzenie kopii zapasowej zostało przerwane.\n"
 
 #. Translators: text of a popup dialog
-#: src/ui.ycp:2852 src/ui.ycp:2866
+#: src/ui.ycp:2877 src/ui.ycp:2891
 msgid "Enter a name for the new profile."
 msgstr "Proszę podać nazwę nowego profilu."
 
 #. TRANSLATORS: text of a popup dialog, %1 is a profile name to be renamed
-#: src/ui.ycp:2856
+#: src/ui.ycp:2881
 #, ycp-format
 msgid "Enter a new name for the %1 profile."
 msgstr "Proszę podać nową nazwę dla profilu %1."
 
 #. Translators: error popup, %1 is profile name
-#: src/ui.ycp:2863
+#: src/ui.ycp:2888
 #, ycp-format
 msgid ""
 "A profile %1 already exists.\n"
@@ -1423,345 +1431,348 @@ msgstr ""
 "Czy zastąpić istniejący profil?\n"
 
 #. For translators: %1 is entered archive file name (summary text)
-#: src/ui.ycp:2914
+#: src/ui.ycp:2939
 #, ycp-format
 msgid "List of files saved to file %1"
 msgstr "Lista plików zapisanych do pliku %1"
 
 #. part of summary text
 #. summary text
-#: src/ui.ycp:2917
+#: src/ui.ycp:2942
 msgid "Error storing list of files"
 msgstr "Błąd przy zapisywaniu listy plików"
 
 #. part of summary text
-#: src/ui.ycp:2922
+#: src/ui.ycp:2947
 msgid "Modified Files Found: "
 msgstr "Znalezionych zmodyfikowanych plików: "
 
 #. part of summary text
-#: src/ui.ycp:2929
+#: src/ui.ycp:2954
 msgid "Files Not in a Package Found: "
 msgstr "Znalezionych plików spoza pakietów: "
 
 #. part of summary text
-#: src/ui.ycp:2937
+#: src/ui.ycp:2962
 msgid "Selected Files to Back Up: "
 msgstr "Łącznie plików, które weszły w skład kopii zapasowej: "
 
 #. part of summary text
-#: src/ui.ycp:2941
+#: src/ui.ycp:2966
 msgid "Hostname stored successfully"
 msgstr "Nazwa komputera zapisana pomyślnie"
 
 #. part of summary text
-#: src/ui.ycp:2943
+#: src/ui.ycp:2968
 msgid "Storing hostname failed"
 msgstr "Zapisywanie nazwy komputera nie powiodło się"
 
-#: src/ui.ycp:2943
+#: src/ui.ycp:2968
 msgid "Date stored successfully"
 msgstr "Data zapisana pomyślnie"
 
 #. part of summary text
-#: src/ui.ycp:2945
+#: src/ui.ycp:2970
 msgid "Storing date failed"
 msgstr "Zapisywanie daty nie powiodło się"
 
-#: src/ui.ycp:2945
+#: src/ui.ycp:2970
 msgid "File list stored successfully"
 msgstr "Lista plików zapisana pomyślnie"
 
 #. part of summary text
-#: src/ui.ycp:2947
+#: src/ui.ycp:2972
 msgid "Storing file list failed"
 msgstr "Zapisywanie listy plików nie powiodło się"
 
-#: src/ui.ycp:2947
+#: src/ui.ycp:2972
 msgid "Comment stored successfully"
 msgstr "Komentarz zapisany pomyślnie"
 
 #. part of summary text
-#: src/ui.ycp:2949
+#: src/ui.ycp:2974
 msgid "Storing comment failed"
 msgstr "Zapisywanie komentarza nie powiodło się"
 
 #. part of summary text
-#: src/ui.ycp:2951
+#: src/ui.ycp:2976
 msgid "List of installed packages stored successfully"
 msgstr "Lista zainstalowanych pakietów zapisana pomyślnie"
 
 #. part of summary text
-#: src/ui.ycp:2953
+#: src/ui.ycp:2978
 msgid "Storing list of installed packages failed"
 msgstr "Zapisywanie listy zainstalowanych pakietów nie powiodło się"
 
 #. part of summary text, 'Details' is button label
-#: src/ui.ycp:2959
+#: src/ui.ycp:2984
 msgid "Some errors occurred during backup. Press Details for more information."
 msgstr "Błędy w czasie archiwizacji. Proszę nacisnąć przycisk Szczegóły, aby otrzymać więcej informacji."
 
 #. part of summary text
-#: src/ui.ycp:2966
+#: src/ui.ycp:2991
 msgid "Errors Creating Archive:"
 msgstr "Błędy przy tworzeniu archiwum:"
 
 #. For translators: %1 file name - part of summary text
-#: src/ui.ycp:2971
+#: src/ui.ycp:2996
 #, ycp-format
 msgid "Cannot read file %1"
 msgstr "Nie można odczytać pliku %1"
 
 #. part of summary text
-#: src/ui.ycp:2988
+#: src/ui.ycp:3013
 msgid "Detecting disk partitions failed"
 msgstr "Wykrywanie partycji dysku nie powiodło się"
 
 #. For translators: %1 is device name of disk, e.g. hda - part of summary text
-#: src/ui.ycp:2994
+#: src/ui.ycp:3019
 #, ycp-format
 msgid "Storing partition table of disk /dev/%1 failed"
 msgstr "Zapisywanie tablicy partycji dysku /dev/%1 nie powiodło się"
 
 #. For translators: %1 is device name of disk, e.g. hda - part of summary text
-#: src/ui.ycp:3001
+#: src/ui.ycp:3026
 #, ycp-format
 msgid "Storing partition table of disk /dev/%1 was successful"
 msgstr "Tablica partycji dysku /dev/%1 zapisana pomyślnie"
 
 #. For translators: %1 is partition name e.g. /dev/hda1 - part of summary text
-#: src/ui.ycp:3021
+#: src/ui.ycp:3046
 #, ycp-format
 msgid "Ext2 image of %1 stored successfully"
 msgstr "%1 - obraz ext2 zapisany pomyślnie"
 
 #. For translators: %1 is partition name e.g. /dev/hda1 - part of summary text
-#: src/ui.ycp:3029
+#: src/ui.ycp:3054
 #, ycp-format
 msgid "Storing ext2 image of %1 failed"
 msgstr "%1 - zapisywanie obrazu ext2 nie powiodło się"
 
 #. part of summary text
-#: src/ui.ycp:3071
+#: src/ui.ycp:3096
 msgid "Warning: Some files were not backed up"
 msgstr "Ostrzeżenie: Kopie zapasowe niektórych plików nie zostały utworzone"
 
 #. For translators: %1 is entered archive file name - part of summary text
-#: src/ui.ycp:3079
+#: src/ui.ycp:3104
 #, ycp-format
 msgid "Archive %1 created successfully"
 msgstr "Archiwum %1 utworzone pomyślnie"
 
 #. part of summary text
-#: src/ui.ycp:3084
+#: src/ui.ycp:3109
 msgid "Archive created successfully"
 msgstr "Archiwum utworzone pomyślnie"
 
 #. part of summary text - %1 is file name
-#: src/ui.ycp:3088
+#: src/ui.ycp:3113
 #, ycp-format
 msgid "Autoinstallation profile saved to file %1."
 msgstr "Profil autoinstalacji zapisany w pliku %1."
 
-#: src/ui.ycp:3088
+#: src/ui.ycp:3113
 msgid "Autoinstallation profile was not saved."
 msgstr "Profil autoinstalacji nie został zapisany."
 
 #. part of summary text
-#: src/ui.ycp:3092
+#: src/ui.ycp:3117
 msgid "Archive creation failed"
 msgstr "Tworzenie archiwum nie powiodło się"
 
 #. part of summary text
-#: src/ui.ycp:3097
+#: src/ui.ycp:3122
 msgid "Total Archived Files: "
 msgstr "Suma zarchiwizowanych plików: "
 
-#: src/ui.ycp:3119 src/ui.ycp:3124
+#: src/ui.ycp:3144 src/ui.ycp:3149
 msgid "&Details..."
 msgstr "Szcz&egóły..."
 
-#: src/ui.ycp:3125
+#: src/ui.ycp:3150
 msgid "&Save as Profile..."
 msgstr "Zapi&sz jako profil..."
 
 #. dialog header
-#: src/ui.ycp:3141
+#: src/ui.ycp:3166
 msgid "Backup Summary"
 msgstr "Podsumowanie tworzenia kopii zapasowej"
 
 #. popup dialog header
-#: src/ui.ycp:3168
+#: src/ui.ycp:3193
 msgid "Backup Summary Details"
 msgstr "Szczegóły podsumowania tworzenia kopii zapasowej"
 
 #. dialog header
-#: src/ui.ycp:3208
+#: src/ui.ycp:3233
 msgid "Expert Backup Options"
 msgstr "Zaawansowane opcje tworzenia kopii zapasowej"
 
-#: src/ui.ycp:3213
+#: src/ui.ycp:3238
 msgid "Back Up &Hard Disk System Areas"
 msgstr "Utwórz kopię zapasową &systemowych obszarów dysku twardego"
 
 #. text entry label
-#: src/ui.ycp:3219
+#: src/ui.ycp:3244
 msgid "&Temporary Location of Archive Parts"
 msgstr "&Tymczasowa lokalizacja fragmentów archiwum"
 
-#: src/ui.ycp:3306
+#: src/ui.ycp:3331
 msgid "Name"
 msgstr "Nazwa"
 
-#: src/ui.ycp:3307
+#: src/ui.ycp:3332
 msgid "Description"
 msgstr "Opis"
 
-#: src/ui.ycp:3308
+#: src/ui.ycp:3333
 msgid "Automatic Backup"
 msgstr "Ustawienia automatycznego tworzenia kopii zapasowych"
 
-#: src/ui.ycp:3310
+#: src/ui.ycp:3335
 msgid "System Backup"
 msgstr "Kopia zapasowa systemu"
 
-#: src/ui.ycp:3312
+#: src/ui.ycp:3337
 msgid "Available Profiles"
 msgstr "Dostępne profile"
 
-#: src/ui.ycp:3317
+#: src/ui.ycp:3342
 msgid "&Create Backup"
 msgstr "Utwórz &kopię zapasową"
 
-#: src/ui.ycp:3318
+#: src/ui.ycp:3343
 msgid "Profile Mana&gement"
 msgstr "Zarządzanie pro&filami"
 
-#: src/ui.ycp:3321
+#: src/ui.ycp:3346
 msgid "&Duplicate..."
 msgstr "S&kopiuj..."
 
 #. TRANSLATORS: Menu button selection
-#: src/ui.ycp:3324
+#: src/ui.ycp:3349
 msgid "Re&name"
 msgstr "Zmień &nazwę"
 
-#: src/ui.ycp:3329
+#: src/ui.ycp:3354
 msgid "Back Up &Manually..."
 msgstr "Utwórz rę&cznie kopię zapasową..."
 
 #. remove the selected profile
-#: src/ui.ycp:3411
+#: src/ui.ycp:3436
 msgid "Remove the selected profile?"
 msgstr "Usunąć wybrany profil?"
 
-#: src/ui.ycp:3501
+#: src/ui.ycp:3526
 msgid "&Browse..."
 msgstr "Przeg&lądaj..."
 
 #. title in the file selection dialog
-#: src/ui.ycp:3523
+#: src/ui.ycp:3548
 msgid "Directory Selection"
 msgstr "Wybór katalogu"
 
 #. TRANSLATORS: informative text in the multiline select-box
-#: src/ui.ycp:3702
+#: src/ui.ycp:3727
 msgid "Entire file system will be searched"
 msgstr "Przeszukany zostanie cały system plików"
 
 #. busy message
-#: src/ui.ycp:3759
+#: src/ui.ycp:3784
 msgid "Detecting file system types..."
 msgstr "Wykrywanie typów systemów plików..."
 
 #. dialog header
-#: src/ui.ycp:3771
+#: src/ui.ycp:3796
 msgid "Search Constraints"
 msgstr "Warunki wyszukiwania"
 
 #. selection box
-#: src/ui.ycp:3776
+#: src/ui.ycp:3801
 msgid "Directories Included in Search"
 msgstr "Katalogi włączone do wyszukiwania"
 
 #. push button label
-#: src/ui.ycp:3781
+#: src/ui.ycp:3806
 msgid "&Add..."
 msgstr "&Dodaj..."
 
 #. table label
-#: src/ui.ycp:3789
+#: src/ui.ycp:3814
 msgid "Items Excluded from Search"
 msgstr "Elementy wykluczone z wyszukiwania"
 
 #. table header
-#: src/ui.ycp:3791
+#: src/ui.ycp:3816
 msgid "Value"
 msgstr "Wartość"
 
-#: src/ui.ycp:3791
+#: src/ui.ycp:3816
 msgid "Type"
 msgstr "Typ"
 
 #. push button label
-#: src/ui.ycp:3794
+#: src/ui.ycp:3819
 msgid "A&dd"
 msgstr "&Dodaj"
 
-#: src/ui.ycp:3795
+#: src/ui.ycp:3820
 msgid "&Directory..."
 msgstr "&Katalog..."
 
-#: src/ui.ycp:3796
+#: src/ui.ycp:3821
 msgid "&File System..."
 msgstr "S&ystem plików..."
 
-#: src/ui.ycp:3797
+#: src/ui.ycp:3822
 msgid "&Regular Expression..."
 msgstr "Wyrażenie &regularne..."
 
 #. textentry label
-#: src/ui.ycp:3822
+#: src/ui.ycp:3847
 msgid "&Add New Expression"
 msgstr "Dod&aj nowe wyrażenie"
 
 #. error poup message - %1 is an entered regular expression
 #. error popup message
-#: src/ui.ycp:3831 src/ui.ycp:3894
+#: src/ui.ycp:3856 src/ui.ycp:3919
 #, ycp-format
 msgid "Expression %1 is already in the list."
 msgstr "Wyrażenie %1 znajduje się już na liście."
 
 #. textentry label
 #. return $[ "text" : text, "clicked" : input ];
-#: src/ui.ycp:3843 src/ui.ycp:3963
+#: src/ui.ycp:3868 src/ui.ycp:3988
 msgid "&Add New Directory"
 msgstr "Dod&aj nowy katalog"
 
 #. error poup message - %1 is a directory name
 #. error popup message
-#: src/ui.ycp:3852 src/ui.ycp:3902
+#: src/ui.ycp:3877 src/ui.ycp:3927
 #, ycp-format
 msgid "Directory %1 is already in the list."
 msgstr "Katalog %1 znajduje się już na liście."
 
 #. combobox label
-#: src/ui.ycp:3864
+#: src/ui.ycp:3889
 msgid "&Add New File System"
 msgstr "Dod&aj nowy system plików"
 
 #. error poup message - %1 is a directory name
 #. error popup message
-#: src/ui.ycp:3873 src/ui.ycp:3910
+#: src/ui.ycp:3898 src/ui.ycp:3935
 #, ycp-format
 msgid "File system %1 is already in the list."
 msgstr "System plików %1 znajduje się już na liście."
 
 #. textentry label
-#: src/ui.ycp:3885
+#: src/ui.ycp:3910
 msgid "&Edit"
 msgstr "&Edytuj"
 
-#: src/ui.ycp:3983
+#: src/ui.ycp:4008
 msgid "&Edit Included Directory"
 msgstr "&Edytuj włączony katalog"
+
+#~ msgid "Reading packages available on the installation sources..."
+#~ msgstr "Odczytywanie pakietów dostępnych w źródłach instalacyjnych..."

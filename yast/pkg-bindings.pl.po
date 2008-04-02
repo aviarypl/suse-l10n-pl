@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pkg-bindings\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-10 13:30+0200\n"
+"POT-Creation-Date: 2008-04-01 10:36+0200\n"
 "PO-Revision-Date: 2007-08-16 18:15+0200\n"
 "Last-Translator: Piotr Leszczyński <piotr@kontury.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -20,23 +20,156 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: src/Source.cc:66
-msgid "Scanning products in "
-msgstr "Skanowanie produktów w"
+#: src/GPGMap.cc:54
+msgid "Never"
+msgstr "Nigdy"
 
-#: src/Source.cc:192
+#. help text
+#: src/HelpTexts.h:36
+msgid "<P><BIG><B>Loading Available Packages</B></BIG></P><P>Loading available objects from the configured repositories is in progress. This may take a while...</P>"
+msgstr ""
+
+#. help text
+#: src/HelpTexts.h:42
+msgid "<P><BIG><B>Loading Installed Packages</B><BIG></P><P>The package manager is reading installed packages...</P>"
+msgstr ""
+
+#. help text
+#: src/HelpTexts.h:47
+msgid "<P><BIG><B>Registering a New Repository</B></BIG></P><P>A new repository is being registered. The package manager is reading list of available packages in the repository...</P>"
+msgstr ""
+
+#: src/HelpTexts.h:52
+msgid "<P><BIG><B>Saving Repositories</B></BIG></P><P>The package manager is updating configured repositories...</P>"
+msgstr ""
+
+#: src/HelpTexts.h:55
+msgid "<P><BIG><B>Refreshing the Repository</B></BIG></P><P>The package manager is updating the repository content...</P>"
+msgstr ""
+
+#: src/Source_Callbacks.cc:129
 msgid "Refreshing repository "
 msgstr "Odświeżanie repozytorium"
 
-#: src/Source.cc:213
+#: src/Source_Callbacks.cc:150
 msgid "Probing repository "
 msgstr "Przeszukiwanie repozytorium"
 
+#: src/Source_Create.cc:52
+msgid "Scanning products in "
+msgstr "Skanowanie produktów w"
+
+#: src/Source_Create.cc:594
+#, fuzzy
+msgid "Search Available Products"
+msgstr "Dostępne produkty"
+
+#: src/Source_Create.cc:599
+#, fuzzy
+msgid "Probe Source Type"
+msgstr "Typ źródła"
+
+#: src/Source_Create.cc:602
+#, fuzzy
+msgid "Download Descriptions"
+msgstr "Brak opisu"
+
+#: src/Source_Create.cc:603 src/Source_Download.cc:244 src/Source_Load.cc:113
+#: src/Source_Load.cc:399
+msgid "Rebuild Cache"
+msgstr ""
+
+#: src/Source_Create.cc:607 src/Source_Load.cc:114 src/Source_Load.cc:400
+#: src/Source_Set.cc:76
+#, fuzzy
+msgid "Load Data"
+msgstr "&Lokalna baza danych"
+
+#: src/Source_Create.cc:610
+#, fuzzy
+msgid "Adding the Repository..."
+msgstr "Dodawanie katalogu..."
+
+#: src/Source_Download.cc:46 src/Source_Download.cc:174
+msgid "Downloading "
+msgstr "Pobieranie"
+
+#. stages: "download", "build cache"
+#: src/Source_Download.cc:243
+#, fuzzy
+msgid "Refresh Metadata"
+msgstr "Automatyczne odświeżenie"
+
+#. 3 steps per repository (download, cache rebuild, load resolvables)
+#: src/Source_Download.cc:251
+#, fuzzy
+msgid "Refreshing Repository..."
+msgstr "Odświeżanie repozytorium"
+
+#. error message (followed by detailed description)
+#: src/Source_Installation.cc:71
+#, fuzzy
+msgid "Error: Cannot copy the cache to the target directory\n"
+msgstr ""
+"Nie można skopiować pliku archiwum\n"
+"do katalogu tymczasowego.\n"
+
+#. error message (followed by directory name)
+#: src/Source_Installation.cc:105
+#, fuzzy
+msgid "Cannot create directory "
+msgstr "Nie można utworzyć katalogu '%1'."
+
+#. error message
+#: src/Source_Installation.cc:135
+#, fuzzy
+msgid "Copying failed"
+msgstr "Przetwarzanie nie powiodło się."
+
+#: src/Source_Load.cc:112 src/Source_Load.cc:398
+#, fuzzy
+msgid "Refresh Sources"
+msgstr "Odczytywanie zasobów"
+
+#. 3 steps per repository (download, cache rebuild, load resolvables)
+#: src/Source_Load.cc:119 src/Source_Load.cc:403 src/Source_Set.cc:83
+#: src/Target_Load.cc:68 src/Target_Load.cc:139
+#, fuzzy
+msgid "Loading the Package Manager..."
+msgstr "Zamykanie menedżera pakietów..."
+
+#: src/Source_Load.cc:397
+#, fuzzy
+msgid "Load Sources"
+msgstr "Źródła"
+
 #. TODO: improve the error message
-#: src/Source.cc:283
+#: src/Source_Misc.cc:70
 msgid "Cannot find source"
 msgstr "Nie można odnaleźć źródła"
 
-#: src/Source.cc:1007 src/Source.cc:1135
-msgid "Downloading "
-msgstr "Pobieranie"
+#: src/Source_Save.cc:113
+#, fuzzy
+msgid "Remove Repositories"
+msgstr "Repozytoria"
+
+#. stages: "download", "build cache"
+#: src/Source_Save.cc:118
+#, fuzzy
+msgid "Save Repositories"
+msgstr "Repozytoria"
+
+#. start the process
+#: src/Source_Save.cc:126
+#, fuzzy
+msgid "Saving Repositories..."
+msgstr "Inicjalizacja repozytoriów..."
+
+#: src/Target_Load.cc:64
+msgid "Initialize the Target System"
+msgstr "Inicjalizacja systemu docelowego"
+
+#: src/Target_Load.cc:65 src/Target_Load.cc:135
+#, fuzzy
+msgid "Read Installed Packages"
+msgstr "Odczytywanie zainstalowanych pakietów"

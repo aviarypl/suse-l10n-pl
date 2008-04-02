@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: yast2-apparmor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-08 17:29-0700\n"
+"POT-Creation-Date: 2008-04-01 10:45+0200\n"
 "PO-Revision-Date: 2007-08-15 00:27+0100\n"
 "Last-Translator: wadim dziedzic <nikdo@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -22,15 +22,323 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: GenProf.ycp:37 GenProf.ycp:56 LogProf.ycp:38 LogProf.ycp:57
+#: src/agents/ag_genprof.pm:46
+msgid "SubDomain does not appear to be started.  Please enable SubDomain and try again."
+msgstr "Prawdopodobnie poddomena nie jest uruchomiona. Proszę włączyć poddomenę i spróbować ponowie"
+
+#: src/agents/ag_genprof.pm:53
+#, perl-format
+msgid "Can't find subdomain profiles in %s."
+msgstr "Nie można znaleźć profilów poddomeny w %s."
+
+#: src/agents/ag_genprof.pm:65
+msgid ""
+"This wizard will help you create a new AppArmor security \n"
+"profile for an application, or you can use it to enhance \n"
+"an existing profile by allowing AppArmor to learn new \n"
+"application behavior. \n"
+"\n"
+"Please enter the application name for which you would like\n"
+"to create a profile, or selecte Browse to find the \n"
+"application on your system."
+msgstr ""
+"Ten asystent pomaga utworzyć nowy profil bezpieczeństwa \n"
+"AppArmor dla aplikacji. Można użyć go także do rozszerzenia \n"
+"istniejącego profilu i zezwolić na rejestrację zachowania aplikacjiprzez AppArmor. \n"
+"\n"
+"Proszę podać nazwę aplikacji, dla której stworzony zostać ma\n"
+"profil lub nacisnąć przycisk Przeglądaj, aby wybrać ją w oknie."
+
+#: src/agents/ag_genprof.pm:73
+msgid "&Application to Profile"
+msgstr "&Aplikacja do profilowania"
+
+#: src/agents/ag_genprof.pm:74
+msgid "&Create"
+msgstr "&Utwórz"
+
+#: src/agents/ag_genprof.pm:75 src/include/subdomain/profile_dialogs.ycp:688
+#: src/include/subdomain/reporting_utils.ycp:131
+#: src/include/subdomain/reporting_utils.ycp:284
+msgid "&Abort"
+msgstr "&Przerwij"
+
+#: src/agents/ag_genprof.pm:76
+msgid "Select Program to Profile"
+msgstr "Wybór programu do profilowania"
+
+#: src/agents/ag_genprof.pm:95
+msgid ""
+"The specified file is not executable.\n"
+"\n"
+"Please enter an application name to\n"
+"continue generating a profile or press\n"
+"Abort to cancel this wizard."
+msgstr ""
+"Wybrany plik nie jest wykonywalny.\n"
+"\n"
+"Proszę podać nazwę aplikacji, aby\n"
+"kontynuować, albo nacisnąć przycisk\n"
+"Przerwij, aby zakończyć asystenta."
+
+#: src/agents/ag_genprof.pm:102
+msgid ""
+"The specified pathname is a directory.\n"
+"\n"
+"Please enter an application name to\n"
+"continue generating a profile or press\n"
+"Abort to cancel this wizard."
+msgstr ""
+"Podana ścieżka wskazuje na katalog.\n"
+"\n"
+"Proszę podać nazwę aplikacji, aby\n"
+"kontynuować, albo nacisnąć przycisk\n"
+"Przerwij, aby zakończyć asystenta."
+
+#: src/agents/ag_genprof.pm:116
+msgid ""
+"The specified file does not exist.\n"
+"\n"
+"Please enter an application name to\n"
+"continue generating a profile or press\n"
+"Abort to cancel this wizard."
+msgstr ""
+"Podany plik nie istnieje/\n"
+"\n"
+"Proszę podać nazwę aplikacji, aby\n"
+"kontynuować, albo nacisnąć przycisk\n"
+"Przerwij, aby zakończyć asystenta."
+
+#. they hit okay without entering anything
+#: src/agents/ag_genprof.pm:126
+msgid ""
+"You have not entered or selected an\n"
+"application to profile.\n"
+"\n"
+"Please enter an application name to\n"
+"continue generating a profile or press\n"
+"Abort to cancel this wizard."
+msgstr ""
+"Nie podano ani nie wybrano aplikacji\n"
+"do profilowania.\n"
+"\n"
+"Proszę podać nazwę aplikacji, aby\n"
+"kontynuować, albo nacisnąć przycisk\n"
+"Przerwij, aby zakończyć asystenta."
+
+#: src/agents/ag_genprof.pm:173
+msgid "Profiling"
+msgstr "Profilowanie"
+
+#: src/agents/ag_genprof.pm:174
+msgid ""
+"Please start the application to be profiled in\n"
+"another window and exercise its functionality now.\n"
+"\n"
+"Once completed, select the 'Scan' option below in\n"
+"order to scan the system logs for AppArmor events.\n"
+"\n"
+"For each AppArmor event, you will be given the\n"
+"opportunity to choose whether the access should be\n"
+"allowed or denied."
+msgstr ""
+"Proszę uruchomić profilowaną aplikację w innym\n"
+"oknie i wykonać w niej typowe czynności.\n"
+"\n"
+"Po zakończeniu należy nacisnąć przycisk Skanuj,\n"
+"aby przeskanować dzienniki systemowe w poszukiwaniu\n"
+"zdarzeń AppArmor.\n"
+"\n"
+"Dla każdego zdarzenia będzie można określić \n"
+"czy dostęp będzie dozwolony czy zabroniony."
+
+#. make them confirm the exit command
+#: src/agents/ag_genprof.pm:198
+msgid "Are you sure you want to exit?"
+msgstr "Czy na pewno wyjść? "
+
+#: src/agents/ag_genprof.pm:221
+msgid "Reloaded SubDomain profiles in enforce mode."
+msgstr "Wczytano ponownie profile poddomen w trybie ochrony (enforce)"
+
+#: src/agents/ag_genprof.pm:222
+#, perl-format
+msgid "Finished generating profile for %s."
+msgstr "Zakończono generację profilu dla %s."
+
+#: src/agents/ag_logparse.pm:62 src/agents/ag_logparse.pm:82
+msgid "Unable to open"
+msgstr "Nie można otworzyć"
+
+#: src/agents/ag_logparse.pm:62
+msgid "Couldn't save query."
+msgstr "Nie można zapisać zapytania"
+
+#: src/agents/ag_logparse.pm:82
+msgid "Couldn't retrieve query."
+msgstr "Nie można pobrać zapytania."
+
+#. Write SIR Header in csv format
+#: src/agents/ag_logparse.pm:160
+msgid "# Security Incident Report - Generated by AppArmor\n"
+msgstr "# Raport incydentu bezpieczeństwa - wygnerowany przez AppArmor\n"
+
+#: src/agents/ag_logparse.pm:161
+#, perl-format
+msgid "# Period: %s - %s\n"
+msgstr "# Okres: %s - %s\n"
+
+#: src/agents/ag_logparse.pm:165
+msgid "# The following filters were used for report generation:\n"
+msgstr "# Do generacji raportu użyto następujących filtrów:\n"
+
+#: src/agents/ag_logparse.pm:168
+#, perl-format
+msgid ""
+"# Filter: %s, Value: %s\n"
+"\n"
+msgstr ""
+"# Filtr: %s, Wartość: %s\n"
+"\n"
+
+#: src/agents/ag_logparse.pm:172
+msgid ""
+"# No filters were used for report generation:\n"
+"\n"
+"\n"
+msgstr ""
+"# Nie użyto żadnych filtrów do generacji raportu:\n"
+"\n"
+"\n"
+
+#. Write SIR Header in html format
+#: src/agents/ag_logparse.pm:176
+msgid "<h3>Security Incident Report - Generated by AppArmor</h3>\n"
+msgstr "<h3>Raport incdentu bezpieczeństwa - wygenerowany przez AppArmor</h3>\n"
+
+#: src/agents/ag_logparse.pm:177
+#, perl-format
+msgid "<h4>Period: %s - %s</h4>\n"
+msgstr "<h4>Okres: %s - %s</h4>\n"
+
+#: src/agents/ag_reports_confined.pm:113
+#, perl-format
+msgid "ag_reports_confined: Couldn't open %s for writing."
+msgstr "ag_reports_confined: Nie można otworzyć %s do zapisu."
+
+#: src/agents/ag_reports_confined.pm:139
+#, perl-format
+msgid "Failure in readMultiAudLog() - couldn't open %s."
+msgstr "Błąd w readMultiAudLog() - nie można otworzyć %s."
+
+#: src/agents/ag_reports_confined.pm:154
+#, perl-format
+msgid "Problem in readMultiAudLog() - couldn't open %s/%s."
+msgstr "Problem w readMultiAudLog() - nie można otworzyć %s/%s."
+
+#: src/agents/ag_reports_confined.pm:188
+msgid "readAudLog() wasn't passed an input file."
+msgstr "do readAudLog() nie przekazano pliku wejściowego"
+
+#: src/agents/ag_reports_confined.pm:212
+#, perl-format
+msgid "readAudLog() couldn't open %s."
+msgstr "readAudLog(): nie można otworzyć %s"
+
+#: src/agents/ag_reports_confined.pm:270
+#, perl-format
+msgid "Can't run %s.  Exiting."
+msgstr "Nie można uruchomić %s. Zakończono."
+
+#: src/agents/ag_reports_confined.pm:306
+msgid "ag_reports_confined: Missing instruction or argument!"
+msgstr "ag_reports_confined: brak instrukcji lub parametru!"
+
+#: src/agents/ag_reports_ess.pm:56
+msgid "Failure in readMultiEssLog() - couldn't open"
+msgstr "Błąd w readMultiEssLog() - nie można otworzyć"
+
+#: src/agents/ag_reports_ess.pm:69
+msgid "Problem in readMultiEssLog() - couldn't open"
+msgstr "Problem w readMultiEssLog() - nie można otworzyć"
+
+#: src/agents/ag_reports_ess.pm:104
+msgid "readEssLog() wasn't passed an input file."
+msgstr "readEssLog(): nie przekazano pliku wejściowego."
+
+#: src/agents/ag_reports_ess.pm:128
+#, perl-format
+msgid "readEssLog() couldn't open %s"
+msgstr "readEssLog():nie można otworzyć %s"
+
+#: src/agents/ag_reports_ess.pm:162
+#, perl-format
+msgid "ag_logparse: Unknown instruction %s or argument: %s"
+msgstr "ag_logparse: nieznana instrukcja %s lub parametr: %s"
+
+#: src/agents/ag_reports_parse.pm:77
+#, perl-format
+msgid "ag_reports_parse: Couldn't open %s for writing."
+msgstr "ag_reports_parse: nie można otworzyć %s do zapisu"
+
+#: src/agents/ag_reports_parse.pm:144
+msgid "ag_reports_parse: No archived reports found."
+msgstr "ag_reports_parse: nie znaleziono zarchiwizowanych raportów"
+
+#: src/agents/ag_reports_parse.pm:149
+#, perl-format
+msgid "ag_reports_parse: Can't open directory %s: %s"
+msgstr "ag_reports_parse: nie można otworzyć katalogu %s: %s"
+
+#: src/agents/ag_reports_parse.pm:191
+#, perl-format
+msgid "ag_reports_parse: Unknown instruction %s or argument: %s"
+msgstr "ag_reports_parse: nieznana instrukcja %s lub parametr: %s"
+
+#: src/agents/ag_reports_sched.pm:72
+#, perl-format
+msgid "Couldn't find %s.  Unable to create crontab.  Exiting."
+msgstr "Nie można znaleźć %s. Nie można utworzyć pliku crontab.  Zakończono."
+
+#: src/agents/ag_reports_sched.pm:129 src/agents/ag_reports_sched.pm:171
+#: src/agents/ag_reports_sched.pm:249 src/agents/ag_reports_sched.pm:312
+#: src/agents/ag_reports_sched.pm:319 src/agents/ag_reports_sched.pm:383
+#: src/agents/ag_reports_sched.pm:390 src/agents/ag_reports_sched.pm:473
+#: src/agents/ag_reports_sched.pm:538
+#, perl-format
+msgid "Couldn't open %s."
+msgstr "Nie można otworzyć %s."
+
+#: src/agents/ag_reports_sched.pm:241
+#, perl-format
+msgid "Couldn't open %s.  Unable to add report: %s"
+msgstr "Nie można otworzyć %s. Nie można dodać raportu: %s"
+
+#: src/agents/ag_reports_sched.pm:266
+#, perl-format
+msgid "Duplicate report name not allowed. Didn't schedule new report: %s"
+msgstr "Raport o nazwie identycznej z istniejącym jest niedozwolony. Nie zaplanowano nowego raportu: %s"
+
+#: src/agents/ag_reports_sched.pm:579 src/agents/ag_reports_sched.pm:586
+#, perl-format
+msgid "Couldn't open %s.  No changes performed."
+msgstr "Nie można otworzyć %s. Nie dokonano żadnych zmian."
+
+#: src/agents/ag_reports_sched.pm:688
+#, perl-format
+msgid "ag_reports_sched: Unknown instruction %s or arg: %s"
+msgstr "ag_reports_sched: nieznana instrukcja %s lub parametr: %s"
+
+#: src/clients/GenProf.ycp:37 src/clients/GenProf.ycp:56
+#: src/clients/LogProf.ycp:38 src/clients/LogProf.ycp:57
 msgid "Synchronization error between frontend and backend."
 msgstr "Błąd synchronizacji pomiędzy mechanizmem wewnętrznym a interfejsem."
 
-#: GenProf.ycp:65 LogProf.ycp:66
+#: src/clients/GenProf.ycp:65 src/clients/LogProf.ycp:66
 msgid "AppArmor Profile Wizard"
 msgstr "Kreator profili AppArmor"
 
-#: GenProf.ycp:66
+#: src/clients/GenProf.ycp:66
 msgid ""
 "     <b>AppArmor Profiling Wizard</b><br>\n"
 "       This wizard presents entries generated by the AppArmor access control module. You can generate highly optimized and robust security profiles by using the suggestions made by AppArmor. AppArmor suggests that you allow or deny access to specific resources or define execute permission for entries. These questions that display were logged during the normal application execution test previously performed. <br>\n"
@@ -301,37 +609,53 @@ msgstr ""
 "        <li>TMPDIR</li>\n"
 "        <li>TZDIR</li> </ul>\n"
 
-#: GenProf.ycp:343 LogProf.ycp:341 apparmor_ycp_utils.ycp:50
+#: src/clients/GenProf.ycp:357 src/clients/LogProf.ycp:355
+#: src/include/subdomain/apparmor_ycp_utils.ycp:50
 msgid "&Yes"
 msgstr "&Tak"
 
-#: GenProf.ycp:343 LogProf.ycp:341 apparmor_ycp_utils.ycp:51
+#: src/clients/GenProf.ycp:357 src/clients/LogProf.ycp:355
+#: src/include/subdomain/apparmor_ycp_utils.ycp:51
 msgid "&No"
 msgstr "&Nie"
 
-#: GenProf.ycp:360 LogProf.ycp:358
+#: src/clients/GenProf.ycp:374 src/clients/LogProf.ycp:372
 msgid "&Okay"
 msgstr "&OK"
 
-#: GenProf.ycp:362 LogProf.ycp:360 apparmor_ycp_utils.ycp:117
-#: apparmor_ycp_utils.ycp:154 apparmor_ycp_utils.ycp:371
-#: apparmor_ycp_utils.ycp:503 apparmor_ycp_utils.ycp:512
-#: apparmor_ycp_utils.ycp:522 profile_dialogs.ycp:58 profile_dialogs.ycp:149
-#: reporting_dialogues.ycp:274 reporting_dialogues.ycp:319
-#: reporting_dialogues.ycp:1762 reporting_dialogues.ycp:2089
-#: reporting_dialogues.ycp:2099 reporting_dialogues.ycp:2356
-#: reporting_utils.ycp:308 reporting_utils.ycp:422
+#: src/clients/GenProf.ycp:376 src/clients/LogProf.ycp:374
+#: src/include/subdomain/apparmor_ycp_utils.ycp:117
+#: src/include/subdomain/apparmor_ycp_utils.ycp:154
+#: src/include/subdomain/apparmor_ycp_utils.ycp:371
+#: src/include/subdomain/apparmor_ycp_utils.ycp:503
+#: src/include/subdomain/apparmor_ycp_utils.ycp:512
+#: src/include/subdomain/apparmor_ycp_utils.ycp:522
+#: src/include/subdomain/profile_dialogs.ycp:60
+#: src/include/subdomain/profile_dialogs.ycp:178
+#: src/include/subdomain/profile_dialogs.ycp:278
+#: src/include/subdomain/reporting_dialogues.ycp:218
+#: src/include/subdomain/reporting_dialogues.ycp:263
+#: src/include/subdomain/reporting_dialogues.ycp:1683
+#: src/include/subdomain/reporting_dialogues.ycp:2005
+#: src/include/subdomain/reporting_dialogues.ycp:2015
+#: src/include/subdomain/reporting_dialogues.ycp:2272
+#: src/include/subdomain/reporting_utils.ycp:340
+#: src/include/subdomain/reporting_utils.ycp:454
 msgid "&Cancel"
 msgstr "&Anuluj"
 
-#: GenProf.ycp:402 LogProf.ycp:400 profile_dialogs.ycp:124
-#: reporting_archived_dialogs.ycp:134 reporting_dialogues.ycp:387
-#: reporting_dialogues.ycp:483 reporting_dialogues.ycp:905
-#: reporting_dialogues.ycp:1754 reporting_dialogues.ycp:2151
+#: src/clients/GenProf.ycp:416 src/clients/LogProf.ycp:414
+#: src/include/subdomain/profile_dialogs.ycp:251
+#: src/include/subdomain/reporting_archived_dialogs.ycp:121
+#: src/include/subdomain/reporting_dialogues.ycp:331
+#: src/include/subdomain/reporting_dialogues.ycp:419
+#: src/include/subdomain/reporting_dialogues.ycp:810
+#: src/include/subdomain/reporting_dialogues.ycp:1679
+#: src/include/subdomain/reporting_dialogues.ycp:2067
 msgid "&Browse"
 msgstr "Prze&glądaj"
 
-#: LogProf.ycp:67
+#: src/clients/LogProf.ycp:67
 msgid ""
 "     <b>AppArmor Profiling Wizard</b><br>\n"
 "       This wizard presents entries generated by the AppArmor access control module. You can generate highly optimized and robust security profiles by using the suggestions made by AppArmor. AppArmor suggests that you allow or deny access to specific resources or define execute permission for entries. These questions that display were logged during the normal application execution test previously performed. <br>\n"
@@ -600,31 +924,31 @@ msgstr ""
 "        <li>TMPDIR</li>\n"
 "        <li>TZDIR</li> </ul>\n"
 
-#: SD_AddProfile.ycp:24
+#: src/clients/SD_AddProfile.ycp:24
 msgid "Select File To Generate A Profile for"
 msgstr "Wybór pliku, dla którego zostanie wygenerowany profil."
 
-#: SD_AddProfile.ycp:31
+#: src/clients/SD_AddProfile.ycp:31
 msgid "Profile for "
 msgstr "Profil dla"
 
-#: SD_AddProfile.ycp:31
+#: src/clients/SD_AddProfile.ycp:31
 msgid " already exists."
 msgstr " już istnieje."
 
-#: SD_AddProfile.ycp:31
+#: src/clients/SD_AddProfile.ycp:31
 msgid "Would you like to open this profile in editing mode?"
 msgstr "Czy otworzyć ten profil do edycji?"
 
-#: SD_DeleteProfile.ycp:23
+#: src/clients/SD_DeleteProfile.ycp:23
 msgid "Delete profile confirmation"
 msgstr "Potwierdzenie usunięcia profilu"
 
-#: SD_DeleteProfile.ycp:24
+#: src/clients/SD_DeleteProfile.ycp:24
 msgid "Are you sure you want to delete the profile "
 msgstr "Czy na pewno usunąć profil?"
 
-#: SD_DeleteProfile.ycp:25
+#: src/clients/SD_DeleteProfile.ycp:25
 msgid ""
 " ?\n"
 "After this operation the AppArmor module will reload the profile set."
@@ -632,7 +956,7 @@ msgstr ""
 " ?\n"
 "Po wykonaniu tej czynności AppArmor ponownie wczyta zestaw profili."
 
-#: SD_DeleteProfile.ycp:40
+#: src/clients/SD_DeleteProfile.ycp:40
 msgid ""
 "Please make a \n"
 "\t\tselection from the listed profiles and press Next to delete the profile.<p>"
@@ -640,219 +964,224 @@ msgstr ""
 "Proszę wybrać \n"
 "\t\tspośród wyświetlonych profili i nacisnąć Dalej, aby usunąć zaznaczony profil.<p>"
 
-#: SD_DeleteProfile.ycp:42
+#: src/clients/SD_DeleteProfile.ycp:42
 msgid "Delete Profile - Choose profile to delete"
 msgstr "Usuń profil - Proszę wybrać profil do usunięcia"
 
-#: SD_EditProfile.ycp:32
+#: src/clients/SD_EditProfile.ycp:32
 msgid "Please make a selection from the listed profiles and press Next to edit the profile."
 msgstr "Proszę wybrać spośród wyświetlonych profili i nacisnąć przycisk \"Dalej\", aby edytować zaznaczony profil.<p>"
 
-#: SD_EditProfile.ycp:32
+#: src/clients/SD_EditProfile.ycp:32
 msgid "Edit Profile - Choose profile to edit"
 msgstr "Edycja profilu - proszę wybrać profil do edycji"
 
-#: apparmor_profile_check.ycp:35
+#: src/clients/subdomain.ycp:32
+msgid "Enable AppArmor Functions"
+msgstr "Włącz AppArmor"
+
+#: src/include/subdomain/apparmor_profile_check.ycp:35
 msgid "Errors found in AppArmor profiles"
 msgstr "Błędy znalezione w profilach AppArmor"
 
-#: apparmor_profile_check.ycp:36
+#: src/include/subdomain/apparmor_profile_check.ycp:36
 msgid "<p>These problems must be corrected before AppArmor can be                  started or the profile management tools can be used.</p> "
 msgstr "<p>Problemy te trzeba poprawić, aby można było uruchomić                   program AppArmor, albo użyć narzędzia zarządzania profilami.</p> "
 
-#: apparmor_profile_check.ycp:39
+#: src/include/subdomain/apparmor_profile_check.ycp:39
 msgid "<p>You can find a description of AppArmor profile syntax by              running "
 msgstr "<p>Opis składni profilu AppArmor otrzyma się po uruchomieniu               "
 
-#: apparmor_profile_check.ycp:42
+#: src/include/subdomain/apparmor_profile_check.ycp:42
 msgid "<p>Comprehensive documentation about AppArmor is available in              the Administration guide. This is available in the              directory: "
 msgstr "<p>Obszerna dokumentacja dotycząca AppArmor dostępna jest w               Podręczniku administratora. Znajduje się w katalogu:                "
 
-#: apparmor_profile_check.ycp:47
+#: src/include/subdomain/apparmor_profile_check.ycp:47
 msgid "<p>Please refer to this for more detailed information about              AppArmor</p>"
 msgstr "<p>Dokument ten zawiera bardziej szczegółowe informacje o               AppArmor</p>"
 
-#: apparmor_ycp_utils.ycp:25
+#: src/include/subdomain/apparmor_ycp_utils.ycp:25
 msgid "&Allow"
 msgstr "Z&ezwól"
 
-#: apparmor_ycp_utils.ycp:26
+#: src/include/subdomain/apparmor_ycp_utils.ycp:26
 msgid "&Deny"
 msgstr "Za&broń"
 
-#: apparmor_ycp_utils.ycp:27
+#: src/include/subdomain/apparmor_ycp_utils.ycp:27
 msgid "Abo(r)t"
 msgstr "P(r)zerwij"
 
-#: apparmor_ycp_utils.ycp:28
+#: src/include/subdomain/apparmor_ycp_utils.ycp:28
 msgid "&Finish"
 msgstr "Za&kończ"
 
-#: apparmor_ycp_utils.ycp:29
+#: src/include/subdomain/apparmor_ycp_utils.ycp:29
 msgid "&Inherit"
 msgstr "&Dziedziczenie"
 
-#: apparmor_ycp_utils.ycp:30
+#: src/include/subdomain/apparmor_ycp_utils.ycp:30
 msgid "&Profile"
 msgstr "&Profil"
 
-#: apparmor_ycp_utils.ycp:31
+#: src/include/subdomain/apparmor_ycp_utils.ycp:31
 msgid "&Unconfined"
 msgstr "&Nieograniczane"
 
-#: apparmor_ycp_utils.ycp:32
+#: src/include/subdomain/apparmor_ycp_utils.ycp:32
 msgid "&Edit"
 msgstr "&Edytuj"
 
-#: apparmor_ycp_utils.ycp:33
+#: src/include/subdomain/apparmor_ycp_utils.ycp:33
 msgid "&Glob"
 msgstr "&Globalny"
 
-#: apparmor_ycp_utils.ycp:34
+#: src/include/subdomain/apparmor_ycp_utils.ycp:34
 msgid "Glob w/E&xt"
 msgstr "Globalny w/E&xt"
 
-#: apparmor_ycp_utils.ycp:35
+#: src/include/subdomain/apparmor_ycp_utils.ycp:35
 msgid "&Add Requested Hat"
 msgstr "&Dodaj żądany podprofil"
 
-#: apparmor_ycp_utils.ycp:36
+#: src/include/subdomain/apparmor_ycp_utils.ycp:36
 msgid "&Use Default Hat"
 msgstr "&Użyj domyślnego podprofilu"
 
-#: apparmor_ycp_utils.ycp:37
+#: src/include/subdomain/apparmor_ycp_utils.ycp:37
 msgid "&Scan system log for AppArmor events"
 msgstr "Wy&szukaj w systemowym dzienniku zdarzeń zdarzenia programu AppArmor"
 
-#: apparmor_ycp_utils.ycp:38
+#: src/include/subdomain/apparmor_ycp_utils.ycp:38
 msgid "&View Profile"
 msgstr "&Pokaż profile"
 
-#: apparmor_ycp_utils.ycp:39
+#: src/include/subdomain/apparmor_ycp_utils.ycp:39
 msgid "&Use Profile"
 msgstr "&Użyj profilu"
 
-#: apparmor_ycp_utils.ycp:40
+#: src/include/subdomain/apparmor_ycp_utils.ycp:40
 msgid "&Create New Profile"
 msgstr "Utwórz &nowy profil"
 
-#: apparmor_ycp_utils.ycp:41
+#: src/include/subdomain/apparmor_ycp_utils.ycp:41
 msgid "&Update Profile"
 msgstr "&Aktualizuj profil"
 
-#: apparmor_ycp_utils.ycp:42
+#: src/include/subdomain/apparmor_ycp_utils.ycp:42
 msgid "&Ignore Update"
 msgstr "&Ignoruj aktualizacje"
 
-#: apparmor_ycp_utils.ycp:43
+#: src/include/subdomain/apparmor_ycp_utils.ycp:43
 msgid "&Save Changes"
 msgstr "Zapi&sz zmiany"
 
-#: apparmor_ycp_utils.ycp:44
+#: src/include/subdomain/apparmor_ycp_utils.ycp:44
 msgid "&Upload Changes"
 msgstr "Zapi&sz zmiany"
 
-#: apparmor_ycp_utils.ycp:45
+#: src/include/subdomain/apparmor_ycp_utils.ycp:45
 msgid "&View Changes"
 msgstr "&Pokaż zmiany"
 
-#: apparmor_ycp_utils.ycp:46
+#: src/include/subdomain/apparmor_ycp_utils.ycp:46
 msgid "&Enable Repository"
 msgstr "&Włącz repozytorium"
 
-#: apparmor_ycp_utils.ycp:47
+#: src/include/subdomain/apparmor_ycp_utils.ycp:47
 msgid "&Disable Repository"
 msgstr "W&yłącz repozytorium"
 
-#: apparmor_ycp_utils.ycp:48
+#: src/include/subdomain/apparmor_ycp_utils.ycp:48
 msgid "&Never Ask Again"
 msgstr "Nie &pytaj ponownie"
 
-#: apparmor_ycp_utils.ycp:49
+#: src/include/subdomain/apparmor_ycp_utils.ycp:49
 msgid "Ask Me &Later"
 msgstr "Zapytaj późnie&j"
 
-#: apparmor_ycp_utils.ycp:92
+#: src/include/subdomain/apparmor_ycp_utils.ycp:92
 msgid "AppArmor Profile Repository Setup"
 msgstr "Ustawienia repozytorium profili AppArmor"
 
-#: apparmor_ycp_utils.ycp:103
+#: src/include/subdomain/apparmor_ycp_utils.ycp:103
 msgid "Sign in to the repository"
 msgstr "Zapisz w repozytorium"
 
-#: apparmor_ycp_utils.ycp:107
+#: src/include/subdomain/apparmor_ycp_utils.ycp:107
 msgid "Username"
 msgstr "Nazwa użytkownika"
 
-#: apparmor_ycp_utils.ycp:108
+#: src/include/subdomain/apparmor_ycp_utils.ycp:108
 msgid "Password"
 msgstr "Hasło"
 
-#: apparmor_ycp_utils.ycp:112 apparmor_ycp_utils.ycp:150
+#: src/include/subdomain/apparmor_ycp_utils.ycp:112
+#: src/include/subdomain/apparmor_ycp_utils.ycp:150
 msgid "S&ave configuration"
 msgstr "Za&pis konfiguracji"
 
-#: apparmor_ycp_utils.ycp:115
+#: src/include/subdomain/apparmor_ycp_utils.ycp:115
 msgid "&Signin"
 msgstr "&Zaloguj się"
 
-#: apparmor_ycp_utils.ycp:127
+#: src/include/subdomain/apparmor_ycp_utils.ycp:127
 msgid "&Register new user..."
 msgstr "&Rejestracja nowego użytkownika"
 
-#: apparmor_ycp_utils.ycp:134
+#: src/include/subdomain/apparmor_ycp_utils.ycp:134
 msgid "Register New User"
 msgstr "Rejestracja nowrgo użytkownika"
 
-#: apparmor_ycp_utils.ycp:139
+#: src/include/subdomain/apparmor_ycp_utils.ycp:139
 msgid "Enter Username"
 msgstr "Proszę podać nazwę użytkownika."
 
-#: apparmor_ycp_utils.ycp:141
+#: src/include/subdomain/apparmor_ycp_utils.ycp:141
 msgid "Enter Email Address"
 msgstr "Proszę podać adres e-mail"
 
-#: apparmor_ycp_utils.ycp:143
+#: src/include/subdomain/apparmor_ycp_utils.ycp:143
 msgid "Enter Password"
 msgstr "Proszę podać hasło"
 
-#: apparmor_ycp_utils.ycp:145
+#: src/include/subdomain/apparmor_ycp_utils.ycp:145
 msgid "Verify Password"
 msgstr "Potwiedź hasło"
 
-#: apparmor_ycp_utils.ycp:152
+#: src/include/subdomain/apparmor_ycp_utils.ycp:152
 msgid "&Register"
 msgstr "&Rejestarcja"
 
-#: apparmor_ycp_utils.ycp:164
+#: src/include/subdomain/apparmor_ycp_utils.ycp:164
 msgid "&Signin as existing user..."
 msgstr "&Logowanie jako istaniejący użytkownik"
 
-#: apparmor_ycp_utils.ycp:198
+#: src/include/subdomain/apparmor_ycp_utils.ycp:198
 msgid "Username is required"
 msgstr "Wymagana jest nazwa użytkownika"
 
-#: apparmor_ycp_utils.ycp:200
+#: src/include/subdomain/apparmor_ycp_utils.ycp:200
 msgid "Password is required"
 msgstr "Hasło jest wymagane."
 
-#: apparmor_ycp_utils.ycp:226
+#: src/include/subdomain/apparmor_ycp_utils.ycp:226
 msgid "Username required for registration."
 msgstr "Nazwa użytkownika jest wymagana do rejestracji"
 
-#: apparmor_ycp_utils.ycp:228
+#: src/include/subdomain/apparmor_ycp_utils.ycp:228
 msgid "Email address required for registration."
 msgstr "Adres e-mail jest wymagany do rejestracji"
 
-#: apparmor_ycp_utils.ycp:230
+#: src/include/subdomain/apparmor_ycp_utils.ycp:230
 msgid "Password is required for registration."
 msgstr "Hasło jest wymagane do rejestracji"
 
-#: apparmor_ycp_utils.ycp:232
+#: src/include/subdomain/apparmor_ycp_utils.ycp:232
 msgid "Passwords do not match. Please re-enter."
 msgstr "Hasła się nie zgadzają. Proszę wprowadzić ponownie."
 
-#: apparmor_ycp_utils.ycp:234
+#: src/include/subdomain/apparmor_ycp_utils.ycp:234
 msgid ""
 "Email address format invalid.\n"
 "Email address must be less than 129 characters \n"
@@ -864,266 +1193,311 @@ msgstr ""
 "być podany  w formacie \"nazwa@domena\". \n"
 "Proszę wprowadzić inny adres."
 
-#: apparmor_ycp_utils.ycp:285
+#: src/include/subdomain/apparmor_ycp_utils.ycp:285
 msgid "Local inactive profile"
 msgstr "Nieaktywny profil lokalny"
 
-#: apparmor_ycp_utils.ycp:287
+#: src/include/subdomain/apparmor_ycp_utils.ycp:287
 msgid "Profile created by user "
 msgstr "Profil stworzony przez użytkownika"
 
-#: apparmor_ycp_utils.ycp:289
+#: src/include/subdomain/apparmor_ycp_utils.ycp:289
 msgid "Local profile"
 msgstr "Profil lokalny"
 
-#: apparmor_ycp_utils.ycp:356
+#: src/include/subdomain/apparmor_ycp_utils.ycp:356
 msgid "Enter a changelog for the changes for "
 msgstr "Wprowadź opis zmian dla "
 
-#: apparmor_ycp_utils.ycp:357
+#: src/include/subdomain/apparmor_ycp_utils.ycp:357
 msgid " the selected profiles"
 msgstr " wybranych profilów"
 
-#: apparmor_ycp_utils.ycp:358
+#: src/include/subdomain/apparmor_ycp_utils.ycp:358
 msgid "Individual changelogs per profile"
 msgstr "Indywidualne opisy zmian dla każdego profilu"
 
-#: apparmor_ycp_utils.ycp:369 apparmor_ycp_utils.ycp:501
-#: apparmor_ycp_utils.ycp:510 apparmor_ycp_utils.ycp:520
-#: profile_dialogs.ycp:57 profile_dialogs.ycp:148 sd-config.ycp:182
+#: src/include/subdomain/apparmor_ycp_utils.ycp:369
+#: src/include/subdomain/apparmor_ycp_utils.ycp:501
+#: src/include/subdomain/apparmor_ycp_utils.ycp:510
+#: src/include/subdomain/apparmor_ycp_utils.ycp:520
+#: src/include/subdomain/profile_dialogs.ycp:59
+#: src/include/subdomain/profile_dialogs.ycp:277
+#: src/include/subdomain/sd-config.ycp:182
 msgid "&OK"
 msgstr "&OK"
 
-#: apparmor_ycp_utils.ycp:477
+#: src/include/subdomain/apparmor_ycp_utils.ycp:477
 msgid "&Don't ask again for unselected profiles"
 msgstr "Nie &pytaj ponownie dla niewybranych profili"
 
-#: apparmor_ycp_utils.ycp:542
+#: src/include/subdomain/apparmor_ycp_utils.ycp:542
 msgid "Profiles"
 msgstr "Profile"
 
-#: capabilities.ycp:21
+#: src/include/subdomain/capabilities.ycp:21
 msgid "<ul><li>In a system with the [_POSIX_CHOWN_RESTRICTED] option defined, this overrides the restriction of changing file ownership and group ownership.</li></ul>"
 msgstr "<ul><li>W systemie ze zdefiniowaną opcją [_POSIX_CHOWN_RESTRICTED], ignoruje ograniczenia zmiany własności pliku i własności grupy.</li></ul>"
 
-#: capabilities.ycp:27
+#: src/include/subdomain/capabilities.ycp:27
 msgid "<ul><li>Override all DAC access, including ACL execute access if [_POSIX_ACL] is defined. Excluding DAC access covered by CAP_LINUX_IMMUTABLE.</li></ul>"
 msgstr "<ul><li>Jeśli zdefiniowana jest opcja [_POSIX_ACL], ignoruje cały dostęp DAC, włącznie z dostępem wykonywania ACL. Nie dotyczy dostępu DAC, do którego odnosi się CAP_LINUX_IMMUTABLE.</li></ul>"
 
-#: capabilities.ycp:33
+#: src/include/subdomain/capabilities.ycp:33
 msgid "<ul><li>Overrides all DAC restrictions regarding read and search on files and directories, including ACL restrictions if [_POSIX_ACL] is defined. Excluding DAC access covered by CAP_LINUX_IMMUTABLE. </li></ul>"
 msgstr "<ul><li>Jeśli zdefiniowana jest opcja [_POSIX_ACL], ignoruje wszelkie ograniczenia DAC odnośnie odczytu i wyszukiwania plików oraz katalogów, włączając zdefiniowane ograniczenia ACL. Nie dotyczy dostępu DAC, do którego odnosi się CAP_LINUX_IMMUTABLE. </li></ul>"
 
-#: capabilities.ycp:39
+#: src/include/subdomain/capabilities.ycp:39
 msgid "<ul><li>Overrides all restrictions about allowed operations on files, where file owner ID must be equal to the user ID, except where CAP_FSETID is applicable. It doesn't override MAC and DAC restrictions. </li></ul>"
 msgstr "<ul><li>Ignoruje wszelkie ograniczenia dotyczące dozwolonych operacji na plikach, w przypadku których identyfikator (ID) właściciela musi być równy identyfikatorowi użytkownika, za wyjątkiem tych, dla których zastosowanie ma CAP_FSETID. Nie dotyczy ograniczeń MAC i DAC. </li></ul>"
 
-#: capabilities.ycp:45
+#: src/include/subdomain/capabilities.ycp:45
 msgid "<ul><li>Overrides the following restrictions that the effective user ID shall match the file owner ID when setting the S_ISUID and S_ISGID bits on that file; that the effective group ID (or one of the supplementary group IDs) shall match the file owner ID when setting the S_ISGID bit on that file; that the S_ISUID and S_ISGID bits are cleared on successful return from chown(2) (not implemented). </li></ul>"
 msgstr "<ul><li>Ignoruje poniższe ograniczenia: efektywny identyfikator użytkownika powinien pasować do identyfikatora właściciela pliku podczas ustawiania bitów S_ISUID i S_ISGID dla tego pliku; efektywny identyfikator grupy (lub jeden z dodatkowych identyfikatorów grupy) powinien pasować do identyfikatora właściciela pliku podczas ustawiania bitu S_ISGID dla tego pliku; bity S_ISUID i S_ISGID są zerowane po pomyślnym zakończeniu chown(2) (nie zaimplementowane). </li></ul>"
 
-#: capabilities.ycp:51
+#: src/include/subdomain/capabilities.ycp:51
 msgid "<ul><li>Overrides the restriction that the real or effective user ID of a process sending a signal must match the real or effective user ID of the process receiving the signal.</li></ul>"
 msgstr "<ul><li>Ignoruje następujące ograniczenie: rzeczywisty lub efektywny identyfikator właściciela procesu wysyłającego sygnał musi odpowiadać rzeczywistemu lub efektywnemu identyfikatorowi właściciela procesu odbierającego sygnał.</li></ul>"
 
-#: capabilities.ycp:57
+#: src/include/subdomain/capabilities.ycp:57
 msgid "<ul><li>Allows setgid(2) manipulation </li> <li> Allows setgroups(2) </li> <li> Allows forged gids on socket credentials passing. </li></ul>"
 msgstr "<ul> <li> Zezwala na przetwarzanie setgid(2) </li> <li> Zezwalal na setgroups(2) </li> <li> Allows forged gids on socket credentials passing. </li></ul>"
 
-#: capabilities.ycp:63
+#: src/include/subdomain/capabilities.ycp:63
 msgid "<ul><li>Allows setuid(2) manipulation (including fsuid) </li> <li> Allows forged pids on socket credentials passing. </li></ul>"
 msgstr "<ul> <li> Zezwala na przetwarzanie setuid(2) (włącznie z fsuid) </li> <li> Zezwala na forged pids on socket credentials passing. </li> </ul>"
 
-#: capabilities.ycp:69
+#: src/include/subdomain/capabilities.ycp:69
 msgid "<ul><li> Transfer any capability in your permitted set to any pid, remove any capability in your permitted set from any pid</li></ul>"
 msgstr "<ul><li> Umożliwia przekazanie uprawnienia z danego zestawu uprawnień do wybranego identyfikatora procesu pid, jak i usunięcie uprawnienia z danego zestawu uprawnień z wybranego identyfikatora procesu pid</li></ul>"
 
-#: capabilities.ycp:75
+#: src/include/subdomain/capabilities.ycp:75
 msgid "<ul><li>Allow modification of S_IMMUTABLE and S_APPEND file attributes</li></ul>"
 msgstr "<ul><li> Zezwala na modyfikację atrybutów plików S_IMMUTABLE oraz S_APPEND </li></ul>"
 
-#: capabilities.ycp:81
+#: src/include/subdomain/capabilities.ycp:81
 msgid "<ul><li>Allows binding to TCP/UDP sockets below 1024 </li> <li> Allows binding to ATM VCIs below 32</li></ul>"
 msgstr "<ul> <li> Zezwala na dowiązywanie do gniazd TCP/UDP poniżej 1024 </li> <li> Zezwala na dowiązywanie do VCI ATM poniżej 32 </li> </ul>"
 
-#: capabilities.ycp:87
+#: src/include/subdomain/capabilities.ycp:87
 msgid "<ul><li> Allow broadcasting, listen to multicast </li></ul>"
 msgstr "<ul><li> Zezwala na rozgłaszanie i nasłuchiwanie rozsyłania grupowego </li></ul>"
 
-#: capabilities.ycp:93
+#: src/include/subdomain/capabilities.ycp:93
 msgid "<ul><li> Allow interface configuration</li> <li> Allow administration of IP firewall, masquerading and accounting</li> <li> Allow setting debug option on sockets</li> <li> Allow modification of routing tables</li> <li> Allow setting arbitrary process / process group ownership on sockets</li> <li> Allow binding to any address for transparent proxying</li> <li> Allow setting TOS (type of service)</li> <li> Allow setting promiscuous mode</li> <li> Allow clearing driver statistics</li> <li> Allow multicasting</li> <li> Allow read/write of device-specific registers</li> <li> Allow activation of ATM control sockets </li></ul>"
 msgstr "<ul> <li> Zezwala na konfigurację interfejsu </li> <li> Zezwala na administrację zapory sieciowej IP, maskowanie i księgowanie </li> <li> Zezwala na ustawianie opcji debugowania gniazd </li> <li> Zezwala na modyfikowanie tablic routingu </li> <li> Zezwala na ustawianie dowolnego właściciela procesu / grupy procesów w gniazdach </li> <li> Zezwala na dowiązanie do dowolnego adresu, w celu przeźroczystego pośredniczenia (transparent proxying) </li> <li> Zezwala na ustawianie TOS (typ usługi) </li> <li> Zezwala na ustawianie trybu odbierania wszystkich ramek </li> <li> Zezwala na czyszczenie statystyk sterowników </li> <li> Zezwala na rozsyłanie grupowe </li> <li> Zezwala na odczyt / zapis rejestrów przeznaczonych dla konkretnych urządzeń (device-specific) </li> <li> Zezwala na aktywację gniazd kontrolnych ATM </li> </ul>"
 
-#: capabilities.ycp:99
+#: src/include/subdomain/capabilities.ycp:99
 msgid "<ul><li> Allow use of RAW sockets</li> <li> Allow use of PACKET sockets </li></ul>"
 msgstr "<ul> <li> Zezwala na użycie gniazd surowych (RAW) </li> <li> Zezwala na użycie gniazd PACKET </li> </ul>"
 
-#: capabilities.ycp:105
+#: src/include/subdomain/capabilities.ycp:105
 msgid "<ul><li> Allow locking of shared memory segments</li> <li> Allow mlock and mlockall (which doesn't really have anything to do with IPC) </li></ul>"
 msgstr "<ul> <li> Zezwala na blokadę segmentów pamięci współdzielonej </li> <li> Zezwala na mlock i mlockall (które w rzeczywistości nie dotyczą IPC) </li> </ul>"
 
-#: capabilities.ycp:111
+#: src/include/subdomain/capabilities.ycp:111
 msgid "<ul><li> Override IPC ownership checks </li></ul>"
 msgstr "<ul> <li> Ignoruj sprawdzanie właściciela IPC </li> </ul>"
 
-#: capabilities.ycp:117
+#: src/include/subdomain/capabilities.ycp:117
 msgid "<ul><li> Insert and remove kernel modules - modify kernel without limit</li> <li> Modify cap_bset </li></ul>"
 msgstr "<ul> <li> Wstawia i usuwa moduły jadra - umożliwia modyfikację jądra systemu bez ograniczeń </li> <li> Umożliwia modyfikację cap_bset </li> </ul>"
 
-#: capabilities.ycp:123
+#: src/include/subdomain/capabilities.ycp:123
 msgid "<ul><li> Allow ioperm/iopl access</li> <li> Allow sending USB messages to any device via /proc/bus/usb </li></ul>"
 msgstr "<ul> <li> Zezwala na ioperm/iopl access </li> <li> Zezwala na wysyłanie komunikatów USB do każdego napędu przez /proc/bus/usb </li> </ul>"
 
-#: capabilities.ycp:129
+#: src/include/subdomain/capabilities.ycp:129
 msgid "<ul><li> Allow use of chroot() </li></ul>"
 msgstr "<ul><li> Zezwala na użycie chroot() </li></ul>"
 
-#: capabilities.ycp:135
+#: src/include/subdomain/capabilities.ycp:135
 msgid "<ul><li> Allow ptrace() of any process </li></ul>"
 msgstr "<ul><li> Zezwala na wykonanie ptrace() dla każdego procesu </li></ul>"
 
-#: capabilities.ycp:141
+#: src/include/subdomain/capabilities.ycp:141
 msgid "<ul><li> Allow configuration of process accounting </li></ul>"
 msgstr "<ul><li> Zezwala na konfigurację księgowania procesów </li></ul>"
 
-#: capabilities.ycp:147
+#: src/include/subdomain/capabilities.ycp:147
 msgid "<ul><li> Allow configuration of the secure attention key</li> <li> Allow administration of the random device</li> <li> Allow examination and configuration of disk quotas</li> <li> Allow configuring the kernel's syslog (printk behaviour)</li> <li> Allow setting the domainname</li> <li> Allow setting the hostname</li> <li> Allow calling bdflush()</li> <li> Allow mount() and umount(), setting up new smb connection</li> <li> Allow some autofs root ioctls</li> <li> Allow nfsservctl</li> <li> Allow VM86_REQUEST_IRQ</li> <li> Allow to read/write pci config on alpha</li> <li> Allow irix_prctl on mips (setstacksize)</li> <li> Allow flushing all cache on m68k (sys_cacheflush)</li> <li> Allow removing semaphores</li> <li> Used instead of CAP_CHOWN to \"chown\" IPC message queues, semaphores and shared memory</li> <li> Allow locking/unlocking of shared memory segment</li> <li> Allow turning swap on/off</li> <li> Allow forged pids on socket credentials passing</li> <li> Allow setting readahead and flushing buffers on block devices</li> <li> Allow setting geometry in floppy driver</li> <li> Allow turning DMA on/off in xd driver</li> <li> Allow administration of md devices (mostly the above, but some extra ioctls)</li> <li> Allow tuning the ide driver</li> <li> Allow access to the nvram device</li> <li> Allow administration of apm_bios, serial and bttv (TV) device</li> <li> Allow manufacturer commands in isdn CAPI support driver</li> <li> Allow reading non-standardized portions of pci configuration space</li> <li> Allow DDI debug ioctl on sbpcd driver</li> <li> Allow setting up serial ports</li> <li> Allow sending raw qic-117 commands</li> <li> Allow enabling/disabling tagged queuing on SCSI controllers and sending arbitrary SCSI commands</li> <li> Allow setting encryption key on loopback filesystem </li></ul>"
 msgstr "<ul><li> Pozwól na konfiguracje klawisza bezpiecznego ostrzeżenia</li> <li> Pozwól na administracje losowych urządzeń</li> <li> Pozwól na rewizję i administrację limitów przestrzeni dysku</li> <li> Pozwól na konfigurację logów systemowych jądra(zachowanie printk)</li> <li> Pozwól na ustawianie nazwy domeny</li> <li> Pozwól na ustawianie nazy hosta</li> <li> Pozwól na użycie bdflush()</li> <li> Pozwól na użycie mount() i umount(), przy ustanawianiu nowego połączenia smb</li> <li> Pozwól na niektóre ioctls administratora autofs</li> <li> Pozwól na nfsservctl</li> <li> Pozwól na VM86_REQUEST_IRQ</li> <li> Pozwól na zapis/odczyt konfiguracji pci na alpha</li> <li> Pozwól na irix_prctl na mips (setstacksize)</li> <li> Pozwól na przeładowanie całej pamięci podręcznej na m68k (sys_cacheflush)</li> <li> Pozwól na usunięcie semaforów </li> <li> Użycie zamiast CAP_CHOWN do \"chown\" kolejki wiadomości IPC, semaforów i współdzielonej pamięci</li> <li> Pozwól na blokowanie/odblokowywanie współdzielonych segmentów pamięci </li> <li> Pozwól na włączanie/wyłączanie przestrzeni wymiany</li> <li> Pozwól na zmiane identyfikatorów procesów na uwierzytelnionych gniazdach</li> <li> Pozwól na ustawianie rozmiaru bloków odczytywania i przeładowanie bufora na urządzeniach blokowych</li> <li> Pozwól na ustawianie geometrii w sterowniku dyskietek</li> <li> Pozwól na włączanie/wyłączanie DMA w sterowniku xd</li> <li> Pozwól na administracje urządzeń md (mostly the above, but some extra ioctls)</li> <li> Pozwól na ustawianie sterownika ide</li> <li> Pozwól na dostęp do urządzenia nvram</li> <li> Pozwól na administrację apm_bios, serial i bttv (TV)</li> <li> Pozwól na komendy producentów w urządzeniach isdn wspierających sterownik CAPI</li> <li> Pozwól na czytanie niestandardowych porcji informacji z przestrzeni konfiguracji szyny pci</li> <li> Pozwól na debugowanie DDI ioctl na sterowniku sbpcd</li> <li> Pozwól na ustawianie portów szergowych</li> <li> Pozwól na wysyłanie komend raw qic-117</li> <li> Pozwól na włącznie/wyłączanie tagged queuing kontrolerów SCSI i wysyłanie arbitralnych komend SCSI</li> <li> Pozwól na ustawianie klucza szyfrującego na zapętlonych systemach plików </li></ul>"
 
-#: capabilities.ycp:153
+#: src/include/subdomain/capabilities.ycp:153
 msgid "<ul><li> Allow use of reboot() </li></ul>"
 msgstr "<ul><li> Zezwala na użycie reboot() </li></ul>"
 
-#: capabilities.ycp:159
+#: src/include/subdomain/capabilities.ycp:159
 msgid "<ul><li> Allow raising priority and setting priority on other (different UID) processes</li> <li> Allow use of FIFO and round-robin (realtime) scheduling on own processes and setting the scheduling algorithm used by another process.</li> <li> Allow setting cpu affinity on other processes </li></ul>"
 msgstr "<ul> <li> Zezwól na zwiększanie i ustawianie priorytetu innych procesów(różne UID)</li> <li> Zezwól na użycie kolejkowania FIFO i round-robin (czasu rzeczywistego) we własnych procesach i ustawienie algorytmu kolejkowania przez inny proces</li> <li> Zezwól na ustawienie przynależności innych procesów dla danego cpu</li> <ul>"
 
-#: capabilities.ycp:164
+#: src/include/subdomain/capabilities.ycp:164
 msgid "<ul><li> Override resource limits. Set resource limits.</li> <li> Override quota limits.</li> <li> Override reserved space on ext2 filesystem</li> <li> Modify data journaling mode on ext3 filesystem (uses journaling resources)</li> <li> NOTE: ext2 honors fsuid when checking for resource overrides, so you can override using fsuid too</li> <li> Override size restrictions on IPC message queues</li> <li> Allow more than 64hz interrupts from the real-time clock</li> <li> Override max number of consoles on console allocation</li> <li> Override max number of keymaps </li></ul>"
 msgstr "<ul> <li> Nadpisz i ustaw limity zasobów </li> <li> Nadpisz limity dyskowe </li> <li> Nadpisz zarezerwowaną przestrzeń w systemie plików ext2 </li> <li> Zmodyfikuj tryb księgowania danych w systemie plików ext3 (użyj inny typ księgowania)</li> <li> UWAGA: ext2 honoruje fsuid podczas sprawdzania nadpisania zasobów, tak więc można również nadpisywać używając fsuid. </li> <li> Nadpisz ograniczenia wielkości w kolejce wiadomości IPC</li> <li> Zezwól na więcej niż 64Hz przerwań z zegara czasu rzeczywistego</li> <li> Nadpisz maksymalną liczbę konsoli na alokowaniu konsol</li> <li> Nadpisz maksymalną liczbę map klawiszy</li> </ul>"
 
-#: capabilities.ycp:169
+#: src/include/subdomain/capabilities.ycp:169
 msgid "<ul><li> Allow manipulation of system clock</li> <li> Allow irix_stime on mips</li> <li> Allow setting the real-time clock </li></ul>"
 msgstr "<ul> <li> Zezwala na zmiany zegara systemowego </li> <li> Zezwala na irix_stime w mips </li> <li> Zezwala na ustawianie zegara czasu rzeczywistego </li> </ul>"
 
-#: capabilities.ycp:174
+#: src/include/subdomain/capabilities.ycp:174
 msgid "<ul><li> Allow configuration of tty devices</li> <li> Allow vhangup() of tty </li></ul>"
 msgstr "<ul> <li> Zezwala na konfigurację urządzeń tty </li> <li> Zezwala na vhangup() urządzeń tty </li> </ul>"
 
-#: capabilities.ycp:179
+#: src/include/subdomain/capabilities.ycp:179
 msgid "<ul><li> Allow the privileged aspects of mknod() </li></ul>"
 msgstr "<ul><li> Zezwala na uprzywilejowane aspekty mknod() </li></ul>"
 
-#: capabilities.ycp:184
+#: src/include/subdomain/capabilities.ycp:184
 msgid "<ul><li> Allow taking of leases on files </li></ul>"
 msgstr "<ul><li> Zezwala na przejmowanie dzierżawienia plików </li></ul>"
 
-#: config_complain.ycp:14
+#: src/include/subdomain/config_complain.ycp:14
 msgid "<p><b>Profile Mode Configuration</b><br>This tool allows you to set AppArmor profiles to either complain or enforce mode.</p><p>Complain mode is a profile training state that logs application activity, but does not restrict the application's behavior.</p><p>Profiles in enforce mode are protected by AppArmor.</p>"
 msgstr "<p><b>Konfiguracja trybu profilu</b><br>Narzędzie to zezwala na ustawienie profili programu AppArmor w tryb treningu lub ochrony.</p><p>W trybie <i>complain</i> (tryb  treningu) działanie aplikacji jest monitorowane i zapisywane w dzienniku, jednak w żaden sposób nie ograniczane, co pozwala przetestować profil.</p><p>Profile w trybie <i>enforce</i> (tryb ochrony) są chronione przez AppArmor.</p>"
 
-#: config_complain.ycp:28
+#: src/include/subdomain/config_complain.ycp:28
 msgid "Couldn't recognize profile name: "
 msgstr "Nie można rozpoznać nazwy profilu: "
 
-#: config_complain.ycp:40
+#: src/include/subdomain/config_complain.ycp:40
 msgid "Couldn't recognize mode: "
 msgstr "Nie można rozpoznać trybu: "
 
-#: config_complain.ycp:87
+#: src/include/subdomain/config_complain.ycp:87
 msgid "Show All Profiles"
 msgstr "Pokaż wszystkie profile"
 
-#: config_complain.ycp:88
+#: src/include/subdomain/config_complain.ycp:88
 msgid "Configure Mode for Active Profiles"
 msgstr "Konfiguruj tryb dla aktywnych profili"
 
-#: config_complain.ycp:91
+#: src/include/subdomain/config_complain.ycp:91
 msgid "Show Active Profiles"
 msgstr "Pokaż aktywne profile"
 
-#: config_complain.ycp:92
+#: src/include/subdomain/config_complain.ycp:92
 msgid "Configure Mode for All Profiles"
 msgstr "Konfiguruj tryb dla wszystkich profili"
 
-#: config_complain.ycp:103 profile_dialogs.ycp:717
+#: src/include/subdomain/config_complain.ycp:103
+#: src/include/subdomain/profile_dialogs.ycp:1039
 msgid "Profile Name"
 msgstr "Nazwa profilu"
 
-#: config_complain.ycp:103 reporting_archived_dialogs.ycp:56
-#: reporting_dialogues.ycp:526 reporting_dialogues.ycp:1130
-#: reporting_dialogues.ycp:1133 reporting_utils.ycp:239
+#: src/include/subdomain/config_complain.ycp:103
+#: src/include/subdomain/reporting_utils.ycp:271
 msgid "Mode"
 msgstr "Tryb"
 
-#: config_complain.ycp:108
+#: src/include/subdomain/config_complain.ycp:108
 msgid "Toggle Mode"
 msgstr "Przełącz tryb"
 
-#: config_complain.ycp:109
+#: src/include/subdomain/config_complain.ycp:109
 msgid "Set All to Enforce"
 msgstr "Wszystkie: enforce"
 
-#: config_complain.ycp:110
+#: src/include/subdomain/config_complain.ycp:110
 msgid "Set All to Complain"
 msgstr "Wszystkie: complain"
 
-#: config_complain.ycp:131
+#: src/include/subdomain/config_complain.ycp:131
 msgid "Profile Mode Configuration"
 msgstr "Konfiguracja trybu profilu"
 
-#: config_complain.ycp:131 config_complain.ycp:150 config_complain.ycp:156
-#: config_complain.ycp:166 config_complain.ycp:180
-#: reporting_archived_dialogs.ycp:154 reporting_dialogues.ycp:596
-#: reporting_dialogues.ycp:777 reporting_dialogues.ycp:822
-#: reporting_dialogues.ycp:940 reporting_dialogues.ycp:1197
-#: reporting_dialogues.ycp:1227 reporting_dialogues.ycp:1243
-#: reporting_dialogues.ycp:1255 reporting_dialogues.ycp:1266
-#: reporting_dialogues.ycp:1277 reporting_dialogues.ycp:1330
-#: reporting_dialogues.ycp:1356 reporting_dialogues.ycp:1377
-#: reporting_dialogues.ycp:1393 reporting_dialogues.ycp:1408
-#: reporting_dialogues.ycp:1416 reporting_dialogues.ycp:1425
-#: reporting_dialogues.ycp:1433 reporting_dialogues.ycp:1440
-#: reporting_dialogues.ycp:1559 reporting_dialogues.ycp:1567
-#: reporting_dialogues.ycp:1604 reporting_dialogues.ycp:1624
-#: reporting_dialogues.ycp:1634 reporting_dialogues.ycp:1641
-#: reporting_dialogues.ycp:1649 reporting_dialogues.ycp:1657
-#: reporting_dialogues.ycp:2423 reporting_dialogues.ycp:2473
+#: src/include/subdomain/config_complain.ycp:131
+#: src/include/subdomain/config_complain.ycp:150
+#: src/include/subdomain/config_complain.ycp:156
+#: src/include/subdomain/config_complain.ycp:166
+#: src/include/subdomain/config_complain.ycp:180
+#: src/include/subdomain/reporting_archived_dialogs.ycp:134
+#: src/include/subdomain/reporting_dialogues.ycp:541
+#: src/include/subdomain/reporting_dialogues.ycp:682
+#: src/include/subdomain/reporting_dialogues.ycp:727
+#: src/include/subdomain/reporting_dialogues.ycp:846
+#: src/include/subdomain/reporting_dialogues.ycp:1141
+#: src/include/subdomain/reporting_dialogues.ycp:1170
+#: src/include/subdomain/reporting_dialogues.ycp:1186
+#: src/include/subdomain/reporting_dialogues.ycp:1200
+#: src/include/subdomain/reporting_dialogues.ycp:1212
+#: src/include/subdomain/reporting_dialogues.ycp:1224
+#: src/include/subdomain/reporting_dialogues.ycp:1277
+#: src/include/subdomain/reporting_dialogues.ycp:1305
+#: src/include/subdomain/reporting_dialogues.ycp:1330
+#: src/include/subdomain/reporting_dialogues.ycp:1347
+#: src/include/subdomain/reporting_dialogues.ycp:1362
+#: src/include/subdomain/reporting_dialogues.ycp:1370
+#: src/include/subdomain/reporting_dialogues.ycp:1379
+#: src/include/subdomain/reporting_dialogues.ycp:1387
+#: src/include/subdomain/reporting_dialogues.ycp:1394
+#: src/include/subdomain/reporting_dialogues.ycp:1512
+#: src/include/subdomain/reporting_dialogues.ycp:1515
+#: src/include/subdomain/reporting_dialogues.ycp:1523
+#: src/include/subdomain/reporting_dialogues.ycp:1560
+#: src/include/subdomain/reporting_dialogues.ycp:1579
+#: src/include/subdomain/reporting_dialogues.ycp:1589
+#: src/include/subdomain/reporting_dialogues.ycp:1596
+#: src/include/subdomain/reporting_dialogues.ycp:1605
+#: src/include/subdomain/reporting_dialogues.ycp:1614
+#: src/include/subdomain/reporting_dialogues.ycp:2341
+#: src/include/subdomain/reporting_dialogues.ycp:2391
 msgid "Back"
 msgstr "Wstecz"
 
-#: config_complain.ycp:131 config_complain.ycp:150 config_complain.ycp:156
-#: config_complain.ycp:166 config_complain.ycp:180 profile_dialogs.ycp:504
-#: reporting_dialogues.ycp:777 reporting_dialogues.ycp:1197
-#: reporting_dialogues.ycp:1227 reporting_dialogues.ycp:1243
-#: reporting_dialogues.ycp:1255 reporting_dialogues.ycp:1266
-#: reporting_dialogues.ycp:1277 reporting_dialogues.ycp:1330
-#: reporting_dialogues.ycp:1356 reporting_dialogues.ycp:1377
-#: reporting_dialogues.ycp:1393 reporting_dialogues.ycp:1408
-#: reporting_dialogues.ycp:1416 reporting_dialogues.ycp:1425
-#: reporting_dialogues.ycp:1433 reporting_dialogues.ycp:1440
-#: reporting_dialogues.ycp:1559 reporting_dialogues.ycp:1567
-#: reporting_dialogues.ycp:1604 reporting_dialogues.ycp:1624
-#: reporting_dialogues.ycp:1634 reporting_dialogues.ycp:1641
-#: reporting_dialogues.ycp:1649 reporting_dialogues.ycp:1657
-#: reporting_dialogues.ycp:2473 sd-config.ycp:383
+#: src/include/subdomain/config_complain.ycp:131
+#: src/include/subdomain/config_complain.ycp:150
+#: src/include/subdomain/config_complain.ycp:156
+#: src/include/subdomain/config_complain.ycp:166
+#: src/include/subdomain/config_complain.ycp:180
+#: src/include/subdomain/profile_dialogs.ycp:798
+#: src/include/subdomain/reporting_dialogues.ycp:682
+#: src/include/subdomain/reporting_dialogues.ycp:1141
+#: src/include/subdomain/reporting_dialogues.ycp:1170
+#: src/include/subdomain/reporting_dialogues.ycp:1187
+#: src/include/subdomain/reporting_dialogues.ycp:1200
+#: src/include/subdomain/reporting_dialogues.ycp:1212
+#: src/include/subdomain/reporting_dialogues.ycp:1224
+#: src/include/subdomain/reporting_dialogues.ycp:1277
+#: src/include/subdomain/reporting_dialogues.ycp:1306
+#: src/include/subdomain/reporting_dialogues.ycp:1331
+#: src/include/subdomain/reporting_dialogues.ycp:1347
+#: src/include/subdomain/reporting_dialogues.ycp:1362
+#: src/include/subdomain/reporting_dialogues.ycp:1370
+#: src/include/subdomain/reporting_dialogues.ycp:1379
+#: src/include/subdomain/reporting_dialogues.ycp:1387
+#: src/include/subdomain/reporting_dialogues.ycp:1394
+#: src/include/subdomain/reporting_dialogues.ycp:1512
+#: src/include/subdomain/reporting_dialogues.ycp:1515
+#: src/include/subdomain/reporting_dialogues.ycp:1523
+#: src/include/subdomain/reporting_dialogues.ycp:1560
+#: src/include/subdomain/reporting_dialogues.ycp:1579
+#: src/include/subdomain/reporting_dialogues.ycp:1589
+#: src/include/subdomain/reporting_dialogues.ycp:1596
+#: src/include/subdomain/reporting_dialogues.ycp:1605
+#: src/include/subdomain/reporting_dialogues.ycp:1614
+#: src/include/subdomain/reporting_dialogues.ycp:2391
+#: src/include/subdomain/sd-config.ycp:383
 msgid "&Done"
 msgstr "Za&kończ"
 
-#: config_complain.ycp:150 config_complain.ycp:156 config_complain.ycp:166
-#: config_complain.ycp:180
+#: src/include/subdomain/config_complain.ycp:150
+#: src/include/subdomain/config_complain.ycp:156
+#: src/include/subdomain/config_complain.ycp:166
+#: src/include/subdomain/config_complain.ycp:180
 msgid "Configure Profile Mode"
 msgstr "Konfiguruj tryb profilu"
 
-#: config_complain.ycp:185
+#: src/include/subdomain/config_complain.ycp:185
 msgid "Please select an action to perform from the buttons below."
 msgstr "Proszę wybrać działanie do wykonania spośród przycisków poniżej."
 
-#: event_notification_helptext.ycp:17
+#. START Help Section
+#. ***********************************************************
+#: src/include/subdomain/event_notification_helptext.ycp:17
 msgid "The Security Event Notification screen enables you to setup email alerts for security events. In the following steps, specify how often alerts are sent, who receives the alert, and how severe the security event must be to send an alert.  <br><br><b>Notification Types</b><br> <b>Terse Notification:</b> Terse notification summarizes the total number of system events without providing details.  <br>For example:<br> dhcp-101.up.wirex.com has had 10 security events since Tue Oct 12 11:10:00 2004<br><br> <b>Summary Notification:</b> The Summary notification displays the logged AppArmor security events, and lists the number of individual occurrences, including the date of the last occurrence.  <br>For example:<br> SubDomain: PERMITTING access to capability 'setgid' (httpd2-prefork(6347) profile /usr/sbin/httpd2-prefork active /usr/sbin/httpd2-prefork) 2 times, the latest at Sat Oct  9 16:05:54 2004.<br><br> <b>Verbose Notification:</b> The Verbose notification displays unmodified, logged AppArmor security events. It tells you every time an event occurs and writes a new line in the Verbose log. These security events include the date and time the event occurred, when the application  profile permits access as well as rejects access, and the type of file permission access that is permitted or rejected. Verbose Notification also reports several messages that the logprof tool uses to interpret profiles.  <br>For example:<br> Oct  9 15:40:31 SubDomain: PERMITTING r access to /etc/apache2/httpd.conf (httpd2-prefork(6068) profile /usr/sbin/httpd2-prefork active /usr/sbin/httpd2-prefork) <br<br> <ol> <li> For each notification type that you would like enabled, select the frequency of notification that you would like.  For example, if you select <b>1 day</b> from the pull-down list, you will be sent daily notifications of security events, if they occur.</li> <br><br> <li> Enter the email address of those who should receive the Terse, Summary, or Verbose notifications. </li><br><br> <li>Select the lowest <b>severity level</b> for which a notification should be sent. Security events will be logged and the notifications will be sent at the time indicated by the interval when events are equal or greater than the selected severity level. If the interval is 1 day, the notification will be sent daily, if security events occur.<br><br> <b>Severity Levels:</b> These are numbered one through ten, ten being the most severe security incident. The <b>severity.db</b> file defines the severity level of potential security events. The severity levels are determined by the importance of different security events, such as certain resources accessed or services denied.</li> <li>Select <b>Include unknown security events</b> if you would like to include events that are not rated with a severity number.</li> </ol>"
 msgstr "System powiadamiania o naruszeniach bezpieczeństwa wysyła e-mail z ostrzeżeniami o tych naruszeniach. Proszę określić, jak często ostrzeżenia mają być wysyłane, kto ma je otrzymywać oraz jak poważne musi byc naruszenie, aby system wysłał ostrzeżenie.<br><br><b>Rodzaje powiadomień</b><br><b>Powiadomienia zwięzłe:</b> Podają całkowitą liczbę naruszeń bez podawania szczegółów. <br>Na przykład:</br>dhcp-101.up.wirex.com has had 10 security events since Tue Oct 12 11:10:00 2004<br>(dhcp-101.up.wirex.com zanotował 10 naruszeń bezpieczeństwa od wtorku 12 października, o godziny 11:10:00)<br><br> <b>Powiadomienia podsumowujące:</b> Wyświetlają listę zarejestrowanych przez AppArmor naruszeń bezpieczeństwa i podają liczbę wystąpień każdego naruszenia, a także datę ostatniego wystąpienia.<br>For example:<br> SubDomain: PERMITTING access to capability 'setgid' (httpd2-prefork(6347) profile /usr/sbin/httpd2-prefork active /usr/sbin/httpd2-prefork) 2 times, the latest at Sat Oct  9 16:05:54 2004.<br>(Poddomena: Pozwolenie na wykonanie \"setgid\" (httpd2-prefork(6347) profile /usr/sbin/httpd2-prefork active /usr/sbin/httpd2-prefork): 2 razy, ostatni raz: sobota 9 października 2004 o 16:05:54.)<br><br> <b>Powiadomienia wyczerpujące:</b> Wyświetlają niezmienioną listę zarejestrowanych przez AppArmor naruszeń. Powiadomienia przesyłane są za każdym razem, gdy wystąpi naruszenie. Zawierają one datę i godzinę wystąpienia naruszenia, informację o tym, czy profil aplikacji zezwala na takie zdarzenie oraz uprawnienia, które zostały zaakceptowane lub nie.<br>Na przykład:<br> Oct  9 15:40:31 SubDomain: PERMITTING r access to /etc/apache2/httpd.conf (httpd2-prefork(6068) profile /usr/sbin/httpd2-prefork active /usr/sbin/httpd2-prefork) <br>(9 października 15:40:31 Poddomena: ZEZWOLENIE na dostęp \"do odczytu\" do pliku /etc/apache2/httpd.conf (httpd2-prefork(6068) profile /usr/sbin/httpd2-prefork active /usr/sbin/httpd2-prefork)<br><br> <ol><li>Dla każdego rodzaju powiadomień, który zostanie wybrany, należy określć częstotliwość wysyłania powiadomień. Na przykład, wybranie z rozwijanej listy opcji <b>1 dzień</b> spowoduje, że powiadomienia będą wysyłane codziennie, o ile tylko wystąpią naruszenia bezpieczeństwa.</li><br><br><li>Następnie należy podać adresy e-mail osób, która mają otrzymywac powiadomienia.</li><br><br><li>W polu <b>waga naruszenia</b> należy określić, jak poważne musi być naruszenie, aby zostało wysłane powiadomienie. Powiadomienia będą wysyłane, jeśli waga naruszenia będzie równa bądź większa od wagi podanej w tym polu.<br><br><b>Wagi naruszeń</b> zawierają się w przedziale od 1 do 10, gdzie 10 oznacza najpoważniejsze naruszenie bezpieczeństwa. Plik <b>severity.db</b> określa wagi dla potencjalnych naruszeń bezpieczeństwa. Wagi definiowane są na podstawie zagrożeń, jakie stwarzają różne zdarzenia systemowe, takie jak dostęp do plików i usług.</li><li>Aby otrzymywać powiadomienia o naruszeniach, którym nie zostanie przypisana żadna waga, należy wybrać opcję <b>Dołącz nieznane naruszenia bezpieczeństwa</b>.</li></ol>"
 
-#: profile_dialogs.ycp:34
+#: src/include/subdomain/profile_dialogs.ycp:36
 msgid ""
 "<b>Capability Selection</b>.\n"
 "                               <br>Select desired capabilities for this profile. \n"
@@ -1134,85 +1508,163 @@ msgstr ""
 "                               Aby otrzymać informacje dotyczące tych uprawnień należy \n"
 "                               zaznaczyć nazwę uprawnienia."
 
-#: profile_dialogs.ycp:37
+#: src/include/subdomain/profile_dialogs.ycp:39
 msgid "Capabilities enabled for the profile"
 msgstr "Uprawnienia włączone dla tego profilu"
 
-#: profile_dialogs.ycp:48
+#: src/include/subdomain/profile_dialogs.ycp:50
 msgid "Capabilities"
 msgstr "Uprawnienia"
 
-#: profile_dialogs.ycp:119
+#. de-i18n
+#. ************************************************
+#. map<string,string> Settings = $[ ];
+#. Cheap & easy way to give default value to ComboBox
+#: src/include/subdomain/profile_dialogs.ycp:120
+#: src/include/subdomain/profile_dialogs.ycp:146
+#: src/include/subdomain/reporting_archived_dialogs.ycp:102
+#: src/include/subdomain/reporting_dialogues.ycp:28
+#: src/include/subdomain/reporting_dialogues.ycp:70
+#: src/include/subdomain/reporting_dialogues.ycp:83
+#: src/include/subdomain/reporting_dialogues.ycp:84
+#: src/include/subdomain/reporting_dialogues.ycp:202
+#: src/include/subdomain/reporting_dialogues.ycp:245
+#: src/include/subdomain/reporting_dialogues.ycp:301
+#: src/include/subdomain/reporting_dialogues.ycp:395
+#: src/include/subdomain/reporting_dialogues.ycp:843
+#: src/include/subdomain/reporting_dialogues.ycp:848
+#: src/include/subdomain/reporting_dialogues.ycp:947
+#: src/include/subdomain/reporting_dialogues.ycp:949
+#: src/include/subdomain/reporting_dialogues.ycp:950
+#: src/include/subdomain/reporting_dialogues.ycp:1647
+#: src/include/subdomain/reporting_dialogues.ycp:1660
+#: src/include/subdomain/reporting_dialogues.ycp:1701
+#: src/include/subdomain/reporting_dialogues.ycp:1702
+#: src/include/subdomain/reporting_dialogues.ycp:1703
+#: src/include/subdomain/reporting_dialogues.ycp:1748
+#: src/include/subdomain/reporting_dialogues.ycp:1749
+#: src/include/subdomain/reporting_dialogues.ycp:1828
+#: src/include/subdomain/reporting_dialogues.ycp:2032
+#: src/include/subdomain/reporting_dialogues.ycp:2046
+#: src/include/subdomain/reporting_dialogues.ycp:2074
+#: src/include/subdomain/reporting_dialogues.ycp:2083
+#: src/include/subdomain/reporting_dialogues.ycp:2087
+#: src/include/subdomain/reporting_dialogues.ycp:2101
+#: src/include/subdomain/reporting_dialogues.ycp:2102
+#: src/include/subdomain/reporting_dialogues.ycp:2103
+#: src/include/subdomain/reporting_utils.ycp:332
+#: src/include/subdomain/reporting_utils.ycp:448
+msgid "All"
+msgstr "Wszystkie"
+
+#: src/include/subdomain/profile_dialogs.ycp:164
+msgid "Network Family"
+msgstr "Grupa sieciowa"
+
+#: src/include/subdomain/profile_dialogs.ycp:171
+msgid "Socket Type"
+msgstr "Typ gniazda"
+
+#: src/include/subdomain/profile_dialogs.ycp:179
+#: src/include/subdomain/reporting_dialogues.ycp:219
+#: src/include/subdomain/reporting_dialogues.ycp:264
+#: src/include/subdomain/reporting_dialogues.ycp:2016
+#: src/include/subdomain/reporting_utils.ycp:132
+#: src/include/subdomain/reporting_utils.ycp:285
+#: src/include/subdomain/reporting_utils.ycp:341
+#: src/include/subdomain/reporting_utils.ycp:455
+msgid "&Save"
+msgstr "&Zapisz"
+
+#: src/include/subdomain/profile_dialogs.ycp:246
 msgid "Profile Entry For "
 msgstr "Profil dla"
 
-#: profile_dialogs.ycp:123
+#: src/include/subdomain/profile_dialogs.ycp:250
 msgid "Enter or modify Filename"
 msgstr "Nazwa pliku"
 
-#: profile_dialogs.ycp:128 profile_dialogs.ycp:482
+#: src/include/subdomain/profile_dialogs.ycp:255
+#: src/include/subdomain/profile_dialogs.ycp:776
 msgid "Permissions"
 msgstr "Prawa dostępu"
 
-#: profile_dialogs.ycp:129 reporting_utils.ycp:301
+#: src/include/subdomain/profile_dialogs.ycp:256
+#: src/include/subdomain/reporting_utils.ycp:333
 msgid "Read"
 msgstr "Odczyt"
 
-#: profile_dialogs.ycp:130 reporting_utils.ycp:302
+#: src/include/subdomain/profile_dialogs.ycp:257
+#: src/include/subdomain/reporting_utils.ycp:334
 msgid "Write"
 msgstr "Zapis"
 
-#: profile_dialogs.ycp:131 reporting_utils.ycp:303
+#: src/include/subdomain/profile_dialogs.ycp:258
+#: src/include/subdomain/reporting_utils.ycp:335
 msgid "Link"
 msgstr "Linkowanie"
 
-#: profile_dialogs.ycp:132
+#: src/include/subdomain/profile_dialogs.ycp:259
+#, fuzzy
+msgid "Append"
+msgstr "Kontrola aplikacji"
+
+#: src/include/subdomain/profile_dialogs.ycp:260
+#, fuzzy
+msgid "Lock"
+msgstr "CapsLock!"
+
+#: src/include/subdomain/profile_dialogs.ycp:261
 msgid "MMap PROT_EXEC"
 msgstr "MMap PROT_EXEC"
 
-#: profile_dialogs.ycp:133 reporting_utils.ycp:304
+#: src/include/subdomain/profile_dialogs.ycp:262
+#: src/include/subdomain/reporting_utils.ycp:336
 msgid "Execute"
 msgstr "Wykonanie"
 
-#: profile_dialogs.ycp:134
+#: src/include/subdomain/profile_dialogs.ycp:263
 msgid "Inherit"
 msgstr "Dziedziczenie"
 
-#: profile_dialogs.ycp:135 reporting_archived_dialogs.ycp:56
-#: reporting_dialogues.ycp:526 reporting_dialogues.ycp:772
-#: reporting_dialogues.ycp:1130 reporting_dialogues.ycp:1133
-#: reporting_dialogues.ycp:1137 reporting_utils.ycp:211
-#: reporting_utils.ycp:234
+#: src/include/subdomain/profile_dialogs.ycp:264
+#: src/include/subdomain/reporting_dialogues.ycp:677
+#: src/include/subdomain/reporting_dialogues.ycp:1079
+#: src/include/subdomain/reporting_utils.ycp:115
+#: src/include/subdomain/reporting_utils.ycp:243
+#: src/include/subdomain/reporting_utils.ycp:266
 msgid "Profile"
 msgstr "Profil"
 
-#: profile_dialogs.ycp:136
+#: src/include/subdomain/profile_dialogs.ycp:265
 msgid "Profile Clean Exec"
 msgstr "Clean Exec profilu"
 
-#: profile_dialogs.ycp:137
+#: src/include/subdomain/profile_dialogs.ycp:266
 msgid "Unconstrained"
 msgstr "Nieograniczony"
 
-#: profile_dialogs.ycp:138
+#: src/include/subdomain/profile_dialogs.ycp:267
 msgid "Unconstrained Clean Exec"
 msgstr "Nieograniczony Clean Exec"
 
-#: profile_dialogs.ycp:261 reporting_dialogues.ycp:1004
-#: reporting_dialogues.ycp:1232 reporting_dialogues.ycp:1952
-#: reporting_dialogues.ycp:2240
+#: src/include/subdomain/profile_dialogs.ycp:446
+#: src/include/subdomain/reporting_dialogues.ycp:910
+#: src/include/subdomain/reporting_dialogues.ycp:1175
+#: src/include/subdomain/reporting_dialogues.ycp:1869
+#: src/include/subdomain/reporting_dialogues.ycp:2156
 msgid "Select Directory"
 msgstr "Proszę wybrać katalog"
 
-#: profile_dialogs.ycp:263
+#: src/include/subdomain/profile_dialogs.ycp:448
 msgid "Select File"
 msgstr "Proszę wybrać plik"
 
-#: profile_dialogs.ycp:311
+#: src/include/subdomain/profile_dialogs.ycp:502
 msgid "Entry will not added. Entry name or permissions not defined."
 msgstr "Wpis nie zostanie dodany. Nazwa wpisu albo zezwolenia nie są zdefiniowane."
 
-#: profile_dialogs.ycp:381
+#: src/include/subdomain/profile_dialogs.ycp:673
 msgid ""
 "Please enter the name of the Hat that you would like \n"
 "to add to the profile"
@@ -1220,20 +1672,15 @@ msgstr ""
 "Proszę podać nazwę podprofilu, który ma być\n"
 "dodany do profilu."
 
-#: profile_dialogs.ycp:386
+#: src/include/subdomain/profile_dialogs.ycp:678
 msgid "&Hat name to add"
 msgstr "Nazwa po&dprofilu do dodania"
 
-#: profile_dialogs.ycp:395
+#: src/include/subdomain/profile_dialogs.ycp:687
 msgid "&Create Hat"
 msgstr "&Utwórz podprofil"
 
-#: profile_dialogs.ycp:396 reporting_utils.ycp:99 reporting_utils.ycp:252
-#: ag_genprof:75
-msgid "&Abort"
-msgstr "&Przerwij"
-
-#: profile_dialogs.ycp:410
+#: src/include/subdomain/profile_dialogs.ycp:702
 msgid ""
 "You have not given a name for the hat you want to add.\n"
 "Please \n"
@@ -1244,131 +1691,143 @@ msgstr ""
 "\t\t\twprowadzić nazwę podprofilu, w celu utworzenia nowego \n"
 "podprofilu, albo nacisnąć przycisk \"Anuluj\", aby wyjść z kreatora."
 
-#: profile_dialogs.ycp:413
+#: src/include/subdomain/profile_dialogs.ycp:705
 msgid "The profile already contains the provided hat name.  Please enter a different name to try again, or press Abort to cancel this wizard."
 msgstr "Ten profil już zawiera nadaną nazwę podprofilu. Proszę wprowadzić inną nazwę, aby spróbować ponownie, albo nacisnąć przycisk \"Anuluj\", aby wyjść z kreatora."
 
-#: profile_dialogs.ycp:445
+#: src/include/subdomain/profile_dialogs.ycp:736
 msgid "In this form you can view and modify the contents of an individual profile. For existing entries you can double click the permissions to access a modification dialog.<p>"
 msgstr "W tym oknie można dokonać przeglądu oraz modyfikacji zawartości poszczególnych profili. W celu uzyskania dostępu do okna dialogowego modyfikacji należy dwukrotnie nacisnąć myszą żądane uprawnienie.<p>"
 
-#: profile_dialogs.ycp:446
-msgid "<b>Permission Definitions:</b><br><code> r - read <br> w - write<br>l - link<br>m - mmap PROT_EXEC<br>x - execute<br> i - inherit<br> p - discrete profile<br> P - discrete profile <br>      (*clean exec)<br> u - unconstrained<br> U -unconstrained<br>      (*clean exec)</code><p>"
+#: src/include/subdomain/profile_dialogs.ycp:737
+#, fuzzy
+msgid ""
+"<b>Permission Definitions:</b><br><code> r - read <br> w -\n"
+"   write<br>l - link<br>m - mmap PROT_EXEC<br>k - file locking<br>a - file append<br>x - execute<br> i - inherit<br> p - discrete profile<br> P - discrete profile <br>      (*clean exec)<br> u - unconstrained<br> U -unconstrained<br>      (*clean exec)</code><p>"
 msgstr "<b>Określenia uprawnień:</b><br><code> r - odczyt <br> w - zapis <br>  l - tworzenie dowiązań <br> m - wykonywanie mmap z PROT_EXEC <br> x - wykonywanie <br>  i - wykonywanie dziedziczone <br> p - wykonywanie nieciągłe <br>  P - wykonywanie nieciągłe <br>       (*wykonywanie czyste) <br>  u - wykonywanie nieogranuiczone <br>  U - wykonywanie nieogranuiczone <br>       (*wykonywanie czyste) </code><p> "
 
-#: profile_dialogs.ycp:447
+#: src/include/subdomain/profile_dialogs.ycp:739
 msgid "<b>Add Entry:</b><br>Select the type of resource to add from the drop down list.<p>"
 msgstr "<b>Dodaj pozycję:</b><br> Proszę zaznaczyć typ zasobu, aby dodać go z z listy rozwijanej.<p>"
 
-#: profile_dialogs.ycp:448
+#: src/include/subdomain/profile_dialogs.ycp:740
 msgid "<ul><li><b>File</b><br>Add a file entry to this profile</li>"
 msgstr "<ul><li><b>Plik</b><br> Dodanie pliku do tego profilu</li>"
 
-#: profile_dialogs.ycp:449
+#: src/include/subdomain/profile_dialogs.ycp:741
 msgid "<li><b>Directory</b><br>Add a directory entry to this profile</li>"
 msgstr "<li><b>Katalog</b><br> Dodanie katalogu do tego profilu</li>"
 
-#: profile_dialogs.ycp:450
+#: src/include/subdomain/profile_dialogs.ycp:742
 msgid "<li><b>Capability</b><br>Add a capability entry to this profile</li>"
 msgstr "<li><b>Uprawnienie</b><br> Dodanie uprawnienia do tego profilu</li>"
 
-#: profile_dialogs.ycp:451
+#: src/include/subdomain/profile_dialogs.ycp:743
 msgid "<li><b>Include</b><br>Add an include entry to this profile. This option includes the profile entry contents of another file in this profile at load time.</li>"
 msgstr "<li><b>Załącznik</b><br> Dodanie pozycji załącznika do tego profilu. Opcja ta powoduje dołączenie do tego profilu podczas wczytywania zawartości innego pliku profilu.</li>"
 
-#: profile_dialogs.ycp:452
+#: src/include/subdomain/profile_dialogs.ycp:744
+msgid "<li><b>Network Entry</b><br>Add a network rule entry to this profile. This option will allow you to specificy network access privileges for the profile. You may specify a network address family and socket type.</li>"
+msgstr ""
+
+#: src/include/subdomain/profile_dialogs.ycp:745
 msgid "<li><b>Hat</b><br>Add a sub-profile for this profile - called a Hat. This option is analagous to manually creating a new profile, which can selected during execution only in the context of being asked for by a <b>changehat aware</b> application. For more information on changehat please see <b>man changehat</b> on your system or the Novell AppArmor User's Guide.</li>"
 msgstr "<li><b>Podprofil</b><br> Dodanie do tego profilu podprofilu (zwanego 'Hat'). Opcja ta jest analogiczna do ręcznego tworzenia nowego profilu, which can selected during execution only in the context of being asked for by a <b>changehat aware</b> application. Więcej informacji odnośnie 'changehat' znaleźć można w podręczniku systemowym - <b>man changehat</b>, albo w Podręczniku użytkownika Novell AppArmor.</li>"
 
-#: profile_dialogs.ycp:453
+#: src/include/subdomain/profile_dialogs.ycp:746
 msgid "</ul><p><b>Edit Entry:</b><br>Edit the selected entry.<p>"
 msgstr "</ul><p><b>Edytuj pozycje profilu:</b><br>Edycja zaznaczonych pozycji.<p>"
 
-#: profile_dialogs.ycp:454
+#: src/include/subdomain/profile_dialogs.ycp:747
 msgid "<b>Delete Entry:</b><br>Removes the selected entry from this profile.<p>"
 msgstr "<b>Usuń pozycję profilu:</b><br>Usunięcie zaznaczonej pozycji z tego profilu.<p>"
 
-#: profile_dialogs.ycp:455
+#: src/include/subdomain/profile_dialogs.ycp:748
 msgid "<b>*Clean Exec</b><br>The Clean Exec option for the discrete profile and unconstrained execute permissions provide added security by stripping the enviroment that is inherited by the child program of specific variables. These variables are:"
 msgstr "<b>*Clean Exec</b><br>Opcja Clean Exec uprawnień do profilu nieciągłego i nieograniczonego wykonywania zapewnia dodatkowe bezpieczeństwo przez równoległy zapis środowiska, dziedziczonego przez program potomny albo określone zmienne. Tymi zmiennymi są:"
 
-#: profile_dialogs.ycp:460
+#: src/include/subdomain/profile_dialogs.ycp:753
 msgid "&File"
 msgstr "&Plik"
 
-#: profile_dialogs.ycp:461
+#: src/include/subdomain/profile_dialogs.ycp:754
+#, fuzzy
+msgid "Network &Rule"
+msgstr "&Tryb sieciowy"
+
+#: src/include/subdomain/profile_dialogs.ycp:755
 msgid "&Directory"
 msgstr "&Katalog"
 
-#: profile_dialogs.ycp:462
+#: src/include/subdomain/profile_dialogs.ycp:756
 msgid "&Capability"
 msgstr "&Uprawnienie"
 
-#: profile_dialogs.ycp:463
+#: src/include/subdomain/profile_dialogs.ycp:757
 msgid "&Include File"
 msgstr "Plik &załącznika"
 
-#: profile_dialogs.ycp:470
+#: src/include/subdomain/profile_dialogs.ycp:764
 msgid "AppArmor profile "
 msgstr "Profil AppArmor"
 
-#: profile_dialogs.ycp:472
+#: src/include/subdomain/profile_dialogs.ycp:766
 msgid "&Hat"
 msgstr "Po&dprofil"
 
-#: profile_dialogs.ycp:473
+#: src/include/subdomain/profile_dialogs.ycp:767
 msgid "AppArmor profile for "
 msgstr "Profil AppArmor dla"
 
-#: profile_dialogs.ycp:482
+#: src/include/subdomain/profile_dialogs.ycp:776
 msgid "File Name"
 msgstr "Nazwa pliku"
 
-#: profile_dialogs.ycp:487
+#: src/include/subdomain/profile_dialogs.ycp:781
 msgid "Add Entry"
 msgstr "Dodaj pozycję"
 
-#: profile_dialogs.ycp:488
+#: src/include/subdomain/profile_dialogs.ycp:782
 msgid "&Edit Entry"
 msgstr "&Edytuj pozycję"
 
-#: profile_dialogs.ycp:489
+#: src/include/subdomain/profile_dialogs.ycp:783
 msgid "&Delete Entry"
 msgstr "&Usuń pozycję"
 
-#: profile_dialogs.ycp:499
+#: src/include/subdomain/profile_dialogs.ycp:793
 msgid "AppArmor Hat Dialog"
 msgstr "Podprofil AppArmor"
 
-#: profile_dialogs.ycp:502
+#: src/include/subdomain/profile_dialogs.ycp:796
 msgid "AppArmor Profile Dialog"
 msgstr "Profil AppArmor"
 
-#: profile_dialogs.ycp:504
+#: src/include/subdomain/profile_dialogs.ycp:798
 msgid "&Back"
 msgstr "&Wstecz"
 
-#: profile_dialogs.ycp:532
+#: src/include/subdomain/profile_dialogs.ycp:823
 msgid "Include entries can not be edited. Please select add or delete to manage Include entries."
 msgstr "Nie można edytować dołączonych pozycji. Proszę zaznaczyć Dodaj albo Usuń, aby zarządzać dołączonymi wpisami."
 
-#: profile_dialogs.ycp:620
+#: src/include/subdomain/profile_dialogs.ycp:929
 msgid "Hats can not have embedded hats."
 msgstr "Podprofile nie mogą zawierać dalszych osadzonych podprofili."
 
-#: profile_dialogs.ycp:630
+#: src/include/subdomain/profile_dialogs.ycp:938
 msgid "Select File To Include"
 msgstr "Wybór pliku do dołączenia"
 
-#: profile_dialogs.ycp:654
+#: src/include/subdomain/profile_dialogs.ycp:962
 msgid "Invalid #include file. Include files must be located in one of these directores: \n"
 msgstr "Nieprawidłowy plik #include. Załączane pliki muszą znajdować się w jednym z wymienionych katalogów: \n"
 
-#: profile_dialogs.ycp:670
+#: src/include/subdomain/profile_dialogs.ycp:996
 msgid "Save changes to the Profile"
 msgstr "Zapisz zmiany w profilu"
 
-#: profile_dialogs.ycp:671
+#: src/include/subdomain/profile_dialogs.ycp:997
 msgid ""
 "Would you like to save the changes to this profile? \n"
 "(Note: after saving the changes the AppArmor profiles will be reloaded.)"
@@ -1376,421 +1835,466 @@ msgstr ""
 "Czy zapisać zmiany w tym profilu? \n"
 "(Uwaga: po zapisaniu zmian profile AppArmor zostaną wczytane ponownie)."
 
-#: profile_dialogs.ycp:740
+#: src/include/subdomain/profile_dialogs.ycp:1062
 msgid "You must select a profile to edit"
 msgstr "Należy wybrać profil do edycji"
 
-#: report_helptext.ycp:15
+#: src/include/subdomain/report_helptext.ycp:15
 msgid "The Report Configuration dialog enables you to filter the archived report selected in the previous screen. To filter by <b>Date Range:</b><br><br> <ol> <li>Click <b>Filter By Date Range</b>. The fields become active.  <li>Enter the start and end dates that delineate the scope of the report.  <li>Enter other filtering parameters. See below for definitions of parameters.  </ol> The following definitions help you to enter the filtering parameters in the Report Configuration Dialog: <br><br> <b>Program Name Pattern:</b> When you enter a program name or pattern that matches the name of the binary executable of the program of interest, the report will display security events that have occurred for a specific program.<br><br> <b>Profile Name Pattern:</b> When you enter the name of the profile, the report will display the security events that are generated for the specified profile.  You can use this to see what is being confined by a specific profile.<br><br> <b>PID Number:</b> Process ID number is a number that uniquely identifies one specific process or running program (this number is valid only during the lifetime of that process).<br><br> <b>Severity Level:</b>  Select the lowest severity level for security events that you would like to be included in the report. The selected severity level, and above, will be included in the reports.<br><br> <b>Detail:</b>  A source to which the profile has denied access.  This includes capabilities and files. You can use this field to report the resources are not allowed to be accessed by profiles.<br><br> <b>Mode:</b> The Mode is the permission that the profile grants to the program or process to which it is applied. The options are: r (read) w (write) l (link) x (execute)<br><br> <b>Access Type:</b> The access type describes what is actually happening with the security event. The options are: PERMITTING, REJECTING, or AUDITING.<br><br> <b>CSV or HTML:</b> Enables you to export a CSV (comma separated values) or html file. The CSV file separates pieces of data in the log entries with commas using a standard data format for importing into table-oriented applications. You can enter a pathname for your exported report by typing in the full pathname in the field provided."
 msgstr "Okno konfiguracji raportów pozwala na filtrowanie zarchiwizowanego raportu wybranego w poprzednim oknie. Aby filtrować wg <b>Zakresu dat</b>, należy: <br><br> <ol> <li>Nacisnąć przycisk <b>Filtruj wg zakresu dat</b> - pola stają się aktywne. <li>Wprowadzić początkową i końcową datę, ograniczające zakres raportu. <li>Wprowadzić inne parametry filtrowania. Poniżej podano definicje parametrów. </ol> Poniższe definicje mogą być pomocne przy wprowadzaniu parametrów filtrowania w oknie konfiguracji raportów: <br><br> <b>Wzorzec nazwy programu:</b> gdy wprowadzi się nazwę programu lub wzorzec, który pasuje do nazwy binarnego pliku wykonywalnego danego programu, raport wyświetli zdarzenia związane z bezpieczeńst, które nastąpiły dla danego programu.<br><br> <b>Wzorzec nazwy profilu:</b> po wprowadzeniu nazwy profilu raport wyświetli zdarzenia związane z bezpieczeństwem wygenerowane dla danego profilu. Dzięki temu można zobaczyć, jakie działania zostały ograniczone przez dany profil. <br><br> <b>Numer PID:</b> numer (identyfikator) PID procesu to liczba, która jednoznacznie identyfikuje dany proces albo działający program (liczba ta jest ważna tylko na czas życia danego procesu).<br><br> <b>Poziom krytyczności:</b> należy określić najniższy poziom krytyczności zdarzeń związanych z bezpieczeństwem, które powinny się znaleźć w raporcie. W raportach znajdą się zdarzenia odpowiadające wybranemu i wyższym poziomom krytyczności.<br><br> <b>Szczegół:</b> źródło, do którego profil zabrania dostępu. Dotyczy to m.in. uprawnień i plików. Można użyć tego pola do raportowania zasobów, do których profile nie mają uprawnień dostępu.<br><br> <b>Tryb:</b> tryb jest uprawnieniem, które profil przyznaje programowi lub procesowi. Dostępne opcje: r (odczyt) w (zapis) l (dowiązanie) x (wykonanie)<br><br> <b>Rodzaj dostępu:</b> rodzaj dostępu opisuje, co aktualnie się dzieje ze zdarzeniami dotyczącymi bezpieczeństwa. Dostępne opcje: PERMITTING (zezwalanie), REJECTING (odrzucanie) i AUDITING (sprawdzanie).<br><br> <b>CSV albo HTML:</b> pozwala na eksportowanie pliku CSV (wartości rozdzielone przecinkami) albo HTML. Pliki CSV zawierające wpisy dziennika można zaimportować do aplikacji pracujących na tabelach. Można wprowadzić ścieżkę dostępu dla eksportowanego raportu wpisując pełną ścieżkę do odpowiedniego pola."
 
-#: report_helptext.ycp:18
+#: src/include/subdomain/report_helptext.ycp:18
 msgid "The AppArmor On-Demand Report screen displays an instantly generated version of one of the following reports.  <b>Executive Security Summary:</b> A combined report, consisting of one or more Security incident reports from one or more machines.  This report provides a single view of security events on multiple machines.<br><br> <b>Applications Audit Report:</b> An auditing tool that reports which application servers are running and whether the applications are confined by AppArmor. Application servers are applications that accept incoming network connections. <br><br> <b>Security Incident Report:</b> A report that displays application security for a single host.  It reports policy violations for locally confined applications during a specific time period. You can edit and customize this report, or add new versions."
 msgstr "Ekran \"Raport AppArmopr na żądanie\" przedstawia na bieżąco generowaną wersję jednego z następujących raportów: <b>Administracyjne podsumowanie bezpieczeństwa</b> - połączony raport, składający się z jednego lub więcej raportów o incydentach bezpieczeństwa, z jednego lub wielu komputerów. Oferuje on pojedynczy przegląd zdarzeń związanych z bezpieczeństwem na wielu komputerach.<br><br> <b>Raport kontroli aplikacji</b> - kontrolne narzędzie informujące, które serwery aplikacji działają i czy aplikacje są ograniczane przez AppArmor. Serwery aplikacji to aplikacje przyjmujące przychodzące połączenia sieciowe. <br><br> <b>Raport incydentu bezpieczeństwa</b> - raport przedstawiający bezpieczeństwo aplikacji dla pojedynczego hosta. Zgłasza naruszenia polityki bezpieczeństwa dla lokalnie ograniczanych aplikacji w ciągu określonego czasu. Można edytować i dostosować ten raport, a także dodawać nowe wersje."
 
-#: report_helptext.ycp:20
+#: src/include/subdomain/report_helptext.ycp:20
 msgid "The Report Configuration dialog enables you to filter the report selected in the previous screen. To filter by <b>Date Range:</b><br><br> <ol> <li>Click <b>Filter By Date Range</b>. The fields become active.  <li>Enter the start and end dates that delineate the scope of the report.  <li>Enter other filtering parameters. See below for definitions of parameters.  </ol> The following definitions help you to enter the filtering parameters in the Report Configuration Dialog: <b>Program Name Pattern:</b> When you enter a program name or pattern that matches the name of the executable process of interest, the report will display security events that have occurred for a specific program.<br><br> <b>Profile Name Pattern:</b> When you enter the name of the security profile that is applied to the rocess, the report will display the security events that are generated for the specified profile. You can use this to see what is being confined by a specific profile.<br><br> <b>PID Number:</b> Process ID number is a number that uniquely identifies one specific process or running program (this number is valid only during the lifetime of that process).<br><br> <b>Severity Level:</b>  Select the lowest severity level for security events that you would like to be included in the report. The selected severity level, and above, will be included in the reports.<br><br> <b>Detail:</b>  A source to which the profile has denied access.  This includes capabilities and files. You can use this field to report the resources are not allowed to be accessed by profiles.<br><br> <b>Mode:</b> The Mode is the permission that the profile grants to the program or process to which it is applied. The options are: r (read) w (write) l (link) x (execute)<br><br> <b>Access Type:</b> The access type describes what is actually happening with the security event. The options are: PERMITTING, REJECTING, or AUDITING.<br><br> <b>CSV or HTML:</b> Enables you to export a CSV (comma separated values) or html file. The CSV file separates pieces of data in the log entries with commas using a standard data format for importing into table-oriented applications. You can enter a pathname for your exported report by typing in the full pathname in the field provided.<br><br>"
 msgstr "Okno konfiguracji raportów pozwala na filtrowanie zarchiwizowanego raportu wybranego w poprzednim oknie. Aby filtrować wg <b>Zakresu dat</b>, należy: <br><br> <ol> <li>Nacisnąć przycisk <b>Filtruj wg zakresu dat</b> - pola stają się aktywne. <li>Wprowadzić początkową i końcową datę, ograniczające zakres raportu. <li>Wprowadzić inne parametry filtrowania. Poniżej podano definicje parametrów. </ol> Poniższe definicje mogą być pomocne przy wprowadzaniu parametrów filtrowania w oknie konfiguracji raportów: <br><br> <b>Wzorzec nazwy programu:</b> gdy wprowadzi się nazwę programu lub wzorzec, który pasuje do nazwy binarnego pliku wykonywalnego danego programu, raport wyświetli zdarzenia związane z bezpieczeństwem (incydenty), które nastąpiły dla danego programu.<br><br> <b>Wzorzec nazwy profilu:</b> po wprowadzeniu nazwy profilu raport wyświetli zdarzenia związane z bezpieczeństwem, wygenerowane dla danego profilu. Dzięki temu można zobaczyć, jakie działania zostały ograniczone przez dany profil. <br><br> <b>Numer PID:</b> numer (identyfikator) PID procesu to liczba, która jednoznacznie identyfikuje dany proces albo działający program (liczba ta jest ważna tylko na czas życia danego procesu).<br><br> <b>Poziom krytyczności:</b> należy określić najniższy poziom krytyczności zdarzeń związanych z bezpieczeństwem, które powinny się znaleźć w raporcie. W raportach znajdą się zdarzenia odpowiadające wybranemu i wyższym poziomom krytyczności.<br><br> <b>Szczegół:</b> źródło, do którego profil ma zabroniony dostęp. Dotyczy to m.in. uprawnień i plików. Można użyć tego pola do raportowania zasobów, do których profile nie mają uprawnień dostępu.<br><br> <b>Tryb:</b> tryb jest uprawnieniem, które profil przyznaje programowi lub procesowi. Opcje to: r (odczyt) w (zapis) oraz l (dowiązanie) x (wykonanie)<br><br> <b>Rodzaj dostępu:</b> rodzaj dostępu opisuje, co aktualnie się dzieje ze zdarzeniami dotyczącymi bezpieczeństwa. Opcje to PERMITTING (zezwalanie), REJECTING (odrzucanie) i AUDITING (sprawdzanie).<br><br> <b>CSV albo HTML:</b> pozwala na eksportowanie pliku CSV (wartości rozdzielone przecinkami) albo HTML. Pliki CSV zawierające wpisy dziennika można zaimportować do aplikacji pracujących na tabelach. Można wprowadzić ścieżkę dostępu dla eksportowanego raportu wpisując pełną ścieżkę do odpowiedniego pola.<br><br>"
 
-#: report_helptext.ycp:26
+#. START Help Section
+#. ***********************************************************
+#: src/include/subdomain/report_helptext.ycp:26
 msgid "<b>Generate Reports Help</b> <p>If there were, in fact, going to be any help for you (which, incidentally, there isn't going to be), then you would indeed find said help, here.<p> Thank you for your time, and have a nice day."
 msgstr "<b>Generowanie raportów</b> <p>Gdyby istniała jakaś dokumentacja na ten temat (a tak się składa przypadkowo, że nie istnieje), to znalazłaby się właśnie tutaj.<p>Dziękujemy za poświęcony czas i życzymy miłego dnia."
 
-#: report_helptext.ycp:31
+#: src/include/subdomain/report_helptext.ycp:31
 msgid "The summary of scheduled reports page shows us when reports are scheduled to run. Reports can be set to run monthly, weekly, daily, or hourly. The default settings are daily at midnight. The reports can also be emailed, upon completion, to up to three email recipients.<br><br> In the Set Schedule section, you can schedule the following three types of security reports:<br><br> <b>Executive Security Summary:</b> A combined report, consisting of one or more Security incident reports from one or more machines.  This report provides a single view of security events on multiple machines.<br><br> <b>Applications Audit Report:</b> An auditing tool that reports which application servers are running and whether the applications are confined by AppArmor. Application servers are applications that accept incoming network connections. <br><br> <b>Security Incident Report:</b> A report that displays application security for a single host.  It reports policy violations for locally confined applications during a specific time period. You can edit and customize this report, or add new versions."
 msgstr "Strona z podsumowaniem zaplanowanych raportów informuje, na kiedy zaplanowane jest uruchomienie generowania raportów. Raportowanie może być uruchamiane raz w miesiącu, raz w tygodniu, raz dziennie lub co godzinę. Domyślne ustawienie to codziennie o północy. Po ukończeniu, raporty mogą być także wysyłane pocztą elektroniczną, do trzech odbiorców.<br><br> W sekcji Harmonogram można zaplanować następujące trzy rodzaje raportów bezpieczeństwa:<br><br> <b>Administracyjne podsumowanie bezpieczeństwa</b> - połączony raport, składający się z jednego lub więcej raportów o incydentach bezpieczeństwa, z jednego lub wielu komputerów. Oferuje on pojedynczy przegląd zdarzeń związanych z bezpieczeństwem na wielu komputerach.<br><br> <b>Raport kontroli aplikacji</b> - kontrolne narzędzie informujące, które serwery aplikacji działają i czy aplikacje są ograniczane przez AppArmor. Serwery aplikacji to aplikacje przyjmujące przychodzące połączenia sieciowe. <br><br> <b>Raport incydentu bezpieczeństwa</b> - raport przedstawiający bezpieczeństwo aplikacji dla pojedynczego hosta. Zgłasza naruszenia polityki bezpieczeństwa dla lokalnie ograniczanych aplikacji w ciągu określonego czasu. Można edytować i dostosować ten raport, a także dodawać nowe wersje."
 
-#: report_helptext.ycp:34
+#: src/include/subdomain/report_helptext.ycp:34
 msgid " The View Archive Reports form enables you to view previously generated reports, located in the /var/log/apparmor/reports-archived directory. The checkboxes at the top of the form enable you to narrow-down the category of reports shown in the list to the following: SIR Reports, AUD Reports, or ESS Reports.  To see report details, select a report and click the <b>View</b> button.<br><br> You can view reports from one or more systems if you move the reports to the /var/log/apparmor/reports-archived directory."
 msgstr "Okno \"Wyświetl zarchiwizowane raporty\" pozwala na przejrzenie uprzednio wygenerowanych raportów, znajdujących się w katalogu /var/log/apparmor/reports-archived. Pola wyboru w górnej części okna pozwalają zawęzić kategorie raportów na liście do wybranych z następujących: raporty SIR, raporty AUD i raporty ESS. Aby wyświetlić szczegóły raportu, należy wybrać raport i nacisnąć przycisk <b>Wyświetl</b>.<br><br> Można przeglądać raporty z jednego lub wielu systemów, po przeniesieniu ich do katalogu /var/log/apparmor/reports-archived."
 
-#: report_helptext.ycp:46
+#: src/include/subdomain/report_helptext.ycp:46
 msgid "repConfHelp"
 msgstr "Pomoc do konfiguracji raportów"
 
-#: report_helptext.ycp:48
+#: src/include/subdomain/report_helptext.ycp:48
 msgid "<b>Security Incident Report (SIR):</b> A report that displays security events of interest to an administrator. The SIR reports policy violations for locally confined applications during the specified time period. The SIR reports policy exceptions and policy engine state changes. These two types of security events are defined as follows: <ul> <li><b>Policy Exceptions:</b> When an application requests a resource that's not defined within its profile, a security event is generated.  <li><b>Policy Engine State Changes:</b> Enforces policy for applications and maintains its own state, including when engines start or stop, when a policy is reloaded, and when global security feature are enabled or disabled.  </ul> Select the report from the archive, then <b>View</b> to see the report details."
 msgstr "<b>Raport incydentu bezpieczeństwa (SIR):</b> Raport przedstawiający zdarzenia związane z bezpieczeństwem, istotne dla administratora. Raport SIR zgłasza naruszenia polityki bezpieczeństwa dla lokalnie ograniczonych aplikacji w zadanym okresie czasu. Raport ten zgłasza wyjątki polityki i zmiany stanu jej mechanizmów. Te dwa rodzaje zdarzeń związanych z bezpieczeństwem definiuje się następująco: <ul> <li><b>Wyjątki polityki</b> - gdy aplikacja zażąda zasobu, który nie jest zdefiniowany w jej profilu, generowana jest informacja o zdarzeniu dotyczącym bezpieczeństwa. <li><b>Zmiany stanu założeń polityki</b> - egzekwowanie od aplikacji zachowania założeń polityki i utrzymania jej stanu, włącznie z uruchamianiem lub zatrzymywaniem jej mechanizmów, ponownym wczytywaniem jaj założeń, oraz z włączaniem i wyłączaniem globalnych właściwości bezpieczeństwa.</ul> Aby wyświetlić szczegóły raportu, należy wybrać raport z archiwum, a następnie nacisnąć przycisk <b>Wyświetl</b>."
 
-#: report_helptext.ycp:51
+#: src/include/subdomain/report_helptext.ycp:51
 msgid "<b>Applications Audit Report (AUD):</b> An auditing tool that reports which application servers are running and whether they are confined by AppArmor. Application servers are applications that accept incoming network connections. This report provides the host machine's IP Address, the date the Applications Audit Report ran, the name and path of the unconfined program or application server, the suggested profile or a placeholder for a profile for an unconfined program, the process ID number, The state of the program (confined or unconfined), and the type of confinement that the profile is performing (enforce/complain).<br><br> "
 msgstr "<b>Raport kontroli aplikacji (AUD):</b> Narzędzie przeprowadzające kontrolę i raportujące, które serwery aplikacji pracują i czy są ograniczane przez AppArmor. Serwery aplikacji to aplikacje, które przyjmują przychodzące połączenia sieciowe. Ten raport dostarcza adres IP hosta, datę przeprowadzenia raportu kontroli aplikacji, nazwę i ścieżkę nie ograniczanego programu lub serwera aplikacji, sugerowany profil albo tymczasowy zamiennik dla profilu dla nie ograniczanego programu, identyfikator procesu, stan programu (ograniczony lub nie ograniczony) oraz rodzaj ograniczenia, jakie profil wykonuje (wymuszone / na żądanie).<br><br> "
 
-#: report_helptext.ycp:53
+#: src/include/subdomain/report_helptext.ycp:53
 msgid "<b>Executive Security Summary (ESS):</b> A combined report, consisting of one or more high-level reports from one or more machines. This report can provide a single view of security events on multiple machines if each machine's data is copied to the reports archive directory, which is <b>/var/log/apparmor/reports-archived</b>. This report provides the host machine's IP address, the start and end dates of the polled events, total number of rejects, total number of events, average of severity levels reported, and the highest severity level reported. One line of the ESS report represents a range of SIR reports.<br><br> "
 msgstr "<b>Administracyjne podsumowanie bezpieczeństwa (ESS):</b> Połączony raport, składający się z jednego lub wielu wysokopoziomowych raportów, z jednego lub wielu komputerów. Oferuje on pojedynczy przegląd zdarzeń związanych z bezpieczeństwem na wielu komputerach, jeśli dane każdego komputera są kopiowane do katalogu archiwum raportów, tj. <b>/var/log/apparmor/reports-archived</b>. Raport ten przedstawia adres IP hosta, początkowe i końcowe daty zebranych zdarzeń, całkowitą liczbę odrzuceń, całkowitą liczbę zdarzeń, średnią zgłoszonych poziomów krytyczności i najwyższy zgłoszony poziom krytyczności. Jedna linia raportu ESS reprezentuje zakres raportów SIR.<br><br> "
 
-#: reporting_archived_dialogs.ycp:46
+#. poor i18n
+#: src/include/subdomain/reporting_archived_dialogs.ycp:37
 msgid "Archived Security Incident Report - Page "
 msgstr "Zarchiwizowany raport incydentu bezpieczeństwa - strona "
 
-#: reporting_archived_dialogs.ycp:46 reporting_dialogues.ycp:513
-#: reporting_dialogues.ycp:1129 reporting_dialogues.ycp:1132
+#: src/include/subdomain/reporting_archived_dialogs.ycp:37
+#: src/include/subdomain/reporting_dialogues.ycp:454
+#: src/include/subdomain/reporting_dialogues.ycp:1066
+#: src/include/subdomain/reporting_dialogues.ycp:1071
 msgid " of "
 msgstr " z "
 
-#: reporting_archived_dialogs.ycp:56 reporting_dialogues.ycp:525
-#: reporting_dialogues.ycp:1130 reporting_dialogues.ycp:1133
-#: reporting_dialogues.ycp:1136 reporting_dialogues.ycp:1146
-#: reporting_utils.ycp:220
-msgid "Host"
-msgstr "Komputer"
-
-#: reporting_archived_dialogs.ycp:56 reporting_dialogues.ycp:525
-#: reporting_dialogues.ycp:772 reporting_dialogues.ycp:911
-#: reporting_dialogues.ycp:1130 reporting_dialogues.ycp:1133
-#: reporting_dialogues.ycp:1136 reporting_utils.ycp:232
-msgid "Date"
-msgstr "Data"
-
-#: reporting_archived_dialogs.ycp:56 reporting_dialogues.ycp:525
-#: reporting_dialogues.ycp:1130 reporting_dialogues.ycp:1133
-#: reporting_dialogues.ycp:1136 reporting_utils.ycp:210
-#: reporting_utils.ycp:233
-msgid "Program"
-msgstr "Program"
-
-#: reporting_archived_dialogs.ycp:56 reporting_dialogues.ycp:526
-#: reporting_dialogues.ycp:772 reporting_dialogues.ycp:1130
-#: reporting_dialogues.ycp:1133 reporting_dialogues.ycp:1137
-#: reporting_utils.ycp:212 reporting_utils.ycp:235
-msgid "PID"
-msgstr "Identyfikator PID"
-
-#: reporting_archived_dialogs.ycp:56 reporting_archived_dialogs.ycp:114
-#: reporting_dialogues.ycp:257 reporting_dialogues.ycp:300
-#: reporting_dialogues.ycp:356 reporting_dialogues.ycp:450
-#: reporting_dialogues.ycp:526 reporting_dialogues.ycp:1130
-#: reporting_dialogues.ycp:1133 reporting_utils.ycp:237 sd-config.ycp:140
-#: sd-config.ycp:153 sd-config.ycp:166
-msgid "Severity"
-msgstr "Waga naruszenia"
-
-#: reporting_archived_dialogs.ycp:56 reporting_archived_dialogs.ycp:120
-#: reporting_dialogues.ycp:251 reporting_dialogues.ycp:294
-#: reporting_dialogues.ycp:362 reporting_dialogues.ycp:458
-#: reporting_dialogues.ycp:526 reporting_dialogues.ycp:1130
-#: reporting_dialogues.ycp:1133 reporting_utils.ycp:236
-msgid "Detail"
-msgstr "Szczegół"
-
-#: reporting_archived_dialogs.ycp:56 reporting_dialogues.ycp:526
-#: reporting_dialogues.ycp:1130 reporting_dialogues.ycp:1133
-#: reporting_utils.ycp:238
-msgid "Access Type"
-msgstr "Rodzaj dostępu"
-
-#: reporting_archived_dialogs.ycp:62
+#: src/include/subdomain/reporting_archived_dialogs.ycp:52
 msgid "F&irst"
 msgstr "P&ierwszy"
 
-#: reporting_archived_dialogs.ycp:63 reporting_dialogues.ycp:534
-#: reporting_dialogues.ycp:1166
+#: src/include/subdomain/reporting_archived_dialogs.ycp:53
+#: src/include/subdomain/reporting_dialogues.ycp:479
+#: src/include/subdomain/reporting_dialogues.ycp:1109
 msgid "&Previous"
 msgstr "P&oprzedni"
 
-#: reporting_archived_dialogs.ycp:64 reporting_dialogues.ycp:535
-#: reporting_dialogues.ycp:1167
+#: src/include/subdomain/reporting_archived_dialogs.ycp:54
+#: src/include/subdomain/reporting_dialogues.ycp:480
+#: src/include/subdomain/reporting_dialogues.ycp:1110
 msgid "&Sort"
 msgstr "&Sortuj"
 
-#: reporting_archived_dialogs.ycp:65 reporting_dialogues.ycp:536
-#: reporting_dialogues.ycp:1168
+#: src/include/subdomain/reporting_archived_dialogs.ycp:55
+#: src/include/subdomain/reporting_dialogues.ycp:481
+#: src/include/subdomain/reporting_dialogues.ycp:1111
 msgid "&Forward"
 msgstr "Do &przodu"
 
-#: reporting_archived_dialogs.ycp:66
+#: src/include/subdomain/reporting_archived_dialogs.ycp:56
 msgid "&Last"
 msgstr "&Ostatni"
 
-#: reporting_archived_dialogs.ycp:84 reporting_dialogues.ycp:327
-#: reporting_dialogues.ycp:420 reporting_dialogues.ycp:551
+#: src/include/subdomain/reporting_archived_dialogs.ycp:71
+#: src/include/subdomain/reporting_dialogues.ycp:271
+#: src/include/subdomain/reporting_dialogues.ycp:364
+#: src/include/subdomain/reporting_dialogues.ycp:496
 msgid "Filter By Date Range"
 msgstr "Filtruj wg zakresu dat"
 
-#: reporting_archived_dialogs.ycp:85 reporting_dialogues.ycp:328
-#: reporting_dialogues.ycp:421 reporting_dialogues.ycp:552
+#: src/include/subdomain/reporting_archived_dialogs.ycp:72
+#: src/include/subdomain/reporting_dialogues.ycp:272
+#: src/include/subdomain/reporting_dialogues.ycp:365
+#: src/include/subdomain/reporting_dialogues.ycp:497
 msgid " Select Date Range "
 msgstr "Proszę wybrać zakres dat "
 
-#: reporting_archived_dialogs.ycp:87 reporting_dialogues.ycp:330
-#: reporting_dialogues.ycp:423 reporting_dialogues.ycp:554
+#: src/include/subdomain/reporting_archived_dialogs.ycp:74
+#: src/include/subdomain/reporting_dialogues.ycp:274
+#: src/include/subdomain/reporting_dialogues.ycp:367
+#: src/include/subdomain/reporting_dialogues.ycp:499
 msgid "Enter Starting Date/Time"
 msgstr "Proszę wprowadzić datę/godzinę rozpoczęcia"
 
-#: reporting_archived_dialogs.ycp:90 reporting_archived_dialogs.ycp:100
-#: reporting_dialogues.ycp:333 reporting_dialogues.ycp:343
-#: reporting_dialogues.ycp:426 reporting_dialogues.ycp:436
+#: src/include/subdomain/reporting_archived_dialogs.ycp:77
+#: src/include/subdomain/reporting_archived_dialogs.ycp:87
+#: src/include/subdomain/reporting_dialogues.ycp:277
+#: src/include/subdomain/reporting_dialogues.ycp:287
+#: src/include/subdomain/reporting_dialogues.ycp:370
+#: src/include/subdomain/reporting_dialogues.ycp:380
 msgid "Hours"
 msgstr "Godzina"
 
-#: reporting_archived_dialogs.ycp:91 reporting_archived_dialogs.ycp:101
-#: reporting_dialogues.ycp:334 reporting_dialogues.ycp:344
-#: reporting_dialogues.ycp:427 reporting_dialogues.ycp:437
+#: src/include/subdomain/reporting_archived_dialogs.ycp:78
+#: src/include/subdomain/reporting_archived_dialogs.ycp:88
+#: src/include/subdomain/reporting_dialogues.ycp:278
+#: src/include/subdomain/reporting_dialogues.ycp:288
+#: src/include/subdomain/reporting_dialogues.ycp:371
+#: src/include/subdomain/reporting_dialogues.ycp:381
 msgid "Minutes"
 msgstr "Minuta"
 
-#: reporting_archived_dialogs.ycp:92 reporting_archived_dialogs.ycp:102
-#: reporting_dialogues.ycp:335 reporting_dialogues.ycp:345
-#: reporting_dialogues.ycp:428 reporting_dialogues.ycp:438
-#: reporting_dialogues.ycp:559 reporting_dialogues.ycp:572
+#: src/include/subdomain/reporting_archived_dialogs.ycp:79
+#: src/include/subdomain/reporting_archived_dialogs.ycp:89
+#: src/include/subdomain/reporting_dialogues.ycp:279
+#: src/include/subdomain/reporting_dialogues.ycp:289
+#: src/include/subdomain/reporting_dialogues.ycp:372
+#: src/include/subdomain/reporting_dialogues.ycp:382
+#: src/include/subdomain/reporting_dialogues.ycp:504
+#: src/include/subdomain/reporting_dialogues.ycp:517
 msgid "Day"
 msgstr "Dzień"
 
-#: reporting_archived_dialogs.ycp:93 reporting_archived_dialogs.ycp:103
-#: reporting_dialogues.ycp:336 reporting_dialogues.ycp:346
-#: reporting_dialogues.ycp:429 reporting_dialogues.ycp:439
-#: reporting_dialogues.ycp:561 reporting_dialogues.ycp:574
+#: src/include/subdomain/reporting_archived_dialogs.ycp:80
+#: src/include/subdomain/reporting_archived_dialogs.ycp:90
+#: src/include/subdomain/reporting_dialogues.ycp:280
+#: src/include/subdomain/reporting_dialogues.ycp:290
+#: src/include/subdomain/reporting_dialogues.ycp:373
+#: src/include/subdomain/reporting_dialogues.ycp:383
+#: src/include/subdomain/reporting_dialogues.ycp:506
+#: src/include/subdomain/reporting_dialogues.ycp:519
 msgid "Month"
 msgstr "Miesiąc"
 
-#: reporting_archived_dialogs.ycp:94 reporting_archived_dialogs.ycp:104
-#: reporting_dialogues.ycp:337 reporting_dialogues.ycp:347
-#: reporting_dialogues.ycp:430 reporting_dialogues.ycp:440
-#: reporting_dialogues.ycp:563 reporting_dialogues.ycp:576
+#: src/include/subdomain/reporting_archived_dialogs.ycp:81
+#: src/include/subdomain/reporting_archived_dialogs.ycp:91
+#: src/include/subdomain/reporting_dialogues.ycp:281
+#: src/include/subdomain/reporting_dialogues.ycp:291
+#: src/include/subdomain/reporting_dialogues.ycp:374
+#: src/include/subdomain/reporting_dialogues.ycp:384
+#: src/include/subdomain/reporting_dialogues.ycp:508
+#: src/include/subdomain/reporting_dialogues.ycp:521
 msgid "Year"
 msgstr "Rok"
 
-#: reporting_archived_dialogs.ycp:97 reporting_dialogues.ycp:340
-#: reporting_dialogues.ycp:433 reporting_dialogues.ycp:567
+#: src/include/subdomain/reporting_archived_dialogs.ycp:84
+#: src/include/subdomain/reporting_dialogues.ycp:284
+#: src/include/subdomain/reporting_dialogues.ycp:377
+#: src/include/subdomain/reporting_dialogues.ycp:512
 msgid "Enter Ending Date"
 msgstr "Proszę wprowadzić datę zakończenia"
 
-#: reporting_archived_dialogs.ycp:110 reporting_dialogues.ycp:244
-#: reporting_dialogues.ycp:287 reporting_dialogues.ycp:352
-#: reporting_dialogues.ycp:446 reporting_dialogues.ycp:584
+#: src/include/subdomain/reporting_archived_dialogs.ycp:97
+#: src/include/subdomain/reporting_dialogues.ycp:188
+#: src/include/subdomain/reporting_dialogues.ycp:231
+#: src/include/subdomain/reporting_dialogues.ycp:296
+#: src/include/subdomain/reporting_dialogues.ycp:390
+#: src/include/subdomain/reporting_dialogues.ycp:529
 msgid "Program name"
 msgstr "Nazwa programu"
 
-#: reporting_archived_dialogs.ycp:111 reporting_dialogues.ycp:245
-#: reporting_dialogues.ycp:288 reporting_dialogues.ycp:353
-#: reporting_dialogues.ycp:447
+#: src/include/subdomain/reporting_archived_dialogs.ycp:98
+#: src/include/subdomain/reporting_dialogues.ycp:189
+#: src/include/subdomain/reporting_dialogues.ycp:232
+#: src/include/subdomain/reporting_dialogues.ycp:297
+#: src/include/subdomain/reporting_dialogues.ycp:391
 msgid "Profile name"
 msgstr "Nazwa profilu"
 
-#: reporting_archived_dialogs.ycp:112 reporting_dialogues.ycp:250
-#: reporting_dialogues.ycp:293 reporting_dialogues.ycp:354
-#: reporting_dialogues.ycp:448
+#: src/include/subdomain/reporting_archived_dialogs.ycp:99
+#: src/include/subdomain/reporting_dialogues.ycp:194
+#: src/include/subdomain/reporting_dialogues.ycp:237
+#: src/include/subdomain/reporting_dialogues.ycp:298
+#: src/include/subdomain/reporting_dialogues.ycp:392
 msgid "PID number"
 msgstr "Identyfikator PID"
 
-#: reporting_archived_dialogs.ycp:115 reporting_dialogues.ycp:28
-#: reporting_dialogues.ycp:70 reporting_dialogues.ycp:83
-#: reporting_dialogues.ycp:84 reporting_dialogues.ycp:258
-#: reporting_dialogues.ycp:301 reporting_dialogues.ycp:357
-#: reporting_dialogues.ycp:451 reporting_dialogues.ycp:937
-#: reporting_dialogues.ycp:942 reporting_dialogues.ycp:1036
-#: reporting_dialogues.ycp:1038 reporting_dialogues.ycp:1039
-#: reporting_dialogues.ycp:1706 reporting_dialogues.ycp:1734
-#: reporting_dialogues.ycp:1781 reporting_dialogues.ycp:1782
-#: reporting_dialogues.ycp:1783 reporting_dialogues.ycp:1828
-#: reporting_dialogues.ycp:1829 reporting_dialogues.ycp:1911
-#: reporting_dialogues.ycp:2116 reporting_dialogues.ycp:2130
-#: reporting_dialogues.ycp:2158 reporting_dialogues.ycp:2167
-#: reporting_dialogues.ycp:2171 reporting_dialogues.ycp:2185
-#: reporting_dialogues.ycp:2186 reporting_dialogues.ycp:2187
-#: reporting_utils.ycp:300 reporting_utils.ycp:416
-msgid "All"
-msgstr "Wszystkie"
+#: src/include/subdomain/reporting_archived_dialogs.ycp:101
+#: src/include/subdomain/reporting_dialogues.ycp:201
+#: src/include/subdomain/reporting_dialogues.ycp:244
+#: src/include/subdomain/reporting_dialogues.ycp:300
+#: src/include/subdomain/reporting_dialogues.ycp:394
+#: src/include/subdomain/reporting_utils.ycp:115
+#: src/include/subdomain/reporting_utils.ycp:269
+#: src/include/subdomain/sd-config.ycp:140
+#: src/include/subdomain/sd-config.ycp:153
+#: src/include/subdomain/sd-config.ycp:166
+msgid "Severity"
+msgstr "Waga naruszenia"
 
-#: reporting_archived_dialogs.ycp:115 reporting_dialogues.ycp:258
-#: reporting_dialogues.ycp:357 reporting_dialogues.ycp:451
-#: reporting_dialogues.ycp:1037
+#: src/include/subdomain/reporting_archived_dialogs.ycp:102
+#: src/include/subdomain/reporting_dialogues.ycp:202
+#: src/include/subdomain/reporting_dialogues.ycp:301
+#: src/include/subdomain/reporting_dialogues.ycp:395
+#: src/include/subdomain/reporting_dialogues.ycp:948
 msgid "U"
 msgstr "U"
 
-#: reporting_archived_dialogs.ycp:121
+#: src/include/subdomain/reporting_archived_dialogs.ycp:107
+#: src/include/subdomain/reporting_dialogues.ycp:195
+#: src/include/subdomain/reporting_dialogues.ycp:238
+#: src/include/subdomain/reporting_dialogues.ycp:306
+#: src/include/subdomain/reporting_dialogues.ycp:401
+#: src/include/subdomain/reporting_utils.ycp:116
+#: src/include/subdomain/reporting_utils.ycp:268
+msgid "Detail"
+msgstr "Szczegół"
+
+#: src/include/subdomain/reporting_archived_dialogs.ycp:108
 msgid "Access Type: R"
 msgstr "Rodzaj dostępu: R"
 
-#: reporting_archived_dialogs.ycp:122
+#: src/include/subdomain/reporting_archived_dialogs.ycp:109
 msgid "Mode: All"
 msgstr "Tryb: wszystkie"
 
-#: reporting_archived_dialogs.ycp:129 reporting_dialogues.ycp:383
-#: reporting_dialogues.ycp:479 reporting_dialogues.ycp:1750
-#: reporting_dialogues.ycp:2147
+#. DWR MOD `ComboBox(`id(`expType), `opt(`notify, `immediate), _("Export Type"),  [
+#: src/include/subdomain/reporting_archived_dialogs.ycp:116
+#: src/include/subdomain/reporting_dialogues.ycp:327
+#: src/include/subdomain/reporting_dialogues.ycp:415
+#: src/include/subdomain/reporting_dialogues.ycp:1675
+#: src/include/subdomain/reporting_dialogues.ycp:2063
 msgid "Export Type"
 msgstr "Typ eksportu"
 
-#: reporting_archived_dialogs.ycp:130 reporting_dialogues.ycp:384
-#: reporting_dialogues.ycp:480 reporting_dialogues.ycp:1751
-#: reporting_dialogues.ycp:2148 reporting_dialogues.ycp:2175
+#: src/include/subdomain/reporting_archived_dialogs.ycp:117
+#: src/include/subdomain/reporting_dialogues.ycp:328
+#: src/include/subdomain/reporting_dialogues.ycp:416
+#: src/include/subdomain/reporting_dialogues.ycp:1676
+#: src/include/subdomain/reporting_dialogues.ycp:2064
+#: src/include/subdomain/reporting_dialogues.ycp:2091
 msgid "None"
 msgstr "Brak"
 
-#: reporting_archived_dialogs.ycp:130 reporting_dialogues.ycp:103
-#: reporting_dialogues.ycp:384 reporting_dialogues.ycp:480
-#: reporting_dialogues.ycp:1080 reporting_dialogues.ycp:1751
-#: reporting_dialogues.ycp:1820 reporting_dialogues.ycp:2148
+#: src/include/subdomain/reporting_archived_dialogs.ycp:117
+#: src/include/subdomain/reporting_dialogues.ycp:103
+#: src/include/subdomain/reporting_dialogues.ycp:328
+#: src/include/subdomain/reporting_dialogues.ycp:416
+#: src/include/subdomain/reporting_dialogues.ycp:1008
+#: src/include/subdomain/reporting_dialogues.ycp:1676
+#: src/include/subdomain/reporting_dialogues.ycp:1740
+#: src/include/subdomain/reporting_dialogues.ycp:2064
 msgid "csv"
 msgstr "csv"
 
-#: reporting_archived_dialogs.ycp:130 reporting_dialogues.ycp:109
-#: reporting_dialogues.ycp:384 reporting_dialogues.ycp:480
-#: reporting_dialogues.ycp:1082 reporting_dialogues.ycp:1751
-#: reporting_dialogues.ycp:1824 reporting_dialogues.ycp:2148
+#: src/include/subdomain/reporting_archived_dialogs.ycp:117
+#: src/include/subdomain/reporting_dialogues.ycp:109
+#: src/include/subdomain/reporting_dialogues.ycp:328
+#: src/include/subdomain/reporting_dialogues.ycp:416
+#: src/include/subdomain/reporting_dialogues.ycp:1010
+#: src/include/subdomain/reporting_dialogues.ycp:1676
+#: src/include/subdomain/reporting_dialogues.ycp:1744
+#: src/include/subdomain/reporting_dialogues.ycp:2064
 msgid "html"
 msgstr "html"
 
-#: reporting_archived_dialogs.ycp:130 reporting_dialogues.ycp:103
-#: reporting_dialogues.ycp:109 reporting_dialogues.ycp:384
-#: reporting_dialogues.ycp:480 reporting_dialogues.ycp:1084
-#: reporting_dialogues.ycp:1751 reporting_dialogues.ycp:1820
-#: reporting_dialogues.ycp:1824 reporting_dialogues.ycp:2148
+#: src/include/subdomain/reporting_archived_dialogs.ycp:117
+#: src/include/subdomain/reporting_dialogues.ycp:103
+#: src/include/subdomain/reporting_dialogues.ycp:109
+#: src/include/subdomain/reporting_dialogues.ycp:328
+#: src/include/subdomain/reporting_dialogues.ycp:416
+#: src/include/subdomain/reporting_dialogues.ycp:1012
+#: src/include/subdomain/reporting_dialogues.ycp:1676
+#: src/include/subdomain/reporting_dialogues.ycp:1740
+#: src/include/subdomain/reporting_dialogues.ycp:1744
+#: src/include/subdomain/reporting_dialogues.ycp:2064
 msgid "Both"
 msgstr "Oba"
 
-#: reporting_archived_dialogs.ycp:132 reporting_dialogues.ycp:386
-#: reporting_dialogues.ycp:482 reporting_dialogues.ycp:1753
-#: reporting_dialogues.ycp:2150
+#: src/include/subdomain/reporting_archived_dialogs.ycp:119
+#: src/include/subdomain/reporting_dialogues.ycp:330
+#: src/include/subdomain/reporting_dialogues.ycp:418
+#: src/include/subdomain/reporting_dialogues.ycp:1678
+#: src/include/subdomain/reporting_dialogues.ycp:2066
 msgid "Location to store log."
 msgstr "Lokalizacja przechowywania dziennika"
 
-#: reporting_archived_dialogs.ycp:133
+#: src/include/subdomain/reporting_archived_dialogs.ycp:120
 msgid "&Accept"
 msgstr "Z&aakceptuj"
 
-#: reporting_archived_dialogs.ycp:154 reporting_dialogues.ycp:596
-#: reporting_dialogues.ycp:939
+#: src/include/subdomain/reporting_archived_dialogs.ycp:133
+#: src/include/subdomain/reporting_dialogues.ycp:541
+#: src/include/subdomain/reporting_dialogues.ycp:845
 msgid "Report Configuration Dialog"
 msgstr "Konfiguracja raportów"
 
-#: reporting_archived_dialogs.ycp:154 reporting_dialogues.ycp:596
-#: reporting_dialogues.ycp:822 reporting_dialogues.ycp:940
-#: reporting_dialogues.ycp:1763 reporting_dialogues.ycp:2423
+#: src/include/subdomain/reporting_archived_dialogs.ycp:134
+#: src/include/subdomain/reporting_dialogues.ycp:541
+#: src/include/subdomain/reporting_dialogues.ycp:727
+#: src/include/subdomain/reporting_dialogues.ycp:846
+#: src/include/subdomain/reporting_dialogues.ycp:1684
+#: src/include/subdomain/reporting_dialogues.ycp:2341
 msgid "&Next"
 msgstr "&Następny"
 
-#: reporting_archived_dialogs.ycp:205 reporting_archived_dialogs.ycp:220
-#: reporting_dialogues.ycp:635 reporting_dialogues.ycp:650
-msgid "February only has 28 days!  Fixing."
-msgstr "Luty ma tylko 28 dni! Poprawiono."
+#: src/include/subdomain/reporting_archived_dialogs.ycp:185
+#: src/include/subdomain/reporting_dialogues.ycp:626
+#: src/include/subdomain/reporting_dialogues.ycp:978
+msgid "Illegal start date entered.  Please retry."
+msgstr ""
 
-#: reporting_archived_dialogs.ycp:208 reporting_dialogues.ycp:638
-msgid "February only has 29 days!  Fixing."
-msgstr "Luty ma tylko 29 dni! Poprawiono."
+#: src/include/subdomain/reporting_archived_dialogs.ycp:190
+#: src/include/subdomain/reporting_dialogues.ycp:631
+#: src/include/subdomain/reporting_dialogues.ycp:983
+msgid "Illegal end date entered.  Please retry."
+msgstr ""
 
-#: reporting_archived_dialogs.ycp:212 reporting_archived_dialogs.ycp:231
-#: reporting_dialogues.ycp:642 reporting_dialogues.ycp:661
-msgid "Month only has 30 days!  Fixing."
-msgstr "Miesiąc ma tylko 30 dni! Poprawiono."
-
-#: reporting_archived_dialogs.ycp:225 reporting_dialogues.ycp:655
-msgid "February only has 29 days!"
-msgstr "Luty ma tylko 29 dni!"
-
-#: reporting_archived_dialogs.ycp:301 reporting_dialogues.ycp:261
-#: reporting_dialogues.ycp:305 reporting_dialogues.ycp:365
-#: reporting_dialogues.ycp:461
+#: src/include/subdomain/reporting_archived_dialogs.ycp:259
+#: src/include/subdomain/reporting_dialogues.ycp:205
+#: src/include/subdomain/reporting_dialogues.ycp:249
+#: src/include/subdomain/reporting_dialogues.ycp:309
+#: src/include/subdomain/reporting_dialogues.ycp:403
 msgid "Access Type: "
 msgstr "Rodzaj dostępu: "
 
-#: reporting_archived_dialogs.ycp:306 reporting_dialogues.ycp:266
-#: reporting_dialogues.ycp:309 reporting_dialogues.ycp:369
-#: reporting_dialogues.ycp:465
+#: src/include/subdomain/reporting_archived_dialogs.ycp:264
+#: src/include/subdomain/reporting_dialogues.ycp:210
+#: src/include/subdomain/reporting_dialogues.ycp:253
+#: src/include/subdomain/reporting_dialogues.ycp:313
+#: src/include/subdomain/reporting_dialogues.ycp:407
 msgid "Mode: "
 msgstr "Tryb: "
 
-#: reporting_dialogues.ycp:87 reporting_dialogues.ycp:1734
-#: reporting_dialogues.ycp:1832 reporting_dialogues.ycp:2130
-#: reporting_utils.ycp:54
+#. de-i18n
+#: src/include/subdomain/reporting_dialogues.ycp:87
+#: src/include/subdomain/reporting_dialogues.ycp:1660
+#: src/include/subdomain/reporting_dialogues.ycp:1752
+#: src/include/subdomain/reporting_dialogues.ycp:2046
+#: src/include/subdomain/reporting_utils.ycp:54
 msgid "Mon"
 msgstr "Pon"
 
-#: reporting_dialogues.ycp:88 reporting_dialogues.ycp:1734
-#: reporting_dialogues.ycp:1833 reporting_dialogues.ycp:2130
-#: reporting_utils.ycp:55
+#: src/include/subdomain/reporting_dialogues.ycp:88
+#: src/include/subdomain/reporting_dialogues.ycp:1660
+#: src/include/subdomain/reporting_dialogues.ycp:1753
+#: src/include/subdomain/reporting_dialogues.ycp:2046
+#: src/include/subdomain/reporting_utils.ycp:55
 msgid "Tue"
 msgstr "Wto"
 
-#: reporting_dialogues.ycp:89 reporting_dialogues.ycp:1834
+#: src/include/subdomain/reporting_dialogues.ycp:89
+#: src/include/subdomain/reporting_dialogues.ycp:1754
 msgid "Weds"
 msgstr "Śro"
 
-#: reporting_dialogues.ycp:90 reporting_dialogues.ycp:1734
-#: reporting_dialogues.ycp:1835 reporting_dialogues.ycp:2130
-#: reporting_utils.ycp:57
+#: src/include/subdomain/reporting_dialogues.ycp:90
+#: src/include/subdomain/reporting_dialogues.ycp:1660
+#: src/include/subdomain/reporting_dialogues.ycp:1755
+#: src/include/subdomain/reporting_dialogues.ycp:2046
+#: src/include/subdomain/reporting_utils.ycp:57
 msgid "Thu"
 msgstr "Czw"
 
-#: reporting_dialogues.ycp:91 reporting_dialogues.ycp:1734
-#: reporting_dialogues.ycp:1836 reporting_dialogues.ycp:2130
-#: reporting_utils.ycp:58
+#: src/include/subdomain/reporting_dialogues.ycp:91
+#: src/include/subdomain/reporting_dialogues.ycp:1660
+#: src/include/subdomain/reporting_dialogues.ycp:1756
+#: src/include/subdomain/reporting_dialogues.ycp:2046
+#: src/include/subdomain/reporting_utils.ycp:58
 msgid "Fri"
 msgstr "Pią"
 
-#: reporting_dialogues.ycp:92 reporting_dialogues.ycp:1734
-#: reporting_dialogues.ycp:1837 reporting_dialogues.ycp:2130
-#: reporting_utils.ycp:59
+#: src/include/subdomain/reporting_dialogues.ycp:92
+#: src/include/subdomain/reporting_dialogues.ycp:1660
+#: src/include/subdomain/reporting_dialogues.ycp:1757
+#: src/include/subdomain/reporting_dialogues.ycp:2046
+#: src/include/subdomain/reporting_utils.ycp:59
 msgid "Sat"
 msgstr "Sob"
 
-#: reporting_dialogues.ycp:93 reporting_dialogues.ycp:1734
-#: reporting_dialogues.ycp:1838 reporting_dialogues.ycp:2130
-#: reporting_utils.ycp:60
+#: src/include/subdomain/reporting_dialogues.ycp:93
+#: src/include/subdomain/reporting_dialogues.ycp:1660
+#: src/include/subdomain/reporting_dialogues.ycp:1758
+#: src/include/subdomain/reporting_dialogues.ycp:2046
+#: src/include/subdomain/reporting_utils.ycp:60
 msgid "Sun"
 msgstr "Nie"
 
-#: reporting_dialogues.ycp:164
+#: src/include/subdomain/reporting_dialogues.ycp:164
 msgid "Unrecognized form request."
 msgstr "Nierozpoznane żądanie formularza."
 
-#: reporting_dialogues.ycp:275 reporting_dialogues.ycp:320
-#: reporting_dialogues.ycp:2100 reporting_utils.ycp:100
-#: reporting_utils.ycp:253 reporting_utils.ycp:309 reporting_utils.ycp:423
-msgid "&Save"
-msgstr "&Zapisz"
-
-#: reporting_dialogues.ycp:513 reporting_dialogues.ycp:1129
+#. New map is a list, not a hash
+#. Old aa-eventd
+#. list <map> db = (list <map>) SCR::Read (.logparse, Settings);
+#. integer key = 1;
+#. foreach ( map record, db, {
+#. reportList = add( reportList, `item( `id(key), record["host"]:nil,
+#. record["date"]:nil, record["prog"]:nil, record["profile"]:nil,
+#. record["pid"]:nil, record["severity"]:nil, record["mode"]:nil,
+#. record["resource"]:nil, record["sdmode"]:nil ));
+#. key = key + 1;
+#. });
+#.
+#. Very poor i18n here
+#: src/include/subdomain/reporting_dialogues.ycp:454
+#: src/include/subdomain/reporting_dialogues.ycp:1066
 msgid "On Demand Event Report - Page "
 msgstr "Raport na żądanie - strona "
 
-#: reporting_dialogues.ycp:533 reporting_dialogues.ycp:1165
+#: src/include/subdomain/reporting_dialogues.ycp:478
+#: src/include/subdomain/reporting_dialogues.ycp:1108
 msgid "F&irst Page"
 msgstr "&Pierwsza strona"
 
-#: reporting_dialogues.ycp:537 reporting_dialogues.ycp:1169
+#: src/include/subdomain/reporting_dialogues.ycp:482
+#: src/include/subdomain/reporting_dialogues.ycp:1112
 msgid "&Last Page"
 msgstr "&Ostatnia strona"
 
-#: reporting_dialogues.ycp:538 reporting_dialogues.ycp:1170
+#: src/include/subdomain/reporting_dialogues.ycp:483
+#: src/include/subdomain/reporting_dialogues.ycp:1113
 msgid "&Go to Page"
 msgstr "Przejdź do &strony"
 
-#: reporting_dialogues.ycp:557 reporting_dialogues.ycp:570
+#: src/include/subdomain/reporting_dialogues.ycp:502
+#: src/include/subdomain/reporting_dialogues.ycp:515
 msgid "Time"
 msgstr "Czas"
 
-#: reporting_dialogues.ycp:582
+#: src/include/subdomain/reporting_dialogues.ycp:527
 msgid "Filter By Program Name"
 msgstr "Filtruj wg nazwy programu"
 
-#: reporting_dialogues.ycp:588
+#: src/include/subdomain/reporting_dialogues.ycp:533
 msgid "Export Report"
 msgstr "Eksportuj raport"
 
-#: reporting_dialogues.ycp:590
+#: src/include/subdomain/reporting_dialogues.ycp:535
 msgid "Export File Location"
 msgstr "Lokalizacja eksportowanego pliku"
 
-#: reporting_dialogues.ycp:591
+#: src/include/subdomain/reporting_dialogues.ycp:536
 msgid "Select Export Format"
 msgstr "Proszę wybrać format do wyeksportowania"
 
-#: reporting_dialogues.ycp:592
+#: src/include/subdomain/reporting_dialogues.ycp:537
 msgid "CSV"
 msgstr "CSV"
 
-#: reporting_dialogues.ycp:593
+#: src/include/subdomain/reporting_dialogues.ycp:538
 msgid "HTML"
 msgstr "HTML"
 
-#: reporting_dialogues.ycp:742
+#: src/include/subdomain/reporting_dialogues.ycp:646
 msgid "Abort or Back"
 msgstr "Porzuć lub cofnij"
 
-#: reporting_dialogues.ycp:762
+#: src/include/subdomain/reporting_dialogues.ycp:666
 msgid ""
 "<b>AppArmor Security Events</b><p>\n"
 "                    This table displays the events found that match your search criteria."
@@ -1798,1101 +2302,882 @@ msgstr ""
 "<b>Zdarzenia związane z bezpieczeństwem AppArmor</b><p>\n"
 "                    Tabela ta przedstawia zdarzenia, które spełniają kryteria wyszukiwania."
 
-#: reporting_dialogues.ycp:769
+#: src/include/subdomain/reporting_dialogues.ycp:673
 msgid "AppArmor Event Report Data"
 msgstr "Dane raportu zdarzenia AppArmor"
 
-#: reporting_dialogues.ycp:772
+#. Sorting by host is no longer meaningful (due to sql changes)
+#. `Left(`RadioButton(`id(0), _("Host") )),
+#: src/include/subdomain/reporting_dialogues.ycp:676
+#: src/include/subdomain/reporting_dialogues.ycp:817
+#: src/include/subdomain/reporting_dialogues.ycp:1078
+#: src/include/subdomain/reporting_utils.ycp:115
+#: src/include/subdomain/reporting_utils.ycp:264
+msgid "Date"
+msgstr "Data"
+
+#: src/include/subdomain/reporting_dialogues.ycp:677
+#: src/include/subdomain/reporting_dialogues.ycp:1079
+#: src/include/subdomain/reporting_utils.ycp:115
+#: src/include/subdomain/reporting_utils.ycp:244
+#: src/include/subdomain/reporting_utils.ycp:267
+msgid "PID"
+msgstr "Identyfikator PID"
+
+#: src/include/subdomain/reporting_dialogues.ycp:677
 msgid "AppArmor Message"
 msgstr "Wiadomość AppArmor"
 
-#: reporting_dialogues.ycp:776 reporting_dialogues.ycp:822
-#: reporting_dialogues.ycp:1197 reporting_dialogues.ycp:1226
-#: reporting_dialogues.ycp:1242 reporting_dialogues.ycp:2423
-#: reporting_dialogues.ycp:2472
+#: src/include/subdomain/reporting_dialogues.ycp:681
+#: src/include/subdomain/reporting_dialogues.ycp:727
+#: src/include/subdomain/reporting_dialogues.ycp:1140
+#: src/include/subdomain/reporting_dialogues.ycp:1169
+#: src/include/subdomain/reporting_dialogues.ycp:1185
+#: src/include/subdomain/reporting_dialogues.ycp:2340
+#: src/include/subdomain/reporting_dialogues.ycp:2390
 msgid "AppArmor Security Event Report"
 msgstr "Raport zdarzenia związanego z bezpieczeństwem AppArmor"
 
-#: reporting_dialogues.ycp:812
+#: src/include/subdomain/reporting_dialogues.ycp:717
 msgid "AppArmor Reporting"
 msgstr "Raportowanie AppArmor"
 
-#: reporting_dialogues.ycp:815 reporting_dialogues.ycp:2405
-#: reporting_dialogues.ycp:2451
+#: src/include/subdomain/reporting_dialogues.ycp:720
+#: src/include/subdomain/reporting_dialogues.ycp:2321
+#: src/include/subdomain/reporting_dialogues.ycp:2369
 msgid "Schedule Reports"
 msgstr "Planowanie raportów"
 
-#: reporting_dialogues.ycp:816 reporting_dialogues.ycp:882
+#: src/include/subdomain/reporting_dialogues.ycp:721
+#: src/include/subdomain/reporting_dialogues.ycp:787
 msgid "View Archived Reports"
 msgstr "Wyświetl zarchiwizowane raporty"
 
-#: reporting_dialogues.ycp:817
+#: src/include/subdomain/reporting_dialogues.ycp:722
 msgid "Run Reports"
 msgstr "Uruchom raportowanie"
 
-#: reporting_dialogues.ycp:886
+#: src/include/subdomain/reporting_dialogues.ycp:791
 msgid "Choose a Report Type"
 msgstr "Wybierz typ raportu"
 
-#: reporting_dialogues.ycp:889
+#: src/include/subdomain/reporting_dialogues.ycp:794
 msgid "SIR"
 msgstr "SIR"
 
-#: reporting_dialogues.ycp:891
+#: src/include/subdomain/reporting_dialogues.ycp:796
 msgid "App Aud"
 msgstr "Kontrola aplikacji"
 
-#: reporting_dialogues.ycp:893
+#: src/include/subdomain/reporting_dialogues.ycp:798
 msgid "ESS"
 msgstr "ESS"
 
-#: reporting_dialogues.ycp:901
+#: src/include/subdomain/reporting_dialogues.ycp:806
 msgid "Location of Archived Reports"
 msgstr "Lokalizacja zarchiwizowanych raportów"
 
-#: reporting_dialogues.ycp:911
+#: src/include/subdomain/reporting_dialogues.ycp:816
 msgid "Report"
 msgstr "Raport"
 
-#: reporting_dialogues.ycp:916
+#: src/include/subdomain/reporting_dialogues.ycp:822
 msgid "&View"
 msgstr "&Wyświetl"
 
-#: reporting_dialogues.ycp:917
+#: src/include/subdomain/reporting_dialogues.ycp:823
 msgid "View &All"
 msgstr "&Wyświetl wszystkie"
 
-#: reporting_dialogues.ycp:1100
+#: src/include/subdomain/reporting_dialogues.ycp:1032
 msgid "Events DB Not Initialized."
 msgstr "Baza danych zdarzeń niezainicjowana."
 
-#: reporting_dialogues.ycp:1110
+#: src/include/subdomain/reporting_dialogues.ycp:1033
 msgid "The events database has not been populated.  No records exist."
 msgstr "Baza danych zdarzeń nie została wypełniona. Nie istnieją żadne wpisy."
 
-#: reporting_dialogues.ycp:1132
+#: src/include/subdomain/reporting_dialogues.ycp:1035
+msgid "Query Returned Empty List."
+msgstr ""
+
+#: src/include/subdomain/reporting_dialogues.ycp:1036
+#, fuzzy
+msgid "The events database has no records that match the search query."
+msgstr "Baza danych zdarzeń nie została wypełniona. Nie istnieją żadne wpisy."
+
+#: src/include/subdomain/reporting_dialogues.ycp:1071
 msgid "Archived Event Report - Page "
 msgstr "Zarchiwizowany raport zdarzenia - strona "
 
-#: reporting_dialogues.ycp:1135 reporting_dialogues.ycp:1356
+#: src/include/subdomain/reporting_dialogues.ycp:1076
+#: src/include/subdomain/reporting_dialogues.ycp:1304
 msgid "Applications Audit Report"
 msgstr "Raport kontroli aplikacji"
 
-#: reporting_dialogues.ycp:1137 reporting_utils.ycp:213
+#: src/include/subdomain/reporting_dialogues.ycp:1078
+#: src/include/subdomain/reporting_dialogues.ycp:1090
+#: src/include/subdomain/reporting_utils.ycp:114
+#: src/include/subdomain/reporting_utils.ycp:252
+msgid "Host"
+msgstr "Komputer"
+
+#: src/include/subdomain/reporting_dialogues.ycp:1078
+#: src/include/subdomain/reporting_utils.ycp:115
+#: src/include/subdomain/reporting_utils.ycp:242
+#: src/include/subdomain/reporting_utils.ycp:265
+msgid "Program"
+msgstr "Program"
+
+#: src/include/subdomain/reporting_dialogues.ycp:1079
+#: src/include/subdomain/reporting_utils.ycp:245
 msgid "State"
 msgstr "Stan"
 
-#: reporting_dialogues.ycp:1137 reporting_utils.ycp:214
+#: src/include/subdomain/reporting_dialogues.ycp:1079
+#: src/include/subdomain/reporting_utils.ycp:246
 msgid "Type"
 msgstr "Typ"
 
-#: reporting_dialogues.ycp:1140 reporting_dialogues.ycp:1145
+#: src/include/subdomain/reporting_dialogues.ycp:1083
+#: src/include/subdomain/reporting_dialogues.ycp:1088
 msgid "Executive Security Summary"
 msgstr "Administracyjne podsumowanie bezpieczeństwa"
 
-#: reporting_dialogues.ycp:1141
+#: src/include/subdomain/reporting_dialogues.ycp:1085
 msgid "Query Results"
 msgstr "Przeszukaj wyniki"
 
-#: reporting_dialogues.ycp:1141
+#: src/include/subdomain/reporting_dialogues.ycp:1085
 msgid "No event information exists."
 msgstr "Brak informacji o zdarzeniu."
 
-#: reporting_dialogues.ycp:1146
+#: src/include/subdomain/reporting_dialogues.ycp:1090
 msgid "Start Date"
 msgstr "Data rozpoczęcia"
 
-#: reporting_dialogues.ycp:1147
+#: src/include/subdomain/reporting_dialogues.ycp:1090
 msgid "End Date"
 msgstr "Data zakończenia"
 
-#: reporting_dialogues.ycp:1147
+#: src/include/subdomain/reporting_dialogues.ycp:1090
 msgid "Num Rejects"
 msgstr "Liczba odrzuconych"
 
-#: reporting_dialogues.ycp:1147
+#: src/include/subdomain/reporting_dialogues.ycp:1091
 msgid "Num Events"
 msgstr "Liczba zdarzeń"
 
-#: reporting_dialogues.ycp:1147 reporting_utils.ycp:223
+#: src/include/subdomain/reporting_dialogues.ycp:1091
+#: src/include/subdomain/reporting_utils.ycp:255
 msgid "Ave. Sev"
 msgstr "Średnia waga"
 
-#: reporting_dialogues.ycp:1147 reporting_utils.ycp:224
+#: src/include/subdomain/reporting_dialogues.ycp:1091
+#: src/include/subdomain/reporting_utils.ycp:256
 msgid "High Sev"
 msgstr "Najwyższa waga"
 
-#: reporting_dialogues.ycp:1255
+#: src/include/subdomain/reporting_dialogues.ycp:1199
 msgid "View Archived SIR Report"
 msgstr "Wyświetl zarchiwizowany raport SIR"
 
-#: reporting_dialogues.ycp:1266 reporting_dialogues.ycp:1277
+#: src/include/subdomain/reporting_dialogues.ycp:1211
+#: src/include/subdomain/reporting_dialogues.ycp:1223
 msgid "View Archived AUD Report"
 msgstr "Wyświetl zarchiwizowany raport AUD"
 
-#: reporting_dialogues.ycp:1330
+#: src/include/subdomain/reporting_dialogues.ycp:1276
 msgid "Security Incident Report"
 msgstr "Raport incydentu bezpieczeństwa"
 
-#: reporting_dialogues.ycp:1377
+#: src/include/subdomain/reporting_dialogues.ycp:1329
 msgid "Executive Security Summary Report"
 msgstr "Raport administracyjnego podsumowania bezpieczeństwa"
 
-#: reporting_dialogues.ycp:1381
+#: src/include/subdomain/reporting_dialogues.ycp:1335
 msgid "No recognized report type selected.  Try again."
 msgstr "Nie wybrano znanego typu raportu. Proszę spróbować ponownie."
 
-#: reporting_dialogues.ycp:1393 reporting_dialogues.ycp:1408
-#: reporting_dialogues.ycp:1416 reporting_dialogues.ycp:1425
-#: reporting_dialogues.ycp:1433 reporting_dialogues.ycp:1440
+#: src/include/subdomain/reporting_dialogues.ycp:1347
+#: src/include/subdomain/reporting_dialogues.ycp:1362
+#: src/include/subdomain/reporting_dialogues.ycp:1370
+#: src/include/subdomain/reporting_dialogues.ycp:1379
+#: src/include/subdomain/reporting_dialogues.ycp:1387
+#: src/include/subdomain/reporting_dialogues.ycp:1394
 msgid "AppArmor Report"
 msgstr "Raport AppArmor"
 
-#: reporting_dialogues.ycp:1559 reporting_dialogues.ycp:1566
-#: reporting_dialogues.ycp:1623
+#: src/include/subdomain/reporting_dialogues.ycp:1511
+#: src/include/subdomain/reporting_dialogues.ycp:1514
+#: src/include/subdomain/reporting_dialogues.ycp:1521
+#: src/include/subdomain/reporting_dialogues.ycp:1578
 msgid "AppArmor On-Demand Report"
 msgstr "Raport AppArmor na żądanie"
 
-#: reporting_dialogues.ycp:1603 reporting_dialogues.ycp:1633
-#: reporting_dialogues.ycp:1640 reporting_dialogues.ycp:1649
-#: reporting_dialogues.ycp:1657
+#: src/include/subdomain/reporting_dialogues.ycp:1559
+#: src/include/subdomain/reporting_dialogues.ycp:1588
+#: src/include/subdomain/reporting_dialogues.ycp:1595
+#: src/include/subdomain/reporting_dialogues.ycp:1604
+#: src/include/subdomain/reporting_dialogues.ycp:1613
 msgid "AppArmor - Run Reports"
 msgstr "Uruchom raportowanie AppArmor"
 
-#: reporting_dialogues.ycp:1684
+#: src/include/subdomain/reporting_dialogues.ycp:1641
 msgid "Add Scheduled SIR"
 msgstr "Dodaj zaplanowany SIR"
 
-#: reporting_dialogues.ycp:1686 reporting_dialogues.ycp:2409
-#: reporting_dialogues.ycp:2456
+#: src/include/subdomain/reporting_dialogues.ycp:1643
+#: src/include/subdomain/reporting_dialogues.ycp:2325
+#: src/include/subdomain/reporting_dialogues.ycp:2374
 msgid "Report Name"
 msgstr "Nazwa raportu"
 
-#: reporting_dialogues.ycp:1705 reporting_dialogues.ycp:2115
-#: reporting_dialogues.ycp:2409 reporting_dialogues.ycp:2457
+#: src/include/subdomain/reporting_dialogues.ycp:1646
+#: src/include/subdomain/reporting_dialogues.ycp:2031
+#: src/include/subdomain/reporting_dialogues.ycp:2326
+#: src/include/subdomain/reporting_dialogues.ycp:2375
 msgid "Day of Month"
 msgstr "Dzień miesiąca"
 
-#: reporting_dialogues.ycp:1733 reporting_dialogues.ycp:2129
-#: reporting_dialogues.ycp:2409 reporting_dialogues.ycp:2457
+#: src/include/subdomain/reporting_dialogues.ycp:1659
+#: src/include/subdomain/reporting_dialogues.ycp:2045
+#: src/include/subdomain/reporting_dialogues.ycp:2326
+#: src/include/subdomain/reporting_dialogues.ycp:2375
 msgid "Day of Week"
 msgstr "Dzień tygodnia"
 
-#: reporting_dialogues.ycp:1734 reporting_dialogues.ycp:2130
-#: reporting_utils.ycp:56
+#: src/include/subdomain/reporting_dialogues.ycp:1660
+#: src/include/subdomain/reporting_dialogues.ycp:2046
+#: src/include/subdomain/reporting_utils.ycp:56
 msgid "Wed"
 msgstr "Śro"
 
-#: reporting_dialogues.ycp:1736 reporting_dialogues.ycp:2132
-#: reporting_dialogues.ycp:2409 reporting_dialogues.ycp:2457
+#: src/include/subdomain/reporting_dialogues.ycp:1662
+#: src/include/subdomain/reporting_dialogues.ycp:2048
+#: src/include/subdomain/reporting_dialogues.ycp:2326
+#: src/include/subdomain/reporting_dialogues.ycp:2375
 msgid "Hour"
 msgstr "Godzina"
 
-#: reporting_dialogues.ycp:1737 reporting_dialogues.ycp:2133
+#: src/include/subdomain/reporting_dialogues.ycp:1663
+#: src/include/subdomain/reporting_dialogues.ycp:2049
 msgid "Minute"
 msgstr "Minuta"
 
-#: reporting_dialogues.ycp:1742 reporting_dialogues.ycp:2138
+#: src/include/subdomain/reporting_dialogues.ycp:1668
+#: src/include/subdomain/reporting_dialogues.ycp:2054
 msgid "Email Target 1"
 msgstr "Odbiorca poczty 1"
 
-#: reporting_dialogues.ycp:1743 reporting_dialogues.ycp:2139
+#: src/include/subdomain/reporting_dialogues.ycp:1669
+#: src/include/subdomain/reporting_dialogues.ycp:2055
 msgid "Email Target 2"
 msgstr "Odbiorca poczty 2"
 
-#: reporting_dialogues.ycp:1744 reporting_dialogues.ycp:2140
+#: src/include/subdomain/reporting_dialogues.ycp:1670
+#: src/include/subdomain/reporting_dialogues.ycp:2056
 msgid "Email Target 3"
 msgstr "Odbiorca poczty 3"
 
-#: reporting_dialogues.ycp:1798 reporting_dialogues.ycp:1946
-#: reporting_dialogues.ycp:2216 reporting_dialogues.ycp:2270
+#: src/include/subdomain/reporting_dialogues.ycp:1718
+#: src/include/subdomain/reporting_dialogues.ycp:1863
+#: src/include/subdomain/reporting_dialogues.ycp:2132
+#: src/include/subdomain/reporting_dialogues.ycp:2186
 msgid "The specified directory does not exist."
 msgstr "Wskazany katalog nie istnieje."
 
-#: reporting_dialogues.ycp:1855
+#: src/include/subdomain/reporting_dialogues.ycp:1775
 msgid "Only one contiguous space allowed in report names."
 msgstr "W nazwach raportów dozwolony jest tylko jeden przylegający odstęp."
 
-#: reporting_dialogues.ycp:1857
-msgid "These characters are not allowed in report names: \"`~!@#$%^&*()[{]};:'\",<>?/|\""
+#: src/include/subdomain/reporting_dialogues.ycp:1777
+#, fuzzy
+msgid ""
+"These characters are not allowed in report names:\n"
+"\t\t\t\t\t\"`~!@#$%^&*()[{]};:'\",<>?/|\""
 msgstr "Znaki niedozwolone w nazwach raportów: \"`~!@#$%^&*()[{]};:'\",<>?/|\""
 
-#: reporting_dialogues.ycp:1859
+#: src/include/subdomain/reporting_dialogues.ycp:1780
 msgid "Only 128 characters are allowed in report names."
 msgstr "W nazwach raportów dozwolonych jest tylko 128 znaków."
 
-#: reporting_dialogues.ycp:1867
+#: src/include/subdomain/reporting_dialogues.ycp:1786
 msgid "Each report name should be unique."
 msgstr "Każda nazwa raportu powinna być unikatowa."
 
-#: reporting_dialogues.ycp:2090
+#: src/include/subdomain/reporting_dialogues.ycp:2006
 msgid "N&ext"
 msgstr "N&astępny"
 
-#: reporting_dialogues.ycp:2105
+#: src/include/subdomain/reporting_dialogues.ycp:2021
 msgid "Edit Report Schedule for "
 msgstr "Edytuj harmonogram raportów dla"
 
-#: reporting_dialogues.ycp:2159
+#: src/include/subdomain/reporting_dialogues.ycp:2075
 msgid "R"
 msgstr "R"
 
-#: reporting_dialogues.ycp:2321
+#: src/include/subdomain/reporting_dialogues.ycp:2237
 msgid "Error: "
 msgstr "Błąd: "
 
-#: reporting_dialogues.ycp:2348
+#: src/include/subdomain/reporting_dialogues.ycp:2264
 msgid "Delete Confirmation"
 msgstr "Potwierdzenie usunięcia"
 
-#: reporting_dialogues.ycp:2352
+#: src/include/subdomain/reporting_dialogues.ycp:2268
 msgid "Are you sure you want to delete: "
 msgstr "Czy na pewno usunąć: "
 
-#: reporting_dialogues.ycp:2352
+#: src/include/subdomain/reporting_dialogues.ycp:2268
 msgid "?"
 msgstr "?"
 
-#: reporting_dialogues.ycp:2357
+#: src/include/subdomain/reporting_dialogues.ycp:2273
 msgid "&Delete"
 msgstr "&Usuń"
 
-#: reporting_dialogues.ycp:2409 reporting_dialogues.ycp:2457
+#: src/include/subdomain/reporting_dialogues.ycp:2326
+#: src/include/subdomain/reporting_dialogues.ycp:2375
 msgid "Mins"
 msgstr "Min."
 
-#: reporting_dialogues.ycp:2413 reporting_dialogues.ycp:2462
+#: src/include/subdomain/reporting_dialogues.ycp:2330
+#: src/include/subdomain/reporting_dialogues.ycp:2380
 msgid "View Archive"
 msgstr "Wyświetl archiwum"
 
-#: reporting_dialogues.ycp:2414 reporting_dialogues.ycp:2463
+#: src/include/subdomain/reporting_dialogues.ycp:2331
+#: src/include/subdomain/reporting_dialogues.ycp:2381
 msgid "Run Now"
 msgstr "Uruchom"
 
-#: reporting_dialogues.ycp:2417 reporting_dialogues.ycp:2466
+#: src/include/subdomain/reporting_dialogues.ycp:2334
+#: src/include/subdomain/reporting_dialogues.ycp:2384
 msgid "Add"
 msgstr "Dodaj"
 
-#: reporting_dialogues.ycp:2418 reporting_dialogues.ycp:2467
+#: src/include/subdomain/reporting_dialogues.ycp:2335
+#: src/include/subdomain/reporting_dialogues.ycp:2385
 msgid "Edit"
 msgstr "Edytuj"
 
-#: reporting_dialogues.ycp:2419 reporting_dialogues.ycp:2468
+#: src/include/subdomain/reporting_dialogues.ycp:2336
+#: src/include/subdomain/reporting_dialogues.ycp:2386
 msgid "Delete"
 msgstr "Usuń"
 
-#: reporting_dialogues.ycp:2517
+#: src/include/subdomain/reporting_dialogues.ycp:2435
 msgid "Cannot delete a stock report."
 msgstr "Nie można usunąć raportu zapasowego."
 
-#: reporting_utils.ycp:77
+#: src/include/subdomain/reporting_utils.ycp:77
 #, ycp-format
 msgid "No name provided for retrieving SIR report page count."
 msgstr "Nie podano nazwy dla pobierania ilości stron raportu SIR."
 
-#: reporting_utils.ycp:96
-msgid "Enter a Page to Move to."
-msgstr "Proszę podać stronę, do której należy przejść."
-
-#: reporting_utils.ycp:221
-msgid "Num. Rejects"
-msgstr "Liczba odrzuconych"
-
-#: reporting_utils.ycp:222
-msgid "Num. Events"
-msgstr "Liczba zdarzeń"
-
-#: reporting_utils.ycp:305
-msgid "MMap"
-msgstr "MMap"
-
-#: reporting_utils.ycp:417
-msgid "Permit"
-msgstr "Zezwól"
-
-#: reporting_utils.ycp:418
-msgid "Reject"
-msgstr "Odrzuć"
-
-#: reporting_utils.ycp:419
-msgid "Audit"
-msgstr "Kontroluj"
-
-#: sd-config.ycp:22
-msgid "Email address is too long.  Please enter another address."
-msgstr "Adres e-mail jest za długi. Proszę podać inny."
-
-#: sd-config.ycp:29
-msgid "Error in email address format.  Please use \"name@host\" format."
-msgstr "Błąd formatu adresu e-mail. Proszę użyć formatu: \"nazwa@komputer\"."
-
-#: sd-config.ycp:51
-msgid "This operation generated the following error. Please check your installation and AppArmor profile settings."
-msgstr "Wystąpił następujący błąd. Proszę zweryfikować poprawności instalacji oraz ustawienia profili programu AppArmor."
-
-#: sd-config.ycp:94 sd-config.ycp:106 sd-config.ycp:118
-msgid "Disabled"
-msgstr "Wyłączone"
-
-#: sd-config.ycp:95 sd-config.ycp:107 sd-config.ycp:119
-msgid "1 minute"
-msgstr "1 minuta"
-
-#: sd-config.ycp:96 sd-config.ycp:108 sd-config.ycp:120
-msgid "5 minutes"
-msgstr "5 minut"
-
-#: sd-config.ycp:97 sd-config.ycp:109 sd-config.ycp:121
-msgid "10 minutes"
-msgstr "10 minut"
-
-#: sd-config.ycp:98 sd-config.ycp:110 sd-config.ycp:122
-msgid "15 minutes"
-msgstr "15 minut"
-
-#: sd-config.ycp:99 sd-config.ycp:111 sd-config.ycp:123
-msgid "30 minutes"
-msgstr "30 minut"
-
-#: sd-config.ycp:100 sd-config.ycp:112 sd-config.ycp:124
-msgid "1 hour"
-msgstr "1 godzina"
-
-#: sd-config.ycp:101 sd-config.ycp:113 sd-config.ycp:125
-msgid "1 day"
-msgstr "1 dzień"
-
-#: sd-config.ycp:102 sd-config.ycp:114 sd-config.ycp:126
-msgid "1 week"
-msgstr "1 tydzień"
-
-#: sd-config.ycp:131 sd-config.ycp:182 sd-config.ycp:354
-msgid "Security Event Notification"
-msgstr "Powiadomienia bezpieczeństwa"
-
-#: sd-config.ycp:135
-msgid "Terse Notification"
-msgstr "Powiadomienia zwięzłe"
-
-#: sd-config.ycp:138 sd-config.ycp:151 sd-config.ycp:164
-msgid "Frequency"
-msgstr "Częstotliwość"
-
-#: sd-config.ycp:139 sd-config.ycp:152 sd-config.ycp:165
-msgid "Email Address"
-msgstr "Adres e-mail"
-
-#: sd-config.ycp:143 sd-config.ycp:156 sd-config.ycp:169
-msgid "Include Unknown Severity Events"
-msgstr "Dołącz nieznane zdarzenia związane z bezpieczeństwem"
-
-#: sd-config.ycp:148
-msgid "Summary Notification"
-msgstr "Powiadomienia podsumowujące"
-
-#: sd-config.ycp:161
-msgid "Verbose Notification"
-msgstr "Powiadomienia wyczerpujące"
-
-#: sd-config.ycp:213 sd-config.ycp:239 sd-config.ycp:264
-msgid "An email address is required for each selected notification method."
-msgstr "Dla każdego wybranego sposobu powiadamiania konieczne jest podanie adresu e-mail."
-
-#: sd-config.ycp:293
-msgid "Configuration failed for the following operations: "
-msgstr "Konfiguracja nie powiodła się dla nastepujących operacji: "
-
-#: sd-config.ycp:297 sd-config.ycp:330
-msgid "Notification is enabled"
-msgstr "Powiadamianie jest włączone"
-
-#: sd-config.ycp:299 sd-config.ycp:327
-msgid "Notification is disabled"
-msgstr "Powiadamianie jest wyłączone"
-
-#: sd-config.ycp:318
-msgid "AppArmor is disabled"
-msgstr "AppArmor jest wyłączony"
-
-#: sd-config.ycp:322
-msgid "AppArmor is enabled"
-msgstr "AppArmor jest włączony"
-
-#: sd-config.ycp:336
-msgid "AppArmor Configuration"
-msgstr "Konfiguracja AppArmor"
-
-#: sd-config.ycp:337
-msgid "<p><b>AppArmor Status</b><br>This reports whether the AppArmor policy enforcement module is loaded and functioning.</p> <p><b>Security Event Notification</b><br>Configure this tool if you want to be notified by email when access violations have occurred.</p> <p><b>Profile Modes</b><br>Use this tool to change the way that AppArmor uses individual profiles.</p>"
-msgstr "<p><b>Status AppArmor</b><br>Status ten informuje, czy moduł wymuszania polityki AppArmor jest wczytany i czy działa.</p> <p><b>Powiadamianie o zdarzeniach związanych z bezpieczeństwem</b> <br>Można tak skonfigurować to narzędzie, aby powiadamiało poprzez e-mail o naruszeniach praw dostępu. </p><p><b>Tryby profili</b><br>Narzędzie to służy do zmiany sposobu użycia przez AppArmor poszczególnych profili.</p>"
-
-#: sd-config.ycp:349
-msgid "Configure AppArmor"
-msgstr "Konfiguracja AppArmor"
-
-#: sd-config.ycp:358
-msgid "C&onfigure"
-msgstr "Sk&onfiguruj"
-
-#: sd-config.ycp:364
-msgid "Configure Profile Modes"
-msgstr "Konfiguracja trybu profili"
-
-#: sd-config.ycp:367
-msgid "Set profile modes"
-msgstr "Ustaw tryby profili"
-
-#: sd-config.ycp:368
-msgid "Co&nfigure"
-msgstr "Sko&nfiguruj"
-
-#: subdomain.ycp:32
-msgid "Enable AppArmor Functions"
-msgstr "Włącz AppArmor"
-
-#: ag_genprof:46
-msgid "SubDomain does not appear to be started.  Please enable SubDomain and try again."
-msgstr "Prawdopodobnie poddomena nie jest uruchomiona. Proszę włączyć poddomenę i spróbować ponowie"
-
-#: ag_genprof:53
-#, perl-format
-msgid "Can't find subdomain profiles in %s."
-msgstr "Nie można znaleźć profilów poddomeny w %s."
-
-#: ag_genprof:65
-msgid ""
-"This wizard will help you create a new AppArmor security \n"
-"profile for an application, or you can use it to enhance \n"
-"an existing profile by allowing AppArmor to learn new \n"
-"application behavior. \n"
-"\n"
-"Please enter the application name for which you would like\n"
-"to create a profile, or selecte Browse to find the \n"
-"application on your system."
-msgstr ""
-"Ten asystent pomaga utworzyć nowy profil bezpieczeństwa \n"
-"AppArmor dla aplikacji. Można użyć go także do rozszerzenia \n"
-"istniejącego profilu i zezwolić na rejestrację zachowania aplikacjiprzez AppArmor. \n"
-"\n"
-"Proszę podać nazwę aplikacji, dla której stworzony zostać ma\n"
-"profil lub nacisnąć przycisk Przeglądaj, aby wybrać ją w oknie."
-
-#: ag_genprof:73
-msgid "&Application to Profile"
-msgstr "&Aplikacja do profilowania"
-
-#: ag_genprof:74
-msgid "&Create"
-msgstr "&Utwórz"
-
-#: ag_genprof:76
-msgid "Select Program to Profile"
-msgstr "Wybór programu do profilowania"
-
-#: ag_genprof:95
-msgid ""
-"The specified file is not executable.\n"
-"\n"
-"Please enter an application name to\n"
-"continue generating a profile or press\n"
-"Abort to cancel this wizard."
-msgstr ""
-"Wybrany plik nie jest wykonywalny.\n"
-"\n"
-"Proszę podać nazwę aplikacji, aby\n"
-"kontynuować, albo nacisnąć przycisk\n"
-"Przerwij, aby zakończyć asystenta."
-
-#: ag_genprof:102
-msgid ""
-"The specified pathname is a directory.\n"
-"\n"
-"Please enter an application name to\n"
-"continue generating a profile or press\n"
-"Abort to cancel this wizard."
-msgstr ""
-"Podana ścieżka wskazuje na katalog.\n"
-"\n"
-"Proszę podać nazwę aplikacji, aby\n"
-"kontynuować, albo nacisnąć przycisk\n"
-"Przerwij, aby zakończyć asystenta."
-
-#: ag_genprof:116
-msgid ""
-"The specified file does not exist.\n"
-"\n"
-"Please enter an application name to\n"
-"continue generating a profile or press\n"
-"Abort to cancel this wizard."
-msgstr ""
-"Podany plik nie istnieje/\n"
-"\n"
-"Proszę podać nazwę aplikacji, aby\n"
-"kontynuować, albo nacisnąć przycisk\n"
-"Przerwij, aby zakończyć asystenta."
-
-#: ag_genprof:126
-msgid ""
-"You have not entered or selected an\n"
-"application to profile.\n"
-"\n"
-"Please enter an application name to\n"
-"continue generating a profile or press\n"
-"Abort to cancel this wizard."
-msgstr ""
-"Nie podano ani nie wybrano aplikacji\n"
-"do profilowania.\n"
-"\n"
-"Proszę podać nazwę aplikacji, aby\n"
-"kontynuować, albo nacisnąć przycisk\n"
-"Przerwij, aby zakończyć asystenta."
-
-#: ag_genprof:173
-msgid "Profiling"
-msgstr "Profilowanie"
-
-#: ag_genprof:174
-msgid ""
-"Please start the application to be profiled in\n"
-"another window and exercise its functionality now.\n"
-"\n"
-"Once completed, select the 'Scan' option below in\n"
-"order to scan the system logs for AppArmor events.\n"
-"\n"
-"For each AppArmor event, you will be given the\n"
-"opportunity to choose whether the access should be\n"
-"allowed or denied."
-msgstr ""
-"Proszę uruchomić profilowaną aplikację w innym\n"
-"oknie i wykonać w niej typowe czynności.\n"
-"\n"
-"Po zakończeniu należy nacisnąć przycisk Skanuj,\n"
-"aby przeskanować dzienniki systemowe w poszukiwaniu\n"
-"zdarzeń AppArmor.\n"
-"\n"
-"Dla każdego zdarzenia będzie można określić \n"
-"czy dostęp będzie dozwolony czy zabroniony."
-
-#: ag_genprof:198
-msgid "Are you sure you want to exit?"
-msgstr "Czy na pewno wyjść? "
-
-#: ag_genprof:221
-msgid "Reloaded SubDomain profiles in enforce mode."
-msgstr "Wczytano ponownie profile poddomen w trybie ochrony (enforce)"
-
-#: ag_genprof:222
-#, perl-format
-msgid "Finished generating profile for %s."
-msgstr "Zakończono generację profilu dla %s."
-
-#: ag_logparse:62 ag_logparse:82
-msgid "Unable to open"
-msgstr "Nie można otworzyć"
-
-#: ag_logparse:62
-msgid "Couldn't save query."
-msgstr "Nie można zapisać zapytania"
-
-#: ag_logparse:82
-msgid "Couldn't retrieve query."
-msgstr "Nie można pobrać zapytania."
-
-#: ag_logparse:160 reportgen.pl:96
-msgid "# Security Incident Report - Generated by AppArmor\n"
-msgstr "# Raport incydentu bezpieczeństwa - wygnerowany przez AppArmor\n"
-
-#: ag_logparse:161 reportgen.pl:97
-#, perl-format
-msgid "# Period: %s - %s\n"
-msgstr "# Okres: %s - %s\n"
-
-#: ag_logparse:165 reportgen.pl:115
-msgid "# The following filters were used for report generation:\n"
-msgstr "# Do generacji raportu użyto następujących filtrów:\n"
-
-#: ag_logparse:168 reportgen.pl:119
-#, perl-format
-msgid ""
-"# Filter: %s, Value: %s\n"
-"\n"
-msgstr ""
-"# Filtr: %s, Wartość: %s\n"
-"\n"
-
-#: ag_logparse:172 reportgen.pl:123
-msgid ""
-"# No filters were used for report generation:\n"
-"\n"
-"\n"
-msgstr ""
-"# Nie użyto żadnych filtrów do generacji raportu:\n"
-"\n"
-"\n"
-
-#: ag_logparse:176 reportgen.pl:138
-msgid "<h3>Security Incident Report - Generated by AppArmor</h3>\n"
-msgstr "<h3>Raport incdentu bezpieczeństwa - wygenerowany przez AppArmor</h3>\n"
-
-#: ag_logparse:177 reportgen.pl:139
-#, perl-format
-msgid "<h4>Period: %s - %s</h4>\n"
-msgstr "<h4>Okres: %s - %s</h4>\n"
-
-#: ag_reports_confined:113
-#, perl-format
-msgid "ag_reports_confined: Couldn't open %s for writing."
-msgstr "ag_reports_confined: Nie można otworzyć %s do zapisu."
-
-#: ag_reports_confined:139
-#, perl-format
-msgid "Failure in readMultiAudLog() - couldn't open %s."
-msgstr "Błąd w readMultiAudLog() - nie można otworzyć %s."
-
-#: ag_reports_confined:154
-#, perl-format
-msgid "Problem in readMultiAudLog() - couldn't open %s/%s."
-msgstr "Problem w readMultiAudLog() - nie można otworzyć %s/%s."
-
-#: ag_reports_confined:188
-msgid "readAudLog() wasn't passed an input file."
-msgstr "do readAudLog() nie przekazano pliku wejściowego"
-
-#: ag_reports_confined:212
-#, perl-format
-msgid "readAudLog() couldn't open %s."
-msgstr "readAudLog(): nie można otworzyć %s"
-
-#: ag_reports_confined:270
-#, perl-format
-msgid "Can't run %s.  Exiting."
-msgstr "Nie można uruchomić %s. Zakończono."
-
-#: ag_reports_confined:306
-msgid "ag_reports_confined: Missing instruction or argument!"
-msgstr "ag_reports_confined: brak instrukcji lub parametru!"
-
-#: ag_reports_ess:56
-msgid "Failure in readMultiEssLog() - couldn't open"
-msgstr "Błąd w readMultiEssLog() - nie można otworzyć"
-
-#: ag_reports_ess:69
-msgid "Problem in readMultiEssLog() - couldn't open"
-msgstr "Problem w readMultiEssLog() - nie można otworzyć"
-
-#: ag_reports_ess:104
-msgid "readEssLog() wasn't passed an input file."
-msgstr "readEssLog(): nie przekazano pliku wejściowego."
-
-#: ag_reports_ess:128
-#, perl-format
-msgid "readEssLog() couldn't open %s"
-msgstr "readEssLog():nie można otworzyć %s"
-
-#: ag_reports_ess:162
-#, perl-format
-msgid "ag_logparse: Unknown instruction %s or argument: %s"
-msgstr "ag_logparse: nieznana instrukcja %s lub parametr: %s"
-
-#: ag_reports_parse:77
-#, perl-format
-msgid "ag_reports_parse: Couldn't open %s for writing."
-msgstr "ag_reports_parse: nie można otworzyć %s do zapisu"
-
-#: ag_reports_parse:144
-msgid "ag_reports_parse: No archived reports found."
-msgstr "ag_reports_parse: nie znaleziono zarchiwizowanych raportów"
-
-#: ag_reports_parse:149
-#, perl-format
-msgid "ag_reports_parse: Can't open directory %s: %s"
-msgstr "ag_reports_parse: nie można otworzyć katalogu %s: %s"
-
-#: ag_reports_parse:186
-#, perl-format
-msgid "ag_reports_parse: Unknown instruction %s or argument: %s"
-msgstr "ag_reports_parse: nieznana instrukcja %s lub parametr: %s"
-
-#: ag_reports_sched:72
-#, perl-format
-msgid "Couldn't find %s.  Unable to create crontab.  Exiting."
-msgstr "Nie można znaleźć %s. Nie można utworzyć pliku crontab.  Zakończono."
-
-#: ag_reports_sched:129 ag_reports_sched:171 ag_reports_sched:249
-#: ag_reports_sched:312 ag_reports_sched:319 ag_reports_sched:383
-#: ag_reports_sched:390 ag_reports_sched:473 ag_reports_sched:538
-#, perl-format
-msgid "Couldn't open %s."
-msgstr "Nie można otworzyć %s."
-
-#: ag_reports_sched:241
-#, perl-format
-msgid "Couldn't open %s.  Unable to add report: %s"
-msgstr "Nie można otworzyć %s. Nie można dodać raportu: %s"
-
-#: ag_reports_sched:266
-#, perl-format
-msgid "Duplicate report name not allowed. Didn't schedule new report: %s"
-msgstr "Raport o nazwie identycznej z istniejącym jest niedozwolony. Nie zaplanowano nowego raportu: %s"
-
-#: ag_reports_sched:579 ag_reports_sched:586
-#, perl-format
-msgid "Couldn't open %s.  No changes performed."
-msgstr "Nie można otworzyć %s. Nie dokonano żadnych zmian."
-
-#: ag_reports_sched:688
-#, perl-format
-msgid "ag_reports_sched: Unknown instruction %s or arg: %s"
-msgstr "ag_reports_sched: nieznana instrukcja %s lub parametr: %s"
-
-#: reportgen.pl:75
-msgid "# Executive Security Summary - Generated by AppArmor\n"
-msgstr "# Podsumowanie bezpieczeństwa - wygenerowane przez AppArmor\n"
-
-#: reportgen.pl:76
-#, perl-format
-msgid ""
-"# Period: %s to %s\n"
-"\n"
-msgstr ""
-"# Okres: %s do %s\n"
-"\n"
-
-#: reportgen.pl:80
-msgid "<tr><th colspan='7'>Executive Security Summary - Generated by AppArmor</th></tr>"
-msgstr "<tr><th colspan='7'>Podsumowanie bezpieczeństwa - wygenerowane przez AppArmor</th></tr>"
-
-#: reportgen.pl:81
-#, perl-format
-msgid "<tr><th colspan='7'>Period: %s to %s</th></tr>\n"
-msgstr "<tr><th colspan='7'>Okres: %s do %s</th></tr>\n"
-
-#: reportgen.pl:86
-msgid "# Application Audit Report - Generated by AppArmor\n"
-msgstr "# Raport z audytu aplikacji - wygenerowany przez AppArmor\n"
-
-#: reportgen.pl:87
-#, perl-format
-msgid ""
-"# Date Run: %s\n"
-"\n"
-msgstr ""
-"# Data uruchomienia: %s\n"
-"\n"
-
-#: reportgen.pl:90
-msgid "<table border='1' cellpadding='2'><tr><th colspan='7'>Applications Audit Report - Generated by AppArmor</th></tr>\n"
-msgstr "<table border='1' cellpadding='2'><tr><th colspan='7'>Raport z audytu aplikacji - wygenerowany przez AppArmor</th></tr>\n"
-
-#: reportgen.pl:143
-msgid "<h4>The following filters were used for report generation:</h4>"
-msgstr "<h4>Do generacji raportu użyto następujących filtrów:</h4>"
-
-#: reportgen.pl:147
-#, perl-format
-msgid "<p>Filter: %s, Value: %s</p>"
-msgstr "<p>Filtr: %s, Wartość: %s</p>"
-
-#: reportgen.pl:151
-msgid "<h4>No filters were used for report generation.</h4>"
-msgstr "<h4>Do generacji raportu nie użyto żadnych filtrów.</h4>"
-
-#: reportgen.pl:220
-#, perl-format
-msgid "Fatal Error: Couldn't get report configuration information %s.  Exiting."
-msgstr "Błąd krytyczny: nie można pobrać konfiguracji %s raportu. Zakończono."
-
-#: reportgen.pl:337
-#, perl-format
-msgid "Error: Couldn't open (tmp) %s.  ESS report execution not tracked."
-msgstr "Błąd: nie można otworzyć (tmp) %s. Nie śledzono wykonania raportu ESS."
-
-#: reportgen.pl:342
-#, perl-format
-msgid "Error: Couldn't open %s.  ESS report execution not tracked."
-msgstr "Błąd: nie można otworzyć %s. Nie śledzono wykonania raportu ESS."
-
-#: reportgen.pl:359
-msgid "Error: Necessary input missing.  Unable to generate report and send mail."
-msgstr "Błąd: brak wymaganych danych. Nie można wygenerować raportu ani wysłać wiadomości e-mail."
-
-#: reportgen.pl:429
-#, perl-format
-msgid "Error: Couldn't open %s.  No ESS csv report generated."
-msgstr "Błąd: nie można otworzyć %s. Nie wygenerowano raportu csv ESS."
-
-#: reportgen.pl:440
-msgid "<tr bgcolor='edefff'><td>Hostname</td><td>Start Date</td><td>End Date</td>"
-msgstr "<tr bgcolor='edefff'><td>Nazwa hosta</td><td>Data rozpoczęcia</td><td>Data zakończenia</td>"
-
-#: reportgen.pl:441
-msgid "<td>Highest Severity</td><td>Mean Severity</td><td>Number of REJECTs</td>"
-msgstr "<td>Najwyższa waga</td><td>Średnia waga</td><td>Liczba odrzuceń</td>"
-
-#: reportgen.pl:442
-msgid "<td>Number of Events</td></tr>\n"
-msgstr "<td>Liczba zdarzeń</td></tr>\n"
-
-#: reportgen.pl:456
-#, perl-format
-msgid "Error: Couldn't open %s.  No ESS html report generated."
-msgstr "Błąd: nie można otworzyć %s. Nie wygenerowano raportu html ESS."
-
-#: reportgen.pl:488 reportgen.pl:520
-#, perl-format
-msgid "Error: Couldn't open %s.  No AUD report generated."
-msgstr "Błąd: nie można otworzyć %s. Nie wygenerowano raportu AUD."
-
-#: reportgen.pl:501
-msgid "<h3>Applications Audit Report - Generated by AppArmor</h3>\n"
-msgstr "<h3>Raport z audytu aplikacji - wygenerowany przez AppArmor</h3>\n"
-
-#: reportgen.pl:503
-msgid "<tr bgcolor='edefff'><td>Hostname</td><td>Date</td><td>Application</td>"
-msgstr "<tr bgcolor='edefff'><td>Nazwa hosta</td><td>Data</td><td>Aplikacja</td>"
-
-#: reportgen.pl:504
-msgid "<td>Profile</td><td>PID</td><td>State</td><td>AppArmor Profile</td></tr>\n"
-msgstr "<td>Profil</td><td>PID</td><td>Stan</td><td>Profil AppArmor</td></tr>\n"
-
-#: reportgen.pl:571
-#, perl-format
-msgid "Error: Couldn't open %s.  No SIR report generated."
-msgstr "Błąd: nie można otworzyć %s. Nie wygenerowano raportu SIR."
-
-#: reportgen.pl:591
-msgid "Error: No arguments passed--Unable to execute reports.  Exiting."
-msgstr "Błąd: nie podano parametrów - nie można wykonać raportów. Zakończono."
-
-#: reportgen.pl:604
-#, perl-format
-msgid "Executing Scheduled Report: %s"
-msgstr "Wykonywanie zaplanowanego raportu: %s"
-
-#: complex.ycp:101 dialogs.ycp:231 dialogs.ycp:349
-msgid "00"
-msgstr "00"
-
-#: complex.ycp:101 dialogs.ycp:231 dialogs.ycp:349
-msgid "01"
-msgstr "01"
-
-#: complex.ycp:101 dialogs.ycp:231 dialogs.ycp:349
-msgid "02"
-msgstr "02"
-
-#: complex.ycp:101 dialogs.ycp:231 dialogs.ycp:349
-msgid "03"
-msgstr "03"
-
-#: complex.ycp:101 dialogs.ycp:231 dialogs.ycp:349
-msgid "04"
-msgstr "04"
-
-#: complex.ycp:102 dialogs.ycp:232 dialogs.ycp:350
-msgid "05"
-msgstr "05"
-
-#: complex.ycp:102 dialogs.ycp:232 dialogs.ycp:350
-msgid "06"
-msgstr "06"
-
-#: complex.ycp:102 dialogs.ycp:232 dialogs.ycp:350
-msgid "07"
-msgstr "07"
-
-#: complex.ycp:102 dialogs.ycp:232 dialogs.ycp:350
-msgid "08"
-msgstr "08"
-
-#: complex.ycp:102 dialogs.ycp:232 dialogs.ycp:350
-msgid "09"
-msgstr "09"
-
-#: complex.ycp:102 dialogs.ycp:232 dialogs.ycp:350
-msgid "10"
-msgstr "10"
-
-#: complex.ycp:195
-msgid "Execution Schedule"
-msgstr "Harmonogram wykonania"
-
-#: complex.ycp:196
-msgid "Monthly"
-msgstr "Co miesiąc"
-
-#: complex.ycp:197
-msgid "Weekly"
-msgstr "Co tydzień"
-
-#: complex.ycp:198
-msgid "Daily"
-msgstr "Codziennie"
-
-#: complex.ycp:199
-msgid "Hourly"
-msgstr "Co godzinę"
-
-#: complex.ycp:203
-msgid "Sunday"
-msgstr "Niedziela"
-
-#: complex.ycp:204
-msgid "Monday"
-msgstr "Poniedziałek"
-
-#: complex.ycp:205
-msgid "Tuesday"
-msgstr "Wtorek"
-
-#: complex.ycp:206
-msgid "Wednesday"
-msgstr "Środa"
-
-#: complex.ycp:207
-msgid "Thursday"
-msgstr "Czwartek"
-
-#: complex.ycp:208
-msgid "Friday"
-msgstr "Piątek"
-
-#: complex.ycp:209
-msgid "Saturday"
-msgstr "Sobota"
-
-#: complex.ycp:244
-msgid "Add AppArmor Report"
-msgstr "Dodaj raport AppArmor"
-
-#: complex.ycp:247
-msgid "Edit AppArmor Report"
-msgstr "Edytuj raport AppArmor"
-
-#: complex.ycp:297
-msgid "AppArmor Report Management"
-msgstr "Zarządzanie raportami AppArmor"
-
-#: complex.ycp:331
-msgid "Delete "
-msgstr "Usuń"
-
-#: complex.ycp:414
-msgid "Unrecognized form request: "
-msgstr "Nierozpoznane żądanie formularza:"
-
-#: complex.ycp:507 complex.ycp:654 dialogs.ycp:761
+#: src/include/subdomain/reporting_utils.ycp:116
+#, fuzzy
+msgid "Mode Request"
+msgstr "Żądanie"
+
+#: src/include/subdomain/reporting_utils.ycp:116
+#, fuzzy
+msgid "Mode Deny"
+msgstr "Tryb: "
+
+#: src/include/subdomain/reporting_utils.ycp:116
 msgid "Event Type"
 msgstr "Typ zdarzenia"
 
-#: dialogs.ycp:217
-msgid "Select Event Type"
-msgstr "Wybór typu zdarzenia"
+#: src/include/subdomain/reporting_utils.ycp:117
+#, fuzzy
+msgid "Operation"
+msgstr "System operacyjny"
 
-#: dialogs.ycp:242
-msgid "Scheduled Reports"
-msgstr "Raporty zaplanowane"
+#: src/include/subdomain/reporting_utils.ycp:117
+msgid "Attribute"
+msgstr "Atrybut"
 
-#: dialogs.ycp:255
-msgid "Schedule"
-msgstr "Harmonogram"
+#: src/include/subdomain/reporting_utils.ycp:117
+#, fuzzy
+msgid "Additional Name"
+msgstr "Plik dodatkowy"
 
-#: dialogs.ycp:255
-msgid "Enabled"
-msgstr "Włączone"
+#: src/include/subdomain/reporting_utils.ycp:117
+#, fuzzy
+msgid "Net Family"
+msgstr "Grupa sieciowa"
 
-#: dialogs.ycp:267
-msgid "Run Report"
-msgstr "Uruchom raport"
+#: src/include/subdomain/reporting_utils.ycp:118
+#, fuzzy
+msgid "Net Protocol"
+msgstr "Protokół ISDN"
 
-#: dialogs.ycp:268
-msgid "View Report"
-msgstr "Wyświetl raport"
+#: src/include/subdomain/reporting_utils.ycp:118
+#, fuzzy
+msgid "Net Socket Type"
+msgstr "Typ gniazda"
 
-#: dialogs.ycp:281
-msgid "Select Mode"
-msgstr "Tryb"
+#: src/include/subdomain/reporting_utils.ycp:128
+msgid "Enter a Page to Move to."
+msgstr "Proszę podać stronę, do której należy przejść."
 
-#: dialogs.ycp:288
-msgid "Inherit Execute"
-msgstr "Wykonanie z dziedziczeniem"
+#: src/include/subdomain/reporting_utils.ycp:253
+msgid "Num. Rejects"
+msgstr "Liczba odrzuconych"
 
-#: dialogs.ycp:289
-msgid "Profile Execute"
-msgstr "Wykonanie z profilem"
+#: src/include/subdomain/reporting_utils.ycp:254
+msgid "Num. Events"
+msgstr "Liczba zdarzeń"
 
-#: dialogs.ycp:290
-msgid "Profile Execute (clean env)"
-msgstr "Wykonanie z profilem (czyste środowisko)"
+#: src/include/subdomain/reporting_utils.ycp:270
+msgid "Access Type"
+msgstr "Rodzaj dostępu"
 
-#: dialogs.ycp:291
-msgid "Unconstrained Execute"
-msgstr "Wykonanie bez ograniczeń"
+#: src/include/subdomain/reporting_utils.ycp:337
+msgid "MMap"
+msgstr "MMap"
 
-#: dialogs.ycp:292
-msgid "Unconstrained Execute (clean env)"
-msgstr "Wykonanie bez ograniczeń (czyste środowisko)"
+#: src/include/subdomain/reporting_utils.ycp:449
+msgid "Permit"
+msgstr "Zezwól"
 
-#: dialogs.ycp:296
-msgid "Select Capabilities"
-msgstr "Wybór możliwości"
+#: src/include/subdomain/reporting_utils.ycp:450
+msgid "Reject"
+msgstr "Odrzuć"
 
-#: dialogs.ycp:363
-msgid "Add Report Filters"
-msgstr "Dodaj filtry raportu"
+#: src/include/subdomain/reporting_utils.ycp:451
+msgid "Audit"
+msgstr "Kontroluj"
 
-#: dialogs.ycp:364
-msgid "Create New Report - Set Filters "
-msgstr "Nowy raport - ustawianie filtrów"
+#: src/include/subdomain/sd-config.ycp:22
+msgid "Email address is too long.  Please enter another address."
+msgstr "Adres e-mail jest za długi. Proszę podać inny."
 
-#: dialogs.ycp:435 dialogs.ycp:472
-msgid "AppArmor Report Configuration"
-msgstr "Konfiguracja raportów AppArmor"
+#: src/include/subdomain/sd-config.ycp:29
+msgid "Error in email address format.  Please use \"name@host\" format."
+msgstr "Błąd formatu adresu e-mail. Proszę użyć formatu: \"nazwa@komputer\"."
 
-#: dialogs.ycp:438
-msgid "Configuration of AppArmor Reports - Step 1"
-msgstr "Konfiguracja raportów AppArmor - krok 1"
+#: src/include/subdomain/sd-config.ycp:51
+msgid "This operation generated the following error. Please check your installation and AppArmor profile settings."
+msgstr "Wystąpił następujący błąd. Proszę zweryfikować poprawności instalacji oraz ustawienia profili programu AppArmor."
 
-#: dialogs.ycp:475
-msgid "Configuration of AppArmor Reports - Step 2"
-msgstr "Konfiguracja raportów AppArmor - krok 2"
+#: src/include/subdomain/sd-config.ycp:94
+#: src/include/subdomain/sd-config.ycp:106
+#: src/include/subdomain/sd-config.ycp:118
+msgid "Disabled"
+msgstr "Wyłączone"
 
-#: dialogs.ycp:852
-msgid "Filter by Date"
-msgstr "Filtruj wg dat"
+#: src/include/subdomain/sd-config.ycp:95
+#: src/include/subdomain/sd-config.ycp:107
+#: src/include/subdomain/sd-config.ycp:119
+msgid "1 minute"
+msgstr "1 minuta"
 
-#: dialogs.ycp:910
-msgid "Profile Field Filters"
-msgstr "Filtry pola profilu"
+#: src/include/subdomain/sd-config.ycp:96
+#: src/include/subdomain/sd-config.ycp:108
+#: src/include/subdomain/sd-config.ycp:120
+msgid "5 minutes"
+msgstr "5 minut"
 
-#: dialogs.ycp:913
-msgid "Profile Filter Help"
-msgstr "Pomoc dot. filtrów profilu"
+#: src/include/subdomain/sd-config.ycp:97
+#: src/include/subdomain/sd-config.ycp:109
+#: src/include/subdomain/sd-config.ycp:121
+msgid "10 minutes"
+msgstr "10 minut"
 
-#: dialogs.ycp:916
-msgid "Date Filters"
-msgstr "Filtry daty"
+#: src/include/subdomain/sd-config.ycp:98
+#: src/include/subdomain/sd-config.ycp:110
+#: src/include/subdomain/sd-config.ycp:122
+msgid "15 minutes"
+msgstr "15 minut"
 
-#: dialogs.ycp:919
-msgid "Date Filter Help"
-msgstr "Pomoc dot. filtrów daty"
+#: src/include/subdomain/sd-config.ycp:99
+#: src/include/subdomain/sd-config.ycp:111
+#: src/include/subdomain/sd-config.ycp:123
+msgid "30 minutes"
+msgstr "30 minut"
 
-#: dialogs.ycp:922
-msgid "Advanced Filters"
-msgstr "Filtry zaawansowane"
+#: src/include/subdomain/sd-config.ycp:100
+#: src/include/subdomain/sd-config.ycp:112
+#: src/include/subdomain/sd-config.ycp:124
+msgid "1 hour"
+msgstr "1 godzina"
 
-#: dialogs.ycp:925
-msgid "Advanced Filter Help"
-msgstr "Pomoc dot. filtrów zaawansowanych"
+#: src/include/subdomain/sd-config.ycp:101
+#: src/include/subdomain/sd-config.ycp:113
+#: src/include/subdomain/sd-config.ycp:125
+msgid "1 day"
+msgstr "1 dzień"
 
-#: dialogs.ycp:930
-msgid "<p>Help for all tabs</p>"
-msgstr "<p>Pomoc dot. wszystkich kart</p>"
+#: src/include/subdomain/sd-config.ycp:102
+#: src/include/subdomain/sd-config.ycp:114
+#: src/include/subdomain/sd-config.ycp:126
+msgid "1 week"
+msgstr "1 tydzień"
 
-#: wizards.ycp:166
-msgid "AA Reports Configuration"
-msgstr "Konfiguracja raportów AppArmor"
+#: src/include/subdomain/sd-config.ycp:131
+#: src/include/subdomain/sd-config.ycp:182
+#: src/include/subdomain/sd-config.ycp:354
+msgid "Security Event Notification"
+msgstr "Powiadomienia bezpieczeństwa"
 
-#: wizards.ycp:168
-msgid "Initializing..."
-msgstr "Inicjalizacja..."
+#: src/include/subdomain/sd-config.ycp:135
+msgid "Terse Notification"
+msgstr "Powiadomienia zwięzłe"
+
+#: src/include/subdomain/sd-config.ycp:138
+#: src/include/subdomain/sd-config.ycp:151
+#: src/include/subdomain/sd-config.ycp:164
+msgid "Frequency"
+msgstr "Częstotliwość"
+
+#: src/include/subdomain/sd-config.ycp:139
+#: src/include/subdomain/sd-config.ycp:152
+#: src/include/subdomain/sd-config.ycp:165
+msgid "Email Address"
+msgstr "Adres e-mail"
+
+#: src/include/subdomain/sd-config.ycp:143
+#: src/include/subdomain/sd-config.ycp:156
+#: src/include/subdomain/sd-config.ycp:169
+msgid "Include Unknown Severity Events"
+msgstr "Dołącz nieznane zdarzenia związane z bezpieczeństwem"
+
+#: src/include/subdomain/sd-config.ycp:148
+msgid "Summary Notification"
+msgstr "Powiadomienia podsumowujące"
+
+#: src/include/subdomain/sd-config.ycp:161
+msgid "Verbose Notification"
+msgstr "Powiadomienia wyczerpujące"
+
+#: src/include/subdomain/sd-config.ycp:213
+#: src/include/subdomain/sd-config.ycp:239
+#: src/include/subdomain/sd-config.ycp:264
+msgid "An email address is required for each selected notification method."
+msgstr "Dla każdego wybranego sposobu powiadamiania konieczne jest podanie adresu e-mail."
+
+#: src/include/subdomain/sd-config.ycp:293
+msgid "Configuration failed for the following operations: "
+msgstr "Konfiguracja nie powiodła się dla nastepujących operacji: "
+
+#: src/include/subdomain/sd-config.ycp:297
+#: src/include/subdomain/sd-config.ycp:330
+msgid "Notification is enabled"
+msgstr "Powiadamianie jest włączone"
+
+#: src/include/subdomain/sd-config.ycp:299
+#: src/include/subdomain/sd-config.ycp:327
+msgid "Notification is disabled"
+msgstr "Powiadamianie jest wyłączone"
+
+#: src/include/subdomain/sd-config.ycp:318
+msgid "AppArmor is disabled"
+msgstr "AppArmor jest wyłączony"
+
+#: src/include/subdomain/sd-config.ycp:322
+msgid "AppArmor is enabled"
+msgstr "AppArmor jest włączony"
+
+#. Network dialog caption
+#: src/include/subdomain/sd-config.ycp:336
+msgid "AppArmor Configuration"
+msgstr "Konfiguracja AppArmor"
+
+#: src/include/subdomain/sd-config.ycp:337
+msgid "<p><b>AppArmor Status</b><br>This reports whether the AppArmor policy enforcement module is loaded and functioning.</p> <p><b>Security Event Notification</b><br>Configure this tool if you want to be notified by email when access violations have occurred.</p> <p><b>Profile Modes</b><br>Use this tool to change the way that AppArmor uses individual profiles.</p>"
+msgstr "<p><b>Status AppArmor</b><br>Status ten informuje, czy moduł wymuszania polityki AppArmor jest wczytany i czy działa.</p> <p><b>Powiadamianie o zdarzeniach związanych z bezpieczeństwem</b> <br>Można tak skonfigurować to narzędzie, aby powiadamiało poprzez e-mail o naruszeniach praw dostępu. </p><p><b>Tryby profili</b><br>Narzędzie to służy do zmiany sposobu użycia przez AppArmor poszczególnych profili.</p>"
+
+#: src/include/subdomain/sd-config.ycp:349
+msgid "Configure AppArmor"
+msgstr "Konfiguracja AppArmor"
+
+#: src/include/subdomain/sd-config.ycp:358
+msgid "C&onfigure"
+msgstr "Sk&onfiguruj"
+
+#: src/include/subdomain/sd-config.ycp:364
+msgid "Configure Profile Modes"
+msgstr "Konfiguracja trybu profili"
+
+#: src/include/subdomain/sd-config.ycp:367
+msgid "Set profile modes"
+msgstr "Ustaw tryby profili"
+
+#: src/include/subdomain/sd-config.ycp:368
+msgid "Co&nfigure"
+msgstr "Sko&nfiguruj"
+
+#: src/perl/Notify.pm:51
+#, perl-format
+msgid "Failed copying %s."
+msgstr "Kopiowanie %s nie powiodło się."
+
+#~ msgid "February only has 28 days!  Fixing."
+#~ msgstr "Luty ma tylko 28 dni! Poprawiono."
+
+#~ msgid "February only has 29 days!  Fixing."
+#~ msgstr "Luty ma tylko 29 dni! Poprawiono."
+
+#~ msgid "Month only has 30 days!  Fixing."
+#~ msgstr "Miesiąc ma tylko 30 dni! Poprawiono."
+
+#~ msgid "February only has 29 days!"
+#~ msgstr "Luty ma tylko 29 dni!"
+
+#~ msgid "# Executive Security Summary - Generated by AppArmor\n"
+#~ msgstr "# Podsumowanie bezpieczeństwa - wygenerowane przez AppArmor\n"
+
+#~ msgid ""
+#~ "# Period: %s to %s\n"
+#~ "\n"
+#~ msgstr ""
+#~ "# Okres: %s do %s\n"
+#~ "\n"
+
+#~ msgid "<tr><th colspan='7'>Executive Security Summary - Generated by AppArmor</th></tr>"
+#~ msgstr "<tr><th colspan='7'>Podsumowanie bezpieczeństwa - wygenerowane przez AppArmor</th></tr>"
+
+#~ msgid "<tr><th colspan='7'>Period: %s to %s</th></tr>\n"
+#~ msgstr "<tr><th colspan='7'>Okres: %s do %s</th></tr>\n"
+
+#~ msgid "# Application Audit Report - Generated by AppArmor\n"
+#~ msgstr "# Raport z audytu aplikacji - wygenerowany przez AppArmor\n"
+
+#~ msgid ""
+#~ "# Date Run: %s\n"
+#~ "\n"
+#~ msgstr ""
+#~ "# Data uruchomienia: %s\n"
+#~ "\n"
+
+#~ msgid "<table border='1' cellpadding='2'><tr><th colspan='7'>Applications Audit Report - Generated by AppArmor</th></tr>\n"
+#~ msgstr "<table border='1' cellpadding='2'><tr><th colspan='7'>Raport z audytu aplikacji - wygenerowany przez AppArmor</th></tr>\n"
+
+#~ msgid "<h4>The following filters were used for report generation:</h4>"
+#~ msgstr "<h4>Do generacji raportu użyto następujących filtrów:</h4>"
+
+#~ msgid "<p>Filter: %s, Value: %s</p>"
+#~ msgstr "<p>Filtr: %s, Wartość: %s</p>"
+
+#~ msgid "<h4>No filters were used for report generation.</h4>"
+#~ msgstr "<h4>Do generacji raportu nie użyto żadnych filtrów.</h4>"
+
+#~ msgid "Fatal Error: Couldn't get report configuration information %s.  Exiting."
+#~ msgstr "Błąd krytyczny: nie można pobrać konfiguracji %s raportu. Zakończono."
+
+#~ msgid "Error: Couldn't open (tmp) %s.  ESS report execution not tracked."
+#~ msgstr "Błąd: nie można otworzyć (tmp) %s. Nie śledzono wykonania raportu ESS."
+
+#~ msgid "Error: Couldn't open %s.  ESS report execution not tracked."
+#~ msgstr "Błąd: nie można otworzyć %s. Nie śledzono wykonania raportu ESS."
+
+#~ msgid "Error: Necessary input missing.  Unable to generate report and send mail."
+#~ msgstr "Błąd: brak wymaganych danych. Nie można wygenerować raportu ani wysłać wiadomości e-mail."
+
+#~ msgid "Error: Couldn't open %s.  No ESS csv report generated."
+#~ msgstr "Błąd: nie można otworzyć %s. Nie wygenerowano raportu csv ESS."
+
+#~ msgid "<tr bgcolor='edefff'><td>Hostname</td><td>Start Date</td><td>End Date</td>"
+#~ msgstr "<tr bgcolor='edefff'><td>Nazwa hosta</td><td>Data rozpoczęcia</td><td>Data zakończenia</td>"
+
+#~ msgid "<td>Highest Severity</td><td>Mean Severity</td><td>Number of REJECTs</td>"
+#~ msgstr "<td>Najwyższa waga</td><td>Średnia waga</td><td>Liczba odrzuceń</td>"
+
+#~ msgid "<td>Number of Events</td></tr>\n"
+#~ msgstr "<td>Liczba zdarzeń</td></tr>\n"
+
+#~ msgid "Error: Couldn't open %s.  No ESS html report generated."
+#~ msgstr "Błąd: nie można otworzyć %s. Nie wygenerowano raportu html ESS."
+
+#~ msgid "Error: Couldn't open %s.  No AUD report generated."
+#~ msgstr "Błąd: nie można otworzyć %s. Nie wygenerowano raportu AUD."
+
+#~ msgid "<h3>Applications Audit Report - Generated by AppArmor</h3>\n"
+#~ msgstr "<h3>Raport z audytu aplikacji - wygenerowany przez AppArmor</h3>\n"
+
+#~ msgid "<tr bgcolor='edefff'><td>Hostname</td><td>Date</td><td>Application</td>"
+#~ msgstr "<tr bgcolor='edefff'><td>Nazwa hosta</td><td>Data</td><td>Aplikacja</td>"
+
+#~ msgid "<td>Profile</td><td>PID</td><td>State</td><td>AppArmor Profile</td></tr>\n"
+#~ msgstr "<td>Profil</td><td>PID</td><td>Stan</td><td>Profil AppArmor</td></tr>\n"
+
+#~ msgid "Error: Couldn't open %s.  No SIR report generated."
+#~ msgstr "Błąd: nie można otworzyć %s. Nie wygenerowano raportu SIR."
+
+#~ msgid "Error: No arguments passed--Unable to execute reports.  Exiting."
+#~ msgstr "Błąd: nie podano parametrów - nie można wykonać raportów. Zakończono."
+
+#~ msgid "Executing Scheduled Report: %s"
+#~ msgstr "Wykonywanie zaplanowanego raportu: %s"
+
+#~ msgid "00"
+#~ msgstr "00"
+
+#~ msgid "01"
+#~ msgstr "01"
+
+#~ msgid "02"
+#~ msgstr "02"
+
+#~ msgid "03"
+#~ msgstr "03"
+
+#~ msgid "04"
+#~ msgstr "04"
+
+#~ msgid "05"
+#~ msgstr "05"
+
+#~ msgid "06"
+#~ msgstr "06"
+
+#~ msgid "07"
+#~ msgstr "07"
+
+#~ msgid "08"
+#~ msgstr "08"
+
+#~ msgid "09"
+#~ msgstr "09"
+
+#~ msgid "10"
+#~ msgstr "10"
+
+#~ msgid "Execution Schedule"
+#~ msgstr "Harmonogram wykonania"
+
+#~ msgid "Monthly"
+#~ msgstr "Co miesiąc"
+
+#~ msgid "Weekly"
+#~ msgstr "Co tydzień"
+
+#~ msgid "Daily"
+#~ msgstr "Codziennie"
+
+#~ msgid "Hourly"
+#~ msgstr "Co godzinę"
+
+#~ msgid "Sunday"
+#~ msgstr "Niedziela"
+
+#~ msgid "Monday"
+#~ msgstr "Poniedziałek"
+
+#~ msgid "Tuesday"
+#~ msgstr "Wtorek"
+
+#~ msgid "Wednesday"
+#~ msgstr "Środa"
+
+#~ msgid "Thursday"
+#~ msgstr "Czwartek"
+
+#~ msgid "Friday"
+#~ msgstr "Piątek"
+
+#~ msgid "Saturday"
+#~ msgstr "Sobota"
+
+#~ msgid "Add AppArmor Report"
+#~ msgstr "Dodaj raport AppArmor"
+
+#~ msgid "Edit AppArmor Report"
+#~ msgstr "Edytuj raport AppArmor"
+
+#~ msgid "AppArmor Report Management"
+#~ msgstr "Zarządzanie raportami AppArmor"
+
+#~ msgid "Delete "
+#~ msgstr "Usuń"
+
+#~ msgid "Unrecognized form request: "
+#~ msgstr "Nierozpoznane żądanie formularza:"
+
+#~ msgid "Select Event Type"
+#~ msgstr "Wybór typu zdarzenia"
+
+#~ msgid "Scheduled Reports"
+#~ msgstr "Raporty zaplanowane"
+
+#~ msgid "Schedule"
+#~ msgstr "Harmonogram"
+
+#~ msgid "Enabled"
+#~ msgstr "Włączone"
+
+#~ msgid "Run Report"
+#~ msgstr "Uruchom raport"
+
+#~ msgid "View Report"
+#~ msgstr "Wyświetl raport"
+
+#~ msgid "Select Mode"
+#~ msgstr "Tryb"
+
+#~ msgid "Inherit Execute"
+#~ msgstr "Wykonanie z dziedziczeniem"
+
+#~ msgid "Profile Execute"
+#~ msgstr "Wykonanie z profilem"
+
+#~ msgid "Profile Execute (clean env)"
+#~ msgstr "Wykonanie z profilem (czyste środowisko)"
+
+#~ msgid "Unconstrained Execute"
+#~ msgstr "Wykonanie bez ograniczeń"
+
+#~ msgid "Unconstrained Execute (clean env)"
+#~ msgstr "Wykonanie bez ograniczeń (czyste środowisko)"
+
+#~ msgid "Select Capabilities"
+#~ msgstr "Wybór możliwości"
+
+#~ msgid "Add Report Filters"
+#~ msgstr "Dodaj filtry raportu"
+
+#~ msgid "Create New Report - Set Filters "
+#~ msgstr "Nowy raport - ustawianie filtrów"
+
+#~ msgid "AppArmor Report Configuration"
+#~ msgstr "Konfiguracja raportów AppArmor"
+
+#~ msgid "Configuration of AppArmor Reports - Step 1"
+#~ msgstr "Konfiguracja raportów AppArmor - krok 1"
+
+#~ msgid "Configuration of AppArmor Reports - Step 2"
+#~ msgstr "Konfiguracja raportów AppArmor - krok 2"
+
+#~ msgid "Filter by Date"
+#~ msgstr "Filtruj wg dat"
+
+#~ msgid "Profile Field Filters"
+#~ msgstr "Filtry pola profilu"
+
+#~ msgid "Profile Filter Help"
+#~ msgstr "Pomoc dot. filtrów profilu"
+
+#~ msgid "Date Filters"
+#~ msgstr "Filtry daty"
+
+#~ msgid "Date Filter Help"
+#~ msgstr "Pomoc dot. filtrów daty"
+
+#~ msgid "Advanced Filters"
+#~ msgstr "Filtry zaawansowane"
+
+#~ msgid "Advanced Filter Help"
+#~ msgstr "Pomoc dot. filtrów zaawansowanych"
+
+#~ msgid "<p>Help for all tabs</p>"
+#~ msgstr "<p>Pomoc dot. wszystkich kart</p>"
+
+#~ msgid "AA Reports Configuration"
+#~ msgstr "Konfiguracja raportów AppArmor"
+
+#~ msgid "Initializing..."
+#~ msgstr "Inicjalizacja..."

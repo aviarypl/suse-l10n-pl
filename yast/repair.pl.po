@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: repair\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-10 13:45+0200\n"
+"POT-Creation-Date: 2008-04-01 10:51+0200\n"
 "PO-Revision-Date: 2007-07-26 19:20+0200\n"
 "Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -420,7 +420,7 @@ msgstr ""
 #. *
 #. * The name of the repair and rescue tool.
 #.
-#: src/OSRCommon.ycp:87
+#: src/OSRCommon.ycp:91
 msgid "System Repair"
 msgstr "Naprawa systemu"
 
@@ -430,12 +430,12 @@ msgid "Repair Tools"
 msgstr "Narzędzia do naprawy"
 
 #. menubutton label
-#: src/OSRDirect.ycp:139
+#: src/OSRDirect.ycp:121
 msgid "Re&pair Tools..."
 msgstr "Narzędzia do na&prawy..."
 
 #. wait popup
-#: src/OSRDirect.ycp:171
+#: src/OSRDirect.ycp:153
 msgid "Reading system settings..."
 msgstr "Wczytywanie ustawień systemu..."
 
@@ -693,7 +693,7 @@ msgstr "Wiersz fstab"
 
 #. button label
 #. pushbutton label
-#: src/OSRFstab.ycp:70 src/OSRPopup.ycp:32
+#: src/OSRFstab.ycp:70 src/OSRPopup.ycp:34
 msgid "&Ignore"
 msgstr "&Ignoruj"
 
@@ -734,7 +734,7 @@ msgstr ""
 "Czy utworzyć nowy?\n"
 
 #. popup message
-#: src/OSRFstab.ycp:1162
+#: src/OSRFstab.ycp:1175
 msgid ""
 "\n"
 "All missing mount points were\n"
@@ -745,7 +745,7 @@ msgstr ""
 "zostały utworzone.\n"
 
 #. error popup
-#: src/OSRFstab.ycp:1170
+#: src/OSRFstab.ycp:1183
 #, ycp-format
 msgid ""
 "\n"
@@ -758,7 +758,7 @@ msgstr ""
 "punktów montowania:\n"
 "%1\n"
 
-#: src/OSRFstab.ycp:1179
+#: src/OSRFstab.ycp:1192
 #, ycp-format
 msgid ""
 "\n"
@@ -771,21 +771,16 @@ msgstr ""
 "punktu montowania:\n"
 "%1\n"
 
-#: src/OSRFstab.ycp:1198
+#. help text for the /etc/fstab dialog
+#: src/OSRFstab.ycp:1212
+#, fuzzy
 msgid ""
 "\n"
-"<P>No valid fstab entry was found\n"
-"for the devices listed in the table.\n"
-"</P>\n"
+"<P>No valid fstab entry was found for the devices listed in the table.</P>\n"
 "<P>\n"
-"Select the devices for which \n"
-"to create a new fstab entry\n"
-"and enter a mount point.\n"
+"Select the devices for which to create a new fstab entry.\n"
 "</P>\n"
-"<P>After creating mount points for all\n"
-"devices, press Repair \n"
-"to continue.\n"
-"</P>\n"
+"<p>Press <b>Change</b> to accept the changes proposed in this dialog.</p>"
 msgstr ""
 "\n"
 "<P>Nie znaleziono prawidłowych wpisów\n"
@@ -801,7 +796,8 @@ msgstr ""
 "aby kontynuować.\n"
 "</P>\n"
 
-#: src/OSRFstab.ycp:1215
+#. help text for table entry
+#: src/OSRFstab.ycp:1221
 msgid ""
 "The name of the device for which no valid fstab\n"
 "entry was found.\n"
@@ -809,7 +805,8 @@ msgstr ""
 "Nazwa urządzenia, dla którego nie znaleziono\n"
 "prawidłowego wpisu w pliku fstab.\n"
 
-#: src/OSRFstab.ycp:1219
+#. help text for table entry
+#: src/OSRFstab.ycp:1226
 msgid ""
 "The mount point for the found device. This\n"
 "mount point is created in the file system. If you leave the mount point field empty, no fstab entry will be created.\n"
@@ -817,15 +814,17 @@ msgstr ""
 "Punkt montowania dla znalezionego urządzenia. Punkt montowania\n"
 "tworzony jest w systemie plików. Pozostawienie pustego punktu montowania spowoduje, że nie zostanie utworzony wpis w pliku fstab.\n"
 
-#: src/OSRFstab.ycp:1223
-msgid "Add a mount point for a device."
-msgstr "Dodaj punkt montowania dla urządzenia."
+#. help text for Change Mount Point button
+#: src/OSRFstab.ycp:1231
+msgid "Specify a mount point for a device different from the proposed one."
+msgstr ""
 
-#: src/OSRFstab.ycp:1225
+#. dialog caption
+#: src/OSRFstab.ycp:1234
 msgid "Add fstab Entries"
 msgstr "Dodaj wpisy fstab"
 
-#: src/OSRFstab.ycp:1226
+#: src/OSRFstab.ycp:1235
 msgid ""
 "\n"
 "Select the devices for which to\n"
@@ -835,13 +834,13 @@ msgstr ""
 "Proszę wskazać urządzenia, dla których należy utworzyć\n"
 "nowe wpisy w pliku fstab i podać punkty montowania.\n"
 
-#: src/OSRFstab.ycp:1231
+#: src/OSRFstab.ycp:1240
 msgid "Devices without Valid fstab Entry"
 msgstr "Urządzenia bez prawidłowych wpisów w pliku fstab"
 
 #. TextEntry label, %1 is device label
 #. TextEntry label, %1 is device
-#: src/OSRFstab.ycp:1249 src/OSRFstab.ycp:1437
+#: src/OSRFstab.ycp:1258 src/OSRFstab.ycp:1446
 #, ycp-format
 msgid ""
 "\n"
@@ -850,7 +849,7 @@ msgstr ""
 "\n"
 "Punkt montowania dla %1\n"
 
-#: src/OSRFstab.ycp:1270
+#: src/OSRFstab.ycp:1279
 msgid ""
 "\n"
 "First create mount points\n"
@@ -861,12 +860,12 @@ msgstr ""
 "dla podanych urządzeń.\n"
 
 #. yes/no popup headline
-#: src/OSRFstab.ycp:1280
+#: src/OSRFstab.ycp:1289
 msgid "Empty Mount Point"
 msgstr "Pusty punkt montowania"
 
 #. yes/no popup text
-#: src/OSRFstab.ycp:1282
+#: src/OSRFstab.ycp:1291
 msgid ""
 "\n"
 "Valid mount points are required to\n"
@@ -888,7 +887,7 @@ msgstr ""
 "Czy naprawdę kontynuować?\n"
 
 #. help text
-#: src/OSRFstab.ycp:1368
+#: src/OSRFstab.ycp:1377
 msgid ""
 "\n"
 "<P>The /etc/fstab file does not contain\n"
@@ -901,7 +900,7 @@ msgstr ""
 "</P>"
 
 #. %1 is Ignore label and %2 is Create label
-#: src/OSRFstab.ycp:1373
+#: src/OSRFstab.ycp:1382
 #, ycp-format
 msgid ""
 "\n"
@@ -914,7 +913,7 @@ msgstr ""
 "%1 i %2. Punkt montowania dla partycji zostanie utworzony\n"
 "tylko wtedy, gdy stan będzie %2.\n"
 
-#: src/OSRFstab.ycp:1380
+#: src/OSRFstab.ycp:1389
 msgid ""
 "\n"
 "This field contains the present entry\n"
@@ -938,17 +937,17 @@ msgstr ""
 #. %1 is Remove label
 #. %1 is Ignore label
 #. %1 is Replace label
-#: src/OSRFstab.ycp:1389 src/OSRFstab.ycp:1393 src/OSRFstab.ycp:1545
-#: src/OSRFstab.ycp:1549 src/OSRFstab.ycp:1775 src/OSRFstab.ycp:1779
+#: src/OSRFstab.ycp:1398 src/OSRFstab.ycp:1402 src/OSRFstab.ycp:1554
+#: src/OSRFstab.ycp:1558 src/OSRFstab.ycp:1784 src/OSRFstab.ycp:1788
 #, ycp-format
 msgid "Change the status of the line to %1.\n"
 msgstr "Zmień stan wiersza na %1.\n"
 
-#: src/OSRFstab.ycp:1396
+#: src/OSRFstab.ycp:1405
 msgid "Create Mount Points"
 msgstr "Utwórz punkty montowania"
 
-#: src/OSRFstab.ycp:1397
+#: src/OSRFstab.ycp:1406
 msgid ""
 "\n"
 "Some mount points for fstab entries are missing in\n"
@@ -960,12 +959,12 @@ msgstr ""
 "w systemie plików. Proszę zmienić stan wierszy, dla\n"
 "których mają być utworzone punkty montowania.\n"
 
-#: src/OSRFstab.ycp:1403
+#: src/OSRFstab.ycp:1412
 msgid "Missing or Invalid Mount Points"
 msgstr "Stwierdzono brak lub błędy punktów montowania"
 
 #. help text in fstab dialog, %1 is Ignore label, %2 is Remove label
-#: src/OSRFstab.ycp:1538
+#: src/OSRFstab.ycp:1547
 #, ycp-format
 msgid ""
 "\n"
@@ -979,12 +978,12 @@ msgstr ""
 "wtedy, gdy stan odpowiedniego wiersza jest ustawiony na %2.\n"
 
 #. dialog caption, fstab is filename
-#: src/OSRFstab.ycp:1554
+#: src/OSRFstab.ycp:1563
 msgid "Remove fstab Entries"
 msgstr "Usuń wpis fstab"
 
 #. dialog text
-#: src/OSRFstab.ycp:1556
+#: src/OSRFstab.ycp:1565
 msgid ""
 "Could not find existing devices for the following fstab lines.\n"
 "To remove the lines from fstab, select them in the table and \n"
@@ -995,22 +994,22 @@ msgstr ""
 "i zmienić ich status.\n"
 
 #. label (table will follow)
-#: src/OSRFstab.ycp:1563
+#: src/OSRFstab.ycp:1572
 msgid "Invalid or Obsolete Lines in fstab"
 msgstr "Nieprawidłowe lub nieaktualne wpisy w fstab"
 
 #. label of table, fstab is filename
-#: src/OSRFstab.ycp:1753
+#: src/OSRFstab.ycp:1762
 msgid "Existing fstab Lines"
 msgstr "Istniejące wpisy fstab"
 
 #. label of table, fstab is filename
-#: src/OSRFstab.ycp:1755
+#: src/OSRFstab.ycp:1764
 msgid "Suggested fstab Lines"
 msgstr "Proponowane wpisy fstab"
 
 #. help text, %1 is table label for Suggested.  %2 is Replace button label
-#: src/OSRFstab.ycp:1758
+#: src/OSRFstab.ycp:1767
 #, ycp-format
 msgid ""
 "\n"
@@ -1031,7 +1030,7 @@ msgstr ""
 "i naciśnąć %2.\n"
 
 #. %1 is Ignore label, %2 is replace label
-#: src/OSRFstab.ycp:1769
+#: src/OSRFstab.ycp:1778
 #, ycp-format
 msgid ""
 "\n"
@@ -1043,12 +1042,12 @@ msgstr ""
 "%1 i %2. Wiersze są zastępowane tylko wtedy, gdy stan będzie %2.\n"
 
 #. dialog headline
-#: src/OSRFstab.ycp:1783
+#: src/OSRFstab.ycp:1792
 msgid "Change Existing fstab Entries"
 msgstr "Zmień istniejące wpisy fstab"
 
 #. dialog description
-#: src/OSRFstab.ycp:1785
+#: src/OSRFstab.ycp:1794
 msgid ""
 "\n"
 "One or more existing fstab entries seem invalid. \n"
@@ -1058,7 +1057,7 @@ msgstr ""
 "Prawdopodobnie w pliku fstab co najmniej jeden wpis \n"
 "nie jest prawidłowy. Porównaj sugerowany wpis z istniejącym."
 
-#: src/OSRFstab.ycp:1838
+#: src/OSRFstab.ycp:1847
 msgid ""
 "\n"
 "Set the status of at least one\n"
@@ -1069,12 +1068,12 @@ msgstr ""
 "pozycji tabeli na 'wymień'.\n"
 
 #. yes/no popup headline
-#: src/OSRFstab.ycp:1848
+#: src/OSRFstab.ycp:1857
 msgid "Not All Replaced"
 msgstr "Nie wszystko zostało zastąpione"
 
 #. yes/no popup text
-#: src/OSRFstab.ycp:1850
+#: src/OSRFstab.ycp:1859
 msgid ""
 "\n"
 "Only the fstab lines marked for replacement \n"
@@ -1087,12 +1086,12 @@ msgstr ""
 "wybranie wiersze?\n"
 
 #. popup headline
-#: src/OSRFstab.ycp:2090
+#: src/OSRFstab.ycp:2099
 msgid "Select a Root Partition"
 msgstr "Proszę wybrać partycję główną (root)"
 
 #. popup text (radio buttons wil follow
-#: src/OSRFstab.ycp:2092
+#: src/OSRFstab.ycp:2101
 msgid ""
 "There are several valid root partitions in your system.\n"
 "Select one item in the list.\n"
@@ -1101,7 +1100,7 @@ msgstr ""
 "Proszę wybrać jedną pozycję z listy.\n"
 
 #. error popup: no root partition found
-#: src/OSRFstab.ycp:2212
+#: src/OSRFstab.ycp:2221
 msgid ""
 "\n"
 "No valid root partition found. \n"
@@ -1115,7 +1114,7 @@ msgstr ""
 "wszystkie opcje sprawdzania systemu.\n"
 "Następnie proszę ponownie uruchomić sprawdzanie.\n"
 
-#: src/OSRFstab.ycp:2279
+#: src/OSRFstab.ycp:2288
 msgid ""
 "\n"
 "Cannot read the file /etc/fstab.\n"
@@ -1195,7 +1194,7 @@ msgstr ""
 #. %2-%3 are name and version of product with yast2-repair (e.g. the one on CD/DVD)
 #. %4-%5 are name and version of installed product (the one being checked/repaired)
 #: src/OSRPkg.ycp:326
-#, ycp-format
+#, fuzzy, ycp-format
 msgid ""
 "You seem to be using %1 from\n"
 "a product (%2 %3) different\n"
@@ -1203,11 +1202,11 @@ msgid ""
 "\n"
 "Because the package database of the installed product\n"
 "can be damaged, only the package database from the correct \n"
-"installation media can be used for package database checking.\n"
+"installation media can be used for the package database checking.\n"
 "Checking the package database with a different product\n"
 "should be skipped. \n"
 "\n"
-"Really continue?"
+"Really continue to package database check?\n"
 msgstr ""
 "Działanie %1 wykryło, że są używane inne(%4 %5) pakiety niż \n"
 "pochodzące z nośnika instalacyjnego(%2 %3).\n"
@@ -1219,7 +1218,7 @@ msgstr ""
 "Kontynuować?"
 
 #. error message: files (%1) not found
-#: src/OSRPkg.ycp:373
+#: src/OSRPkg.ycp:374
 #, ycp-format
 msgid ""
 "\n"
@@ -1237,7 +1236,7 @@ msgstr ""
 "\n"
 "%1\n"
 
-#: src/OSRPkg.ycp:438
+#: src/OSRPkg.ycp:439
 msgid ""
 "\n"
 "Reverting to the backup was successful.\n"
@@ -1246,7 +1245,7 @@ msgstr ""
 "Odtwarzanie z kopii zapasowej nie powiodło się.\n"
 
 #. error popup
-#: src/OSRPkg.ycp:445
+#: src/OSRPkg.ycp:446
 msgid ""
 "\n"
 "Reverting to the backup was not\n"
@@ -1261,11 +1260,11 @@ msgstr ""
 "bazę pakietów.\n"
 
 #. wait popup label
-#: src/OSRPkg.ycp:465
+#: src/OSRPkg.ycp:466
 msgid "Rebuilding the package database..."
 msgstr "Przebudowywanie bazy pakietów..."
 
-#: src/OSRPkg.ycp:489
+#: src/OSRPkg.ycp:490
 msgid ""
 "\n"
 "Successfully rebuilt the \n"
@@ -1275,7 +1274,7 @@ msgstr ""
 "Przebudowanie bazy pakietów\n"
 "powiodło się.\n"
 
-#: src/OSRPkg.ycp:496
+#: src/OSRPkg.ycp:497
 msgid ""
 "\n"
 "Could not rebuild the package\n"
@@ -1287,7 +1286,7 @@ msgstr ""
 "pakietów. Proszę odtworzyć bazę pakietów\n"
 "z kopii zapasowej.\n"
 
-#: src/OSRPkg.ycp:547
+#: src/OSRPkg.ycp:548
 #, ycp-format
 msgid ""
 "\n"
@@ -1307,11 +1306,11 @@ msgstr ""
 "nie znaleziono żadnych kopii zapasowych.\n"
 "Proszę spróbować innej metody naprawy.\n"
 
-#: src/OSRPkg.ycp:559
+#: src/OSRPkg.ycp:560
 msgid "Backup to Use"
 msgstr "Kopia zapasowa do użycia"
 
-#: src/OSRPkg.ycp:560
+#: src/OSRPkg.ycp:561
 msgid ""
 "\n"
 "Several backups of the \n"
@@ -1326,7 +1325,7 @@ msgstr ""
 "Proszę wskazać datę (YYYY/MM/DD) kopii\n"
 "zapasowej, która ma być odtworzona.\n"
 
-#: src/OSRPkg.ycp:580
+#: src/OSRPkg.ycp:581
 msgid ""
 "\n"
 "Reverting to the backup of the package\n"
@@ -1336,7 +1335,7 @@ msgstr ""
 "Odtworzenie bazy pakietów z kopii zapasowej\n"
 "zakończone powodzeniem.\n"
 
-#: src/OSRPkg.ycp:589
+#: src/OSRPkg.ycp:590
 msgid ""
 "\n"
 "Reverting to the backup of the package\n"
@@ -1346,37 +1345,37 @@ msgstr ""
 "Odtworzenie bazy pakietów z kopii zapasowej\n"
 "nie powiodło się.\n"
 
-#: src/OSRPkg.ycp:611
+#: src/OSRPkg.ycp:612
 msgid "Repair Package Database"
 msgstr "Napraw bazę pakietów"
 
 #. popup headline
 #. dialog caption
-#: src/OSRPkg.ycp:622 src/OSRRepairUI.ycp:73
+#: src/OSRPkg.ycp:623 src/OSRRepairUI.ycp:73
 msgid "Repair Method"
 msgstr "Sposób naprawy"
 
 #. radio button label
-#: src/OSRPkg.ycp:626
+#: src/OSRPkg.ycp:627
 msgid "Rebuild Package Database"
 msgstr "Przebuduj bazę pakietów"
 
 #. radio button label
-#: src/OSRPkg.ycp:630
+#: src/OSRPkg.ycp:631
 msgid "Revert to Daily Backup"
 msgstr "Odtwórz codzienną kopię zapasową"
 
-#: src/OSRPkg.ycp:639
+#: src/OSRPkg.ycp:640
 msgid "Revert to Orginal Package Database (saved by YaST)"
 msgstr "Odtwórz oryginalną bazę pakietów (zachowaną przez YaST)"
 
 #. headline
-#: src/OSRPkg.ycp:759
+#: src/OSRPkg.ycp:760
 msgid "Missing Packages"
 msgstr "Brakujące pakiety"
 
 #. check for package minimum summary, 1st part (table follows)
-#: src/OSRPkg.ycp:761
+#: src/OSRPkg.ycp:762
 msgid ""
 "\n"
 "The following packages are\n"
@@ -1387,7 +1386,7 @@ msgstr ""
 "są zainstalowane."
 
 #. check for package minimum summary, last part (below table)
-#: src/OSRPkg.ycp:766
+#: src/OSRPkg.ycp:767
 msgid ""
 "\n"
 "The listed packages belong to the minimal\n"
@@ -1403,7 +1402,7 @@ msgstr ""
 "wszystkie pakiety wskazane na liście.\n"
 
 #. check for package minimum help text 1/2
-#: src/OSRPkg.ycp:774
+#: src/OSRPkg.ycp:775
 msgid ""
 "\n"
 "<P>&product; needs at least some packages for\n"
@@ -1416,7 +1415,7 @@ msgstr ""
 "Bez tych pakietów systemu może się nie uruchomić.</p>\n"
 
 #. check for package minimum help text 2/2, %1 is tool name
-#: src/OSRPkg.ycp:781
+#: src/OSRPkg.ycp:782
 #, ycp-format
 msgid ""
 "<P>%1 checks if all required packages for a\n"
@@ -1430,32 +1429,32 @@ msgstr ""
 "ich zainstalowanie.</p>\n"
 
 #. table headline (package list follows)
-#: src/OSRPkg.ycp:787
+#: src/OSRPkg.ycp:788
 msgid "&Missing Packages to Install"
 msgstr "&Brakujące pakiety do zainstalowania"
 
 #. dialog headline
-#: src/OSRPkg.ycp:838
+#: src/OSRPkg.ycp:839
 msgid "Verifying Base Packages"
 msgstr "Weryfikowanie pakietów podstawowych"
 
 #. dialog headline
-#: src/OSRPkg.ycp:840
+#: src/OSRPkg.ycp:841
 msgid "Verifying All Installed Packages"
 msgstr "Weryfikowanie wszystkich zainstalowanych pakietów"
 
 #. button label
-#: src/OSRPkg.ycp:922
+#: src/OSRPkg.ycp:923
 msgid "Show Log"
 msgstr "Pokaż dziennik"
 
 #. dialog headline
-#: src/OSRPkg.ycp:926
+#: src/OSRPkg.ycp:927
 msgid "Unverified Packages"
 msgstr "Pakiety niezweryfikowane"
 
 #. package verification summary, 1st part (table follows)
-#: src/OSRPkg.ycp:928
+#: src/OSRPkg.ycp:929
 msgid ""
 "\n"
 "Verified the installed software\n"
@@ -1468,7 +1467,7 @@ msgstr ""
 "pakietach.\n"
 
 #. package verification summary, last part
-#: src/OSRPkg.ycp:934
+#: src/OSRPkg.ycp:935
 msgid ""
 "\n"
 "These packages probably differ from their\n"
@@ -1484,7 +1483,7 @@ msgstr ""
 "instalacji naciskając Napraw.\n"
 
 #. package verification summary, help text (%1 is button label)
-#: src/OSRPkg.ycp:943
+#: src/OSRPkg.ycp:944
 #, ycp-format
 msgid ""
 "\n"
@@ -1500,7 +1499,7 @@ msgstr ""
 "należy nacisnąć przycisk<b>%1</b>.</p>\n"
 
 #. package verification summary 2/3
-#: src/OSRPkg.ycp:951
+#: src/OSRPkg.ycp:952
 msgid ""
 "<p>There, see if files of the package are\n"
 "missing or the data of the package in the package\n"
@@ -1513,7 +1512,7 @@ msgstr ""
 "pakietu.</P>"
 
 #. package verification summary 3/3
-#: src/OSRPkg.ycp:957
+#: src/OSRPkg.ycp:958
 msgid ""
 "<p>Sometimes, verification of the package could \n"
 "report errors even if the package is correctly\n"
@@ -1526,19 +1525,19 @@ msgstr ""
 "tylko te pakiety, które nie działają poprawnie.</p>\n"
 
 #. table headline (package list follows)
-#: src/OSRPkg.ycp:963
+#: src/OSRPkg.ycp:964
 msgid "Packages with Problems"
 msgstr "Pakiety z problemami"
 
 #. buttons label
 #. button label
-#: src/OSRPkgUI.ycp:44 src/OSRRepairUI.ycp:599 src/OSRRepairUI.ycp:755
+#: src/OSRPkgUI.ycp:44 src/OSRRepairUI.ycp:602 src/OSRRepairUI.ycp:758
 msgid "&Pause"
 msgstr "&Pauza"
 
 #. buttons label
 #. button label
-#: src/OSRPkgUI.ycp:46 src/OSRRepairUI.ycp:670
+#: src/OSRPkgUI.ycp:46 src/OSRRepairUI.ycp:673
 msgid "&Continue"
 msgstr "&Dalej"
 
@@ -1703,11 +1702,16 @@ msgstr "Nap&raw"
 
 #. pushbutton label
 #: src/OSRPopup.ycp:30
+msgid "&Change"
+msgstr "Zmi&eń"
+
+#. pushbutton label
+#: src/OSRPopup.ycp:32
 msgid "&Recover"
 msgstr "Nap&raw"
 
 #. dialog caption: %1 is tool name ("System Repair")
-#: src/OSRPopup.ycp:36
+#: src/OSRPopup.ycp:38
 #, ycp-format
 msgid "%1 Help"
 msgstr "%1 - Pomoc"
@@ -1962,12 +1966,12 @@ msgstr ""
 msgid "Change the status of a partition to %1."
 msgstr "Zmień status partycji na %1."
 
-#. %1 is Recover label
+#. %1 is Change label
 #: src/OSRPtbl.ycp:357
-#, ycp-format
+#, fuzzy, ycp-format
 msgid ""
 "If you have changed the status of all partitions for recovering\n"
-"to %1, press Repair to execute the recovery process.\n"
+"to %1, press <b>Change</b> to execute the recovery process.\n"
 msgstr ""
 "Jeśli zmieniono status wszystkich partycji przeznaczonych do naprawy\n"
 "na %1, należy nacisnąć przycisk Napraw, w celu rozpoczęcia procesu naprawy.\n"
@@ -2474,7 +2478,7 @@ msgstr "Narzędzia do naprawy"
 
 #. dialog caption
 #. progress bar label
-#: src/OSRRepairUI.ycp:79 src/OSRRepairUI.ycp:595
+#: src/OSRRepairUI.ycp:79 src/OSRRepairUI.ycp:598
 msgid "System Check"
 msgstr "Sprawdzanie systemu"
 
@@ -2483,74 +2487,80 @@ msgstr "Sprawdzanie systemu"
 msgid "Really abort the system repair tool?"
 msgstr "Na pewno przerwać naprawę systemu?"
 
+#. init dialog help text
+#: src/OSRRepairUI.ycp:120
+#, fuzzy
+msgid "Initializing the system. Please wait..."
+msgstr "Naprawianie systemu plików, proszę czekać..."
+
 #. progress stage
-#: src/OSRRepairUI.ycp:132
+#: src/OSRRepairUI.ycp:135
 msgid "Load rescue modules"
 msgstr "Wczytaj moduły naprawcze"
 
 #. progress stage
-#: src/OSRRepairUI.ycp:134
+#: src/OSRRepairUI.ycp:137
 msgid "Probe floppy disk devices"
 msgstr "Sprawdź napędy dyskietek"
 
 #. progress stage
-#: src/OSRRepairUI.ycp:136
+#: src/OSRRepairUI.ycp:139
 msgid "Probe hard disk controllers"
 msgstr "Wykrycie kontrolerów dysków twardych"
 
 #. progress stage
-#: src/OSRRepairUI.ycp:138
+#: src/OSRRepairUI.ycp:141
 msgid "Load kernel modules for hard disk controllers"
 msgstr "Wczytanie modułów jądra do obsługi kontrolerów dysków"
 
 #. progress stage
-#: src/OSRRepairUI.ycp:140
+#: src/OSRRepairUI.ycp:143
 msgid "Probe hard disks"
 msgstr "Wykrycie dysków twardych"
 
 #. progress stage
-#: src/OSRRepairUI.ycp:142
+#: src/OSRRepairUI.ycp:145
 msgid "Probe USB"
 msgstr "Wykrycie urządzeń USB"
 
 #. progress step
-#: src/OSRRepairUI.ycp:145
+#: src/OSRRepairUI.ycp:148
 msgid "Loading rescue modules..."
 msgstr "Wczytywanie modułów naprawczych..."
 
 #. progress step
-#: src/OSRRepairUI.ycp:147
+#: src/OSRRepairUI.ycp:150
 msgid "Probing floppy disk devices..."
 msgstr "Wykrywanie napędów dyskietek..."
 
 #. progress step
-#: src/OSRRepairUI.ycp:149
+#: src/OSRRepairUI.ycp:152
 msgid "Probing hard disk controllers..."
 msgstr "Wykrywanie kontrolerów dysków..."
 
 #. progress step
-#: src/OSRRepairUI.ycp:151
+#: src/OSRRepairUI.ycp:154
 msgid "Loading kernel modules for hard disk controllers..."
 msgstr "Wczytywanie modułów jądra do obsługi kontrolerów dysków..."
 
 #. progress step
-#: src/OSRRepairUI.ycp:153
+#: src/OSRRepairUI.ycp:156
 msgid "Probing hard disks..."
 msgstr "Sprawdzanie dysków..."
 
 #. progress step
-#: src/OSRRepairUI.ycp:155
+#: src/OSRRepairUI.ycp:158
 msgid "Probing USB..."
 msgstr "Wykrywanie urządzeń USB..."
 
 #. progress step
-#: src/OSRRepairUI.ycp:157
+#: src/OSRRepairUI.ycp:160
 msgid "Finished"
 msgstr "Zakończono"
 
 #. error popup
 #. error popue
-#: src/OSRRepairUI.ycp:200 src/OSRRepairUI.ycp:232
+#: src/OSRRepairUI.ycp:203 src/OSRRepairUI.ycp:235
 msgid ""
 "No hard disks were found.\n"
 "Check your hardware.\n"
@@ -2559,12 +2569,12 @@ msgstr ""
 "Proszę sprawdzić urządzenia w komputerze.\n"
 
 #. MultiSelectionBox label
-#: src/OSRRepairUI.ycp:295
+#: src/OSRRepairUI.ycp:298
 msgid "Scan and Repair &Options"
 msgstr "&Opcje przeszukiwania i naprawy"
 
 #. summary help text 1/3
-#: src/OSRRepairUI.ycp:321
+#: src/OSRRepairUI.ycp:324
 msgid ""
 "<p>The system repair tool\n"
 "can repair some parts of a damaged system. Therefore, the\n"
@@ -2575,7 +2585,7 @@ msgstr ""
 "programy narzędziowe przeszukują system i informują o znalezionych błędach.</p>\n"
 
 #. summary help text 2/3
-#: src/OSRRepairUI.ycp:327
+#: src/OSRRepairUI.ycp:330
 msgid ""
 "<p>After an error was found, select from the suggested\n"
 "repair method or cancel the repair\n"
@@ -2586,7 +2596,7 @@ msgstr ""
 "anulować proces naprawy.</p>\n"
 
 #. summary help text 3/3
-#: src/OSRRepairUI.ycp:333
+#: src/OSRRepairUI.ycp:336
 msgid ""
 "<p>Nothing will be repaired automatically.\n"
 "Changes are only made if you accept\n"
@@ -2597,12 +2607,12 @@ msgstr ""
 "propozycji napraw.</P>\n"
 
 #. First entry - automatic analysis (headline)
-#: src/OSRRepairUI.ycp:341
+#: src/OSRRepairUI.ycp:344
 msgid "&Automatic Repair"
 msgstr "Naprawy &automatyczne"
 
 #. First entry - automatic analysis (description)
-#: src/OSRRepairUI.ycp:344
+#: src/OSRRepairUI.ycp:347
 msgid ""
 "Automatic analysis with repair\n"
 "proposals. Fits in most cases.\n"
@@ -2611,7 +2621,7 @@ msgstr ""
 "Odpowiednie dla większości przypadków.\n"
 
 #. First entry - automatic analysis (additional help text)
-#: src/OSRRepairUI.ycp:348
+#: src/OSRRepairUI.ycp:351
 msgid ""
 "Analyze the entire system automatically and\n"
 "display repair proposals."
@@ -2620,12 +2630,12 @@ msgstr ""
 "propozycje napraw."
 
 #. Second entry - customise analyse (headline)
-#: src/OSRRepairUI.ycp:353
+#: src/OSRRepairUI.ycp:356
 msgid "&Customized Repair"
 msgstr "Naprawy niestan&dardowe"
 
 #. Second entry - customise analyse (description)
-#: src/OSRRepairUI.ycp:356
+#: src/OSRRepairUI.ycp:359
 msgid ""
 "Select the desired system analysis \n"
 "procedures. Usable if you already\n"
@@ -2636,7 +2646,7 @@ msgstr ""
 "informacje o problemie.\n"
 
 #. Second entry - customise analyse (additional help text)
-#: src/OSRRepairUI.ycp:361
+#: src/OSRRepairUI.ycp:364
 msgid ""
 "For example, deselect a category group, like\n"
 "the boot loader test, then start analysis."
@@ -2646,12 +2656,12 @@ msgstr ""
 "rozpocząć analizę."
 
 #. Third entry - direct repair tools (headline)
-#: src/OSRRepairUI.ycp:367
+#: src/OSRRepairUI.ycp:370
 msgid "E&xpert Tools"
 msgstr "Narzędzia &zaawansowane"
 
 #. Third entry - direct repair tools (description)
-#: src/OSRRepairUI.ycp:370
+#: src/OSRRepairUI.ycp:373
 msgid ""
 "Use if the automatic detection\n"
 "fails or you know the exact type of\n"
@@ -2662,7 +2672,7 @@ msgstr ""
 "problemu.\n"
 
 #. Third entry - direct repair tools (additional help text)
-#: src/OSRRepairUI.ycp:375
+#: src/OSRRepairUI.ycp:378
 msgid ""
 "For example, directly recover a lost\n"
 "partition table or verify the package database."
@@ -2671,17 +2681,17 @@ msgstr ""
 "utraconej partycji lub weryfikowanie bazy pakietów."
 
 #. button label
-#: src/OSRRepairUI.ycp:426
+#: src/OSRRepairUI.ycp:429
 msgid "&Select All"
 msgstr "Wybierz w&szystko"
 
 #. button label
-#: src/OSRRepairUI.ycp:428
+#: src/OSRRepairUI.ycp:431
 msgid "&Deselect All"
 msgstr "O&dznacz wszystko"
 
 #. help text for "custom scan" dialog 1/3
-#: src/OSRRepairUI.ycp:431
+#: src/OSRRepairUI.ycp:434
 msgid ""
 "<P>The system repair scans a\n"
 "lot of system parts automatically. Usually, only one\n"
@@ -2694,7 +2704,7 @@ msgstr ""
 "lub system plików.</P>\n"
 
 #. help text for "custom scan" dialog 2/3
-#: src/OSRRepairUI.ycp:438
+#: src/OSRRepairUI.ycp:441
 msgid ""
 "<P>Therefore, this dialog enables the selection\n"
 "of system parts that should be scanned.</P>\n"
@@ -2703,7 +2713,7 @@ msgstr ""
 "elementy systemu, które mają być przeglądane.</P>\n"
 
 #. help text for "custom scan" dialog 2/3
-#: src/OSRRepairUI.ycp:443
+#: src/OSRRepairUI.ycp:446
 msgid ""
 "Some of the groups shown at the right side of\n"
 "the dialog need other groups. These dependencies\n"
@@ -2713,22 +2723,22 @@ msgstr ""
 "innych grup. Zależności te są uwzględniane automatycznie.\n"
 
 #. help text for '&Select All' button
-#: src/OSRRepairUI.ycp:449
+#: src/OSRRepairUI.ycp:452
 msgid "Select all entries in the list."
 msgstr "Wybiera wszystkie pozycje z listy."
 
 #. help text for '&Deselect All' button
-#: src/OSRRepairUI.ycp:452
+#: src/OSRRepairUI.ycp:455
 msgid "Deselect all entries in the list."
 msgstr "Odznacz wszystkie pozycje z listy."
 
 #. error label (user should select the action to do)
-#: src/OSRRepairUI.ycp:512
+#: src/OSRRepairUI.ycp:515
 msgid "Select at least one item."
 msgstr "Proszę wybrać przynajmniej jeden element."
 
 #. popup label: wait while dependencies are being solved
-#: src/OSRRepairUI.ycp:525
+#: src/OSRRepairUI.ycp:528
 msgid ""
 "Resolving the dependencies\n"
 "between the selected groups...\n"
@@ -2737,7 +2747,7 @@ msgstr ""
 "wybranymi grupami...\n"
 
 #. help text for "expert tools" dialog 1/2
-#: src/OSRRepairUI.ycp:548
+#: src/OSRRepairUI.ycp:551
 msgid ""
 "<P>The repair system allows the\n"
 "direct repair of damaged system areas with the\n"
@@ -2748,7 +2758,7 @@ msgstr ""
 "przy pomocy narzędzi pokazanych po prawej stronie okna.</P> \n"
 
 #. help text for "expert tools" dialog 2/2
-#: src/OSRRepairUI.ycp:554
+#: src/OSRRepairUI.ycp:557
 msgid ""
 "<P>Each tool has a special functionality.\n"
 "Read the description of the different options\n"
@@ -2761,23 +2771,23 @@ msgstr ""
 "należy się cofnąć i rozpocząć analizę automatyczną.</P>\n"
 
 #. progress bar label
-#: src/OSRRepairUI.ycp:593
+#: src/OSRRepairUI.ycp:596
 msgid "Module Check"
 msgstr "Sprawdzanie modułu"
 
 #. button label
-#: src/OSRRepairUI.ycp:597
+#: src/OSRRepairUI.ycp:600
 msgid "&Show All Details"
 msgstr "Pokaż wszystkie &szczegóły"
 
 #. Help text for automatic check/repair process 1/4 
-#: src/OSRRepairUI.ycp:631
+#: src/OSRRepairUI.ycp:634
 #, ycp-format
 msgid "<p>Now checking your system.</p>\n"
 msgstr "<p>Sprawdzanie systemu.</p>\n"
 
 #. Help text for automatic check/repair process 2/4
-#: src/OSRRepairUI.ycp:635
+#: src/OSRRepairUI.ycp:638
 msgid ""
 "<p>Depending on the CPU and the amount of memory, this can\n"
 "take some time.</p>\n"
@@ -2786,7 +2796,7 @@ msgstr ""
 "i ilości pamięci.</p>\n"
 
 #. Help text for automatic check/repair process 3/4
-#: src/OSRRepairUI.ycp:640
+#: src/OSRRepairUI.ycp:643
 msgid ""
 "<p>The file system checks with fsck are especially\n"
 "time consuming.</p>\n"
@@ -2795,7 +2805,7 @@ msgstr ""
 "systemu plików przez fsck.</p>\n"
 
 #. Help text for automatic check/repair process 4/4
-#: src/OSRRepairUI.ycp:645
+#: src/OSRRepairUI.ycp:648
 #, ycp-format
 msgid ""
 "<P>If the scan sequence finds an error, \n"
@@ -2807,17 +2817,17 @@ msgstr ""
 "Proszę wybrać jedną propozycję albo anulować naprawę.</P>\n"
 
 #. help text for '&Pause' button
-#: src/OSRRepairUI.ycp:652
+#: src/OSRRepairUI.ycp:655
 msgid "Pause or continue analyzing the system."
 msgstr "Wstrzymaj albo kontynuuj analizowanie systemu."
 
 #. help text for '&Show All Details' button
-#: src/OSRRepairUI.ycp:656
+#: src/OSRRepairUI.ycp:659
 msgid "Activate or disable reporting details."
 msgstr "Zezwól lub zabroń raportowania szczegółów."
 
 #. popup label
-#: src/OSRRepairUI.ycp:826
+#: src/OSRRepairUI.ycp:829
 msgid "Really finish the system repair tool?"
 msgstr "Na pewno zakończyć naprawę systemu?"
 
@@ -3114,7 +3124,7 @@ msgid "Package installation was not successful."
 msgstr "Instalacja pakietów zakończona niepowodzeniem."
 
 #. summary (error) text
-#: src/osr_module_bootloader.ycp:302 src/osr_module_packages.ycp:253
+#: src/osr_module_bootloader.ycp:302 src/osr_module_packages.ycp:260
 msgid "Cannot initialize package database."
 msgstr "Nie można zainicjować bazy danych pakietów."
 
@@ -3505,7 +3515,7 @@ msgid "No floppy device found"
 msgstr "Nie znaleziono napędu dyskietek"
 
 #. summary text
-#: src/osr_module_init.ycp:97 src/osr_module_packages.ycp:73
+#: src/osr_module_init.ycp:97 src/osr_module_packages.ycp:74
 msgid "Target system initialized"
 msgstr "System docelowy zainicjalizowany"
 
@@ -3535,12 +3545,12 @@ msgid "Initializing target system..."
 msgstr "Inicjalizacja systemu docelowego..."
 
 #. summary text
-#: src/osr_module_packages.ycp:56
+#: src/osr_module_packages.ycp:57
 msgid "Target system was not initialized"
 msgstr "System docelowy nie został zainicjowany"
 
 #. summary text
-#: src/osr_module_packages.ycp:66
+#: src/osr_module_packages.ycp:67
 #, ycp-format
 msgid "Following devices cannot be mounted:<br>%1"
 msgstr "Następujące urządzenia nie mogą być zamontowane:<br>%1"
@@ -3641,22 +3651,22 @@ msgid "All packages were verified successfully"
 msgstr "Wszystkie pakiety zweryfikowano pomyślnie"
 
 #. radio button label
-#: src/osr_module_packages.ycp:221
+#: src/osr_module_packages.ycp:228
 msgid "Base Packages Only"
 msgstr "Tylko pakiety podstawowe"
 
 #. radio button label
-#: src/osr_module_packages.ycp:223
+#: src/osr_module_packages.ycp:230
 msgid "All Installed Packages"
 msgstr "Wszystkie pakiety zainstalowane"
 
 #. RadioButtonGroup label
-#: src/osr_module_packages.ycp:229
+#: src/osr_module_packages.ycp:236
 msgid "Package Range"
 msgstr "Zakres pakietów"
 
 #. RadioButtonGroup text
-#: src/osr_module_packages.ycp:231
+#: src/osr_module_packages.ycp:238
 msgid ""
 "\n"
 "You can verify all packages\n"
@@ -3668,13 +3678,13 @@ msgstr ""
 "pakiety podstawowe. Weryfikowanie wszystkich\n"
 "pakietów zajmuje bardzo dużo czasu.\n"
 
-#: src/osr_module_packages.ycp:261
+#: src/osr_module_packages.ycp:268
 #, ycp-format
 msgid "Verified %1 packages successfully.\n"
 msgstr "Pomyślna weryfikacja %1 pakietów.\n"
 
 #. helptext
-#: src/osr_module_packages.ycp:295
+#: src/osr_module_packages.ycp:306
 msgid ""
 "The most common way to add a new program or library\n"
 "to a Linux system is to install a new package.\n"
@@ -3689,7 +3699,7 @@ msgstr ""
 "oraz zarejestrowaniu pakietu w bazie danych pakietów.\n"
 
 #. helptext, %1 adds additional sentences
-#: src/osr_module_packages.ycp:303
+#: src/osr_module_packages.ycp:314
 #, ycp-format
 msgid ""
 "\n"
@@ -3708,12 +3718,12 @@ msgstr ""
 "w bazie pakietów z rzeczywiście zainstalowanymi plikami.\n"
 
 #. module action label
-#: src/osr_module_packages.ycp:315
+#: src/osr_module_packages.ycp:326
 msgid "Check Package Database"
 msgstr "Sprawdź bazę pakietów"
 
 #. %1 adds some sentences
-#: src/osr_module_packages.ycp:317
+#: src/osr_module_packages.ycp:328
 #, ycp-format
 msgid ""
 "\n"
@@ -3731,7 +3741,7 @@ msgstr ""
 "Dzięki temu możliwe jest usunięcie pakietu w przyszłości.</P>\n"
 
 #. helptext
-#: src/osr_module_packages.ycp:325
+#: src/osr_module_packages.ycp:336
 msgid ""
 "<P>\n"
 "This procedure checks all files that pertain to the\n"
@@ -3748,12 +3758,12 @@ msgstr ""
 "powrócić do kopii zapasowej.</P>\n"
 
 #. module action label
-#: src/osr_module_packages.ycp:335
+#: src/osr_module_packages.ycp:346
 msgid "Check Minimal Package Selection"
 msgstr "Sprawdź minimalny zestaw pakietów"
 
 #. helptext, %1 is some sentences
-#: src/osr_module_packages.ycp:337
+#: src/osr_module_packages.ycp:348
 #, ycp-format
 msgid ""
 "\n"
@@ -3773,7 +3783,7 @@ msgstr ""
 "Bez tych pakietów systemu nie można uruchomić.</p>\n"
 
 #. helptext
-#: src/osr_module_packages.ycp:347
+#: src/osr_module_packages.ycp:358
 msgid ""
 "<P>\n"
 "This procedure checks if all packages of a minimal installation\n"
@@ -3787,12 +3797,13 @@ msgstr ""
 "zainstalować brakujące.</P>\n"
 
 #. module action label
-#: src/osr_module_packages.ycp:358
-msgid "Verify Base Packages (time consuming)"
-msgstr "Zweryfikuj podstawowe pakiety (czasochłonne)"
+#: src/osr_module_packages.ycp:369
+#, fuzzy
+msgid "Verify Base Packages"
+msgstr "Weryfikowanie pakietów podstawowych"
 
 #. helptext
-#: src/osr_module_packages.ycp:365
+#: src/osr_module_packages.ycp:376
 msgid ""
 "<P>\n"
 "This procedure verifies all packages that belong\n"
@@ -3807,12 +3818,12 @@ msgstr ""
 "ponownie zainstalować uszkodzone pakiety.</P>\n"
 
 #. module action label
-#: src/osr_module_packages.ycp:380
+#: src/osr_module_packages.ycp:391
 msgid "Verify All Installed Packages (very time consuming)"
 msgstr "Zweryfikuj wszystkie zainstalowane pakiety (bardzo czasochłonne)"
 
 #. helptext
-#: src/osr_module_packages.ycp:389
+#: src/osr_module_packages.ycp:400
 msgid ""
 "<P>\n"
 "This procedure verifies all installed packages. If\n"
@@ -3830,42 +3841,42 @@ msgstr ""
 "powodu ta pozycja menu nie jest domyślna.</P>\n"
 
 #. module headline
-#: src/osr_module_packages.ycp:405
+#: src/osr_module_packages.ycp:416
 msgid "Packages"
 msgstr "Pakiety"
 
 #. module reset label
-#: src/osr_module_packages.ycp:411
+#: src/osr_module_packages.ycp:422
 msgid "Reset Package Check Settings"
 msgstr "Przywróć ustawienia sprawdzania pakietów"
 
 #. module method progress label
-#: src/osr_module_packages.ycp:420
+#: src/osr_module_packages.ycp:431
 msgid "Mounting all partitions..."
 msgstr "Montowanie wszystkich partycji..."
 
 #. module method progress label
-#: src/osr_module_packages.ycp:429
+#: src/osr_module_packages.ycp:440
 msgid "Searching for package database..."
 msgstr "Wyszukiwanie bazy danych pakietów..."
 
 #. module method progress label
-#: src/osr_module_packages.ycp:438
+#: src/osr_module_packages.ycp:449
 msgid "Searching for minimum required packages..."
 msgstr "Wyszukiwanie minimum wymaganych pakietów..."
 
 #. module method progress label
-#: src/osr_module_packages.ycp:447
+#: src/osr_module_packages.ycp:458
 msgid "Verifying base packages..."
 msgstr "Weryfikowanie pakietów podstawowych..."
 
 #. module method acton label
-#: src/osr_module_packages.ycp:460
+#: src/osr_module_packages.ycp:471
 msgid "Verify Installed Software"
 msgstr "Weryfikuj zainstalowane oprogramowanie"
 
 #. module method description
-#: src/osr_module_packages.ycp:462
+#: src/osr_module_packages.ycp:473
 msgid ""
 "\n"
 "If you have problems with some installed\n"
@@ -3879,7 +3890,7 @@ msgstr ""
 "pakietów oprogramowania.\n"
 
 #. module method progress label
-#: src/osr_module_packages.ycp:480
+#: src/osr_module_packages.ycp:491
 msgid "Verifying all installed packages..."
 msgstr "Weryfikowanie wszystkich zainstalowanych pakietów..."
 
@@ -4922,3 +4933,9 @@ msgstr "Interfejs tekstowy dla modułu naprawy systemu nie jest dostępny"
 #, ycp-format
 msgid "System Log (%1)"
 msgstr "Dziennik systemowy (%1)"
+
+#~ msgid "Verify Base Packages (time consuming)"
+#~ msgstr "Zweryfikuj podstawowe pakiety (czasochłonne)"
+
+#~ msgid "Add a mount point for a device."
+#~ msgstr "Dodaj punkt montowania dla urządzenia."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kerberos-server\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-10 13:43+0200\n"
+"POT-Creation-Date: 2008-04-01 10:48+0200\n"
 "PO-Revision-Date: 2007-08-03 08:24+0200\n"
 "Last-Translator: Piotr Leszczyński <piotr@kontury.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 
 #. translators: error popup before aborting the module
-#: src/KerberosServer.pm:539
+#: src/KerberosServer.pm:575
 msgid ""
 "YaST2 cannot continue the configuration\n"
 "without installing the required packages."
@@ -27,118 +27,255 @@ msgstr ""
 "Program YaST2 nie może kontynuować konfiguracji \n"
 "bez zainstalowania wymaganych pakietów."
 
+#: src/KerberosServer.pm:598
+#, fuzzy
+msgid "Initialize LDAP schema failed."
+msgstr "Inicjalizacja CA nie powiodła się."
+
+#: src/KerberosServer.pm:610
+#, fuzzy
+msgid "Reading LDAP schema failed."
+msgstr "Wyszukiwanie LDAP nie powiodło się."
+
+#: src/KerberosServer.pm:621
+#, fuzzy
+msgid "Kerberos Schema not known to the LDAP server."
+msgstr "Wystąpił problem podczas łączenia z serwerem LDAP."
+
+#: src/KerberosServer.pm:646
+msgid "No password available to create the default certificate."
+msgstr ""
+
+#: src/KerberosServer.pm:804
+msgid "LDAP database exists. Cannot create a new one."
+msgstr ""
+
+#: src/KerberosServer.pm:816
+#, fuzzy
+msgid "Cannot write /etc/sysconfig/openldap ."
+msgstr "Nie można zapisać /etc/sysconfig/openldap"
+
+#: src/KerberosServer.pm:837
+#, fuzzy
+msgid "Kerberos schema file not found"
+msgstr "Podana nazwa zbioru zasad nie została odnaleziona."
+
+#: src/KerberosServer.pm:953
+#, fuzzy
+msgid "No LDAP server URI specified."
+msgstr "Serwer LDAP nie jest skonfigurowany."
+
+#: src/KerberosServer.pm:1002 src/KerberosServer.pm:1016
+#: src/KerberosServer.pm:1030 src/KerberosServer.pm:1044
+#: src/KerberosServer.pm:1059 src/KerberosServer.pm:2083
+#: src/KerberosServer.pm:2092
+#, fuzzy
+msgid "Cannot write krb5.conf."
+msgstr "Nie można zapisać pliku content."
+
+# Novell Translation
+#: src/KerberosServer.pm:1115 src/KerberosServer.pm:1163
+#: src/KerberosServer.pm:1212 src/KerberosServer.pm:1937
+#, fuzzy
+msgid "Cannot execute kdb5_ldap_util ."
+msgstr "Nie można wykryć urządzeń."
+
+#: src/KerberosServer.pm:1147 src/KerberosServer.pm:2136
+#, fuzzy
+msgid "Creating kerberos database failed."
+msgstr "Tworzenie żądania nie powiodło się."
+
+#: src/KerberosServer.pm:1196 src/KerberosServer.pm:1244
+#, fuzzy
+msgid "Writing to password file failed."
+msgstr "Zapisywanie ustawień domyślnych nie powiodło się"
+
+#: src/KerberosServer.pm:1342 src/KerberosServer.pm:1877
+#, fuzzy
+msgid "No bind DN available."
+msgstr "Żadne CRL nie jest dostępne."
+
+#: src/KerberosServer.pm:1371
+#, fuzzy
+msgid "Invalid LDAP URI scheme."
+msgstr "Nieprawidłowa nazwa źródła."
+
+#: src/KerberosServer.pm:1388
+msgid "LDAP initialization failed."
+msgstr "Inicjalizacja LDAP nie powiodła się."
+
+#: src/KerberosServer.pm:1413
+msgid "LDAP bind failed."
+msgstr "Łączenie z LDAP nie powiodło się."
+
+#: src/KerberosServer.pm:1451 src/KerberosServer.pm:1997
+msgid "LDAP search failed."
+msgstr "Wyszukiwanie LDAP nie powiodło się."
+
+#: src/KerberosServer.pm:1790 src/KerberosServer.pm:1801
+#, fuzzy
+msgid "Writing to krb5.conf failed."
+msgstr "Zapis nie powiódł się."
+
+#: src/KerberosServer.pm:1843 src/KerberosServer.pm:1853
+#, fuzzy
+msgid "Writing to kdc.conf failed."
+msgstr "Zapisywanie ustawień domyślnych nie powiodło się"
+
+#: src/KerberosServer.pm:1968
+#, fuzzy
+msgid "Modifying the kerberos database failed."
+msgstr "Modyfikacja RequestGenerationData nie powiodła się."
+
+#: src/KerberosServer.pm:2011
+#, fuzzy
+msgid "LDAP modify failed."
+msgstr "Łączenie z LDAP nie powiodło się."
+
+#: src/KerberosServer.pm:2042
+msgid "Incomplete data."
+msgstr ""
+
+#: src/KerberosServer.pm:2057
+#, fuzzy
+msgid "No database name set."
+msgstr "Nazwa bazy danych:"
+
+#: src/KerberosServer.pm:2066
+#, fuzzy
+msgid "Cannot write kdc.conf."
+msgstr "Nie można zapisać pliku content."
+
+# Novell Translation
+#: src/KerberosServer.pm:2104
+#, fuzzy
+msgid "Cannot execute kdb5_util ."
+msgstr "Nie można wykryć urządzeń."
+
+#: src/KerberosServer.pm:2208
+#, fuzzy
+msgid "Unsupported database type."
+msgstr "Nieobsługiwany typ karty: %1"
+
 #. KerberosServer read dialog caption
-#: src/KerberosServer.pm:2081
+#: src/KerberosServer.pm:2299
 msgid "Initializing kerberos-server Configuration"
 msgstr "Inicjowanie konfiguracji serwera Kerberos"
 
 #. Progress stage 1/3
-#: src/KerberosServer.pm:2091
+#: src/KerberosServer.pm:2309
 msgid "Checking for required packages"
 msgstr "Sprawdzanie wymaganych pakietów..."
 
 #. Progress stage 2/3
-#: src/KerberosServer.pm:2093
+#: src/KerberosServer.pm:2311
 msgid "Read the database"
 msgstr "Wczytywanie bazy danych"
 
 #. Progress step 1/3
-#: src/KerberosServer.pm:2096
+#: src/KerberosServer.pm:2314
 msgid "Checking for required packages..."
 msgstr "Wyszukiwanie wymaganych pakietów..."
 
 #. Progress step 2/3
-#: src/KerberosServer.pm:2098
+#: src/KerberosServer.pm:2316
 msgid "Reading the database..."
 msgstr "Wczytywanie bazy danych..."
 
-# Novell Translation
-#: src/KerberosServer.pm:2154
-msgid "Cannot read the database2."
-msgstr "Nie można odczytać bazy danych database2."
+#: src/KerberosServer.pm:2347
+#, fuzzy
+msgid "Cannot read hostname."
+msgstr "Nie można odczytać CA."
+
+#: src/KerberosServer.pm:2357
+#, fuzzy
+msgid "Cannot read domain"
+msgstr "Nie można odczytać pliku %1"
 
 #. KerberosServer read dialog caption
-#: src/KerberosServer.pm:2174
+#: src/KerberosServer.pm:2396
 msgid "Saving kerberos-server Configuration"
 msgstr "Zapisywanie konfiguracji serwera Kerberos"
 
 #. Progress stage 1/2
-#: src/KerberosServer.pm:2184
+#: src/KerberosServer.pm:2406
 msgid "Write Firewall settings"
 msgstr "Zapisywanie konfiguracji zapory sieciowej"
 
 #. Progress stage 2/2
-#: src/KerberosServer.pm:2186
+#: src/KerberosServer.pm:2408
 msgid "Write Kerberos settings"
 msgstr "Zapisywanie ustawień Kerberosa"
 
 #. Progress step 1/2
-#: src/KerberosServer.pm:2189
+#: src/KerberosServer.pm:2411
 msgid "Writing Firewall settings..."
 msgstr "Zapisywanie ustawień zapory sieciowej..."
 
 #. Progress step 2/2
-#: src/KerberosServer.pm:2191
+#: src/KerberosServer.pm:2413
 msgid "Writing Kerberos settings..."
 msgstr "Zapisywanie ustawień Kerberosa..."
 
 #. Progress finished
-#: src/KerberosServer.pm:2193
+#: src/KerberosServer.pm:2415
 msgid "Finished"
 msgstr "Zakończono"
 
 #. summary text - title
-#: src/KerberosServer.pm:2258
+#: src/KerberosServer.pm:2481
 msgid "Configuration of the Kerberos Server"
 msgstr "Konfiguracja serwera Kerberos"
 
 #. summary text 
-#: src/KerberosServer.pm:2263
+#: src/KerberosServer.pm:2486
 msgid "Database Backend: "
 msgstr "Silnik bazy danych:"
 
 #. summary text 
-#: src/KerberosServer.pm:2267
+#: src/KerberosServer.pm:2490
 msgid "Database Name:"
 msgstr "Nazwa bazy danych:"
 
 #. summary text 
-#: src/KerberosServer.pm:2271
+#: src/KerberosServer.pm:2494
 msgid "Realm: "
 msgstr "Domena (realm):"
 
 #. summary text 
-#: src/KerberosServer.pm:2276
+#: src/KerberosServer.pm:2499
 msgid "KDC Ports:"
 msgstr "Porty KDC:"
 
 #. summary text 
-#: src/KerberosServer.pm:2281
+#: src/KerberosServer.pm:2504
 msgid "kadmind Port:"
 msgstr "Port kadmind:"
 
 #. summary text 
-#: src/KerberosServer.pm:2286
+#: src/KerberosServer.pm:2509
 msgid "kpasswd Port:"
 msgstr "Port kpasswd:"
 
 #. summary text 
-#: src/KerberosServer.pm:2292 src/complex.ycp:328
+#. TextEntry label
+#: src/KerberosServer.pm:2515 src/complex.ycp:333
 msgid "LDAP Server URI:"
 msgstr "URI serwera LDAP:"
 
 #. summary text 
-#: src/KerberosServer.pm:2295 src/complex.ycp:359
+#. TextEntry label
+#: src/KerberosServer.pm:2518 src/complex.ycp:368
 msgid "Kerberos Container DN:"
 msgstr "Container DN dla Kerberosa"
 
 #. summary text 
-#: src/KerberosServer.pm:2298
+#: src/KerberosServer.pm:2521
 msgid "KDC bind DN:"
 msgstr "Bind DN dla KDC:"
 
 #. summary text 
-#: src/KerberosServer.pm:2301
+#: src/KerberosServer.pm:2524
 msgid "Kadmin bind DN:"
 msgstr "Bind DN dla Kadmin:"
 
@@ -212,12 +349,14 @@ msgstr "Maksymalny czas odnawiania ważności biletu."
 
 #. Treeview list item
 #: src/advanced_items.ycp:696 src/advanced_items.ycp:971
-msgid "Default Encrytion Types"
+#, fuzzy
+msgid "Default Encryption Types"
 msgstr "Domyślne rodzaje szyfrowania"
 
 #. Treeview list item
 #: src/advanced_items.ycp:698 src/advanced_items.ycp:982
-msgid "KDC Supported Encrytion Types"
+#, fuzzy
+msgid "KDC Supported Encryption Types"
 msgstr "Rodzaje szyfrowania obsługujące KDC"
 
 #. Treeview list item
@@ -378,6 +517,12 @@ msgstr "Zapisywanie konfiguracji nie powiodło się. Czy zmienić ustawienia?"
 msgid "Select the Database Backend"
 msgstr "Proszę wybrać rodzaj bazy danych"
 
+#. Button group label
+#: src/complex.ycp:108
+#, fuzzy
+msgid "Select the database backend you want to use"
+msgstr "Proszę wybrać rodzaj bazy danych"
+
 #. Checkbox text
 #: src/complex.ycp:112
 msgid "&Local Database"
@@ -394,26 +539,31 @@ msgid "&Use existing LDAP server as database backend"
 msgstr "&Wykorzystaj istniejący serwer LDAP dla bazy danych"
 
 #. caption
-#: src/complex.ycp:199 src/complex.ycp:218
+#. Frame lable
+#: src/complex.ycp:199 src/complex.ycp:220
 msgid "Basic Kerberos Settings"
 msgstr "Podstawowe ustawienia Kerberosa"
 
-#: src/complex.ycp:205
+#. Button text
+#: src/complex.ycp:206
 msgid "&Advanced Configuration"
 msgstr "Konfiguracja zaawansowana"
 
-#: src/complex.ycp:220
+#. TextEntry label: "Realm" is a typical kerberos phrase.
+#. Please think twice please before you translate this,
+#. and check with kerberos.pot how it is translated there.
+#: src/complex.ycp:225
 msgid "Realm"
 msgstr "Domena (realm)"
 
 #. Frame label
-#: src/complex.ycp:228 src/complex.ycp:698
+#: src/complex.ycp:233 src/complex.ycp:709
 msgid "Firewall Settings"
 msgstr "Ustawienia zapory sieciowej"
 
 #. The two user password information do not match
 #. error popup
-#: src/complex.ycp:283
+#: src/complex.ycp:288
 msgid ""
 "The passwords do not match.\n"
 "Try again."
@@ -422,38 +572,49 @@ msgstr ""
 "Proszę spróbować ponownie."
 
 #. Error popup
-#: src/complex.ycp:295
+#: src/complex.ycp:300
 msgid "Empty password is not allowed."
 msgstr "Pusty ciąg znaków dla hasła jest niedozwolony."
 
 #. caption
-#: src/complex.ycp:315
+#: src/complex.ycp:320
 msgid "Kerberos Setting for the LDAP Backend"
 msgstr "Ustawienia Kerberosa dla LDAP"
 
-#: src/complex.ycp:330
+#. TextEntry label
+#: src/complex.ycp:336
 msgid "Kadmin Bind DN:"
 msgstr "Bind DN dla Kadmin:"
 
-#: src/complex.ycp:354
+#. Checkbox text
+#: src/complex.ycp:355
+#, fuzzy
+msgid "Use previously entered password"
+msgstr "Odczytywanie poprzednio używanych repozytoriów"
+
+#. Frame label
+#: src/complex.ycp:361
 msgid "LDAP Settings"
 msgstr "Ustawienia LDAP"
 
-#: src/complex.ycp:357
+#. TextEntry label
+#: src/complex.ycp:365
 msgid "LDAP base DN:"
 msgstr "Base DN dla LDAP "
 
-#: src/complex.ycp:362
+#. TextEntry label
+#: src/complex.ycp:372
 msgid "KDC Bind DN:"
 msgstr "Bind DN dla KDC:"
 
-#: src/complex.ycp:375
+#. Button text
+#: src/complex.ycp:386
 msgid "Advanced Configuration"
 msgstr "Konfiguracja zaawansowana"
 
 #. The two user password information do not match
 #. error popup
-#: src/complex.ycp:427
+#: src/complex.ycp:438
 msgid ""
 "The LDAP KDC passwords do not match.\n"
 "Try again."
@@ -463,7 +624,7 @@ msgstr ""
 
 #. The two user password information do not match
 #. error popup
-#: src/complex.ycp:448
+#: src/complex.ycp:459
 msgid ""
 "The LDAP Kadmin passwords do not match.\n"
 "Try again."
@@ -472,31 +633,31 @@ msgstr ""
 "Proszę spróbować ponownie."
 
 #. caption
-#: src/complex.ycp:504
+#: src/complex.ycp:515
 msgid "Advanced Kerberos Configuration"
 msgstr "Zaawansowana konfiguracja Kerberosa"
 
 #. tree widget label
-#: src/complex.ycp:525
+#: src/complex.ycp:536
 msgid "&Advanced Options"
 msgstr "Opcje z&aawansowane"
 
 #. label widget
 #. header label
-#: src/complex.ycp:531 src/complex.ycp:635
+#: src/complex.ycp:542 src/complex.ycp:646
 msgid "Current Selection: "
 msgstr "Bieżący wybór: "
 
 #. KerberosServer summary dialog caption
-#: src/complex.ycp:661
+#: src/complex.ycp:672
 msgid "KerberosServer Configuration"
 msgstr "Konfiguracja serwera Kerberos"
 
-#: src/complex.ycp:686
+#: src/complex.ycp:697
 msgid "&Disable Kerberos"
 msgstr "W&yłącz Kerberosa"
 
-#: src/complex.ycp:690
+#: src/complex.ycp:701
 msgid "&Enable Kerberos"
 msgstr "&Włącz Kerberosa"
 
@@ -670,22 +831,22 @@ msgid "<p>When you click on the <big>Edit</big> Button you can change some value
 msgstr "<p>Po naciśnięciu przycisku <big>Edytuj</b>, można zmieniać niektóre opcje konfiguracji.</p>"
 
 #. ==============================================================================
-#. advanced item help
+#. advanced item help: database_name
 #: src/helps.ycp:138
 msgid "<p>This string specifies the location of the Kerberos database for this realm.</p>"
 msgstr "<p>To pole określa położenie bazy danych Kerberosa w danej domenie (realmie).</p>"
 
-#. advanced item help
+#. advanced item help: acl_file
 #: src/helps.ycp:141
 msgid "<p>This  string specifies the location of the access control list (acl) file that kadmin uses to determine which principals are allowed which permissions on the database.</p>"
 msgstr "<p>To pole określa położenie pliku access control list (acl), z którego kadmin korzysta, aby zdefiniować prawa dostępu do bazy danych dla użytkowników.</p>"
 
-#. advanced item help
+#. advanced item help: admin_keytab
 #: src/helps.ycp:144
 msgid "<p>This  string  Specifies  the  location  of  the  keytab  file  that  kadmin  uses  to  authenticate  to  the  database.</p>"
 msgstr "<p>To pole określa położenie pliku keytab, który kadmin używa do uwierzytelniania kont w bazie danych.</p>"
 
-#. advanced item help
+#. advanced item help: default_principal_expiration
 #: src/helps.ycp:147
 msgid "<p>This absolute time specifies the default expiration date of principals created in this realm.</p>"
 msgstr "<p>Ten konkretny termin określa domyślną datę wygaśnięcia kont użytkowników z danej domeny (realmu).</p>"
@@ -695,147 +856,150 @@ msgstr "<p>Ten konkretny termin określa domyślną datę wygaśnięcia kont uż
 msgid "<p>These flags specifies the default attributes of principals created in this realm.</p>"
 msgstr "<p>Te znaczniki określają domyślne atrybuty kont użytkowników utworzonych w domenie (realm).</p>"
 
-#. advanced item help principal_flags 2/13
+#. advanced item help principal_flags 2/13 :Allow postdated
 #: src/helps.ycp:154
 msgid "Enabling this flag allows the principal to obtain postdateable tickets."
 msgstr "Włączenie tego znacznika umożliwia przydzielanie użytkownikom biletów opóźnionych (postdateable)."
 
-#. advanced item help principal_flags 3/13
+#. advanced item help principal_flags 3/13 :Allow forwardable
 #: src/helps.ycp:158
 msgid "Enabling this flag allows the principal to obtain forwardable tickets."
 msgstr "Włączenie tego znacznika umożliwia przydzielanie użytkownikom biletów pełnego pełnomocnictwa (forwardable)."
 
-#. advanced item help principal_flags 4/13
+#. advanced item help principal_flags 4/13 :Allow renewable
 #: src/helps.ycp:162
 msgid "Enabling this flag allows the principal to obtain renewable tickets."
 msgstr "Włączenie tego znacznika umożliwia przydzielanie użytkownikom biletów odnawialnych (renewable)."
 
-#. advanced item help principal_flags 5/13
+#. advanced item help principal_flags 5/13 :Allow proxiable
 #: src/helps.ycp:166
 msgid "Enabling this flag allows the principal to obtain proxy tickets."
 msgstr "Włączenie tego znacznika umożliwia przydzielanie użytkownikom biletów pełnomocnictwa (proxy)."
 
-#. advanced item help principal_flags 6/13
+#. advanced item help principal_flags 6/13 :Enable user-to-user authentication
 #: src/helps.ycp:170
 msgid "Enabling this flag allows the principal to obtain a session key for another user, permitting user-to-user authentication for this  principal."
 msgstr "Włączenie tego znacznika umożliwia przydzielenie jednemu użytkownikowi klucza sesji dla innego użytkownika i pozwala na uwierzytelnianie typu użytkownik-użytkownik."
 
-#. advanced item help principal_flags 7/13
+#. advanced item help principal_flags 7/13 :Requires preauth
 #: src/helps.ycp:174
 msgid "If this flag is enabled on a client principal, then that principal is required to preauthenticate to the KDC before receiving any  tickets. On a service principal, enabling this flag means that service tickets for this principal will only be issued to clients with a TGT that has the preauthenticated ticket set."
 msgstr ""
 
-#. advanced item help principal_flags 8/13
+#. advanced item help principal_flags 8/13 :Requires hwauth
 #: src/helps.ycp:178
 msgid "If this flag is enabled, then the principal is required to preauthenticate using a hardware device before receiving any tickets."
 msgstr ""
 
-#. advanced item help principal_flags 9/13
+#. advanced item help principal_flags 9/13 :Allow service
 #: src/helps.ycp:182
 msgid "Enabling this flag allows the KDC to issue service tickets for this principal."
 msgstr ""
 
-#. advanced item help principal_flags 10/13
+#. advanced item help principal_flags 10/13 :Allow tgs request
 #: src/helps.ycp:186
 msgid "Enabling this flag allows a principal to obtain tickets based on a ticket-granting-ticket, rather than repeating the authentication process that was used to obtain the TGT."
 msgstr ""
 
-#. advanced item help principal_flags 11/13
+#. advanced item help principal_flags 11/13 :Allow tickets
 #: src/helps.ycp:190
 msgid "Enabling  this  flag  means  that the KDC will issue tickets for this principal. Disabling this flag essentially deactivates the principal within this realm."
 msgstr ""
 
-#. advanced item help principal_flags 12/13
+#. advanced item help principal_flags 12/13 :Needchange
 #: src/helps.ycp:194
 msgid "Enabling this flag forces a password change for this principal."
 msgstr ""
 
-#. advanced item help principal_flags 13/13
+#. advanced item help principal_flags 13/13 :Password changing service
 #: src/helps.ycp:198
 msgid "If this flag is enabled, it marks this principal as a password change service.  This should only be used in special cases, for example,  if a  user's  password  has  expired,  the user has to get tickets for that principal to be able to change it without going through the normal password authentication."
 msgstr ""
 
-#. advanced item help
+#. advanced item help : dict_file
 #: src/helps.ycp:201
 msgid "<p>This string location of the dictionary file containing strings that are not allowed as passwords.  If this tag is not set or if there is no policy assigned to the principal, then no check will be done.</p>"
 msgstr ""
 
-#. advanced item help
+#. advanced item help : kadmind_port
+#. advanced item help : kpasswd_port
 #: src/helps.ycp:204 src/helps.ycp:207
 msgid "<p>This port number specifies the port on which the kadmind daemon is to listen for this realm.</p>"
 msgstr "<p>Numer portu określa, na którym porcie nasłuchuje demon kadmind.</p>"
 
-#. advanced item help
+#. advanced item help : key_stash_file
 #: src/helps.ycp:210
 msgid "<p>This string specifies the location where the master key has been stored with kdb5_stash.</p>"
 msgstr "<p>To pole określa położenie klucza głównego w kdb5_stash.</p>"
 
-#. advanced item help
+#. advanced item help : kdc_ports
 #: src/helps.ycp:213
 msgid "<p>This  string  specifies the list of ports that the KDC is to listen to for this realm.</p>"
 msgstr "<p>To pole określa listę portów, na jakich KDC nasłuchuje w tym realmie.</p>"
 
-#. advanced item help
+#. advanced item help : master_key_name
 #: src/helps.ycp:216
 msgid "<p>This string specifies the name of the principal associated with the master key. The default value is K/M.</p>"
 msgstr "<p>To pole określa nazwę konta użytkownika powiązanego z danym kluczem głównym. Domyślnie: K/M.</p>"
 
-#. advanced item help
+#. advanced item help : master_key_type
 #: src/helps.ycp:219
-msgid "<p>This key type string represents the master key's key type.</p>"
+#, fuzzy
+msgid "<p>This key type string represents the master keys key type.</p>"
 msgstr "<p>To pole dotyczy typu klucza głównego.</p>"
 
-#. advanced item help
+#. advanced item help : max_life
 #: src/helps.ycp:222
-msgid "<p>This delta time specifes the maximum time period that a ticket may be valid for in this realm.</p>"
-msgstr ""
+#, fuzzy
+msgid "<p>This delta time specifies the maximum time period that a ticket may be valid for in this realm.</p>"
+msgstr "<p>Ten konkretny termin określa domyślną datę wygaśnięcia kont użytkowników z danej domeny (realmu).</p>"
 
-#. advanced item help
+#. advanced item help : max_renew_life
 #: src/helps.ycp:224
 msgid "<p>This delta time specifies the maximum time period that a ticket may be renewed for in this realm.</p>"
 msgstr ""
 
-#. advanced item help
+#. advanced item help : supported_enctypes
 #: src/helps.ycp:227
 msgid "<p>A List of key:salt strings that specifies the default key/salt combinations of principals for this realm.</p>"
 msgstr ""
 
-#. advanced item help
+#. advanced item help : kdc_supported_enctypes
 #: src/helps.ycp:230
 msgid "<p>Specifies the permitted key-salt combinations of principals for this realm.</p>"
 msgstr ""
 
-#. advanced item help
+#. advanced item help : reject_bad_transit
 #: src/helps.ycp:233
 msgid "<p>Specifies whether or not the list of transited realms for cross-realm tickets should be checked against the transit path computed from the realm names and the [capaths] section of its krb5.conf file</p>"
 msgstr ""
 
-#. advanced item help
+#. advanced item help : ldap_conns_per_server
 #: src/helps.ycp:236
 msgid "<p>This LDAP specific tag indicates the number of connections to be maintained per LDAP server.</p>"
 msgstr "<p>Ten znacznik wyznacza ilość połączeń możliwych na jednym serwerze LDAP.</p>"
 
-#. advanced item help
+#. advanced item help : ldap_service_password_file
 #: src/helps.ycp:239
 msgid "<p>This LDAP specific tag indicates the file containing the stashed passwords for the objects used for starting the Kerberos servers.</p>"
 msgstr ""
 
-#. advanced item help
+#. advanced item help : kdb_subtrees
 #: src/helps.ycp:242
 msgid "<p>Specifies the list of subtrees containing the principals of a realm. The list contains the DNs of the subtree objects separated by colon(:).</p><p>The search scope specifies the scope for searching the principals under the subtree.</p>"
 msgstr ""
 
-#. advanced item help
+#. advanced item help : kdb_containerref
 #: src/helps.ycp:245
 msgid "<p>Specifies the DN of the container object in which the principals of a realm will be created. If the container reference is not configured for a realm, the principals will be created in the realm container.</p>"
 msgstr ""
 
-#. advanced item help
+#. advanced item help : kdb_maxtktlife
 #: src/helps.ycp:248
 msgid "<p>Specifies maximum ticket life for principals in this realm.</p>"
 msgstr "<p>Określa maksymalny okres ważności biletu dla użytkowników (principali) tej domeny (realmu).</p>"
 
-#. advanced item help
+#. advanced item help : kdb_maxrenewlife
 #: src/helps.ycp:251
 msgid "<p>Specifies maximum renewable life of tickets for principals in this realm.</p>"
 msgstr ""
@@ -854,3 +1018,7 @@ msgstr "Konfiguracja serwera Kerberos"
 #: src/wizards.ycp:181
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
+# Novell Translation
+#~ msgid "Cannot read the database2."
+#~ msgstr "Nie można odczytać bazy danych database2."

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sudo\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-08-10 13:47+0200\n"
+"POT-Creation-Date: 2008-04-01 10:52+0200\n"
 "PO-Revision-Date: 2007-07-27 12:29+0200\n"
 "Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Plural-Forms:  nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: src/Sudo.ycp:340
+#: src/Sudo.ycp:349
 msgid "This rule is a system rule necessary for correct functionality of sudo.\n"
 msgstr ""
 "Ta wartość jest wartością systemową konieczną do \n"
 "poprawnego działania sudo.\n"
 
-#: src/Sudo.ycp:343
+#: src/Sudo.ycp:352
 msgid ""
 "After deleting it, some applications may no longer work.\n"
 "Really delete?"
@@ -35,7 +35,7 @@ msgstr ""
 "funkcjonować prawidłowo.\n"
 "Kontynuować?"
 
-#: src/Sudo.ycp:346
+#: src/Sudo.ycp:355
 msgid ""
 "If you change it, some applications may no longer work.\n"
 "Really edit? "
@@ -44,58 +44,58 @@ msgstr ""
 "przestać funkcjonować.\n"
 "Kontynuować?"
 
-#: src/Sudo.ycp:453
+#: src/Sudo.ycp:462
 msgid "All changes will be lost. Really quit sudo configuration without saving ?"
 msgstr ""
 "Wszystkie zmiany zostaną utracone.\n"
 "Czy na pewno opuścić konfigurację sudo bez zapisywania zmian?"
 
 #. Sudo read dialog caption
-#: src/Sudo.ycp:476
+#: src/Sudo.ycp:485
 msgid "Initializing sudo Configuration"
 msgstr "Inicjalizacja konfiguracji sudo"
 
 #. Progress stage 1/2
-#: src/Sudo.ycp:482
+#: src/Sudo.ycp:491
 msgid "Read sudo settings"
 msgstr "Odczytanie ustawień sudo"
 
 #. Progress stage 2/2
-#: src/Sudo.ycp:484
+#: src/Sudo.ycp:493
 msgid "Read local users and groups"
 msgstr "Odczytanie lokalnych użytkowników i grup"
 
 #. Progress step 1/2
-#: src/Sudo.ycp:487
+#: src/Sudo.ycp:496
 msgid "Reading sudo settings..."
 msgstr "Odczytywanie ustawień sudo..."
 
 #. Progress step 2/2
-#: src/Sudo.ycp:489
+#: src/Sudo.ycp:498
 msgid "Reading local users and groups..."
 msgstr "Odczytywanie lokalnych użytkowników i grup..."
 
 #. Error message
-#: src/Sudo.ycp:507
+#: src/Sudo.ycp:516
 msgid "Cannot read /etc/passwd."
 msgstr "Nie można odczytać pliku /etc/passwd."
 
 #. Sudo read dialog caption
-#: src/Sudo.ycp:525
+#: src/Sudo.ycp:534
 msgid "Saving sudo Configuration"
 msgstr "Zapisywanie konfiguracji sudo"
 
 #. Progress stage 1/1
-#: src/Sudo.ycp:536
+#: src/Sudo.ycp:545
 msgid "Write the settings"
 msgstr "Zapisanie ustawień"
 
 #. Progress step 1/1
-#: src/Sudo.ycp:539
+#: src/Sudo.ycp:548
 msgid "Writing the settings..."
 msgstr "Zapisywanie ustawień..."
 
-#: src/Sudo.ycp:553
+#: src/Sudo.ycp:562
 msgid "Cannot write settings."
 msgstr "Nie można zapisać ustawień."
 
@@ -140,7 +140,8 @@ msgstr "Parametry (opcjonalnie)"
 
 #. yes-no popup - an error occured when saving the configuration
 #: src/complex.ycp:233
-msgid "Saving sudoers configuration failed. Change the settings?"
+#, fuzzy
+msgid "Saving sudoer's configuration failed. Change the settings?"
 msgstr "Zapisywanie konfiguracji nie powiodło się. Zmienić ustawienia?"
 
 #: src/dialog-cmnd.ycp:29
@@ -152,8 +153,8 @@ msgid "Existing Command Alias"
 msgstr "Istniejące aliasy poleceń"
 
 #: src/dialog-cmnd.ycp:36 src/dialog-host.ycp:40 src/dialog-runas.ycp:46
-#: src/dialog-user.ycp:46 src/dialogs.ycp:325 src/dialogs.ycp:345
-#: src/dialogs.ycp:365 src/dialogs.ycp:385
+#: src/dialog-user.ycp:46 src/dialogs.ycp:333 src/dialogs.ycp:353
+#: src/dialogs.ycp:373 src/dialogs.ycp:393
 msgid "Alias Name"
 msgstr "Nazwa aliasu"
 
@@ -208,12 +209,13 @@ msgid "Existing RunAs Alias"
 msgstr "Istniejący alias 'RunAs'"
 
 #: src/dialog-spec.ycp:33
-msgid "New User Specification"
-msgstr "Ustawienia nowego użytkownika"
+msgid "New Sudo Rule"
+msgstr ""
 
 #: src/dialog-spec.ycp:36
-msgid "Existing User Specification"
-msgstr "Ustawienia istniejącego użytkownika"
+#, fuzzy
+msgid "Existing Sudo Rule "
+msgstr "Istniejący użytkownik NIS"
 
 #: src/dialog-spec.ycp:43
 msgid "User, Group or User Alias"
@@ -268,86 +270,87 @@ msgid "No"
 msgstr "Nie"
 
 #: src/dialogs.ycp:102
-#, ycp-format
+#, fuzzy, ycp-format
 msgid ""
-"Host alias %1 is being used in one of user specifications.\n"
-"Deleting it may result in inconsistent sudo configuration file. Really delete it ?"
+"Host alias %1 is being used in one of sudo rules.\n"
+"Deleting it may result in an inconsistent sudo configuration file. Really delete it ?\n"
 msgstr ""
 "Alias hosta %1jest używany w jednej z konfiguracji użytkownika.\n"
 "Usunięcie go może spowodować niespójność w konfiguracji sudo. Czy na pewno go usunąć?"
 
-#: src/dialogs.ycp:144
-#, ycp-format
+#: src/dialogs.ycp:146
+#, fuzzy, ycp-format
 msgid ""
-"User alias %1 is being used in one of user specifications.\n"
-"Deleting it may result in inconsistent sudo configuration file. Really delete it ?"
+"User alias %1 is being used in one of sudo rules .\n"
+"Deleting it may result in an inconsistent sudo configuration file. Really delete it ?\n"
 msgstr ""
 "Alias użytkownika %1jest używany w jednej z konfiguracji użytkownika.\n"
 "Usunięcie go może spowodować niespójność w konfiguracji sudo. Czy na pewno go usunąć?"
 
-#: src/dialogs.ycp:185
-#, ycp-format
+#: src/dialogs.ycp:189
+#, fuzzy, ycp-format
 msgid ""
-"RunAs alias %1 is being used in one of user specifications.\n"
-"Deleting it may result in inconsistent sudo configuration file. Really delete it ?"
+"RunAs alias %1 is being used in one of sudo rules.\n"
+"Deleting it may result in an inconsistent sudo configuration file. Really delete it ?\n"
 msgstr ""
 "Alias 'RunAs' %1jest używany w jednej z konfiguracji użytkownika.\n"
 "Usunięcie go może spowodować niespójność w konfiguracji sudo. Czy na pewno go usunąć?"
 
-#: src/dialogs.ycp:228
-#, ycp-format
+#: src/dialogs.ycp:234
+#, fuzzy, ycp-format
 msgid ""
-"Command alias %1 is being used in one of user specifications.\n"
-"Deleting it may result in inconsistent sudo configuration file. Really delete it ?"
+"Command alias %1 is being used in one of sudo rules.\n"
+"Deleting it may result in an inconsistent sudo configuration file. Really delete it ?\n"
 msgstr ""
 "Alias polecenia %1jest używany w jednej z konfiguracji użytkownika.\n"
 "Usunięcie go może spowodować niespójność w konfiguracji sudo. Czy na pewno go usunąć?"
 
-#: src/dialogs.ycp:303
+#: src/dialogs.ycp:311
 msgid "Users"
 msgstr "Użytkownicy"
 
-#: src/dialogs.ycp:304 src/dialogs.ycp:366
+#: src/dialogs.ycp:312 src/dialogs.ycp:374
 msgid "Hosts"
 msgstr "Hosty"
 
-#: src/dialogs.ycp:305
+#: src/dialogs.ycp:313
 msgid "RunAs"
 msgstr "RunAs"
 
-#: src/dialogs.ycp:306
+#: src/dialogs.ycp:314
 msgid "NOPASSWD"
 msgstr "NOPASSWD"
 
-#: src/dialogs.ycp:307 src/dialogs.ycp:386
+#: src/dialogs.ycp:315 src/dialogs.ycp:394
 msgid "Commands"
 msgstr "Polecenia"
 
-#: src/dialogs.ycp:316
+#: src/dialogs.ycp:324
 msgid "Rules for sudo"
 msgstr "Reguły sudo"
 
-#: src/dialogs.ycp:317
-msgid "User Specification"
-msgstr "Ustawienia użytkownika"
+#: src/dialogs.ycp:325
+#, fuzzy
+msgid "Rules for sudo "
+msgstr "Reguły sudo"
 
-#: src/dialogs.ycp:326 src/dialogs.ycp:346
+#: src/dialogs.ycp:334 src/dialogs.ycp:354
 msgid "Members"
 msgstr "Elementy"
 
-#: src/dialogs.ycp:336 src/dialogs.ycp:337
+#: src/dialogs.ycp:344 src/dialogs.ycp:345
 msgid "User Aliases"
 msgstr "Aliasy użytkowników"
 
-#: src/dialogs.ycp:356 src/dialogs.ycp:357
+#: src/dialogs.ycp:364 src/dialogs.ycp:365
 msgid "RunAs Aliases"
 msgstr "Aliasy 'RunAs'"
 
-#: src/dialogs.ycp:376 src/dialogs.ycp:377
+#: src/dialogs.ycp:384 src/dialogs.ycp:385
 msgid "Host Aliases"
 msgstr "Aliasy hostów"
 
-#: src/dialogs.ycp:396 src/dialogs.ycp:397
+#: src/dialogs.ycp:404 src/dialogs.ycp:405
 msgid "Command Aliases"
 msgstr "Aliasy poleceń"
 
@@ -393,10 +396,11 @@ msgstr ""
 
 #. User Specification help 1/6
 #: src/helps.ycp:61
+#, fuzzy
 msgid ""
-"<p><b><big>User Specification</big></b><br>\n"
-"\tUser specification basically determines which commands an user may run \n"
-"\ton specified hosts (optionally also as what user). Each user specification\n"
+"<p><b><big>Rules for sudo</big></b><br>\n"
+"\tRules for sudo basically determine which commands an user may run \n"
+"\ton specified hosts (optionally also as what user). Each rule\n"
 "\tis a tuple consisting of user, host and list of commands, with optional \n"
 "\tRunAs specification and additional tags. These are summarized \n"
 "\tin the following table. \n"
@@ -460,8 +464,9 @@ msgstr ""
 
 #. User Specification help 5/6
 #: src/helps.ycp:88
+#, fuzzy
 msgid ""
-"<p> To add a new specification, click on <b>Add</b> button and fill in appropriate \n"
+"<p> To add a new rule, click on <b>Add</b> button and fill in appropriate \n"
 "\tentries. User name, hostname and command list must not be empty.\n"
 "\t</p>\n"
 "\t"
@@ -473,8 +478,9 @@ msgstr ""
 
 #. User Specification help 5/6
 #: src/helps.ycp:93
+#, fuzzy
 msgid ""
-"<p>To edit existing specification, select an entry from the table and click on \n"
+"<p>To edit existing rule, select an entry from the table and click on \n"
 "\t<b>Edit</b> button. To delete selected entry, click on <b>Delete</b> button.\n"
 "\t</p> \n"
 "\t"
@@ -942,3 +948,12 @@ msgstr ""
 #: src/sudo.ycp:54
 msgid "Configuration of sudo"
 msgstr "Konfiguracja sudo"
+
+#~ msgid "New User Specification"
+#~ msgstr "Ustawienia nowego użytkownika"
+
+#~ msgid "Existing User Specification"
+#~ msgstr "Ustawienia istniejącego użytkownika"
+
+#~ msgid "User Specification"
+#~ msgstr "Ustawienia użytkownika"
