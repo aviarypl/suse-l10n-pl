@@ -9,13 +9,14 @@
 # Stanisław Małolepszy <smalolepszy@aviary.pl>, 2006.
 # Wojciech Kapusta <wojciech@aviary.pl>, 2006.
 # Wojciech Kapusta <wkapusta@aviary.pl>, 2007.
+# Karol Sikora <elektrrrus@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: network\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-04-01 10:39+0200\n"
-"PO-Revision-Date: 2007-09-07 09:30+0100\n"
-"Last-Translator: wadim dziedzic <wdziedzic@aviary.pl>\n"
+"PO-Revision-Date: 2008-04-22 20:03+0200\n"
+"Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -167,9 +168,8 @@ msgid "Network mask"
 msgstr "Maska sieci"
 
 #: src/clients/lan_auto.ycp:309
-#, fuzzy
 msgid "Configuration Error : uninitialized interface!"
-msgstr "Błąd konfiguracji: interfejs nie zainicjowany."
+msgstr "Błąd konfiguracji: interfejs nie został zainicjowany!"
 
 #. Popup text
 #: src/clients/lan_proposal.ycp:43
@@ -555,7 +555,6 @@ msgstr ""
 
 #. DSL dialog help 2/8
 #: src/dsl/dialogs.ycp:52
-#, fuzzy
 msgid ""
 "<p>First, choose your <b>PPP mode</b>. This is either\n"
 "<i>PPP over Ethernet</i> (PPPoE), <i>PPP over ATM</i> (PPPoATM),\n"
@@ -567,8 +566,9 @@ msgstr ""
 "<p>Najpierw należy wybrać <b>tryb PPP</b>. Jest to\n"
 "<i>PPP przez Ethernet</i> (PPPoE) albo <i>PPP przez ATM</i> (PPPoATM). \n"
 "Należy użyć <i>PPP przez Ethernet</i>, jeśli modem DSL jest połączony do \n"
-"komputera poprzez sieć. Jeśli nie ma pewności, jakiego trybu użyć, proszę \n"
-"zapytać dostawcę.</p>"
+"komputera poprzez sieć ethernet.\n"
+"Należy użyć <i>protokołu tunelowania PPP</i>, jeśli wymagane jest połączenie do serwera VPN\n "
+"Jeśli nie ma pewności, jakiego trybu użyć, proszę zapytać dostawcę.</p>"
 
 #. DSL dialog help 3/8
 #: src/dsl/dialogs.ycp:60
@@ -615,7 +615,7 @@ msgstr ""
 #. DSL dialog help 7/8
 #: src/dsl/dialogs.ycp:80
 msgid "<p>For PPTP, enter the server name or ip adress.</p>"
-msgstr ""
+msgstr "<p>Dla PPTP należy podać nazwę serwera lub adres ip</p>"
 
 #. DSL dialog help 8/8
 #: src/dsl/dialogs.ycp:85
@@ -676,9 +676,8 @@ msgstr "Konfiguracja kart &sieciowych"
 
 #. TextEntry label
 #: src/dsl/dialogs.ycp:179
-#, fuzzy
 msgid "&Server Name or IP Address"
-msgstr "Nazwa albo adres serwera NIS"
+msgstr "&Nazwa serwera lub adres ip"
 
 #. Popup text
 #: src/dsl/dialogs.ycp:223
@@ -692,7 +691,6 @@ msgstr "Należy skonfigurować przynajmniej jeden interfejs sieciowy."
 
 #. Popup text
 #: src/dsl/dialogs.ycp:235
-#, fuzzy
 msgid "Server IP address or domain name is invalid."
 msgstr "Adres IP serwera nazw jest nieprawidłowy."
 
@@ -769,9 +767,8 @@ msgstr ""
 
 #. RadioButton label
 #: src/installation/dialogs.ycp:135
-#, fuzzy
 msgid "&Yes, Test Connection to the Internet Via"
-msgstr "Tak, prze&testuj połączenie z Internetem"
+msgstr "Tak, prze&testuj połączenie z Internetem przez"
 
 #. RadioButton label
 #: src/installation/dialogs.ycp:138
@@ -974,7 +971,6 @@ msgstr ""
 "Szczegóły można zobaczyć w dzienniku.\n"
 
 #: src/installation/inst_do_net_test.ycp:626
-#, fuzzy
 msgid "There is no URL for release notes defined. Internet test cannot be performed."
 msgstr "Brak zdefiowanego adresu URL informacji o wydaniu. Nie można przeprowadzić testu połączenia."
 
@@ -1941,7 +1937,6 @@ msgid "No valid IP address."
 msgstr "Brak poprawnego adresu IP."
 
 #: src/lan/address.ycp:397
-#, fuzzy
 msgid "No valid netmask."
 msgstr "Brak poprawnej maski sieci."
 
@@ -2032,14 +2027,12 @@ msgid "&Configuration Name"
 msgstr "Nazwa konfigura&cji"
 
 #: src/lan/address.ycp:530
-#, fuzzy
 msgid "Bridged Devices"
-msgstr "Urządzenia modemów"
+msgstr "Urządzenia mostkowane"
 
 #: src/lan/address.ycp:540
-#, fuzzy
 msgid "Real Interface for &VLAN"
-msgstr "Interfejsy zapory sieciowej"
+msgstr "Interfejs dla &VLAN"
 
 #: src/lan/address.ycp:549
 msgid "Bond &Slaves"
@@ -2047,14 +2040,12 @@ msgstr "&Połączone urządzenia podrzędne"
 
 #. ComboBox label
 #: src/lan/address.ycp:560
-#, fuzzy
 msgid "&Bond Driver Options"
-msgstr "Opcje sterownika związanego"
+msgstr "Opcje łączenia &sterownika"
 
 #: src/lan/address.ycp:562
-#, fuzzy
 msgid "<p>Select the bond driver options, and edit it if necessary. </p>"
-msgstr "<p>Proszę wybrać opcje napędu łączonego, i poddać je edycji, w razie potrzeby.</p>"
+msgstr "<p>Proszę wybrać opcje łączenia dla sterownika, i poddać je edycji, w razie potrzeby.</p>"
 
 #: src/lan/address.ycp:572
 msgid "No IP Address (for Bonding Devices)"
@@ -2166,6 +2157,9 @@ msgid ""
 "One or more selected devices are already configured.\n"
 "To work properly configuration must be removed."
 msgstr ""
+"Jedno lub więcej z zanzaczonych urządzeń jest obecnie\n"
+"skonfigurowane. Konfiguracja musi zostać usunięta, aby działanie\n"
+"było poprawne."
 
 #. Network card name (wireless)
 #: src/lan/cards.ycp:39
@@ -2351,17 +2345,14 @@ msgid "Value of \"id\" is out of range. Use \"list\" option to check max. value 
 msgstr "Wartość \"id\" wykroczyła poza zakres. Użyj opcji \"list\" aby sprawdzić maksymalną dozwoloną wartość \"id\"."
 
 #: src/lan/cmdline.ycp:130
-#, fuzzy
 msgid "Impossible value for type!"
 msgstr "Niedopuszczalna wartość dla typu!"
 
 #: src/lan/cmdline.ycp:135 src/lan/cmdline.ycp:222
-#, fuzzy
 msgid "Impossible value for bootproto!"
 msgstr "Niedopuszczalna wartość dla bootproto!"
 
 #: src/lan/cmdline.ycp:142 src/lan/cmdline.ycp:235
-#, fuzzy
 msgid "Impossible value for startmode!"
 msgstr "Niedopuszczalna wartość dla startmode!"
 
@@ -2397,7 +2388,7 @@ msgstr ""
 "Szczegóły opisano w %1."
 
 #: src/lan/complex.ycp:135
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "The device needs a firmware to function properly. It can be installed from\n"
 "%1 Add-On CD.\n"
@@ -2518,11 +2509,12 @@ msgstr "Nazwa &hosta do wysłania"
 #.
 #. Manual network card setup help 1/4
 #: src/lan/hardware.ycp:29
-#, fuzzy
 msgid ""
 "<p>Here, set up hardware-specific options for \n"
 "your network device.</p>"
-msgstr "<p>W tym oknie można ustawic urządzenia sieciowe</p>\n"
+msgstr ""
+"<p>W tym oknie można ustawić właściwości\n"
+"sprzętowe urządzenia sieciowego</p>"
 
 #. Manual network card setup help 2/4
 #. translators: do not translated udev, MAC, BusID
@@ -2533,6 +2525,11 @@ msgid ""
 "eth1, wlan0 ) and make device name persistent upon reboot. If you don't \n"
 "know what udev and its rules is, you probably don't need to use this option"
 msgstr ""
+"<p><b>Reguły Udev</b>, są używane przez menadżer urządzeń jądra,\n"
+"umożliwiają łączenie adresu MAC lub BusId urządzenia sieciowego z jego "
+"nazwą(np. wlan0, eth1) i dostęp do urządzenia podczas startu komputera.\n"
+"Jeśli nie posiada się wiedzy na temat Udev i jego reguł, prawdopodobnie\n"
+"nie jest konieczne używanie tej opcji."
 
 #. Manual network card setup help 2/4
 #: src/lan/hardware.ycp:40
@@ -2542,10 +2539,14 @@ msgid ""
 "one from the drop-down list if more than one driver for your device is \n"
 "available. In most of the cases it is however OK to use the default value.</p>"
 msgstr ""
+"<p><b>Moduł jądra</b>. Proszę podać nazwę modułu jądra(sterownika) \n"
+"dla posiadanego urządzenia sieciowego. Jeśli urządzenie jest aktualnie \n"
+"skonfigurowane, można wybrać z listy inny sterownik, jeśli jest dostępny\n"
+"W większości przypadków można polegać na ustawieniach domyślnych\n"
+"naciskając przycisk OK.</p>"
 
 #. Manual networ card setup help 3/4
 #: src/lan/hardware.ycp:46
-#, fuzzy
 msgid ""
 "<p>Additionally, you may specify <b>options</b> for the kernel module. They should \n"
 "be written in the format <i>option</i>=<i>value</i>. Each entry should be space \n"
@@ -2655,22 +2656,20 @@ msgid "&Network Card"
 msgstr "Karta &sieciowa"
 
 #: src/lan/hardware.ycp:429
-#, fuzzy
 msgid "Rule by:"
-msgstr "Typ reguły"
+msgstr "Reguła dla:"
 
 #: src/lan/hardware.ycp:436
-#, fuzzy
 msgid "Change DeviceName"
-msgstr "&Zmień urządzenie"
+msgstr "Zmień nazwę urządzenia"
 
 #: src/lan/hardware.ycp:488
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "Configuration name %1 already exists.\n"
 "Choose a different one."
 msgstr ""
-"Nazwa konfiguracji %1 (%2) już istnieje.\n"
+"Nazwa konfiguracji %1 już istnieje.\n"
 "Proszę wybrać inną."
 
 #. S/390 dialog caption
@@ -2878,7 +2877,6 @@ msgstr ""
 "Proszę nacisnąć przycisk <b>Dodaj</b>, aby ręcznie skonfigurować nową kartę.</p>\n"
 
 #: src/lan/help.ycp:50
-#, fuzzy
 msgid ""
 "<p><b><big>Configuring or Deleting:</big></b><br>\n"
 "Choose a network card to change or remove.\n"
@@ -2890,7 +2888,6 @@ msgstr ""
 
 #. IPv6 help
 #: src/lan/help.ycp:57
-#, fuzzy
 msgid ""
 "<p><b><big>IPv6 Protocol Settings</big></b></p>\n"
 "<p>Check <b>Enable IPv6</b> to enable the ipv6 module in the kernel.\n"
@@ -2902,8 +2899,8 @@ msgstr ""
 "<p><b><big>Ustawienie protokołu IPv6</big></b></p>\n"
 "<p>Aby włączyć moduł upv6 w jądrze systemu, proszę zaznaczyć <b>Włącz IPv6</b>.\n"
 "Możliwe jest używanie IPv6 razem z IPv4. Jest to opcja domyślna.\n"
-"Aby wyłączyć IPv6, należy odznaczyć tę opcję i wyłączyć automatyczne wczytywanie modułu jądra dla ipv6.\n"
-"Gdy protokół ipv6 nie jest używany w danej sieci, czas odpowiedzi może być krótszy.</p>"
+"Aby wyłączyć IPv6, należy odznaczyć tę opcję(doda to muduł ipv6 do blacklisty).\n"
+"Gdy protokół ipv6 nie jest używany w danej sieci, czas odpowiedzi może być krótszy.\n"
 
 #: src/lan/help.ycp:65
 msgid "<p>All changes will be applied after reboot.</p>"
@@ -2932,6 +2929,10 @@ msgid ""
 "the device through which the traffic to defined network will be routed (\n"
 "\"-\" stands for any interface)."
 msgstr ""
+"Dla każdej trasy należy podać docelowy adres IP, adres bramy domyślnej\n"
+"i maskę sieciową. Aby pominąć którąś z tych wartości, należy użyć symbolu \"-\".\n"
+"Proszę wybrać także urządzenie, które będzie pośredniczyło w ruchu ze zdefiniowaną\n"
+"siecią( \"-\" aby użyć wszytskich interfejsów)."
 
 #. Routing dialog help 2/2
 #: src/lan/help.ycp:81
@@ -2939,7 +2940,6 @@ msgid "<p>Enable <b>IP Forwarding</b> if the system is a router.</p>"
 msgstr "<p>Jeśli system pracuje jako router, należy włączyć <b>Przekazywanie IP</b>.</p>"
 
 #: src/lan/help.ycp:84
-#, fuzzy
 msgid ""
 "<p>If you are using DHCP to get an IP address, check whether to get\n"
 "a hostname via DHCP. The hostname of your host (which can be seen\n"
@@ -2951,10 +2951,14 @@ msgid ""
 "</p> \n"
 msgstr ""
 "<p>Jeśli używa się DHCP aby otrzymać adres IP, należy zaznaczyć, czy\n"
-"nazwa komputera, serwery nazw i domeny przeszukiwania będą otrzymywane poprzez DHCP.W przypadku łączenia się z różnymi sieciami (z których każda może nadać inną nazwę komputera), należy odznaczyć tę opcję, aby nie powodować problemów ze środowiskiem graficznym.</p>"
+"nazwa hosta ma być również zmieniana przez DHCP. Domyślnie nazwa hosta\n"
+"(można ją sprawdzić poprzez użycie polecenia <i>hostname</i>)będzie\n"
+"otrzymywana poprzez DHCP.W przypadku łączenia się z różnymi sieciami \n"
+"(z których każda może nadać inną nazwę komputera), należy odznaczyć tę\n"
+"opcję, aby nie powodować problemów ze środowiskiem graficznym. "
+"</p> \n"
 
 #: src/lan/help.ycp:95
-#, fuzzy
 msgid ""
 "<p>If you are using DHCP to get an IP address, your hostname will be written\n"
 "to /etc/hosts and be resolvable as a 127.0.0.2 IP address.\n"
@@ -2962,9 +2966,11 @@ msgid ""
 "but your hostname will not be resolvable without an active network.\n"
 "</p> \n"
 msgstr ""
-"<p>W przypadku korzystania z DHCP do pobierania adresu IP nazwahosta zostanie zapisana do pliku /etc/hosts i będzie rozwijana jako 127.0.0.2.\n"
-"Jest to domyślne zachowanie. Aby je zmienić, należy odznaczyć tę opcję. W takim przypadku nazwa hosta nie będzie rozwijana bez połączenia sieciowego.\n"
-"</p>"
+"<p>W przypadku korzystania z DHCP do pobierania adresu IP nazwa\n"
+"hosta zostanie zapisana do pliku /etc/hosts i będzie rozwijana jako 127.0.0.2.\n"
+"Jest to domyślne zachowanie. Aby je zmienić, należy odznaczyć tę opcję.\n"
+"W takim przypadku nazwa hosta nie będzie rozwijana bez połączenia sieciowego.\n"
+"</p> \n"
 
 #: src/lan/help.ycp:103
 msgid ""
@@ -3047,7 +3053,6 @@ msgstr ""
 #. Address dialog help 1-6/8: dynamic address preferred
 #. Address dialog help 1/8
 #: src/lan/help.ycp:142
-#, fuzzy
 msgid ""
 "<p><b><big>Address Setup</big></b></p>\n"
 "<p>Select <b>No Address Setup</b> if you do not want any IP address for this device.\n"
@@ -3055,7 +3060,7 @@ msgid ""
 msgstr ""
 "<p><b><big>Ustawienia adresu</big></b></p>\n"
 "<p>Gdy dla danego urządzenia nie jest potrzebny adres IP, proszę zaznaczyć <b>Bez ustawień adresu</b>.\n"
-"Opcja przydatna jest dla urządzeń łączonych (bonding).</p>"
+"Opcja przydatna jest dla urządzeń łączonych (bonding).</p>\n"
 
 #. Address dialog help 2/8
 #: src/lan/help.ycp:148
@@ -3068,12 +3073,13 @@ msgstr ""
 
 #. Address dialog help 3/8
 #: src/lan/help.ycp:152
-#, fuzzy
 msgid ""
 "<p>You can choose one of the dynamic address assignment method. Select <b>DHCP</b>\n"
 "if you have a DHCP server running on your local network. Network addresses are then \n"
 "obtained automatically from the server.<p>\n"
-msgstr "<p>Jeśli w sieci lokalnej znajduje się działający <b>serwer DHCP</b>, można wybrać dynamiczne przypisanie adresu.</p>"
+msgstr ""
+"<p>Jeśli w sieci lokalnej znajduje się działający <b>serwer DHCP</b>,\n"
+"można wybrać dynamiczne przypisanie adresu.</p>\n"
 
 #. Address dialog help 4/8
 #: src/lan/help.ycp:158
@@ -3087,7 +3093,6 @@ msgstr ""
 "</b>. W innych przypadkach należy przypisać adresy <b>statycznie</b>.</p>"
 
 #: src/lan/help.ycp:165
-#, fuzzy
 msgid ""
 "<p>Enter the <b>IP Address</b> (e.g., 192.168.100.99)\n"
 "for your computer and the <b>Remote IP Address</b> (e.g., 192.168.100.254)\n"
@@ -3095,10 +3100,9 @@ msgid ""
 msgstr ""
 "<p>Proszę podać <b>adres IP</b> (np. 192.168.100.99) \n"
 "dla swojego komputera i <b>zdalny adres IP</b> (np. 192.168.100.254) \n"
-"komputera, z którym nawiązano połączenie.</p>"
+"komputera, z którym nawiązano połączenie.</p>\n"
 
 #: src/lan/help.ycp:172
-#, fuzzy
 msgid ""
 "<p>For <b>Static Address Setup</b> enter the static IP address (e.g., 192.168.100.99) \n"
 "for your computer and the network mask (usually 255.255.255.0). Optionally, you can enter\n"
@@ -3106,7 +3110,7 @@ msgid ""
 msgstr ""
 "<p>W przypadku <b>adresu statycznego</b> Proszę podać adres IP (np. 192.168.100.99) swojego komputera \n"
 "oraz maskę sieci (zwykle 255.255.255.0). Można także podać pełną nazwę hosta dla podanego adresu IP - \n"
-"zostanie ona zapisana w pliku <i>/etc/hosts</i>.</p>"
+"zostanie ona zapisana w pliku <i>/etc/hosts</i>.</p>\n"
 
 #. Address dialog help 8/8
 #: src/lan/help.ycp:178
@@ -3148,7 +3152,6 @@ msgid "<p><b>Mandatory Interface</b> specifies whether the network service repor
 msgstr "<p><b>Interfejs obowiązkowy</b> określa, czy usługa sieciowa będzie raportowała błąd jeśli nie uda się uruchomić tego interfejsu podczas startu systemu.</p>"
 
 #: src/lan/help.ycp:198
-#, fuzzy
 msgid ""
 "<p><b><big>Maximum Transfer Unit</big></b></p>\n"
 "<p>Maximum transfer unit (<b>MTU</b>) is the maximum size of the packet\n"
@@ -3161,12 +3164,11 @@ msgstr ""
 "<p>Maksymalna jednostka transferu (<b>MTU</b>) to największy rozmiar pakietu\n"
 " przesyłany w jednej ramce sieciowej. Zwykle nie jest potrzebne ustawianie \n"
 " MTU, ale niższe wartości MTU mogą poprawić wydajność sieci szczególnie na wolnych\n"
-"połączeniach wdzwanianych. Można wybrać jedną z proponowanych wartości lub wpisać własną.</p>"
+"połączeniach wdzwanianych. Można wybrać jedną z proponowanych wartości lub wpisać własną.</p>\n"
 
 #: src/lan/help.ycp:207
-#, fuzzy
 msgid "<p>Select the slave devices for the bond device. Only the devices whose Device Activation is set to 'Never' and have 'No Address Setup are available'.</p>"
-msgstr "<p>Proszę wybrać napędy podrzędne dla urządzenia łączonego (bonding). Dostępne są tylko napędy, których aktywacja jest ustawiona na \"Nigdy\" i \"Bez konfiguracji adresu\".</p>"
+msgstr "<p>Proszę wybrać napędy podrzędne dla urządzenia łączonego (bonding). Dostępne są tylko napędy, których aktywacja jest ustawiona na 'Nigdy' i 'Bez konfiguracji adresu'.</p>"
 
 #. DHCP dialog help 1/8
 #: src/lan/help.ycp:211
@@ -3204,7 +3206,6 @@ msgstr ""
 
 #. DHCP dialog help 4/8
 #: src/lan/help.ycp:227
-#, fuzzy
 msgid ""
 "<p>The <b>Hostname to Send</b> specifies a string used for the\n"
 "hostname option field when dhcpcd sends messages to the DHCP server. Some \n"
@@ -3225,7 +3226,7 @@ msgstr ""
 "do wysłania</b> zawierało w komunikatach DHCP od klientów określony ciąg\n"
 "znaków. Proszę pozostawić <i>AUTO</i>, aby wysyłać aktualną nazwę\n"
 "hosta (np. tę zdefiniowaną w <i>/etc/HOSTNAME</i>). Aby nie wysyłać nazwy \n"
-"hosta, należy pozostawić puste pole.</p>"
+"hosta, należy pozostawić puste pole.</p>\n"
 
 #. Aliases dialog help 1/3
 #: src/lan/help.ycp:240
@@ -3321,7 +3322,6 @@ msgstr ""
 
 #. Wireless dialog help
 #: src/lan/help.ycp:292
-#, fuzzy
 msgid ""
 "<p>In some networks, you need to set an <b>Authentication Mode</b>.\n"
 "It depends on the protection technology used, WEP or WPA. <b>WEP</b>\n"
@@ -3505,7 +3505,7 @@ msgid "Ad-Hoc"
 msgstr "Ad-hoc"
 
 #. ComboBox item
-#. Abbreviation for "The interface is Managed by NetworkManager" 
+#. Abbreviation for "The interface is Managed by NetworkManager"
 #: src/lan/wireless.ycp:244 src/routines/complex.ycp:398
 msgid "Managed"
 msgstr "Zarządzany"
@@ -4715,9 +4715,8 @@ msgstr "Wykrycie stanu bieżącego"
 
 #. Progress step 1/9
 #: src/modules/Lan.ycp:205
-#, fuzzy
 msgid "Detecting for ndiswrapper..."
-msgstr "Wykrywanie sprzętu..."
+msgstr "Wyszukiwanie ndiswrapper..."
 
 #: src/modules/Lan.ycp:212
 msgid ""
@@ -4725,12 +4724,17 @@ msgid ""
 "but kernel module wasn't modprobed.\n"
 "Should I modprobe ndiswrapper?"
 msgstr ""
+"Znaleziono konfigurację ndiswrapper-a, ale\n"
+"nie został załadowany moduł jądra. Czy wykonać\n"
+"teraz polecenie modprobe ndiswrapper?"
 
 #: src/modules/Lan.ycp:215
 msgid ""
 "ndiswrapper kernel module wasn't loaded.\n"
 "Check configuration manually."
 msgstr ""
+"Moduł jądra ndiswrapper nie został załadowany\n"
+"Proszę sprawdzić konfigurację ręcznie."
 
 #. Progress step 2/9
 #: src/modules/Lan.ycp:226
@@ -4768,7 +4772,6 @@ msgid "Detecting current status..."
 msgstr "Wykrywanie stanu bieżącego..."
 
 #: src/modules/Lan.ycp:306
-#, fuzzy
 msgid "To apply this change a reboot is needed."
 msgstr "Do wprowadzenia tej zmiany wymagane jest ponowne uruchomienie komputera."
 
@@ -4934,25 +4937,22 @@ msgid "Change."
 msgstr "Zmień"
 
 #: src/modules/LanItems.ycp:477
-#, fuzzy
 msgid "not connected"
-msgstr "(niepołączony)"
+msgstr "niepołączony"
 
 #: src/modules/LanItems.ycp:478
 msgid "no hwinfo"
-msgstr ""
+msgstr "bez hwinfo"
 
 #: src/modules/LanItems.ycp:486
-#, fuzzy
 msgid "<p>Unable to configure the network card because the kernel device is not present</p>"
 msgstr "<p>Nie można skonfigurować karty sieciowej, ponieważ urządzenie w jądrze systemu nie istnieje</p>"
 
 #: src/modules/LanItems.ycp:488
-#, fuzzy
 msgid ""
 "<UL><LI>The device is not configured</LI><LI>Press <B>Edit</B>\n"
 "to configure</LI></UL>"
-msgstr "<P><UL><LI>Urządzenie nie jest skonfigurowane</LI><LI>Proszę nacisnąć <B>Skonfiguruj</B> aby dokonać ustawień</LI></UL></P>"
+msgstr "<UL><LI>Urządzenie nie jest skonfigurowane</LI><LI>Proszę nacisnąć <B>Skonfiguruj</B>, aby dokonać ustawień</LI></UL>"
 
 #. Read dialog caption
 #: src/modules/Modem.ycp:111
@@ -5239,11 +5239,13 @@ msgstr ""
 
 #. Connection dialog help 4/9
 #: src/provider/connection.ycp:125
-#, fuzzy
 msgid ""
 "<p>When <b>Automatically Reconnect</b> is enabled, the connection will\n"
 "be automatically reestablished after failure.</p>\n"
-msgstr "<p>Jeśli włączona jest opcja <b>Automatycznie połącz ponownie</b>, to po zerwaniu połączenia automatycznie podejmowane będą próby ponownego połączenia.</p>"
+msgstr ""
+"<p>Jeśli włączona jest opcja <b>Automatycznie połącz ponownie</b>,\n"
+"to po zerwaniu połączenia automatycznie podejmowane będą próby\n"
+"ponownego połączenia.</p>\n"
 
 #. Connection dialog help 5/9
 #: src/provider/connection.ycp:130
@@ -5306,9 +5308,8 @@ msgid "I&P Details"
 msgstr "Szczegóły &IP"
 
 #: src/provider/connection.ycp:203
-#, fuzzy
 msgid "How the interface should be set up"
-msgstr "Kiedy interfejs powinien być ustawiany"
+msgstr "Jak interfejs powinien być ustawiany"
 
 #: src/provider/connection.ycp:204
 msgid "Automatically"
@@ -5846,6 +5847,8 @@ msgid ""
 "NetworkManager doesn't have ability to ask for password.\n"
 "Use KInternet (without NetworkManager) or store password on the system."
 msgstr ""
+"NetoworkManager nie może zapytać o hasło.\n"
+"Należy użyć KInternet(bez NetworkManager-a) lub zapisać hasło w systemie."
 
 #. Popup::YesNo text
 #: src/provider/provider.ycp:514
@@ -5962,7 +5965,7 @@ msgid "&Do Not Allow Remote Administration"
 msgstr "W&yłączona"
 
 #: src/remote/dialogs.ycp:51
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "<p><b><big>Remote administration settings</big></b></p>\n"
 "<p>If this feature is enabled, you can\n"
@@ -6151,7 +6154,6 @@ msgid "Bond slaves"
 msgstr "Powiązane komputery podrzędne"
 
 #: src/routines/complex.ycp:592
-#, fuzzy
 msgid "<P><UL><LI>The device is not configured</LI><LI>Press <B>Configure</B> for configuration</LI></UL></P>"
 msgstr "<P><UL><LI>Urządzenie nie jest skonfigurowane</LI><LI>Proszę nacisnąć <B>Skonfiguruj</B> aby dokonać ustawień</LI></UL></P>"
 
@@ -6290,13 +6292,11 @@ msgstr "&Usuń"
 #. CheckBox label
 #. is the interface administrable by users (as opposed to root)
 #: src/routines/widgets.ycp:46
-#, fuzzy
 msgid "E&nable Device Control for Non-root User Via KInternet"
-msgstr "&Włącz kontrolę urządzeń przez KInternet (dla zwykłych użytkowników)"
+msgstr "&Włącz kontrolę urządzeń przez KInternet dla zwykłych użytkowników"
 
 #. Details dialog help
 #: src/routines/widgets.ycp:50
-#, fuzzy
 msgid ""
 "<p><b><big>Device Control</big></b></p>\n"
 "<p>Normally only the system administrator is allowed to activate and\n"
@@ -6375,14 +6375,13 @@ msgstr ""
 
 #. help text for Device Activation
 #: src/routines/widgets.ycp:119
-#, fuzzy
 msgid ""
 "<b>Manually</b>: You control the interface manually\n"
 "via 'ifup' or 'KInternet' (See 'User Controlled' below)."
 msgstr ""
 "<br>W przypadku aktywacji <b>ręcznej</b> interfejsy można \n"
-"kontrolować przy pomocy programów ifup lub kinternet \n"
-"(zob. \"Kontrolowane przez użytkownika\" poniżej)."
+"kontrolować przy pomocy programów 'ifup' lub 'KInternet' \n"
+"(zob. 'Kontrolowane przez użytkownika' poniżej)."
 
 #. Combo box option for Device Activation
 #: src/routines/widgets.ycp:124
@@ -6427,12 +6426,14 @@ msgstr "Na NFSroot"
 
 #. help text for Device Activation
 #: src/routines/widgets.ycp:146
-#, fuzzy
 msgid ""
 "Using <b>On NFSroot</b> is nearly like 'auto'. But interfaces with this startmode will never\n"
 "be shut down via 'rcnetwork stop'. 'ifdown <iface>' still works.\n"
 "Use this when you have a nfs or iSCSI root filesystem.\n"
-msgstr "Opcja<b>Na NFSroot</b> jest podobna do  'auto', lecz interfejsy sieciowe w tym trybie nigdy nie zostaną zatrzymane poleceniem 'rcnetwork stop'. Polecenie 'ifdown <iface>' będzie jednak działało. Opcji należy użyć w przypadku montowania głównego systemu plików na nfs lub iscsi.\n"
+msgstr ""
+"Opcja<b>Na NFSroot</b> jest podobna do  'auto', lecz interfejsy sieciowe w tym trybie\n"
+"nigdy nie zostaną zatrzymane poleceniem 'rcnetwork stop'. Polecenie 'ifdown <iface>' będzie\n"
+"jednak działało. Opcji należy użyć w przypadku montowania głównego systemu plików na nfs lub iSCSI.\n"
 
 #. help text for Device Activation
 #: src/routines/widgets.ycp:155
@@ -6444,14 +6445,13 @@ msgstr "Opcja<b>Na NFSroot</b> jest podobna do  'auto', lecz interfejsy sieciowe
 
 #. Combo box label - when to activate device (e.g. on boot, manually, never,..)
 #: src/routines/widgets.ycp:167
-#, fuzzy
 msgid "Activate &device"
-msgstr "U&aktywnij wszystkie usługi"
+msgstr "U&aktywnij urządzenie"
 
 #. Device activation main help. The individual parts will be
 #. substituted as %1
 #: src/routines/widgets.ycp:171
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "<p><b><big>Device Activation</big></b></p> \n"
 "<p>Choose, when the network interface should be brought up. <b>At Boot Time</b> starts it during system boot. \n"
@@ -6774,7 +6774,6 @@ msgstr ""
 
 #. Proxy dialog help 5/8
 #: src/services/proxy.ycp:312
-#, fuzzy
 msgid ""
 "<p>With the <b>Use the Same Proxy for All Protocols</b> option checked, it is\n"
 "enough to fill in the HTTP proxy URL, which will then be used for all protocols\n"
@@ -6782,7 +6781,7 @@ msgid ""
 msgstr ""
 "<p>Po wybraniu opcji <b>Użyj jednego proxy dla wszystkich protokołów</b>,\n"
 "wystarczy podać URL proxy HTTP i zostanie on użyty przy wszystkich protokołach\n"
-"(HTTP, HTTPS i FTP)."
+"(HTTP, HTTPS i FTP).\n"
 
 #. Proxy dialog help 6/8
 #: src/services/proxy.ycp:319
@@ -6798,7 +6797,6 @@ msgstr ""
 
 #. Proxy dialog help 7/8
 #: src/services/proxy.ycp:326
-#, fuzzy
 msgid ""
 "<p>If you are using a proxy server with authorization, enter\n"
 "the <b>Proxy User Name</b> and <b>Proxy Password</b>. A valid username\n"
@@ -6929,9 +6927,8 @@ msgstr "&Maska sieci"
 
 #. ComboBox label
 #: src/services/routing.ycp:51
-#, fuzzy
 msgid "De&vice"
-msgstr "Urządzenie"
+msgstr "&Urządzenie"
 
 #. Popup::Error text
 #: src/services/routing.ycp:92
@@ -6981,419 +6978,3 @@ msgstr "Włącz przekazywanie &IP"
 msgid "Routing"
 msgstr "Routing"
 
-#~ msgid "Modem &IP Address"
-#~ msgstr "Adres &IP modemu"
-
-#~ msgid "Modem IP address is invalid."
-#~ msgstr "Adres IP modemu jest nieprawidłowy."
-
-#~ msgid "Bond &Driver Options"
-#~ msgstr "Opcje &sterownika łączenia"
-
-#~ msgid "Configure"
-#~ msgstr "SKonfiguruj"
-
-#~ msgid ""
-#~ "<p>Get a list of available network cards by pressing\n"
-#~ "<b>Select from List</b>.</p>"
-#~ msgstr ""
-#~ "<p>Listę dostępnych kart sieciowych można otrzymać naciskając\n"
-#~ "<b>Wybierz z listy</b>.</p>"
-
-#~ msgid "Matching rule"
-#~ msgstr "Reguła dopasowania"
-
-#~ msgid ""
-#~ "<p><b><big>Configuring or Deleting:</big></b><br>\n"
-#~ "Choose a network card to change or remove.\n"
-#~ "Then press <b>Configure</b> or <b>Delete</b> as desired.</p>\n"
-#~ msgstr ""
-#~ "<p><b><big>Konfugracja i usuwanie:</big></b><br>\n"
-#~ "Proszę wybrać kartę sieciową, którą należy zmienić albo usunąć.\n"
-#~ "Następnie proszę nacisnąć przycisk <b>Skonfiguruj</b> albo <b>Usuń</b>.</p>\n"
-
-#~ msgid ""
-#~ "<p>Enter <b>IP Address</b> (e.g., 192.168.100.99)\n"
-#~ "for your computer and the <b>Remote IP Address</b> (e.g., 192.168.100.254)\n"
-#~ "of your peer.</p>"
-#~ msgstr ""
-#~ "<p>Proszę podać <b>adres IP</b> (np. 192.168.100.99) \n"
-#~ "dla swojego komputera i <b>zdalny adres IP</b> (np. 192.168.100.254) \n"
-#~ "komputera, z którym nawiązano połączenie.</p>"
-
-#~ msgid "Runing SuSEconfig..."
-#~ msgstr "Uruchamianie SuSEconfig..."
-
-#~ msgid "Reading /etc/modprobe.conf..."
-#~ msgstr "Wczytywanie /etc/modprobe.conf..."
-
-#~ msgid ""
-#~ "<P><UL><LI>The device is not configured</LI><LI>Press <B>Configure</B\n"
-#~ "> to configure</LI></UL></P>"
-#~ msgstr ""
-#~ "<P><UL><LI>Urządzenie nie jest skonfigurowane</LI><LI>Proszę nacisnąć <B>Skonfiguruj</B\n"
-#~ "> aby dokonać ustawień</LI></UL></P>"
-
-#~ msgid "ARCnet Network Card"
-#~ msgstr "Karta sieciowa ARCnet"
-
-#~ msgid "Asynchronous Transfer Mode (ATM)"
-#~ msgstr "Asynchronous Transfer Mode (ATM)"
-
-#~ msgid "Bluetooth Connection"
-#~ msgstr "Połączenie Bluetooth"
-
-#~ msgid "Common Link Access for Workstation (CLAW)"
-#~ msgstr "Common Link Access for Workstation (CLAW)"
-
-#~ msgid "Channel to Channel Interface (CTC)"
-#~ msgstr "Interfejs Channel to Channel CTC)"
-
-#~ msgid "Dummy Network Device"
-#~ msgstr "Dummy Network Device"
-
-#~ msgid "Enterprise System Connector (ESCON)"
-#~ msgstr "Enterprise System Connector (ESCON)"
-
-#~ msgid "Ethernet Network Card"
-#~ msgstr "Karta sieciowa Ethernet"
-
-#~ msgid "FDDI Network Card"
-#~ msgstr "Karta sieciowa FDDI"
-
-#~ msgid "Fiberchannel System Connector (FICON)"
-#~ msgstr "Fiberchannel System Connector (FICON)"
-
-#~ msgid "HIgh Performance Parallel Interface (HIPPI)"
-#~ msgstr "Interfejs HIgh Performance Parallel (HIPPI)"
-
-#~ msgid "Hipersockets Interface (HSI)"
-#~ msgstr "Interfejs Hipersockets (HSI)"
-
-#~ msgid "ISDN Connection"
-#~ msgstr "Połączenie ISDN"
-
-#~ msgid "Infrared Network Device"
-#~ msgstr "Urządzenie do łączności sieciowej w podczerwieni"
-
-#~ msgid "Infrared Device"
-#~ msgstr "Urządzenie do łączności w podczerwieni"
-
-#~ msgid "OSA LCS Network Card"
-#~ msgstr "Karta sieciowa OSA LCS"
-
-#~ msgid "Loopback Device"
-#~ msgstr "Urządzenie Loopback"
-
-#~ msgid "Myrinet Network Card"
-#~ msgstr "Karta sieciowa Myrinet"
-
-#~ msgid "Parallel Line Connection"
-#~ msgstr "Połączenie łączem równoległym"
-
-#~ msgid "OSA-Express or QDIO Device (QETH)"
-#~ msgstr "Urządzenie OSA-Express lub QDIO (QETH)"
-
-#~ msgid "IPv6-in-IPv4 Encapsulation Device"
-#~ msgstr "Urządzenie do enkapsulacji IPv6-in-IPv4"
-
-#~ msgid "Serial Line Connection"
-#~ msgstr "Połączenie łączem szeregowym"
-
-#~ msgid "Token Ring Network Card"
-#~ msgstr "Karta sieciowa Token Ring"
-
-#~ msgid "VMWare Network Device"
-#~ msgstr "Urządzenie sieciowe VMWare"
-
-#~ msgid "Wireless Network Card"
-#~ msgstr "Bezprzewodowa karta sieciowa"
-
-#~ msgid "XP Network"
-#~ msgstr "Sieć XP"
-
-#~ msgid "Bond Network"
-#~ msgstr "Sieć powiązana"
-
-#~ msgid "ARCnet"
-#~ msgstr "ARCnet"
-
-#~ msgid "ATM"
-#~ msgstr "ATM"
-
-#~ msgid "Bluetooth"
-#~ msgstr "Bluetooth"
-
-#~ msgid "Bond"
-#~ msgstr "Łączone"
-
-#~ msgid "CLAW"
-#~ msgstr "CLAW"
-
-#~ msgid "ISDN"
-#~ msgstr "ISDN"
-
-#~ msgid "CTC"
-#~ msgstr "CTC"
-
-#~ msgid "DSL"
-#~ msgstr "DSL"
-
-#~ msgid "Dummy"
-#~ msgstr "Dummy"
-
-#~ msgid "ESCON"
-#~ msgstr "ESCON"
-
-#~ msgid "Ethernet"
-#~ msgstr "Ethernet"
-
-#~ msgid "FDDI"
-#~ msgstr "FDDI"
-
-#~ msgid "FICON"
-#~ msgstr "FICON"
-
-#~ msgid "HIPPI"
-#~ msgstr "HIPPI"
-
-#~ msgid "Hipersockets"
-#~ msgstr "Hipersockets"
-
-#~ msgid "IrDA"
-#~ msgstr "IrDA"
-
-#~ msgid "IUCV"
-#~ msgstr "IUCV"
-
-#~ msgid "OSA LCS"
-#~ msgstr "OSA LCS"
-
-#~ msgid "Loopback"
-#~ msgstr "Loopback"
-
-#~ msgid "Myrinet"
-#~ msgstr "Myrinet"
-
-#~ msgid "Parallel Line"
-#~ msgstr "Łącze równoległe"
-
-#~ msgid "QETH"
-#~ msgstr "QETH"
-
-#~ msgid "IPv6-in-IPv4"
-#~ msgstr "IPv6-in-IPv4"
-
-#~ msgid "Serial Line"
-#~ msgstr "Łącze szeregowe"
-
-#~ msgid "Token Ring"
-#~ msgstr "Token Ring"
-
-#~ msgid "USB"
-#~ msgstr "USB"
-
-#~ msgid "VMWare"
-#~ msgstr "VMWare"
-
-#~ msgid "Wireless"
-#~ msgstr "Bezprzewodowe"
-
-#~ msgid "XPNET"
-#~ msgstr "XPNET"
-
-#~ msgid "De&vice (optional)"
-#~ msgstr "Urzą&dzenie (opcjonalne)"
-
-#~ msgid "E&xpert Configuration"
-#~ msgstr "Konfiguracja &zaawansowana"
-
-#~ msgid "&Change /etc/resolv.conf modified by another process"
-#~ msgstr "&Zmień plik /etc/resolv.conf zmodyfikowany przez inny proces"
-
-#~ msgid ""
-#~ "The device does not have a driver module.\n"
-#~ "The driver may be built in the kernel."
-#~ msgstr ""
-#~ "Urządzenie nie ma modułu sterownika.\n"
-#~ "Sterownik może być wkompilowany w jądro."
-
-#~ msgid "Couldn't add interface"
-#~ msgstr "Dodanie interfejsu nie powiodło się"
-
-#~ msgid "Changing Configuration for"
-#~ msgstr "Zmiana konfiguracji dla"
-
-#~ msgid ""
-#~ "<p>Here, set up your networking device.\n"
-#~ "The values are written to <i>/etc/sysconfig/hardware/hwcfg-*</i>.</p>\n"
-#~ msgstr ""
-#~ "<p>Tutaj można skonfigurować urządzenie sieciowe.\n"
-#~ "Wartości zostaną zapisane do pliku <i>/etc/sysconfig/hardware/hwcfg-*</i>.</p>\n"
-
-#~ msgid "&Hardware Configuration Name"
-#~ msgstr "Nazwa konfiguracji s&przętu"
-
-#~ msgid "Hardware Name"
-#~ msgstr "Nazwa sprzętowa"
-
-#~ msgid "Select from &List"
-#~ msgstr "Wybierz z &listy"
-
-#~ msgid ""
-#~ "Hardware configuration %1 already exists.\n"
-#~ "Choose a different one."
-#~ msgstr ""
-#~ "Konfiguracja sprzętu %1 już istnieje.\n"
-#~ "Proszę wybrać inną."
-
-#~ msgid "Open"
-#~ msgstr "Otwarty"
-
-#, fuzzy
-#~ msgid "Binding &Characteristic"
-#~ msgstr "&Charakterystyka powiązań"
-
-#~ msgid "<p>FIXME better help! Which hardware to bind to</p>"
-#~ msgstr "<p>Powiązane urządzenia</p>"
-
-#~ msgid "MAC Address: %1"
-#~ msgstr "Adres MAC: %1"
-
-#~ msgid "Bus Path: %1"
-#~ msgstr "Ścieżka magistrali: %1"
-
-#~ msgid "Product ID: %1"
-#~ msgstr "Identyfikator (ID) produktu: %1"
-
-#~ msgid "Product Sub-ID: %1"
-#~ msgstr "Podidentyfikator (Sub-ID) produktu: %1"
-
-#~ msgid "Configuration Name"
-#~ msgstr "Nazwa konfiguracji"
-
-#~ msgid ""
-#~ "&Yes, Test Connection to the Internet\n"
-#~ "via %1 - %2 (%3)"
-#~ msgstr ""
-#~ "Tak, &testuj połączenie z Internetem\n"
-#~ "poprzez %1 - %2 (%3)"
-
-#~ msgid "<p>Clicking <b>Next</b> completes the configuration.</p>"
-#~ msgstr "<p>Naciśnięcie <b>Dalej</b> kończy konfigurację.</p>"
-
-#, fuzzy
-#~ msgid "No Address Setup"
-#~ msgstr "Brak konfiguracji adresu sieciowego"
-
-#~ msgid "&Without an address"
-#~ msgstr "&Bez adresu"
-
-#~ msgid "without an IPv4 address, this is useful when the interface is used for pppoe"
-#~ msgstr "Bez adresu IPv4 - tryb ten jest przydatny, gdy interfejs jest używany przez pppoe"
-
-#~ msgid "<p><b>Default Gateway</b> TODO: the original help is bad</p>"
-#~ msgstr ""
-#~ "<p><b>Brama domyślna</b> ustawia tablicę routingu klienta z tą\n"
-#~ "wartością, jako z bramą domyślną.</p>"
-
-#~ msgid "Addi&tional Addresses"
-#~ msgstr "Doda&tkowe adresy"
-
-#~ msgid "H&ardware Details"
-#~ msgstr "Szcze&góły dotyczące sprzętu"
-
-#~ msgid "&DNS"
-#~ msgstr "&DNS"
-
-#~ msgid "Network &Configuration"
-#~ msgstr "Konfigura&cja sieci"
-
-#~ msgid "Device Type:"
-#~ msgstr "Typ urządzenia:"
-
-#~ msgid ""
-#~ "You changed the default device number.\n"
-#~ "\n"
-#~ "This possibility is only intended for systems with built-in network cards\n"
-#~ "or cards with multiple interfaces. If you do not have such network card,\n"
-#~ "this would probably result in a nonfunctional network configuration.\n"
-#~ "\n"
-#~ "Really continue?\n"
-#~ msgstr ""
-#~ "Zmieniono domyślny numer urządzenia.\n"
-#~ "\n"
-#~ "Ta możliwość jest przeznaczona wyłącznie dla systemów z wbudowaną\n"
-#~ "kartą sieciową albo dla kart z wieloma interfejsami. Jeśli nie ma takiej\n"
-#~ "karty sieciowej, doprowadzi to prawdopodobnie do niedziałającej \n"
-#~ "konfiguracji sieci.\n"
-#~ "\n"
-#~ "Czy naprawdę kontynuować?\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "<p><b><big>Address Setup</big></b></p>\n"
-#~ "<p>You can select dynamic address assignment\n"
-#~ "if you have a <b>DHCP server</b> running on your local network.</p>\n"
-#~ msgstr ""
-#~ "<p><b><big>Konfiguracja adresu sieciowego</big></b></p>\n"
-#~ "<p>Jeśli w sieci lokalnej znajduje się działający <b>serwer DHCP</b>, \n"
-#~ "można wybrać dynamiczne przypisanie adresu.</p>\n"
-
-#~ msgid ""
-#~ "<p>Network addresses are then obtained\n"
-#~ "<b>automatically</b> from the server.</p>\n"
-#~ msgstr ""
-#~ "<p>Adres sieciowy zostanie uzyskany \n"
-#~ "<b>automatycznie</b> z serwera.</p>\n"
-
-#~ msgid "<p>Otherwise, network addresses must be assigned <b>manually</b>.</p>"
-#~ msgstr "<p>W przeciwnym razie adresy sieciowe muszą być przypisane <b>ręcznie</b>.</p>"
-
-#, fuzzy
-#~ msgid ""
-#~ "<p><b><big>Maximum Transfer Unit</big></b></p>\n"
-#~ "<p>You can set the maximum transfer unit (<b>MTU</b>) of an interface.</p>"
-#~ msgstr ""
-#~ "<p><b><big>Maksymalna wielkość jednostki transmisyjnej</big></b></p>\n"
-#~ "<p>Można określić maksymalną wielkość jednostki transmisyjnej (<b>MTU</b>) interfejsu.</p>"
-
-#~ msgid ""
-#~ "This setting is not available\n"
-#~ "because NetworkManager does not support it."
-#~ msgstr ""
-#~ "Ta funkcja nie jest dostępna, ponieważ nie jest\n"
-#~ "obsługiwana przez program NetworkManager."
-
-#~ msgid ""
-#~ "For the settings to take effect, the display manager\n"
-#~ "must be restarted. Because this terminates all X Window System\n"
-#~ "sessions, do it manually from the console with\n"
-#~ "\"%1\".\n"
-#~ "Note that restarting the X server alone is not enough."
-#~ msgstr ""
-#~ "Aby ustawienia te przyniosły efekt, konieczne jest ponowne uruchomienie\n"
-#~ "menedżera wyświetlania. Ponieważ powoduje to zamknięcie wszystkich\n"
-#~ "sesji systemu X Window, proszę wykonać to ręcznie z konsoli, używając\n"
-#~ "\"%1\".\n"
-#~ "Proszę zauważyć, że ponowne uruchomienie samego serwera X nie wystarczy."
-
-#~ msgid "S&tupid Mode"
-#~ msgstr "&Tryb bezmyślny"
-
-#~ msgid "Other (not detected)"
-#~ msgstr "Inne (nie wykryte)"
-
-#~ msgid ""
-#~ "Applications that support it, such as YaST2 Online Update,\n"
-#~ "use them immediately. Other applications use them after a new login\n"
-#~ "(lynx, wget). Some applications do not support these settings at all --\n"
-#~ "they use their own settings system.\n"
-#~ msgstr ""
-#~ "Aplikacje, które obsługują te ustawienia, takie jak YaST2 Online Update,\n"
-#~ "będą używały ich natychmiast. Inne aplikacje będą ich używały po\n"
-#~ "ponownym zalogowaniu (lynx, wget). Niektóre aplikacje, takie jak Mozilla,\n"
-#~ "wcale ich nie obsługują - używają własnego systemu ustawień.\n"
-
-#~ msgid "<p>Here, configure your Internet proxy (caching) settings.</p>"
-#~ msgstr "<p>W tym miejscu można skonfigurować ustawienia proxy (buforowania) internetowego.</p>"
