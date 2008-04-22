@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firewall\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-01 10:46+0200\n"
+"POT-Creation-Date: 2008-04-21 10:38+0200\n"
 "PO-Revision-Date: 2008-04-04 15:33+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -101,6 +101,7 @@ msgstr "Specjalne wyrażenie zapory sieciowej"
 #. TRANSLATORS: CommandLine table header item
 #: src/SuSEFirewallCMDLine.ycp:202 src/SuSEFirewallCMDLine.ycp:546
 #: src/SuSEFirewallCMDLine.ycp:582 src/SuSEFirewallCMDLine.ycp:617
+#: src/subdialogs.ycp:787
 msgid "Zone"
 msgstr "Strefa"
 
@@ -170,7 +171,7 @@ msgstr "Wartość"
 
 #. TRANSLATORS: part of dialog caption
 #. TRANSLATORS: tree menu item
-#: src/SuSEFirewallCMDLine.ycp:285 src/dialogs.ycp:234 src/dialogs.ycp:236
+#: src/SuSEFirewallCMDLine.ycp:285 src/dialogs.ycp:243 src/dialogs.ycp:245
 #: src/subdialogs.ycp:718
 msgid "Logging Level"
 msgstr "Poziom zapisu w dzienniku"
@@ -304,7 +305,7 @@ msgstr "Wszystkie porty"
 #. TRANSLATORS: CommandLine table header item
 #. TRANSLATORS: table header item
 #: src/SuSEFirewallCMDLine.ycp:584 src/SuSEFirewallCMDLine.ycp:781
-#: src/subdialogs.ycp:278 src/subdialogs.ycp:417 src/subdialogs.ycp:902
+#: src/subdialogs.ycp:278 src/subdialogs.ycp:417 src/subdialogs.ycp:923
 msgid "Protocol"
 msgstr "Protokół"
 
@@ -354,7 +355,7 @@ msgstr "Przekierowuj żądania do maskowanego IP:"
 #. TRANSLATORS: CommandLine table header item
 #. TRANSLATORS: table header item
 #: src/SuSEFirewallCMDLine.ycp:779 src/subdialogs.ycp:276
-#: src/subdialogs.ycp:415 src/subdialogs.ycp:901
+#: src/subdialogs.ycp:415 src/subdialogs.ycp:922
 msgid "Source Network"
 msgstr "Sieć źródłowa"
 
@@ -704,61 +705,67 @@ msgid "Save Settings and Restart Firewall Now"
 msgstr "Zapisz ustawienia i uruchom zaporę ponownie"
 
 #. TRANSLATORS: Part of dialog caption
-#: src/dialogs.ycp:153
+#: src/dialogs.ycp:160
 msgid "Firewall Configuration"
 msgstr "Konfiguracja zapory sieciowej"
 
 #. TRANSLATORS: part of dialog caption
 #. TRANSLATORS: tree menu item
-#: src/dialogs.ycp:166 src/dialogs.ycp:168
+#: src/dialogs.ycp:173 src/dialogs.ycp:175
 msgid "Start-Up"
 msgstr "Uruchamianie"
 
 #. TRANSLATORS: part of dialog caption
 #. TRANSLATORS: tree menu item
 #. TRANSLATORS: Summary item label
-#: src/dialogs.ycp:177 src/dialogs.ycp:179 src/summary.ycp:106
+#: src/dialogs.ycp:184 src/dialogs.ycp:186 src/summary.ycp:106
 #: src/summary.ycp:109
 msgid "Interfaces"
 msgstr "Interfejsy"
 
 #. TRANSLATORS: part of dialog caption
 #. TRANSLATORS: tree menu item
-#: src/dialogs.ycp:188 src/dialogs.ycp:190
+#: src/dialogs.ycp:195 src/dialogs.ycp:197
 msgid "Allowed Services"
 msgstr "Dozwolone usługi"
 
 #. TRANSLATORS: part of dialog caption
-#: src/dialogs.ycp:201
+#: src/dialogs.ycp:208
 msgid "Network Masquerading"
 msgstr "Translacja adresów"
 
 #. TRANSLATORS: tree menu item
 #. TRANSLATORS: frame label
-#: src/dialogs.ycp:203 src/subdialogs.ycp:171
+#: src/dialogs.ycp:210 src/subdialogs.ycp:171
 msgid "Masquerading"
 msgstr "Translacja adresów"
 
 #. TRANSLATORS: part of dialog caption
 #. TRANSLATORS: tree menu item
-#: src/dialogs.ycp:212 src/dialogs.ycp:214
+#: src/dialogs.ycp:221 src/dialogs.ycp:223
 msgid "Broadcast"
 msgstr "Rozgłaszanie"
 
 #. TRANSLATORS: part of dialog caption
 #. TRANSLATORS: tree menu item
-#: src/dialogs.ycp:223 src/dialogs.ycp:225 src/subdialogs.ycp:831
+#: src/dialogs.ycp:232 src/dialogs.ycp:234 src/subdialogs.ycp:852
 msgid "IPsec Support"
 msgstr "Obsługa IPsec"
 
 #. TRANSLATORS: part of dialog caption
 #. TRANSLATORS: tree menu item
-#: src/dialogs.ycp:244 src/dialogs.ycp:246
+#. Example:
+#. All requests from network 80.44.11.0/24 to UDP port 53 originating on port 53
+#. $[ "network" : "80.44.11.0/24", "protocol" : "udp", "dport" : "53",  "sport" : "53" ]
+#.
+#. Possible keys for parameters are "network", "protocol", "dport" and "sport".
+#. Mandatory are "network" and "protocol".
+#: src/dialogs.ycp:253 src/dialogs.ycp:255 src/summary.ycp:273
 msgid "Custom Rules"
 msgstr "Własne zasady"
 
 #. TRANSLATORS: part of dialog caption
-#: src/dialogs.ycp:277
+#: src/dialogs.ycp:286
 msgid "Summary"
 msgstr "Podsumowanie"
 
@@ -1077,8 +1084,9 @@ msgstr ""
 #. TRANSLATORS: Additional Services dialog help 5/6
 #. please, do not modify examples
 #: src/helps.ycp:173
+#, fuzzy
 msgid ""
-"<p>The <b>Port Range</b> consists of two comma-seperated numbers that represent\n"
+"<p>The <b>Port Range</b> consists of two colon-separated numbers that represent\n"
 "all numbers inside the range including the numbers themselves.\n"
 "The first port number must be lower than the second one,\n"
 "for example, <tt>200:215</tt>.</p>"
@@ -1230,7 +1238,7 @@ msgstr "D&ozwolone usługi w wybranej strefie"
 #. items handled by replacepoint
 #. TRANSLATORS: combo box
 #. TRANSLATORS: select box
-#: src/subdialogs.ycp:226 src/uifunctions.ycp:699
+#: src/subdialogs.ycp:226 src/uifunctions.ycp:700
 msgid "&Service to Allow"
 msgstr "&Usługa, którą należy zezwolić"
 
@@ -1255,12 +1263,12 @@ msgid "Expert Rules Services for Selected Zone"
 msgstr "Zaawansowane reguły dla wybranej strefy"
 
 #. TRANSLATORS: table header item
-#: src/subdialogs.ycp:280 src/subdialogs.ycp:903
+#: src/subdialogs.ycp:280 src/subdialogs.ycp:924
 msgid "Destination Port"
 msgstr "Port docelowy"
 
 #. TRANSLATORS: table header item
-#: src/subdialogs.ycp:282 src/subdialogs.ycp:904
+#: src/subdialogs.ycp:282 src/subdialogs.ycp:925
 msgid "Source Port"
 msgstr "Port źródłowy"
 
@@ -1321,7 +1329,7 @@ msgid "Re&quested IP"
 msgstr "Żą&dany IP"
 
 #. TRANSLATORS: select box
-#: src/subdialogs.ycp:459 src/subdialogs.ycp:925
+#: src/subdialogs.ycp:459 src/subdialogs.ycp:946 src/uifunctions.ycp:1500
 msgid "&Protocol"
 msgstr "&Protokół"
 
@@ -1374,89 +1382,111 @@ msgstr "Rejestruj wszystkie &nieakceptowane pakiety"
 msgid "Broadcast Configuration"
 msgstr "Konfiguracja rozgłaszania"
 
+#: src/subdialogs.ycp:783
+msgid "Accepting the Broadcast Reply"
+msgstr ""
+
+#: src/subdialogs.ycp:788
+#, fuzzy
+msgid "Service"
+msgstr "Identyfikator usługi"
+
+#: src/subdialogs.ycp:789
+msgid "Accepted from Network"
+msgstr ""
+
+#: src/subdialogs.ycp:794
+#, fuzzy
+msgid "&Add..."
+msgstr "Z&aawansowane..."
+
+#: src/subdialogs.ycp:795
+msgid "&Delete"
+msgstr ""
+
 #. TRANSLATORS: check box
-#: src/subdialogs.ycp:834
+#: src/subdialogs.ycp:855
 msgid "&Enabled"
 msgstr "&Włączona"
 
 #. TRANSLATORS: push button
-#: src/subdialogs.ycp:837
+#: src/subdialogs.ycp:858
 msgid "&Details..."
 msgstr "&Szczegóły..."
 
 #. TRANSLATORS: select box item, trust IPsec packet the same as the origin of the packet
-#: src/subdialogs.ycp:847
+#: src/subdialogs.ycp:868
 msgid "Same Zone as Original Source Network"
 msgstr "Ta sama strefa, jak w oryginalnej sieci źródłowej"
 
 #. TRANSLATORS: frame label
-#: src/subdialogs.ycp:851
+#: src/subdialogs.ycp:872
 msgid "IPsec Zone"
 msgstr "Strefa IPsec"
 
 #. TRANSLATORS: select box
-#: src/subdialogs.ycp:857
+#: src/subdialogs.ycp:878
 msgid "&Trust IPsec As"
 msgstr "&Ufaj IPsec jako"
 
-#: src/subdialogs.ycp:889
+#: src/subdialogs.ycp:910
 msgid "Custom Allowed Rules"
 msgstr "Własne reguły zezwalania"
 
 #. TRANSLATORS: combo box
-#: src/subdialogs.ycp:893
+#: src/subdialogs.ycp:914
 msgid "Firewall &Zone"
 msgstr "Strefa &zapory sieciowej"
 
-#: src/subdialogs.ycp:922
+#: src/subdialogs.ycp:943
 msgid "Add New Allowing Rule"
 msgstr "Dodaj nową zasadę"
 
-#: src/subdialogs.ycp:924
+#: src/subdialogs.ycp:945
 msgid "Source &Network"
 msgstr "&Sieć źródłowa"
 
-#: src/subdialogs.ycp:930
+#: src/subdialogs.ycp:951
 msgid "&Destination Port (Optional)"
 msgstr "Port &docelowy (opcjonalnie)"
 
 # Novell Translation
-#: src/subdialogs.ycp:931
+#: src/subdialogs.ycp:952
 msgid "&Source Port (Optional)"
 msgstr "P&ort źródłowy (opcjonalnie)"
 
 #. TRANSLATORS: informative label in dialog
-#: src/subdialogs.ycp:952
+#: src/subdialogs.ycp:973
 msgid "Creating summary..."
 msgstr "Tworzenie podsumowania..."
 
 #. TRANSLATORS: check box in summary dialog
-#: src/subdialogs.ycp:955
+#: src/subdialogs.ycp:976
 msgid "&Show Details"
 msgstr "Pokaż &szczegóły"
 
 #. TRANSLATORS: Summary item label
-#: src/summary.ycp:30
+#: src/summary.ycp:31
 msgid "TCP Ports"
 msgstr "Porty TCP"
 
 #. TRANSLATORS: Summary item label
-#: src/summary.ycp:32
+#: src/summary.ycp:33
 msgid "UDP Ports"
 msgstr "Porty UDP"
 
 #. TRANSLATORS: Summary item label
-#: src/summary.ycp:34
+#: src/summary.ycp:35
 msgid "RPC Services"
 msgstr "Usługi RPC"
 
 #. TRANSLATORS: Summary item label
-#: src/summary.ycp:36
+#: src/summary.ycp:37
 msgid "IP Protocols"
 msgstr "Protokoły IP"
 
 #. TRANSLATORS: Summary item label
-#: src/summary.ycp:38
+#: src/summary.ycp:39
 msgid "Broadcast Ports"
 msgstr "Porty rozgłoszeniowe"
 
@@ -1500,54 +1530,70 @@ msgstr "Strefa wewnętrzna nie jest chroniona. Wszystkie porty są otwarte."
 msgid "Zone has no open ports."
 msgstr "Strefa nie ma otwartych portów."
 
+#: src/summary.ycp:278
+#, ycp-format
+msgid "%1 custom rules are defined"
+msgstr ""
+
+#: src/summary.ycp:283
+#, ycp-format
+msgid "Network: <i>%1</i>, Protocol: <i>%2</i>, Destination port: <i>%3</i>, Source port: <i>%4</i>"
+msgstr ""
+
+#: src/summary.ycp:284 src/summary.ycp:285 src/summary.ycp:286
+#: src/summary.ycp:287
+#, fuzzy
+msgid "All"
+msgstr "Rejestruj wszystko"
+
 #. TRANSLATORS: CommandLine Summary header
 #. TRANSLATORS: UI Summary header
-#: src/summary.ycp:266 src/summary.ycp:269
+#: src/summary.ycp:311 src/summary.ycp:314
 msgid "Firewall Starting"
 msgstr "Uruchamianie zapory sieciowej"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:277
+#: src/summary.ycp:322
 msgid "<b>Enable</b> firewall automatic starting"
 msgstr "<b>Włącz</b> automatyczne uruchamianie zapory"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:280
+#: src/summary.ycp:325
 msgid "<b>Disable</b> firewall automatic starting"
 msgstr "<b>Wyłącz</b> automatyczne uruchamianie zapory"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:288
+#: src/summary.ycp:333
 msgid "Firewall starts after the configuration gets written"
 msgstr "Zapora sieciowa zostanie włączona po zapisaniu konfiguracji"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:292
+#: src/summary.ycp:337
 msgid "Firewall <b>starts</b> after the configuration gets written"
 msgstr "Zapora sieciowa zostanie <b>włączona</b> po zapisaniu konfiguracji"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:298
+#: src/summary.ycp:343
 msgid "Firewall <b>will be stopped</b> after the configuration is written"
 msgstr "Zapora sieciowa zostanie <b>wyłączona</b> po zapisaniu konfiguracji"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:302
+#: src/summary.ycp:347
 msgid "Firewall will not start after the configuration is written"
 msgstr "Zapora sieciowa nie zostanie włączona po zapisaniu konfiguracji"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:314 src/summary.ycp:317
+#: src/summary.ycp:359 src/summary.ycp:362
 msgid "Unassigned Interfaces"
 msgstr "Nieprzypisane interfejsy"
 
 #. TRANSLATORS: Warning plain text in summary
-#: src/summary.ycp:334
+#: src/summary.ycp:379
 msgid "No network traffic is permitted through these interfaces."
 msgstr "Przez te interfejsy nie jest dozwolony żaden ruch sieciowy."
 
 #. TRANSLATORS: error message, %1 represents the erroneous network definition
-#: src/uifunctions.ycp:94
+#: src/uifunctions.ycp:95
 #, ycp-format
 msgid ""
 "Invalid network definition '%1'.\n"
@@ -1566,60 +1612,60 @@ msgstr ""
 "192.168.0.0/255.255.255.0\n"
 "lub 0/0"
 
-#: src/uifunctions.ycp:143
+#: src/uifunctions.ycp:144
 msgid "Starting firewall..."
 msgstr "Uruchamianie zapory sieciowej..."
 
-#: src/uifunctions.ycp:156
+#: src/uifunctions.ycp:157
 msgid "Stopping firewall..."
 msgstr "Zatrzymywanie zapory sieciowej..."
 
 #. TRANSLATORS: table item, connected with firewall zone of interface
-#: src/uifunctions.ycp:196
+#: src/uifunctions.ycp:197
 msgid "No zone assigned"
 msgstr "Nie przypisano żadnej strefy"
 
 #. TRANSLATORS: table item, "User defined string" instead of Device_name
-#: src/uifunctions.ycp:218
+#: src/uifunctions.ycp:219
 msgid "Custom string"
 msgstr "Wyrażenie niestandardowe"
 
 #. interface could be unassigned
 #. TRANSLATORAS: selection box item, connected with firewall zone of interface
-#: src/uifunctions.ycp:264
+#: src/uifunctions.ycp:265
 msgid "No Zone Assigned"
 msgstr "Nie przypisano żadnej strefy"
 
 #. TRANSLATORS: error message, %1 stands for the port number
-#: src/uifunctions.ycp:423
+#: src/uifunctions.ycp:424
 #, ycp-format
 msgid "Port number %1 is invalid."
 msgstr "Port nr %1 jest nieprawidłowy."
 
-#: src/uifunctions.ycp:428
+#: src/uifunctions.ycp:429
 #, ycp-format
 msgid "Port number %1 in definition %2 is invalid."
 msgstr "Port nr %1 w definicji %2 jest nieprawidłowy."
 
 #. TRANSLATORS: popup headline
-#: src/uifunctions.ycp:435
+#: src/uifunctions.ycp:436
 msgid "Invalid Port Definition"
 msgstr "Nieprawidłowa definicja portu"
 
 #. TRANSLATORS: popup message, %1 stands for the maximal port number
 #. that is possible to use in port-range
-#: src/uifunctions.ycp:439
+#: src/uifunctions.ycp:440
 #, ycp-format
 msgid "The port number must be in the interval from 1 to %1 (inclusive)."
 msgstr "Numer portu musi być liczbą z przedziału od 1 do %1 (włącznie)."
 
 #. TRANSLATORS: popup headline
-#: src/uifunctions.ycp:502
+#: src/uifunctions.ycp:503
 msgid "Invalid Port Range Definition"
 msgstr "Nieprawidłowa definicja zakresu portów"
 
 #. TRANSLATORS: popup message, %1 is a port-range defined by user
-#: src/uifunctions.ycp:504
+#: src/uifunctions.ycp:505
 #, ycp-format
 msgid ""
 "Port range %1 is invalid.\n"
@@ -1631,12 +1677,12 @@ msgstr ""
 "maks_nr_portu musi być większy od min_nr_portu."
 
 #. TRANSLATORS: popup headline
-#: src/uifunctions.ycp:518
+#: src/uifunctions.ycp:519
 msgid "Unknown Port Name"
 msgstr "Nieznana nazwa portu"
 
 #. TRANSLATORS: popup message, %1 is a port-name
-#: src/uifunctions.ycp:521
+#: src/uifunctions.ycp:522
 #, ycp-format
 msgid ""
 "Port name %1 is unknown in your current system.\n"
@@ -1648,12 +1694,12 @@ msgstr ""
 "Czy na pewno użyć tego portu?\n"
 
 #. TRANSLATORS: popup headline
-#: src/uifunctions.ycp:552
+#: src/uifunctions.ycp:553
 msgid "Invalid Additional Service Definition"
 msgstr "Nieprawidłowa definicja usług dodatkowych"
 
 #. TRANSLATORS: popup message, %1 stands for the wrong settings (might be quite long)
-#: src/uifunctions.ycp:554
+#: src/uifunctions.ycp:555
 #, ycp-format
 msgid ""
 "It appears that the additional service settings\n"
@@ -1670,22 +1716,22 @@ msgstr ""
 
 #. (!IsThisExpertConfiguration() ?
 #. TRANSLATORS: informative label
-#: src/uifunctions.ycp:835
+#: src/uifunctions.ycp:836
 msgid "Masquerading needs at least one external interface and one other interface."
 msgstr "Translacja adresów wymaga co najmniej jednego interfejsu zewnętrznego i wewnętrznego."
 
 #. TRANSLATORS: popup message
-#: src/uifunctions.ycp:849
+#: src/uifunctions.ycp:850
 msgid "This entry must be completed."
 msgstr "Proszę uzupełnić ten wpis."
 
 #. TRANSLATORS: popup message, right port definition is two lines below this message
-#: src/uifunctions.ycp:866
+#: src/uifunctions.ycp:867
 msgid "Wrong port definition."
 msgstr "Niewłaściwa definicja portu."
 
 #. TRANSLATORS: popup error message
-#: src/uifunctions.ycp:889
+#: src/uifunctions.ycp:890
 msgid ""
 "Wrong port definition.\n"
 "No port number found for this port name.\n"
@@ -1696,17 +1742,17 @@ msgstr ""
 "nazwie. Proszę użyć numeru portu zamiast nazwy.\n"
 
 #. TRANSLATORS: popup message, right definition is two lines belos this message
-#: src/uifunctions.ycp:908
+#: src/uifunctions.ycp:909
 msgid "Invalid IP definition."
 msgstr "Niewłaściwe określenie IP."
 
 #. TRANSLATORS: check box
-#: src/uifunctions.ycp:1138
+#: src/uifunctions.ycp:1139
 msgid "&Log Not Accepted Broadcast Packets"
 msgstr "&Rejestruj nie zaakceptowane pakiety rozgłoszeniowe"
 
 #. TRANSLATORS: popup question
-#: src/uifunctions.ycp:1183
+#: src/uifunctions.ycp:1184
 msgid ""
 "Firewall automatic starting has been disabled\n"
 "but firewall is currently running.\n"
@@ -1717,6 +1763,77 @@ msgstr ""
 "lecz aktualnie jest ona uruchomiona.\n"
 "\n"
 "Czy wyłączyć zaporę po zapisaniu nowej konfiguracji?"
+
+#: src/uifunctions.ycp:1309 src/uifunctions.ycp:1465
+#, fuzzy, ycp-format
+msgid "Invalid network definition '%1'"
+msgstr "Nieprawidłowa definicja portu"
+
+#: src/uifunctions.ycp:1318 src/uifunctions.ycp:1333
+#, fuzzy, ycp-format
+msgid "Invalid port range '%1'"
+msgstr "Nieprawidłowa definicja zakresu portów"
+
+#: src/uifunctions.ycp:1323 src/uifunctions.ycp:1338 src/uifunctions.ycp:1471
+#, fuzzy, ycp-format
+msgid "Invalid port name or number '%1'"
+msgstr "Żądana nazwa lub numer portu"
+
+#: src/uifunctions.ycp:1388
+#, fuzzy
+msgid "All services using UDP"
+msgstr "Wszystkie usługi"
+
+#: src/uifunctions.ycp:1390
+#, fuzzy
+msgid "All services using TCP"
+msgstr "Wszystkie usługi"
+
+#: src/uifunctions.ycp:1392
+msgid "Samba browsing"
+msgstr ""
+
+#: src/uifunctions.ycp:1394
+msgid "SLP browsing"
+msgstr ""
+
+#: src/uifunctions.ycp:1402
+#, fuzzy
+msgid "All networks"
+msgstr "Wszystkie porty"
+
+#: src/uifunctions.ycp:1404
+#, ycp-format
+msgid "Subnet: %1"
+msgstr ""
+
+#: src/uifunctions.ycp:1490
+#, fuzzy
+msgid "&Zone"
+msgstr "Strefa"
+
+#: src/uifunctions.ycp:1491
+#, fuzzy
+msgid "&Network"
+msgstr "Sieć źró&dłowa"
+
+#: src/uifunctions.ycp:1492
+#, fuzzy
+msgid "&Service"
+msgstr "Identyfikator usługi"
+
+#: src/uifunctions.ycp:1497
+msgid "User-defined service"
+msgstr ""
+
+#: src/uifunctions.ycp:1504
+#, fuzzy
+msgid "Po&rt"
+msgstr "Port"
+
+#: src/uifunctions.ycp:1585
+msgid "Select an item to delete."
+msgstr ""
 
 #~ msgid "Firewall will be running after the configuration gets written"
 #~ msgstr "Zapora sieciowa będzie aktywna po zapisaniu konfiguracji"

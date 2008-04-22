@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scanner.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-01 10:51+0200\n"
+"POT-Creation-Date: 2008-04-21 10:44+0200\n"
 "PO-Revision-Date: 2008-04-12 19:15+0200\n"
 "Last-Translator: Michał Rz <mrz5@wp.pl>\n"
 "Language-Team:  <en@li.org>\n"
@@ -125,7 +125,7 @@ msgstr "Wykrywanie aktywnych skanerów nie powiodło się."
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #: src/Scanner.ycp:504 src/Scanner.ycp:551 src/Scanner.ycp:599
-#: src/Scanner.ycp:2355
+#: src/Scanner.ycp:2282
 #, ycp-format
 msgid "File %1 does not exist."
 msgstr "Plik %1 nie istnieje."
@@ -134,7 +134,7 @@ msgstr "Plik %1 nie istnieje."
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #: src/Scanner.ycp:516 src/Scanner.ycp:563 src/Scanner.ycp:611
-#: src/Scanner.ycp:2367
+#: src/Scanner.ycp:2294
 #, ycp-format
 msgid "Failed to read %1."
 msgstr "Odczyt %1 nie powiódł się."
@@ -175,7 +175,7 @@ msgstr "Wczytywanie lub tworzenie bazy danych skanerów"
 
 #. 3. progress stage name of a Progress::New:
 #. 5. progress stage name of a Progress::New:
-#: src/Scanner.ycp:738 src/Scanner.ycp:1774
+#: src/Scanner.ycp:738 src/Scanner.ycp:1776
 msgid "Determine active scanners"
 msgstr "Określanie aktywnych skanerów"
 
@@ -201,7 +201,7 @@ msgstr "Wczytywanie lub tworzenie bazy danych skanerów..."
 
 #. 3. progress step progress bar title of a Progress::New:
 #. 5. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:749 src/Scanner.ycp:1787
+#: src/Scanner.ycp:749 src/Scanner.ycp:1789
 msgid "Determining active scanners..."
 msgstr "Wykrywanie aktywnych skanerów..."
 
@@ -218,7 +218,7 @@ msgid "Detecting scanners..."
 msgstr "Wykrywanie skanerów..."
 
 #. Last progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:755 src/Scanner.ycp:917 src/Scanner.ycp:1791
+#: src/Scanner.ycp:755 src/Scanner.ycp:917 src/Scanner.ycp:1793
 msgid "Finished"
 msgstr "Ukończono"
 
@@ -338,17 +338,17 @@ msgid "Not Configured:"
 msgstr "Nieskonfigurowane:"
 
 #. Fallback device name if the real device name is missing:
-#: src/Scanner.ycp:1199 src/Scanner.ycp:2067
+#: src/Scanner.ycp:1199 src/Scanner.ycp:2044
 msgid "Unknown device"
 msgstr "Nieznane urządzenie"
 
 #. Fallback manufacturer name if the real manufacturer name is missing:
-#: src/Scanner.ycp:1201 src/Scanner.ycp:2063
+#: src/Scanner.ycp:1201 src/Scanner.ycp:2040
 msgid "Unknown manufacturer"
 msgstr "Nieznany producent"
 
 #. Fallback model name if the real model name is missing:
-#: src/Scanner.ycp:1203 src/Scanner.ycp:2065
+#: src/Scanner.ycp:1203 src/Scanner.ycp:2042
 msgid "Unknown model"
 msgstr "Nieznany model"
 
@@ -361,7 +361,7 @@ msgstr "Nieznany model"
 #. %1 will be replaced by the manufacturer name
 #. %2 will be replaced by the model name
 #. %3 will be replaced by the device name where the scanner is connected to:
-#: src/Scanner.ycp:1225 src/Scanner.ycp:2061
+#: src/Scanner.ycp:1225 src/Scanner.ycp:2038
 #, ycp-format
 msgid "%1 %2 at %3"
 msgstr "%1 %2 na %3"
@@ -455,7 +455,7 @@ msgstr "Sterownik %1 (z pakietu %2) może działać, ale zapewniany przez niego 
 #. stored on the manufacturer's CD but often it is buried in a weird Windows-only
 #. driver archive format. The text must indicate this.
 #. Do not change or translate "SANE", it is a project name.
-#: src/Scanner.ycp:1671
+#: src/Scanner.ycp:1686
 msgid ""
 "A firmware file contains software that must be uploaded to the scanner's memory.\n"
 "Without firmware, the scanner cannot work.\n"
@@ -485,32 +485,10 @@ msgstr ""
 "systemowy dla sterownika opisuje, w jaki sposób skonfigurować go do odczytywania \n"
 "pliku firmware. Podręcznik systemowy jest dostępny po wywołaniu polecenia \n"
 
-#. Message of a Popup::YesNo for scanners which should be set up with the hpaio driver.
-#. Do not change or translate "hpaio", it is a driver name.
-#. Do not change or translate "hplip", it is a service name.
-#. Do not change or translate "PTAL", it is a subsystem name.
-#: src/Scanner.ycp:1690
-msgid ""
-"The hpaio driver needs the hplip service to be up and running to show the device status.\n"
-"Additionally, the hplip service should be configured to start when booting.\n"
-"The hplip service and the PTAL system exclude each other.\n"
-"Therefore a running PTAL system would be stopped and deactivated\n"
-"before the the hplip service is activated and started.\n"
-"\n"
-"Should the hplip service be activated and started now?\n"
-msgstr ""
-"Sterownik hpaio wymaga działającej usługi hplip. Dodatkowo, usługa \n"
-"hplip powinna być uruchamiania podczas uruchamiania systemu. Usługa \n"
-"hplip i PTAL wykluczają się wzajemnie, dlatego przed uaktywnieniem \n"
-"i uruchomieniem usługi hplip konieczne jest zatrzymanie i deaktywacja \n"
-"systemu PTAL.\n"
-"\n"
-"Czy uaktywnić i uruchomić teraz usługę hplip?\n"
-
 #. Message of a Popup::ContinueCancel for scanners which should be set up with the hpaio driver.
 #. Do not change or translate "ptal", it is a service name.
 #. Do not change or translate "HPLIP", it is a subsystem name.
-#: src/Scanner.ycp:1702
+#: src/Scanner.ycp:1704
 msgid ""
 "There is at least one printer configuration that uses the ptal service.\n"
 "It is possible to proceed but then the ptal service would be stopped\n"
@@ -527,7 +505,7 @@ msgstr ""
 #. Do not change or translate "PTAL", it is a subsystem name.
 #. Do not change or translate "ptal", it is a service name.
 #. Do not change or translate "hplip", it is a service name.
-#: src/Scanner.ycp:1713
+#: src/Scanner.ycp:1715
 msgid ""
 "The hpoj driver requires the PTAL system to be set up and running.\n"
 "In particular, the ptal service must be up and running.\n"
@@ -567,7 +545,7 @@ msgstr ""
 #. Do not change or translate "hplip", it is a service name.
 #. Do not change or translate "hpaio", it is a driver name.
 #. Do not change or translate "ptal", it is a service name.
-#: src/Scanner.ycp:1735
+#: src/Scanner.ycp:1737
 msgid ""
 "There is at least one printer configuration that uses the hplip service.\n"
 "It is possible to proceed but then the hplip service would be stopped\n"
@@ -586,63 +564,63 @@ msgstr ""
 #. Define the progress stages:
 #. Header of a Progress::New:
 #. %1 will be replaced by the backend name
-#: src/Scanner.ycp:1760
+#: src/Scanner.ycp:1762
 #, ycp-format
 msgid "Setting Up Driver %1"
 msgstr "Konfigurowanie sterownika %1"
 
 #. 1. progress stage name of a Progress::New:
-#: src/Scanner.ycp:1766
+#: src/Scanner.ycp:1768
 msgid "Check whether additional packages must be installed"
 msgstr "Sprawdzenie, czy konieczna jest instalacja dodatkowych pakietów"
 
 #. 2. progress stage name of a Progress::New:
-#: src/Scanner.ycp:1768
+#: src/Scanner.ycp:1770
 msgid "Check whether firmware upload is required"
 msgstr "Sprawdzenie, czy konieczne jest wczytywanie pliku firmware"
 
 #. 3. progress stage name of a Progress::New:
-#: src/Scanner.ycp:1770
+#: src/Scanner.ycp:1772
 msgid "Test and set up special requirements for particular drivers"
 msgstr "Sprawdzenie i ustawienie specjalnych wymagań dla niektórych sterowników"
 
 #. 4. progress stage name of a Progress::New:
-#: src/Scanner.ycp:1772
+#: src/Scanner.ycp:1774
 msgid "Activate the driver"
 msgstr "Aktywacja sterownika"
 
 #. 6. progress stage name of a Progress::New:
-#: src/Scanner.ycp:1776
+#: src/Scanner.ycp:1778
 msgid "Test and set USB and SCSI scanner access permissions"
 msgstr "Sprawdzenie i ustawienie praw dostępu do skanerów USB i SCSI"
 
 #. 1. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:1779
+#: src/Scanner.ycp:1781
 msgid "Checking whether additional packages must be installed..."
 msgstr "Sprawdzanie, czy konieczna jest instalacja dodatkowych pakietów..."
 
 #. 2. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:1781
+#: src/Scanner.ycp:1783
 msgid "Checking whether firmware upload is required..."
 msgstr "Sprawdzanie, czy konieczne jest wczytanie pliku firmware..."
 
 #. 3. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:1783
+#: src/Scanner.ycp:1785
 msgid "Testing and setting up special requirements for particular drivers..."
 msgstr "Sprawdzanie i ustawianie specjalnych wymagań dla sterowników..."
 
 #. 4. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:1785
+#: src/Scanner.ycp:1787
 msgid "Activating the driver..."
 msgstr "Aktywowanie sterownika..."
 
 #. 6. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:1789
+#: src/Scanner.ycp:1791
 msgid "Testing and setting USB and SCSI scanner access permissions..."
 msgstr "Sprawdzanie i ustawianie praw dostępu do skanerów USB i SCSI..."
 
 #. Header of a Popup::AnyMessage:
-#: src/Scanner.ycp:1808
+#: src/Scanner.ycp:1810
 msgid "Required Package Not Installed"
 msgstr "Wymagany pakiet nie jest zainstalowany"
 
@@ -652,52 +630,28 @@ msgstr "Wymagany pakiet nie jest zainstalowany"
 #. Only a simple message because before there was a dialog
 #. which let the user install the package so that this message is shown
 #. if the user has explicitely rejected to install it.
-#: src/Scanner.ycp:1815
+#: src/Scanner.ycp:1817
 #, ycp-format
 msgid "The driver %1 requires the package %2."
 msgstr "Sterownik %1 wymaga pakietu %2."
 
 #. Last progress step progress bar title when the Progress was aborted:
-#: src/Scanner.ycp:1818 src/Scanner.ycp:1879 src/Scanner.ycp:1897
-#: src/Scanner.ycp:1936 src/Scanner.ycp:1954 src/Scanner.ycp:1964
+#: src/Scanner.ycp:1820 src/Scanner.ycp:1862 src/Scanner.ycp:1913
+#: src/Scanner.ycp:1931 src/Scanner.ycp:1941
 msgid "Aborted"
 msgstr "Przerwano"
 
 #. Header of a Popup::AnyMessage for scanners which require a firmware upload:
-#: src/Scanner.ycp:1837
+#: src/Scanner.ycp:1839
 msgid "Firmware Upload Required"
 msgstr "Wymagane jest zastosowanie pliku firmware"
-
-#. Message of a Report::Warning for scanners which should be set up with the hpaio backend.
-#. Only a simple message because before there was a Popup::YesNo
-#. which asked the user whether he wants to let YaST activate the hplip service
-#. so that this message is shown if the user has explicitely rejected to do it.
-#. Do not change or translate "hplip", it is a service name.
-#. Do not change or translate "hp-toolbox", it is a program name.
-#: src/Scanner.ycp:1866
-msgid "If the hplip service is not running, no device status can be shown in hp-toolbox."
-msgstr "Jeśli usługa hplip nie działa, niemożliwe jest wyświetlenie statusu urządzeń w hp-toolbox."
-
-#. Message of a Report::Error where %1 can be replaced by an error message
-#. if such an error message exists.
-#. Only a simple message because this error does not happen on a normal system
-#. (i.e. a system which is not totally broken or totally messed up).
-#. Do not change or translate "hplip", it is a service name.
-#: src/Scanner.ycp:1892
-#, ycp-format
-msgid ""
-"Failed to set up the hplip service.\n"
-"%1"
-msgstr ""
-"Konfiguracja usługi hplip nie powiodła się.\n"
-"%1"
 
 #. Message of a Report::Warning for scanners which should be set up with the hpoj backend.
 #. Only a simple message because before there was a Popup::YesNo
 #. which asked the user whether he wants to let YaST activate the ptal service
 #. so that this message is shown if the user has explicitely rejected to do it.
 #. Do not change or translate "ptal", it is a service name.
-#: src/Scanner.ycp:1923
+#: src/Scanner.ycp:1900
 msgid "If the ptal service is not running, the scanner cannot work."
 msgstr "Skaner nie może działać, jeśli nie działa usługa ptal."
 
@@ -706,7 +660,7 @@ msgstr "Skaner nie może działać, jeśli nie działa usługa ptal."
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not change or translate "PTAL", it is a subsystem name.
-#: src/Scanner.ycp:1949
+#: src/Scanner.ycp:1926
 #, ycp-format
 msgid ""
 "Failed to set up the PTAL system.\n"
@@ -719,7 +673,7 @@ msgstr ""
 #. where %1 can be replaced by an error message if such an error message exists.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Scanner.ycp:1990 src/Scanner.ycp:2203
+#: src/Scanner.ycp:1967 src/Scanner.ycp:2130
 #, ycp-format
 msgid ""
 "Failed to set scanner access permissions.\n"
@@ -729,7 +683,7 @@ msgstr ""
 "%1"
 
 #. Header message for a list of scanners which will be deactivated:
-#: src/Scanner.ycp:2054
+#: src/Scanner.ycp:2031
 msgid ""
 "The following scanners use the same driver.\n"
 "Therefore all those scanners will be deactivated:"
@@ -747,36 +701,10 @@ msgstr ""
 #. Message of a Popup::Error where %1 will be replaced by the driver (backend) name.
 #. Only a simple message because before the function Scanner::DeactivateBackend
 #. was called and this function would have shown more specific messages.
-#: src/Scanner.ycp:2083 src/dialogs.ycp:358 src/dialogs.ycp:787
+#: src/Scanner.ycp:2060 src/dialogs.ycp:358 src/dialogs.ycp:787
 #, ycp-format
 msgid "Failed to deactivate %1."
 msgstr "Deaktywacja %1 nie powiodła się."
-
-#. Message of a Popup::Notify after the hpaio driver was deactivated.
-#. Only a simple message because everything is perfectly o.k.
-#. but the user should get a notification
-#. why the hplip service must be still active.
-#. This works only if the CUPS printing system is used.
-#. Do not change or translate "hpaio", it is a driver name.
-#. Do not change or translate "hplip", it is a service name.
-#. Do not change or translate "CUPS", it is a subsystem name.
-#: src/Scanner.ycp:2105
-msgid "The driver hpaio is deactivated but the associated service hplip is not deactivated because it is needed by the CUPS printing system."
-msgstr "Sterownik hpaio jest nieaktywny, ale związana z nim usługa hplip jest aktywna, ponieważ jest wymagana przez system drukowania CUPS."
-
-#. Only a simple message because this error does not happen on a normal system
-#. (i.e. a system which is not totally broken or totally messed up).
-#. Do not change or translate "hplip", it is a service name.
-#: src/Scanner.ycp:2121
-msgid "Failed to stop the hplip service."
-msgstr "Zatrzymanie usługi hplip nie powiodło się."
-
-#. Only a simple message because this error does not happen on a normal system
-#. (i.e. a system which is not totally broken or totally messed up).
-#. Do not change or translate "hplip", it is a service name.
-#: src/Scanner.ycp:2131
-msgid "Failed to disable the hplip service."
-msgstr "Wyłączanie usługi hplip nie powiodło się."
 
 #. Message of a Popup::Notify after the hpoj driver was deactivated.
 #. Only a simple message because everything is perfectly o.k.
@@ -786,49 +714,49 @@ msgstr "Wyłączanie usługi hplip nie powiodło się."
 #. Do not change or translate "hpoj", it is a driver name.
 #. Do not change or translate "ptal", it is a service name.
 #. Do not change or translate "CUPS", it is a subsystem name.
-#: src/Scanner.ycp:2155
+#: src/Scanner.ycp:2082
 msgid "The driver hpoj is deactivated but the associated service ptal is not deactivated because it is needed by the CUPS printing system."
 msgstr "Sterownik hpoj jest nieaktywny, ale związana z nim usługa ptal jest aktywna, ponieważ jest wymagana przez system drukowania CUPS."
 
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not change or translate "ptal", it is a service name.
-#: src/Scanner.ycp:2171
+#: src/Scanner.ycp:2098
 msgid "Failed to stop the ptal service."
 msgstr "Zatrzymanie usługi ptal nie powiodło się."
 
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not change or translate "ptal", it is a service name.
-#: src/Scanner.ycp:2181
+#: src/Scanner.ycp:2108
 msgid "Failed to disable the ptal service."
 msgstr "Wyłączanie usługi ptal nie powiodło się."
 
 #. Header of a Report::ShowText where %1 will be replaced by the driver name:
-#: src/Scanner.ycp:2250
+#: src/Scanner.ycp:2177
 #, ycp-format
 msgid "No Scanner for %1"
 msgstr "Brak skanera dla %1"
 
 #. Body of a Report::ShowText:
-#: src/Scanner.ycp:2252
+#: src/Scanner.ycp:2179
 msgid "It is not possible to test without a matching active scanner."
 msgstr "Niemożliwe jest testowanie bez odpowiedniego aktywnego skanera."
 
 #. Header of a SelectionBox with a list of scanners:
-#: src/Scanner.ycp:2263
+#: src/Scanner.ycp:2190
 msgid "&Scanner to Test"
 msgstr "&Skaner do przetestowania"
 
 #. Header of a Popup::ShowFeedback where %1 will be replaced by the driver name:
-#: src/Scanner.ycp:2283
+#: src/Scanner.ycp:2210
 #, ycp-format
 msgid "Testing %1"
 msgstr "Testowanie %1"
 
 #. Body of a Popup::ShowFeedback where %1 will be replaced by the SANE device identifier.
 #. Do not change or translate "scanimage -d %1 -v", it is a fixed command.
-#: src/Scanner.ycp:2286
+#: src/Scanner.ycp:2213
 #, ycp-format
 msgid "Testing with 'scanimage -d %1 -v'..."
 msgstr "Testowanie poleceniem 'scanimage -d %1 -v'..."
@@ -838,7 +766,7 @@ msgstr "Testowanie poleceniem 'scanimage -d %1 -v'..."
 #. %2 will be replaced by the actual test results
 #. which are usually only available in English.
 #. Do not change or translate "scanimage -d %1 -v", it is a fixed command.
-#: src/Scanner.ycp:2297
+#: src/Scanner.ycp:2224
 #, ycp-format
 msgid ""
 "Test with 'scanimage -d %1 -v' failed.\n"
@@ -852,12 +780,12 @@ msgstr ""
 "%2"
 
 #. Fallback message if the real results are missing:
-#: src/Scanner.ycp:2300 src/Scanner.ycp:2324
+#: src/Scanner.ycp:2227 src/Scanner.ycp:2251
 msgid "(no results available)"
 msgstr "(brak wyników)"
 
 #. Header of a Report::ShowText where %1 will be replaced by the driver name:
-#: src/Scanner.ycp:2314
+#: src/Scanner.ycp:2241
 #, ycp-format
 msgid "Successfully Tested %1"
 msgstr "Udane przetestowanie %1"
@@ -867,7 +795,7 @@ msgstr "Udane przetestowanie %1"
 #. %2 will be replaced by the actual test results
 #. which are usually only available in English.
 #. Do not change or translate "scanimage -d %1 -v", it is a fixed command.
-#: src/Scanner.ycp:2321
+#: src/Scanner.ycp:2248
 #, ycp-format
 msgid ""
 "Test with 'scanimage -d %1 -v' succeeded.\n"
@@ -885,7 +813,7 @@ msgstr ""
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no scanning via network was configured.
 #. The latter results no error.
-#: src/Scanner.ycp:2346
+#: src/Scanner.ycp:2273
 msgid "Failed to determine the configuration for scanning via network."
 msgstr "Ustalanie konfiguracji do skanowania przez sieć nie powiodło się."
 
@@ -894,7 +822,7 @@ msgstr "Ustalanie konfiguracji do skanowania przez sieć nie powiodło się."
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no scanning via network is to be set up.
 #. The latter results no error.
-#: src/Scanner.ycp:2475
+#: src/Scanner.ycp:2402
 msgid "Failed to set up scanning via network."
 msgstr "Konfiguracja skanowania przez sieć nie powiodła się."
 
@@ -903,7 +831,7 @@ msgstr "Konfiguracja skanowania przez sieć nie powiodła się."
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no firewall stuff is to be set up.
 #. The latter results no error.
-#: src/Scanner.ycp:2516
+#: src/Scanner.ycp:2443
 msgid "Failed to deny saned access from external zone in firewall."
 msgstr "Nie udało się zabronić dostępu do saned ze strefy zewnętrznej w zaporze sieciowej."
 
@@ -912,7 +840,7 @@ msgstr "Nie udało się zabronić dostępu do saned ze strefy zewnętrznej w zap
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no firewall stuff is to be set up.
 #. The latter results no error.
-#: src/Scanner.ycp:2533
+#: src/Scanner.ycp:2460
 msgid "Failed to write firewall settings regarding scanning via network."
 msgstr "Zapisanie ustawień zapory dotyczących skanowania poprzez sieć nie powiodło się."
 
@@ -1768,24 +1696,23 @@ msgstr ""
 #. Do not change or translate "PTAL", it is a subsystem name.
 #. Do not change or translate "ptal", it is a service name.
 #. Do not change or translate "HPLIP", it is a project name.
-#. Do not change or translate "hplip", it is a package name.
-#. Do not change or translate "hplip", it is a service name.
-#. The "for all" is crucial in "either ptal or hplip must be used for all HP all-in-one devices".
-#: src/helps.ycp:223
+#. Do not change or translate "hpaio", it is a driver name.
+#. The "for all" is crucial in "either ... or ... must be used for all HP all-in-one devices".
+#: src/helps.ycp:222
+#, fuzzy
 msgid ""
 "<p>\n"
 "<b><big>HP All-in-One Devices</big></b><br>\n"
-"HP all-in-one devices require a special setup.\n"
+"HP all-in-one devices may require a special setup.\n"
 "In this case, an appropriate dialog is shown.\n"
 "There are two software packages that provide support for HP all-in-one devices:\n"
-"the outdated HPOJ software (package hp-officeJet),\n"
+"the outdated HPOJ software (package hp-officeJet which is no longer available),\n"
 "which provides the PTAL system (with the ptal service) to access HP all-in-one devices,\n"
-"and the up-to-date HPLIP software (package hplip),\n"
-"which provides the hplip service for device status of HP all-in-one devices.\n"
+"and the up-to-date HPLIP software (package hplip), which provides the hpaio driver.\n"
 "Both software packages can be installed at the same time\n"
-"but the services cannot be run together.\n"
-"Because a running service is required to access the device,\n"
-"either ptal or hplip must be used for all HP all-in-one devices.\n"
+"but the ptal service and the hpaio driver cannot run together.\n"
+"Therefore either the patl service or the hpaio driver\n"
+"must be used for all HP all-in-one devices.\n"
 "</p>"
 msgstr ""
 "<p>\n"
@@ -1805,7 +1732,7 @@ msgstr ""
 #. ConfigureNetworkScanning dialog help 1/4:
 #. Do not confuse "scanning via network" (i.e. use a remote scanner via another host in the network)
 #. with "scanning the network" (i.e. scan the network for other hosts or services).
-#: src/helps.ycp:242
+#: src/helps.ycp:240
 msgid ""
 "<p>\n"
 "<b><big>Scanning via Network</big></b><br>\n"
@@ -1829,7 +1756,7 @@ msgstr ""
 #. to keep the relationship to the matching terms in the YaST firewall setup module
 #. where also "external zone", and "internal zone" is used.
 #. Keep the information that external access is useless and insecure (see "man saned").
-#: src/helps.ycp:257
+#: src/helps.ycp:255
 msgid ""
 "<p>\n"
 "<b><big>Server Settings</big></b><br>\n"
@@ -1881,7 +1808,7 @@ msgstr ""
 #. Do not change or translate "net", it is a metadriver name.
 #. Do not simply use "driver" because net is no normal driver but a metadriver.
 #. Do not change or translate "saned", it is a program (sane daemon) name.
-#: src/helps.ycp:282
+#: src/helps.ycp:280
 msgid ""
 "<p>\n"
 "<b><big>Client Settings</big></b><br>\n"
@@ -1912,7 +1839,7 @@ msgstr ""
 #. Do not change or translate "net", it is a metadriver name.
 #. Do not simply use "driver" because net is no normal driver but a metadriver.
 #. Do not change or translate "localhost", it is a fixed hostname for the local host.
-#: src/helps.ycp:299
+#: src/helps.ycp:297
 msgid ""
 "<p>\n"
 "<b><big>Local Host Configuration</big></b><br>\n"
@@ -1939,3 +1866,39 @@ msgstr ""
 #: src/wizards.ycp:130
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
+#~ msgid ""
+#~ "The hpaio driver needs the hplip service to be up and running to show the device status.\n"
+#~ "Additionally, the hplip service should be configured to start when booting.\n"
+#~ "The hplip service and the PTAL system exclude each other.\n"
+#~ "Therefore a running PTAL system would be stopped and deactivated\n"
+#~ "before the the hplip service is activated and started.\n"
+#~ "\n"
+#~ "Should the hplip service be activated and started now?\n"
+#~ msgstr ""
+#~ "Sterownik hpaio wymaga działającej usługi hplip. Dodatkowo, usługa \n"
+#~ "hplip powinna być uruchamiania podczas uruchamiania systemu. Usługa \n"
+#~ "hplip i PTAL wykluczają się wzajemnie, dlatego przed uaktywnieniem \n"
+#~ "i uruchomieniem usługi hplip konieczne jest zatrzymanie i deaktywacja \n"
+#~ "systemu PTAL.\n"
+#~ "\n"
+#~ "Czy uaktywnić i uruchomić teraz usługę hplip?\n"
+
+#~ msgid "If the hplip service is not running, no device status can be shown in hp-toolbox."
+#~ msgstr "Jeśli usługa hplip nie działa, niemożliwe jest wyświetlenie statusu urządzeń w hp-toolbox."
+
+#~ msgid ""
+#~ "Failed to set up the hplip service.\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Konfiguracja usługi hplip nie powiodła się.\n"
+#~ "%1"
+
+#~ msgid "The driver hpaio is deactivated but the associated service hplip is not deactivated because it is needed by the CUPS printing system."
+#~ msgstr "Sterownik hpaio jest nieaktywny, ale związana z nim usługa hplip jest aktywna, ponieważ jest wymagana przez system drukowania CUPS."
+
+#~ msgid "Failed to stop the hplip service."
+#~ msgstr "Zatrzymanie usługi hplip nie powiodło się."
+
+#~ msgid "Failed to disable the hplip service."
+#~ msgstr "Wyłączanie usługi hplip nie powiodło się."

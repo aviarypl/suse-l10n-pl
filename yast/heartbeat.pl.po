@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: heartbeat\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-01 10:47+0200\n"
+"POT-Creation-Date: 2008-04-21 10:38+0200\n"
 "PO-Revision-Date: 2006-06-11 10:30+0100\n"
 "Last-Translator: Stanisław Małolepszy <smalolepszy@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -128,6 +128,64 @@ msgstr "Klucz uwierzytelniania"
 msgid "Missing authentication key."
 msgstr "Brak klucza uwierzytelniania."
 
+#. command line status message, %1 is name of the node
+#: src/commandline.ycp:53
+#, ycp-format
+msgid "Added node '%1'"
+msgstr ""
+
+#. command line status message, %1 is name of the node
+#: src/commandline.ycp:74
+#, ycp-format
+msgid "Removed node '%1'"
+msgstr ""
+
+#: src/commandline.ycp:122
+#, fuzzy, ycp-format
+msgid "Broadcast device: %1"
+msgstr "Rozgłaszanie"
+
+#: src/commandline.ycp:132
+#, ycp-format
+msgid "Multicast device: %1, adress: %2, UDP: %3, TTL: %4"
+msgstr ""
+
+#: src/commandline.ycp:154
+#, ycp-format
+msgid "Setting UDP port to %1"
+msgstr ""
+
+#: src/commandline.ycp:248
+msgid "Missing or invalid 'udp' option"
+msgstr ""
+
+#: src/commandline.ycp:297
+#, fuzzy, ycp-format
+msgid "Authentication method: %1"
+msgstr "Metoda uwierzytelniania"
+
+#: src/commandline.ycp:301
+#, fuzzy, ycp-format
+msgid "Authentication key: %1"
+msgstr "Klucz uwierzytelniania"
+
+#. %1 is "enabled" or "disabled"
+#: src/commandline.ycp:360
+#, fuzzy, ycp-format
+msgid "Start Heartbeat service at boot: %1"
+msgstr "Uruchom serwer Heartbeat"
+
+#. Automatic start at boot is either "enableb" or "disabled"
+#: src/commandline.ycp:362
+#, fuzzy
+msgid "enabled"
+msgstr "Włączone"
+
+#: src/commandline.ycp:362
+#, fuzzy
+msgid "disabled"
+msgstr "Wyłączone"
+
 #: src/common.ycp:38
 msgid "Start-up Configuration"
 msgstr "Konfiguracja startowa"
@@ -164,10 +222,111 @@ msgstr "Awaria IP"
 msgid "Ping Groups"
 msgstr "Grupy pingowania"
 
-#. Command line help text for the Xheartbeat module
-#: src/heartbeat.ycp:34
-msgid "Configuration of Heartbeat"
-msgstr "Konfiguracja Heartbeat"
+#. Command line help text for the Heartbeat module
+#: src/heartbeat.ycp:33
+msgid "Configuration of high availability (HA) cluster using Heartbeat service."
+msgstr ""
+
+#. translators: command line help text for add action
+#: src/heartbeat.ycp:42
+msgid "Configure list of the servers for the cluster"
+msgstr ""
+
+#. translators: command line help text for add action
+#: src/heartbeat.ycp:47
+msgid "Set the communication between the nodes of the cluster."
+msgstr ""
+
+#. translators: command line help text for add action
+#: src/heartbeat.ycp:52
+#, fuzzy
+msgid "Configure authentication of the nodes."
+msgstr "Zapisywanie kluczy uwierzytelniania"
+
+#. translators: command line help text for add action
+#: src/heartbeat.ycp:57
+msgid "Configure automatic start of the service at boot."
+msgstr ""
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:64
+msgid "Add a new item to the list."
+msgstr ""
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:68
+msgid "Delete an item from the list."
+msgstr ""
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:72
+#, fuzzy
+msgid "Display the configuration."
+msgstr "Skopiuj ustawienia"
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:76
+#, fuzzy
+msgid "Name of the node in the cluster."
+msgstr "Podany węzeł jest już w klastrze."
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:81
+msgid "Communication mode, can be 'bcast' for broadcast or 'mcast' for multicat."
+msgstr ""
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:86
+msgid "Network device (e.g. eth0) used for communication."
+msgstr ""
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:91
+#, fuzzy
+msgid "IP address of the multicats group (224.0.0.0 - 239.255.255.255)."
+msgstr "Grupowy adres multicast musi być klasy D (224.0.0.0 - 239.255.255.255)."
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:96
+msgid "TTL value (1-255, default is 2)."
+msgstr ""
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:101
+msgid "UDP port number (default is 694)."
+msgstr ""
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:106
+msgid "Authentication method, can be 'crc' (no security), 'sha1' or 'md5'."
+msgstr ""
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:111
+#, fuzzy
+msgid "The authentication key."
+msgstr "Odczytywanie kluczy uwierzytelniania..."
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:116
+msgid "Enable automatic start of the service at boot."
+msgstr ""
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:120
+msgid "Disable automatic start of the service at boot."
+msgstr ""
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:124
+#, fuzzy
+msgid "Set the configuration."
+msgstr "Konfiguracja startowa"
+
+#. translators: command line help text for the 'play' option
+#: src/heartbeat.ycp:128
+msgid "Print status of the automatic start at boot."
+msgstr ""
 
 #: src/helps.ycp:17
 msgid ""
@@ -819,11 +978,14 @@ msgid "The specified STONITH is already present."
 msgstr "Wybrany STONITH już istnieje."
 
 #. Initialization dialog caption
-#: src/wizards.ycp:139
+#: src/wizards.ycp:141
 msgid "Heartbeat Configuration"
 msgstr "Konfiguracja Heartbeat"
 
 #. Initialization dialog contents
-#: src/wizards.ycp:141
+#: src/wizards.ycp:143
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
+#~ msgid "Configuration of Heartbeat"
+#~ msgstr "Konfiguracja Heartbeat"

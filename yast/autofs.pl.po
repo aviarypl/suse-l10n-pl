@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: autofs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-01 10:45+0200\n"
+"POT-Creation-Date: 2008-04-21 10:36+0200\n"
 "PO-Revision-Date: 2008-04-04 15:04+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -27,11 +27,13 @@ msgid "You can do it by using the YaST2 ldap modul."
 msgstr "Można to wykonać używając modułu ldap YaST2."
 
 #: src/Autofs.pm:224
-msgid "The localhost can not be LDAP server for autofs."
+#, fuzzy
+msgid "The localhost cannot be LDAP server for autofs."
 msgstr "Localhost nie może być serwerem LDAP dla autofs."
 
 #: src/Autofs.pm:240
-msgid "Faild to bind to the LDAP server."
+#, fuzzy
+msgid "Failed to bind to the LDAP server."
 msgstr "Błąd podczas łączenia z serwerem LDAP."
 
 #: src/Autofs.pm:287
@@ -117,7 +119,8 @@ msgstr "Podsumowanie konfiguracji..."
 
 #. text entry label
 #: src/AutofsUI.ycp:24
-msgid "DNS Name or IP-address of the LDAP-server"
+#, fuzzy
+msgid "DNS Name or IP address of the LDAP server"
 msgstr "Nazwa DNS lub adres IP serwera LDAP"
 
 #. Command line help text for the Xautofs module
@@ -210,8 +213,9 @@ msgstr "Usuń"
 
 #. Read dialog help 1/2
 #: src/helps.ycp:40
+#, fuzzy
 msgid ""
-"<p><b><big>Initializing autofs Configuration</big></b><br>\n"
+"<p><b>Initializing autofs configuration</b><br>\n"
 "Please wait...<br></p>\n"
 msgstr ""
 "<p><b><big>Inicjalizacja konfiguracji autofs</big></b><br>\n"
@@ -228,8 +232,9 @@ msgstr ""
 
 #. Write dialog help 1/2
 #: src/helps.ycp:50
+#, fuzzy
 msgid ""
-"<p><b><big>Saving autofs Configuration</big></b><br>\n"
+"<p><b>Saving autofs configuration</b><br>\n"
 "Please wait...<br></p>\n"
 msgstr ""
 "<p><b><big>Zapisywanie konfiguracji autofs</big></b><br>\n"
@@ -237,8 +242,9 @@ msgstr ""
 
 #. Write dialog help 2/2
 #: src/helps.ycp:55
+#, fuzzy
 msgid ""
-"<p><b><big>Aborting Saving:</big></b><br>\n"
+"<p><b>Aborting Saving:</b><br>\n"
 "Abort the save procedure by pressing <b>Abort</b>.\n"
 "</p>\n"
 msgstr ""
@@ -248,12 +254,13 @@ msgstr ""
 
 #. Configure dialog help 1/4
 #: src/helps.ycp:61
+#, fuzzy
 msgid ""
-"<p><b><big>Automounter Maps</big></b><br>\n"
+"<p><b>Automounter Maps</b><br>\n"
 "The automounter maps are maps referred to by the master\n"
 "map of the automounter. The automounter maps entries describe how\n"
 "file systems below the mountpoint of the map are to be mounted.\n"
-"<br></p>"
+"<br></p>\n"
 msgstr ""
 "<p><b><big>Mapy automontowania</big></b><br>\n"
 "Do map tych odnosi się główna mapa automatycznego montowania.\n"
@@ -261,7 +268,7 @@ msgstr ""
 "<br></p>"
 
 #. Configure dialog help 2/4
-#: src/helps.ycp:68
+#: src/helps.ycp:69
 msgid ""
 "<p><b><big>Key</big></b><br>\n"
 "This is the part of the pathname between the map mountpoint and\n"
@@ -273,11 +280,11 @@ msgstr ""
 "</p>"
 
 #. Configure dialog help 3/4
-#: src/helps.ycp:74
+#: src/helps.ycp:75
+#, fuzzy
 msgid ""
 "<p><b><big>Options</big></b><br>\n"
-"Options are optional. The options are a list of comma separated\n"
-"options as customary for the <b>mount</b>(8) command.\n"
+"The options are comma seperated, as customary for the <b>mount</b>(8) command.\n"
 "<br></p>\n"
 msgstr ""
 "<p><b><big>Opcje</big></b><br>\n"
@@ -304,12 +311,13 @@ msgstr ""
 
 #. EntryDialog for NFS entry
 #: src/helps.ycp:89
+#, fuzzy
 msgid ""
 "<p><b><big>NFS Entry</big></b><br>\n"
-"In case of NFS entry the <b>Server</b> is the DNS-name or IP-address of the NFS-server.<br>\n"
-"The <b>Path</p> is the absolute path of the directory on the NFS-server.<br>\n"
+"In case of NFS entry the <b>Server</b> is the DNS name or IP address of the NFS server.<br>\n"
+"The <b>Path</p> is the absolute path of the directory on the NFS server.<br>\n"
 "The <b>Options</b> must be valid options of the <b>mount</b>(8) command for NFS file system.<br>\n"
-"<br></p>"
+"<br></p>\n"
 msgstr ""
 "<p><b><big>Wpis NFS</big></b><br>\n"
 "W razie montowania dysku NFS pole <b>Serwer</b> określa nazwę DNS lub adres IP serwera NFS.<br>\n"
@@ -318,13 +326,14 @@ msgstr ""
 "<br></p>"
 
 #. EntryDialog for SAMBA entry
-#: src/helps.ycp:96
+#: src/helps.ycp:97
+#, fuzzy
 msgid ""
-"<p><b><big>SAMBA Entry</big></b><br>\n"
-"In case of SAMBA entry the <b>Server</b> is the DNS-name or IP-address of the SAMBA-server.<br>\n"
+"<p><b>SAMBA Entry</b><br>\n"
+"In case of the SAMBA entry the <b>Server</b> is the DNS name or IP address of the SAMBA server.<br>\n"
 "The <b>Share</p> is the name of the share to be mounted.<br>\n"
 "The <b>Options</b> must be valid options of the <b>mount</b>(8) command for SMB/CIFS file system<br>\n"
-"<br></p>"
+"<br></p>\n"
 msgstr ""
 "<p><b><big>SAMBA</big></b><br>\n"
 "W razie montowania udziału SAMBA pole <b>Serwer</b> określa nazwę DNS lub adres IP serwera SAMBA.<br>\n"
@@ -333,14 +342,14 @@ msgstr ""
 "<br></p>"
 
 #. EntryDialog for Other entry
-#: src/helps.ycp:103
+#: src/helps.ycp:105
+#, fuzzy
 msgid ""
 "<p><b><big>Other Entry</big></b><br>\n"
-"Options are optional. The options are a list of comma separated\n"
-"options as customary for the <b>mount</b>(8) command.<br>\n"
+"The options are comma separated, as customary for the <b>mount</b>(8) command.<br>\n"
 "The location specifies from where the file system is to be mounted.\n"
 "Please consult <b>autofs</b>(5) for more information.\n"
-"<br></p>"
+"<br></p>\n"
 msgstr ""
 "<p><b><big>Inne</big></b><br>\n"
 "Wypełnienie pola opcje nie jest obowiązkowe. Zawiera ono listę opcji polecenia\n"
@@ -350,13 +359,14 @@ msgstr ""
 "<br></p>"
 
 #. GetLDAPServer dialog if the ldapserver is localhost
-#: src/helps.ycp:111
+#: src/helps.ycp:113
+#, fuzzy
 msgid ""
 "<p><b><big>Warning</big></b><br>\n"
-"In your system <b>localhost</b> is configured as the LDAP-server.\n"
-"But the <b>localhost</b> can not be LDAP-server for autofs because it can not achieved from the clients.\n"
-"Please insert the IP-address or DNS-name of the LDAP-server suitable for the clients.\n"
-"We have suggested the fully qualified hostname of your server. If it is good push <b>OK</b>.\n"
+"In your system <b>localhost</b> is configured as the LDAP server.\n"
+"However, the clients cannot reach the <b>localhost</b> and therefore, it cannot be the LDAP server for autofs.\n"
+"Please insert an IP address or DNS name for the LDAP server that is suitable for the clients, or choose the suggested hostname of your server\n"
+"and press <b>Ok</b>.\n"
 "<br></p>"
 msgstr ""
 "<p><b><big>Uwaga</big></b><br>\n"

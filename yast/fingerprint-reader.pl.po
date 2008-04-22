@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-01 10:46+0200\n"
+"POT-Creation-Date: 2008-04-21 10:38+0200\n"
 "PO-Revision-Date: 2008-04-04 15:26+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team: Polish <i18n@suse.de>\n"
@@ -65,12 +65,12 @@ msgid "PAM Login"
 msgstr "Logowanie z użyciem PAM"
 
 #. summary item
-#: src/FingerprintReader.ycp:227
+#: src/FingerprintReader.ycp:227 src/fingerprint-reader.ycp:86
 msgid "Use Fingerprint Authentication"
 msgstr "Włącz uwierzytelnianie z użyciem linii papilarnych"
 
 #. summary item
-#: src/FingerprintReader.ycp:229
+#: src/FingerprintReader.ycp:229 src/fingerprint-reader.ycp:88
 msgid "Do Not Use Fingerprint Authentication"
 msgstr "Wyłącz uwierzytelnianie z użyciem linii papilarnych"
 
@@ -108,12 +108,12 @@ msgstr "Czytnik linii papilarnych nie jest skonfigurowany. Uruchom 'yast2-finger
 
 #. FingerprintReader summary dialog caption
 #. Initialization dialog caption
-#: src/dialogs.ycp:77 src/wizards.ycp:106
+#: src/dialogs.ycp:78 src/wizards.ycp:106
 msgid "Fingerprint Reader Configuration"
 msgstr "Konfiguracja czytnika linii papilarnych"
 
 #. help text
-#: src/dialogs.ycp:81
+#: src/dialogs.ycp:82
 msgid ""
 "<p>\n"
 "<b>Fingerprint Authentication</b><br>\n"
@@ -124,32 +124,33 @@ msgstr ""
 "Konfiguacja czytnika biometrycznego uaktualnia ustawienia PAM, aby możliwa była weryfikacja z użyciem linii papilarnych.</p>\n"
 
 #. help text, cont.
-#: src/dialogs.ycp:87
-msgid "<p>To <b>Import Fingerprint Files</b> from different installations, choose the directory where the files are located.</p>"
+#: src/dialogs.ycp:88
+#, fuzzy, ycp-format
+msgid "<p>To <b>Import Fingerprint Files</b> from different installations, choose the directory where the original files are located. The files will be copied to %1 directory.</p>"
 msgstr "<p>Aby <b>zaimportować pliki linii papilarnych</b> z innej instalacji, podaj folder, w którym te pliki się znajdują.</p>"
 
 #. frame label
-#: src/dialogs.ycp:91
+#: src/dialogs.ycp:92
 msgid "User Authentication"
 msgstr "Uwierzytelnianie użytkownika"
 
 #. radio button label
-#: src/dialogs.ycp:97
+#: src/dialogs.ycp:98
 msgid "Do No&t Use Fingerprint Reader"
 msgstr "&Nie używaj czytnika linii papilarnych"
 
 #. radio button label
-#: src/dialogs.ycp:100
+#: src/dialogs.ycp:101
 msgid "&Use Fingerprint Reader"
 msgstr "&Używaj czytnika linii papilarnych"
 
-#. textentry label
-#: src/dialogs.ycp:108
-msgid "Directory with fingerprint files"
+#: src/dialogs.ycp:110
+#, fuzzy
+msgid "Directory with fingerprint files for import"
 msgstr "Katalog z plikami linii papilarnych"
 
 #. error popup
-#: src/dialogs.ycp:158
+#: src/dialogs.ycp:160
 msgid ""
 "The path to fingerprint files\n"
 "does not point to the valid directory."
@@ -158,9 +159,27 @@ msgstr ""
 "nie wskazuje na prawidłowy katalog."
 
 #. Command line help text for the Xfingerprint-reader module
-#: src/fingerprint-reader.ycp:54
+#: src/fingerprint-reader.ycp:95
 msgid "Configuration of fingerprint-reader"
 msgstr "Konfiguracja czytnika linii papilarnych"
+
+#. command line help text for 'enable' action
+#: src/fingerprint-reader.ycp:103
+#, fuzzy
+msgid "Enable fingerprint authentication"
+msgstr "Włącz uwierzytelnianie z użyciem linii papilarnych"
+
+#. command line help text for 'disable' action
+#: src/fingerprint-reader.ycp:108
+#, fuzzy
+msgid "Disable fingerprint authentication"
+msgstr "Włącz uwierzytelnianie z użyciem linii papilarnych"
+
+#. command line help text for 'summary' action
+#: src/fingerprint-reader.ycp:113
+#, fuzzy
+msgid "Configuration summary"
+msgstr "Podsumowanie konfiguracji..."
 
 #. Read dialog help 1/2
 #: src/helps.ycp:40
@@ -308,9 +327,6 @@ msgstr "Inicjalizacja..."
 
 #~ msgid "Running SuSEconfig..."
 #~ msgstr "Uruchamianie SuSEconfig..."
-
-#~ msgid "Configuration summary..."
-#~ msgstr "Podsumowanie konfiguracji..."
 
 #, fuzzy
 #~ msgid "FingerprintReader to Configure"

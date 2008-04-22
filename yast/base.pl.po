@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: base\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-01 10:37+0200\n"
+"POT-Creation-Date: 2008-04-21 10:28+0200\n"
 "PO-Revision-Date: 2008-04-07 18:29+0200\n"
 "Last-Translator: Paulina Budzoń <paulina.budzon@mandriva.pl>\n"
 "Language-Team: Polski <pl@li.org>\n"
@@ -740,7 +740,7 @@ msgid "An internal error occured when integrating additional workflow."
 msgstr "Wystąpił błąd wewnętrzny podczas integrowania dodatkowego przebiegu."
 
 #. message popup, %1 is a label of some widget
-#: library/cwm/src/CWM.ycp:631
+#: library/cwm/src/CWM.ycp:640
 #, ycp-format
 msgid "The value of %1 is invalid."
 msgstr "Wartość dla '%1' jest nieprawidłowa."
@@ -1095,8 +1095,10 @@ msgstr "Aktualne klucze TSIG"
 
 #. Table header item - DNS key listing
 #. table header - GPG key ID
+#. GnuPG key ID used as "Key ID: 1144AAAA444"
 #: library/cwm/src/CWMTsigKeys.ycp:628 library/gpg/src/GPGWidgets.ycp:158
 #: library/gpg/src/GPGWidgets.ycp:189
+#: library/packages/src/SignatureCheckDialogs.ycp:230
 msgid "Key ID"
 msgstr "Identyfikator (ID) klucza"
 
@@ -1354,7 +1356,10 @@ msgid "User ID"
 msgstr "Identyfikator użytkownika (UID)"
 
 #. table header - GPG key fingerprint
+#. Standard text strings
+#. GnuPG fingerprint used as "Fingerprint: AAA BBB CCC"
 #: library/gpg/src/GPGWidgets.ycp:162 library/gpg/src/GPGWidgets.ycp:193
+#: library/packages/src/SignatureCheckDialogs.ycp:228
 msgid "Fingerprint"
 msgstr "Odcisk"
 
@@ -1419,14 +1424,8 @@ msgstr "Proszę podać hasło"
 msgid "Enter Passphrase to Unlock GPG Key %1: "
 msgstr "Proszę podać hasło, aby odblokować klucz GPG %1: "
 
-#. error report
-#: library/log/src/LogView.ycp:114 library/log/src/LogView.ycp:144
-#: library/log/src/LogViewCore.ycp:58
-msgid "Error occurred while reading the log."
-msgstr "Błąd podczas odczytywania plików dziennika."
-
 #. help for the log widget, part 1, alt. 1
-#: library/log/src/LogView.ycp:206
+#: library/log/src/LogView.ycp:98
 msgid ""
 "<p><b><big>Displayed Log</big></b><br>\n"
 "Use <b>Log</b> to select the log to display. It will be displayed in\n"
@@ -1437,7 +1436,7 @@ msgstr ""
 "należy wyświetlić. Zostanie on wyświetlony w polu poniżej.</p>\n"
 
 #. help for the log widget, part 1, alt. 2
-#: library/log/src/LogView.ycp:218
+#: library/log/src/LogView.ycp:110
 msgid ""
 "<p><b><big>The Log</big></b><br>\n"
 "This screen displays the log.</p>"
@@ -1446,7 +1445,7 @@ msgstr ""
 "Okno to wyświetla plik dziennika.</p>"
 
 #. help for the log widget, part 2, alt. 1, %1 is a menu button label
-#: library/log/src/LogView.ycp:231
+#: library/log/src/LogView.ycp:123
 #, ycp-format
 msgid ""
 "<p>\n"
@@ -1458,7 +1457,7 @@ msgstr ""
 "proszę nacisnąć przycisk <b>%1</b> i wybrać żądaną funkcję.</p>"
 
 #. help for the log widget, part 2, alt. 2, %1 is a menu button label
-#: library/log/src/LogView.ycp:244
+#: library/log/src/LogView.ycp:136
 #, ycp-format
 msgid ""
 "<p>\n"
@@ -1470,7 +1469,7 @@ msgstr ""
 "nacisnąć przycisk <b>%1</b> i wybrać żądaną funkcję.</p>"
 
 #. help for the log widget, part 2, alt. 3
-#: library/log/src/LogView.ycp:256
+#: library/log/src/LogView.ycp:148
 msgid ""
 "<p>\n"
 "To save the log into a file, click <b>Save Log</b> and select the file\n"
@@ -1482,32 +1481,36 @@ msgstr ""
 
 #. menu button
 #. menubutton
-#: library/log/src/LogView.ycp:279 library/log/src/LogView.ycp:391
-#: library/log/src/LogView.ycp:428 library/log/src/LogView.ycp:672
+#: library/log/src/LogView.ycp:171 library/log/src/LogView.ycp:283
+#: library/log/src/LogView.ycp:320 library/log/src/LogView.ycp:549
 msgid "Ad&vanced"
 msgstr "&Zaawansowane"
 
 #. combo box entry (only used as fallback in case
 #. of error in the YaST code)
-#: library/log/src/LogView.ycp:346
+#: library/log/src/LogView.ycp:238
 msgid "Log"
 msgstr "Dziennik"
 
 #. logview caption
-#: library/log/src/LogView.ycp:350 library/log/src/LogView.ycp:470
-#: library/log/src/LogView.ycp:601 library/log/src/LogView.ycp:674
+#: library/log/src/LogView.ycp:242 library/log/src/LogView.ycp:361
+#: library/log/src/LogView.ycp:479 library/log/src/LogView.ycp:550
 msgid "&Log"
 msgstr "&Dziennik"
 
 #. menubutton entry
-#: library/log/src/LogView.ycp:369
+#: library/log/src/LogView.ycp:261
 msgid "&Save Log"
 msgstr "&Zapisz dziennik"
 
 #. popup caption
-#: library/log/src/LogView.ycp:521
+#: library/log/src/LogView.ycp:399
 msgid "Save Log as..."
 msgstr "Zapisz dziennik jako..."
+
+#: library/log/src/LogViewCore.ycp:62
+msgid "Error occurred while reading the log."
+msgstr "Błąd podczas odczytywania plików dziennika."
 
 #. TRANSLATORS: popup question (with continue / cancel buttons)
 #. %1 is the filesystem path
@@ -1708,8 +1711,11 @@ msgid "Crea&te"
 msgstr "U&twórz"
 
 #. Button label
+#. push button label during media change popup, user can skip
+#. this media (CD) so no packages from this media will be installed
 #. PushButton label
-#: library/modules/Label.ycp:297 library/wizard/src/Confirm.ycp:72
+#: library/modules/Label.ycp:297 library/packages/src/PackageCallbacks.ycp:792
+#: library/wizard/src/Confirm.ycp:72
 msgid "&Skip"
 msgstr "&Pomiń"
 
@@ -1734,7 +1740,9 @@ msgid "&Filename"
 msgstr "N&azwa pliku"
 
 #. TextEntry Label
+#. textentry label
 #: library/modules/Label.ycp:378
+#: library/packages/src/PackageCallbacks.ycp:2371
 msgid "&Password"
 msgstr "Ha&sło"
 
@@ -2730,24 +2738,24 @@ msgid "Demilitarized Zone"
 msgstr "Strefa zdemilitaryzowana (ograniczonego zaufania)"
 
 #. TRANSLATORS: Firewall zone full-name, used as combo box item or dialog title
-#: library/network/src/SuSEFirewall.ycp:993
+#: library/network/src/SuSEFirewall.ycp:999
 msgid "Unknown Zone"
 msgstr "Strefa nieznana"
 
 #. TRANSLATORS: a popup error message
-#: library/network/src/SuSEFirewall.ycp:1254
+#: library/network/src/SuSEFirewall.ycp:1260
 #, ycp-format
 msgid "Cannot enable service '%1'."
 msgstr "Nie można włączyć usługi '%1'."
 
 #. TRANSLATORS: a popup error message
-#: library/network/src/SuSEFirewall.ycp:1277
+#: library/network/src/SuSEFirewall.ycp:1283
 #, ycp-format
 msgid "Cannot disable service '%1'."
 msgstr "Nie można wyłączyć usługi '%1'."
 
 #. TRANSLATORS: Error message, %1 = interface name (like eth0)
-#: library/network/src/SuSEFirewall.ycp:1397
+#: library/network/src/SuSEFirewall.ycp:1403
 #, ycp-format
 msgid ""
 "Interface '%1' is included in multiple firewall zones.\n"
@@ -2763,8 +2771,8 @@ msgstr ""
 "w pliku '/etc/sysconfig/SuSEFirewall'."
 
 #. TRANSLATORS: Error message, %1 = interface name (like eth0)
-#: library/network/src/SuSEFirewall.ycp:1807
-#: library/network/src/SuSEFirewall.ycp:1870
+#: library/network/src/SuSEFirewall.ycp:1813
+#: library/network/src/SuSEFirewall.ycp:1876
 #, ycp-format
 msgid ""
 "Interface '%1' is not assigned to any firewall zone.\n"
@@ -2776,102 +2784,102 @@ msgstr ""
 "i przypisać go.\n"
 
 #. TRANSLATORS: Dialog caption
-#: library/network/src/SuSEFirewall.ycp:2285
+#: library/network/src/SuSEFirewall.ycp:2291
 msgid "Initializing Firewall Configuration"
 msgstr "Inicjalizacja konfiguracji zapory sieciowej"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2290
+#: library/network/src/SuSEFirewall.ycp:2296
 msgid "Check for network devices"
 msgstr "Sprawdzenie urządzeń sieciowych"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2292
+#: library/network/src/SuSEFirewall.ycp:2298
 msgid "Read current configuration"
 msgstr "Odczytanie bieżącej konfiguracji"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2294
+#: library/network/src/SuSEFirewall.ycp:2300
 msgid "Check possibly conflicting services"
 msgstr "Sprawdzenie usług mogących powodować konflikty"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2296
+#: library/network/src/SuSEFirewall.ycp:2302
 msgid "Read dynamic definitions of installed services"
 msgstr "Odczytywanie dynamicznych definicji zainstalowanych usług"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2300
+#: library/network/src/SuSEFirewall.ycp:2306
 msgid "Checking for network devices..."
 msgstr "Sprawdzanie urządzeń sieciowych..."
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2302
+#: library/network/src/SuSEFirewall.ycp:2308
 msgid "Reading current configuration..."
 msgstr "Odczytywanie bieżącej konfiguracji..."
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2304
+#: library/network/src/SuSEFirewall.ycp:2310
 msgid "Checking possibly conflicting services..."
 msgstr "Sprawdzanie usług mogących powodować konflikty..."
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2306
+#: library/network/src/SuSEFirewall.ycp:2312
 msgid "Reading dynamic definitions of installed services..."
 msgstr "Odczytywanie dynamicznych definicji zainstalowanych usług..."
 
 #. TRANSLATORS: Dialog caption
-#: library/network/src/SuSEFirewall.ycp:2451
+#: library/network/src/SuSEFirewall.ycp:2457
 msgid "Writing Firewall Configuration"
 msgstr "Zapisywanie konfiguracji zapory sieciowej"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2456
+#: library/network/src/SuSEFirewall.ycp:2462
 msgid "Write firewall settings"
 msgstr "Zapisanie konfiguracji zapory sieciowej"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2458
+#: library/network/src/SuSEFirewall.ycp:2464
 msgid "Adjust firewall service"
 msgstr "Dostosowanie usługi zapory sieciowej"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2462
+#: library/network/src/SuSEFirewall.ycp:2468
 msgid "Writing firewall settings..."
 msgstr "Zapisywanie ustawień zapory sieciowej..."
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2464
+#: library/network/src/SuSEFirewall.ycp:2470
 msgid "Adjusting firewall service..."
 msgstr "Dostosowywanie usługi zapory sieciowej..."
 
 #. TRANSLATORS: a popup error message
-#: library/network/src/SuSEFirewall.ycp:2480
+#: library/network/src/SuSEFirewall.ycp:2486
 msgid "Writing settings failed"
 msgstr "Zapisanie ustawień nie powiodło się"
 
 #. protocol name
-#: library/network/src/SuSEFirewall.ycp:3169
+#: library/network/src/SuSEFirewall.ycp:3182
 msgid "TCP"
 msgstr "TCP"
 
 #. protocol name
-#: library/network/src/SuSEFirewall.ycp:3171
+#: library/network/src/SuSEFirewall.ycp:3184
 msgid "UDP"
 msgstr "UDP"
 
 #. protocol name
-#: library/network/src/SuSEFirewall.ycp:3173
+#: library/network/src/SuSEFirewall.ycp:3186
 msgid "RPC"
 msgstr "RPC"
 
 #. protocol name
-#: library/network/src/SuSEFirewall.ycp:3175
+#: library/network/src/SuSEFirewall.ycp:3188
 msgid "IP"
 msgstr "IP"
 
 #. table item, %1 stands for the buggy protocol name
-#: library/network/src/SuSEFirewall.ycp:3193
+#: library/network/src/SuSEFirewall.ycp:3206
 #, ycp-format
 msgid "Unknown protocol (%1)"
 msgstr "Nieznany protokół (%1)"
@@ -3101,6 +3109,493 @@ msgstr "Usługa %1"
 msgid "Unknown service '%1'"
 msgstr "Nieznana usługa '%1'"
 
+#: library/packages/src/PackageCallbacks.ycp:143
+#: library/packages/src/PackageCallbacks.ycp:1566
+msgid "Package: "
+msgstr ""
+
+#: library/packages/src/PackageCallbacks.ycp:144
+msgid "Size: "
+msgstr ""
+
+#: library/packages/src/PackageCallbacks.ycp:178
+#: library/packages/src/PackageCallbacks.ycp:189
+#, ycp-format
+msgid "Downloading package %1 (%2)..."
+msgstr ""
+
+#. popup heading
+#: library/packages/src/PackageCallbacks.ycp:194
+msgid "Downloading Package"
+msgstr ""
+
+#. check box
+#: library/packages/src/PackageCallbacks.ycp:246
+#, fuzzy
+msgid "Show &details"
+msgstr "&Szczegóły zapory sieciowej"
+
+#. this is for error code 1 ("NOT_FOUND"), %1 is name of a package
+#: library/packages/src/PackageCallbacks.ycp:310
+#, ycp-format
+msgid "Package %1 was not found on the medium."
+msgstr ""
+
+#. error message, %1 is a package name
+#: library/packages/src/PackageCallbacks.ycp:316
+#, ycp-format
+msgid "Package %1 could not be downloaded (input/output error)."
+msgstr ""
+
+#. error message, %1 is a package name
+#: library/packages/src/PackageCallbacks.ycp:322
+#, ycp-format
+msgid "Package %1 is broken, integrity check has failed."
+msgstr ""
+
+#. command line mode - ask user whether installation of the failed package should be retried
+#: library/packages/src/PackageCallbacks.ycp:335
+#: library/packages/src/PackageCallbacks.ycp:549
+msgid "Retry installation of the package?"
+msgstr ""
+
+#. command line mode - ask user whether the installation should be aborted
+#: library/packages/src/PackageCallbacks.ycp:344
+#: library/packages/src/PackageCallbacks.ycp:558
+#, fuzzy
+msgid "Abort the installation?"
+msgstr "Czy na pewno przerwać instalację?"
+
+#. error message, %1 is code of the error,
+#. detail string is appended to the end
+#: library/packages/src/PackageCallbacks.ycp:365
+#: library/packages/src/PackageCallbacks.ycp:402
+#: library/packages/src/PackageCallbacks.ycp:2299
+#, fuzzy, ycp-format
+msgid "Error: %1:"
+msgstr "Zapisywanie błędów w dzienniku: %1"
+
+#: library/packages/src/PackageCallbacks.ycp:469
+#, ycp-format
+msgid "Uninstalling package %1 (%2)..."
+msgstr ""
+
+#: library/packages/src/PackageCallbacks.ycp:470
+#, fuzzy, ycp-format
+msgid "Installing package %1 (%2)..."
+msgstr "Instalacja wymaganych pakietów nie powiodła się."
+
+#: library/packages/src/PackageCallbacks.ycp:475
+#, fuzzy
+msgid "Uninstalling Package"
+msgstr "&Odinstaluj"
+
+#: library/packages/src/PackageCallbacks.ycp:476
+#, fuzzy
+msgid "Installing Package"
+msgstr "Instalacja wymaganych pakietów nie powiodła się."
+
+#. error popup during package installation, %1 is the name of the package
+#: library/packages/src/PackageCallbacks.ycp:534
+#, ycp-format
+msgid "Removal of package %1 failed."
+msgstr ""
+
+#. error popup during package installation, %1 is the name of the package
+#: library/packages/src/PackageCallbacks.ycp:536
+#, fuzzy, ycp-format
+msgid "Installation of package %1 failed."
+msgstr "Instalacja wymaganych pakietów nie powiodła się."
+
+#. error report
+#: library/packages/src/PackageCallbacks.ycp:717
+msgid ""
+"<p>The repository at the specified URL now provides a different media ID.\n"
+"If the URL is correct, this indicates that the repository content has changed. To \n"
+"continue using this repository, start <b>Installation Repositories</b> from \n"
+"the YaST control center and refresh the repository.</p>\n"
+msgstr ""
+
+#. media is double sided, we want the user to insert the 'Side A' of the media
+#. the complete string will be "<product> <media> <number>, <side>"
+#. e.g. "'SuSE Linux 9.0' DVD 1, Side A"
+#: library/packages/src/PackageCallbacks.ycp:732
+msgid "Side A"
+msgstr ""
+
+#. media is double sided, we want the user to insert the 'Side B' of the media
+#: library/packages/src/PackageCallbacks.ycp:736
+msgid "Side B"
+msgstr ""
+
+#. label for a repository - %1 product name (e.g. openSUSE 10.2), %2 medium number (e.g. 2)
+#: library/packages/src/PackageCallbacks.ycp:751
+#, ycp-format
+msgid "%1 (Disc %2)"
+msgstr ""
+
+#. label for a repository - %1 product name (e.g. openSUSE 10.2), %2 medium number (e.g. 2)
+#: library/packages/src/PackageCallbacks.ycp:753
+#, ycp-format
+msgid "%1 (Medium %2)"
+msgstr ""
+
+#. prompt to insert product (%1 == "SuSE Linux version 9.2 CD 2")
+#: library/packages/src/PackageCallbacks.ycp:758
+#, ycp-format
+msgid ""
+"Insert\n"
+"'%1'"
+msgstr ""
+
+#. report error while accessing local directory with product (%1 == "SuSE Linux ...")
+#: library/packages/src/PackageCallbacks.ycp:763
+#, ycp-format
+msgid ""
+"Cannot access installation media\n"
+"%1.\n"
+"Check whether the directory is accessible."
+msgstr ""
+
+#. report error while accessing network media of product (%1 == "SuSE Linux ...")
+#: library/packages/src/PackageCallbacks.ycp:770
+#, ycp-format
+msgid ""
+"Cannot access installation media \n"
+"%1.\n"
+"Check whether the server is accessible."
+msgstr ""
+
+#. currently unused
+#: library/packages/src/PackageCallbacks.ycp:776
+msgid "The correct repository medium could not be mounted."
+msgstr ""
+
+#. menu button label - used for more then one device
+#. push button label - in the media change popup, user can eject the CD/DVD
+#: library/packages/src/PackageCallbacks.ycp:809
+#: library/packages/src/PackageCallbacks.ycp:811
+msgid "&Eject"
+msgstr ""
+
+#: library/packages/src/PackageCallbacks.ycp:822
+msgid "A&utomatically Eject CD/DVD Medium"
+msgstr ""
+
+#. popup string - refresh the displayed counter
+#: library/packages/src/PackageCallbacks.ycp:847
+#: library/packages/src/PackageCallbacks.ycp:948
+#, ycp-format
+msgid "Automatically Retry After %1 Seconds"
+msgstr ""
+
+#. command line mode - ask user whether installation of the failed package should be retried
+#: library/packages/src/PackageCallbacks.ycp:873
+#, fuzzy
+msgid "Retry the installation?"
+msgstr "Czy na pewno przerwać instalację?"
+
+#. command line mode - ask user whether the installation should be aborted
+#: library/packages/src/PackageCallbacks.ycp:882
+msgid "Skip the medium?"
+msgstr ""
+
+#. otherwise ignore the medium
+#: library/packages/src/PackageCallbacks.ycp:890
+msgid "Ignoring the bad medium..."
+msgstr ""
+
+#. TextEntry label
+#: library/packages/src/PackageCallbacks.ycp:901
+#: library/packages/src/PackageCallbacks.ycp:965
+msgid "&URL"
+msgstr ""
+
+#. popup label (%1 is repository URL)
+#: library/packages/src/PackageCallbacks.ycp:1216
+#, ycp-format
+msgid "Creating Repository %1"
+msgstr ""
+
+#. error message - a label followed by a richtext with details
+#: library/packages/src/PackageCallbacks.ycp:1247
+#, fuzzy
+msgid "Error occurred while creating the repository."
+msgstr "Błąd podczas odczytywania plików dziennika."
+
+#. error message - a label followed by a richtext with details
+#: library/packages/src/PackageCallbacks.ycp:1251
+#: library/packages/src/PackageCallbacks.ycp:1364
+#: library/packages/src/PackageCallbacks.ycp:1463
+msgid "Unable to retrieve the remote repository description."
+msgstr ""
+
+#. error message - a label followed by a richtext with details
+#: library/packages/src/PackageCallbacks.ycp:1254
+#: library/packages/src/PackageCallbacks.ycp:1367
+#: library/packages/src/PackageCallbacks.ycp:1466
+#, fuzzy
+msgid "An error occurred while retrieving the new metadata."
+msgstr "Błąd podczas odczytywania plików dziennika."
+
+#. error message - a label followed by a richtext with details
+#: library/packages/src/PackageCallbacks.ycp:1257
+#: library/packages/src/PackageCallbacks.ycp:1370
+#: library/packages/src/PackageCallbacks.ycp:1469
+#, fuzzy
+msgid "The repository is not valid."
+msgstr "Wartość dla '%1' jest nieprawidłowa."
+
+#. error message - a label followed by a richtext with details
+#: library/packages/src/PackageCallbacks.ycp:1260
+#, fuzzy
+msgid "The repository metadata is invalid."
+msgstr "Wartość dla '%1' jest nieprawidłowa."
+
+#. command line mode - ask user whether the repository refreshment should be retried
+#. command line mode - ask user whether target initializatin can be restarted
+#: library/packages/src/PackageCallbacks.ycp:1274
+#: library/packages/src/PackageCallbacks.ycp:1390
+#: library/packages/src/PackageCallbacks.ycp:1483
+#: library/packages/src/PackageCallbacks.ycp:2250
+#, fuzzy
+msgid "Retry?"
+msgstr "P&onów"
+
+#. popup label (%1 is repository URL)
+#: library/packages/src/PackageCallbacks.ycp:1316
+#: library/packages/src/PackageCallbacks.ycp:1325
+#, ycp-format
+msgid "Probing Repository %1"
+msgstr ""
+
+#. error message - a label followed by a richtext with details
+#: library/packages/src/PackageCallbacks.ycp:1360
+#, fuzzy
+msgid "Error occurred while probing the repository."
+msgstr "Błąd podczas odczytywania plików dziennika."
+
+#. error message - a label followed by a richtext with details
+#: library/packages/src/PackageCallbacks.ycp:1373
+msgid "Repository probing details."
+msgstr ""
+
+#. error message - a label followed by a richtext with details
+#: library/packages/src/PackageCallbacks.ycp:1376
+msgid "Repository metadata is invalid."
+msgstr ""
+
+#. error message - a label followed by a richtext with details
+#: library/packages/src/PackageCallbacks.ycp:1459
+#, ycp-format
+msgid "Repository %1"
+msgstr ""
+
+#: library/packages/src/PackageCallbacks.ycp:1538
+#, ycp-format
+msgid "Downloading delta RPM package %1 (%2)..."
+msgstr ""
+
+#. popup heading
+#: library/packages/src/PackageCallbacks.ycp:1544
+msgid "Downloading Delta RPM package"
+msgstr ""
+
+#: library/packages/src/PackageCallbacks.ycp:1557
+#, ycp-format
+msgid "Applying delta RPM package %1..."
+msgstr ""
+
+#. popup heading
+#: library/packages/src/PackageCallbacks.ycp:1564
+msgid "Applying delta RPM package"
+msgstr ""
+
+#: library/packages/src/PackageCallbacks.ycp:1586
+#, ycp-format
+msgid "Downloading patch RPM package %1 (%2)..."
+msgstr ""
+
+#. popup heading
+#: library/packages/src/PackageCallbacks.ycp:1592
+msgid "Downloading Patch RPM Package"
+msgstr ""
+
+#. close popup
+#: library/packages/src/PackageCallbacks.ycp:1608
+msgid "Failed to download delta RPM"
+msgstr ""
+
+#. close popup
+#: library/packages/src/PackageCallbacks.ycp:1613
+msgid "Failed to apply delta RPM"
+msgstr ""
+
+#. close popup
+#: library/packages/src/PackageCallbacks.ycp:1618
+msgid "Failed to download patch RPM"
+msgstr ""
+
+#: library/packages/src/PackageCallbacks.ycp:1651
+#, ycp-format
+msgid "Starting script %1 (patch %2)..."
+msgstr ""
+
+#. popup heading
+#: library/packages/src/PackageCallbacks.ycp:1658
+msgid "Running Script"
+msgstr ""
+
+#. label, script name follows
+#: library/packages/src/PackageCallbacks.ycp:1663
+msgid "Script: "
+msgstr ""
+
+#. label, patch name follows
+#: library/packages/src/PackageCallbacks.ycp:1670
+msgid "Patch: "
+msgstr ""
+
+#. label
+#: library/packages/src/PackageCallbacks.ycp:1678
+msgid "Output of the Script"
+msgstr ""
+
+#. label, %1 is patch name with version and architecture
+#: library/packages/src/PackageCallbacks.ycp:1740
+#, ycp-format
+msgid ""
+"Patch: %1\n"
+"\n"
+msgstr ""
+
+#. a popup question with "Continue", "Skip" and "Abort" buttons
+#: library/packages/src/PackageCallbacks.ycp:1752
+msgid ""
+"The repositories are being refreshed.\n"
+"Continue with refreshing?\n"
+"\n"
+"Note: If the refresh is skipped some packages\n"
+"might be missing or out of date."
+msgstr ""
+
+#: library/packages/src/PackageCallbacks.ycp:1760
+#, fuzzy
+msgid "Skip Refresh"
+msgstr "&Odśwież"
+
+#. heading of popup
+#: library/packages/src/PackageCallbacks.ycp:1804
+#: library/packages/src/PackageCallbacks.ycp:1846
+#, fuzzy
+msgid "Downloading"
+msgstr "&Pobierz"
+
+#. message in a progress popup
+#. progress bar label, %1 is URL with optional download rate
+#: library/packages/src/PackageCallbacks.ycp:1854
+#: library/packages/src/PackageCallbacks.ycp:1908
+#, fuzzy, ycp-format
+msgid "Downloading: %1"
+msgstr "&Pobierz"
+
+#. error message, %1 is the cause for the error
+#: library/packages/src/PackageCallbacks.ycp:1973
+#: library/packages/src/PackageCallbacks.ycp:1979
+#, ycp-format
+msgid ""
+"Download failed:\n"
+"    %1"
+msgstr ""
+
+#: library/packages/src/PackageCallbacks.ycp:1992
+msgid "Skip Autorefresh"
+msgstr ""
+
+#. heading of popup
+#: library/packages/src/PackageCallbacks.ycp:2026
+#: library/packages/src/PackageCallbacks.ycp:2092
+msgid "Checking Package Database"
+msgstr ""
+
+#. message in a progress popup
+#: library/packages/src/PackageCallbacks.ycp:2029
+msgid "Rebuilding package database. This process can take some time."
+msgstr ""
+
+#. progress bar label
+#: library/packages/src/PackageCallbacks.ycp:2032
+#: library/packages/src/PackageCallbacks.ycp:2105
+msgid "Status"
+msgstr ""
+
+#. error message, %1 is the cause for the error
+#: library/packages/src/PackageCallbacks.ycp:2065
+#, ycp-format
+msgid ""
+"Rebuilding of package database failed:\n"
+"%1"
+msgstr ""
+
+#. message in a progress popup
+#: library/packages/src/PackageCallbacks.ycp:2095
+msgid "Converting package database. This process can take some time."
+msgstr ""
+
+#. error message, %1 is the cause for the error
+#: library/packages/src/PackageCallbacks.ycp:2128
+#, ycp-format
+msgid ""
+"Conversion of package database failed:\n"
+"%1"
+msgstr ""
+
+#. progress message (command line mode)
+#: library/packages/src/PackageCallbacks.ycp:2161
+msgid "Reading RPM DB..."
+msgstr ""
+
+#. popup heading
+#: library/packages/src/PackageCallbacks.ycp:2171
+#, fuzzy
+msgid "Reading Installed Packages"
+msgstr "Instalacja wymaganych pakietów nie powiodła się."
+
+#. progress bar label
+#: library/packages/src/PackageCallbacks.ycp:2174
+#: library/packages/src/PackageCallbacks.ycp:2191
+msgid "Scanning RPM Database..."
+msgstr ""
+
+#. error message, could not read RPM database
+#: library/packages/src/PackageCallbacks.ycp:2237
+msgid "Initialization of the target failed."
+msgstr ""
+
+#. status message (command line mode)
+#: library/packages/src/PackageCallbacks.ycp:2333
+msgid "RPM DB read"
+msgstr ""
+
+#. heading in a popup window
+#: library/packages/src/PackageCallbacks.ycp:2356
+msgid "User Authentication"
+msgstr ""
+
+#: library/packages/src/PackageCallbacks.ycp:2360
+#, ycp-format
+msgid ""
+"URL: %1\n"
+"\n"
+"%2"
+msgstr ""
+
+#. textentry label
+#: library/packages/src/PackageCallbacks.ycp:2368
+#, fuzzy
+msgid "&User Name"
+msgstr "Nazwa &użytkownika:"
+
 #. TRANSLATORS: a popup headline
 #: library/packages/src/PackageLock.ycp:44
 msgid "Accessing the Package Management Failed"
@@ -3122,14 +3617,14 @@ msgstr ""
 "czy próbować ponownie?\n"
 
 #. Error message, no packages sources found
-#: library/packages/src/PackageSystem.ycp:96
+#: library/packages/src/PackageSystem.ycp:95
 msgid "No package source defined."
 msgstr "Nie zdefiniowano źródła pakietów."
 
 #. print the question
 #. popup heading, with rich text widget and Yes/No buttons
-#: library/packages/src/PackageSystem.ycp:138
-#: library/packages/src/PackageSystem.ycp:148
+#: library/packages/src/PackageSystem.ycp:137
+#: library/packages/src/PackageSystem.ycp:147
 msgid "Do you accept this license agreement?"
 msgid_plural "Do you accept these license agreements?"
 msgstr[0] "Czy akceptują Państwo tę umowę licencyjną?"
@@ -3137,12 +3632,12 @@ msgstr[1] "Czy akceptują Państwo te umowy licencyjne?"
 msgstr[2] "Czy te umowy licencyjne są akceptowane?"
 
 #. error report
-#: library/packages/src/PackageSystem.ycp:338
+#: library/packages/src/PackageSystem.ycp:337
 msgid "Installing required packages failed."
 msgstr "Instalacja wymaganych pakietów nie powiodła się."
 
 #. continue/cancel popup
-#: library/packages/src/PackageSystem.ycp:344
+#: library/packages/src/PackageSystem.ycp:343
 msgid ""
 "Installing required packages failed. If you continue\n"
 "without installing required packages,\n"
@@ -3153,18 +3648,336 @@ msgstr ""
 "program YaST może nie pracować poprawnie.\n"
 
 #. error report
-#: library/packages/src/PackageSystem.ycp:356
+#: library/packages/src/PackageSystem.ycp:355
 msgid "Cannot continue without installing required packages."
 msgstr "Nie można kontynuować bez instalacji wymaganych pakietów."
 
 #. continue/cancel popup
-#: library/packages/src/PackageSystem.ycp:362
+#: library/packages/src/PackageSystem.ycp:361
 msgid ""
 "If you continue without installing required \n"
 "packages, YaST may not work properly.\n"
 msgstr ""
 "W razie kontynuacji bez instalacji wymaganych pakietów, \n"
 "program YaST może nie pracować poprawnie.\n"
+
+#. popup question, %1 stands for the package name
+#: library/packages/src/SignatureCheckDialogs.ycp:362
+#, ycp-format
+msgid ""
+"The package %1 is not digitally signed. This means that the origin\n"
+"and integrity of the package cannot be verified. Installing the package\n"
+"may put the integrity of your system at risk.\n"
+"\n"
+"Install it anyway?"
+msgstr ""
+
+#. popup question, %1 stands for the filename
+#: library/packages/src/SignatureCheckDialogs.ycp:369
+#, ycp-format
+msgid ""
+"The file %1\n"
+"is not digitally signed. This means that the origin and integrity of the file\n"
+"cannot be verified. Using the file may put the integrity of your system at risk.\n"
+"\n"
+"Use it anyway?"
+msgstr ""
+
+#. popup heading
+#: library/packages/src/SignatureCheckDialogs.ycp:382
+msgid "Unsigned Package"
+msgstr ""
+
+#: library/packages/src/SignatureCheckDialogs.ycp:382
+msgid "Unsigned File"
+msgstr ""
+
+#. popup question, %1 stands for the package name
+#: library/packages/src/SignatureCheckDialogs.ycp:417
+#, ycp-format
+msgid ""
+"No checksum for package %1 was found in the repository.\n"
+"This means that the package is part of the signed repository, but the list of checksums\n"
+"in this repository does not mention this package. Installing the package may put\n"
+"the integrity of your system at risk.\n"
+"\n"
+"Install it anyway?"
+msgstr ""
+
+#. popup question, %1 stands for the filename
+#: library/packages/src/SignatureCheckDialogs.ycp:425
+#, ycp-format
+msgid ""
+"No checksum for file %1\n"
+"was found in the repository. This means that the file is part of the signed repository,\n"
+"but the list of checksums in this repository does not mention this file. Using the file\n"
+"may put the integrity of your system at risk.\n"
+"\n"
+"Use it anyway?"
+msgstr ""
+
+#. popup heading
+#: library/packages/src/SignatureCheckDialogs.ycp:439
+msgid "No Checksum Found"
+msgstr ""
+
+#. Part of the GnuPG key description in popup, %1 is a GnuPG key ID
+#: library/packages/src/SignatureCheckDialogs.ycp:465
+#: library/packages/src/SignatureCheckDialogs.ycp:567
+#, ycp-format
+msgid "ID: %1"
+msgstr ""
+
+#. Part of the GnuPG key description in popup, %1 is a GnuPG key fingerprint
+#: library/packages/src/SignatureCheckDialogs.ycp:468
+#, fuzzy, ycp-format
+msgid "Fingerprint: %1"
+msgstr "Odcisk"
+
+#. Part of the GnuPG key description in popup, %1 is a GnuPG key name
+#: library/packages/src/SignatureCheckDialogs.ycp:470
+#, ycp-format
+msgid "Name: %1"
+msgstr ""
+
+#: library/packages/src/SignatureCheckDialogs.ycp:471
+#, fuzzy, ycp-format
+msgid "Created: %1"
+msgstr "U&twórz"
+
+#: library/packages/src/SignatureCheckDialogs.ycp:472
+#, ycp-format
+msgid "Expires: %1"
+msgstr ""
+
+#. popup question, %1 stands for the package name, %2 for the complete description of the GnuPG key (multiline)
+#: library/packages/src/SignatureCheckDialogs.ycp:488
+#, ycp-format
+msgid ""
+"Package %1 is signed with the following GnuPG key, but the integrity check failed: %2\n"
+"\n"
+"This means that the package has been changed by accident or by an attacker\n"
+"since the repository creator signed it. Installing it is a big risk\n"
+"for the integrity and security of your system.\n"
+"\n"
+"Install it anyway?"
+msgstr ""
+
+#. popup question, %1 stands for the filename, %2 for the complete description of the GnuPG key (multiline)
+#: library/packages/src/SignatureCheckDialogs.ycp:497
+#, ycp-format
+msgid ""
+"File %1\n"
+"is signed with the following GnuPG key, but the integrity check failed: %2\n"
+"\n"
+"This means that the file has been changed by accident or by an attacker\n"
+"since the repository creator signed it. Using it is a big risk\n"
+"for the integrity and security of your system.\n"
+"\n"
+"Use it anyway?"
+msgstr ""
+
+#: library/packages/src/SignatureCheckDialogs.ycp:516
+msgid "Validation Check Failed"
+msgstr ""
+
+#. popup question, %1 stands for the package name, %2 for the complex multiline description of the GnuPG key
+#: library/packages/src/SignatureCheckDialogs.ycp:545
+#, ycp-format
+msgid ""
+"The package %1 is digitally signed\n"
+"with the following unknown GnuPG key: %2.\n"
+"\n"
+"This means that a trust relationship to the creator of the package\n"
+"cannot be established. Installing the package may put the integrity\n"
+"of your system at risk.\n"
+"\n"
+"Install it anyway?"
+msgstr ""
+
+#. popup question, %1 stands for the filename, %2 for the complex multiline description of the GnuPG key
+#: library/packages/src/SignatureCheckDialogs.ycp:555
+#, ycp-format
+msgid ""
+"The file %1\n"
+"is digitally signed with the following unknown GnuPG key: %2.\n"
+"\n"
+"This means that a trust relationship to the creator of the file\n"
+"cannot be established. Using the file may put the integrity\n"
+"of your system at risk.\n"
+"\n"
+"Use it anyway?"
+msgstr ""
+
+#. popup heading
+#: library/packages/src/SignatureCheckDialogs.ycp:576
+#, fuzzy
+msgid "Unknown GnuPG Key"
+msgstr "Strefa nieznana"
+
+#. popup question, %1 stands for the package name, %2 for the key ID, %3 for the key name
+#: library/packages/src/SignatureCheckDialogs.ycp:623
+#, ycp-format
+msgid ""
+"The package %1 is digitally signed\n"
+"with key '%2 (%3)'.\n"
+"\n"
+"There is no trust relationship to the owner of the key.\n"
+"If you trust the owner, mark the key as trusted.\n"
+"\n"
+"Installing a package from an unknown repository can put\n"
+"the integrity of your system at risk. It is safest\n"
+"to skip the package."
+msgstr ""
+
+#. popup question, %1 stands for the filename, %2 for the key ID, %3 for the key name
+#: library/packages/src/SignatureCheckDialogs.ycp:634
+#, ycp-format
+msgid ""
+"The file %1 is digitally signed\n"
+"with key '%2 (%3)'.\n"
+"\n"
+"There is no trust relationship to the owner of the key.\n"
+"If you trust the owner, mark the key as trusted.\n"
+"\n"
+"Installing a file from an unknown repository can put\n"
+"the integrity of your system at risk. It is safest\n"
+"to skip it."
+msgstr ""
+
+#. popup heading
+#: library/packages/src/SignatureCheckDialogs.ycp:651
+msgid "Signed with Untrusted Public Key"
+msgstr ""
+
+#. push button
+#: library/packages/src/SignatureCheckDialogs.ycp:657
+msgid "&Trust and Import the Key"
+msgstr ""
+
+#. additional Richtext (HTML) warning text (kind of help), 1/2
+#: library/packages/src/SignatureCheckDialogs.ycp:691
+#: library/packages/src/SignatureCheckDialogs.ycp:816
+msgid ""
+"<p>The owner of the key may distribute updates,\n"
+"packages, and package repositories that your system will trust and offer\n"
+"for installation and update without any further warning. In this way,\n"
+"importing the key into your keyring of trusted keys allows the key owner\n"
+"to have a certain amount of control over the software on your system.</p>"
+msgstr ""
+
+#. additional Richtext (HTML) warning text (kind of help), 2/2, %1 stands for the GnuPG key ID
+#: library/packages/src/SignatureCheckDialogs.ycp:698
+#: library/packages/src/SignatureCheckDialogs.ycp:823
+#, ycp-format
+msgid ""
+"<p>A warning dialog opens for every package that\n"
+"is not signed by a trusted (imported) key. If you do not import the key,\n"
+"packages created by the owner of key <tt>%1</tt> show this warning.</p>"
+msgstr ""
+
+#. warning label - the key to import is expired
+#. %1 is current date (formatted according to the current locale)
+#: library/packages/src/SignatureCheckDialogs.ycp:715
+#, ycp-format
+msgid ""
+"WARNING: The key is expired!\n"
+"Current date: %1"
+msgstr ""
+
+#. popup message, %1 stands for GPG key complete multiline description, %2 for key location (URL or ...)
+#: library/packages/src/SignatureCheckDialogs.ycp:720
+#, ycp-format
+msgid ""
+"The GnuPG key %1\n"
+"has been found at %2.\n"
+"\n"
+"You can choose to import it into your keyring of trusted\n"
+"public keys, meaning that you trust the owner of the key.\n"
+"You should be sure that you can trust the owner and that\n"
+"the key really belongs to that owner before importing it."
+msgstr ""
+
+#. popup heading
+#: library/packages/src/SignatureCheckDialogs.ycp:751
+msgid "Import Public GnuPG Key"
+msgstr ""
+
+#. push button
+#: library/packages/src/SignatureCheckDialogs.ycp:762
+#: library/packages/src/SignatureCheckDialogs.ycp:868
+#, fuzzy
+msgid "&Import"
+msgstr "&Port"
+
+#. push button
+#. `PushButton(`id(`details), _("&Details...")),
+#. `HSpacing(1),
+#. push button
+#: library/packages/src/SignatureCheckDialogs.ycp:768
+#: library/packages/src/SignatureCheckDialogs.ycp:874
+#, fuzzy
+msgid "Do &Not Import"
+msgstr "&Nie akceptuj"
+
+#. popup message, %1 stands for string "GPG key ID\nfingerprint", %2 for key name
+#: library/packages/src/SignatureCheckDialogs.ycp:828
+#, ycp-format
+msgid ""
+"The following GnuPG key has been found: %1\n"
+"\n"
+"You can choose to import it into your keyring of trusted\n"
+"public keys, meaning that you trust the owner of the key.\n"
+"You should be sure that you can trust the owner and that\n"
+"the key really belongs to that owner before importing it."
+msgstr ""
+
+#. popup heading
+#: library/packages/src/SignatureCheckDialogs.ycp:857
+msgid "Import Untrusted GnuPG Key"
+msgstr ""
+
+#. popup question, %1 stands for the filename, %2 is expected checksum
+#. %3 is the current checksum (e.g. "803a8ff00d00c9075a1bd223a480bcf92d2481c1")
+#: library/packages/src/SignatureCheckDialogs.ycp:946
+#, ycp-format
+msgid ""
+"The expected checksum of file %1\n"
+"is %2,\n"
+"but the current checksum is %3.\n"
+"\n"
+"This means that the file has been changed by accident or by an attacker\n"
+"since the repository creator signed it. Using it is a big risk\n"
+"for the integrity and security of your system.\n"
+"\n"
+"Use it anyway?"
+msgstr ""
+
+#. dialog heading - displayed in a big bold font
+#: library/packages/src/SignatureCheckDialogs.ycp:961
+#, fuzzy
+msgid "Wrong Digest"
+msgstr "Ostrzeżenia"
+
+#. popup question, %1 stands for the filename, %2 is expected digest, %3 is the current digest
+#: library/packages/src/SignatureCheckDialogs.ycp:977
+#, ycp-format
+msgid ""
+"The checksum of file %1\n"
+"is %2,\n"
+"but the expected checksum is not known.\n"
+"\n"
+"This means that the origin and integrity of the file\n"
+"cannot be verified. Using the file may put the integrity of your system at risk.\n"
+"\n"
+"Use it anyway?"
+msgstr ""
+
+#. dialog heading - displayed in a big bold font
+#: library/packages/src/SignatureCheckDialogs.ycp:989
+#, fuzzy
+msgid "Unknown Digest"
+msgstr "Nieznane urządzenie"
 
 #. the message is followed by list of required packages
 #. Popup Text
@@ -3878,7 +4691,7 @@ msgstr ""
 "szesnastkowych rozdzielonych dwukropkami."
 
 #. Translators: dot: ".", hyphen: "-"
-#: library/types/src/Hostname.ycp:33
+#: library/types/src/Hostname.ycp:34
 msgid ""
 "A valid domain name consists of components separated by dots.\n"
 "Each component contains letters, digits, and hyphens. A hyphen may not\n"
@@ -3890,7 +4703,7 @@ msgstr ""
 "nie może zaczynać się cyfrą."
 
 #. Translators: hyphen: "-"
-#: library/types/src/Hostname.ycp:44
+#: library/types/src/Hostname.ycp:45
 msgid ""
 "A valid host name consists of letters, digits, and hyphens.\n"
 "A host name may not begin or end with a hyphen.\n"
@@ -3907,29 +4720,35 @@ msgstr ""
 "Prawidłowy adres IP składa się z czterech liczb całkowitych \n"
 "z zakresu od 0 do 255 włącznie, rozdzielonych kropkami."
 
+#. Byte abbreviated
+#: library/types/src/String.ycp:101
+#, fuzzy
+msgid "B"
+msgstr "kB"
+
 #. KiloByte abbreviated
-#: library/types/src/String.ycp:100
+#: library/types/src/String.ycp:103
 msgid "kB"
 msgstr "kB"
 
 #. MegaByte abbreviated
-#: library/types/src/String.ycp:102
+#: library/types/src/String.ycp:105
 msgid "MB"
 msgstr "MB"
 
 #. GigaByte abbreviated
-#: library/types/src/String.ycp:104
+#: library/types/src/String.ycp:107
 msgid "GB"
 msgstr "GB"
 
 #. TeraByte abbreviated
-#: library/types/src/String.ycp:106
+#: library/types/src/String.ycp:109
 msgid "TB"
 msgstr "TB"
 
 #. covert a number to download rate string
-#. %1 is string - size in bytes, kB, MB or GB
-#: library/types/src/String.ycp:157
+#. %1 is string - size in bytes, B, kB, MB, GB or TB
+#: library/types/src/String.ycp:160
 #, ycp-format
 msgid "%1/s"
 msgstr "%1/s"
@@ -3937,14 +4756,14 @@ msgstr "%1/s"
 #. format download rate message: %1 = the current download rate (e.g. "242.6kB/s")
 #. %2 is the average download rate (e.g. "228.3kB/s")
 #. to translators: keep translation of "on average" as short as possible
-#: library/types/src/String.ycp:184
+#: library/types/src/String.ycp:187
 #, ycp-format
 msgid "%1 (on average %2)"
 msgstr "%1 (średnio %2)"
 
 #. ellipsis - used to replace part of text to make it shorter
 #. example: "/really/very/long/file/name", "/.../file/name")
-#: library/types/src/String.ycp:1222
+#: library/types/src/String.ycp:1225
 msgid "..."
 msgstr "..."
 
@@ -3999,12 +4818,12 @@ msgid "Really delete '%1'?"
 msgstr "Na pewno usunąć %1?"
 
 #. button text
-#: library/wizard/src/Wizard.ycp:153 library/wizard/src/Wizard.ycp:319
+#: library/wizard/src/Wizard.ycp:170 library/wizard/src/Wizard.ycp:406
 msgid "&Apply"
 msgstr "&Zastosuj"
 
 #. translators: dialog title to appear before any content is initialized
-#: library/wizard/src/Wizard.ycp:181
+#: library/wizard/src/Wizard.ycp:196 library/wizard/src/Wizard.ycp:237
 msgid ""
 "YaST2\n"
 "Initializing ..."
@@ -4013,7 +4832,7 @@ msgstr ""
 "Inicjalizacja..."
 
 #. Heading for help popup window
-#: library/wizard/src/Wizard.ycp:223
+#: library/wizard/src/Wizard.ycp:277
 msgid "Help"
 msgstr "Pomoc"
 

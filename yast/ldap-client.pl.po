@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ldap-client\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-01 10:40+0200\n"
+"POT-Creation-Date: 2008-04-21 10:31+0200\n"
 "PO-Revision-Date: 2008-04-09 18:33+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -67,8 +67,8 @@ msgstr "<b>Bazowe DN</b>:%1<br>"
 
 #. summary text (yes/no follows)
 #: src/Ldap.ycp:484
-#, ycp-format
-msgid "<b>Client Enabled</b>:%1<br>"
+#, fuzzy, ycp-format
+msgid "<b>Client Enabled</b>:%1"
 msgstr "<b>Klient włączony</b>:%1<br>"
 
 #. summary (client enabled?)
@@ -76,8 +76,19 @@ msgstr "<b>Klient włączony</b>:%1<br>"
 msgid "No"
 msgstr "Nie"
 
+#. summary
+#: src/Ldap.ycp:491
+msgid "Automounter Configured"
+msgstr ""
+
+#. summary
+#: src/Ldap.ycp:495
+#, fuzzy
+msgid "LDAP TLS/SSL Configured"
+msgstr "LDAP TLS/SSL"
+
 #. error message:
-#: src/Ldap.ycp:732
+#: src/Ldap.ycp:740
 msgid ""
 "\n"
 "The server could be down or unreachable.\n"
@@ -86,7 +97,7 @@ msgstr ""
 "Serwer może być wyłączony lub niedostępny.\n"
 
 #. error message:
-#: src/Ldap.ycp:736
+#: src/Ldap.ycp:744
 msgid ""
 "\n"
 "The value of DN is missing or invalid.\n"
@@ -95,7 +106,7 @@ msgstr ""
 "Wartość DN nie istnieje lub jest nieprawidłowa.\n"
 
 #. error message:
-#: src/Ldap.ycp:740
+#: src/Ldap.ycp:748
 msgid ""
 "\n"
 "Attribute type not found.\n"
@@ -104,7 +115,7 @@ msgstr ""
 "Typ atrybutu nie został znaleziony.\n"
 
 #. error message:
-#: src/Ldap.ycp:744
+#: src/Ldap.ycp:752
 msgid ""
 "\n"
 "Object class not found.\n"
@@ -114,62 +125,63 @@ msgstr ""
 
 #. error message, more specific description follows
 #. error message
-#: src/Ldap.ycp:750 src/Ldap.ycp:919
+#: src/Ldap.ycp:758 src/Ldap.ycp:927
 msgid "Connection to the LDAP server cannot be established."
 msgstr "Nie można ustanowić połączenia z serwerem LDAP."
 
 #. error message, more specific description follows
-#: src/Ldap.ycp:752
+#: src/Ldap.ycp:760
 msgid "A problem occurred while connecting to the LDAP server."
 msgstr "Wystąpił problem podczas łączenia się z serwerem LDAP."
 
 #. error message, more specific description follows
-#: src/Ldap.ycp:754
+#: src/Ldap.ycp:762
 msgid "A problem occurred while reading data from the LDAP server."
 msgstr "Wystąpił problem podczas odczytywania danych z serwera LDAP."
 
 #. error message, more specific description follows
-#: src/Ldap.ycp:756
+#: src/Ldap.ycp:764
 msgid "There was a problem with writing LDAP users."
 msgstr "Wystąpił problem podczas zapisywania użytkowników LDAP."
 
 #. error message, more specific description follows
-#: src/Ldap.ycp:758
+#: src/Ldap.ycp:766
 msgid "There was a problem with writing LDAP groups."
 msgstr "Wystąpił problem podczas zapisywania grup LDAP."
 
 #. error message, more specific description follows
-#: src/Ldap.ycp:760
+#: src/Ldap.ycp:768
 msgid "There was a problem with writing data to the LDAP server."
 msgstr "Wystąpił problem podczas zapisywania danych do serwera LDAP."
 
 #. error message, more specific description follows
-#: src/Ldap.ycp:762
+#: src/Ldap.ycp:770
 msgid "A problem occurred while reading schema from the LDAP server."
 msgstr "Wystąpił problem podczas odczytywania schematów z serwera LDAP."
 
 #. default error message
-#: src/Ldap.ycp:780
+#: src/Ldap.ycp:788
 msgid "An unknown LDAP error occurred."
 msgstr "Wystąpił nieznany błąd LDAP."
 
 #. checkbox label
-#: src/Ldap.ycp:785 src/Ldap.ycp:924
+#: src/Ldap.ycp:793 src/Ldap.ycp:932
 msgid "&Show Details"
 msgstr "Pokaż &szczegóły"
 
 #. error message
-#: src/Ldap.ycp:894 src/Ldap.ycp:973
+#: src/Ldap.ycp:902 src/Ldap.ycp:982
 msgid "Unknown error. Perhaps 'yast2-ldap' is not available."
 msgstr "Nieznany błąd. Możliwe, że moduł YaST2-ldap jest niedostępny."
 
 #. question following error message (yes/no buttons follow)
-#: src/Ldap.ycp:928
+#: src/Ldap.ycp:936
+#, fuzzy
 msgid ""
-"A possible cause of the failed connection may be that your client is\n"
+"A possible reason for the failed connection may be that your client is\n"
 "configured for TLS/SSL but the server does not support it.\n"
 "\n"
-"Retry connection without TLS/SSL?"
+"Retry connection without TLS/SSL?\n"
 msgstr ""
 "Możliwą przyczyną nieudanego połączenia, może być fakt, że\n"
 "serwer nie obsługuje protokołu TLS/SSL.\n"
@@ -177,29 +189,29 @@ msgstr ""
 "Ponowić próbę połączenia bez TLS/SSL?"
 
 #. password entering label
-#: src/Ldap.ycp:1041 src/ldap_browser.ycp:301
+#: src/Ldap.ycp:1050 src/ldap_browser.ycp:301
 msgid "&LDAP Server Password"
 msgstr "Hasło do serwera &LDAP"
 
 #. label
-#: src/Ldap.ycp:1043
+#: src/Ldap.ycp:1052
 #, ycp-format
 msgid "Server: %1"
 msgstr "Serwer: %1"
 
 #. label (%1 is admin DN - string)
-#: src/Ldap.ycp:1045
+#: src/Ldap.ycp:1054
 #, ycp-format
 msgid "Administrator: %1"
 msgstr "Administrator: %1"
 
 #. button label
-#: src/Ldap.ycp:1050 src/ldap_browser.ycp:308
+#: src/Ldap.ycp:1059 src/ldap_browser.ycp:308
 msgid "&Anonymous Access"
 msgstr "Dostęp &anonimowy"
 
 #. error message, %1 is DN
-#: src/Ldap.ycp:1397
+#: src/Ldap.ycp:1406
 #, ycp-format
 msgid ""
 "A direct parent for DN '%1' \n"
@@ -211,7 +223,7 @@ msgstr ""
 "Nie można utworzyć obiektu z wybranym DN.\n"
 
 #. error message
-#: src/Ldap.ycp:1609
+#: src/Ldap.ycp:1618
 msgid ""
 "An object with the selected DN exists, but it is not a template object.\n"
 "Select another one.\n"
@@ -220,57 +232,57 @@ msgstr ""
 "Proszę wybrać inny.\n"
 
 #. progress caption
-#: src/Ldap.ycp:2184
+#: src/Ldap.ycp:2193
 msgid "Writing LDAP Configuration..."
 msgstr "Zapisywanie konfiguracji LDAP..."
 
 #. progress stage label
-#: src/Ldap.ycp:2189
+#: src/Ldap.ycp:2198
 msgid "Stop services"
 msgstr "Zatrzymywanie usług"
 
 #. progress stage label
-#: src/Ldap.ycp:2191
+#: src/Ldap.ycp:2200
 msgid "Update configuration files"
 msgstr "Aktualizacja plików konfiguracyjnych"
 
 #. progress stage label
-#: src/Ldap.ycp:2193
+#: src/Ldap.ycp:2202
 msgid "Start services"
 msgstr "Uruchamianie usług"
 
 #. progress stage label
-#: src/Ldap.ycp:2195
+#: src/Ldap.ycp:2204
 msgid "Update configuration in LDAP directory"
 msgstr "Aktualizacja konfiguracji w katalogu LDAP"
 
 #. progress step label
-#: src/Ldap.ycp:2198
+#: src/Ldap.ycp:2207
 msgid "Stopping services..."
 msgstr "Zatrzymywanie usług..."
 
 #. progress step label
-#: src/Ldap.ycp:2200
+#: src/Ldap.ycp:2209
 msgid "Updating configuration files..."
 msgstr "Aktualizacja plików konfiguracyjnych..."
 
 #. progress step label
-#: src/Ldap.ycp:2202
+#: src/Ldap.ycp:2211
 msgid "Starting services..."
 msgstr "Uruchamianie usług..."
 
 #. progress step label
-#: src/Ldap.ycp:2204
+#: src/Ldap.ycp:2213
 msgid "Updating configuration in LDAP directory..."
 msgstr "Aktualizacja konfiguracji w katalogu LDAP..."
 
 #. final progress step label
-#: src/Ldap.ycp:2206
+#: src/Ldap.ycp:2215
 msgid "Finished"
 msgstr "Zakończono"
 
 #. yes/no popup, %1 is value of DN
-#: src/Ldap.ycp:2533
+#: src/Ldap.ycp:2542
 #, ycp-format
 msgid ""
 "No entry with DN '%1'\n"
@@ -341,7 +353,7 @@ msgid "&Empty Entry"
 msgstr "U&suń pozycję"
 
 #. button label
-#: src/LdapPopup.ycp:291 src/ui.ycp:748 src/ui.ycp:781
+#: src/LdapPopup.ycp:291 src/ui.ycp:744 src/ui.ycp:777
 msgid "Bro&wse"
 msgstr "Przeg&lądaj"
 
@@ -623,8 +635,8 @@ msgid "Password Policy Configuration"
 msgstr "Konfiguracja polityki haseł"
 
 #. error popup, %1 is attribute name
-#: src/LdapPopup.ycp:832 src/ldap_browser.ycp:473 src/ui.ycp:1385
-#: src/ui.ycp:1569
+#: src/LdapPopup.ycp:832 src/ldap_browser.ycp:473 src/ui.ycp:1381
+#: src/ui.ycp:1565
 #, ycp-format
 msgid ""
 "The \"%1\" attribute is mandatory.\n"
@@ -634,59 +646,76 @@ msgstr ""
 "Proszę wprowadzić wartość."
 
 #. password entering label
-#: src/ldap.ycp:91
+#: src/ldap.ycp:119
 msgid "LDAP Server Password:"
 msgstr "Hasło do serwera LDAP:"
 
 #. translators: command line help text for Ldap client module
-#: src/ldap.ycp:104
+#: src/ldap.ycp:132
 msgid "LDAP client configuration module"
 msgstr "Moduł konfiguracji klienta LDAP."
 
 #. translators: command line help text for pam action
-#: src/ldap.ycp:112
+#: src/ldap.ycp:140
 msgid "Enable or disable authentication with LDAP"
 msgstr "Włącza lub wyłącza uwierzytelnianie LDAP"
 
 #. translators: command line help text for summary action
-#: src/ldap.ycp:117
+#: src/ldap.ycp:145
 msgid "Configuration summary of the LDAP client"
 msgstr "Podsumowanie konfiguracji klienta LDAP"
 
 #. translators: command line help text for configure action
-#: src/ldap.ycp:122
+#: src/ldap.ycp:150
 msgid "Change the global settings of the LDAP client"
 msgstr "Zmiana globalnych ustawień klienta LDAP"
 
 #. translators: command line help text for pam enable option
-#: src/ldap.ycp:128
+#: src/ldap.ycp:156
 msgid "Enable the service"
 msgstr "Włącza usługę"
 
 #. translators: command line help text for pam disable option
-#: src/ldap.ycp:132
+#: src/ldap.ycp:160
 msgid "Disable the service"
 msgstr "Wyłącza usługę"
 
 #. translators: command line help text for the server option
-#: src/ldap.ycp:136
+#: src/ldap.ycp:164
 msgid "The LDAP server name"
 msgstr "Nazwa serwera LDAP"
 
 #. translators: command line help text for the base option
-#: src/ldap.ycp:141
+#: src/ldap.ycp:169
 msgid "Distinguished name (DN) of the search base"
 msgstr "Wyróżniająca nazwa (DN) bazy przeszukiwań"
 
 #. command line help text for the 'createconfig' option
-#: src/ldap.ycp:146
+#: src/ldap.ycp:174
 msgid "Create default configuration objects."
 msgstr "Tworzy domyślne obiekty konfiguracyjne"
 
 #. command line help text for the 'ldappw' option
-#: src/ldap.ycp:150
+#: src/ldap.ycp:178
 msgid "LDAP Server Password"
 msgstr "Hasło serwera LDAP"
+
+#. help text for the 'automounter' option
+#: src/ldap.ycp:183
+#, fuzzy
+msgid "Start or stop automounter"
+msgstr "Uruchom Auto&mounter"
+
+#. help text for the 'mkhomedir' option
+#. checkbox label
+#: src/ldap.ycp:189 src/ui.ycp:254
+msgid "Create Home Directory on Login"
+msgstr "Utwórz katalog domowy przy logowaniu"
+
+#. help text for the 'tls' option
+#: src/ldap.ycp:195
+msgid "Encrypted connection (StartTLS)"
+msgstr ""
 
 #. general help text for LDAP browser
 #: src/ldap_browser.ycp:46
@@ -727,12 +756,12 @@ msgid "&Reload"
 msgstr "Odświ&eż"
 
 #. table header 1/2
-#: src/ldap_browser.ycp:253 src/ui.ycp:1233 src/ui.ycp:1528
+#: src/ldap_browser.ycp:253 src/ui.ycp:1229 src/ui.ycp:1524
 msgid "Attribute"
 msgstr "Atrybut"
 
 #. table header 2/2
-#: src/ldap_browser.ycp:255 src/ui.ycp:1235 src/ui.ycp:1530
+#: src/ldap_browser.ycp:255 src/ui.ycp:1231 src/ui.ycp:1526
 msgid "Value"
 msgstr "Wartość"
 
@@ -876,11 +905,6 @@ msgstr ""
 msgid "Start Auto&mounter"
 msgstr "Uruchom Auto&mounter"
 
-#. checkbox label
-#: src/ui.ycp:254
-msgid "Create Home Directory on Login"
-msgstr "Utwórz katalog domowy przy logowaniu"
-
 #. frame label
 #: src/ui.ycp:261
 msgid "User Authentication"
@@ -943,23 +967,23 @@ msgid "LDAP Client Configuration"
 msgstr "Konfiguracja klienta LDAP"
 
 #. error popup label
-#: src/ui.ycp:388
+#: src/ui.ycp:384
 msgid "Enter an LDAP base DN."
 msgstr "Proszę podać bazowe DN w LDAP."
 
 #. error popup label
-#: src/ui.ycp:396
+#: src/ui.ycp:392
 msgid "Enter at least one address of an LDAP server."
 msgstr "Proszę podać co najmniej jeden adres serwera LDAP."
 
 #. error popup label
-#: src/ui.ycp:403
+#: src/ui.ycp:399
 msgid "The LDAP server address is invalid."
 msgstr "Adres serwera LDAP jest nieprawidłowy."
 
 #. popup question: user enabled LDAP now, but probably has
 #. enabled NIS client before
-#: src/ui.ycp:420
+#: src/ui.ycp:416
 msgid ""
 "When you configure your machine as an LDAP client,\n"
 "you cannot retrieve data with NIS. Really use LDAP instead of NIS?\n"
@@ -968,12 +992,12 @@ msgstr ""
 "pobierać danych z NIS. Czy na pewno użyć LDAP zamiast NIS?\n"
 
 #. popup text
-#: src/ui.ycp:479
+#: src/ui.ycp:475
 msgid "LDAP is now enabled."
 msgstr "LDAP jest teraz aktywny."
 
 #. message popup, part 1/2
-#: src/ui.ycp:483
+#: src/ui.ycp:479
 msgid ""
 "This change only affects newly created processes and not already\n"
 "running services. Restart your services manually or reboot \n"
@@ -984,7 +1008,7 @@ msgstr ""
 " należy uruchomić je ponownie ręcznie lub ponownie uruchomić cały komputer.\n"
 
 #. message popup, part 1/2
-#: src/ui.ycp:492
+#: src/ui.ycp:488
 msgid ""
 "\n"
 "To enable remote login for LDAP users, sshd is\n"
@@ -995,12 +1019,12 @@ msgstr ""
 "program YaST automatycznie ponownie uruchomi sshd.\n"
 
 #. help text caption 1
-#: src/ui.ycp:536
+#: src/ui.ycp:532
 msgid "<p><b>Advanced LDAP Client Settings</b></p>"
 msgstr "<p><b>Zaawansowane opcje klienta LDAP</b></p>"
 
 #. help text 1/3
-#: src/ui.ycp:539
+#: src/ui.ycp:535
 msgid ""
 "<p>Specify the search bases to use for specific maps (users, passwords, and groups) if they are different from the base DN. These values are\n"
 "set to the nss_base_passwd, nss_base_shadow, and nss_base_group attributes\n"
@@ -1011,12 +1035,12 @@ msgstr ""
 "w pliku /etc/ldap.conf.</p>\n"
 
 #. help text 2/3
-#: src/ui.ycp:545
+#: src/ui.ycp:541
 msgid "<p><b>Password Change Protocol</b> refers to the pam_password attribute of the <tt>/etc/ldap.conf</tt> file. See <tt>man pam_ldap</tt> for the meaning of its values.</p>"
 msgstr "<p><b>Protokół zmiany haseł</b> odnosi się do atrybutu pam_password z pliku <tt>/etc/ldap.conf</tt>. Informacje o znaczeniu jego wartości dostępne są na stronie podręcznika systemowego (<tt>man pam_ldap</tt>).</p>"
 
 #. help text 3/3, %1 is attribute name
-#: src/ui.ycp:548
+#: src/ui.ycp:544
 #, ycp-format
 msgid ""
 "<p>Set the type of LDAP groups to use.\n"
@@ -1026,12 +1050,12 @@ msgstr ""
 "Domyślną wartością dla <b>Atrybut grupy członków</b> jest <i>%1</i>.</p>\n"
 
 #. help text caption 2
-#: src/ui.ycp:555
+#: src/ui.ycp:551
 msgid "<p><b>Access to Server</b></p>"
 msgstr "<p><b>Dostęp do serwera</b></p>"
 
 #. help text 1/4
-#: src/ui.ycp:558
+#: src/ui.ycp:554
 msgid ""
 "<p>First, set <b>Configuration Base DN</b>.\n"
 "It is the base for storing your configuration data, which is saved on the LDAP\n"
@@ -1042,7 +1066,7 @@ msgstr ""
 "zapisane na serwerze LDAP.</p>\n"
 
 #. help text 2/4
-#: src/ui.ycp:564
+#: src/ui.ycp:560
 msgid ""
 "<p>To access the data stored on the server, enter the\n"
 "<b>Administrator DN</b>.\n"
@@ -1056,7 +1080,7 @@ msgstr ""
 "dołączone, o ile zaznaczona zostanie odpowiednia opcja.</p>\n"
 
 #. help text 3/4
-#: src/ui.ycp:571
+#: src/ui.ycp:567
 msgid ""
 "<p>To create the default configuration objects for LDAP users and groups,\n"
 "check <b>Create Default Configuration Objects</b>. The objects are only created when they do not already exist.</p>\n"
@@ -1065,7 +1089,7 @@ msgstr ""
 "należy zaznaczyć <b>Utwórz domyślne obiekty konfiguracyjne</b>. Obiekty zostaną utworzone tylko wtedy, jeśli wcześniej nie istniały.</p>\n"
 
 #. help text 4/4
-#: src/ui.ycp:576
+#: src/ui.ycp:572
 msgid ""
 "<p>Press <b>Configure</b> to configure settings stored on the\n"
 "LDAP server. You will be asked for the password if you are not connected yet or\n"
@@ -1076,12 +1100,12 @@ msgstr ""
 "albo jeśli konfiguracja została zmieniona, pojawi się prośba o podanie hasła.</p>\n"
 
 #. help text caption 3
-#: src/ui.ycp:582
+#: src/ui.ycp:578
 msgid "<p><b>Home Directories</b></p>"
 msgstr "<p><b>Katalogi domowe</b></p>"
 
 #. help text 1/1
-#: src/ui.ycp:585
+#: src/ui.ycp:581
 msgid ""
 "<p>If home directories of users should be stored on this machine,\n"
 "check the appropriate option. Changing this value does not cause any direct\n"
@@ -1094,121 +1118,122 @@ msgstr ""
 "zarządzania użytkownikami, który może zarządzać katalogami domowymi użytkowników.</p>\n"
 
 #. password policy help text caption
-#: src/ui.ycp:592
+#: src/ui.ycp:588
 msgid "<p><b>Password Policy</b></p>"
 msgstr "<p><b>Polityka haseł</b></p>"
 
 #. password policy help
-#: src/ui.ycp:595
-msgid "<p>Configure selected Password Policy with <b>Edit</b>. Use <b>Add</b> to add new Password Policy. The configuration is only possible when the Password Policies are already enabled on the LDAP server.</p>"
+#: src/ui.ycp:591
+#, fuzzy
+msgid "<p>Configure selected password policy with <b>Edit</b>. Use <b>Add</b> to add a new password policy. The configuration is only possible, if the password policies are already enabled on the LDAP server.</p>"
 msgstr "<p>Aby skonfigurować politykę haseł, należy wybrać <b>Edytuj</b>. W celu dodania nowej polityki haseł, proszę użyć <b>Dodaj</b>. Konfiguracja będzie możliwa jeżeli polityka haseł będzie uruchomiona na serwerze LDAP.</p>"
 
 #. tab label
-#: src/ui.ycp:690
+#: src/ui.ycp:686
 msgid "C&lient Settings"
 msgstr "Ustawienia k&lienta"
 
 #. tab label
-#: src/ui.ycp:692
+#: src/ui.ycp:688
 msgid "Ad&ministration Settings"
 msgstr "Ustawienia ad&ministracyjne"
 
 #. frame label
-#: src/ui.ycp:718
+#: src/ui.ycp:714
 msgid "Naming Contexts"
 msgstr "Konteksty nazw"
 
 #. textentry label
-#: src/ui.ycp:724
+#: src/ui.ycp:720
 msgid "&User Map"
 msgstr "Mapa &użytkowników"
 
 #. button label
-#: src/ui.ycp:728
+#: src/ui.ycp:724
 msgid "&Browse"
 msgstr "Przeg&lądaj"
 
 #. textentry label
-#: src/ui.ycp:734
+#: src/ui.ycp:730
 msgid "&Password Map"
 msgstr "Ma&pa haseł"
 
 #. button label
-#: src/ui.ycp:738
+#: src/ui.ycp:734
 msgid "Br&owse"
 msgstr "Prze&glądaj"
 
 #. textentry label
-#: src/ui.ycp:744
+#: src/ui.ycp:740
 msgid "&Group Map"
 msgstr "Mapa &grupy"
 
 #. combobox label
-#: src/ui.ycp:758
+#: src/ui.ycp:754
 msgid "Pa&ssword Change Protocol"
 msgstr "Protokół zmiany ha&sła"
 
 #. combobox label
-#: src/ui.ycp:762
+#: src/ui.ycp:758
 msgid "G&roup Member Attribute"
 msgstr "Atrybut członków g&rupy "
 
 #. textentry label
-#: src/ui.ycp:777
+#: src/ui.ycp:773
 msgid "Configuration &Base DN"
 msgstr "Konfiguracja &bazowego DN"
 
 #. textentry label
-#: src/ui.ycp:787
+#: src/ui.ycp:783
 msgid "Administrator &DN"
 msgstr "&DN Administratora"
 
 #. checkbox label
-#: src/ui.ycp:791
+#: src/ui.ycp:787
 msgid "A&ppend Base DN"
 msgstr "D&odaj bazowe DN"
 
 #. checkbox label
-#: src/ui.ycp:797
+#: src/ui.ycp:793
 msgid "Crea&te Default Configuration Objects"
 msgstr "Utwórz domyślne obiek&ty konfiguracyjne"
 
 #. checkbox label
-#: src/ui.ycp:801
+#: src/ui.ycp:797
 msgid "&Home Directories on This Machine"
 msgstr "Przechowuj katalogi domowe &użytkowników na tym komputerze"
 
 #. pushbutton label
-#: src/ui.ycp:807
+#: src/ui.ycp:803
 msgid "Configure User Management &Settings..."
 msgstr "Konfiguracja u&stawień zarządzania użytkownikami..."
 
 #. table header
-#: src/ui.ycp:811
+#: src/ui.ycp:807
 msgid "Password Policy"
 msgstr "Polityka haseł"
 
 #. dialog label
-#: src/ui.ycp:841
+#: src/ui.ycp:837
 msgid "Advanced Configuration"
 msgstr "Konfiguracja zaawansowana"
 
 #. TextEntry label
-#: src/ui.ycp:927
+#: src/ui.ycp:923
 msgid "Name of Password Policy Object"
 msgstr "Nazwa obiektu polityki haseł"
 
 #. text label,suffix will follow in next label
-#: src/ui.ycp:930 src/ui.ycp:961
+#: src/ui.ycp:926 src/ui.ycp:957
 msgid "Suffix:"
 msgstr "Przyrostek:"
 
 #. pushbutton label
-#: src/ui.ycp:933 src/ui.ycp:964
+#: src/ui.ycp:929 src/ui.ycp:960
 msgid "Change Suffix"
 msgstr "Zmień przyrostek"
 
-#: src/ui.ycp:975
+#: src/ui.ycp:971
 #, ycp-format
 msgid ""
 "The Policy '%1' already exists.\n"
@@ -1218,17 +1243,17 @@ msgstr ""
 "Proszę wybrać inną."
 
 #. error popup label
-#: src/ui.ycp:1023
+#: src/ui.ycp:1019
 msgid "Enter the DN used for binding to the LDAP server."
 msgstr "Proszę podać DN używane do łączenia z serwerem LDAP."
 
 #. error popup label
-#: src/ui.ycp:1031
+#: src/ui.ycp:1027
 msgid "Enter the configuration base DN."
 msgstr "Proszę podać konfigurację bazowego DN"
 
 #. yes/no popup
-#: src/ui.ycp:1157
+#: src/ui.ycp:1153
 msgid ""
 "If you reread settings from the server,\n"
 "all changes will be lost. Really reread?\n"
@@ -1238,7 +1263,7 @@ msgstr ""
 "Czy na pewno odczytać je ponownie?\n"
 
 #. help text 1/3
-#: src/ui.ycp:1181
+#: src/ui.ycp:1177
 msgid ""
 "<p>Here, configure the template used for\n"
 "creating new objects (like users or groups).</p>\n"
@@ -1247,7 +1272,7 @@ msgstr ""
 "tworzenia nowych obiektów (takich jak użytkownicy lub grupy).</p>\n"
 
 #. help text 2/3
-#: src/ui.ycp:1186
+#: src/ui.ycp:1182
 msgid ""
 "<p>Edit the template attribute values with <b>Edit</b>.\n"
 "Changing the <b>cn</b> value renames the template.</p>\n"
@@ -1256,7 +1281,7 @@ msgstr ""
 "Zmiana wartości <b>cn</b> spowoduje zmianę nazwy szablonu.</p>\n"
 
 #. help text 3/3
-#: src/ui.ycp:1191
+#: src/ui.ycp:1187
 msgid ""
 "<p>The second table contains a list of <b>default values</b>, used\n"
 "for new objects. Modify the list by adding new values and editing or\n"
@@ -1267,48 +1292,48 @@ msgstr ""
 " edytując albo usuwając istniejące.</p>\n"
 
 #. label (table folows)
-#: src/ui.ycp:1242
+#: src/ui.ycp:1238
 msgid "Default Values for New Objects"
 msgstr "Domyślna wartość dla nowych obiektów"
 
 #. table header 1/2
-#: src/ui.ycp:1245
+#: src/ui.ycp:1241
 msgid "Attribute of Object"
 msgstr "Atrybut obiektu"
 
 #. table header 2/2
-#: src/ui.ycp:1247
+#: src/ui.ycp:1243
 msgid "Default Value"
 msgstr "Wartość domyślna"
 
 #. button label (with non-default shortcut)
-#: src/ui.ycp:1251
+#: src/ui.ycp:1247
 msgid "A&dd"
 msgstr "&Dodaj"
 
 #. button label
-#: src/ui.ycp:1253
+#: src/ui.ycp:1249
 msgid "&Edit"
 msgstr "&Edytuj"
 
 #. dialog label
-#: src/ui.ycp:1263
+#: src/ui.ycp:1259
 msgid "Object Template Configuration"
 msgstr "Konfiguracja szablonu obiektu"
 
 #. yes/no popup, %1 is name
-#: src/ui.ycp:1363
+#: src/ui.ycp:1359
 #, ycp-format
 msgid "Really delete default attribute \"%1\"?"
 msgstr "Czy na pewno usunąć domyślny atrybut \"%1\"?"
 
 #. helptext 1/4
-#: src/ui.ycp:1407
+#: src/ui.ycp:1403
 msgid "<p>Here, manage the configuration stored in LDAP directory.</p>"
 msgstr "<p>W tym miejscu można zarządzać konfiguracją przechowywaną w katalogu LDAP.</p>"
 
 #. helptext 2/4
-#: src/ui.ycp:1410
+#: src/ui.ycp:1406
 msgid ""
 "<p>Each configuration set is called a \"configuration module.\" If there\n"
 "is no configuration module in the provided location (base configuration),\n"
@@ -1321,7 +1346,7 @@ msgstr ""
 "moduł można usunąć za pomocą przycisku <b>Usuń</b>.</p>\n"
 
 #. helptext 3/4
-#: src/ui.ycp:1417
+#: src/ui.ycp:1413
 msgid ""
 "<p>Edit the values of attributes in the table with <b>Edit</b>.\n"
 "Some values have special meanings, for example, changing the <b>cn</b> value renames the\n"
@@ -1332,7 +1357,7 @@ msgstr ""
 " zmieni nazwę bieżącego modułu.</p>\n"
 
 #. helptext 4/4
-#: src/ui.ycp:1423
+#: src/ui.ycp:1419
 msgid ""
 "<p>To configure the default template of the current module,\n"
 "click <b>Configure Template</b>.\n"
@@ -1343,28 +1368,28 @@ msgstr ""
 "</p>\n"
 
 #. combobox label
-#: src/ui.ycp:1491
+#: src/ui.ycp:1487
 msgid "Configuration &Module"
 msgstr "&Moduł konfiguracji"
 
 #. button label
-#: src/ui.ycp:1508
+#: src/ui.ycp:1504
 msgid "C&onfigure Template"
 msgstr "Sk&onfiguruj szablon"
 
 #. dialog label
-#: src/ui.ycp:1542
+#: src/ui.ycp:1538
 msgid "Module Configuration"
 msgstr "Konfiguracja modułu"
 
 #. yes/no popup, %1 is name
-#: src/ui.ycp:1593
+#: src/ui.ycp:1589
 #, ycp-format
 msgid "Really delete module \"%1\"?"
 msgstr "Czy na pewno usunąć moduł \"%1\"?"
 
 #. message
-#: src/ui.ycp:1625
+#: src/ui.ycp:1621
 msgid ""
 "You currently have configuration modules\n"
 "of each type, so you cannot add a new one."

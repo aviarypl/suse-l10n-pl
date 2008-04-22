@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ncurses-pkg\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-01 11:02+0200\n"
+"POT-Creation-Date: 2008-04-21 10:57+0200\n"
 "PO-Revision-Date: 2008-04-22 22:07+0200\n"
 "Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -22,12 +22,20 @@ msgstr ""
 "X-Poedit-Bookmarks: 148,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: src/NCPackageSelector.cc:1402
-msgid "----- this patch is broken !!! -----"
-msgstr "----- poprawka uszkodzona! -----"
+#. label text - keep it short
+#: src/NCPackageSelector.cc:1745
+#, fuzzy
+msgid "Filter: "
+msgstr "&Filtr"
+
+#. label text - keep it short (use abbreviation if necessary)
+#: src/NCPackageSelector.cc:1752
+msgid "Total Download Size: "
+msgstr ""
 
 #. Help button
-#: src/NCPackageSelector.cc:1784 src/NCPkgStrings.cc:303
+#: src/NCPackageSelector.cc:1763 src/NCPackageSelector.cc:1860
+#: src/NCPkgStrings.cc:303
 msgid "&Help"
 msgstr "Pomo&c"
 
@@ -35,7 +43,8 @@ msgstr "Pomo&c"
 #. begin: the label of the Cancel button
 #. add the Cancel button
 #. begin: the label of the Cancel button
-#: src/NCPackageSelector.cc:1790 src/NCPkgStrings.cc:896
+#: src/NCPackageSelector.cc:1767 src/NCPackageSelector.cc:1867
+#: src/NCPkgStrings.cc:896
 msgid "&Cancel"
 msgstr "&Anuluj"
 
@@ -43,7 +52,8 @@ msgstr "&Anuluj"
 #. the label of an Accept button
 #. add the OK button
 #. the label of an Accept button
-#: src/NCPackageSelector.cc:1795 src/NCPkgStrings.cc:910
+#: src/NCPackageSelector.cc:1772 src/NCPackageSelector.cc:1872
+#: src/NCPkgStrings.cc:910
 msgid "&Accept"
 msgstr "A&kceptuj"
 
@@ -80,40 +90,43 @@ msgstr "Postęp wyszukiwania"
 msgid "Installation Summary"
 msgstr "Podsumowanie instalacji"
 
-#. Actions on pkgs (install, remove,..)
-#: src/NCPkgMenuAction.cc:41 src/NCPkgStrings.cc:219
-msgid "&Toggle    [SPACE]"
+#. Please note: add an appropriate number of whitespaces to get a well
+#. formated menu (the [ ]s should be in one column)
+#. begin: Actions menu, toggle the status of a package, e.g. change from installed to delete
+#: src/NCPkgMenuAction.cc:46 src/NCPkgMenuAction.cc:75
+#, fuzzy
+msgid "Toggle    [SPACE]"
 msgstr "&Przełącz   [SPACJA]"
 
-#. Action on pkg - install it
-#: src/NCPkgMenuAction.cc:44 src/NCPkgStrings.cc:226
+#: src/NCPkgMenuAction.cc:47 src/NCPkgMenuAction.cc:76
 msgid "&Install      [+]"
 msgstr "&Instaluj      [+]"
 
-#. Action on pkg - delete it
-#: src/NCPkgMenuAction.cc:47 src/NCPkgStrings.cc:233
-msgid "&Delete      [-]"
+#: src/NCPkgMenuAction.cc:48 src/NCPkgMenuAction.cc:77
+#, fuzzy
+msgid "Delete      [-]"
 msgstr "&Usuń       [-]"
 
-#. Action on pkg - update it
-#: src/NCPkgMenuAction.cc:50 src/NCPkgStrings.cc:240
-msgid "&Update      [>]"
+#: src/NCPkgMenuAction.cc:49 src/NCPkgMenuAction.cc:78
+#, fuzzy
+msgid "Update      [>]"
 msgstr "U&aktualnij [>]"
 
-#. Action on pkg - set it to taboo
-#: src/NCPkgMenuAction.cc:53 src/NCPkgStrings.cc:247
-msgid "T&aboo       [!]"
+#: src/NCPkgMenuAction.cc:50
+msgid "Taboo       [!]"
 msgstr "&Tabu       [!]"
 
-#. Action on pkg - lock it
-#: src/NCPkgMenuAction.cc:56 src/NCPkgStrings.cc:254
-msgid "&Lock        [*]"
+#: src/NCPkgMenuAction.cc:51
+msgid "Lock        [*]"
 msgstr "&Zablokuj        [+]"
 
-#: src/NCPkgMenuAction.cc:59
-msgid "All Listed &Packages"
+#. end: Actions menu, set status of all packages (title of a submenu)
+#: src/NCPkgMenuAction.cc:53
+#, fuzzy
+msgid "All Listed Packages"
 msgstr "Wszystkie pakiety z &listy"
 
+#. begin: submenu items actions concerning all packages
 #. Action on pkgs - install all in this list
 #: src/NCPkgMenuAction.cc:62 src/NCPkgStrings.cc:268
 msgid "Install All"
@@ -134,6 +147,7 @@ msgstr "Zatrzymaj wszytsko"
 msgid "Update All Unconditionally"
 msgstr "Uaktualnij wszystko bezwarunkowo"
 
+#. end: submenu items: actions concerning all packages
 #. Action on pkgs - update all in this list, if newer vers. is there
 #: src/NCPkgMenuAction.cc:66 src/NCPkgStrings.cc:296
 msgid "Update If Newer Version Available"
@@ -220,33 +234,59 @@ msgstr "&Jak użyć filtry"
 msgid "&Useful Functions in Menu"
 msgstr "P&rzydatne akcje w menu"
 
-#. menu entry 2 - display different kinds of info on pkgs
-#: src/NCPkgMenuView.cc:41 src/NCPkgStrings.cc:86
-msgid "Package Description"
-msgstr "Opis pakietu"
-
-#: src/NCPkgMenuView.cc:44
-msgid "Technical data"
+#. begin: menu items of the view (package information) menu
+#. please note: use unique hotkeys until end:
+#: src/NCPkgMenuView.cc:45
+#, fuzzy
+msgid "&Technical data"
 msgstr "Dane techniczne"
 
-#. menu entry 2 - display different kinds of info on pkgs
-#: src/NCPkgMenuView.cc:47 src/NCPkgStrings.cc:100
-msgid "Package Versions"
-msgstr "Wersje pakietów"
+#: src/NCPkgMenuView.cc:46
+msgid "&Package Description"
+msgstr "Opis pakietu"
 
-#. menu entry 2 - display different kinds of info on pkgs
-#: src/NCPkgMenuView.cc:50 src/NCPkgStrings.cc:107
-msgid "File List"
+#: src/NCPkgMenuView.cc:47
+msgid "Package &Versions"
+msgstr "&Wersje pakietów"
+
+#: src/NCPkgMenuView.cc:48
+#, fuzzy
+msgid "&File List"
 msgstr "Lista plików"
 
-#. menu entry 2 - display different kinds of info on pkgs
-#: src/NCPkgMenuView.cc:53 src/NCPkgStrings.cc:114
-msgid "Dependencies"
-msgstr "Zależności"
+#. end: menu items of the view menu
+#. menu entry 1 - all about pkg dependencies
+#. end: menu items of the view menu
+#. menu entry 1 - all about pkg dependencies
+#: src/NCPkgMenuView.cc:50 src/NCPkgStrings.cc:35
+msgid "&Dependencies"
+msgstr "&Zależności"
+
+#. menu items of the patch view menu - keep them short and
+#. use unique hotkeys from begin: to end:
+#. begin:
+#: src/NCPkgMenuView.cc:65
+msgid "&Long Description"
+msgstr "Opis pakietu"
+
+#: src/NCPkgMenuView.cc:66
+#, fuzzy
+msgid "&Package List"
+msgstr "Lista wszystkich &pakietów"
+
+#. end: menu items of the view menu
+#: src/NCPkgMenuView.cc:68
+#, fuzzy
+msgid "&Versions"
+msgstr "Wersja"
 
 #: src/NCPkgPackageDetails.cc:196
 msgid "<i>This information is available for installed packages only</i>"
 msgstr "<i>Informacje dostępne tylko dla zainstalowanych pakietów</i>"
+
+#: src/NCPkgPackageDetails.cc:264
+msgid "----- this patch is broken !!! -----"
+msgstr "----- poprawka uszkodzona! -----"
 
 #. add the list containing packages with unresolved dependencies
 #: src/NCPkgPopupDeps.cc:144
@@ -291,11 +331,6 @@ msgstr "Poza jawnie wskazanymi pakietami, następujące"
 msgid "packages have been changed to resolve dependencies:"
 msgstr "pakiety zostały zmienione w celu rozwiązania zależności:"
 
-#. menu entry 1 - all about pkg dependencies
-#: src/NCPkgStrings.cc:35
-msgid "&Dependencies"
-msgstr "&Zależności"
-
 #. menu entry: dependency check off
 #: src/NCPkgStrings.cc:42
 msgid "&Automatic Dependency Check  [x]"
@@ -329,9 +364,29 @@ msgid "&View"
 msgstr "&Widok"
 
 #. menu entry 2 - display different kinds of info on pkgs
+#: src/NCPkgStrings.cc:86
+msgid "Package Description"
+msgstr "Opis pakietu"
+
+#. menu entry 2 - display different kinds of info on pkgs
 #: src/NCPkgStrings.cc:93
 msgid "Technical Data"
 msgstr "Dane techniczne"
+
+#. menu entry 2 - display different kinds of info on pkgs
+#: src/NCPkgStrings.cc:100
+msgid "Package Versions"
+msgstr "Wersje pakietów"
+
+#. menu entry 2 - display different kinds of info on pkgs
+#: src/NCPkgStrings.cc:107
+msgid "File List"
+msgstr "Lista plików"
+
+#. menu entry 2 - display different kinds of info on pkgs
+#: src/NCPkgStrings.cc:114
+msgid "Dependencies"
+msgstr "Zależności"
 
 #. menu entry 3 - miscellaneous stuff
 #: src/NCPkgStrings.cc:121
@@ -360,13 +415,39 @@ msgstr "Pakiety zainstalowane"
 
 #. Label under the pkg table - pkg name follows
 #: src/NCPkgStrings.cc:205
-msgid "Package"
+#, fuzzy
+msgid "Package: "
 msgstr "Pakiet"
 
 #. Actions on pkgs (install, remove,..)
 #: src/NCPkgStrings.cc:212
 msgid "A&ctions"
 msgstr "Ak&cje"
+
+#. Actions on pkgs (install, remove,..)
+#: src/NCPkgStrings.cc:219
+msgid "&Toggle    [SPACE]"
+msgstr "&Przełącz   [SPACJA]"
+
+#. Action on pkg - delete it
+#: src/NCPkgStrings.cc:233
+msgid "&Delete      [-]"
+msgstr "&Usuń       [-]"
+
+#. Action on pkg - update it
+#: src/NCPkgStrings.cc:240
+msgid "&Update      [>]"
+msgstr "U&aktualnij [>]"
+
+#. Action on pkg - set it to taboo
+#: src/NCPkgStrings.cc:247
+msgid "T&aboo       [!]"
+msgstr "&Tabu       [!]"
+
+#. Action on pkg - lock it
+#: src/NCPkgStrings.cc:254
+msgid "&Lock        [*]"
+msgstr "&Zablokuj        [+]"
 
 #. submenu: selections
 #: src/NCPkgStrings.cc:261
@@ -870,3 +951,44 @@ msgstr "Skrypt"
 msgid "End User License Agreement"
 msgstr "Umowa licencyjna"
 
+#. menu items of the filter menu for patches - keep them short
+#. and use unique hotkeys from begin: to end:
+#. begin:
+#: src/NCPkgMenuFilter.cc:44
+#, fuzzy
+msgid "&Installable Patches"
+msgstr "Dostępne poprawki"
+
+#: src/NCPkgMenuFilter.cc:45
+#, fuzzy
+msgid "Installed &Patches"
+msgstr "Poprawki zainstalowane"
+
+#: src/NCPkgMenuFilter.cc:46
+#, fuzzy
+msgid "&All Patches"
+msgstr "Poprawki zainstalowane"
+
+#: src/NCPkgMenuFilter.cc:47
+msgid "&Recommended"
+msgstr ""
+
+#: src/NCPkgMenuFilter.cc:48
+#, fuzzy
+msgid "&Security"
+msgstr "Skrypt"
+
+#: src/NCPkgMenuFilter.cc:49
+msgid "&Optional"
+msgstr ""
+
+#. end:
+#: src/NCPkgMenuFilter.cc:51
+#, fuzzy
+msgid "S&earch"
+msgstr "Postęp wyszukiwania"
+
+#: src/NCPkgPatchSearch.cc:51
+#, fuzzy
+msgid "Search for Patch Name"
+msgstr "&Szukany tekst"

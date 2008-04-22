@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: packager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-01 10:38+0200\n"
+"POT-Creation-Date: 2008-04-21 10:29+0200\n"
 "PO-Revision-Date: 2008-04-05 18:17+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -195,7 +195,7 @@ msgstr "Nie wybrano środowiska graficznego. Proszę wybrać środowisko do zain
 #. part of item in summary
 #: src/clients/inst_media.ycp:33 src/clients/repositories.ycp:197
 #: src/clients/repositories.ycp:224 src/clients/repositories.ycp:227
-#: src/modules/SourceManager.ycp:551 src/modules/SourceManager.ycp:609
+#: src/modules/SourceManager.ycp:553 src/modules/SourceManager.ycp:611
 msgid "Unknown"
 msgstr "Nieznany"
 
@@ -644,12 +644,12 @@ msgstr "Nie udało się zaznaczyć %1 pakietów do instalacji."
 
 #. TODO: use better message, this is a reused string due to text-freeze
 #. dialog headline
-#: src/clients/inst_rpmcopy.ycp:729 src/modules/PackageInstallation.ycp:50
+#: src/clients/inst_rpmcopy.ycp:692 src/modules/PackageInstallation.ycp:50
 msgid "Installation of Some Packages Failed"
 msgstr "Instalacja niektórych pakietów nie powiodła się."
 
 #. continue-cancel popup
-#: src/clients/inst_rpmcopy.ycp:872
+#: src/clients/inst_rpmcopy.ycp:835
 msgid "Initializing the target directory failed"
 msgstr "Błąd podczas inicjalizacji katalogu docelowego"
 
@@ -664,7 +664,7 @@ msgstr ""
 "bez dostępu do systemu zarządzania oprogramowaniem."
 
 #. dialog caption
-#: src/clients/key_manager.ycp:69 src/clients/repositories.ycp:1125
+#: src/clients/key_manager.ycp:69 src/clients/repositories.ycp:1128
 #: src/modules/AddOnProduct.ycp:349
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
@@ -720,7 +720,7 @@ msgid "Repository"
 msgstr "Repozytorium"
 
 #. continue-back popup
-#: src/clients/repositories.ycp:354 src/modules/SourceManager.ycp:448
+#: src/clients/repositories.ycp:354 src/modules/SourceManager.ycp:450
 msgid ""
 "There is no product information available at the given location.\n"
 "If you expected to address a product, return back and enter\n"
@@ -735,8 +735,8 @@ msgstr ""
 "w podanym miejscu do listy wyboru pakietów."
 
 #. popup message part 1
-#: src/clients/repositories.ycp:437 src/modules/Packages.ycp:832
-#: src/modules/SourceManager.ycp:425
+#: src/clients/repositories.ycp:437 src/modules/Packages.ycp:851
+#: src/modules/SourceManager.ycp:427
 #, ycp-format
 msgid ""
 "Unable to create repository\n"
@@ -749,8 +749,8 @@ msgstr ""
 #. popup message part 3
 #. end of popup message, question
 #: src/clients/repositories.ycp:440 src/clients/repositories.ycp:782
-#: src/modules/Packages.ycp:834 src/modules/SourceManager.ycp:255
-#: src/modules/SourceManager.ycp:430
+#: src/modules/Packages.ycp:853 src/modules/SourceManager.ycp:257
+#: src/modules/SourceManager.ycp:432
 msgid "Try again?"
 msgstr "Spróbować ponownie?"
 
@@ -796,7 +796,7 @@ msgstr "Priorytet"
 
 #. table header - is the repo enabled? - keep the translation as short as possible!
 #. status info, to be used inside summary
-#: src/clients/repositories.ycp:596 src/modules/SourceManager.ycp:522
+#: src/clients/repositories.ycp:596 src/modules/SourceManager.ycp:524
 msgid "Enabled"
 msgstr "Włączone"
 
@@ -956,8 +956,8 @@ msgstr ""
 
 #. popup message part 2 followed by other info
 #. popup message, after message header, header of details
-#: src/clients/repositories.ycp:779 src/modules/Packages.ycp:833
-#: src/modules/SourceManager.ycp:253 src/modules/SourceManager.ycp:428
+#: src/clients/repositories.ycp:779 src/modules/Packages.ycp:852
+#: src/modules/SourceManager.ycp:255 src/modules/SourceManager.ycp:430
 msgid "Details:"
 msgstr "Szczegóły:"
 
@@ -1006,12 +1006,12 @@ msgstr ""
 "bez zainstalowanego pakietu %1"
 
 #. Error popup
-#: src/clients/repositories.ycp:1142
+#: src/clients/repositories.ycp:1149
 msgid "<p>There were errors while restoring the repository configuration.</p>\n"
 msgstr "<p>Podczas przywracania konfiguracji repozytorium wystąpiły błędy.</p>\n"
 
 #. Command line help text for the repository module, %1 is "zypper"
-#: src/clients/repositories.ycp:1206
+#: src/clients/repositories.ycp:1213
 #, ycp-format
 msgid "Installation Repositories - this module doesn't support the command line interface, use '%1' instead."
 msgstr "Repozytoria instalacji - ten moduł YaST2 nie obsługuje interfejsu z linii poleceń. Proszę użyć polecenia \"%1\"."
@@ -1059,8 +1059,7 @@ msgid "Starting the Package Manager"
 msgstr "Uruchamianie menedżera pakietów"
 
 #. error popup, %1 is the name of the .rpm package
-#. this is for error code 1 ("NOT_FOUND"), %1 is name of a package
-#: src/clients/sw_single.ycp:165 src/modules/PackageCallbacks.ycp:306
+#: src/clients/sw_single.ycp:165
 #, ycp-format
 msgid "Package %1 was not found on the medium."
 msgstr "Pakiet %1 nie został znaleziony na nośniku."
@@ -1255,10 +1254,7 @@ msgstr "Napęd &CD lub DVD"
 msgid "&Start Check"
 msgstr "&Sprawdź"
 
-#. menu button label - used for more then one device
-#. push button label - in the media change popup, user can eject the CD/DVD
-#: src/include/checkmedia/ui.ycp:326 src/modules/PackageCallbacks.ycp:814
-#: src/modules/PackageCallbacks.ycp:816 src/modules/SourceManager.ycp:1386
+#: src/include/checkmedia/ui.ycp:326 src/modules/SourceManager.ycp:1388
 msgid "&Eject"
 msgstr "&Wysuń"
 
@@ -1306,9 +1302,7 @@ msgstr "<B>Anulowano</B>"
 
 #. escape <> characters in the key name
 #. translators: %1 is GPG key name (e.g. 'SuSE Package Signing Key <build@suse.de>')
-#. Part of the GnuPG key description in popup, %1 is a GnuPG key name
 #: src/include/key_manager_dialogs.ycp:40
-#: src/modules/SignatureCheckDialogs.ycp:470
 #, ycp-format
 msgid "Name: %1"
 msgstr "Nazwa: %1"
@@ -1321,7 +1315,6 @@ msgstr "Odcisk palca: %1"
 
 #. %1 is the date when the GPG key was generated (e.g. '9.10.2000')
 #: src/include/key_manager_dialogs.ycp:44
-#: src/modules/SignatureCheckDialogs.ycp:471
 #, ycp-format
 msgid "Created: %1"
 msgstr "Utwórzono: %1"
@@ -1339,7 +1332,6 @@ msgstr "Ten klucz nigdy nie traci ważności."
 
 #. %1 is the date when the GPG key expires (e.g. '21.3.2015') or "Never"
 #: src/include/key_manager_dialogs.ycp:53
-#: src/modules/SignatureCheckDialogs.ycp:472
 #, ycp-format
 msgid "Expires: %1"
 msgstr "Ważny do: %1"
@@ -1448,9 +1440,7 @@ msgstr ""
 "</p>\n"
 
 #. table header
-#. GnuPG key ID used as "Key ID: 1144AAAA444"
 #: src/include/key_manager_dialogs.ycp:268
-#: src/modules/SignatureCheckDialogs.ycp:230
 msgid "Key ID"
 msgstr "Identyfikator (ID) klucza"
 
@@ -1483,26 +1473,33 @@ msgstr "Pulpit GNOME"
 
 #. TRANSLATORS: Dialog label
 #: src/modules/DefaultDesktop.ycp:31
-msgid "KDE Desktop"
+#, fuzzy
+msgid "KDE4 Desktop"
 msgstr "Pulpit KDE"
 
 #. TRANSLATORS: Dialog label
 #: src/modules/DefaultDesktop.ycp:38
+#, fuzzy
+msgid "KDE3 Desktop"
+msgstr "Pulpit KDE"
+
+#. TRANSLATORS: Dialog label
+#: src/modules/DefaultDesktop.ycp:45
 msgid "XFCE Desktop"
 msgstr "Pulpit XFCE"
 
 #. TRANSLATORS: Dialog label
-#: src/modules/DefaultDesktop.ycp:45
+#: src/modules/DefaultDesktop.ycp:52
 msgid "Minimal X Window"
 msgstr "Minimalny serwer okien X"
 
 #. TRANSLATORS: Dialog label
-#: src/modules/DefaultDesktop.ycp:52
+#: src/modules/DefaultDesktop.ycp:59
 msgid "Minimal Server Selection (Text Mode)"
 msgstr "Wybór minimum serwerowego (tryb tekstowy)"
 
 #. TRANSLATORS: dialog label
-#: src/modules/DefaultDesktop.ycp:161
+#: src/modules/DefaultDesktop.ycp:168
 msgid "No system type selected"
 msgstr "Nie wybrano typu systemu"
 
@@ -1531,518 +1528,6 @@ msgstr ""
 msgid "Cannot copy the key to the temporary directory."
 msgstr "Nie można skopiować klucza do katalogu tymczasowego."
 
-#: src/modules/PackageCallbacks.ycp:144 src/modules/PackageCallbacks.ycp:1584
-msgid "Package: "
-msgstr "Pakiet: "
-
-#: src/modules/PackageCallbacks.ycp:145
-msgid "Size: "
-msgstr "Rozmiar: "
-
-#: src/modules/PackageCallbacks.ycp:179 src/modules/PackageCallbacks.ycp:190
-#, ycp-format
-msgid "Downloading package %1 (%2)..."
-msgstr "Pobieranie pakietu %1 (%2)..."
-
-#. popup heading
-#: src/modules/PackageCallbacks.ycp:195
-msgid "Downloading Package"
-msgstr "Pobieranie pakietu"
-
-#. check box
-#: src/modules/PackageCallbacks.ycp:242
-msgid "Show &details"
-msgstr "Pokaż &szczegóły"
-
-#. error message, %1 is a package name
-#: src/modules/PackageCallbacks.ycp:312
-#, ycp-format
-msgid "Package %1 could not be downloaded (input/output error)."
-msgstr "Nie można pobrać pakietu %1 (błąd wejścia/wyjścia)"
-
-#. error message, %1 is a package name
-#: src/modules/PackageCallbacks.ycp:318
-#, ycp-format
-msgid "Package %1 is broken, integrity check has failed."
-msgstr "Pakiet %1 jest uszkodzony. Sprawdzanie integralności pliku zakończyło się niepowodzeniem."
-
-#. command line mode - ask user whether installation of the failed package should be retried
-#: src/modules/PackageCallbacks.ycp:331 src/modules/PackageCallbacks.ycp:546
-msgid "Retry installation of the package?"
-msgstr "Ponowić próbę instalacji pakietu?"
-
-#. command line mode - ask user whether the installation should be aborted
-#: src/modules/PackageCallbacks.ycp:340 src/modules/PackageCallbacks.ycp:555
-msgid "Abort the installation?"
-msgstr "Przerwać instalację?"
-
-#. error message, %1 is code of the error,
-#. detail string is appended to the end
-#: src/modules/PackageCallbacks.ycp:361 src/modules/PackageCallbacks.ycp:398
-#: src/modules/PackageCallbacks.ycp:2394
-#, ycp-format
-msgid "Error: %1:"
-msgstr "Błąd: %1:"
-
-#: src/modules/PackageCallbacks.ycp:465
-#, ycp-format
-msgid "Uninstalling package %1 (%2)..."
-msgstr "Usuwanie pakietu %1 (%2)..."
-
-#: src/modules/PackageCallbacks.ycp:466
-#, ycp-format
-msgid "Installing package %1 (%2)..."
-msgstr "Instalowanie pakietu %1 (%2)..."
-
-#: src/modules/PackageCallbacks.ycp:471
-msgid "Uninstalling Package"
-msgstr "Usuwanie pakietu"
-
-#: src/modules/PackageCallbacks.ycp:472
-msgid "Installing Package"
-msgstr "Instalowanie pakietu"
-
-#. error popup during package installation, %1 is the name of the package
-#: src/modules/PackageCallbacks.ycp:531
-#, ycp-format
-msgid "Removal of package %1 failed."
-msgstr "Usunięcie pakietu %1 nie powiodło się."
-
-#. error popup during package installation, %1 is the name of the package
-#: src/modules/PackageCallbacks.ycp:533
-#, ycp-format
-msgid "Installation of package %1 failed."
-msgstr "Instalacja pakietu %1 nie powiodła się."
-
-#. error report
-#: src/modules/PackageCallbacks.ycp:722
-msgid ""
-"<p>The repository at the specified URL now provides a different media ID.\n"
-"If the URL is correct, this indicates that the repository content has changed. To \n"
-"continue using this repository, start <b>Installation Repositories</b> from \n"
-"the YaST control center and refresh the repository.</p>\n"
-msgstr ""
-"<p>Repozytorium pod podanym adresem URL dostarcza obecnie nośnik o innym ID.\n"
-"Jeśli  adres URL jest prawidłowy, oznacza to, że zawartość repozytorium uległa zmianie. Aby \n"
-"kontynuować wykorzystywanie tego repozytorium, należy uruchomić <i>Repozytoria  instalacji</i> z \n"
-"centrum sterowania YaST i odświeżyć repozytorium.</p>\n"
-
-#. media is double sided, we want the user to insert the 'Side A' of the media
-#. the complete string will be "<product> <media> <number>, <side>"
-#. e.g. "'SuSE Linux 9.0' DVD 1, Side A"
-#: src/modules/PackageCallbacks.ycp:737
-msgid "Side A"
-msgstr "Strona A"
-
-#. media is double sided, we want the user to insert the 'Side B' of the media
-#: src/modules/PackageCallbacks.ycp:741
-msgid "Side B"
-msgstr "Strona B"
-
-#. label for a repository - %1 product name (e.g. openSUSE 10.2), %2 medium number (e.g. 2)
-#: src/modules/PackageCallbacks.ycp:756
-#, ycp-format
-msgid "%1 (Disc %2)"
-msgstr "%1 (Dysk %2)"
-
-#. label for a repository - %1 product name (e.g. openSUSE 10.2), %2 medium number (e.g. 2)
-#: src/modules/PackageCallbacks.ycp:758
-#, ycp-format
-msgid "%1 (Medium %2)"
-msgstr "%1 (nośnik %2)"
-
-#. prompt to insert product (%1 == "SuSE Linux version 9.2 CD 2")
-#: src/modules/PackageCallbacks.ycp:763
-#, ycp-format
-msgid ""
-"Insert\n"
-"'%1'"
-msgstr ""
-"Proszę umieścić w napędzie \n"
-"'%1'"
-
-#. report error while accessing local directory with product (%1 == "SuSE Linux ...")
-#: src/modules/PackageCallbacks.ycp:768
-#, ycp-format
-msgid ""
-"Cannot access installation media\n"
-"%1.\n"
-"Check whether the directory is accessible."
-msgstr ""
-"Nie można uzyskać dostępu do nośnika instalacyjnego\n"
-"%1.\n"
-"Proszę sprawdzić, czy katalog jest dostępny."
-
-#. report error while accessing network media of product (%1 == "SuSE Linux ...")
-#: src/modules/PackageCallbacks.ycp:775
-#, ycp-format
-msgid ""
-"Cannot access installation media \n"
-"%1.\n"
-"Check whether the server is accessible."
-msgstr ""
-"Nie można uzyskać dostępu do nośnika instalacyjnego \n"
-"%1.\n"
-"Proszę sprawdzić, czy serwer jest dostępny."
-
-#. currently unused
-#: src/modules/PackageCallbacks.ycp:781
-msgid "The correct repository medium could not be mounted."
-msgstr "Nie udało się zamontować właściwego nośnika źródłowego."
-
-#. push button label during media change popup, user can skip
-#. this media (CD) so no packages from this media will be installed
-#: src/modules/PackageCallbacks.ycp:797
-msgid "&Skip"
-msgstr "&Pomiń"
-
-#: src/modules/PackageCallbacks.ycp:827
-msgid "A&utomatically Eject CD/DVD Medium"
-msgstr "A&utomatyczne wysuwanie nośnika CD/DVD"
-
-#. popup string - refresh the displayed counter
-#: src/modules/PackageCallbacks.ycp:852 src/modules/PackageCallbacks.ycp:953
-#, ycp-format
-msgid "Automatically Retry After %1 Seconds"
-msgstr "Odśwież automatycznie po %1 sekundach"
-
-#. command line mode - ask user whether installation of the failed package should be retried
-#: src/modules/PackageCallbacks.ycp:878
-msgid "Retry the installation?"
-msgstr "Ponowić próbę instalacji?"
-
-#. command line mode - ask user whether the installation should be aborted
-#: src/modules/PackageCallbacks.ycp:887
-msgid "Skip the medium?"
-msgstr "Pominąć nośnik?"
-
-#. otherwise ignore the medium
-#: src/modules/PackageCallbacks.ycp:895
-msgid "Ignoring the bad medium..."
-msgstr "Ignorowanie uszkodzonego nośnika..."
-
-#. TextEntry label
-#. text entry
-#: src/modules/PackageCallbacks.ycp:906 src/modules/PackageCallbacks.ycp:970
-#: src/modules/SourceDialogs.ycp:361
-msgid "&URL"
-msgstr "&URL"
-
-#. popup label (%1 is repository URL)
-#: src/modules/PackageCallbacks.ycp:1233
-#, ycp-format
-msgid "Creating Repository %1"
-msgstr "Tworzenie repozytorium %1"
-
-#. error message - a label followed by a richtext with details
-#: src/modules/PackageCallbacks.ycp:1264
-msgid "Error occurred while creating the repository."
-msgstr "Błąd podczas tworzenia repozytorium."
-
-#. error message - a label followed by a richtext with details
-#: src/modules/PackageCallbacks.ycp:1268 src/modules/PackageCallbacks.ycp:1381
-#: src/modules/PackageCallbacks.ycp:1480
-msgid "Unable to retrieve the remote repository description."
-msgstr "Nie można pobrać opisu zdalnego repozytorium."
-
-#. error message - a label followed by a richtext with details
-#: src/modules/PackageCallbacks.ycp:1271 src/modules/PackageCallbacks.ycp:1384
-#: src/modules/PackageCallbacks.ycp:1483
-msgid "An error occurred while retrieving the new metadata."
-msgstr "Podczas pobierania nowych metadanych wystąpił błąd."
-
-#. error message - a label followed by a richtext with details
-#: src/modules/PackageCallbacks.ycp:1274 src/modules/PackageCallbacks.ycp:1387
-#: src/modules/PackageCallbacks.ycp:1486
-msgid "The repository is not valid."
-msgstr "Repozytorium jest nieprawidłowe."
-
-#. error message - a label followed by a richtext with details
-#: src/modules/PackageCallbacks.ycp:1277
-msgid "The repository metadata is invalid."
-msgstr "Metadane repozytorium są nieprawidłowe."
-
-#. command line mode - ask user whether the repository refreshment should be retried
-#. command line mode - ask user whether target initializatin can be restarted
-#: src/modules/PackageCallbacks.ycp:1291 src/modules/PackageCallbacks.ycp:1407
-#: src/modules/PackageCallbacks.ycp:1500 src/modules/PackageCallbacks.ycp:2345
-msgid "Retry?"
-msgstr "Ponowić?"
-
-#. popup label (%1 is repository URL)
-#: src/modules/PackageCallbacks.ycp:1333 src/modules/PackageCallbacks.ycp:1342
-#, ycp-format
-msgid "Probing Repository %1"
-msgstr "Wykrywanie repozytorium %1"
-
-#. error message - a label followed by a richtext with details
-#: src/modules/PackageCallbacks.ycp:1377
-msgid "Error occurred while probing the repository."
-msgstr "Błąd podczas wykrywania repozytorium."
-
-#. error message - a label followed by a richtext with details
-#: src/modules/PackageCallbacks.ycp:1390
-msgid "Repository probing details."
-msgstr "Szczegóły wykrywania repozytorium"
-
-#. error message - a label followed by a richtext with details
-#: src/modules/PackageCallbacks.ycp:1393
-msgid "Repository metadata is invalid."
-msgstr "Metadane repozytorium są nieprawidłowe."
-
-#. error message - a label followed by a richtext with details
-#: src/modules/PackageCallbacks.ycp:1476
-#, ycp-format
-msgid "Repository %1"
-msgstr "Repozytorium %1"
-
-#: src/modules/PackageCallbacks.ycp:1555
-#, ycp-format
-msgid "Downloading delta RPM package %1 (%2)..."
-msgstr "Pobieranie pakietu delta RPM %1 (%2)..."
-
-#. popup heading
-#: src/modules/PackageCallbacks.ycp:1561
-msgid "Downloading Delta RPM package"
-msgstr "Pobieranie pakietu delta RPM"
-
-#: src/modules/PackageCallbacks.ycp:1575
-#, ycp-format
-msgid "Applying delta RPM package %1..."
-msgstr "Nakładanie pakietu delta RPM %1..."
-
-#. popup heading
-#: src/modules/PackageCallbacks.ycp:1582
-msgid "Applying delta RPM package"
-msgstr "Nakładanie pakietu delta RPM"
-
-#: src/modules/PackageCallbacks.ycp:1605
-#, ycp-format
-msgid "Downloading patch RPM package %1 (%2)..."
-msgstr "Pobieranie pakietu poprawki RPM %1 (%2)..."
-
-#. popup heading
-#: src/modules/PackageCallbacks.ycp:1611
-msgid "Downloading Patch RPM Package"
-msgstr "Pobieranie pakietu poprawki RPM"
-
-#. close popup
-#: src/modules/PackageCallbacks.ycp:1628
-msgid "Failed to download delta RPM"
-msgstr "Pobranie delta RPM nie powiodło się"
-
-#. close popup
-#: src/modules/PackageCallbacks.ycp:1633
-msgid "Failed to apply delta RPM"
-msgstr "Nakładanie pakietu delta RPM nie powiodło się"
-
-#. close popup
-#: src/modules/PackageCallbacks.ycp:1638
-msgid "Failed to download patch RPM"
-msgstr "Pobranie poprawki RPM nie powiodło się"
-
-#: src/modules/PackageCallbacks.ycp:1671
-#, ycp-format
-msgid "Starting script %1 (patch %2)..."
-msgstr "Uruchamianie skryptu %1 (poprawka %2)..."
-
-#. popup heading
-#: src/modules/PackageCallbacks.ycp:1678
-msgid "Running Script"
-msgstr "Uruchamianie skryptu"
-
-#. label, script name follows
-#: src/modules/PackageCallbacks.ycp:1683
-msgid "Script: "
-msgstr "Skrypt:"
-
-#. label, patch name follows
-#: src/modules/PackageCallbacks.ycp:1690
-msgid "Patch: "
-msgstr "Poprawka:"
-
-#. label
-#: src/modules/PackageCallbacks.ycp:1698
-msgid "Output of the Script"
-msgstr "Wyjście skryptu"
-
-#. label, %1 is patch name with version and architecture
-#: src/modules/PackageCallbacks.ycp:1760
-#, ycp-format
-msgid ""
-"Patch: %1\n"
-"\n"
-msgstr ""
-"Poprawka: %1\n"
-"\n"
-
-#. a popup question with "Continue", "Skip" and "Abort" buttons
-#: src/modules/PackageCallbacks.ycp:1809
-msgid ""
-"The repositories are being refreshed.\n"
-"Continue with refreshing?\n"
-"\n"
-"Note: If the refresh is skipped some packages\n"
-"might be missing or out of date."
-msgstr ""
-"Repozytoria są odświeżane.\n"
-"Czy kontynuować odświeżanie?\n"
-"\n"
-"Uwaga: jeśli odświeżanie zostanie pominięte\n"
-"niektóre pakiety mogą być nieaktualne lub brakujące."
-
-#: src/modules/PackageCallbacks.ycp:1817
-msgid "Skip Refresh"
-msgstr "Pomiń odświeżanie"
-
-#. heading of popup
-#: src/modules/PackageCallbacks.ycp:1861 src/modules/PackageCallbacks.ycp:1903
-msgid "Downloading"
-msgstr "Pobieranie"
-
-#. message in a progress popup
-#. progress bar label, %1 is URL with optional download rate
-#: src/modules/PackageCallbacks.ycp:1911 src/modules/PackageCallbacks.ycp:1965
-#, ycp-format
-msgid "Downloading: %1"
-msgstr "Pobieranie: %1"
-
-#. error message, %1 is the cause for the error
-#: src/modules/PackageCallbacks.ycp:2028 src/modules/PackageCallbacks.ycp:2034
-#, ycp-format
-msgid ""
-"Download failed:\n"
-"    %1"
-msgstr ""
-"Pobieranie nie powiodło się:\n"
-"    %1"
-
-#: src/modules/PackageCallbacks.ycp:2047
-msgid "Skip Autorefresh"
-msgstr "Pomiń autoodświeżanie"
-
-#. heading of popup
-#: src/modules/PackageCallbacks.ycp:2092 src/modules/PackageCallbacks.ycp:2160
-msgid "Checking Package Database"
-msgstr "Sprawdzanie bazy pakietów"
-
-#. message in a progress popup
-#: src/modules/PackageCallbacks.ycp:2095
-msgid "Rebuilding package database. This process can take some time."
-msgstr "Przebudowa bazy pakietów. Proces ten może być czasochłonny."
-
-#. progress bar label
-#: src/modules/PackageCallbacks.ycp:2098 src/modules/PackageCallbacks.ycp:2173
-msgid "Status"
-msgstr "Status"
-
-#. error message, %1 is the cause for the error
-#: src/modules/PackageCallbacks.ycp:2131
-#, ycp-format
-msgid ""
-"Rebuilding of package database failed:\n"
-"%1"
-msgstr ""
-"Przebudowa bazy pakietów nie powiodła się:\n"
-"%1"
-
-#. error popup
-#: src/modules/PackageCallbacks.ycp:2142
-#, ycp-format
-msgid ""
-"Error rebuilding database:\n"
-"%1"
-msgstr ""
-"Błąd podczas przebudowy bazy danych:\n"
-"%1"
-
-#. message in a progress popup
-#: src/modules/PackageCallbacks.ycp:2163
-msgid "Converting package database. This process can take some time."
-msgstr "Konwersja bazy pakietów. Proces ten może być czasochłonny."
-
-#. error message, %1 is the cause for the error
-#: src/modules/PackageCallbacks.ycp:2198
-#, ycp-format
-msgid ""
-"Conversion of package database failed:\n"
-"%1"
-msgstr ""
-"Konwersja bazy pakietów nie powiodła się:\n"
-"%1"
-
-#. error popup
-#: src/modules/PackageCallbacks.ycp:2212
-#, ycp-format
-msgid "Package %1 is already present in the new database."
-msgstr "Pakiet %1 jest już w nowej bazie danych."
-
-#. yes-no popup
-#: src/modules/PackageCallbacks.ycp:2221
-msgid ""
-"Error reading from old database.\n"
-"Ignore this error and continue?"
-msgstr ""
-"Błąd odczytu ze starej bazy danych.\n"
-"Zignorować ten błąd i kontynuować?"
-
-#. error popup
-#: src/modules/PackageCallbacks.ycp:2229
-msgid "Error writing to new database"
-msgstr "Błąd podczas zapisu do nowej bazy danych"
-
-#. progress message (command line mode)
-#: src/modules/PackageCallbacks.ycp:2256
-msgid "Reading RPM DB..."
-msgstr "Wczytywanie bazy RPM..."
-
-#. popup heading
-#: src/modules/PackageCallbacks.ycp:2266
-msgid "Reading Installed Packages"
-msgstr "Odczytywanie zainstalowanych pakietów"
-
-#. progress bar label
-#: src/modules/PackageCallbacks.ycp:2269 src/modules/PackageCallbacks.ycp:2286
-msgid "Scanning RPM Database..."
-msgstr "Skanowanie bazy RPM..."
-
-#. error message, could not read RPM database
-#: src/modules/PackageCallbacks.ycp:2332
-msgid "Initialization of the target failed."
-msgstr "Inicjalizacja celu nie udała się."
-
-#. status message (command line mode)
-#: src/modules/PackageCallbacks.ycp:2428
-msgid "RPM DB read"
-msgstr "Odczyt bazy RPM"
-
-#. heading in a popup window
-#: src/modules/PackageCallbacks.ycp:2451
-msgid "User Authentication"
-msgstr "Uwierzytelnianie użytkowników"
-
-#: src/modules/PackageCallbacks.ycp:2455
-#, ycp-format
-msgid ""
-"URL: %1\n"
-"\n"
-"%2"
-msgstr ""
-"URL: %1\n"
-"\n"
-"%2"
-
-#. textentry label
-#: src/modules/PackageCallbacks.ycp:2463 src/modules/SourceDialogs.ycp:1328
-msgid "&User Name"
-msgstr "Nazwa &użytkownika"
-
-#. textentry label
-#. password entry
-#: src/modules/PackageCallbacks.ycp:2466 src/modules/SourceDialogs.ycp:1330
-msgid "&Password"
-msgstr "&Hasło"
-
 #. button label
 #: src/modules/PackageInstallation.ycp:38
 msgid "&Show Failed Packages List"
@@ -2054,69 +1539,67 @@ msgid "&Show Full Log"
 msgstr "&Pokaż dziennik"
 
 #. warning text
-#: src/modules/Packages.ycp:254
+#: src/modules/Packages.ycp:263
 msgid "Your computer is a 64-bit x86-64 system. However, you are trying to install a 32-bit distribution."
 msgstr "Ten komputer posiada architekturę 64-bitową x86-64. Pomimo tego podjęto próbę zainstalowania dystrybucji 32-bitowej."
 
 #. installation proposal - SW summary, %1 is name of the installed product
 #. (e.g. openSUSE 10.3, SUSE Linux Enterprise ...)
-#: src/modules/Packages.ycp:271
+#: src/modules/Packages.ycp:280
 #, ycp-format
 msgid "Product: %1"
 msgstr "Produkt: %1"
 
 #. installation proposal - SW summary, %1 is name of the selected desktop or system type (e.g. KDE)
-#: src/modules/Packages.ycp:274
+#: src/modules/Packages.ycp:283
 #, ycp-format
 msgid "System Type: %1"
 msgstr "Typ systemu: %1"
 
-#. merge (output, ListSelected (`pattern, "+  %1"));
-#: src/modules/Packages.ycp:278
+#: src/modules/Packages.ycp:290
 msgid "Patterns:<br>"
 msgstr "Schematy:<br>"
 
-#. merge (output, ListSelected (`selection, "+  %1"));
-#: src/modules/Packages.ycp:282
+#: src/modules/Packages.ycp:299
 msgid "Selections:<br>"
 msgstr "Wybrane:<br>"
 
 #. installation proposal - SW summary, %1 is size of the selected packages (in MB or GB)
-#: src/modules/Packages.ycp:287
+#: src/modules/Packages.ycp:306
 #, ycp-format
 msgid "Size of Packages to Install: %1"
 msgstr "Rozmiar pakietów do zainstalowania: %1"
 
 #. installation proposal - SW summary, %1 is download size of the selected packages
 #. which will be installed from an ftp or http repository (in MB or GB)
-#: src/modules/Packages.ycp:297
+#: src/modules/Packages.ycp:316
 #, ycp-format
 msgid "Size of Packages to Download: %1"
 msgstr "Rozmiar pakietów do pobranie: %1"
 
 #. summary warning
-#: src/modules/Packages.ycp:345
+#: src/modules/Packages.ycp:364
 msgid "Not enough disk space."
 msgstr "Brak miejsca na dysku."
 
 #. summary warning
-#: src/modules/Packages.ycp:347
+#: src/modules/Packages.ycp:366
 msgid "Not enough disk space. Remove some packages in the single selection."
 msgstr "Brak miejsca na dysku. Należy zrezygnować z części wybranych pakietów."
 
-#: src/modules/Packages.ycp:373
+#: src/modules/Packages.ycp:392
 #, ycp-format
 msgid "Only %1 (%2%%) free space available on partition %3.<BR>"
 msgstr "Na partycji %3 dostępne jest tylko %1 (%2%%) wolnego miejsca.<BR>"
 
 #. error in proposal, %1 is URL
-#: src/modules/Packages.ycp:843
+#: src/modules/Packages.ycp:862
 #, ycp-format
 msgid "No repository found at '%1'."
 msgstr "Nie znaleziono repozytorium pod adresem '%1'."
 
 #. TRANSLATORS: beginning of the rich text with the release notes
-#: src/modules/Packages.ycp:1014
+#: src/modules/Packages.ycp:1047
 msgid ""
 "<p><b>These are the release notes made for the first initial release. They are\n"
 "part of the installation media. During the configuration steps, if a connection\n"
@@ -2129,32 +1612,32 @@ msgstr ""
 "połączenie z Internetem.</b></p>"
 
 #. popup - information label
-#: src/modules/Packages.ycp:1032
+#: src/modules/Packages.ycp:1065
 msgid "Integrating booted media..."
 msgstr "Integracja nośnika..."
 
-#: src/modules/Packages.ycp:1050
+#: src/modules/Packages.ycp:1083
 msgid "Failed to integrate the service pack repository."
 msgstr "Integracja repozytorium pakietu serwisowego zakończona niepowodzeniem."
 
 #. popup - information label
-#: src/modules/Packages.ycp:1081
+#: src/modules/Packages.ycp:1114
 msgid "Initializing repositories..."
 msgstr "Inicjalizacja repozytoriów..."
 
 #. message popup, %1 is product name
-#: src/modules/Packages.ycp:1147
+#: src/modules/Packages.ycp:1180
 #, ycp-format
 msgid "Insert %1 CD 1"
 msgstr "Proszę umieścić w napędzie płytę CD 1 systemu %1"
 
-#: src/modules/Packages.ycp:1149
+#: src/modules/Packages.ycp:1182
 #, ycp-format
 msgid "%1 CD 1 not found"
 msgstr "Nie znaleziono %1 CD1"
 
 #. an error message
-#: src/modules/Packages.ycp:1257
+#: src/modules/Packages.ycp:1290
 #, ycp-format
 msgid ""
 "Error while initializing package descriptions.\n"
@@ -2164,7 +1647,7 @@ msgstr ""
 "Szczegóły dot. błędu znajdują się w pliku dziennika %1."
 
 #. popup label
-#: src/modules/Packages.ycp:1436
+#: src/modules/Packages.ycp:1469
 msgid "Evaluating package selection..."
 msgstr "Sprawdzanie listy pakietów..."
 
@@ -2282,415 +1765,6 @@ msgstr "Zamykanie systemu..."
 #: src/modules/ProductLicense.ycp:756
 msgid "Accept or decline the license agreement."
 msgstr "Proszę zaakceptować albo odrzucić warunki umowy licencyjnej."
-
-#. Standard text strings
-#. GnuPG fingerprint used as "Fingerprint: AAA BBB CCC"
-#: src/modules/SignatureCheckDialogs.ycp:228
-msgid "Fingerprint"
-msgstr "Odcisk"
-
-#. popup question, %1 stands for the package name
-#: src/modules/SignatureCheckDialogs.ycp:362
-#, ycp-format
-msgid ""
-"The package %1 is not digitally signed. This means that the origin\n"
-"and integrity of the package cannot be verified. Installing the package\n"
-"may put the integrity of your system at risk.\n"
-"\n"
-"Install it anyway?"
-msgstr ""
-"Pakiet %1 nie posiada podpisu cyfrowego. Oznacza to, że nie można\n"
-"zweryfikować pochodzenia i integralności pakietu. Instalacja takiego\n"
-"pakietu może stanowić ryzyko dla systemu.\n"
-"\n"
-"Zainstalować ten pakiet?"
-
-#. popup question, %1 stands for the filename
-#: src/modules/SignatureCheckDialogs.ycp:369
-#, ycp-format
-msgid ""
-"The file %1\n"
-"is not digitally signed. This means that the origin and integrity of the file\n"
-"cannot be verified. Using the file may put the integrity of your system at risk.\n"
-"\n"
-"Use it anyway?"
-msgstr ""
-"Plik %1\n"
-"nie posiada podpisu cyfrowego. Oznacza to, że nie można\n"
-"zweryfikować pochodzenia i integralności pliku. Użycie takiego\n"
-"pliku może stanowić ryzyko dla systemu.\n"
-"\n"
-"Użyć tego pliku?"
-
-#. popup heading
-#: src/modules/SignatureCheckDialogs.ycp:382
-msgid "Unsigned Package"
-msgstr "Niepodpisany pakiet"
-
-#: src/modules/SignatureCheckDialogs.ycp:382
-msgid "Unsigned File"
-msgstr "Niepodpisany plik"
-
-#. popup question, %1 stands for the package name
-#: src/modules/SignatureCheckDialogs.ycp:417
-#, ycp-format
-msgid ""
-"No checksum for package %1 was found in the repository.\n"
-"This means that the package is part of the signed repository, but the list of checksums\n"
-"in this repository does not mention this package. Installing the package may put\n"
-"the integrity of your system at risk.\n"
-"\n"
-"Install it anyway?"
-msgstr ""
-"W repozytorium nie znaleziono sumy kontrolnej dla pakietu %1.\n"
-"Oznacza to, że pakiet jest częścią podpisanego repozytorium, lecz lista\n"
-"sum kontrolnych nie zawiera danych tego pakietu. Instalacja pakietu\n"
-"może stanowić ryzyko dla systemu.\n"
-"\n"
-"Zainstalować ten pakiet?"
-
-#. popup question, %1 stands for the filename
-#: src/modules/SignatureCheckDialogs.ycp:425
-#, ycp-format
-msgid ""
-"No checksum for file %1\n"
-"was found in the repository. This means that the file is part of the signed repository,\n"
-"but the list of checksums in this repository does not mention this file. Using the file\n"
-"may put the integrity of your system at risk.\n"
-"\n"
-"Use it anyway?"
-msgstr ""
-"W repozytorium nie znaleziono sumy kontrolnej dla pliku %1.\n"
-"Oznacza to, że plik ten jest częścią podpisanego repozytorium, lecz lista\n"
-"sum kontrolnych nie zawiera danych tego pliku. Użycie pliku\n"
-"może stanowić ryzyko dla systemu.\n"
-"\n"
-"Użyć tego pliku?"
-
-#. popup heading
-#: src/modules/SignatureCheckDialogs.ycp:439
-msgid "No Checksum Found"
-msgstr "Brak sumy kontrolnej"
-
-#. Part of the GnuPG key description in popup, %1 is a GnuPG key ID
-#: src/modules/SignatureCheckDialogs.ycp:465
-#: src/modules/SignatureCheckDialogs.ycp:567
-#, ycp-format
-msgid "ID: %1"
-msgstr "ID: %1"
-
-#. Part of the GnuPG key description in popup, %1 is a GnuPG key fingerprint
-#: src/modules/SignatureCheckDialogs.ycp:468
-#, ycp-format
-msgid "Fingerprint: %1"
-msgstr "Odcisk: %1"
-
-#. popup question, %1 stands for the package name, %2 for the complete description of the GnuPG key (multiline)
-#: src/modules/SignatureCheckDialogs.ycp:488
-#, ycp-format
-msgid ""
-"Package %1 is signed with the following GnuPG key, but the integrity check failed: %2\n"
-"\n"
-"This means that the package has been changed by accident or by an attacker\n"
-"since the repository creator signed it. Installing it is a big risk\n"
-"for the integrity and security of your system.\n"
-"\n"
-"Install it anyway?"
-msgstr ""
-"Pakiet %1 jest podpisany poniższym kluczem GnuPG, lecz sprawdzanie jego integralności\n"
-"zakończyło się niepowodzeniem: %2\n"
-"\n"
-"Oznacza to, że pakiet został zmieniony przypadkowo lub przez atakującego,\n"
-"ponieważ twórca repozytorium podpisał pakiet. Instalacja pakietu stanowi poważne\n"
-"ryzyko dla systemu.\n"
-"\n"
-"Zainstalować ten pakiet?"
-
-#. popup question, %1 stands for the filename, %2 for the complete description of the GnuPG key (multiline)
-#: src/modules/SignatureCheckDialogs.ycp:497
-#, ycp-format
-msgid ""
-"File %1\n"
-"is signed with the following GnuPG key, but the integrity check failed: %2\n"
-"\n"
-"This means that the file has been changed by accident or by an attacker\n"
-"since the repository creator signed it. Using it is a big risk\n"
-"for the integrity and security of your system.\n"
-"\n"
-"Use it anyway?"
-msgstr ""
-"Plik %1 jest podpisany poniższym kluczem GnuPG, lecz sprawdzanie jego integralności\n"
-"zakończyło się niepowodzeniem: %2\n"
-"\n"
-"Oznacza to, że plik został zmieniony przypadkowo lub przez atakującego,\n"
-"ponieważ twórca repozytorium podpisał plik. Użycie pliku stanowi poważne\n"
-"ryzyko dla systemu.\n"
-"\n"
-"Użyć tego pliku?"
-
-#: src/modules/SignatureCheckDialogs.ycp:516
-msgid "Validation Check Failed"
-msgstr "Sprawdzenie poprawności zakończone niepowodzeniem"
-
-#. popup question, %1 stands for the package name, %2 for the complex multiline description of the GnuPG key
-#: src/modules/SignatureCheckDialogs.ycp:545
-#, ycp-format
-msgid ""
-"The package %1 is digitally signed\n"
-"with the following unknown GnuPG key: %2.\n"
-"\n"
-"This means that a trust relationship to the creator of the package\n"
-"cannot be established. Installing the package may put the integrity\n"
-"of your system at risk.\n"
-"\n"
-"Install it anyway?"
-msgstr ""
-"Pakiet %1 jest podpisany nieznanym kluczem GnuPG: %2\n"
-"\n"
-"Oznacza to, że nie można nawiązać relacji zaufania z twórcą\n"
-"pakietu. Instalacja pakietu może stanowić ryzyko dla systemu.\n"
-"\n"
-"Zainstalować ten pakiet?"
-
-#. popup question, %1 stands for the filename, %2 for the complex multiline description of the GnuPG key
-#: src/modules/SignatureCheckDialogs.ycp:555
-#, ycp-format
-msgid ""
-"The file %1\n"
-"is digitally signed with the following unknown GnuPG key: %2.\n"
-"\n"
-"This means that a trust relationship to the creator of the file\n"
-"cannot be established. Using the file may put the integrity\n"
-"of your system at risk.\n"
-"\n"
-"Use it anyway?"
-msgstr ""
-"Plik %1\n"
-"jest podpisany nieznanym kluczem GnuPG: %2\n"
-"\n"
-"Oznacza to, że nie można nawiązać relacji zaufania z twórcą\n"
-"pliku. Użycie pliku może stanowić ryzyko dla systemu.\n"
-"\n"
-"Użyć tego pliku?"
-
-#. popup heading
-#: src/modules/SignatureCheckDialogs.ycp:576
-msgid "Unknown GnuPG Key"
-msgstr "Nieznany klucz GnuPG"
-
-#. popup question, %1 stands for the package name, %2 for the key ID, %3 for the key name
-#: src/modules/SignatureCheckDialogs.ycp:623
-#, ycp-format
-msgid ""
-"The package %1 is digitally signed\n"
-"with key '%2 (%3)'.\n"
-"\n"
-"There is no trust relationship to the owner of the key.\n"
-"If you trust the owner, mark the key as trusted.\n"
-"\n"
-"Installing a package from an unknown repository can put\n"
-"the integrity of your system at risk. It is safest\n"
-"to skip the package."
-msgstr ""
-"Pakiet %1 jest podpisany cyfrowo\n"
-"kluczem '%2 (%3)'.\n"
-"\n"
-"Brak relacji zaufania z właścicielem klucza.\n"
-"Jeśli jest on godny zaufania, należy zaimportować\n"
-"klucz do zbioru zaufanych kluczy, a następnie\n"
-"kontynuować instalację.\n"
-"\n"
-"Instalacja pakietu z nieznanego repozytorium może stanowić\n"
-"ryzyko dla systemu. Najbezpieczniej jest pominąć\n"
-"ten pakiet."
-
-#. popup question, %1 stands for the filename, %2 for the key ID, %3 for the key name
-#: src/modules/SignatureCheckDialogs.ycp:634
-#, ycp-format
-msgid ""
-"The file %1 is digitally signed\n"
-"with key '%2 (%3)'.\n"
-"\n"
-"There is no trust relationship to the owner of the key.\n"
-"If you trust the owner, mark the key as trusted.\n"
-"\n"
-"Installing a file from an unknown repository can put\n"
-"the integrity of your system at risk. It is safest\n"
-"to skip it."
-msgstr ""
-"Plik %1 jest podpisany cyfrowo\n"
-"kluczem '%2 (%3)'.\n"
-"\n"
-"Brak relacji zaufania z właścicielem klucza.\n"
-"Jeśli jest on godny zaufania, należy zaimportować\n"
-"klucz do zbioru zaufanych kluczy, a następnie\n"
-"kontynuować instalację.\n"
-"\n"
-"Instalacja pliku z nieznanego repozytorium może stanowić\n"
-"ryzyko dla systemu. Najbezpieczniej jest pominąć\n"
-"ten plik."
-
-#. popup heading
-#: src/modules/SignatureCheckDialogs.ycp:651
-msgid "Signed with Untrusted Public Key"
-msgstr "Podpisano niezaufanym kluczem publicznym"
-
-#. push button
-#: src/modules/SignatureCheckDialogs.ycp:657
-msgid "&Trust and Import the Key"
-msgstr "Za&ufaj i importuj ten klucz"
-
-#. additional Richtext (HTML) warning text (kind of help), 1/2
-#: src/modules/SignatureCheckDialogs.ycp:691
-#: src/modules/SignatureCheckDialogs.ycp:816
-msgid ""
-"<p>The owner of the key may distribute updates,\n"
-"packages, and package repositories that your system will trust and offer\n"
-"for installation and update without any further warning. In this way,\n"
-"importing the key into your keyring of trusted keys allows the key owner\n"
-"to have a certain amount of control over the software on your system.</p>"
-msgstr "<p>Właściciel klucza może dystrybuować aktualizacje, pakiety i repozytoria pakietów, które będą uznane za godne zaufania. Ich instalacja będzie odbywać się bez dalszych ostrzeżeń. Poprzez zaimportowanie klucza do zbioru zaufanych właściciel klucza uzyskuje pewną kontrolę nad oprogramowaniem tego systemu.</p>"
-
-#. additional Richtext (HTML) warning text (kind of help), 2/2, %1 stands for the GnuPG key ID
-#: src/modules/SignatureCheckDialogs.ycp:698
-#: src/modules/SignatureCheckDialogs.ycp:823
-#, ycp-format
-msgid ""
-"<p>A warning dialog opens for every package that\n"
-"is not signed by a trusted (imported) key. If you do not import the key,\n"
-"packages created by the owner of key <tt>%1</tt> show this warning.</p>"
-msgstr "<p>Dla każdego pakietu niepodpisanego zaufanym kluczem wyświetlone zostanie okno z ostrzeżeniem. Jeśli klucz <tt>%1</tt> nie zostanie zaimportowany, dla wszystkich pakietów utworzone przez jego właściciela wyświetlone będzie ostrzeżenie.</p>"
-
-#. warning label - the key to import is expired
-#. %1 is current date (formatted according to the current locale)
-#: src/modules/SignatureCheckDialogs.ycp:715
-#, ycp-format
-msgid ""
-"WARNING: The key is expired!\n"
-"Current date: %1"
-msgstr ""
-"UWAGA: Klucz stracił ważnoś!\n"
-"Aktualna data: %1"
-
-#. popup message, %1 stands for GPG key complete multiline description, %2 for key location (URL or ...)
-#: src/modules/SignatureCheckDialogs.ycp:720
-#, ycp-format
-msgid ""
-"The GnuPG key %1\n"
-"has been found at %2.\n"
-"\n"
-"You can choose to import it into your keyring of trusted\n"
-"public keys, meaning that you trust the owner of the key.\n"
-"You should be sure that you can trust the owner and that\n"
-"the key really belongs to that owner before importing it."
-msgstr ""
-"Znaleziono klucz GnuPG %1\n"
-"w %2.\n"
-"\n"
-"Można zaimportować go do zbioru zaufanych kluczy publicznych.\n"
-"Przed importem należy upewnić się czy można ufać \n"
-"właścicielowi klucza oraz czy jest to faktycznie klucz należący\n"
-"do niego."
-
-#. popup heading
-#: src/modules/SignatureCheckDialogs.ycp:751
-msgid "Import Public GnuPG Key"
-msgstr "Import klucza publicznego GnuPG"
-
-#. push button
-#: src/modules/SignatureCheckDialogs.ycp:762
-#: src/modules/SignatureCheckDialogs.ycp:868
-msgid "&Import"
-msgstr "&Importuj"
-
-#. push button
-#. `PushButton(`id(`details), _("&Details...")),
-#. `HSpacing(1),
-#. push button
-#: src/modules/SignatureCheckDialogs.ycp:768
-#: src/modules/SignatureCheckDialogs.ycp:874
-msgid "Do &Not Import"
-msgstr "&Nie importuj"
-
-#. popup message, %1 stands for string "GPG key ID\nfingerprint", %2 for key name
-#: src/modules/SignatureCheckDialogs.ycp:828
-#, ycp-format
-msgid ""
-"The following GnuPG key has been found: %1\n"
-"\n"
-"You can choose to import it into your keyring of trusted\n"
-"public keys, meaning that you trust the owner of the key.\n"
-"You should be sure that you can trust the owner and that\n"
-"the key really belongs to that owner before importing it."
-msgstr ""
-"Znaleziono klucz GnuPG: %1\n"
-"\n"
-"Można zaimportować go do zbioru zaufanych kluczy publicznych.\n"
-"Przed importem należy upewnić się czy można ufać \n"
-"właścicielowi klucza oraz czy jest to faktycznie klucz należący\n"
-"do niego."
-
-#. popup heading
-#: src/modules/SignatureCheckDialogs.ycp:857
-msgid "Import Untrusted GnuPG Key"
-msgstr "Import niezaufanego klucza GnuPG"
-
-#. popup question, %1 stands for the filename, %2 is expected checksum
-#. %3 is the current checksum (e.g. "803a8ff00d00c9075a1bd223a480bcf92d2481c1")
-#: src/modules/SignatureCheckDialogs.ycp:946
-#, ycp-format
-msgid ""
-"The expected checksum of file %1\n"
-"is %2,\n"
-"but the current checksum is %3.\n"
-"\n"
-"This means that the file has been changed by accident or by an attacker\n"
-"since the repository creator signed it. Using it is a big risk\n"
-"for the integrity and security of your system.\n"
-"\n"
-"Use it anyway?"
-msgstr ""
-"Oczekiwana suma kontrolna pliku %1\n"
-"wynosi %2,\n"
-"jednak jego suma kontrolna to %3.\n"
-"\n"
-"Oznacza to, że plik został zmieniony przypadkowo lub przez atakującego,\n"
-"od momentu podpisania pliku. Użycie pliku stanowi poważne\n"
-"ryzyko dla integralności i bezpieczeństwa systemu.\n"
-"\n"
-"Czy mimo wszystko użyć tego pliku?"
-
-#. dialog heading - displayed in a big bold font
-#: src/modules/SignatureCheckDialogs.ycp:961
-msgid "Wrong Digest"
-msgstr "Nieprawidłowy skrót"
-
-#. popup question, %1 stands for the filename, %2 is expected digest, %3 is the current digest
-#: src/modules/SignatureCheckDialogs.ycp:977
-#, ycp-format
-msgid ""
-"The checksum of file %1\n"
-"is %2,\n"
-"but the expected checksum is not known.\n"
-"\n"
-"This means that the origin and integrity of the file\n"
-"cannot be verified. Using the file may put the integrity of your system at risk.\n"
-"\n"
-"Use it anyway?"
-msgstr ""
-"Suma kontrolna pliku %1\n"
-"wynosi %2,\n"
-"jednak nie jest znana oczekiwana suma kontrolna.\n"
-"\n"
-"Oznacza to, że pochodzenie i integralność tego pliku\n"
-"nie mogą by zweryfikowane. Użycie tego pliku może stanowić ryzyko dla systemu.\n"
-"\n"
-"Czy mimo wszystko użyć tego pliku?"
-
-#. dialog heading - displayed in a big bold font
-#: src/modules/SignatureCheckDialogs.ycp:989
-msgid "Unknown Digest"
-msgstr "Nieznany skrót"
 
 #. the string is follwed by a media number, e.g. "Medium 1"
 #: src/modules/SlideShow.ycp:32
@@ -2820,7 +1894,7 @@ msgid "Package Installation"
 msgstr "Instalacja pakietów"
 
 #. popup yes-no
-#: src/modules/SlideShowCallbacks.ycp:49
+#: src/modules/SlideShowCallbacks.ycp:50
 msgid ""
 "Do you really want\n"
 "to quit the installation?"
@@ -2828,18 +1902,18 @@ msgstr ""
 "Czy na pewno\n"
 "zakończyć instalację?"
 
-#: src/modules/SlideShowCallbacks.ycp:65
+#: src/modules/SlideShowCallbacks.ycp:66
 msgid "Aborted"
 msgstr "Przerwano"
 
 #. message in the installation log widget, %1 is a patch name which contains the script
-#: src/modules/SlideShowCallbacks.ycp:147
+#: src/modules/SlideShowCallbacks.ycp:149
 #, ycp-format
 msgid "Starting script %1"
 msgstr "Uruchamianie skryptu %1"
 
 #. label, %1 is patch name with version and architecture
-#: src/modules/SlideShowCallbacks.ycp:198
+#: src/modules/SlideShowCallbacks.ycp:200
 #, ycp-format
 msgid ""
 "Patch %1\n"
@@ -2849,7 +1923,7 @@ msgstr ""
 "\n"
 
 #. warning popup - %1 is directory name (e.g. /boot)
-#: src/modules/SlideShowCallbacks.ycp:327
+#: src/modules/SlideShowCallbacks.ycp:329
 #, ycp-format
 msgid ""
 "The disk space in partition %1 is nearly exhausted.\n"
@@ -2859,7 +1933,7 @@ msgstr ""
 "Czy kontynuować instalację?"
 
 #. yes-no popup
-#: src/modules/SlideShowCallbacks.ycp:354
+#: src/modules/SlideShowCallbacks.ycp:356
 msgid ""
 "The disk space is nearly exhausted.\n"
 "Continue with the installation?"
@@ -2867,30 +1941,30 @@ msgstr ""
 "Przestrzeń dyskowa na wyczerpaniu.\n"
 "Czy kontynuować instalację?"
 
-#: src/modules/SlideShowCallbacks.ycp:437
+#: src/modules/SlideShowCallbacks.ycp:436
 #, ycp-format
 msgid "Downloading delta RPM %1 (download size %2)"
 msgstr "Pobieranie pakietu delta RPM %1 (rozmiar: %2)"
 
-#: src/modules/SlideShowCallbacks.ycp:454
+#: src/modules/SlideShowCallbacks.ycp:453
 #, ycp-format
 msgid "Downloading patch RPM %1 (download size %2)"
 msgstr "Pobieranie pakietu RPM %1 (rozmiar: %2)"
 
 #. error in installation log, %1 is detail error description
-#: src/modules/SlideShowCallbacks.ycp:477
+#: src/modules/SlideShowCallbacks.ycp:476
 #, ycp-format
 msgid "Failed to download delta RPM: %1"
 msgstr "Ściąganie pakietu przyrostowego %1 nie powiodło się."
 
 #. error in installation log, %1 is detail error description
-#: src/modules/SlideShowCallbacks.ycp:483
+#: src/modules/SlideShowCallbacks.ycp:482
 #, ycp-format
 msgid "Failed to apply delta RPM: %1"
 msgstr "Zastosowanie pliku przyrostowego %1 nie powiodło się."
 
 #. error in installation log, %1 is detail error description
-#: src/modules/SlideShowCallbacks.ycp:489
+#: src/modules/SlideShowCallbacks.ycp:488
 #, ycp-format
 msgid "Failed to download patch RPM: %1"
 msgstr "Nie powiodło sie pobieranie poprawki %1."
@@ -2940,6 +2014,11 @@ msgstr ""
 #: src/modules/SourceDialogs.ycp:346
 msgid "URL cannot be empty."
 msgstr "URL nie może być pusty."
+
+#. text entry
+#: src/modules/SourceDialogs.ycp:361
+msgid "&URL"
+msgstr "&URL"
 
 #. help text
 #: src/modules/SourceDialogs.ycp:368
@@ -3106,9 +2185,10 @@ msgstr ""
 
 #. 'auto' is a value in the combo box widget, do not translate it!
 #: src/modules/SourceDialogs.ycp:1025 src/modules/SourceDialogs.ycp:1094
+#, fuzzy
 msgid ""
 "<p>The file system which is used on the device will be automatically\n"
-"detected if file system 'auto' is selected. If the detection fails or a you\n"
+"detected if file system 'auto' is selected. If the detection fails or you\n"
 "want to use a certain file system then select it from the list.</p>"
 msgstr ""
 "<p>System plików używany w urządzeniu zostanie automatycznie\n"
@@ -3195,6 +2275,15 @@ msgstr "Dostęp &anonimowy"
 #: src/modules/SourceDialogs.ycp:1324
 msgid "&Workgroup or Domain"
 msgstr "&Grupa robocza lub domena"
+
+#: src/modules/SourceDialogs.ycp:1328
+msgid "&User Name"
+msgstr "Nazwa &użytkownika"
+
+#. password entry
+#: src/modules/SourceDialogs.ycp:1330
+msgid "&Password"
+msgstr "&Hasło"
 
 #. radio button
 #: src/modules/SourceDialogs.ycp:1391
@@ -3449,128 +2538,128 @@ msgid "Media Type"
 msgstr "Typ nośnika"
 
 #. SourceManager read dialog caption
-#: src/modules/SourceManager.ycp:188
+#: src/modules/SourceManager.ycp:190
 msgid "Initializing Available Repositories"
 msgstr "Inicjalizacja dostępnych repozytoriów"
 
 #. Progress stage 1/3
-#: src/modules/SourceManager.ycp:196
+#: src/modules/SourceManager.ycp:198
 msgid "Read configured repositories"
 msgstr "Odczytanie skonfigurowanych repozytoriów"
 
 #. Progress stage 2/3
-#: src/modules/SourceManager.ycp:198
+#: src/modules/SourceManager.ycp:200
 msgid "Detect available repositories via SLP"
 msgstr "Wykrycie dostępnych repozytoriów poprzez SLP"
 
 #. Progress step 1/3
-#: src/modules/SourceManager.ycp:201
+#: src/modules/SourceManager.ycp:203
 msgid "Reading configured repositories..."
 msgstr "Oczytywanie skonfigurowanych repozytoriów..."
 
 #. Progress step 2/3
-#: src/modules/SourceManager.ycp:203
+#: src/modules/SourceManager.ycp:205
 msgid "Detecting available repositories..."
 msgstr "Wykrywanie dostępnych repozytoriów..."
 
 #. Progress finished
-#: src/modules/SourceManager.ycp:205 src/modules/SourceManager.ycp:291
+#: src/modules/SourceManager.ycp:207 src/modules/SourceManager.ycp:293
 msgid "Finished"
 msgstr "Zakończono"
 
 #. Error message
-#: src/modules/SourceManager.ycp:216
+#: src/modules/SourceManager.ycp:218
 msgid "Cannot read repositories."
 msgstr "Nie można odczytać repozytoriów."
 
 #. Error message
-#: src/modules/SourceManager.ycp:224
+#: src/modules/SourceManager.ycp:226
 msgid "Cannot detect available repositories."
 msgstr "Nie można wykryć dostępnych repozytoriów."
 
 #. popup message header
-#: src/modules/SourceManager.ycp:250
+#: src/modules/SourceManager.ycp:252
 msgid "Unable to save changes to the repository.\n"
 msgstr "Nie można zapisać zmian konfiguracji repozytorium.\n"
 
 #. SourceManager read dialog caption
-#: src/modules/SourceManager.ycp:278
+#: src/modules/SourceManager.ycp:280
 msgid "Saving Repository Configuration"
 msgstr "Zapis konfiguracji katalogów"
 
 #. Progress stage 1/1
-#: src/modules/SourceManager.ycp:285
+#: src/modules/SourceManager.ycp:287
 msgid "Write repository settings"
 msgstr "Zapisanie ustawień katalogu"
 
 #. Progress step 1/1
-#: src/modules/SourceManager.ycp:288
+#: src/modules/SourceManager.ycp:290
 msgid "Writing the settings..."
 msgstr "Zapisywanie ustawień..."
 
-#: src/modules/SourceManager.ycp:412
+#: src/modules/SourceManager.ycp:414
 msgid "Adding repository..."
 msgstr "Dodawanie katalogu..."
 
 #. status info, to be used inside summary
-#: src/modules/SourceManager.ycp:524
+#: src/modules/SourceManager.ycp:526
 msgid "Disabled"
 msgstr "Wyłączone"
 
 #. translators: name of a repository if no other idenfication found
-#: src/modules/SourceManager.ycp:529
+#: src/modules/SourceManager.ycp:531
 msgid "unknown"
 msgstr "nieznane"
 
 #. corresponds to the "Enable/Disable" button
-#: src/modules/SourceManager.ycp:548
+#: src/modules/SourceManager.ycp:550
 msgid "On"
 msgstr "Włączone"
 
 #. corresponds to the "Enable/Disable" button
-#: src/modules/SourceManager.ycp:550
+#: src/modules/SourceManager.ycp:552
 msgid "Off"
 msgstr "Wyłączone"
 
 #. summary header
-#: src/modules/SourceManager.ycp:593
+#: src/modules/SourceManager.ycp:595
 msgid "Configured Repositories"
 msgstr "Skonfigurowane repozytoria"
 
 #. part of item in summary meaning "switched on"
-#: src/modules/SourceManager.ycp:611
+#: src/modules/SourceManager.ycp:613
 msgid " On "
 msgstr "Włączone"
 
 #. yast is running a ZENworks command (rug) to
 #. keep the repository references in sync
-#: src/modules/SourceManager.ycp:639
+#: src/modules/SourceManager.ycp:641
 msgid "Synchronizing with ZENworks"
 msgstr "Synchronizacja z ZENworks"
 
 #. rug is a command name
-#: src/modules/SourceManager.ycp:934
+#: src/modules/SourceManager.ycp:936
 msgid "Your service was added successfully in YaST, but could not be synchronized with ZENworks."
 msgstr "Usługa została dodana w programie YaST, lecz synchronizacja z ZENWorks nie powiodła się."
 
-#: src/modules/SourceManager.ycp:935
+#: src/modules/SourceManager.ycp:937
 msgid "Your service was deleted successfully in YaST, but could not be synchronized with ZENworks."
 msgstr "Usługa została usunięta w programie YaST, lecz synchronizacja z ZENWorks nie powiodła się."
 
 #. error message
 #. FIXME "ms" or plural gettext
-#: src/modules/SourceManager.ycp:944
+#: src/modules/SourceManager.ycp:946
 #, ycp-format
 msgid "Command timed out after %1 milliseconds."
 msgstr "Czas wykonania polecenia przekroczył %1 milisekund."
 
 #. error message
-#: src/modules/SourceManager.ycp:946
+#: src/modules/SourceManager.ycp:948
 #, ycp-format
 msgid "Command timed out after %1 seconds."
 msgstr "Przekroczono limit %1 sek. czasu wykonania polecenia."
 
-#: src/modules/SourceManager.ycp:1373
+#: src/modules/SourceManager.ycp:1375
 msgid "&Drive to eject"
 msgstr "&Napęd do wysunięcia"
 
@@ -3682,6 +2771,629 @@ msgstr ""
 #: src/modules/SpaceCalculation.ycp:480
 msgid "Please deselect some packages."
 msgstr "Proszę zrezygnować z niektórych pakietów."
+
+#~ msgid "Package: "
+#~ msgstr "Pakiet: "
+
+#~ msgid "Size: "
+#~ msgstr "Rozmiar: "
+
+#~ msgid "Downloading package %1 (%2)..."
+#~ msgstr "Pobieranie pakietu %1 (%2)..."
+
+#~ msgid "Downloading Package"
+#~ msgstr "Pobieranie pakietu"
+
+#~ msgid "Show &details"
+#~ msgstr "Pokaż &szczegóły"
+
+#~ msgid "Package %1 could not be downloaded (input/output error)."
+#~ msgstr "Nie można pobrać pakietu %1 (błąd wejścia/wyjścia)"
+
+#~ msgid "Package %1 is broken, integrity check has failed."
+#~ msgstr "Pakiet %1 jest uszkodzony. Sprawdzanie integralności pliku zakończyło się niepowodzeniem."
+
+#~ msgid "Retry installation of the package?"
+#~ msgstr "Ponowić próbę instalacji pakietu?"
+
+#~ msgid "Abort the installation?"
+#~ msgstr "Przerwać instalację?"
+
+#~ msgid "Error: %1:"
+#~ msgstr "Błąd: %1:"
+
+#~ msgid "Uninstalling package %1 (%2)..."
+#~ msgstr "Usuwanie pakietu %1 (%2)..."
+
+#~ msgid "Installing package %1 (%2)..."
+#~ msgstr "Instalowanie pakietu %1 (%2)..."
+
+#~ msgid "Uninstalling Package"
+#~ msgstr "Usuwanie pakietu"
+
+#~ msgid "Installing Package"
+#~ msgstr "Instalowanie pakietu"
+
+#~ msgid "Removal of package %1 failed."
+#~ msgstr "Usunięcie pakietu %1 nie powiodło się."
+
+#~ msgid "Installation of package %1 failed."
+#~ msgstr "Instalacja pakietu %1 nie powiodła się."
+
+#~ msgid ""
+#~ "<p>The repository at the specified URL now provides a different media ID.\n"
+#~ "If the URL is correct, this indicates that the repository content has changed. To \n"
+#~ "continue using this repository, start <b>Installation Repositories</b> from \n"
+#~ "the YaST control center and refresh the repository.</p>\n"
+#~ msgstr ""
+#~ "<p>Repozytorium pod podanym adresem URL dostarcza obecnie nośnik o innym ID.\n"
+#~ "Jeśli  adres URL jest prawidłowy, oznacza to, że zawartość repozytorium uległa zmianie. Aby \n"
+#~ "kontynuować wykorzystywanie tego repozytorium, należy uruchomić <i>Repozytoria  instalacji</i> z \n"
+#~ "centrum sterowania YaST i odświeżyć repozytorium.</p>\n"
+
+#~ msgid "Side A"
+#~ msgstr "Strona A"
+
+#~ msgid "Side B"
+#~ msgstr "Strona B"
+
+#~ msgid "%1 (Disc %2)"
+#~ msgstr "%1 (Dysk %2)"
+
+#~ msgid "%1 (Medium %2)"
+#~ msgstr "%1 (nośnik %2)"
+
+#~ msgid ""
+#~ "Insert\n"
+#~ "'%1'"
+#~ msgstr ""
+#~ "Proszę umieścić w napędzie \n"
+#~ "'%1'"
+
+#~ msgid ""
+#~ "Cannot access installation media\n"
+#~ "%1.\n"
+#~ "Check whether the directory is accessible."
+#~ msgstr ""
+#~ "Nie można uzyskać dostępu do nośnika instalacyjnego\n"
+#~ "%1.\n"
+#~ "Proszę sprawdzić, czy katalog jest dostępny."
+
+#~ msgid ""
+#~ "Cannot access installation media \n"
+#~ "%1.\n"
+#~ "Check whether the server is accessible."
+#~ msgstr ""
+#~ "Nie można uzyskać dostępu do nośnika instalacyjnego \n"
+#~ "%1.\n"
+#~ "Proszę sprawdzić, czy serwer jest dostępny."
+
+#~ msgid "The correct repository medium could not be mounted."
+#~ msgstr "Nie udało się zamontować właściwego nośnika źródłowego."
+
+#~ msgid "&Skip"
+#~ msgstr "&Pomiń"
+
+#~ msgid "A&utomatically Eject CD/DVD Medium"
+#~ msgstr "A&utomatyczne wysuwanie nośnika CD/DVD"
+
+#~ msgid "Automatically Retry After %1 Seconds"
+#~ msgstr "Odśwież automatycznie po %1 sekundach"
+
+#~ msgid "Retry the installation?"
+#~ msgstr "Ponowić próbę instalacji?"
+
+#~ msgid "Skip the medium?"
+#~ msgstr "Pominąć nośnik?"
+
+#~ msgid "Ignoring the bad medium..."
+#~ msgstr "Ignorowanie uszkodzonego nośnika..."
+
+#~ msgid "Creating Repository %1"
+#~ msgstr "Tworzenie repozytorium %1"
+
+#~ msgid "Error occurred while creating the repository."
+#~ msgstr "Błąd podczas tworzenia repozytorium."
+
+#~ msgid "Unable to retrieve the remote repository description."
+#~ msgstr "Nie można pobrać opisu zdalnego repozytorium."
+
+#~ msgid "An error occurred while retrieving the new metadata."
+#~ msgstr "Podczas pobierania nowych metadanych wystąpił błąd."
+
+#~ msgid "The repository is not valid."
+#~ msgstr "Repozytorium jest nieprawidłowe."
+
+#~ msgid "The repository metadata is invalid."
+#~ msgstr "Metadane repozytorium są nieprawidłowe."
+
+#~ msgid "Retry?"
+#~ msgstr "Ponowić?"
+
+#~ msgid "Probing Repository %1"
+#~ msgstr "Wykrywanie repozytorium %1"
+
+#~ msgid "Error occurred while probing the repository."
+#~ msgstr "Błąd podczas wykrywania repozytorium."
+
+#~ msgid "Repository probing details."
+#~ msgstr "Szczegóły wykrywania repozytorium"
+
+#~ msgid "Repository metadata is invalid."
+#~ msgstr "Metadane repozytorium są nieprawidłowe."
+
+#~ msgid "Repository %1"
+#~ msgstr "Repozytorium %1"
+
+#~ msgid "Downloading delta RPM package %1 (%2)..."
+#~ msgstr "Pobieranie pakietu delta RPM %1 (%2)..."
+
+#~ msgid "Downloading Delta RPM package"
+#~ msgstr "Pobieranie pakietu delta RPM"
+
+#~ msgid "Applying delta RPM package %1..."
+#~ msgstr "Nakładanie pakietu delta RPM %1..."
+
+#~ msgid "Applying delta RPM package"
+#~ msgstr "Nakładanie pakietu delta RPM"
+
+#~ msgid "Downloading patch RPM package %1 (%2)..."
+#~ msgstr "Pobieranie pakietu poprawki RPM %1 (%2)..."
+
+#~ msgid "Downloading Patch RPM Package"
+#~ msgstr "Pobieranie pakietu poprawki RPM"
+
+#~ msgid "Failed to download delta RPM"
+#~ msgstr "Pobranie delta RPM nie powiodło się"
+
+#~ msgid "Failed to apply delta RPM"
+#~ msgstr "Nakładanie pakietu delta RPM nie powiodło się"
+
+#~ msgid "Failed to download patch RPM"
+#~ msgstr "Pobranie poprawki RPM nie powiodło się"
+
+#~ msgid "Starting script %1 (patch %2)..."
+#~ msgstr "Uruchamianie skryptu %1 (poprawka %2)..."
+
+#~ msgid "Running Script"
+#~ msgstr "Uruchamianie skryptu"
+
+#~ msgid "Script: "
+#~ msgstr "Skrypt:"
+
+#~ msgid "Patch: "
+#~ msgstr "Poprawka:"
+
+#~ msgid "Output of the Script"
+#~ msgstr "Wyjście skryptu"
+
+#~ msgid ""
+#~ "Patch: %1\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Poprawka: %1\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "The repositories are being refreshed.\n"
+#~ "Continue with refreshing?\n"
+#~ "\n"
+#~ "Note: If the refresh is skipped some packages\n"
+#~ "might be missing or out of date."
+#~ msgstr ""
+#~ "Repozytoria są odświeżane.\n"
+#~ "Czy kontynuować odświeżanie?\n"
+#~ "\n"
+#~ "Uwaga: jeśli odświeżanie zostanie pominięte\n"
+#~ "niektóre pakiety mogą być nieaktualne lub brakujące."
+
+#~ msgid "Skip Refresh"
+#~ msgstr "Pomiń odświeżanie"
+
+#~ msgid "Downloading"
+#~ msgstr "Pobieranie"
+
+#~ msgid "Downloading: %1"
+#~ msgstr "Pobieranie: %1"
+
+#~ msgid ""
+#~ "Download failed:\n"
+#~ "    %1"
+#~ msgstr ""
+#~ "Pobieranie nie powiodło się:\n"
+#~ "    %1"
+
+#~ msgid "Skip Autorefresh"
+#~ msgstr "Pomiń autoodświeżanie"
+
+#~ msgid "Checking Package Database"
+#~ msgstr "Sprawdzanie bazy pakietów"
+
+#~ msgid "Rebuilding package database. This process can take some time."
+#~ msgstr "Przebudowa bazy pakietów. Proces ten może być czasochłonny."
+
+#~ msgid "Status"
+#~ msgstr "Status"
+
+#~ msgid ""
+#~ "Rebuilding of package database failed:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Przebudowa bazy pakietów nie powiodła się:\n"
+#~ "%1"
+
+#~ msgid ""
+#~ "Error rebuilding database:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Błąd podczas przebudowy bazy danych:\n"
+#~ "%1"
+
+#~ msgid "Converting package database. This process can take some time."
+#~ msgstr "Konwersja bazy pakietów. Proces ten może być czasochłonny."
+
+#~ msgid ""
+#~ "Conversion of package database failed:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Konwersja bazy pakietów nie powiodła się:\n"
+#~ "%1"
+
+#~ msgid "Package %1 is already present in the new database."
+#~ msgstr "Pakiet %1 jest już w nowej bazie danych."
+
+#~ msgid ""
+#~ "Error reading from old database.\n"
+#~ "Ignore this error and continue?"
+#~ msgstr ""
+#~ "Błąd odczytu ze starej bazy danych.\n"
+#~ "Zignorować ten błąd i kontynuować?"
+
+#~ msgid "Error writing to new database"
+#~ msgstr "Błąd podczas zapisu do nowej bazy danych"
+
+#~ msgid "Reading RPM DB..."
+#~ msgstr "Wczytywanie bazy RPM..."
+
+#~ msgid "Reading Installed Packages"
+#~ msgstr "Odczytywanie zainstalowanych pakietów"
+
+#~ msgid "Scanning RPM Database..."
+#~ msgstr "Skanowanie bazy RPM..."
+
+#~ msgid "Initialization of the target failed."
+#~ msgstr "Inicjalizacja celu nie udała się."
+
+#~ msgid "RPM DB read"
+#~ msgstr "Odczyt bazy RPM"
+
+#~ msgid "User Authentication"
+#~ msgstr "Uwierzytelnianie użytkowników"
+
+#~ msgid ""
+#~ "URL: %1\n"
+#~ "\n"
+#~ "%2"
+#~ msgstr ""
+#~ "URL: %1\n"
+#~ "\n"
+#~ "%2"
+
+#~ msgid "Fingerprint"
+#~ msgstr "Odcisk"
+
+#~ msgid ""
+#~ "The package %1 is not digitally signed. This means that the origin\n"
+#~ "and integrity of the package cannot be verified. Installing the package\n"
+#~ "may put the integrity of your system at risk.\n"
+#~ "\n"
+#~ "Install it anyway?"
+#~ msgstr ""
+#~ "Pakiet %1 nie posiada podpisu cyfrowego. Oznacza to, że nie można\n"
+#~ "zweryfikować pochodzenia i integralności pakietu. Instalacja takiego\n"
+#~ "pakietu może stanowić ryzyko dla systemu.\n"
+#~ "\n"
+#~ "Zainstalować ten pakiet?"
+
+#~ msgid ""
+#~ "The file %1\n"
+#~ "is not digitally signed. This means that the origin and integrity of the file\n"
+#~ "cannot be verified. Using the file may put the integrity of your system at risk.\n"
+#~ "\n"
+#~ "Use it anyway?"
+#~ msgstr ""
+#~ "Plik %1\n"
+#~ "nie posiada podpisu cyfrowego. Oznacza to, że nie można\n"
+#~ "zweryfikować pochodzenia i integralności pliku. Użycie takiego\n"
+#~ "pliku może stanowić ryzyko dla systemu.\n"
+#~ "\n"
+#~ "Użyć tego pliku?"
+
+#~ msgid "Unsigned Package"
+#~ msgstr "Niepodpisany pakiet"
+
+#~ msgid "Unsigned File"
+#~ msgstr "Niepodpisany plik"
+
+#~ msgid ""
+#~ "No checksum for package %1 was found in the repository.\n"
+#~ "This means that the package is part of the signed repository, but the list of checksums\n"
+#~ "in this repository does not mention this package. Installing the package may put\n"
+#~ "the integrity of your system at risk.\n"
+#~ "\n"
+#~ "Install it anyway?"
+#~ msgstr ""
+#~ "W repozytorium nie znaleziono sumy kontrolnej dla pakietu %1.\n"
+#~ "Oznacza to, że pakiet jest częścią podpisanego repozytorium, lecz lista\n"
+#~ "sum kontrolnych nie zawiera danych tego pakietu. Instalacja pakietu\n"
+#~ "może stanowić ryzyko dla systemu.\n"
+#~ "\n"
+#~ "Zainstalować ten pakiet?"
+
+#~ msgid ""
+#~ "No checksum for file %1\n"
+#~ "was found in the repository. This means that the file is part of the signed repository,\n"
+#~ "but the list of checksums in this repository does not mention this file. Using the file\n"
+#~ "may put the integrity of your system at risk.\n"
+#~ "\n"
+#~ "Use it anyway?"
+#~ msgstr ""
+#~ "W repozytorium nie znaleziono sumy kontrolnej dla pliku %1.\n"
+#~ "Oznacza to, że plik ten jest częścią podpisanego repozytorium, lecz lista\n"
+#~ "sum kontrolnych nie zawiera danych tego pliku. Użycie pliku\n"
+#~ "może stanowić ryzyko dla systemu.\n"
+#~ "\n"
+#~ "Użyć tego pliku?"
+
+#~ msgid "No Checksum Found"
+#~ msgstr "Brak sumy kontrolnej"
+
+#~ msgid "ID: %1"
+#~ msgstr "ID: %1"
+
+#~ msgid "Fingerprint: %1"
+#~ msgstr "Odcisk: %1"
+
+#~ msgid ""
+#~ "Package %1 is signed with the following GnuPG key, but the integrity check failed: %2\n"
+#~ "\n"
+#~ "This means that the package has been changed by accident or by an attacker\n"
+#~ "since the repository creator signed it. Installing it is a big risk\n"
+#~ "for the integrity and security of your system.\n"
+#~ "\n"
+#~ "Install it anyway?"
+#~ msgstr ""
+#~ "Pakiet %1 jest podpisany poniższym kluczem GnuPG, lecz sprawdzanie jego integralności\n"
+#~ "zakończyło się niepowodzeniem: %2\n"
+#~ "\n"
+#~ "Oznacza to, że pakiet został zmieniony przypadkowo lub przez atakującego,\n"
+#~ "ponieważ twórca repozytorium podpisał pakiet. Instalacja pakietu stanowi poważne\n"
+#~ "ryzyko dla systemu.\n"
+#~ "\n"
+#~ "Zainstalować ten pakiet?"
+
+#~ msgid ""
+#~ "File %1\n"
+#~ "is signed with the following GnuPG key, but the integrity check failed: %2\n"
+#~ "\n"
+#~ "This means that the file has been changed by accident or by an attacker\n"
+#~ "since the repository creator signed it. Using it is a big risk\n"
+#~ "for the integrity and security of your system.\n"
+#~ "\n"
+#~ "Use it anyway?"
+#~ msgstr ""
+#~ "Plik %1 jest podpisany poniższym kluczem GnuPG, lecz sprawdzanie jego integralności\n"
+#~ "zakończyło się niepowodzeniem: %2\n"
+#~ "\n"
+#~ "Oznacza to, że plik został zmieniony przypadkowo lub przez atakującego,\n"
+#~ "ponieważ twórca repozytorium podpisał plik. Użycie pliku stanowi poważne\n"
+#~ "ryzyko dla systemu.\n"
+#~ "\n"
+#~ "Użyć tego pliku?"
+
+#~ msgid "Validation Check Failed"
+#~ msgstr "Sprawdzenie poprawności zakończone niepowodzeniem"
+
+#~ msgid ""
+#~ "The package %1 is digitally signed\n"
+#~ "with the following unknown GnuPG key: %2.\n"
+#~ "\n"
+#~ "This means that a trust relationship to the creator of the package\n"
+#~ "cannot be established. Installing the package may put the integrity\n"
+#~ "of your system at risk.\n"
+#~ "\n"
+#~ "Install it anyway?"
+#~ msgstr ""
+#~ "Pakiet %1 jest podpisany nieznanym kluczem GnuPG: %2\n"
+#~ "\n"
+#~ "Oznacza to, że nie można nawiązać relacji zaufania z twórcą\n"
+#~ "pakietu. Instalacja pakietu może stanowić ryzyko dla systemu.\n"
+#~ "\n"
+#~ "Zainstalować ten pakiet?"
+
+#~ msgid ""
+#~ "The file %1\n"
+#~ "is digitally signed with the following unknown GnuPG key: %2.\n"
+#~ "\n"
+#~ "This means that a trust relationship to the creator of the file\n"
+#~ "cannot be established. Using the file may put the integrity\n"
+#~ "of your system at risk.\n"
+#~ "\n"
+#~ "Use it anyway?"
+#~ msgstr ""
+#~ "Plik %1\n"
+#~ "jest podpisany nieznanym kluczem GnuPG: %2\n"
+#~ "\n"
+#~ "Oznacza to, że nie można nawiązać relacji zaufania z twórcą\n"
+#~ "pliku. Użycie pliku może stanowić ryzyko dla systemu.\n"
+#~ "\n"
+#~ "Użyć tego pliku?"
+
+#~ msgid "Unknown GnuPG Key"
+#~ msgstr "Nieznany klucz GnuPG"
+
+#~ msgid ""
+#~ "The package %1 is digitally signed\n"
+#~ "with key '%2 (%3)'.\n"
+#~ "\n"
+#~ "There is no trust relationship to the owner of the key.\n"
+#~ "If you trust the owner, mark the key as trusted.\n"
+#~ "\n"
+#~ "Installing a package from an unknown repository can put\n"
+#~ "the integrity of your system at risk. It is safest\n"
+#~ "to skip the package."
+#~ msgstr ""
+#~ "Pakiet %1 jest podpisany cyfrowo\n"
+#~ "kluczem '%2 (%3)'.\n"
+#~ "\n"
+#~ "Brak relacji zaufania z właścicielem klucza.\n"
+#~ "Jeśli jest on godny zaufania, należy zaimportować\n"
+#~ "klucz do zbioru zaufanych kluczy, a następnie\n"
+#~ "kontynuować instalację.\n"
+#~ "\n"
+#~ "Instalacja pakietu z nieznanego repozytorium może stanowić\n"
+#~ "ryzyko dla systemu. Najbezpieczniej jest pominąć\n"
+#~ "ten pakiet."
+
+#~ msgid ""
+#~ "The file %1 is digitally signed\n"
+#~ "with key '%2 (%3)'.\n"
+#~ "\n"
+#~ "There is no trust relationship to the owner of the key.\n"
+#~ "If you trust the owner, mark the key as trusted.\n"
+#~ "\n"
+#~ "Installing a file from an unknown repository can put\n"
+#~ "the integrity of your system at risk. It is safest\n"
+#~ "to skip it."
+#~ msgstr ""
+#~ "Plik %1 jest podpisany cyfrowo\n"
+#~ "kluczem '%2 (%3)'.\n"
+#~ "\n"
+#~ "Brak relacji zaufania z właścicielem klucza.\n"
+#~ "Jeśli jest on godny zaufania, należy zaimportować\n"
+#~ "klucz do zbioru zaufanych kluczy, a następnie\n"
+#~ "kontynuować instalację.\n"
+#~ "\n"
+#~ "Instalacja pliku z nieznanego repozytorium może stanowić\n"
+#~ "ryzyko dla systemu. Najbezpieczniej jest pominąć\n"
+#~ "ten plik."
+
+#~ msgid "Signed with Untrusted Public Key"
+#~ msgstr "Podpisano niezaufanym kluczem publicznym"
+
+#~ msgid "&Trust and Import the Key"
+#~ msgstr "Za&ufaj i importuj ten klucz"
+
+#~ msgid ""
+#~ "<p>The owner of the key may distribute updates,\n"
+#~ "packages, and package repositories that your system will trust and offer\n"
+#~ "for installation and update without any further warning. In this way,\n"
+#~ "importing the key into your keyring of trusted keys allows the key owner\n"
+#~ "to have a certain amount of control over the software on your system.</p>"
+#~ msgstr "<p>Właściciel klucza może dystrybuować aktualizacje, pakiety i repozytoria pakietów, które będą uznane za godne zaufania. Ich instalacja będzie odbywać się bez dalszych ostrzeżeń. Poprzez zaimportowanie klucza do zbioru zaufanych właściciel klucza uzyskuje pewną kontrolę nad oprogramowaniem tego systemu.</p>"
+
+#~ msgid ""
+#~ "<p>A warning dialog opens for every package that\n"
+#~ "is not signed by a trusted (imported) key. If you do not import the key,\n"
+#~ "packages created by the owner of key <tt>%1</tt> show this warning.</p>"
+#~ msgstr "<p>Dla każdego pakietu niepodpisanego zaufanym kluczem wyświetlone zostanie okno z ostrzeżeniem. Jeśli klucz <tt>%1</tt> nie zostanie zaimportowany, dla wszystkich pakietów utworzone przez jego właściciela wyświetlone będzie ostrzeżenie.</p>"
+
+#~ msgid ""
+#~ "WARNING: The key is expired!\n"
+#~ "Current date: %1"
+#~ msgstr ""
+#~ "UWAGA: Klucz stracił ważnoś!\n"
+#~ "Aktualna data: %1"
+
+#~ msgid ""
+#~ "The GnuPG key %1\n"
+#~ "has been found at %2.\n"
+#~ "\n"
+#~ "You can choose to import it into your keyring of trusted\n"
+#~ "public keys, meaning that you trust the owner of the key.\n"
+#~ "You should be sure that you can trust the owner and that\n"
+#~ "the key really belongs to that owner before importing it."
+#~ msgstr ""
+#~ "Znaleziono klucz GnuPG %1\n"
+#~ "w %2.\n"
+#~ "\n"
+#~ "Można zaimportować go do zbioru zaufanych kluczy publicznych.\n"
+#~ "Przed importem należy upewnić się czy można ufać \n"
+#~ "właścicielowi klucza oraz czy jest to faktycznie klucz należący\n"
+#~ "do niego."
+
+#~ msgid "Import Public GnuPG Key"
+#~ msgstr "Import klucza publicznego GnuPG"
+
+#~ msgid "&Import"
+#~ msgstr "&Importuj"
+
+#~ msgid "Do &Not Import"
+#~ msgstr "&Nie importuj"
+
+#~ msgid ""
+#~ "The following GnuPG key has been found: %1\n"
+#~ "\n"
+#~ "You can choose to import it into your keyring of trusted\n"
+#~ "public keys, meaning that you trust the owner of the key.\n"
+#~ "You should be sure that you can trust the owner and that\n"
+#~ "the key really belongs to that owner before importing it."
+#~ msgstr ""
+#~ "Znaleziono klucz GnuPG: %1\n"
+#~ "\n"
+#~ "Można zaimportować go do zbioru zaufanych kluczy publicznych.\n"
+#~ "Przed importem należy upewnić się czy można ufać \n"
+#~ "właścicielowi klucza oraz czy jest to faktycznie klucz należący\n"
+#~ "do niego."
+
+#~ msgid "Import Untrusted GnuPG Key"
+#~ msgstr "Import niezaufanego klucza GnuPG"
+
+#~ msgid ""
+#~ "The expected checksum of file %1\n"
+#~ "is %2,\n"
+#~ "but the current checksum is %3.\n"
+#~ "\n"
+#~ "This means that the file has been changed by accident or by an attacker\n"
+#~ "since the repository creator signed it. Using it is a big risk\n"
+#~ "for the integrity and security of your system.\n"
+#~ "\n"
+#~ "Use it anyway?"
+#~ msgstr ""
+#~ "Oczekiwana suma kontrolna pliku %1\n"
+#~ "wynosi %2,\n"
+#~ "jednak jego suma kontrolna to %3.\n"
+#~ "\n"
+#~ "Oznacza to, że plik został zmieniony przypadkowo lub przez atakującego,\n"
+#~ "od momentu podpisania pliku. Użycie pliku stanowi poważne\n"
+#~ "ryzyko dla integralności i bezpieczeństwa systemu.\n"
+#~ "\n"
+#~ "Czy mimo wszystko użyć tego pliku?"
+
+#~ msgid "Wrong Digest"
+#~ msgstr "Nieprawidłowy skrót"
+
+#~ msgid ""
+#~ "The checksum of file %1\n"
+#~ "is %2,\n"
+#~ "but the expected checksum is not known.\n"
+#~ "\n"
+#~ "This means that the origin and integrity of the file\n"
+#~ "cannot be verified. Using the file may put the integrity of your system at risk.\n"
+#~ "\n"
+#~ "Use it anyway?"
+#~ msgstr ""
+#~ "Suma kontrolna pliku %1\n"
+#~ "wynosi %2,\n"
+#~ "jednak nie jest znana oczekiwana suma kontrolna.\n"
+#~ "\n"
+#~ "Oznacza to, że pochodzenie i integralność tego pliku\n"
+#~ "nie mogą by zweryfikowane. Użycie tego pliku może stanowić ryzyko dla systemu.\n"
+#~ "\n"
+#~ "Czy mimo wszystko użyć tego pliku?"
+
+#~ msgid "Unknown Digest"
+#~ msgstr "Nieznany skrót"
 
 #~ msgid ""
 #~ "<P><B>Note:</B> You cannot change the medium while it is used by the system. If\n"

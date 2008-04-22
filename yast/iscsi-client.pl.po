@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: iscsi-client\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-01 10:47+0200\n"
+"POT-Creation-Date: 2008-04-21 10:39+0200\n"
 "PO-Revision-Date: 2007-08-17 20:55+0100\n"
 "Last-Translator: wadim dziedzic <nikdo@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -100,10 +100,11 @@ msgid "Configuration summary..."
 msgstr "Podsumowanie konfiguracji..."
 
 #: src/IscsiClientLib.ycp:284
+#, fuzzy
 msgid ""
-"InitiatorName from iBFT and from /etc/iscsi/initiatorname.iscsi are differ.\n"
-"Old initiatorname will be replaced by value from iBFT and create a backup.\n"
-"If you want to use different initiatorname change it in BIOS."
+"InitiatorName from iBFT and from <tt>/etc/iscsi/initiatorname.iscsi</tt> differ.\n"
+"The old initiatorname will be replaced by the value of iBFT and create a backup.\n"
+"If you want to use a different initiatorname, change it in the BIOS."
 msgstr ""
 "Nazwa modułu inicjującego z iBFT jest różna od tej z /etc/iscsi/initiatorname.iscsi.\n"
 "Stara nazwa modułu inicjującego zostanie zastąpiona wartością z iBFT, utworzona zostanie także kopia zapasowa.\n"
@@ -238,7 +239,7 @@ msgstr "Przegląd modułu inicjującego iSCSI"
 #. discovery new target
 #. dialog for all targets from portal (connected/disconnected)
 #. authentification dialog for add/discovery target
-#: src/dialogs.ycp:293 src/helps.ycp:92 src/helps.ycp:100 src/helps.ycp:104
+#: src/dialogs.ycp:293 src/helps.ycp:93 src/helps.ycp:101 src/helps.ycp:105
 msgid "<h1>iSCSI Initiator</h1>"
 msgstr "<h1>Moduł inicjujący iSCSI</h1>"
 
@@ -353,37 +354,42 @@ msgstr ""
 
 #. table of connected targets
 #: src/helps.ycp:77
+#, fuzzy
 msgid ""
-"List of current sessions. To add a new target, press <b>Add</b>.\n"
-"To remove one, select it and press <b>Log Out</b>.\n"
-"To change start-up status, press <b>Toggle</b>.\n"
+"List of current sessions. To add a new target, select it and press <b>Add</b>.\n"
+"To remove it, press <b>Log Out</b>.\n"
+"To change the start-up status, press <b>Toggle</b>.\n"
 msgstr ""
 "Lista bieżących sesji. Aby dodać nowy moduł docelowy, należy nacisnąć przycisk <b>Dodaj</b>.\n"
 "Aby usunąć moduł docelowy, należy go zaznaczyć i nacisnąć przycisk <b>Wyloguj</b>.\n"
 "Aby zmienić status uruchamiania, należy nacisnąć <b>Przełącz</b>\n"
 
 #. Warning
-#: src/helps.ycp:83 src/helps.ycp:97
+#: src/helps.ycp:83 src/helps.ycp:98
 msgid "<h1>Warning</h1>"
 msgstr "<h1>Uwaga</h1>"
 
-#: src/helps.ycp:83 src/helps.ycp:97
+#: src/helps.ycp:83 src/helps.ycp:98
 msgid "<p>When accessing an iSCSI device <b>READ</b>/<b>WRITE</b>, make sure that this access is exclusive. Otherwise there is a potential risk of data corruption.</p>\n"
 msgstr "<p>Podczas korzystania z urządzenia iSCSI w trybie <b>READ</b>/<b>WRITE</b>, proszę upewnić się, że dostęp do urządzenia jest wyłączny. W przeciwnym razie istnieje ryzyko utraty danych.</p>\n"
 
 #: src/helps.ycp:86
-msgid "<p><b>InitiatorName</b> is value from /etc/initiatorname.iscsi. In case you have iBFT this value will be replaced from there and you are not able to change it (do it in BIOS Setup).</p>"
+#, fuzzy
+msgid ""
+"<p><b>InitiatorName</b> is value a from <tt>/etc/initiatorname.iscsi</tt>. \n"
+"In case you have iBFT, this value will be added from there and you are able to change it only in the BIOS setup.</p>"
 msgstr "<p><b>InitiatorName</b> (nazwa modułu inicjującego) to wartość z /etc/initiatorname.iscsi. W przypadku obecności iBFT, nazwa ta zostanie z niego pobrana i nie ma możliwości jej zmiany (możliwie jest to jedynie w ustawieniach BIOS).</p>"
 
 #: src/helps.ycp:88
+#, fuzzy
 msgid ""
-"If you want to use <b>iSNS</b> (Internet  Storage  Name Service) for discovering targets instead of default SendTargets method,\n"
-"fill IP address of iSNS server and port. Default port should be 3205."
+"If you want to use <b>iSNS</b> (Internet  Storage  Name Service) for discovering targets instead of the default SendTargets method,\n"
+"fill in the IP address of the iSNS server and port. The default port should be 3205.\n"
 msgstr ""
 "Jeśli zamiast domyślnej metody SendTargets do wykrywania celów ma być użyta usługa <b>iSNS</b> (Internet  Storage  Name Service),\n"
 "to należy wypełnić pole Serwer i port iSNS. Domyślny numer portu to 3205."
 
-#: src/helps.ycp:92
+#: src/helps.ycp:93
 msgid ""
 "Enter the <b>IP Address</b> of the discovered server.\n"
 "Only change <b>Port</b> if needed. For authentication, use <b>Username</b> and <b>Password</b>. If you do not need authentication,\n"
@@ -394,20 +400,20 @@ msgstr ""
 "należy użyć <b>Nazwy użytkownika</b> i <b>Hasła</b>. Jeśli uwierzytelnianie nie jest \n"
 "potrzebne, proszę wybrać <b>Brak uwierzytelniania</b>\n"
 
-#: src/helps.ycp:101
+#: src/helps.ycp:102
 msgid "List of nodes offered by the iSCSI target. Select one item and click <b>Connect</b>.  "
 msgstr "Lista węzłów oferowanych przez moduł docelowy iSCSI. Należy wskazać jeden element i nacisnąć przycisk <b>Połącz</b>.  "
 
-#: src/helps.ycp:104
+#: src/helps.ycp:105
 msgid "Select the type of authentication and enter the <b>Username</b> and <b>Password</b>."
 msgstr "Należy wskazać typ uwierzytelniania i podać <b>Nazwę użytkownika</b> i <b>Hasło</b>"
 
 #. list of discovered targets
-#: src/helps.ycp:107
+#: src/helps.ycp:108
 msgid "List of discovered targets. Start a new <b>Discovery</b> or <b>Connect</b> to any target."
 msgstr "Lista wykrytych modułów docelowych. Można uruchomić nowe <b>Wykrywanie</b> lub <b>Połączyć</b> z wybranym modułem docelowym."
 
-#: src/helps.ycp:109
+#: src/helps.ycp:110
 msgid "<h1>iBTF</h1>"
 msgstr "<h1>iBTF</h1>"
 
@@ -432,7 +438,8 @@ msgid "&iSCSI Initiator"
 msgstr "Moduł inicjujący &iSCSI"
 
 #: src/widgets.ycp:27
-msgid "Command timed-out"
+#, fuzzy
+msgid "Command timed out"
 msgstr "Limit czasu dla polecenia:"
 
 #: src/widgets.ycp:66 src/widgets.ycp:78
@@ -460,17 +467,20 @@ msgid "No record found."
 msgstr "Nie znaleziono rekordów."
 
 #: src/widgets.ycp:189
-msgid "Not valid IP address"
+#, fuzzy
+msgid "No valid IP address"
 msgstr "Niepoprawny adres IP"
 
 #: src/widgets.ycp:194
-msgid "Port field can't be empty"
+#, fuzzy
+msgid "Port field cannot be empty"
 msgstr "Pole port nie może być puste"
 
 #: src/widgets.ycp:264
+#, fuzzy
 msgid ""
-"Incorrect InitiatorName\n"
-"Correct syntax is\n"
+"Incorrect InitiatorName.\n"
+"The correct syntax is\n"
 "iqn.yyyy-mm.reversed domain name[:identifier]\n"
 "\n"
 "Example:\n"
@@ -496,7 +506,8 @@ msgid "False"
 msgstr "fałsz"
 
 #: src/widgets.ycp:493 src/widgets.ycp:552
-msgid "The target with this TargetName is already connected. Make sure that Multipathing is enabled to prevent data corruption."
+#, fuzzy
+msgid "The target with this TargetName is already connected. Make sure that multipathing is enabled to prevent data corruption."
 msgstr "Moduł docelowy o tej nazwie (TargetName) jest już podłączony. Aby zapobiec uszkodzeniu danych, należy upewnić się, czy włączona jest opcja Multipathing."
 
 #: src/widgets.ycp:493 src/widgets.ycp:552
