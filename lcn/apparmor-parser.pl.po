@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: apparmor-parser\n"
 "Report-Msgid-Bugs-To: apparmor-general@forge.novell.com\n"
 "POT-Creation-Date: 2008-04-21 00:30-0700\n"
-"PO-Revision-Date: 2008-04-22 22:21+0100\n"
+"PO-Revision-Date: 2008-04-23 20:08+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -56,7 +56,8 @@ msgstr "Błąd: Przydzielenie pamięci nie powiodło się.\n"
 msgid "Error: Could not allocate buffer for include at line %d in %s.\n"
 msgstr "Błąd: Przydzielenie bufora do dołączenia w linii %d pliku %s nie powiodło się.\n"
 
-#: ../parser_include.c:313 ../parser_include.c:333
+#: ../parser_include.c:313
+#: ../parser_include.c:333
 #, c-format
 msgid "Error: Bad include at line %d in %s.\n"
 msgstr "Błąd: Nieprawidłowe dołączenie: linia %d w %s.\n"
@@ -131,7 +132,8 @@ msgstr "%s: usunięcie \"%s\" nie powiodło się."
 msgid "%s: Unable to write to stdout\n"
 msgstr "%s: zapis na wyjście standardowe nie powiódł się\n"
 
-#: ../parser_interface.c:135 ../parser_interface.c:158
+#: ../parser_interface.c:135
+#: ../parser_interface.c:158
 #, c-format
 msgid "%s: ASSERT: Invalid option: %d\n"
 msgstr "%s: ASSERT: nieprawidłowa opcja: %d\n"
@@ -185,7 +187,9 @@ msgstr "Serializowanie profilu %s nie powiodło się\n"
 msgid "%s: Unable to write entire profile entry\n"
 msgstr "%s: zapis wyłącznego profilu nie powiódł się\n"
 
-#: parser_lex.l:122 parser_lex.l:155 parser_lex.l:354
+#: parser_lex.l:122
+#: parser_lex.l:155
+#: parser_lex.l:354
 #, c-format
 msgid "Found unexpected character: '%s'"
 msgstr " Napotkano nieoczekiwany znak '%s'"
@@ -240,11 +244,25 @@ msgstr ""
 msgid "%s: Errors found in file. Aborting.\n"
 msgstr "%s: napotkano błędy w pliku. Przerwanie.\n"
 
-#: ../parser_misc.c:281 parser_yacc.y:216 parser_yacc.y:240 parser_yacc.y:346
-#: parser_yacc.y:358 parser_yacc.y:426 parser_yacc.y:528 parser_yacc.y:566
-#: parser_yacc.y:884 parser_yacc.y:893 parser_yacc.y:904 parser_yacc.y:914
-#: parser_yacc.y:985 parser_yacc.y:1033 parser_yacc.y:1044 parser_yacc.y:1119
-#: parser_yacc.y:1134 parser_yacc.y:1141 parser_yacc.y:1152
+#: ../parser_misc.c:281
+#: parser_yacc.y:216
+#: parser_yacc.y:240
+#: parser_yacc.y:346
+#: parser_yacc.y:358
+#: parser_yacc.y:426
+#: parser_yacc.y:528
+#: parser_yacc.y:566
+#: parser_yacc.y:884
+#: parser_yacc.y:893
+#: parser_yacc.y:904
+#: parser_yacc.y:914
+#: parser_yacc.y:985
+#: parser_yacc.y:1033
+#: parser_yacc.y:1044
+#: parser_yacc.y:1119
+#: parser_yacc.y:1134
+#: parser_yacc.y:1141
+#: parser_yacc.y:1152
 msgid "Memory allocation error."
 msgstr "Błąd przydzielenia pamięci."
 
@@ -256,7 +274,8 @@ msgstr ""
 "Znacznik \"RWLIMX\" pisany dużymi literami jest przestarzały, proszę zmienić na małe litery\n"
 "Szczegóły sprawdź na stronie manuala: apparmor.d(5) .\n"
 
-#: ../parser_misc.c:473 ../parser_misc.c:480
+#: ../parser_misc.c:473
+#: ../parser_misc.c:480
 msgid "Conflict 'a' and 'w' perms are mutually exclusive."
 msgstr "Konflikt: uprawnienia 'a' i 'w' wykluczają się wzajemnie."
 
@@ -269,7 +288,8 @@ msgstr "Błędny znacznik wykonania 'i'. Wcześniej użyto sprzecznego znacznika
 msgid "Unconfined exec qualifier (%c%c) allows some dangerous environment variables to be passed to the unconfined process; 'man 5 apparmor.d' for details.\n"
 msgstr "Niewymuszony znacznik wykonania (%c%c) pozwala na przekazanie do nieograniczanego procesu pewnych niebezpiecznych zmiennych systemowych; szczegóły: \"man 5 apparmor.d\". \n"
 
-#: ../parser_misc.c:516 ../parser_misc.c:549
+#: ../parser_misc.c:516
+#: ../parser_misc.c:549
 #, c-format
 msgid "Exec qualifier '%c' invalid, conflicting qualifier already specified"
 msgstr "Błędny znacznik wykonania '%c', wcześniej użyto sprzecznego znacznika."
@@ -289,7 +309,9 @@ msgstr "Błąd wewnętrzny: na wejściu napotkano nieoczekiwany znak trybu '%c'"
 msgid "Internal error generated invalid perm 0x%llx\n"
 msgstr "Wewnętrzny błąd wygenerował niewłaściwą stałą 0x%llx\n"
 
-#: ../parser_misc.c:833 ../parser_symtab.c:556 ../parser_regex.c:658
+#: ../parser_misc.c:833
+#: ../parser_symtab.c:556
+#: ../parser_regex.c:658
 #: ../parser_variable.c:227
 #, c-format
 msgid "AppArmor parser error: %s\n"
@@ -305,14 +327,13 @@ msgid "profile %s: has merged rule %s with multiple x modifiers\n"
 msgstr "profil %s: połączono regułę %s z wieloma modyfikatorami x\n"
 
 #: parser_yacc.y:220
-#, fuzzy
 msgid "Profile names must begin with a '/', or keyword 'profile'."
-msgstr "Nazwy profilów muszą się zaczyna na '/'."
+msgstr "Nazwy profilów muszą się zaczynać się na '/', lub słowem kluczowym 'profile'."
 
 #: parser_yacc.y:263
-#, fuzzy, c-format
+#, c-format
 msgid "Failed to create alias %s -> %s\n"
-msgstr "Otwarcie %s  nie powiodło się - %s\n"
+msgstr "Tworzenie aliasu %s  nie powiodło się -> %s\n"
 
 #: parser_yacc.y:399
 msgid "Profile flag 'debug' is no longer valid."
@@ -323,24 +344,26 @@ msgstr "Flaga profilu 'dubguj' nie jest juz dostepna."
 msgid "Invalid profile flag: %s."
 msgstr "Nieprawidłowa flaga profilu: %s."
 
-#: parser_yacc.y:440 parser_yacc.y:462
+#: parser_yacc.y:440
+#: parser_yacc.y:462
 msgid "Assert: `rule' returned NULL."
 msgstr "Asercja: 'rule' zwróciło NULL."
 
-#: parser_yacc.y:443 parser_yacc.y:488
+#: parser_yacc.y:443
+#: parser_yacc.y:488
 msgid "Invalid mode, in deny rules 'x' must not be preceded by exec qualifier 'i', 'p', or 'u'"
 msgstr "Błędny tryb, w regułach zabraniających znacznik 'x' nie może być poprzedzony znacznikiem wykonania  'i', 'p' lub 'u'"
 
 #: parser_yacc.y:466
-#, fuzzy
 msgid "Invalid mode, 'x' must be preceded by exec qualifier 'i', 'p', 'c', or 'u'"
-msgstr "Błędny tryb, znacznik 'x' należy poprzedzić znacznikiem wykonania  'i', 'p' lub 'u'"
+msgstr "Błędny tryb, 'x' należy poprzedzić znacznikiem wykonania  'i', 'p' lub 'u'"
 
 #: parser_yacc.y:491
 msgid "Invalid mode, 'x' must be preceded by exec qualifier 'i', 'p', or 'u'"
 msgstr "Błędny tryb, znacznik 'x' należy poprzedzić znacznikiem wykonania  'i', 'p' lub 'u'"
 
-#: parser_yacc.y:516 parser_yacc.y:554
+#: parser_yacc.y:516
+#: parser_yacc.y:554
 msgid "Assert: `network_rule' return invalid protocol."
 msgstr "Asercja: `network_rule' zwróciło nieprawidłowy protokół."
 
@@ -349,18 +372,16 @@ msgid "Assert: `change_profile' returned NULL."
 msgstr "Asercja: `change_profile' zwróciło NULL."
 
 #: parser_yacc.y:600
-#, fuzzy
 msgid "Assert: `change_hat' returned NULL."
-msgstr "Asercja: `change_profile' zwróciło NULL."
+msgstr "Asercja: `change_hat' zwróciło NULL."
 
 #: parser_yacc.y:631
 msgid "Assert: 'hat rule' returned NULL."
 msgstr "Asercja: 'hat rule' zwróciło NULL."
 
 #: parser_yacc.y:640
-#, fuzzy
 msgid "Assert: 'local_profile rule' returned NULL."
-msgstr "Asercja: `change_profile' zwróciło NULL."
+msgstr "Asercja: 'local_profile rule' zwróciło NULL."
 
 #: parser_yacc.y:772
 #, c-format
@@ -369,15 +390,15 @@ msgstr "Użyto nie ustawioną zmienną logiczną %s w wyrażeniu if"
 
 #: parser_yacc.y:830
 msgid "subset can only be used with link rules."
-msgstr ""
+msgstr "podzbiór może by użyty tylko z regułami linków"
 
 #: parser_yacc.y:832
 msgid "link and exec perms conflict on a file rule using ->"
-msgstr ""
+msgstr "konflikt linków i stałych wykonywania w regule pliku używającej ->"
 
 #: parser_yacc.y:834
 msgid "link perms are not allowed on a named profile transition.\n"
-msgstr ""
+msgstr "stałe linków nie są dozwolone w zmianie nazwanego profilu.\n"
 
 #: parser_yacc.y:850
 msgid "unsafe rule missing exec permissions"
@@ -385,18 +406,20 @@ msgstr "niebezpieczna reguła - brak uprawnień wykonania"
 
 #: parser_yacc.y:853
 msgid "link perms are not allowed on a named profile transtion.\n"
-msgstr ""
+msgstr "stałe linków nie są dozwolone w zmianie nazwanego profilu.\n"
 
 #: parser_yacc.y:866
 #, c-format
 msgid "missing an end of line character? (entry: %s)"
 msgstr "brak znaku końca linii? (wpis: %s)"
 
-#: parser_yacc.y:1000 parser_yacc.y:1010
+#: parser_yacc.y:1000
+#: parser_yacc.y:1010
 msgid "Invalid network entry."
 msgstr "Nieprawidłowy wpis sieciowy."
 
-#: parser_yacc.y:1064 parser_yacc.y:1072
+#: parser_yacc.y:1064
+#: parser_yacc.y:1072
 #, c-format
 msgid "Invalid capability %s."
 msgstr "Nieprawidłowa możliwość %s."
@@ -493,19 +516,20 @@ msgid "ERROR in profile %s, failed to load\n"
 msgstr "Błąd w profilu %s. Wczytywanie nie powiodło się.\n"
 
 #: ../parser_policy.c:659
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Errors found during postprocessing.  Aborting.\n"
-msgstr "%s: Napotkano błędy w przetwarzaniu wyrażeń regularnych. Przerwanie.\n"
+msgstr "%s: Napotkano błędy podczas przetwarzania. Przerwanie.\n"
 
-#: ../parser_policy.c:666 ../parser_policy.c:687
+#: ../parser_policy.c:666
+#: ../parser_policy.c:687
 #, c-format
 msgid "%s: Errors found during regex postprocess.  Aborting.\n"
 msgstr "%s: Napotkano błędy w przetwarzaniu wyrażeń regularnych. Przerwanie.\n"
 
 #: ../parser_policy.c:673
-#, fuzzy, c-format
+#, c-format
 msgid "%s: Errors found during postprocess.  Aborting.\n"
-msgstr "%s: Napotkano błędy w przetwarzaniu wyrażeń regularnych. Przerwanie.\n"
+msgstr "%s: Napotkano błędy podczas przetwarzania. Przerwanie.\n"
 
 #: ../parser_policy.c:680
 #, c-format
@@ -514,72 +538,54 @@ msgstr "%s: napotkano błędy w łączonym przetwarzaniu reguł. Przerwanie.\n"
 
 #~ msgid "only link perms can be specified in a link rule."
 #~ msgstr "tylko stałe linkowe mogą zosta określone w zasadzie linku."
-
 #~ msgid "(ip_mode) Found unexpected character: '%s'"
 #~ msgstr "(tryb_ip) napotkano nieoczekiwany znak '%s'"
-
 #~ msgid "Unexpected character in interface name: '%s'"
 #~ msgstr " Napotkano nieoczekiwany znak w nazwie interfejsu: '%s'"
-
 #~ msgid "Found unknown flag: '%s'"
 #~ msgstr "Napotkano nieznaną flagę: '%s'"
-
 #~ msgid "Found unexpected keyword: '%s'"
 #~ msgstr "Napotkano nieoczekiwane wyrażenie: '%s'"
-
 #~ msgid "Exec qualifier 'i' must be followed by 'x'"
 #~ msgstr "Za znacznikiem wykonania 'i' należy umieścić 'x'"
-
 #~ msgid "Exec qualifier '%c' must be followed by 'x'"
 #~ msgstr "Za znacznikiem wykonania '%c' należy umieścić 'x'"
-
 #~ msgid "flags=(debug) is no longer supported, sorry."
 #~ msgstr "flags=(debug) już nie jest wspierane."
-
 #~ msgid "Assert: `netrule' returned NULL."
 #~ msgstr "Asercja: 'netrule' zwróciło NULL."
-
 #~ msgid "Assert: `addresses' returned NULL."
 #~ msgstr "Asercja: 'addresses' zwrócił NULL."
-
 #~ msgid "Network entries can only have one TO address."
 #~ msgstr "Wpisy sieciowe mogą zawierać tylko jeden adres DO."
-
 #~ msgid "Network entries can only have one FROM address."
 #~ msgstr "Wpisy sieciowe mogą zawierać tylko jeden adres OD."
-
 #~ msgid "`%s' is not a valid ip address."
 #~ msgstr "'%s' nie jest prawidłowym adresem IP."
-
 #~ msgid "`/%d' is not a valid netmask."
 #~ msgstr "'/%d' nie jest prawidłową maską podsieci"
-
 #~ msgid "`%s' is not a valid netmask."
 #~ msgstr "'%s' nie jest prawidłową maską podsieci"
-
 #~ msgid "ports must be between %d and %d"
 #~ msgstr "numer portu musi zawierać się pomiędzy %d a %d"
-
 #~ msgid ""
 #~ "Warning: unable to open %s, attempting to use %s\n"
 #~ "as the subdomainfs location. Use --subdomainfs to override.\n"
 #~ msgstr ""
 #~ "Ostrzeżenie: Otwarcie %s nie udało się, próba użycia %s\n"
 #~ "jako lokalizacji dla systemu plików poddomeny. Opcja --subdomainfs pozwala to obejść.\n"
-
 #~ msgid ""
 #~ "%s: Unable to query modules - '%s'\n"
 #~ "Either modules are disabled or your kernel is too old.\n"
 #~ msgstr ""
 #~ "%s: wyszukiwanie modułów nie powiodło się - '%s'.\n"
 #~ "Moduły mogą być wyłączone lub jądro systemu jest nieaktualne.\n"
-
 #~ msgid "%s: Unable to find "
 #~ msgstr "%s: nie znaleziono"
-
 #~ msgid ""
 #~ "!\n"
 #~ "Ensure that it has been loaded.\n"
 #~ msgstr ""
 #~ "!\n"
 #~ "Proszę upewnić się, że zostały wczytane.\n"
+
