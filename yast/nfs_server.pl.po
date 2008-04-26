@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: nfs_server\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-04-21 10:40+0200\n"
-"PO-Revision-Date: 2007-08-03 19:17+0100\n"
-"Last-Translator: wadim dziedzic <wdziedzic@aviary.pl>\n"
+"PO-Revision-Date: 2008-04-26 20:33+0100\n"
+"Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -119,9 +119,9 @@ msgid "NFS Exports"
 msgstr "Eksportowane katalogi NFS"
 
 #: src/NfsServer.ycp:450
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "The NFSv4 domain for idmapping is %1."
-msgstr "Domena NFSv4 dla mapowania id to %1."
+msgstr "Domena NFSv4 dla idmapping to %1."
 
 #. summary text
 #: src/nfs_server.ycp:109
@@ -140,7 +140,8 @@ msgid "Required packages (%1) are not installed."
 msgstr "Wymagane pakiety nie są zainstalowane (%1)."
 
 #. error
-#: src/nfs_server.ycp:179 src/nfs_server.ycp:217
+#: src/nfs_server.ycp:179
+#: src/nfs_server.ycp:217
 msgid "No mount point specified."
 msgstr "Nie podano punktu montowania."
 
@@ -153,14 +154,12 @@ msgstr ""
 "już ten katalog."
 
 #: src/nfs_server.ycp:257
-#, fuzzy
 msgid "Domain cannot be set without enabling NFSv4. Please use the 'set enablev4' command."
 msgstr "Domena nie może być ustawiona bez włączenia NFSv4. Proszę użyć polecenia 'set enablev4'."
 
 #: src/nfs_server.ycp:264
-#, fuzzy
 msgid "Command set must be used as in 'set option=value'. Please use 'set help' to get information about the options."
-msgstr "Polecenie set musi być używane według wzorca 'set opcja=wartość'. Proszę użyć 'set help' w celu poznania opcji."
+msgstr "Polecenie set musi być używane w sposób 'set opcja=wartość'. Proszę użyć polecenia 'set help' w celu uzyskania informacji dotyczących opcji."
 
 #. Command line help text for the nfs-server module
 #: src/nfs_server.ycp:275
@@ -189,9 +188,8 @@ msgid "Delete a directory from export"
 msgstr "Usuń eksportowany katalog"
 
 #: src/nfs_server.ycp:303
-#, fuzzy
 msgid "Set the parameters for domain, security and enablev4"
-msgstr "Ustawia parametry - domena, bezpieczeństwo, włączenie wersji 4."
+msgstr "Ustawia parametry dla domeny, zabezpieczeń oraz enablev4"
 
 #: src/nfs_server.ycp:309
 msgid "Directory to export"
@@ -218,7 +216,8 @@ msgstr "Opcja Tak/Nie włączająca/wyłączająca wsparcie dla NFSv4"
 msgid "Yes/No option for enabling/disabling secure NFS"
 msgstr "Opcja Tak/Nie włączająca/wyłączająca bezpieczny NFS"
 
-#: src/routines.ycp:246 src/routines.ycp:250
+#: src/routines.ycp:246
+#: src/routines.ycp:250
 #, ycp-format
 msgid ""
 "%3 and %4 are both exported with the option fsid=0\n"
@@ -287,9 +286,8 @@ msgid "&Browse..."
 msgstr "Przeg&lądaj..."
 
 #: src/ui.ycp:88
-#, fuzzy
 msgid "Enter a non-empty export path. For example, /exports."
-msgstr "Proszę wprowadzić nie pustą ścieżkę eksportów. Np. /eksporty"
+msgstr "Proszę wprowadzić nie pustą ścieżkę eksportu. Np. /eksporty."
 
 #. error popup message
 #: src/ui.ycp:97
@@ -346,9 +344,8 @@ msgstr ""
 "są już podane."
 
 #: src/ui.ycp:304
-#, fuzzy
 msgid "Unable to read the /etc/idmapd.conf file. Setting the default setting for the domain to 'localdomain'."
-msgstr "Nie można odczytać pliku /etc/idmapd.conf. Powracanie do domyślnego ustawienia 'localdomain'"
+msgstr "Nie można odczytać pliku /etc/idmapd.conf. Ustawianie domyślnego ustawienia domeny na 'localdomain'."
 
 #. Help, part 1 of 2
 #: src/ui.ycp:322
@@ -367,25 +364,23 @@ msgstr ""
 "okno konfiguracyjne, w którym można podać katalogi do wyeksportowania.</P>"
 
 #: src/ui.ycp:333
-#, fuzzy
 msgid ""
 "<P>If the server needs to handle NFSv4 clients, check <B>Enable NFSv4</B>,\n"
 "and fill in the NFSv4 domain name you want the id mapping daemon to use. Leave\n"
 "it as localdomain or refer to the man page for idmapd and idmapd.conf if you are not sure.</P>\n"
 msgstr ""
-"<P>Jeśli serwer musi obsłużyć klientów NFSv4, proszę włączyć opcje <B>Włącz NFSv4</B>\n"
-"i wpisać nazwe domeny dla demona mapowania id NFSv4 w polu tekstowym. W przypadku braku\n"
-"pewności proszę pozostawić wpis localdomain lub sprawdzić strony podręcznika systemowego idmap i idmap.con</P>"
+"<P>Jeśli serwer musi obsłużyć klientów NFSv4, proszę zaznaczyć opcje <B>Włącz NFSv4</B>\n"
+"i wpisać nazwę domeny dla demona mapowania id NFSv4.  W razie wątpliwości należy pozostawić\n"
+"wartość localdomain lub odnieść się do strony podręcznika man dla idmapd oraz odmapd.conf.</P>\n"
 
 #. FIXME: use %1 as nfs-utils.src.rpm produces nfs-kernel-server.rpm
 #: src/ui.ycp:340
-#, fuzzy
 msgid ""
 "<P>If the server and client must authenticate using GSS library, please enable the <B>Enable GSS Security</B> \n"
 "checkbox. For being able to use GSS API, currently you need to have Kerberos and gssapi (nfs-utils > 1.0.7) on your system</P>\n"
 msgstr ""
-"<P>Jeśli serwer i klient musi być uwierzytelniony za pomocą biblioteki GSS, proszę zaznaczyć opcje <B>Włącz zabezpieczenie GSS</B> \n"
-"Do używania GSS API obecnie wymagane jest zainstalowany kerberos i gssapi (nfs-utils > 1.0.7).</P>"
+"<P>Jeśli serwer i klient musi być uwierzytelniony za pomocą biblioteki GSS, proszę zaznaczyć pole <B>Włącz zabezpieczenie GSS</B> \n"
+"Do używania API GSS, obecnie wymagane jest zainstalowany kerberos i gssapi (nfs-utils > 1.0.7) w systemie</P>\n"
 
 #. frame label
 #: src/ui.ycp:348
@@ -462,14 +457,12 @@ msgstr "<p>Proszę pozostawić to pole puste, na oznaczenie wszystkich komputer�
 
 #. Help, part 4 of 5, caution about fsid=0 in case NFSv4 is enabled.
 #: src/ui.ycp:510
-#, fuzzy
 msgid "<p>The NFSv4 option is enabled in the previous page. Make sure that only one exported filesystem is marked with the fsid=0 option for a particular client.</p>"
-msgstr "<p>NFSv4 jest włączony na poprzedniej stronie. Proszę się upewnić, że tylko jeden eksportowany system plików jest zaznaczony z opcją fsid=0 dla poszczególnego klienta.</p>"
+msgstr "<p>Opcja NFSv4 jest włączona na poprzedniej stronie. Proszę się upewnić, że tylko jeden eksportowany system plików jest oznaczony opcją fsid=0 dla poszczególnego klienta.</p>"
 
 #: src/ui.ycp:512
-#, fuzzy
 msgid "<p>In case of multiple exports to a NFSv4 client, you need to bind the exported paths with no fsid=0 to the one with fsid=0. To do this, add another export option (bind=/target/path), where /target/path amounts to some directory existing below the fsid=0 exported tree.</p>"
-msgstr "<p>W wypadku wielokrotnych eksportów do klienta NFSv4 należy związać wyeksportowane ścieżki (bez fsid=0) z jedną z fsid=0. W tym celu proszę dodać opcje eksportu bind=/docelowa/ścieżka gdzie /docelowa/ścieżka wskazuje na katalog istniejący w wyeksportowanym drzewie z fsid=0"
+msgstr "<p>W wypadku wielokrotnych eksportów do klienta NFSv4 należy powiązać wyeksportowane ścieżki bez fsid=0 z jedną z fsid=0. W tym celu proszę dodać opcje eksportu (bind=/ścieżka/docelowa), gdzie /ścieżka/docelowa wskazuje na katalog istniejący poniżej wyeksportowanego drzewa z fsid=0"
 
 #. Help, part 5 of 5
 #: src/ui.ycp:516
@@ -520,3 +513,4 @@ msgstr "U&suń"
 #: src/ui.ycp:553
 msgid "Directories to Export"
 msgstr "Katalogi do wyeksportowania"
+
