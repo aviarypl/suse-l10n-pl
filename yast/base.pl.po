@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: base\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-04-21 10:28+0200\n"
-"PO-Revision-Date: 2008-04-26 23:48+0200\n"
+"PO-Revision-Date: 2008-04-27 10:41+0200\n"
 "Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -3728,7 +3728,7 @@ msgid ""
 "Install it anyway?"
 msgstr ""
 "Nie znaleziono sumy kontrolnej dla pakietu %1.\n"
-"Oznacza to, że pakiet znajduje się na repozytorium, ale nie jesu ujęty na liście\n"
+"Oznacza to, że pakiet znajduje się na repozytorium, ale nie jest ujęty na liście\n"
 "sum kontrolnych. Zainstalowanie tego pakietu może spowodować nieprzewidziane\n"
 "problemy.\n"
 "\n"
@@ -3892,6 +3892,16 @@ msgid ""
 "the integrity of your system at risk. It is safest\n"
 "to skip the package."
 msgstr ""
+"Pakiet %1 jest podpisany cyfrowo kluczem\n"
+"'%2 (%3)'.\n"
+"\n"
+"Klucz ten nie znajduje się w bazie zaufanych\n"
+"kluczy. Jeśli ufa się wydawcy tego klucza, należy go\n"
+"zanaczyć jak zaufany\n"
+"\n"
+"Instalowanie pakietów z nieznanych repozytoriów może\n"
+"spowodować nieprzewidziane problemy. Bezpieczniejsze\n"
+"jest pominięcie instalacji pakietu."
 
 #. popup question, %1 stands for the filename, %2 for the key ID, %3 for the key name
 #: library/packages/src/SignatureCheckDialogs.ycp:634
@@ -3907,16 +3917,26 @@ msgid ""
 "the integrity of your system at risk. It is safest\n"
 "to skip it."
 msgstr ""
+"Plik %1 jest podpisany cyfrowo kluczem\n"
+"'%2 (%3)'.\n"
+"\n"
+"Klucz ten nie znajduje się w bazie zaufanych\n"
+"kluczy. Jeśli ufa się wydawcy tego klucza, należy go\n"
+"zanaczyć jak zaufany\n"
+"\n"
+"Instalowanie plików z nieznanych repozytoriów może\n"
+"spowodować nieprzewidziane problemy. Bezpieczniejsze\n"
+"jest pominięcie instalacji pliku."
 
 #. popup heading
 #: library/packages/src/SignatureCheckDialogs.ycp:651
 msgid "Signed with Untrusted Public Key"
-msgstr ""
+msgstr "Podpisane nieznanym kluczem publicznym"
 
 #. push button
 #: library/packages/src/SignatureCheckDialogs.ycp:657
 msgid "&Trust and Import the Key"
-msgstr ""
+msgstr "Zaimportuj i dodaj do &bazy zaufanych ten klucz"
 
 #. additional Richtext (HTML) warning text (kind of help), 1/2
 #: library/packages/src/SignatureCheckDialogs.ycp:691
@@ -3928,6 +3948,11 @@ msgid ""
 "importing the key into your keyring of trusted keys allows the key owner\n"
 "to have a certain amount of control over the software on your system.</p>"
 msgstr ""
+"<p>Posiadacz tego klucza może dostarczać aktualizacji,\n"
+"pakietów i repozytoriów, które będą traktowane jako zaufane na tym\n"
+"komputerze i oferowane do instalacji bez ostrzeżeń. Zaimportowanie\n"
+"tego klucz i dodanie go do bazy zaufanych oznacza że jego posiadacz\n"
+"ma pośrednią kontrolę nad oprogramowaniem w Twoim systemie.</p>"
 
 #. additional Richtext (HTML) warning text (kind of help), 2/2, %1 stands for the GnuPG key ID
 #: library/packages/src/SignatureCheckDialogs.ycp:698
@@ -3938,6 +3963,11 @@ msgid ""
 "is not signed by a trusted (imported) key. If you do not import the key,\n"
 "packages created by the owner of key <tt>%1</tt> show this warning.</p>"
 msgstr ""
+"<p>Okno ostrzeżenia będzie otwierane zawsze\n"
+"jeśli nastąpi próba instalacji pakietu niepodpisanego\n"
+"zaufanym kluczem. Jeśli klucz nie zostanie zaimportowany,\n"
+"pakiety podpisane przez właściciela klucza <tt>%1</tt> zawsze\n"
+"będą pokazywały to ostrzeżenie.</p>"
 
 #. warning label - the key to import is expired
 #. %1 is current date (formatted according to the current locale)
@@ -3947,6 +3977,8 @@ msgid ""
 "WARNING: The key is expired!\n"
 "Current date: %1"
 msgstr ""
+"UWAGA: Klucz wygał!\n"
+"Aktualna data: %1"
 
 #. popup message, %1 stands for GPG key complete multiline description, %2 for key location (URL or ...)
 #: library/packages/src/SignatureCheckDialogs.ycp:720
@@ -3960,18 +3992,24 @@ msgid ""
 "You should be sure that you can trust the owner and that\n"
 "the key really belongs to that owner before importing it."
 msgstr ""
+"Klucz GnuPG %1\n"
+"został znaleziony na %2.\n"
+"\n"
+"Można zaimportować ten klucz i dodać\n"
+"go do bazy zaufanych kluczy. Należy być jednak\n"
+"pewnym, że można zaufać właścicielowi tego klucza\n"
+"i na prawdę należy on do niego."
 
 #. popup heading
 #: library/packages/src/SignatureCheckDialogs.ycp:751
 msgid "Import Public GnuPG Key"
-msgstr ""
+msgstr "Importowanie klucza publicznego GnuPG"
 
 #. push button
 #: library/packages/src/SignatureCheckDialogs.ycp:762
 #: library/packages/src/SignatureCheckDialogs.ycp:868
-#, fuzzy
 msgid "&Import"
-msgstr "&Port"
+msgstr "&importuj"
 
 #. push button
 #. `PushButton(`id(`details), _("&Details...")),
@@ -3979,9 +4017,8 @@ msgstr "&Port"
 #. push button
 #: library/packages/src/SignatureCheckDialogs.ycp:768
 #: library/packages/src/SignatureCheckDialogs.ycp:874
-#, fuzzy
 msgid "Do &Not Import"
-msgstr "&Nie akceptuj"
+msgstr "&Nie importuj"
 
 #. popup message, %1 stands for string "GPG key ID\nfingerprint", %2 for key name
 #: library/packages/src/SignatureCheckDialogs.ycp:828
@@ -3994,11 +4031,17 @@ msgid ""
 "You should be sure that you can trust the owner and that\n"
 "the key really belongs to that owner before importing it."
 msgstr ""
+"Został znalezionynastępujący klucz GnuPG: %1\n"
+"\n"
+"Można zaimportować ten klucz i dodać\n"
+"go do bazy zaufanych kluczy. Należy być jednak\n"
+"pewnym, że można zaufać właścicielowi tego klucza\n"
+"i na prawdę należy on do niego."
 
 #. popup heading
 #: library/packages/src/SignatureCheckDialogs.ycp:857
 msgid "Import Untrusted GnuPG Key"
-msgstr ""
+msgstr "Importowanie niezaufanego klucza GnuPG"
 
 #. popup question, %1 stands for the filename, %2 is expected checksum
 #. %3 is the current checksum (e.g. "803a8ff00d00c9075a1bd223a480bcf92d2481c1")
@@ -4015,12 +4058,19 @@ msgid ""
 "\n"
 "Use it anyway?"
 msgstr ""
+"Oczekiwano sumy kontrolnej %2\n"
+"pliku %1, ale aktualna suma to %3.\n"
+"\n"
+"Oznacza to, że plik został zmieniony od czasu podpisania go\n"
+"pkluczem piblicznym przez autora. Użycie tego pliku stanowi duże\n"
+"ryzyko dla bezpieczeństwa system.\n"
+"\n"
+"Czy użyć ten plik pomimo tego?"
 
 #. dialog heading - displayed in a big bold font
 #: library/packages/src/SignatureCheckDialogs.ycp:961
-#, fuzzy
 msgid "Wrong Digest"
-msgstr "Ostrzeżenia"
+msgstr "Błędna suma kontrolna"
 
 #. popup question, %1 stands for the filename, %2 is expected digest, %3 is the current digest
 #: library/packages/src/SignatureCheckDialogs.ycp:977
@@ -4035,12 +4085,20 @@ msgid ""
 "\n"
 "Use it anyway?"
 msgstr ""
+"Suma kontrolna pliku %1\n"
+"to %2,\n"
+"ale nie jest znana prawidłowa suma dla tego pliku."
+"\n"
+"Oznacza to, że integralność tego pliku nie może zostać\n"
+"potwierdzona. Używanie tego pliku może spowodować\n"
+"niespodziewane problemy.\n"
+"\n"
+"Czy użyć ten plik pomimo tego?"
 
 #. dialog heading - displayed in a big bold font
 #: library/packages/src/SignatureCheckDialogs.ycp:989
-#, fuzzy
 msgid "Unknown Digest"
-msgstr "Nieznane urządzenie"
+msgstr "Nieznana suma kontrolna"
 
 #. the message is followed by list of required packages
 #. Popup Text
@@ -4785,9 +4843,8 @@ msgstr ""
 
 #. Byte abbreviated
 #: library/types/src/String.ycp:101
-#, fuzzy
 msgid "B"
-msgstr "kB"
+msgstr "B"
 
 #. KiloByte abbreviated
 #: library/types/src/String.ycp:103
