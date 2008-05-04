@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: installation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-21 10:39+0200\n"
+"POT-Creation-Date: 2008-04-29 16:25+0200\n"
 "PO-Revision-Date: 2008-04-23 20:10+0200\n"
 "Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -34,12 +34,6 @@ msgid "&Dummy"
 msgstr "&Pusty"
 
 #. progress step title
-#: src/clients/automatic_configuration_finish.ycp:93
-#: src/clients/installation_settings_finish.ycp:70
-msgid "Writing automatic configuration..."
-msgstr "Zapisywanie automatycznej konfiguracji..."
-
-#. progress step title
 #: src/clients/copy_files_finish.ycp:118
 msgid "Copying files to installed system..."
 msgstr "Kopiowanie plików do instalowanego systemu..."
@@ -53,6 +47,61 @@ msgstr "Kopiowanie plików dziennika do instalowanego systemu..."
 #: src/clients/copy_systemfiles_finish.ycp:39
 msgid "Copying system files to the installed system..."
 msgstr "Kopiowanie plików do instalowanego systemu..."
+
+#. TRANSLATORS: Installation overview
+#. IMPORTANT: Please, do not change the HTML link <a href="...">...</a>, only visible text
+#: src/clients/deploying_proposal.ycp:36
+#, ycp-format
+msgid "Installation from images is enabled (<a href=\"%1\">disable</a>)"
+msgstr ""
+
+#. TRANSLATORS: Installation overview
+#. IMPORTANT: Please, do not change the HTML link <a href="...">...</a>, only visible text
+#: src/clients/deploying_proposal.ycp:43
+#, ycp-format
+msgid "Installation from images is disabled (<a href=\"%1\">enable</a>)"
+msgstr ""
+
+#. TRANSLATORS: help text
+#: src/clients/deploying_proposal.ycp:80
+msgid ""
+"<p><b>Installation from Images</b> is used to speed the installation up.\n"
+"Images contain compressed snapshots of installed system matching your selection\n"
+"of patterns. The rest of packages which are not in images will be installed from\n"
+"packages the standard way.</p>"
+msgstr ""
+
+#. TRANSLATORS: help text
+#: src/clients/deploying_proposal.ycp:85
+#, fuzzy
+msgid ""
+"<p>Installation from images is disabled by default if the current\n"
+"pattern selection does not fit any set of images.</p>"
+msgstr "<p>Proces instalacji zapisuje teraz zdefiniowany przez użytkownika wybór pakietów</p>"
+
+#: src/clients/deploying_proposal.ycp:91
+#, ycp-format
+msgid "Error: Images should not be used for mode: %1"
+msgstr ""
+
+#: src/clients/deploying_proposal.ycp:116
+msgid ""
+"Unable to enable installation from images.\n"
+"\n"
+"Currently selected patterns do not fit the images\n"
+"stored on installation media."
+msgstr ""
+
+#. this is a heading
+#: src/clients/deploying_proposal.ycp:129
+msgid "Installation from Images"
+msgstr "Instalacja z obrazów"
+
+#. this is a menu entry
+#: src/clients/deploying_proposal.ycp:131
+#, fuzzy
+msgid "Installation from &Images"
+msgstr "Instalacja z obrazów"
 
 #. progress step title
 #: src/clients/desktop_finish.ycp:46
@@ -112,24 +161,26 @@ msgstr ""
 "Należy zdecydować, czy przeprowadzić aktualizację online.\n"
 "Można pominąć ten etap i uruchomić aktualizację online później.\n"
 
-#: src/clients/inst_automatic_configuration.ycp:38
+#: src/clients/inst_automatic_configuration.ycp:45
 msgid "Initialization..."
 msgstr "Inicjalizacja..."
 
-#: src/clients/inst_automatic_configuration.ycp:45
+#: src/clients/inst_automatic_configuration.ycp:52
 msgid "Configuring network..."
 msgstr "Konfigurowanie sieci..."
 
-#: src/clients/inst_automatic_configuration.ycp:52
+#: src/clients/inst_automatic_configuration.ycp:59
 msgid "Configuring hardware..."
 msgstr "Konfigurowanie sprzętu..."
 
-#: src/clients/inst_automatic_configuration.ycp:59
-#: src/clients/inst_automatic_configuration.ycp:251
+#: src/clients/inst_automatic_configuration.ycp:66
 msgid "Finishing configuration..."
 msgstr "Zapisywanie konfiguracji..."
 
-#: src/clients/inst_automatic_configuration.ycp:110
+#. TRANSLATORS: this message is displayed on console when X11 configuration
+#. switches from running X to console. Sometimes it looks like
+#. the installation has failed.
+#: src/clients/inst_automatic_configuration.ycp:120
 msgid ""
 "\n"
 "\n"
@@ -153,26 +204,26 @@ msgstr ""
 "\n"
 "***********************************************************\n"
 
-#. TRANSLATORS: Progress step label
-#. %1 - text defined by script, e.g., "Configuring hardware..."
-#. %2 - number of the current step
-#. %3 - number of all steps
-#. Finally, it might look like this "Configuring hardware... (2/5)"
-#: src/clients/inst_automatic_configuration.ycp:146
-#, ycp-format
-msgid "%1 (%2/%3)"
-msgstr "%1 (%2/%3)"
-
-#: src/clients/inst_automatic_configuration.ycp:223
-#: src/clients/inst_automatic_configuration.ycp:250
+#: src/clients/inst_automatic_configuration.ycp:227
 msgid "Automatic Configuration"
 msgstr "Automatyczna konfiguracja"
 
-#: src/clients/inst_automatic_configuration.ycp:226
+#: src/clients/inst_automatic_configuration.ycp:234
+#, fuzzy
+msgid "Preparing configuration..."
+msgstr "Przygotowywanie pierwszej konfiguracji systemu..."
+
+#: src/clients/inst_automatic_configuration.ycp:242
+#, fuzzy
+msgid "Creating automatic configuration..."
+msgstr "Zapisywanie automatycznej konfiguracji..."
+
+#: src/clients/inst_automatic_configuration.ycp:247
 msgid "<p>Installation is currently writing the automatic configuration. Please wait...</p>"
 msgstr "<p>Instalator zapisuje automatyczną konfigurację. Proszę czekać...</p>"
 
-#: src/clients/inst_automatic_configuration.ycp:232
+#: src/clients/inst_automatic_configuration.ycp:259
+#: src/clients/inst_automatic_configuration.ycp:265
 msgid "Automatic configuration..."
 msgstr "Konfiguracja automatyczna..."
 
@@ -189,7 +240,7 @@ msgstr "Witamy"
 #. TRANSLATORS: Combo box
 #: src/clients/inst_complex_welcome.ycp:66
 #: src/clients/inst_release_notes.ycp:167
-#: src/clients/inst_release_notes.ycp:246
+#: src/clients/inst_release_notes.ycp:247
 msgid "&Language"
 msgstr "&Język"
 
@@ -379,29 +430,47 @@ msgstr ""
 "AutoYaST wymaga tzw. profilu (zapisane wszystkie wybory, pakiety itp), aby wiedzieć, jak ma wyglądać zainstalowany system. Po\n"
 " zaznaczeniu tej opcji, profil obecnego systemu zostanie zachowany w pliku <tt>/root/autoyast.xml</tt>.</p>"
 
-#: src/clients/inst_deploy_image.ycp:38
-#, ycp-format
-msgid "Deploying Images (%1/%2)..."
-msgstr "Rozmieszczanie obrazu (%1/%2)..."
+#. twice more steps
+#: src/clients/inst_deploy_image.ycp:104 src/clients/inst_deploy_image.ycp:200
+#, fuzzy
+msgid "Deploying mages..."
+msgstr "Rozmieszczanie obrazów..."
 
-#: src/clients/inst_deploy_image.ycp:59
+#: src/clients/inst_deploy_image.ycp:115
 #, ycp-format
 msgid "Downloading image at speed %1/s"
 msgstr "Pobieranie obrazu z prędkością %1/s"
 
-#: src/clients/inst_deploy_image.ycp:94 src/clients/inst_deploy_image.ycp:119
+#: src/clients/inst_deploy_image.ycp:120
+#, fuzzy, ycp-format
+msgid "Downloading image %1 at speed %2/s"
+msgstr "Pobieranie obrazu z prędkością %1/s"
+
+#: src/clients/inst_deploy_image.ycp:170
 msgid "Deploying image..."
 msgstr "Rozmieszczanie obrazu..."
 
-#: src/clients/inst_deploy_image.ycp:97
+#: src/clients/inst_deploy_image.ycp:172
+#, fuzzy, ycp-format
+msgid "Deploying image %1..."
+msgstr "Rozmieszczanie obrazu..."
+
+#: src/clients/inst_deploy_image.ycp:176
 msgid "Image deployed"
 msgstr "Obraz rozmieszczony"
 
-#: src/clients/inst_deploy_image.ycp:115
+#: src/clients/inst_deploy_image.ycp:203
 msgid "Deploying Installation Images"
 msgstr "Inicjalizacja obrazu instalacyjnego"
 
-#: src/clients/inst_deploy_image.ycp:125
+#. TRANSLATORS: progress message
+#. dialog caption
+#: src/clients/inst_deploy_image.ycp:207 src/clients/inst_mode.ycp:441
+#: src/include/inst_inc_all.ycp:40
+msgid "Initializing..."
+msgstr "Inicjalizacja..."
+
+#: src/clients/inst_deploy_image.ycp:213
 msgid "Deploying Images..."
 msgstr "Rozmieszczanie obrazów..."
 
@@ -484,11 +553,11 @@ msgid "Prepare system for initial boot"
 msgstr "Przygotowywanie systemu do pierwszego uruchomienia"
 
 #. Headline for last dialog of base installation: Install LILO etc.
-#: src/clients/inst_finish.ycp:231
+#: src/clients/inst_finish.ycp:233
 msgid "Finishing Basic Installation"
 msgstr "Kończenie instalacji podstawowej"
 
-#: src/clients/inst_finish.ycp:278
+#: src/clients/inst_finish.ycp:284
 msgid "Finished."
 msgstr "Zakończono."
 
@@ -525,7 +594,7 @@ msgid "Preparing the 1st system configuration..."
 msgstr "Przygotowywanie pierwszej konfiguracji systemu..."
 
 #. TRANSLATORS: dialog caption
-#: src/clients/inst_initialization.ycp:45 src/clients/inst_mode.ycp:434
+#: src/clients/inst_initialization.ycp:45 src/clients/inst_mode.ycp:439
 msgid "Initializing"
 msgstr "Inicjalizacja"
 
@@ -538,7 +607,7 @@ msgstr "Wybierz tryb"
 msgid "New &Installation"
 msgstr "Nowa &instalacja"
 
-#: src/clients/inst_mode.ycp:140 src/clients/inst_proposal.ycp:1149
+#: src/clients/inst_mode.ycp:140 src/clients/inst_proposal.ycp:1130
 msgid "&Update"
 msgstr "Akt&ualizacja"
 
@@ -625,18 +694,20 @@ msgstr ""
 #: src/clients/inst_mode.ycp:220
 msgid ""
 "<p>\n"
-"To let the new installation to create an automatic configuration, select\n"
-"<b>Use Automatic Configuration</b>. Otherwise, manual configuration will be used.\n"
-"Update mode does not support automatic configuration.</p>"
+"Select <b>Use Automatic Configuration</b> to let the installation program\n"
+"configure your network and hardware automatically. Otherwise you will\n"
+"be offered a configuration proposal with possibility to tune all the\n"
+"settings manually. Unexperienced users had better use automatic\n"
+"configuration.</p>"
 msgstr ""
-"<p>\n"
-"Aby umożliwić nowej instalacji dokonanie automatycznej konfiguracji, proszę\n"
-"wybrać <b>Użyj automatycznej konfiguracji</b>. W przeciwnym wypadku podczas\n"
-"instalacji zostanie użyta konfiguracja ręczna.\n"
-"Tryb aktualizacji nie wspiera automatycznej konfiguracji.</p>"
 
 #. help text for installation method
-#: src/clients/inst_mode.ycp:226
+#: src/clients/inst_mode.ycp:228
+msgid "<p>Update mode does not support automatic configuration.</p>"
+msgstr ""
+
+#. help text for installation method
+#: src/clients/inst_mode.ycp:231
 msgid ""
 "<p>Select <b>Repair Installed System</b> if you have a damaged Linux system on\n"
 "your hard disk. This option can try to fix problems automatically.\n"
@@ -648,7 +719,7 @@ msgstr ""
 "</p>"
 
 #. help text for installation method
-#: src/clients/inst_mode.ycp:231
+#: src/clients/inst_mode.ycp:236
 msgid ""
 "<p>The features <b>Update</b> and <b>Repair Installed System</b> are only\n"
 "available if some Linux system has been detected.\n"
@@ -659,12 +730,12 @@ msgstr ""
 "</p>"
 
 #. dialog caption
-#: src/clients/inst_mode.ycp:238
+#: src/clients/inst_mode.ycp:243
 msgid "Installation Mode"
 msgstr "Tryb instalacji"
 
 #. this is a label of a message box
-#: src/clients/inst_mode.ycp:348
+#: src/clients/inst_mode.ycp:353
 msgid ""
 "Choose one of the\n"
 "options to continue."
@@ -678,7 +749,7 @@ msgstr ""
 #. %2 - logfile, possibly with errors
 #. %3 - link to our bugzilla
 #. %4 - directory where YaST logs are stored
-#: src/clients/inst_mode.ycp:408
+#: src/clients/inst_mode.ycp:413
 #, ycp-format
 msgid ""
 "Accessing the YaST module %1 has failed.\n"
@@ -689,12 +760,6 @@ msgstr ""
 "Więcej informacji można znaleźć w pliku '%2'.\n"
 "Proszę wypełnić raport o błędzie na %3 i załączyć do niego pliki dzienników\n"
 "YaST znajdujące się w katalogu '%4'."
-
-#. TRANSLATORS: progress message
-#. dialog caption
-#: src/clients/inst_mode.ycp:436 src/include/inst_inc_all.ycp:40
-msgid "Initializing..."
-msgstr "Inicjalizacja..."
 
 #. TRANSLATORS: dialog caption
 #: src/clients/inst_network_check.ycp:58
@@ -1222,31 +1287,76 @@ msgstr ""
 "Należy wrócić do porzedniego ekranu aby skorygować \n"
 "ustawienia lub anulować konfigurację sieci."
 
-#. FIXME: help (but is it needed?)
-#: src/clients/inst_prepare_image.ycp:24
-msgid "Analyzing Installation Images"
-msgstr "Anazlizowanie obrazu instalacyjnego."
+#. TRANSLATORS: help text, part 1
+#: src/clients/inst_new_desktop.ycp:34
+#, fuzzy
+msgid ""
+"<p>At Linux <b>choice</b> is a top priority. <i>openSUSE</i> offers a number \n"
+"of different desktop environments. Below you see a list of the 2 major ones \n"
+"<b>GNOME</b> and <b>KDE</b> (in two different versions). Both provide an easy to use desktop\n"
+"with a large number of desktop applications such as email, file browser, games and many others.</p>"
+msgstr ""
+"<p><i>openSUSE</i> pozwala wybrać kilka różnych środowisk graficznych. Poniżej zostały wymienione 2,\n"
+"które są najczęściej wybierane przez użytkowników Linuksa, <b>GNOME</b> i <b>KDE</b>.\n"
+"Obydwa te środowiska oferują dużą liczbę aplikacji, takich jak klient poczty, przeglądarka plików, gry i wiele więcej.</p>"
+
+#. TRANSLATORS: help text, part 3
+#: src/clients/inst_new_desktop.ycp:40
+#, fuzzy
+msgid ""
+"Additionally, not only desktop but you can also chose a minimalistic \n"
+"installation that could fit your needs better."
+msgstr ""
+"Dodatkowo możena wybrać minimalną instalację, która może lepiej\n"
+"spełnić Państwa potrzeby."
+
+#: src/clients/inst_new_desktop.ycp:165
+msgid "Other"
+msgstr ""
+
+#: src/clients/inst_new_desktop.ycp:208
+msgid ""
+"openSUSE offers you a choice of user interfaces. The two major complete \n"
+"desktops are KDE and GNOME. Both provide an easy-to-use desktop with a full \n"
+"suite of applications including email, a file manager, games and utilities.\n"
+"\n"
+"As desktop selection is a matter of taste, we do not give a recommendation."
+msgstr ""
+
+#. TRANSLATORS: dialog caption
+#: src/clients/inst_new_desktop.ycp:228
+msgid "Desktop Selection"
+msgstr ""
+
+#: src/clients/inst_new_desktop.ycp:258 src/clients/inst_new_desktop.ycp:268
+#: src/clients/inst_software_selection.ycp:202
+msgid ""
+"No system type was selected.\n"
+"Select the default type."
+msgstr ""
+"Nie wybrano typu systemu.\n"
+"Proszę wybrać podstawowy typ."
 
 #. heading in proposal, in case the module doesn't create one
-#: src/clients/inst_proposal.ycp:237 src/clients/inst_proposal.ycp:238
-#: src/clients/inst_proposal.ycp:245 src/clients/inst_proposal.ycp:270
-#: src/clients/inst_proposal.ycp:271 src/clients/inst_proposal.ycp:277
+#: src/clients/inst_proposal.ycp:269 src/clients/inst_proposal.ycp:270
+#: src/clients/inst_proposal.ycp:277 src/clients/inst_proposal.ycp:305
+#: src/clients/inst_proposal.ycp:306 src/clients/inst_proposal.ycp:312
 msgid "ERROR: Missing Title"
 msgstr "BŁĄD: Brak nazwy"
 
 #. Initial contents of proposal subwindow while proposals are calculated
-#: src/clients/inst_proposal.ycp:248 src/clients/inst_proposal.ycp:763
+#: src/clients/inst_proposal.ycp:280 src/clients/inst_proposal.ycp:744
 msgid "Analyzing your system..."
 msgstr "Trwa analiza systemu..."
 
 #. fallback proposal, means usually an internal error
-#: src/clients/inst_proposal.ycp:446
+#: src/clients/inst_proposal.ycp:457
 msgid "ERROR: No proposal"
 msgstr "BŁĄD: Brak projektu"
 
 #. Submodules handle their own error reporting
 #. text for a message box
-#: src/clients/inst_proposal.ycp:496
+#: src/clients/inst_proposal.ycp:507
 msgid ""
 "Configuration saved.\n"
 "There were errors."
@@ -1255,7 +1365,7 @@ msgstr ""
 "Wystąpiły błędy."
 
 #. dialog headline
-#: src/clients/inst_proposal.ycp:708
+#: src/clients/inst_proposal.ycp:687
 msgid "Installation Overview"
 msgstr "Przegląd instalacji"
 
@@ -1264,42 +1374,42 @@ msgstr "Przegląd instalacji"
 #. Translators: About 40 characters max,
 #. use newlines for longer translations.
 #. radio button
-#: src/clients/inst_proposal.ycp:730
+#: src/clients/inst_proposal.ycp:709
 msgid "&Skip Configuration"
 msgstr "&Pomiń konfigurację"
 
 #. radio button
-#: src/clients/inst_proposal.ycp:733
+#: src/clients/inst_proposal.ycp:712
 msgid "&Use Following Configuration"
 msgstr "&Użyj poniższej konfiguracji"
 
 #. menu button
 #. TRANSLATORS: Push button
-#: src/clients/inst_proposal.ycp:744 src/clients/inst_proposal.ycp:919
+#: src/clients/inst_proposal.ycp:723 src/clients/inst_proposal.ycp:900
 #: src/clients/inst_upgrade_urls.ycp:132
 msgid "&Change..."
 msgstr "&Zmień..."
 
 #. Help message between headline and installation proposal / settings summary.
 #. May contain newlines, but don't make it very much longer than the original.
-#: src/clients/inst_proposal.ycp:805
+#: src/clients/inst_proposal.ycp:786
 msgid "Click any headline to make changes or use the \"Change...\" menu below."
 msgstr ""
 "Aby wprowadzić zmiany, proszę wybrać dowolny nagłówek po prawej, \n"
 "albo nacisnąć przycisk \"Zmień...\" poniżej."
 
 #. push button
-#: src/clients/inst_proposal.ycp:836
+#: src/clients/inst_proposal.ycp:817
 msgid "&Show Release Notes"
 msgstr "Informacje o &wydaniu"
 
 #. menu button item
-#: src/clients/inst_proposal.ycp:917
+#: src/clients/inst_proposal.ycp:898
 msgid "&Reset to defaults"
 msgstr "P&rzywróć domyślne"
 
 #. General part of the help text for all types of proposals
-#: src/clients/inst_proposal.ycp:961
+#: src/clients/inst_proposal.ycp:942
 msgid ""
 "<p>\n"
 "Change the values by clicking on the respective headline\n"
@@ -1313,7 +1423,7 @@ msgstr ""
 
 #. Help text for installation proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:971
+#: src/clients/inst_proposal.ycp:952
 msgid ""
 "<p>\n"
 "Use <b>Install</b> to perform a new installation with the values displayed.\n"
@@ -1340,7 +1450,7 @@ msgstr ""
 #. * - sh@suse.de 2002-02-26
 #. *
 #. Help text for installation proposal, continued
-#: src/clients/inst_proposal.ycp:993 src/clients/inst_proposal.ycp:1015
+#: src/clients/inst_proposal.ycp:974 src/clients/inst_proposal.ycp:996
 msgid ""
 "<p>\n"
 "Your hard disk has not been modified in any way, so you can still safely abort.\n"
@@ -1352,7 +1462,7 @@ msgstr ""
 
 #. Help text for update proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1002
+#: src/clients/inst_proposal.ycp:983
 msgid ""
 "<p>\n"
 "Use <b>Update</b> to perform an update with the values displayed.\n"
@@ -1365,7 +1475,7 @@ msgstr ""
 
 #. Help text for network configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1024
+#: src/clients/inst_proposal.ycp:1005
 msgid ""
 "<p>\n"
 "Put the network settings into effect by pressing <b>Next</b>.\n"
@@ -1377,7 +1487,7 @@ msgstr ""
 
 #. Help text for service configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1033
+#: src/clients/inst_proposal.ycp:1014
 msgid ""
 "<p>\n"
 "Put the service settings into effect by pressing <b>Next</b>.\n"
@@ -1389,7 +1499,7 @@ msgstr ""
 
 #. Help text for hardware configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1042
+#: src/clients/inst_proposal.ycp:1023
 msgid ""
 "<p>\n"
 "Put the hardware settings into effect by pressing <b>Next</b>.\n"
@@ -1400,12 +1510,12 @@ msgstr ""
 "</p>\n"
 
 #. Proposal in uml module
-#: src/clients/inst_proposal.ycp:1050
+#: src/clients/inst_proposal.ycp:1031
 msgid "<P><B>UML Installation Proposal</B></P>"
 msgstr "<P><B>Propozycja instalacji UML</B></P>"
 
 #. help text
-#: src/clients/inst_proposal.ycp:1052
+#: src/clients/inst_proposal.ycp:1033
 msgid ""
 "<P>UML (User Mode Linux) installation allows you to start independent\n"
 "Linux virtual machines in the host system.</P>"
@@ -1416,7 +1526,7 @@ msgstr ""
 #. Generic help text for other proposals (not basic installation or
 #. hardhware configuration.
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1067
+#: src/clients/inst_proposal.ycp:1048
 msgid ""
 "<p>\n"
 "To use the settings as displayed, press <b>Next</b>.\n"
@@ -1427,7 +1537,7 @@ msgstr ""
 "</p>\n"
 
 #. help text
-#: src/clients/inst_proposal.ycp:1076
+#: src/clients/inst_proposal.ycp:1057
 msgid ""
 "<p>Some proposals might be\n"
 "locked by the system administrator, so cannot be changed. To change\n"
@@ -1438,27 +1548,27 @@ msgstr ""
 "Aby zmienić propozycje zastrzeżone, proszę skontaktować się\n"
 "z administratorem.</p>"
 
-#: src/clients/inst_proposal.ycp:1151
+#: src/clients/inst_proposal.ycp:1132
 msgid "&Install"
 msgstr "&Instaluj"
 
 #. question in a popup box
-#: src/clients/inst_proposal.ycp:1240
+#: src/clients/inst_proposal.ycp:1221
 msgid "Really reset everything to default values?"
 msgstr "Czy na pewno przywrócić wszystkie wartości domyślne?"
 
 #. explain consequences of a decision
-#: src/clients/inst_proposal.ycp:1242
+#: src/clients/inst_proposal.ycp:1223
 msgid "You will lose all changes."
 msgstr "Wszystkie wprowadzone zmiany zostaną utracone."
 
 #. message show when user has disabled the configuration
-#: src/clients/inst_proposal.ycp:1254
+#: src/clients/inst_proposal.ycp:1235
 msgid "Skipping configuration upon user request"
 msgstr "Konfiguracja pominięta na żądanie użytkownika"
 
 #. error message is a popup
-#: src/clients/inst_proposal.ycp:1272
+#: src/clients/inst_proposal.ycp:1253
 msgid ""
 "The proposal contains an error that must be\n"
 "resolved before continuing.\n"
@@ -1496,14 +1606,14 @@ msgstr ""
 "<p>Oto <b>informacje o wydaniu</b> dla zainstalowanego \n"
 "systemu Linux. Zawierają one zwięzły opis nowych możliwości i zmian.</p>"
 
-#: src/clients/inst_release_notes.ycp:262
+#: src/clients/inst_release_notes.ycp:263
 msgid "<p>No release notes have been installed.</p>"
 msgstr "<p>Nie zostały zainstalowane informacje o wersji.</p>"
 
 #. TRANSLATORS: busy message
 #. TRANSLATORS: progress stage, %1 stands for service name
 #: src/clients/inst_restore_settings.ycp:27
-#: src/include/inst_inc_second.ycp:162
+#: src/include/inst_inc_second.ycp:164
 #, ycp-format
 msgid "Starting service %1..."
 msgstr "Uruchamianie usługi %1..."
@@ -1561,14 +1671,6 @@ msgstr "Opis"
 #: src/clients/inst_software_selection.ycp:165
 msgid "System Type"
 msgstr "Typ systemu"
-
-#: src/clients/inst_software_selection.ycp:202
-msgid ""
-"No system type was selected.\n"
-"Select the default type."
-msgstr ""
-"Nie wybrano typu systemu.\n"
-"Proszę wybrać podstawowy typ."
 
 #. //////////////////////////////////////////////////////////////////////////////
 #. Main Dialog
@@ -1766,13 +1868,13 @@ msgstr "Ocena możliwości aktualizacji..."
 
 #. TRANSLATORS: progress step
 #: src/clients/inst_system_analysis.ycp:339
-#: src/clients/inst_upgrade_urls.ycp:670
+#: src/clients/inst_upgrade_urls.ycp:676
 msgid "Initialize package manager"
 msgstr "Inicjalizacja managera pakietów"
 
 #. TRANSLATORS: progress step
 #: src/clients/inst_system_analysis.ycp:341
-#: src/clients/inst_upgrade_urls.ycp:675
+#: src/clients/inst_upgrade_urls.ycp:681
 msgid "Initializing package manager..."
 msgstr "Inicjalizacja menedżera pakietów..."
 
@@ -1787,7 +1889,7 @@ msgid "Please wait while computer hardware and installed systems are being probe
 msgstr "Proszę czekać, sprzęt i zainstalowane oprogramowanie jest testowane..."
 
 #. TRANSLATORS: dialog caption
-#: src/clients/inst_upgrade_urls.ycp:111 src/clients/inst_upgrade_urls.ycp:452
+#: src/clients/inst_upgrade_urls.ycp:111 src/clients/inst_upgrade_urls.ycp:458
 msgid "Previously Used Repositories"
 msgstr "Używane wcześniej repoztytoria"
 
@@ -1861,17 +1963,17 @@ msgid "Unknown"
 msgstr "Nieznane"
 
 #. TRANSLATORS: textentry
-#: src/clients/inst_upgrade_urls.ycp:269
+#: src/clients/inst_upgrade_urls.ycp:273
 msgid "&Repository URL"
 msgstr "U&RL repozytorium"
 
 #. TRANSLATORS: popup header
-#: src/clients/inst_upgrade_urls.ycp:423
+#: src/clients/inst_upgrade_urls.ycp:429
 msgid "Network is not Configured"
 msgstr "Śieć nie jest skonfigurowana"
 
 #. TRANSLATORS: popup question
-#: src/clients/inst_upgrade_urls.ycp:425
+#: src/clients/inst_upgrade_urls.ycp:431
 msgid ""
 "Remote repositories require an Internet connection.\n"
 "Configure it?"
@@ -1880,18 +1982,18 @@ msgstr ""
 "Skonfigurować teraz połączenie?"
 
 #. TRANSLATORS: Progress text
-#: src/clients/inst_upgrade_urls.ycp:455
+#: src/clients/inst_upgrade_urls.ycp:461
 msgid "Adding and removing repositories..."
 msgstr "Dodawanie i usuwanie repozytoriów..."
 
 #. TRANSLATORS: help text
-#: src/clients/inst_upgrade_urls.ycp:458
+#: src/clients/inst_upgrade_urls.ycp:464
 msgid "<p>Please wait while repositories are being added and removed.</p>"
 msgstr "<p>Proszę czekać, repozytoria są dodawane i usuwane.</p>"
 
 #. TRANSLATORS: error report
 #. %1 is replaced with repo-name, %2 with repo-URL
-#: src/clients/inst_upgrade_urls.ycp:582
+#: src/clients/inst_upgrade_urls.ycp:588
 #, ycp-format
 msgid ""
 "An error occurred while refreshing repository\n"
@@ -1904,7 +2006,7 @@ msgstr ""
 
 #. TRANSLATORS: error report
 #. %1 is replaced with repo-name, %2 with repo-URL
-#: src/clients/inst_upgrade_urls.ycp:598
+#: src/clients/inst_upgrade_urls.ycp:604
 #, ycp-format
 msgid ""
 "An error occurred when enabling repository\n"
@@ -1916,22 +2018,22 @@ msgstr ""
 "Adres: %2"
 
 #. TRANSLATORS: dialog caption
-#: src/clients/inst_upgrade_urls.ycp:664
+#: src/clients/inst_upgrade_urls.ycp:670
 msgid "Reading Repositories Used on the System"
 msgstr "Odczytywanie repozytoriów używanych w systemie"
 
 #. TRANSLATORS: progress step
-#: src/clients/inst_upgrade_urls.ycp:669
+#: src/clients/inst_upgrade_urls.ycp:675
 msgid "Read previously used repositories"
 msgstr "Odczytywanie poprzednio używanych repozytoriów"
 
 #. TRANSLATORS: progress step
-#: src/clients/inst_upgrade_urls.ycp:674
+#: src/clients/inst_upgrade_urls.ycp:680
 msgid "Reading previously used repositories..."
 msgstr "Odczytywanie poprzednio używanych repozytoriów..."
 
 #. TRANSLATORS: dialog help
-#: src/clients/inst_upgrade_urls.ycp:678
+#: src/clients/inst_upgrade_urls.ycp:684
 msgid "<p>Please wait while repositories are being read...</p>"
 msgstr "<p>Proszę czekać, repozytoria są odczytywane...</p>"
 
@@ -1966,6 +2068,11 @@ msgstr ""
 #: src/clients/installation.ycp:54
 msgid "No workflow defined for this kind of installation."
 msgstr "Nie zdefiniowano przebiegu dla tego trybu instalacji."
+
+#. progress step title
+#: src/clients/installation_settings_finish.ycp:70
+msgid "Writing automatic configuration..."
+msgstr "Zapisywanie automatycznej konfiguracji..."
 
 #. progress step title
 #: src/clients/kernel_finish.ycp:42
@@ -2203,23 +2310,23 @@ msgstr ""
 "inny, niż ten pokazany w podręczniku.\n"
 
 #. TRANSLATORS: progress stage, %1 stands for service name
-#: src/include/inst_inc_second.ycp:160
+#: src/include/inst_inc_second.ycp:162
 #, ycp-format
 msgid "Start service %1"
 msgstr "Uruchamianie usługi %1"
 
 #. TRANSLATORS: dialog caption
-#: src/include/inst_inc_second.ycp:174
+#: src/include/inst_inc_second.ycp:176
 msgid "Adjusting Network Settings"
 msgstr "Ustawienia sieci"
 
 #. TRANSLATORS: dialog help
-#: src/include/inst_inc_second.ycp:180
+#: src/include/inst_inc_second.ycp:182
 msgid "Please wait while network settings are being adjusted..."
 msgstr "Proszę poczekać, konfiguracja sieci jest sprawdzana..."
 
 #. popup question (#x1)
-#: src/include/inst_inc_second.ycp:227
+#: src/include/inst_inc_second.ycp:229
 msgid ""
 "The previous installation has failed.\n"
 "Would you like it to continue?\n"
@@ -2233,7 +2340,7 @@ msgstr ""
 "niektórych informacji."
 
 #. popup question (#x1)
-#: src/include/inst_inc_second.ycp:233
+#: src/include/inst_inc_second.ycp:235
 msgid ""
 "The previous installation has been aborted.\n"
 "Would you like it to continue?\n"
@@ -2247,7 +2354,7 @@ msgstr ""
 "niektórych informacji."
 
 #. popup headline (#x1)
-#: src/include/inst_inc_second.ycp:245
+#: src/include/inst_inc_second.ycp:247
 msgid "Starting Installation..."
 msgstr "Przygotowanie instalacji..."
 
@@ -2389,34 +2496,22 @@ msgstr ""
 "Połączenie z inst-sys nie powiodło się.\n"
 "Nie można kontynuować."
 
-#: src/modules/ImageInstallation.ycp:568
+#: src/modules/ImageInstallation.ycp:615
 msgid "Failed to read information about installation images"
 msgstr "Nie można odczytać informacji o obrazie instalacyjnym."
 
-#. TRANSLATORS: Dialog caption
-#: src/modules/ImageInstallation.ycp:805 src/modules/ImageInstallation.ycp:894
-msgid "Installation from Images"
-msgstr "Instalacja z obrazów"
+#: src/modules/ImageInstallation.ycp:891
+#, fuzzy
+msgid "Deploying..."
+msgstr "Rozmieszczanie obrazu..."
 
-#. TRANSLATORS: Dialog progress
-#: src/modules/ImageInstallation.ycp:807
+#: src/modules/ImageInstallation.ycp:914
 msgid "Storing user preferences..."
 msgstr "Zapisywanie preferencji użytkownika..."
 
-#. TRANSLATORS: help text
-#: src/modules/ImageInstallation.ycp:810
-msgid "<p>Installation process is just storing the user-defined selection of packages</p>"
-msgstr "<p>Proces instalacji zapisuje teraz zdefiniowany przez użytkownika wybór pakietów</p>"
-
-#. TRANSLATORS: Dialog progress
-#: src/modules/ImageInstallation.ycp:896
+#: src/modules/ImageInstallation.ycp:1007
 msgid "Restoring user preferences..."
 msgstr "Przywracanie preferencji użytkownika..."
-
-#. TRANSLATORS: Dialog help
-#: src/modules/ImageInstallation.ycp:899
-msgid "<p>Installaton is restoring the user preferences to install the rest of packages.</p>"
-msgstr "<p>Instalator przywraca preferencje użytkownika aby zainstalować pozostałe pakiety.</p>"
 
 #. notification 1/2
 #: src/modules/X11Version.ycp:140
@@ -2428,3 +2523,27 @@ msgstr "<p>Aby system X11 był dostępny, należy zainstalować pakiet <b>%1</b>
 #: src/modules/X11Version.ycp:142
 msgid "<p>Do you want to install it now?</p>"
 msgstr "<p>Czy zainstalować go teraz?</p>"
+
+#~ msgid "%1 (%2/%3)"
+#~ msgstr "%1 (%2/%3)"
+
+#~ msgid "Deploying Images (%1/%2)..."
+#~ msgstr "Rozmieszczanie obrazu (%1/%2)..."
+
+#~ msgid ""
+#~ "<p>\n"
+#~ "To let the new installation to create an automatic configuration, select\n"
+#~ "<b>Use Automatic Configuration</b>. Otherwise, manual configuration will be used.\n"
+#~ "Update mode does not support automatic configuration.</p>"
+#~ msgstr ""
+#~ "<p>\n"
+#~ "Aby umożliwić nowej instalacji dokonanie automatycznej konfiguracji, proszę\n"
+#~ "wybrać <b>Użyj automatycznej konfiguracji</b>. W przeciwnym wypadku podczas\n"
+#~ "instalacji zostanie użyta konfiguracja ręczna.\n"
+#~ "Tryb aktualizacji nie wspiera automatycznej konfiguracji.</p>"
+
+#~ msgid "Analyzing Installation Images"
+#~ msgstr "Anazlizowanie obrazu instalacyjnego."
+
+#~ msgid "<p>Installaton is restoring the user preferences to install the rest of packages.</p>"
+#~ msgstr "<p>Instalator przywraca preferencje użytkownika aby zainstalować pozostałe pakiety.</p>"

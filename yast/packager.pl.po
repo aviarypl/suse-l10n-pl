@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: packager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-21 10:29+0200\n"
+"POT-Creation-Date: 2008-04-29 17:05+0200\n"
 "PO-Revision-Date: 2008-04-23 12:33+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -735,7 +735,7 @@ msgstr ""
 "w podanym miejscu do listy wyboru pakietów."
 
 #. popup message part 1
-#: src/clients/repositories.ycp:437 src/modules/Packages.ycp:851
+#: src/clients/repositories.ycp:437 src/modules/Packages.ycp:869
 #: src/modules/SourceManager.ycp:427
 #, ycp-format
 msgid ""
@@ -749,7 +749,7 @@ msgstr ""
 #. popup message part 3
 #. end of popup message, question
 #: src/clients/repositories.ycp:440 src/clients/repositories.ycp:782
-#: src/modules/Packages.ycp:853 src/modules/SourceManager.ycp:257
+#: src/modules/Packages.ycp:871 src/modules/SourceManager.ycp:257
 #: src/modules/SourceManager.ycp:432
 msgid "Try again?"
 msgstr "Spróbować ponownie?"
@@ -956,7 +956,7 @@ msgstr ""
 
 #. popup message part 2 followed by other info
 #. popup message, after message header, header of details
-#: src/clients/repositories.ycp:779 src/modules/Packages.ycp:852
+#: src/clients/repositories.ycp:779 src/modules/Packages.ycp:870
 #: src/modules/SourceManager.ycp:255 src/modules/SourceManager.ycp:430
 msgid "Details:"
 msgstr "Szczegóły:"
@@ -1058,17 +1058,29 @@ msgstr "Zresetuj system docelowy do stanu %1"
 msgid "Starting the Package Manager"
 msgstr "Uruchamianie menedżera pakietów"
 
+#. Error message:
+#. %1 = package name (may include complete RPM file name)
+#. %2 = error message
+#: src/clients/sw_single.ycp:167
+#, ycp-format
+msgid ""
+"Package %1 could not be installed.\n"
+"\n"
+"Details:\n"
+"%2\n"
+msgstr ""
+
 #. error popup, %1 is the name of the .rpm package
-#: src/clients/sw_single.ycp:165
+#: src/clients/sw_single.ycp:177
 #, ycp-format
 msgid "Package %1 was not found on the medium."
 msgstr "Pakiet %1 nie został znaleziony na nośniku."
 
-#: src/clients/sw_single.ycp:207
+#: src/clients/sw_single.ycp:219
 msgid "There was an error in the repository initialization."
 msgstr "Napotkano błąd podczas inicjalizacji repozytorium."
 
-#: src/clients/sw_single.ycp:212
+#: src/clients/sw_single.ycp:224
 msgid ""
 "No repository is defined.\n"
 "Only installed packages are displayed."
@@ -1078,7 +1090,7 @@ msgstr ""
 
 #. error message - SW management is already in use, access denied
 #. the yast module cannot be started
-#: src/clients/sw_single.ycp:314
+#: src/clients/sw_single.ycp:326
 msgid ""
 "The software management module cannot work\n"
 "without access to the software management system."
@@ -1086,7 +1098,7 @@ msgstr ""
 "Moduł zarządzania oprogramowaniem nie może\n"
 "działać bez dostępu do systemu zarządzania oprogramowaniem."
 
-#: src/clients/sw_single.ycp:358
+#: src/clients/sw_single.ycp:369
 msgid ""
 "During the last package installation,\n"
 "several package failed to install.\n"
@@ -1097,7 +1109,7 @@ msgstr ""
 "Zainstalować je teraz?\n"
 
 #. error report, %1 is a list of packages
-#: src/clients/sw_single.ycp:414
+#: src/clients/sw_single.ycp:425
 #, ycp-format
 msgid ""
 "Following packages haven't been found on the medium:\n"
@@ -1107,12 +1119,12 @@ msgstr ""
 "%1"
 
 #. Popup dialog contents
-#: src/clients/sw_single.ycp:491
+#: src/clients/sw_single.ycp:502
 msgid "Install or remove more packages?"
 msgstr "Zainstalować lub usunąć więcej pakietów?"
 
 #. Command line help text for the software management module, %1 is "zypper"
-#: src/clients/sw_single.ycp:509
+#: src/clients/sw_single.ycp:520
 #, ycp-format
 msgid "Software installation - this module doesn't support the command line interface, use '%1' instead."
 msgstr "Instalacja oprogramowania - ten moduł YaST2 nie obsługuje interfejsu z linii poleceń. Proszę użyć polecenia \"%1\"."
@@ -1467,37 +1479,57 @@ msgid "Control file %1 not found on media."
 msgstr "Na nośniku nie znaleziono pliku sterującego %1."
 
 #. TRANSLATORS: Dialog label
-#: src/modules/DefaultDesktop.ycp:24
-msgid "GNOME Desktop"
-msgstr "Pulpit GNOME"
+#: src/modules/DefaultDesktop.ycp:29
+msgid "GNOME"
+msgstr "GNOME"
+
+#: src/modules/DefaultDesktop.ycp:32
+msgid ""
+"GNOME 2.22 is the latest desktop from the GNOME Project.\n"
+"It combines stability and maturity with incremental innovations."
+msgstr ""
 
 #. TRANSLATORS: Dialog label
-#: src/modules/DefaultDesktop.ycp:31
-msgid "KDE4 Desktop"
-msgstr "Pulpit KDE4"
+#: src/modules/DefaultDesktop.ycp:43
+#, fuzzy
+msgid "KDE 4.0"
+msgstr "KDE"
+
+#: src/modules/DefaultDesktop.ycp:46
+msgid ""
+"KDE 4.0 is the most recent evolution of KDE. It comes with many\n"
+"new KDE technologies, but it is less mature than the other desktops."
+msgstr ""
 
 #. TRANSLATORS: Dialog label
-#: src/modules/DefaultDesktop.ycp:38
-msgid "KDE3 Desktop"
-msgstr "Pulpit KDE3"
+#: src/modules/DefaultDesktop.ycp:57
+#, fuzzy
+msgid "KDE 3.5"
+msgstr "KDE"
+
+#: src/modules/DefaultDesktop.ycp:60
+msgid ""
+"KDE 3.5 is the previous generation of the K Desktop Environment.\n"
+"It is mature and stable."
+msgstr ""
 
 #. TRANSLATORS: Dialog label
-#: src/modules/DefaultDesktop.ycp:45
+#: src/modules/DefaultDesktop.ycp:71
 msgid "XFCE Desktop"
 msgstr "Pulpit XFCE"
 
 #. TRANSLATORS: Dialog label
-#: src/modules/DefaultDesktop.ycp:52
+#: src/modules/DefaultDesktop.ycp:82
 msgid "Minimal X Window"
 msgstr "Minimalny serwer okien X"
 
 #. TRANSLATORS: Dialog label
-#: src/modules/DefaultDesktop.ycp:59
+#: src/modules/DefaultDesktop.ycp:93
 msgid "Minimal Server Selection (Text Mode)"
 msgstr "Wybór minimum serwerowego (tryb tekstowy)"
 
 #. TRANSLATORS: dialog label
-#: src/modules/DefaultDesktop.ycp:168
+#: src/modules/DefaultDesktop.ycp:235
 msgid "No system type selected"
 msgstr "Nie wybrano typu systemu"
 
@@ -1537,67 +1569,67 @@ msgid "&Show Full Log"
 msgstr "&Pokaż dziennik"
 
 #. warning text
-#: src/modules/Packages.ycp:263
+#: src/modules/Packages.ycp:281
 msgid "Your computer is a 64-bit x86-64 system. However, you are trying to install a 32-bit distribution."
 msgstr "Ten komputer posiada architekturę 64-bitową x86-64. Pomimo tego podjęto próbę zainstalowania dystrybucji 32-bitowej."
 
 #. installation proposal - SW summary, %1 is name of the installed product
 #. (e.g. openSUSE 10.3, SUSE Linux Enterprise ...)
-#: src/modules/Packages.ycp:280
+#: src/modules/Packages.ycp:298
 #, ycp-format
 msgid "Product: %1"
 msgstr "Produkt: %1"
 
 #. installation proposal - SW summary, %1 is name of the selected desktop or system type (e.g. KDE)
-#: src/modules/Packages.ycp:283
+#: src/modules/Packages.ycp:301
 #, ycp-format
 msgid "System Type: %1"
 msgstr "Typ systemu: %1"
 
-#: src/modules/Packages.ycp:290
+#: src/modules/Packages.ycp:308
 msgid "Patterns:<br>"
 msgstr "Schematy:<br>"
 
-#: src/modules/Packages.ycp:299
+#: src/modules/Packages.ycp:317
 msgid "Selections:<br>"
 msgstr "Wybrane:<br>"
 
 #. installation proposal - SW summary, %1 is size of the selected packages (in MB or GB)
-#: src/modules/Packages.ycp:306
+#: src/modules/Packages.ycp:324
 #, ycp-format
 msgid "Size of Packages to Install: %1"
 msgstr "Rozmiar pakietów do zainstalowania: %1"
 
 #. installation proposal - SW summary, %1 is download size of the selected packages
 #. which will be installed from an ftp or http repository (in MB or GB)
-#: src/modules/Packages.ycp:316
+#: src/modules/Packages.ycp:334
 #, ycp-format
 msgid "Size of Packages to Download: %1"
 msgstr "Rozmiar pakietów do pobranie: %1"
 
 #. summary warning
-#: src/modules/Packages.ycp:364
+#: src/modules/Packages.ycp:382
 msgid "Not enough disk space."
 msgstr "Brak miejsca na dysku."
 
 #. summary warning
-#: src/modules/Packages.ycp:366
+#: src/modules/Packages.ycp:384
 msgid "Not enough disk space. Remove some packages in the single selection."
 msgstr "Brak miejsca na dysku. Należy zrezygnować z części wybranych pakietów."
 
-#: src/modules/Packages.ycp:392
+#: src/modules/Packages.ycp:410
 #, ycp-format
 msgid "Only %1 (%2%%) free space available on partition %3.<BR>"
 msgstr "Na partycji %3 dostępne jest tylko %1 (%2%%) wolnego miejsca.<BR>"
 
 #. error in proposal, %1 is URL
-#: src/modules/Packages.ycp:862
+#: src/modules/Packages.ycp:880
 #, ycp-format
 msgid "No repository found at '%1'."
 msgstr "Nie znaleziono repozytorium pod adresem '%1'."
 
 #. TRANSLATORS: beginning of the rich text with the release notes
-#: src/modules/Packages.ycp:1047
+#: src/modules/Packages.ycp:1065
 msgid ""
 "<p><b>These are the release notes made for the first initial release. They are\n"
 "part of the installation media. During the configuration steps, if a connection\n"
@@ -1610,32 +1642,32 @@ msgstr ""
 "połączenie z Internetem.</b></p>"
 
 #. popup - information label
-#: src/modules/Packages.ycp:1065
+#: src/modules/Packages.ycp:1083
 msgid "Integrating booted media..."
 msgstr "Integracja nośnika..."
 
-#: src/modules/Packages.ycp:1083
+#: src/modules/Packages.ycp:1101
 msgid "Failed to integrate the service pack repository."
 msgstr "Integracja repozytorium pakietu serwisowego zakończona niepowodzeniem."
 
 #. popup - information label
-#: src/modules/Packages.ycp:1114
+#: src/modules/Packages.ycp:1132
 msgid "Initializing repositories..."
 msgstr "Inicjalizacja repozytoriów..."
 
 #. message popup, %1 is product name
-#: src/modules/Packages.ycp:1180
+#: src/modules/Packages.ycp:1198
 #, ycp-format
 msgid "Insert %1 CD 1"
 msgstr "Proszę umieścić w napędzie płytę CD 1 systemu %1"
 
-#: src/modules/Packages.ycp:1182
+#: src/modules/Packages.ycp:1200
 #, ycp-format
 msgid "%1 CD 1 not found"
 msgstr "Nie znaleziono %1 CD1"
 
 #. an error message
-#: src/modules/Packages.ycp:1290
+#: src/modules/Packages.ycp:1308
 #, ycp-format
 msgid ""
 "Error while initializing package descriptions.\n"
@@ -1645,7 +1677,7 @@ msgstr ""
 "Szczegóły dot. błędu znajdują się w pliku dziennika %1."
 
 #. popup label
-#: src/modules/Packages.ycp:1469
+#: src/modules/Packages.ycp:1487
 msgid "Evaluating package selection..."
 msgstr "Sprawdzanie listy pakietów..."
 
@@ -1834,60 +1866,60 @@ msgstr "Pozostało: %1"
 
 #. Heading for the progress bar for the current package
 #. while it is deleted. "%1" is the package name.
-#: src/modules/SlideShow.ycp:1367
+#: src/modules/SlideShow.ycp:1368
 #, ycp-format
 msgid "Deleting %1"
 msgstr "Usuwanie %1"
 
 #. package installation - summary text
 #. %1 is RPM name, %2 is installed (unpacked) size (e.g. 6.20MB)
-#: src/modules/SlideShow.ycp:1373
+#: src/modules/SlideShow.ycp:1374
 #, ycp-format
 msgid "%1 (installed size %2)"
 msgstr "%1 (po instalacji %2)"
 
 #. Table headings for CD statistics during installation
-#: src/modules/SlideShow.ycp:1523
+#: src/modules/SlideShow.ycp:1527
 msgid "Media"
 msgstr "Nośnik"
 
 #. Table headings for CD statistics during installation
-#: src/modules/SlideShow.ycp:1525
+#: src/modules/SlideShow.ycp:1529
 msgid "Size"
 msgstr "Rozmiar"
 
 #. Table headings for CD statistics during installation
-#: src/modules/SlideShow.ycp:1527
+#: src/modules/SlideShow.ycp:1531
 msgid "Packages"
 msgstr "Pakiety"
 
 #. Table headings for CD statistics during installation
-#: src/modules/SlideShow.ycp:1529
+#: src/modules/SlideShow.ycp:1533
 msgid "Time"
 msgstr "Czas"
 
 #. Help text while software packages are being installed (displayed only in rare cases)
-#: src/modules/SlideShow.ycp:1612
+#: src/modules/SlideShow.ycp:1616
 msgid "<p>Please wait while packages are being installed.</p>"
 msgstr "<p>Proszę czekać, trwa instalacja pakietów.</p>"
 
 #. tab
-#: src/modules/SlideShow.ycp:1629
+#: src/modules/SlideShow.ycp:1633
 msgid "Slide Sho&w"
 msgstr "&Prezentacja"
 
 #. tab
-#: src/modules/SlideShow.ycp:1631
+#: src/modules/SlideShow.ycp:1635
 msgid "&Details"
 msgstr "Szcze&góły"
 
 #. tab
-#: src/modules/SlideShow.ycp:1635
+#: src/modules/SlideShow.ycp:1639
 msgid "Release &Notes"
 msgstr "Informacje o wydaniu"
 
 #. Dialog heading while software packages are being installed
-#: src/modules/SlideShow.ycp:1660 src/modules/SlideShow.ycp:1693
+#: src/modules/SlideShow.ycp:1664 src/modules/SlideShow.ycp:1697
 msgid "Package Installation"
 msgstr "Instalacja pakietów"
 
@@ -2046,11 +2078,11 @@ msgstr "Obraz &ISO"
 msgid "URL of the Repository"
 msgstr "Adres URL repozytorium"
 
-#: src/modules/SourceDialogs.ycp:513 src/modules/SourceDialogs.ycp:1535
+#: src/modules/SourceDialogs.ycp:513 src/modules/SourceDialogs.ycp:1546
 msgid "Edit Parts of the URL"
 msgstr "Edytuje części adresu URL"
 
-#: src/modules/SourceDialogs.ycp:515 src/modules/SourceDialogs.ycp:1537
+#: src/modules/SourceDialogs.ycp:515 src/modules/SourceDialogs.ycp:1548
 msgid "Edit Complete URL"
 msgstr "Edytuj kompletny adres URL"
 
@@ -2085,7 +2117,7 @@ msgstr ""
 
 #. dialog caption
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:650 src/modules/SourceDialogs.ycp:1929
+#: src/modules/SourceDialogs.ycp:650 src/modules/SourceDialogs.ycp:1940
 msgid "Local Directory"
 msgstr "Katalog lokalny"
 
@@ -2283,27 +2315,27 @@ msgid "&Password"
 msgstr "&Hasło"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1391
+#: src/modules/SourceDialogs.ycp:1402
 msgid "&FTP"
 msgstr "&FTP"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1394
+#: src/modules/SourceDialogs.ycp:1405
 msgid "H&TTP"
 msgstr "H&TTP"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1401
+#: src/modules/SourceDialogs.ycp:1412
 msgid "HTT&PS"
 msgstr "HTT&PS"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1407 src/modules/SourceDialogs.ycp:1616
+#: src/modules/SourceDialogs.ycp:1418 src/modules/SourceDialogs.ycp:1627
 msgid "&SMB/CIFS"
 msgstr "&SMB/CIFS"
 
 #. help text - server dialog
-#: src/modules/SourceDialogs.ycp:1549
+#: src/modules/SourceDialogs.ycp:1560
 msgid ""
 "<p><big><b>Server and Directory</b></big><br>\n"
 "Use <b>Server Name</b> and <b>Path to Directory or ISO Image</b>\n"
@@ -2328,7 +2360,7 @@ msgstr ""
 "nośnika, należy zaznaczyć opcję <b>Obraz ISO</b>.</p>\n"
 
 #. help text - server dialog, there is a "Port" widget
-#: src/modules/SourceDialogs.ycp:1561
+#: src/modules/SourceDialogs.ycp:1572
 msgid ""
 "<p>It is possible to set the <b>Port</b> number for a HTTP/HTTPS repository.\n"
 "Leave it empty to use the default port.</p>\n"
@@ -2337,81 +2369,81 @@ msgstr ""
 "Wartość pusta oznacza domyślny port.</p>\n"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1602
+#: src/modules/SourceDialogs.ycp:1613
 msgid "&Scan Using SLP..."
 msgstr "&Skanuj używając SLP..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1604
+#: src/modules/SourceDialogs.ycp:1615
 msgid "Commun&ity Repositories"
 msgstr "Repozytoria społecznośc&i"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1607 src/modules/SourceDialogs.ycp:1647
+#: src/modules/SourceDialogs.ycp:1618 src/modules/SourceDialogs.ycp:1658
 msgid "Specify &URL..."
 msgstr "Określ &URL..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1610
+#: src/modules/SourceDialogs.ycp:1621
 msgid "&FTP..."
 msgstr "&FTP..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1612
+#: src/modules/SourceDialogs.ycp:1623
 msgid "&HTTP..."
 msgstr "&HTTP..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1614
+#: src/modules/SourceDialogs.ycp:1625
 msgid "HTT&PS..."
 msgstr "HTT&PS..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1618
+#: src/modules/SourceDialogs.ycp:1629
 msgid "&NFS..."
 msgstr "&NFS..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1620 src/modules/SourceDialogs.ycp:1650
+#: src/modules/SourceDialogs.ycp:1631 src/modules/SourceDialogs.ycp:1661
 msgid "&CD..."
 msgstr "&CD..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1622 src/modules/SourceDialogs.ycp:1652
+#: src/modules/SourceDialogs.ycp:1633 src/modules/SourceDialogs.ycp:1663
 msgid "&DVD..."
 msgstr "&DVD..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1624 src/modules/SourceDialogs.ycp:1654
+#: src/modules/SourceDialogs.ycp:1635 src/modules/SourceDialogs.ycp:1665
 msgid "&Hard Disk..."
 msgstr "Dysk &twardy..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1626
+#: src/modules/SourceDialogs.ycp:1637
 msgid "&USB Mass Storage (USB Stick, Disk)..."
 msgstr "Pamięć masowa &USB (pamięci, dyski USB)"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1628 src/modules/SourceDialogs.ycp:1658
+#: src/modules/SourceDialogs.ycp:1639 src/modules/SourceDialogs.ycp:1669
 msgid "&Local Directory..."
 msgstr "Katalog &lokalny..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1630 src/modules/SourceDialogs.ycp:1660
+#: src/modules/SourceDialogs.ycp:1641 src/modules/SourceDialogs.ycp:1671
 msgid "&Local ISO Image..."
 msgstr "&Lokalny obraz ISO..."
 
-#: src/modules/SourceDialogs.ycp:1634 src/modules/SourceDialogs.ycp:1664
+#: src/modules/SourceDialogs.ycp:1645 src/modules/SourceDialogs.ycp:1675
 msgid "&Download repository description files"
 msgstr "&Pobierz opisy repozytoriów"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1656
+#: src/modules/SourceDialogs.ycp:1667
 msgid "&USB Stick or Disk..."
 msgstr "Pamięć lub dysk &USB..."
 
 #. help text
-#: src/modules/SourceDialogs.ycp:1689
+#: src/modules/SourceDialogs.ycp:1700
 msgid ""
 "<p><big><b>Media Type</b></big><br>\n"
 "The software repository can be located on CD, on a network server,\n"
@@ -2422,7 +2454,7 @@ msgstr ""
 "na serwerze sieciowym lub na twardym dysku.</p>"
 
 #. help, continued
-#: src/modules/SourceDialogs.ycp:1694
+#: src/modules/SourceDialogs.ycp:1705
 msgid ""
 "<p>\n"
 "To add  <b>CD</b> or <b>DVD</b>,\n"
@@ -2432,7 +2464,7 @@ msgstr ""
 "Aby dodać katalog z <b>CD</b> lub <b>DVD</b> wymagane są odpowiednie płyty.</p>"
 
 #. help, continued
-#: src/modules/SourceDialogs.ycp:1699
+#: src/modules/SourceDialogs.ycp:1710
 msgid ""
 "<p>\n"
 "The product CDs can be copied to the hard disk.\n"
@@ -2449,7 +2481,7 @@ msgstr ""
 "katalogu, wystarczy podać tylko jego nazwę. </p>\n"
 
 #. help, continued
-#: src/modules/SourceDialogs.ycp:1708
+#: src/modules/SourceDialogs.ycp:1719
 msgid ""
 "<p>\n"
 "Network installation requires a working network connection.\n"
@@ -2462,23 +2494,23 @@ msgstr ""
 "z pierwszego dysku CD, np. /data1/CD1.</p>\n"
 
 #. error popup
-#: src/modules/SourceDialogs.ycp:1721
+#: src/modules/SourceDialogs.ycp:1732
 msgid "Select the media type."
 msgstr "Proszę wybrać typ nośnika."
 
-#: src/modules/SourceDialogs.ycp:1728
+#: src/modules/SourceDialogs.ycp:1739
 msgid "Insert the add-on product CD"
 msgstr "Proszę umieścić w napędzie płytę CD produktu dodatkowego"
 
-#: src/modules/SourceDialogs.ycp:1729
+#: src/modules/SourceDialogs.ycp:1740
 msgid "Insert the add-on product DVD"
 msgstr "Proszę umieścić w napędzie płytę DVD produktu dodatkowego"
 
-#: src/modules/SourceDialogs.ycp:1739
+#: src/modules/SourceDialogs.ycp:1750
 msgid "No USB disk was detected."
 msgstr "Nie wykryto żadnego dysku USB."
 
-#: src/modules/SourceDialogs.ycp:1857
+#: src/modules/SourceDialogs.ycp:1868
 msgid ""
 "<p><b>Download Files</b><br>\n"
 "Each repository has description files which describe content of the repository.\n"
@@ -2493,44 +2525,44 @@ msgstr ""
 "pobranie plików przez Yast, kiedy będą one potrzebne. </p>\n"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1917 src/modules/SourceManagerSLP.ycp:258
+#: src/modules/SourceDialogs.ycp:1928 src/modules/SourceManagerSLP.ycp:258
 msgid "Repository URL"
 msgstr "Adres URL repozytorium"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1919
+#: src/modules/SourceDialogs.ycp:1930
 msgid "NFS Server"
 msgstr "Serwer NFS"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1921 src/modules/SourceDialogs.ycp:1923
+#: src/modules/SourceDialogs.ycp:1932 src/modules/SourceDialogs.ycp:1934
 msgid "CD or DVD Media"
 msgstr "Typ nośnika CD/DVD"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1925
+#: src/modules/SourceDialogs.ycp:1936
 msgid "Hard Disk"
 msgstr "Dysk twardy"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1927
+#: src/modules/SourceDialogs.ycp:1938
 msgid "USB Stick or Disk"
 msgstr "Pamięć lub dysk USB"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1931
+#: src/modules/SourceDialogs.ycp:1942
 msgid "Local ISO Image"
 msgstr "Lokalny obraz ISO"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1933 src/modules/SourceDialogs.ycp:1935
-#: src/modules/SourceDialogs.ycp:1937 src/modules/SourceDialogs.ycp:1939
-#: src/modules/SourceDialogs.ycp:1941
+#: src/modules/SourceDialogs.ycp:1944 src/modules/SourceDialogs.ycp:1946
+#: src/modules/SourceDialogs.ycp:1948 src/modules/SourceDialogs.ycp:1950
+#: src/modules/SourceDialogs.ycp:1952
 msgid "Server and Directory"
 msgstr "Serwer i katalog"
 
 #. dialog caption
-#: src/modules/SourceDialogs.ycp:2066 src/modules/SourceDialogs.ycp:2088
+#: src/modules/SourceDialogs.ycp:2077 src/modules/SourceDialogs.ycp:2099
 msgid "Media Type"
 msgstr "Typ nośnika"
 
@@ -2768,6 +2800,15 @@ msgstr ""
 #: src/modules/SpaceCalculation.ycp:480
 msgid "Please deselect some packages."
 msgstr "Proszę zrezygnować z niektórych pakietów."
+
+#~ msgid "GNOME Desktop"
+#~ msgstr "Pulpit GNOME"
+
+#~ msgid "KDE4 Desktop"
+#~ msgstr "Pulpit KDE4"
+
+#~ msgid "KDE3 Desktop"
+#~ msgstr "Pulpit KDE3"
 
 #~ msgid "Package: "
 #~ msgstr "Pakiet: "
@@ -3399,12 +3440,6 @@ msgstr "Proszę zrezygnować z niektórych pakietów."
 
 #~ msgid "<B>OK</B>"
 #~ msgstr "<B>OK</B>"
-
-#~ msgid "KDE"
-#~ msgstr "KDE"
-
-#~ msgid "GNOME"
-#~ msgstr "GNOME"
 
 #~ msgid "Minimal Graphical System"
 #~ msgstr "Minimalne środowisko graficzne"

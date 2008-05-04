@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: registration\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-21 10:43+0200\n"
+"POT-Creation-Date: 2008-04-29 17:18+0200\n"
 "PO-Revision-Date: 2008-04-23 16:37+0200\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -73,7 +73,7 @@ msgid "Registration Code"
 msgstr "Kod rejestracyjny"
 
 #: src/clients/inst_suse_register.ycp:105
-#: src/clients/inst_suse_register.ycp:200
+#: src/clients/inst_suse_register.ycp:215
 msgid "Details..."
 msgstr "Szczegóły..."
 
@@ -156,16 +156,35 @@ msgstr ""
 "Ewentualnie można anulować a następnie uruchomić rejestrację przez YaST jako\n"
 "administrator, aby źródła były dostępne dla wszystkich narzędzi."
 
+#. nonroot-message using repository instead of source
+#: src/clients/inst_suse_register.ycp:141
+#, fuzzy
+msgid ""
+"Registering as a regular user does not include the update repository\n"
+"in the Online Update YaST module. If you continue and later want \n"
+"to update with Online Update, the repository must be added manually.\n"
+"Other tools, such as Software Updater in the panel, can still be \n"
+"used. Alternatively, cancel then register through YaST as root \n"
+"so the repositories are available to all tools."
+msgstr ""
+"Rejestracja jako zwykły użytkownik nie zawiera źródeł aktualizacji \n"
+"w module aktualizacji online YaST. W razie kontynuowania \n"
+"i późniejszego zamiaru aktualizacji przy pomocy modułu aktualizacji online, \n"
+"źródła muszą zostać dodane ręcznie. Inne narzędzia, takie jak \n"
+"Aktualizacja oprogramowania z panelu, mogą być w dalszym ciągu używane.\n"
+"Ewentualnie można anulować a następnie uruchomić rejestrację przez YaST jako\n"
+"administrator, aby źródła były dostępne dla wszystkich narzędzi."
+
 #. error messages
-#: src/clients/inst_suse_register.ycp:144
+#: src/clients/inst_suse_register.ycp:151
 msgid "Error: Data received is invalid."
 msgstr "Błąd: otrzymane dane są nieprawidłowe."
 
-#: src/clients/inst_suse_register.ycp:145
+#: src/clients/inst_suse_register.ycp:152
 msgid "Error: Could not retrieve data."
 msgstr "Błąd: nie udało się pobrać danych."
 
-#: src/clients/inst_suse_register.ycp:146
+#: src/clients/inst_suse_register.ycp:153
 msgid ""
 "No Web browser available.\n"
 "Run the suse_register command manually."
@@ -173,7 +192,7 @@ msgstr ""
 "Nie znaleziono przeglądarki internetowej.\n"
 "Proszę uruchomić \"suse_register\" ręcznie."
 
-#: src/clients/inst_suse_register.ycp:148
+#: src/clients/inst_suse_register.ycp:155
 msgid ""
 "No product found to be registered.\n"
 "You do not need to register this installation.\n"
@@ -183,7 +202,7 @@ msgstr ""
 "Rejestracja tej instalacji nie jest konieczna.\n"
 "Proszę samodzielnie dodać źródła aktualizacji."
 
-#: src/clients/inst_suse_register.ycp:151
+#: src/clients/inst_suse_register.ycp:158
 msgid ""
 "Your registration requires interactive input that is not\n"
 "supported in text mode. Run YaST2 in the graphical mode or\n"
@@ -193,7 +212,7 @@ msgstr ""
 "tekstowym. Proszę uruchomić YaST2 w trybie graficznym\n"
 "lub uruchomić \"suse_register\" ręcznie."
 
-#: src/clients/inst_suse_register.ycp:157
+#: src/clients/inst_suse_register.ycp:164
 msgid ""
 "<p>\n"
 "Configure your system to enable online updates by registering it with Novell.\n"
@@ -207,7 +226,7 @@ msgstr ""
 "rejestrację na później, należy wybrać <b>Konfiguruj później</b>.\n"
 "</p>"
 
-#: src/clients/inst_suse_register.ycp:163
+#: src/clients/inst_suse_register.ycp:170
 msgid ""
 "<p>\n"
 "To simplify the registration process, include information from your system\n"
@@ -229,7 +248,7 @@ msgstr ""
 "produktu.\n"
 "</p>"
 
-#: src/clients/inst_suse_register.ycp:172
+#: src/clients/inst_suse_register.ycp:179
 msgid ""
 "<p>\n"
 "If you purchased your copy of this product, enable <b>Registration Code</b>\n"
@@ -243,7 +262,7 @@ msgstr ""
 "Spowoduje to zarejestrowanie Państwa w celu umożliwienia otrzymywania pomocy przy instalacji, dołączonej do produktu.\n"
 "</p>"
 
-#: src/clients/inst_suse_register.ycp:178
+#: src/clients/inst_suse_register.ycp:185
 msgid ""
 "<p>\n"
 "No information is passed to anyone outside Novell. The data is used for\n"
@@ -260,7 +279,7 @@ msgstr ""
 "zapisane jest w pliku dziennika <tt>~/.suse_register.log</tt>.\n"
 "</p>"
 
-#: src/clients/inst_suse_register.ycp:185
+#: src/clients/inst_suse_register.ycp:192
 msgid ""
 "<p>\n"
 "<b>Regularly Synchronize with the Customer Center</b> checks that your update \n"
@@ -280,26 +299,47 @@ msgstr ""
 "Opcja regularnej synchronizacji nie usuwa żadnych źródeł dodanych ręcznie.\n"
 "</p>"
 
+#: src/clients/inst_suse_register.ycp:200
+#, fuzzy
+msgid ""
+"<p>\n"
+"<b>Regularly Synchronize with the Customer Center</b> checks that your update \n"
+"repositories are still valid and adds any new ones that may be available.\n"
+"It additionally sends any modifications to your included data to Novell, such \n"
+"as hardware information if <b>Hardware Information</b> is activated.\n"
+"This option does not remove any repositories added manually.\n"
+"</p>"
+msgstr ""
+"<p>\n"
+"<b>Synchronizuj regularnie z Novell Customer Center</b> - pozwala na \n"
+"sprawdzanie, czy źródła aktualizacji są nadal ważne i funkcjonujące, oraz \n"
+"czy są może osiągalne nowe. \n"
+"Dodatkowo moduł ten wysyła dane o wszelkich modyfikacjach do Państwa\n"
+"danych w firmie Novell, takie jak informacje o urządzeniach, jeśli aktywna \n"
+"jest  <b>Informacja o urządzeniach</b>.\n"
+"Opcja regularnej synchronizacji nie usuwa żadnych źródeł dodanych ręcznie.\n"
+"</p>"
+
 #. further strings
-#: src/clients/inst_suse_register.ycp:197
+#: src/clients/inst_suse_register.ycp:212
 msgid "Checking..."
 msgstr "Sprawdzanie..."
 
-#: src/clients/inst_suse_register.ycp:198
-#: src/clients/inst_suse_register.ycp:201
+#: src/clients/inst_suse_register.ycp:213
+#: src/clients/inst_suse_register.ycp:216
 msgid "Error"
 msgstr "Błąd"
 
-#: src/clients/inst_suse_register.ycp:199
+#: src/clients/inst_suse_register.ycp:214
 msgid "An error occurred while connecting to the server."
 msgstr "Wystąpił błąd podczas łączenia się z serwerem."
 
-#: src/clients/inst_suse_register.ycp:202
+#: src/clients/inst_suse_register.ycp:217
 msgid "Starting browser..."
 msgstr "Uruchamianie przeglądarki..."
 
 #. add update source
-#: src/clients/inst_suse_register.ycp:731
+#: src/clients/inst_suse_register.ycp:770
 msgid "Setting up online update source..."
 msgstr "Konfigurowanie źródeł aktualizacji online..."
 
@@ -448,15 +488,15 @@ msgstr ""
 "Nieprawidłowa lokalizacja certyfikatu SMT.\n"
 "Proszę sprawdzić dokumentacje SMT."
 
-#: src/modules/Register.ycp:145
+#: src/modules/Register.ycp:144
 msgid "Unknown error"
 msgstr "Nieznany błąd"
 
-#: src/modules/Register.ycp:148
+#: src/modules/Register.ycp:147
 msgid "Do you want to skip Registration?"
 msgstr "Czy pominąć rejestracje?"
 
-#: src/modules/Register.ycp:149
+#: src/modules/Register.ycp:148
 #, ycp-format
 msgid ""
 "If you select %1 the Registration will most likely fail.\n"
@@ -467,27 +507,27 @@ msgstr ""
 "W innym wypadku można skopiowa plik certyfikatu do systemu ręcznie\n"
 "a następnie określić jego ścieżkę wybierając %2."
 
-#: src/modules/Register.ycp:156
+#: src/modules/Register.ycp:155
 msgid "Could not load the SMT certificate file from floppy disk."
 msgstr "Nie można wczytać certyfikatu SMT z dysku wymiennego."
 
-#: src/modules/Register.ycp:160
+#: src/modules/Register.ycp:159
 msgid "Could not download the SMT certificate file from specified URL."
 msgstr "Nie można pobrać pliku certyfikatu SMT z podanego adresu URL."
 
-#: src/modules/Register.ycp:164
+#: src/modules/Register.ycp:163
 msgid "Could not find the SMT certificate file in specified path."
 msgstr "Nie można odnaleźć pliku certyfikatu SMT w podanej ścieżce."
 
-#: src/modules/Register.ycp:168
+#: src/modules/Register.ycp:167
 msgid "Unknown error occurred while retrieving SMT certificate file"
 msgstr "Wystąpił nieznany błąd podczas uzyskiwania pliku certyfikatu SMT"
 
-#: src/modules/Register.ycp:172
+#: src/modules/Register.ycp:171
 msgid "Skip"
 msgstr "Pomiń"
 
-#: src/modules/Register.ycp:253
+#: src/modules/Register.ycp:255
 #, ycp-format
 msgid ""
 "The SMT server URL could not be validated as URL.\n"
@@ -501,46 +541,46 @@ msgstr ""
 "%1"
 
 #. translators: this is a heading for an error message - so no punctuation
-#: src/modules/Register.ycp:319
+#: src/modules/Register.ycp:337
 msgid "Downloading SMT certificate file failed"
 msgstr "Pobieranie pliku certyfikatu SMT nie powiodło się"
 
 #. translators: this is a heading for an error message - so no punctuation
-#: src/modules/Register.ycp:342
+#: src/modules/Register.ycp:360
 msgid "Could not mount floppy disk"
 msgstr "Nie można zamontować dysku wymiennego"
 
 #. translators: this is a heading for an error message - so no punctuation
-#: src/modules/Register.ycp:368
+#: src/modules/Register.ycp:386
 msgid "Could not read file floppy disk"
 msgstr "Nie można odczytać pliku z dysku wymiennego"
 
 #. translators: this is a heading for an error message - so no punctuation
-#: src/modules/Register.ycp:401
+#: src/modules/Register.ycp:419
 msgid "Could find SMT certificate file in local path"
 msgstr "Można znaleźć plik certyfikatu SMTw ścieżce lokalnej"
 
-#: src/modules/Register.ycp:427
+#: src/modules/Register.ycp:445
 msgid "Select SMT certificate file"
 msgstr "Wybierz plik certyfikatu SMT"
 
-#: src/modules/Register.ycp:439
+#: src/modules/Register.ycp:457
 msgid "Do you really want to cancel and thereby skip the Registration?"
 msgstr "Czy na pewno anulować, a przez to pominąć rejestracje?"
 
-#: src/modules/Register.ycp:456
+#: src/modules/Register.ycp:474
 msgid "Could not copy certificate file"
 msgstr "Nie można skopiować pliku certyfikatu"
 
-#: src/modules/Register.ycp:457
+#: src/modules/Register.ycp:475
 msgid "Do you want to retry?"
 msgstr "Czy chcesz spróbować ponownie?"
 
-#: src/modules/Register.ycp:494
+#: src/modules/Register.ycp:522
 msgid "Do you want to trust this certificate?"
 msgstr "Czy chcesz uznać ten certyfikat za zaufany?"
 
-#: src/modules/Register.ycp:495
+#: src/modules/Register.ycp:523
 msgid ""
 "This certificate will be used to connect to the SMT server.\n"
 "You have to trust this certificate in order to continue with the Registration."
@@ -548,45 +588,15 @@ msgstr ""
 "Ten certyfikat będzie użyty do połączenia z serwerem SMT.\n"
 "Należy uznać ten certyfikat za zaufany w celu kontynuowania rejestracji."
 
-#. translators: this is certificate context
-#: src/modules/Register.ycp:500
-msgid "<p><b>Issued For:</b></p>"
-msgstr "<p><b>Wydany dla:</b></p>"
-
-#. translators: this is certificate context
-#: src/modules/Register.ycp:513
-msgid "<p><b>Subject:</b></p>"
-msgstr "<p><b>Temat:</b></p>"
-
-#. translators: this is certificate context
-#: src/modules/Register.ycp:526
-msgid "<p><b>Validity:</b></p>"
-msgstr "<p><b>Ważność:</b></p>"
-
-#. translators: this is certificate context
-#: src/modules/Register.ycp:529
-msgid "Valid from: "
-msgstr "Ważny od: "
-
-#. translators: this is certificate context
-#: src/modules/Register.ycp:531
-msgid "Valid to: "
-msgstr "Ważny do: "
-
-#. translators: this is certificate context
-#: src/modules/Register.ycp:533
-msgid "Fingerprint: "
-msgstr "Odcisk palca:"
-
-#: src/modules/Register.ycp:540
+#: src/modules/Register.ycp:532
 msgid "Trust"
 msgstr "Uznaj za zaufany"
 
-#: src/modules/Register.ycp:540
+#: src/modules/Register.ycp:532
 msgid "Reject"
 msgstr "Odrzuć"
 
-#: src/modules/Register.ycp:565
+#: src/modules/Register.ycp:560
 msgid ""
 "Installation of the SMT certificates failed.\n"
 "Please see the logs for further information."
@@ -595,13 +605,31 @@ msgstr ""
 "Proszę sprawdzi logi aby uzyska więcej informacji."
 
 #. translators: busy popup while registering the system
-#: src/modules/Register.ycp:791
+#: src/modules/Register.ycp:793
 msgid "This may take a while"
 msgstr "To może chwilę potrwać"
 
-#: src/modules/Register.ycp:793
+#: src/modules/Register.ycp:795
 msgid "Contacting server..."
 msgstr "Łączenie z serwerem..."
+
+#~ msgid "<p><b>Issued For:</b></p>"
+#~ msgstr "<p><b>Wydany dla:</b></p>"
+
+#~ msgid "<p><b>Subject:</b></p>"
+#~ msgstr "<p><b>Temat:</b></p>"
+
+#~ msgid "<p><b>Validity:</b></p>"
+#~ msgstr "<p><b>Ważność:</b></p>"
+
+#~ msgid "Valid from: "
+#~ msgstr "Ważny od: "
+
+#~ msgid "Valid to: "
+#~ msgstr "Ważny do: "
+
+#~ msgid "Fingerprint: "
+#~ msgstr "Odcisk palca:"
 
 #~ msgid "1 item of registration data"
 #~ msgstr "Jedna pozycja danych rejestracyjnych"
