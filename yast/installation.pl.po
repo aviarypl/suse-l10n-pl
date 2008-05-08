@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: installation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-04-29 16:25+0200\n"
-"PO-Revision-Date: 2008-04-23 20:10+0200\n"
+"PO-Revision-Date: 2008-05-08 16:40+0200\n"
 "Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -53,14 +53,14 @@ msgstr "Kopiowanie plików do instalowanego systemu..."
 #: src/clients/deploying_proposal.ycp:36
 #, ycp-format
 msgid "Installation from images is enabled (<a href=\"%1\">disable</a>)"
-msgstr ""
+msgstr "Instalacja z obrazów jest włączona (<a href=\"%1\">wyłącz</a>)"
 
 #. TRANSLATORS: Installation overview
 #. IMPORTANT: Please, do not change the HTML link <a href="...">...</a>, only visible text
 #: src/clients/deploying_proposal.ycp:43
 #, ycp-format
 msgid "Installation from images is disabled (<a href=\"%1\">enable</a>)"
-msgstr ""
+msgstr "Instalacja z obrazów jest wyłączona (<a href=\"%1\">włącz</a>)"
 
 #. TRANSLATORS: help text
 #: src/clients/deploying_proposal.ycp:80
@@ -70,19 +70,24 @@ msgid ""
 "of patterns. The rest of packages which are not in images will be installed from\n"
 "packages the standard way.</p>"
 msgstr ""
+"<p><b>Instalacja z obrazów</b> jest używana, aby przyspieszyć proces\n"
+"instalacji. Obrazy zawierają skompresowane zrzuty zainstalowanego systemu\n"
+"zawierające wybrane pakiety. Pakiety nie znajdujące się w obrazach będą\n"
+"zainstalowane w standardowy sposób.</p>"
 
 #. TRANSLATORS: help text
 #: src/clients/deploying_proposal.ycp:85
-#, fuzzy
 msgid ""
 "<p>Installation from images is disabled by default if the current\n"
 "pattern selection does not fit any set of images.</p>"
-msgstr "<p>Proces instalacji zapisuje teraz zdefiniowany przez użytkownika wybór pakietów</p>"
+msgstr ""
+"<p>Instalacja z obrazów jest domyślnie wyłączona, jeśli\n"
+"aktualnie wybrane pakiety nie znajdują się w żadnym z obrazów.</p>"
 
 #: src/clients/deploying_proposal.ycp:91
 #, ycp-format
 msgid "Error: Images should not be used for mode: %1"
-msgstr ""
+msgstr "Błąd: Obrazy nie powinny być używane w trybie: %1"
 
 #: src/clients/deploying_proposal.ycp:116
 msgid ""
@@ -91,6 +96,11 @@ msgid ""
 "Currently selected patterns do not fit the images\n"
 "stored on installation media."
 msgstr ""
+"Instalacja z obrazów jest niemożliwa.\n"
+"\n"
+"Aktualnie wybrane wzorce nie zawierają \n"
+"się w żadnych obrazach na medium\n"
+"instalacyjnym."
 
 #. this is a heading
 #: src/clients/deploying_proposal.ycp:129
@@ -99,9 +109,8 @@ msgstr "Instalacja z obrazów"
 
 #. this is a menu entry
 #: src/clients/deploying_proposal.ycp:131
-#, fuzzy
 msgid "Installation from &Images"
-msgstr "Instalacja z obrazów"
+msgstr "Instalacja z o&brazów"
 
 #. progress step title
 #: src/clients/desktop_finish.ycp:46
@@ -209,14 +218,12 @@ msgid "Automatic Configuration"
 msgstr "Automatyczna konfiguracja"
 
 #: src/clients/inst_automatic_configuration.ycp:234
-#, fuzzy
 msgid "Preparing configuration..."
-msgstr "Przygotowywanie pierwszej konfiguracji systemu..."
+msgstr "Przygotowywanie konfiguracji..."
 
 #: src/clients/inst_automatic_configuration.ycp:242
-#, fuzzy
 msgid "Creating automatic configuration..."
-msgstr "Zapisywanie automatycznej konfiguracji..."
+msgstr "Tworzenie automatycznej konfiguracji..."
 
 #: src/clients/inst_automatic_configuration.ycp:247
 msgid "<p>Installation is currently writing the automatic configuration. Please wait...</p>"
@@ -432,9 +439,8 @@ msgstr ""
 
 #. twice more steps
 #: src/clients/inst_deploy_image.ycp:104 src/clients/inst_deploy_image.ycp:200
-#, fuzzy
 msgid "Deploying mages..."
-msgstr "Rozmieszczanie obrazów..."
+msgstr "Rozpakowywanie obrazów..."
 
 #: src/clients/inst_deploy_image.ycp:115
 #, ycp-format
@@ -442,26 +448,26 @@ msgid "Downloading image at speed %1/s"
 msgstr "Pobieranie obrazu z prędkością %1/s"
 
 #: src/clients/inst_deploy_image.ycp:120
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "Downloading image %1 at speed %2/s"
-msgstr "Pobieranie obrazu z prędkością %1/s"
+msgstr "Pobieranie obrazu %1 z prędkością %2/s"
 
 #: src/clients/inst_deploy_image.ycp:170
 msgid "Deploying image..."
-msgstr "Rozmieszczanie obrazu..."
+msgstr "Rozpakowywanie obrazu..."
 
 #: src/clients/inst_deploy_image.ycp:172
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "Deploying image %1..."
-msgstr "Rozmieszczanie obrazu..."
+msgstr "Rozpakowywanie obrazu %1..."
 
 #: src/clients/inst_deploy_image.ycp:176
 msgid "Image deployed"
-msgstr "Obraz rozmieszczony"
+msgstr "Obraz rozpakowany"
 
 #: src/clients/inst_deploy_image.ycp:203
 msgid "Deploying Installation Images"
-msgstr "Inicjalizacja obrazu instalacyjnego"
+msgstr "Rozmieszczanie obrazów instalacyjnych"
 
 #. TRANSLATORS: progress message
 #. dialog caption
@@ -700,11 +706,17 @@ msgid ""
 "settings manually. Unexperienced users had better use automatic\n"
 "configuration.</p>"
 msgstr ""
+"<p>\n"
+"Proszę wybrać <b>Użyj automatycznej konfiguracji</b>, aby program\n"
+"instalacyjny sam wybrał optymalne ustawienia sprzętu i sieci. Inną\n"
+"możliwością jest oferowanie przez program ustawień z możliwością\n"
+"ręcznych zmian. Niedoświadczeni użytkownicy powinni skorzystać\n"
+"z automatycznej konfiguracji.</p>"
 
 #. help text for installation method
 #: src/clients/inst_mode.ycp:228
 msgid "<p>Update mode does not support automatic configuration.</p>"
-msgstr ""
+msgstr "<p>W trybie aktualizacji nie jest możliwe użycie automatycznej konfiguracji.</p>"
 
 #. help text for installation method
 #: src/clients/inst_mode.ycp:231
@@ -1289,20 +1301,20 @@ msgstr ""
 
 #. TRANSLATORS: help text, part 1
 #: src/clients/inst_new_desktop.ycp:34
-#, fuzzy
 msgid ""
 "<p>At Linux <b>choice</b> is a top priority. <i>openSUSE</i> offers a number \n"
 "of different desktop environments. Below you see a list of the 2 major ones \n"
 "<b>GNOME</b> and <b>KDE</b> (in two different versions). Both provide an easy to use desktop\n"
 "with a large number of desktop applications such as email, file browser, games and many others.</p>"
 msgstr ""
-"<p><i>openSUSE</i> pozwala wybrać kilka różnych środowisk graficznych. Poniżej zostały wymienione 2,\n"
-"które są najczęściej wybierane przez użytkowników Linuksa, <b>GNOME</b> i <b>KDE</b>.\n"
-"Obydwa te środowiska oferują dużą liczbę aplikacji, takich jak klient poczty, przeglądarka plików, gry i wiele więcej.</p>"
+"<p>W Linuksie wybór jest <b>podstawowym priorytetem</b>. <i>openSUSE</i> pozwala wybrać\n"
+"kilka różnych środowisk graficznych. Poniżej zostały wymienione 2, które są najczęściej wybierane\n"
+"przez użytkowników Linuksa, <b>GNOME</b> i <b>KDE</b> (w dwóch różnych.wersjach).\n"
+"Obydwa te środowiska oferują dużą liczbę aplikacji, takich jak klient poczty,\n"
+"przeglądarka plików, gry i wiele więcej.</p>"
 
 #. TRANSLATORS: help text, part 3
 #: src/clients/inst_new_desktop.ycp:40
-#, fuzzy
 msgid ""
 "Additionally, not only desktop but you can also chose a minimalistic \n"
 "installation that could fit your needs better."
@@ -1312,7 +1324,7 @@ msgstr ""
 
 #: src/clients/inst_new_desktop.ycp:165
 msgid "Other"
-msgstr ""
+msgstr "Inne"
 
 #: src/clients/inst_new_desktop.ycp:208
 msgid ""
@@ -1322,11 +1334,16 @@ msgid ""
 "\n"
 "As desktop selection is a matter of taste, we do not give a recommendation."
 msgstr ""
+"openSUSE umożliwia wybór interfejsu użytkownika. Dwa główne, kompletne\n"
+"środowiska pulpitu to GNOME I KDE. Oba dostarczają łatwy do użycia pulpit\n"
+"wyposażony w dużą liczbę aplikacji akich jak klient poczty email, przeglądarka\n"
+"plików, gry i inne.\n"
+"Ponieważ wybór pulpitu jest bardzo ważny, nie można podać rekomendacji."
 
 #. TRANSLATORS: dialog caption
 #: src/clients/inst_new_desktop.ycp:228
 msgid "Desktop Selection"
-msgstr ""
+msgstr "Wybór pulpitu"
 
 #: src/clients/inst_new_desktop.ycp:258 src/clients/inst_new_desktop.ycp:268
 #: src/clients/inst_software_selection.ycp:202
@@ -2501,9 +2518,8 @@ msgid "Failed to read information about installation images"
 msgstr "Nie można odczytać informacji o obrazie instalacyjnym."
 
 #: src/modules/ImageInstallation.ycp:891
-#, fuzzy
 msgid "Deploying..."
-msgstr "Rozmieszczanie obrazu..."
+msgstr "Rozpakowywanie..."
 
 #: src/modules/ImageInstallation.ycp:914
 msgid "Storing user preferences..."
@@ -2524,26 +2540,3 @@ msgstr "<p>Aby system X11 był dostępny, należy zainstalować pakiet <b>%1</b>
 msgid "<p>Do you want to install it now?</p>"
 msgstr "<p>Czy zainstalować go teraz?</p>"
 
-#~ msgid "%1 (%2/%3)"
-#~ msgstr "%1 (%2/%3)"
-
-#~ msgid "Deploying Images (%1/%2)..."
-#~ msgstr "Rozmieszczanie obrazu (%1/%2)..."
-
-#~ msgid ""
-#~ "<p>\n"
-#~ "To let the new installation to create an automatic configuration, select\n"
-#~ "<b>Use Automatic Configuration</b>. Otherwise, manual configuration will be used.\n"
-#~ "Update mode does not support automatic configuration.</p>"
-#~ msgstr ""
-#~ "<p>\n"
-#~ "Aby umożliwić nowej instalacji dokonanie automatycznej konfiguracji, proszę\n"
-#~ "wybrać <b>Użyj automatycznej konfiguracji</b>. W przeciwnym wypadku podczas\n"
-#~ "instalacji zostanie użyta konfiguracja ręczna.\n"
-#~ "Tryb aktualizacji nie wspiera automatycznej konfiguracji.</p>"
-
-#~ msgid "Analyzing Installation Images"
-#~ msgstr "Anazlizowanie obrazu instalacyjnego."
-
-#~ msgid "<p>Installaton is restoring the user preferences to install the rest of packages.</p>"
-#~ msgstr "<p>Instalator przywraca preferencje użytkownika aby zainstalować pozostałe pakiety.</p>"
