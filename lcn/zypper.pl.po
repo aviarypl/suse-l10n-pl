@@ -1,28 +1,28 @@
+# translation of zypper.po to
 # @TITLE@
 # Copyright (C) 2006, SUSE Linux GmbH, Nuremberg
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 # This file is distributed under the same license as @PACKAGE@ package. FIRST
 #
+# Karol Sikora <elektrrrus@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: @PACKAGE@\n"
+"Project-Id-Version: zypper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-05-07 13:45+0200\n"
-"PO-Revision-Date: 2007-09-19 00:51+0100\n"
-"Last-Translator: wadim dziedzic <nikdo@aviary.pl>\n"
+"PO-Revision-Date: 2008-05-09 23:24+0200\n"
+"Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.9.1\n"
+"X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 # internal key used: Warning
 #: ../src/output/OutNormal.cc:54
-#, fuzzy
 msgid "Warning: "
-msgstr "Ostrzeżenie"
+msgstr "Ostrzeżenie: "
 
 #: ../src/output/OutNormal.cc:151 ../src/output/OutNormal.cc:224
 msgid "done"
@@ -30,15 +30,13 @@ msgstr "zrobione"
 
 #: ../src/output/OutNormal.cc:165 ../src/output/OutNormal.cc:167
 #: ../src/output/OutNormal.cc:191 ../src/output/OutNormal.cc:217
-#, fuzzy
 msgid "Downloading:"
 msgstr "Pobieranie:"
 
 # window title for kernel loading (see txt_load_kernel)
 #: ../src/output/OutNormal.cc:173
-#, fuzzy
 msgid "starting"
-msgstr "Uruchamianie..."
+msgstr "Uruchamianie"
 
 #: ../src/output/OutNormal.cc:224
 msgid "error"
@@ -46,11 +44,11 @@ msgstr "błąd"
 
 #: ../src/output/OutNormal.cc:247
 msgid "No help available for this prompt."
-msgstr ""
+msgstr "Nie jest dostępna pomoc dla tej wskazówki."
 
 #: ../src/output/OutNormal.cc:257
 msgid "no help available for this option"
-msgstr ""
+msgstr "nie jest dostępna pomoc dla tej opcji"
 
 #: ../src/zypp-checkpatches.cc:124
 msgid "The updater could not access the package manager engine. This usually happens when you have another application (like YaST) using it at the same time. Please close the other applications and check again for updates."
@@ -71,7 +69,6 @@ msgid "There are no update repositories defined. Please add one or more update r
 msgstr "Brak zdefiniowanych repozytoriów aktualizacji. Proszę dodać conajmniej jedno repozytorium, aby być powiadamianym o aktualizacjach."
 
 #: ../src/zypper.cc:143
-#, fuzzy
 msgid ""
 "  Global Options:\n"
 "\t--help, -h\t\tHelp.\n"
@@ -87,17 +84,19 @@ msgid ""
 "\t--cache-dir, -C <dir>\tUse alternative meta-data cache database directory.\n"
 "\t--raw-cache-dir <dir>\tUse alternative raw meta-data cache directory.\n"
 msgstr ""
-"  Opcje:\n"
+"  Opcje globalne:\n"
 "\t--help, -h\t\tPomoc\n"
 "\t--version, -V\t\tWyświetla informacje o wersji\n"
 "\t--quiet, -q\t\tTryb cichy, wyświetla tylko informacje o błędach.\n"
 "\t--verbose, -v\t\tWyświetla dodatkowe informacje\n"
-"\t--terse, -t\t\tUżywa formy zwięzłej, odpowiedniej do dalszego przetwarzania maszynowego\n"
+"\t--no-abbrev, -A\t\tNie stosowanie skrótów w tekastach w tabelach.\n"
 "\t--table-style, -s\tStyl tablicowy (liczbowy)\n"
 "\t--rug-compatible, -r\tWłącza tryb kompatybilności z rug\n"
 "\t--non-interactive\tBez zadawania pytań; automatycznie stosuje domyślne ustawienia\n"
-"\t--no-gpg-checks\t\tIgnoruje błędy kontroli GPG\n"
-"\t--root, -R <dir>\tPracuje na innym drzewie katalogów.\n"
+"\t--xmlout, -x\t\tPrzełącza do wyjścia XML.\n"
+"\t--reposd-dir, -D <dir>\tUżycie alternatywnych plików definicji repozytoriów z podanego katalogu.\n"
+"\t--cache-dir, -C <dir>\tUżycie meta-danych z alternatywnego katalogu pamięci podręcznej.\n"
+"\t--raw-cache-dir <dir>\tUżycie surowych meta-danych z alternatywnego katalogu pamięci podręcznej.\n"
 
 #: ../src/zypper.cc:159
 msgid ""
@@ -107,16 +106,21 @@ msgid ""
 "\t--disable-repositories\tDo not read meta-data from repositories.\n"
 "\t--no-refresh\t\tDo not refresh the repositories.\n"
 msgstr ""
+"\tOpcje repozytoriów:\n"
+"\t-no-gpg-checks\t\tIgnoruje błędy podpisów GPG i kontunuje dalsze działania.\n"
+"\n--plus-repo, -p <URI>\nUżycie dodatkowego repozytorium.\n"
+"\n--disable-repositories\tNie czyta meta-danych z repozytoriów.\n"
+"\t--no-refresh\t\tNie odświeża repozytoriów.\n"
 
 #: ../src/zypper.cc:166
-#, fuzzy
 msgid ""
 "\tTarget Options:\n"
 "\t--root, -R <dir>\tOperate on a different root directory.\n"
 "\t--disable-system-resolvables  Do not read installed resolvables.\n"
 msgstr ""
 "  Opcje celu:\n"
-"\t--disable-system-resolvables, -T\t\tNie pobieraj systemowych pakietów rozwiązywalnych\n"
+"\t--root, -R <dir>\tPracuj na innym katalogu głównym.\n"
+"\t--disable-system-resolvables, -T\t\tNie pobieraj systemowych pakietów rozwiązywalnych.\n"
 
 #: ../src/zypper.cc:172
 msgid ""
@@ -124,6 +128,9 @@ msgid ""
 "\thelp, ?\t\t\tPrint help.\n"
 "\tshell, sh\t\tAccept multiple commands at once.\n"
 msgstr ""
+"  Komendy:\n"
+"\thelp, ?\t\t\tWyświetla tą pomoc.\n"
+"\tshell, sh\t\tAkceptuje na raz większą ilość poleceń.\n"
 
 #: ../src/zypper.cc:177
 msgid ""
@@ -136,6 +143,14 @@ msgid ""
 "\trefresh, ref\t\tRefresh all repositories.\n"
 "\tclean\t\t\tClean local caches.\n"
 msgstr ""
+"\tZarządzanie repozytoriami:\n"
+"\trepos, lr\t\tWyświetla wszystkie zdefiniowane repozytoria.\n"
+"\taddrepo, ar\t\tDodaje nowe repozytorium.\n"
+"\tremoverepo, rr\t\tUsuwa podane repozytorium.\n"
+"\trenamerepo, nr\t\tZmienia nazwę podanego repozytorium.\n"
+"\tmodifyrepo, mr\t\tModyfikuje podane repozytorium.\n"
+"\trefresh, ref\t\tOdświeża wszystkie repozytoria.\n"
+"\tclean\t\t\tCzyści lokalną pamięć podręczną.\n"
 
 #: ../src/zypper.cc:187
 msgid ""
@@ -147,6 +162,13 @@ msgid ""
 "\tdist-upgrade, dup\tPerform a distribution upgrade.\n"
 "\tsource-install, si\tInstall source packages and their build dependencies.\n"
 msgstr ""
+"\tZarządzanie oprogramowaniem:\n"
+"\tinstall, in\t\tInstaluje pakiety.\n"
+"\tremove, rm\t\tUsuwa pakiety.\n"
+"\tverify, ve\t\tSprawdza zależnośći pakietu.\n"
+"\tupdate, up\t\tAktualizuje zainstalowane pakiety do nowszej wersji.\n"
+"\tdist-upgrade, dup\tPrzeprowadza aktualizację dystrybucji.\n"
+"\tsource-install, si\tInstaluje pakiety źródłowe i ich zależności potrzebne do kompilacji.\n"
 
 #: ../src/zypper.cc:196
 msgid ""
@@ -3052,631 +3074,3 @@ msgstr "Proszę sprawdzić czy podany adres URL jest dostępny."
 msgid "Cannot parse capability '%s'."
 msgstr "Nie można zanalizować właściwości \"%s\""
 
-#~ msgid "Alias is a required argument."
-#~ msgstr "Alias jest wymaganym parametrem"
-
-#, fuzzy
-#~ msgid "broken"
-#~ msgstr "Uszkodzona"
-
-#, fuzzy
-#~ msgid "%s item locked"
-#~ msgid_plural "%s items locked"
-#~ msgstr[0] "Elementów zablokowanych: %s"
-#~ msgstr[1] "Elementów zablokowanych: %s"
-#~ msgstr[2] "Elementów zablokowanych: %s"
-
-#, fuzzy
-#~ msgid "'%s' is interactive, skipping."
-#~ msgstr "UWAGA: %s jest interaktywna, pominięto."
-
-#, fuzzy
-#~ msgid "No patches matching '%s' found."
-#~ msgstr "Nie znaleziono aktualizacji."
-
-#, fuzzy
-#~ msgid "Patch '%s' not found."
-#~ msgstr "Nie znaleziono: %s %s"
-
-#, fuzzy
-#~ msgid "The following package is going to be upgraded and change architecture:"
-#~ msgid_plural "The following packages are going to be upgraded and change architecture:"
-#~ msgstr[0] "Zaktualizowany zostanie następujący %s:"
-#~ msgstr[1] "Zaktualizowane zostaną następujące %s:"
-#~ msgstr[2] "Zaktualizowane zostaną następujące %s:"
-
-#, fuzzy
-#~ msgid "The following patch is going to be upgraded and change architecture:"
-#~ msgid_plural "The following patches are going to be upgraded and change architecture:"
-#~ msgstr[0] "Zaktualizowany zostanie następujący %s:"
-#~ msgstr[1] "Zaktualizowane zostaną następujące %s:"
-#~ msgstr[2] "Zaktualizowane zostaną następujące %s:"
-
-#, fuzzy
-#~ msgid "The following pattern is going to be upgraded and change architecture:"
-#~ msgid_plural "The following patterns are going to be upgraded and change architecture:"
-#~ msgstr[0] "Zaktualizowany zostanie następujący %s:"
-#~ msgstr[1] "Zaktualizowane zostaną następujące %s:"
-#~ msgstr[2] "Zaktualizowane zostaną następujące %s:"
-
-#, fuzzy
-#~ msgid "The following product is going to be upgraded and change architecture:"
-#~ msgid_plural "The following products are going to be upgraded and change architecture:"
-#~ msgstr[0] "Zaktualizowany zostanie następujący %s:"
-#~ msgstr[1] "Zaktualizowane zostaną następujące %s:"
-#~ msgstr[2] "Zaktualizowane zostaną następujące %s:"
-
-#, fuzzy
-#~ msgid "The following package is going to be downgraded and change architecture:"
-#~ msgid_plural "The following packages are going to be downgraded and change architecture:"
-#~ msgstr[0] "Następujący %s zostanie przywrócone do wcześniejszej wersji:"
-#~ msgstr[1] "Następujące %s zostaną przywrócone do wcześniejszej wersji:"
-#~ msgstr[2] "Następujące %s zostaną przywrócone do wcześniejszej wersji:"
-
-#, fuzzy
-#~ msgid "The following patch is going to be downgraded and change architecture:"
-#~ msgid_plural "The following patches are going to be downgraded and change architecture:"
-#~ msgstr[0] "Następujący %s zostanie przywrócone do wcześniejszej wersji:"
-#~ msgstr[1] "Następujące %s zostaną przywrócone do wcześniejszej wersji:"
-#~ msgstr[2] "Następujące %s zostaną przywrócone do wcześniejszej wersji:"
-
-#, fuzzy
-#~ msgid "The following pattern is going to be downgraded and change architecture:"
-#~ msgid_plural "The following patterns are going to be downgraded and change architecture:"
-#~ msgstr[0] "Następujący %s zostanie przywrócone do wcześniejszej wersji:"
-#~ msgstr[1] "Następujące %s zostaną przywrócone do wcześniejszej wersji:"
-#~ msgstr[2] "Następujące %s zostaną przywrócone do wcześniejszej wersji:"
-
-#, fuzzy
-#~ msgid "The following product is going to be downgraded and change architecture:"
-#~ msgid_plural "The following products are going to be downgraded and change architecture:"
-#~ msgstr[0] "Następujący %s zostanie przywrócone do wcześniejszej wersji:"
-#~ msgstr[1] "Następujące %s zostaną przywrócone do wcześniejszej wersji:"
-#~ msgstr[2] "Następujące %s zostaną przywrócone do wcześniejszej wersji:"
-
-#, fuzzy
-#~ msgid "Cannot parse '%s < %s'"
-#~ msgstr "Nie można otworzyć %s: %m"
-
-#~ msgid "Uninstalled"
-#~ msgstr "Usunięto"
-
-#~ msgid "Broken"
-#~ msgstr "Uszkodzona"
-
-#, fuzzy
-#~ msgid ""
-#~ "  Commands:\n"
-#~ "\thelp, ?\t\t\tPrint help.\n"
-#~ "\tshell, sh\t\tAccept multiple commands at once.\n"
-#~ "\tinstall, in\t\tInstall packages.\n"
-#~ "\tremove, rm\t\tRemove packages.\n"
-#~ "\tverify, ve\t\tVerify integrity of package dependencies.\n"
-#~ "\tsearch, se\t\tSearch for packages matching a pattern.\n"
-#~ "\trepos, lr\t\tList all defined repositories.\n"
-#~ "\taddrepo, ar\t\tAdd a new repository.\n"
-#~ "\tremoverepo, rr\t\tRemove specified repository.\n"
-#~ "\trenamerepo, nr\t\tRename specified repository.\n"
-#~ "\tmodifyrepo, mr\t\tModify specified repository.\n"
-#~ "\trefresh, ref\t\tRefresh all repositories.\n"
-#~ "\tpatch-check, pchk\tCheck for patches.\n"
-#~ "\tpatches, pch\t\tList patches.\n"
-#~ "\tlist-updates, lu\tList updates.\n"
-#~ "\txml-updates, xu\t\tList updates and patches in xml format.\n"
-#~ "\tupdate, up\t\tUpdate installed packages with newer versions.\n"
-#~ "\tdist-upgrade, dup\tPerform a distribution upgrade.\n"
-#~ "\tinfo, if\t\tShow full information for packages.\n"
-#~ "\tpatch-info\t\tShow full information for patches.\n"
-#~ "\tsource-install, si\tInstall source packages.\n"
-#~ "\tclean\t\t\tClean local caches.\n"
-#~ "\taddlock\t\t\tAdd a package lock.\n"
-#~ "\tremovelock\t\tRemove a package lock.\n"
-#~ "\tlocks\t\t\tList current package locks.\n"
-#~ msgstr ""
-#~ "  Polecenia:\n"
-#~ "\thelp\t\t\tPomoc\n"
-#~ "\tshell, sh\t\tAkceptuje wiele poleceń na raz\n"
-#~ "\tinstall, in\t\tInstaluje pakiety lub obiekty\n"
-#~ "\tremove, rm\t\tUsuwa pakiety lub obiekty\n"
-#~ "\tsearch, se\t\tSzuka pakietów pasujących do wzorca\n"
-#~ "\trepos, lr\t\tWyświetla listę zdefiniowanych repozytoriów.\n"
-#~ "\taddrepo, ar\t\tDodaje nowe repozytorium\n"
-#~ "\tremoverepo, rr\t\tUsuwa podane repozytorium\n"
-#~ "\trenamerepo, nr\t\tZmienia nazwę podanego repozytorium\n"
-#~ "\tmodifyrepo, mr\t\tModyfikuje podane repozytorium\n"
-#~ "\trefresh, ref\t\tOdświeża wszystkie repozytoria\n"
-#~ "\tpatch-check, pchk\tSprawdza czy pojawiły się nowe poprawki\n"
-#~ "\tpatches, pch\t\tWyświetla poprawki\n"
-#~ "\tlist-updates, lu\tWyświetla aktualizacje\n"
-#~ "\txml-updates, xu\t\tWyświetla aktualizacje i poprawki w formacie XML\n"
-#~ "\tupdate, up\t\tAktualizuje pakiety do nowszych wersji\n"
-#~ "\tinfo, if\t\tWyświetla pełne informacje na temat pakietów\n"
-#~ "\tpatch-info\t\tWyświetla pełne informacje na temat poprawek\n"
-#~ "\tsource-install, si\tInstaluje pakiet z kodem źródłowym\n"
-
-#, fuzzy
-#~ msgid ""
-#~ "repos (lr)\n"
-#~ "\n"
-#~ "List all defined repositories.\n"
-#~ "\n"
-#~ "  Command options:\n"
-#~ "-e, --export <FILE.repo>  Export all defined repositories as a single local .repo file.\n"
-#~ msgstr ""
-#~ "repos (lr)\n"
-#~ "\n"
-#~ "Wyświetla listę wszystkich zdefiniowanych repozytoriów.\n"
-#~ "\n"
-#~ "  Opcje:\n"
-#~ "-e, --export <PLIK.repo>  Eksportuje wszystkie zdefiniowane repozytoria do jednego pliku .repo\n"
-
-#~ msgid " installed) "
-#~ msgstr ")"
-
-#, fuzzy
-#~ msgid ""
-#~ "info <name> ...\n"
-#~ "\n"
-#~ "Show full information for packages"
-#~ msgstr ""
-#~ "zypper [opcje-globalne] info [nazwa...]\n"
-#~ "\n"
-#~ "'info' -- Wyświetla pełną informację dla pakietów\n"
-
-#, fuzzy
-#~ msgid "  Command options:"
-#~ msgstr "Nieznana opcja polecenia"
-
-#, fuzzy
-#~ msgid "-r, --repo <alias|#|URI>  Work only with the repository specified by the alias."
-#~ msgstr ""
-#~ "info <nazwa> ...\n"
-#~ "\n"
-#~ "Wyświetla pełną informację dla pakietów\n"
-#~ "\n"
-#~ "  Opcje:\n"
-#~ "\n"
-#~ "-r, --repo <alias>  Uwzględnia tylko repozytorium określone przez alias.\n"
-
-#~ msgid "%s %s not found."
-#~ msgstr "%s %s: nie znaleziono."
-
-#~ msgid "No Longer Applicable"
-#~ msgstr "Już nieodpowiednia"
-
-#~ msgid "Applied"
-#~ msgstr "Zastosowana"
-
-#~ msgid "Not Needed"
-#~ msgstr "Niepotrzebna"
-
-#, fuzzy
-#~ msgid "Invalid value '%s' of the %s parameter"
-#~ msgstr "Nieprawidłowa wartość dla keyUsage."
-
-#, fuzzy
-#~ msgid "Valid values are '%s' and '%s'"
-#~ msgstr "Poprawne wartości: {0}"
-
-#~ msgid "r"
-#~ msgstr "p"
-
-#, fuzzy
-#~ msgid "s"
-#~ msgstr "jest"
-
-#, fuzzy
-#~ msgid "Installing source package %s-%s dependencies"
-#~ msgstr "Insalowanie pakietu z kodem źródłowym %s-%s"
-
-#~ msgid "Refreshing '%s'"
-#~ msgstr "Odświeżanie \"%s\""
-
-#~ msgid "(forced)"
-#~ msgstr "(wymuszony)"
-
-#~ msgid "Try 'zypper refresh', or even remove /var/cache/zypp/zypp.db before doing so."
-#~ msgstr "Przedtem proszę spróbować uruchomić \"zypper refresh\" lub usubąć plik /var/cache/zypp/zypp.db."
-
-#, fuzzy
-#~ msgid "Choose letter 'a', 'r', or 'i'"
-#~ msgstr "Niepoprawna odpowiedź. Proszę podać literę p, a lub i."
-
-#, fuzzy
-#~ msgid ""
-#~ "build-deps-install (bi) <name> ...\n"
-#~ "\n"
-#~ "Install source packages build dependencies specified by their names.\n"
-#~ "\n"
-#~ "This command has no additional options.\n"
-#~ msgstr ""
-#~ "source-install (si) <nazwa> ...\n"
-#~ "\n"
-#~ "Instaluje podane pakiety z kodem źródłowym.\n"
-#~ "\n"
-#~ "To polecenie nie posiada żadnych opcji.\n"
-
-#~ msgid "Repository not found by alias, trying delete by URL..."
-#~ msgstr "Nie znaleziono repozytorium wg aliasu. Próba usunięcia wg adresu URL..."
-
-#~ msgid "Given URL is invalid."
-#~ msgstr "Podany adres URL jest nieprawidlowy."
-
-#~ msgid "Repository not found by given alias or URL."
-#~ msgstr "Nie znaleziono repozytorium o danym aliasie i/lub adresie URL."
-
-#~ msgid "Warning: Ignoring failed signature verification for %s with public key id %s, %s, fingerprint %s!"
-#~ msgstr "Uwaga: zignorowano nieudaną weryfikację sygnatury dla %s. ID klucza: %s, %s odcisk: %s."
-
-#~ msgid "Double-check this is not caused by some malicious changes in the file!"
-#~ msgstr "Proszę sprawdzić dokładnie czy nie jest to skutkiem podejrzanych zmian w pliku"
-
-#~ msgid "Signature verification failed for %s with public key id %s, %s, fingerprint %s."
-#~ msgstr "Weryfikacja sygnatury dla %s nie powiodła się ID klucza %s, %s odcisk %s"
-
-#~ msgid "Warning: This might be caused by a malicious change in the file!"
-#~ msgstr "Uwaga: Może to być skutkiem podejrzanych zmian w pliku."
-
-#~ msgid "Continuing is risky! Continue anyway?"
-#~ msgstr "Kontynuacja jest ryzykowna. Kontynuować mimo to?"
-
-#~ msgid "Establishing status of aggregates"
-#~ msgstr "Ustalanie statusu agregatów"
-
-#~ msgid "%d patches needed (%d security patches)"
-#~ msgstr "potrzebnych poprawek: %d (poprawki bezpieczeństwa: %d)"
-
-#~ msgid "WARNING: One of installed patches requires a reboot of your machine. Please do it as soon as possible."
-#~ msgstr "UWAGA: Jedna z zainstalowanych poprawek wymaga ponownego uruchomienia komputera. Proszę wykonać to jak najszybciej."
-
-#~ msgid "(%d resolvables found)"
-#~ msgstr "(znalezionych pakietów: %d)"
-
-#~ msgid "Reading RPM database..."
-#~ msgstr "Odczytywanie bazy danych RPM..."
-
-#~ msgid "(%s resolvables)"
-#~ msgstr "(pakietów: %s)"
-
-#~ msgid "Too many arguments"
-#~ msgstr "Zbyt wiele parametrów"
-
-#~ msgid "No repositories configured. Please add at least one repository using 'zypper addrepo' command before using the search."
-#~ msgstr "Nie skonfigurowano żadnego repozytorium. Proszę dodać conajmniej jedno (polecenie \"zypped addrepo\") przed użyciem wyszukiwania."
-
-#~ msgid "Pre-caching installed resolvables matching given search criteria... "
-#~ msgstr "Wstępne wczytywanie do pamięci podręcznej zainstalowanych pakietów spełniających podane kryteria wyszukiwania..."
-
-#~ msgid " out of ("
-#~ msgstr " z ("
-
-#~ msgid "cached."
-#~ msgstr "w pamięci podręcznej."
-
-#~ msgid " is not a valid regular expression: \""
-#~ msgstr " nie jest prawidłowym wyrażeniem regularnym: \""
-
-#~ msgid "This is a bug, please file a bug report against zypper."
-#~ msgstr "Jest to błąd, proszę wypełnić raport błędu w tej sprawie."
-
-#~ msgid "Unknown resolvable type "
-#~ msgstr "Nieznany typ pakietu rozwiązywalnego"
-
-#~ msgid "selection"
-#~ msgid_plural "selections"
-#~ msgstr[0] "wybór"
-#~ msgstr[1] "wybóry"
-#~ msgstr[2] "wybórów"
-
-#~ msgid "language"
-#~ msgid_plural "languages"
-#~ msgstr[0] "język"
-#~ msgstr[1] "języki"
-#~ msgstr[2] "języków"
-
-#~ msgid "system"
-#~ msgid_plural "systems"
-#~ msgstr[0] "system"
-#~ msgstr[1] "systemy"
-#~ msgstr[2] "systemów"
-
-#~ msgid "Applying patch rpm"
-#~ msgstr "Nanoszenie poprawki rpm"
-
-#~ msgid "Downloading"
-#~ msgstr "Pobieranie"
-
-#~ msgid "Removing "
-#~ msgstr "Usuwanie"
-
-#~ msgid "Error reading repository description file for '%s'."
-#~ msgstr "Błąd odczytu pliku opisu repozytorium \"%s\"."
-
-#~ msgid "Reason: "
-#~ msgstr "Powód: "
-
-#~ msgid "Try -h for help."
-#~ msgstr "Opcja -h wyświetla pomoc"
-
-#~ msgid "y"
-#~ msgstr "t"
-
-#~ msgid "Y"
-#~ msgstr "T"
-
-#~ msgid "N"
-#~ msgstr "N"
-
-#~ msgid "Invalid answer '%s', enter '%s' or '%s':"
-#~ msgstr "Niepoprawna odpowiedź: \"%s\". Proszę podać \"%s\" lub \"%s\":"
-
-#~ msgid "<install>   "
-#~ msgstr "<zainstaluj>   "
-
-#~ msgid "<uninstall> "
-#~ msgstr "<usuń>"
-
-#~ msgid "DONE"
-#~ msgstr "ZAKOŃCZONO"
-
-#~ msgid "Zypper happy! Detected repository type matches the one specified in the --type option."
-#~ msgstr "OK! Typ wykrytego repozytorium odpowiada podanemu w opcji --type."
-
-#~ msgid "Warning! Overriding detected repository type '%s' with manually specified '%s'."
-#~ msgstr "Uwaga! Wykryto typ \"%s\", ale zastosowano podany typ \"%s\"."
-
-#~ msgid "Unknown repository type '%s'. Using detected type '%s' instead."
-#~ msgstr "Nieznany typ repozytorium \"%s\". Użyto wykrytego typu \"%s\"."
-
-#~ msgid ""
-#~ "  Repository options:\n"
-#~ "\t--disable-repositories, -D\t\tDo not read data from defined repositories.\n"
-#~ "\t--repo <URI|.repo>\t\tRead additional repository\n"
-#~ msgstr ""
-#~ "  Opcje repozytoriów:\n"
-#~ "\t--disable-repositories, -D\t\tNie czyta danych z podanych repozytoriów\n"
-#~ "\t--repo <URI|.repo>\t\tWczytuje dodatkowe repozytorium\n"
-
-#~ msgid ""
-#~ "install [options] <name> ...\n"
-#~ "\n"
-#~ "'install' - Install resolvabe(s) with specified name(s).\n"
-#~ "\n"
-#~ "  Command options:\n"
-#~ "\t--catalog,-c\t\t\tOnly from this catalog (under development)\n"
-#~ "\t--type,-t <resolvable_type>\tType of resolvable (default: package)\n"
-#~ "\t--no-confirm,-y\t\t\tDo not require user confirmation to proceed with installation\n"
-#~ "\t--auto-agree-with-licenses,-l\tAutomatically say 'yes' to third party license confirmation prompt.\n"
-#~ "\t\t\t\t\tSee man zypper for more details.\n"
-#~ msgstr ""
-#~ "install [opcje] <nazwa> ...\n"
-#~ "\n"
-#~ "'install' - instaluje pakiet(y) o podanych nazwach.\n"
-#~ "\n"
-#~ "  Opcje polecenia:\n"
-#~ "\t--catalog,-c\t\t\tTylko z tego katalogu (opcja w budowie)\n"
-#~ "\t--type,-t <typ>\tTyp (domyślnie: pakiet)\n"
-#~ "\t--no-confirm,-y\t\t\tNie prosi o potwierdzenie użytkownika przed instalacją\n"
-#~ "\t--auto-agree-with-licenses,-l\tAutomatycznie zgadza się na licencje innych firm/osób.\n"
-#~ "\t\t\t\t\tWięcej szczegółów w podręczniku systemowym programu zypper.\n"
-
-#~ msgid ""
-#~ "remove [options] <name> ...\n"
-#~ "\n"
-#~ "'remove' - Remove resolvabe(s) with specified name(s).\n"
-#~ "\n"
-#~ "  Command options:\n"
-#~ "\t--type,-t <resolvable_type>\tType of resolvable (default: package)\n"
-#~ "\t--no-confirm,-y\t\t\tDo not require user confirmation\n"
-#~ msgstr ""
-#~ "remove [opcje] <nazwa> ...\n"
-#~ "\n"
-#~ "'remove' - usuwa pakiet(y) o podanych nazwach.\n"
-#~ "\n"
-#~ "  Opcje polecenia:\n"
-#~ "\t--type,-t\t\tTyp pakietu rozwiązywalnego (domyślnie: package)\n"
-#~ "\t--no-confirm,-y\tNie żąda potwierdzenia od użytkownika\n"
-
-#~ msgid ""
-#~ "list-updates [options]\n"
-#~ "\n"
-#~ "List all available updates\n"
-#~ "\n"
-#~ "  Command options:\n"
-#~ "\t--type,-t <resolvable_type>\tType of resolvable (default: patch)\n"
-#~ msgstr ""
-#~ "list-updates [opcje]\n"
-#~ "\n"
-#~ "Wyświetla wszystkie dostępne aktualizacje\n"
-#~ "\n"
-#~ "  Opcje polecenia:\n"
-#~ "\t--type,-t\t\tTyp pakietu rozwiązywalnego (domyślnie: poprawka)\n"
-
-#~ msgid ""
-#~ "'update' - Update all installed resolvables with newer versions, where applicable.\n"
-#~ "\n"
-#~ "  Command options:\n"
-#~ "\n"
-#~ "\t--type,-t <resolvable_type>\tType of resolvable (default: patch)\n"
-#~ "\t--no-confirm,-y\t\t\tDo not require user confirmation\n"
-#~ "\t--skip-interactive\t\tSkip interactive updates\n"
-#~ "\t--auto-agree-with-licenses,-l\tAutomatically say 'yes' to third party license confirmation prompt.\n"
-#~ "\t\t\t\t\tSee man zypper for more details.\n"
-#~ msgstr ""
-#~ "'update' - aktualizuje wszystkie zainstalowane pakiety jeśli dostępne sa nowe wersje.\n"
-#~ "\n"
-#~ "  Opcje polecenia:\n"
-#~ "\n"
-#~ "\t--type,-t <type>\tTyp obiektu (domyślnie: poprawka)\n"
-#~ "\t--no-confirm,-y\t\t\tWyłącza pytanie o potwierdzenie\n"
-#~ "\t--skip-interactive\t\tPomija uaktualnienia interaktywne\n"
-#~ "\t--auto-agree-with-licenses,-l\tAutomatycznie zgadza się na licencje innych firm/osób.\n"
-#~ "\t\t\t\t\tWięcej szczegółów w podręczniku systemowym programu zypper.\n"
-
-#~ msgid ""
-#~ "patch-check\n"
-#~ "\n"
-#~ "Check for available patches\n"
-#~ "\n"
-#~ "This command has no additional options.\n"
-#~ msgstr ""
-#~ "patch-check\n"
-#~ "\n"
-#~ "Sprawdza dostępność poprawek\n"
-#~ "\n"
-#~ "To polecenie nie posiada opcji.\n"
-
-#~ msgid ""
-#~ "patches\n"
-#~ "\n"
-#~ "List all available patches\n"
-#~ "\n"
-#~ "This command has no additional options.\n"
-#~ msgstr ""
-#~ "patches\n"
-#~ "\n"
-#~ "Wyświetla dostępne poprawki\n"
-#~ "\n"
-#~ "To polecenie nie posiada opcji.\n"
-
-#~ msgid "Ignoring --terse (provided only for rug compatibility)"
-#~ msgstr "zignorowano --terse (używany tylko do kompatybilności z programem rug)"
-
-#~ msgid "Will retry more aggressively."
-#~ msgstr "Ponowna, bardziej agresywna próba."
-
-#~ msgid "continue?"
-#~ msgstr "czy kontynuować?"
-
-#~ msgid " fingerprint:"
-#~ msgstr " odcisk klucza:"
-
-#~ msgid "Signature verification for "
-#~ msgstr "Weryfikacja podpisu dla "
-
-#~ msgid " with public key id "
-#~ msgstr " o identyfikatorze klucza publicznego "
-
-#~ msgid " failed, THIS IS RISKY!"
-#~ msgstr " nie powiodło się. OPERACJA JEST RYZYKOWNA."
-
-#~ msgid " for "
-#~ msgstr " dla "
-
-#~ msgid ", expected "
-#~ msgstr ", oczekiwano "
-
-#~ msgid " found "
-#~ msgstr " znaleziono "
-
-#~ msgid "not found"
-#~ msgstr "nie znaleziono"
-
-#~ msgid "skipping "
-#~ msgstr "pomijanie "
-
-#~ msgid "Failed"
-#~ msgstr "Niepowodzenie"
-
-#, fuzzy
-#~ msgid "Cleaning cache..."
-#~ msgstr "Inicjalizacja cache..."
-
-#~ msgid "removing source "
-#~ msgstr "usuwanie źródła "
-
-#~ msgid "URL is invalid: "
-#~ msgstr "Nieprawidłowy adres URL: "
-
-#~ msgid "Sorry, you need root privileges to use system sources, disabling them..."
-#~ msgstr "Wyłączanie źródeł systemowych. Do ich użycia wymagane są uprawnienia administratora..."
-
-#~ msgid "Restoring system sources..."
-#~ msgstr "Przywracanie źródeł systemowych..."
-
-#~ msgid "Failed to restore sources"
-#~ msgstr "Przywracanie źródeł systemowych zakończone niepowodzeniem"
-
-#~ msgid "Can't access repository"
-#~ msgstr "Brak dostępu do repozytorium"
-
-#~ msgid "No sources. Zypper currently searches within installationsources only."
-#~ msgstr "Brak źródeł. Zypper wyszukuje obecnie jedynie wśród źródeł instalacyjnych."
-
-#~ msgid ""
-#~ "  Command options:\n"
-#~ "\t--catalog,-c\t\tOnly from this catalog (under development)\n"
-#~ "\t--type,-t\t\tType of resolvable (default: package)\n"
-#~ "\t--no-confirm,-y\tDo not require user confirmation\n"
-#~ msgstr ""
-#~ "  Opcje polecenia:\n"
-#~ "\t--catalog,-c\t\tTylko z tego katalogu (opcja w trakcie rozwijania)\n"
-#~ "\t--type,-t\t\tTyp pakietu rozwiązywalnego (domyślnie: package)\n"
-#~ "\t--no-confirm,-y\tNie żądaj potwierdzenia od użytkownika\n"
-
-#~ msgid ""
-#~ "service-delete [options] <URI|alias>\n"
-#~ "\n"
-#~ "Remove service (installation source) from the system.\n"
-#~ "This command has no options.\n"
-#~ msgstr ""
-#~ "service-delete [options] <URI|alias>\n"
-#~ "\n"
-#~ "Usuń źródło instalacji z systemu.\n"
-#~ "To polecenie nie posiada żadnych opcji.\n"
-
-#~ msgid ""
-#~ "  Command options:\n"
-#~ "\t--type,-t\t\tType of resolvable (default: patch)\n"
-#~ "\t--no-confirm,-y\t\tDo not require user confirmation\n"
-#~ "\t--skip-interactive\t\tSkip interactive updates\n"
-#~ msgstr ""
-#~ "  Opcje polecenia:\n"
-#~ "\t--type,-t\t\tTyp pakietu rozwiązywalnego (domyślnie: patch)\n"
-#~ "\t--no-confirm,-y\t\tNie żądaj potwierdzenia od użytkownika\n"
-#~ "\t--skip-interactive\t\tPomiń aktualizacje wymagające interakcji\n"
-
-#~ msgid ""
-#~ "zypper [global-options] moo\n"
-#~ "\n"
-#~ "'moo' - Show an animal\n"
-#~ msgstr ""
-#~ "zypper [opcje-globalne] moo\n"
-#~ "\n"
-#~ "'moo' - Wyświetla szczegółowe zwierzątko\n"
-
-#~ msgid "Unknown command"
-#~ msgstr "Nieznane polecenie"
-
-#~ msgid "A ZYpp transaction is already in progress."
-#~ msgstr "Transakcja ZYpp jest już w trakcie wykonania."
-
-#~ msgid " (old way)"
-#~ msgstr " (stary sposób)"
-
-#~ msgid "Unknown repository type "
-#~ msgstr "Nieznany typ repozytorium "
-
-#~ msgid "Name not found"
-#~ msgstr "Nazwa nie została znaleziona"
-
-#~ msgid "baseurl not found"
-#~ msgstr "nie znaleziono bazowego URL"
-
-#~ msgid "Sorry, not implemented yet for libzypp-1.x.x"
-#~ msgstr "Przykro nam, opcja jeszcze niezaimplementowana w libzypp-1.x.x."
-
-#~ msgid "Error while refreshing the source: "
-#~ msgstr "Podczas odświeżania źródła wystąpił błąd: "
-
-#~ msgid "Error while fetching "
-#~ msgstr "Błąd podczas pobierania"
-
-#~ msgid "ZENworks Management Daemon is running."
-#~ msgstr "Demon ZENworks Management jest uruchomiony."
-
-#~ msgid "Use rug or yast2 for that."
-#~ msgstr "W tym celu proszę użyć programów rug lub yast2."
-
-#~ msgid "Warning: Unknown metadata type "
-#~ msgstr "Ostrzeżenie: Nieznany typ metadanych "
