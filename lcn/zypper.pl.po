@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: zypper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-05-07 13:45+0200\n"
-"PO-Revision-Date: 2008-05-09 23:24+0200\n"
+"PO-Revision-Date: 2008-05-09 23:48+0200\n"
 "Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -186,6 +186,19 @@ msgid ""
 "\tproducts, pd\t\tList all available products.\n"
 "\twhat-provides, wp\tList packages providing specified capability.\n"
 msgstr ""
+"\tWyszukiwanie:\n"
+"\tsearch, se\t\tWyszukiwanie pakietów pasujących do wzorca.\n"
+"\tinfo, if\t\tPokazuje wszystkie informacje o podanych pakietach.\n"
+"\tpatch-info\t\tPokazuje wszystkie informacje o podanych poprawkach.\n"
+"\tpattern-info\t\tPokazuje wszystkie informacje o podanych wzorcach.\n"
+"\tproduct-info\t\tPokazuje wszystkie informacje o podanych produktach.\n"
+"\tpatch-check, pchk\tSprawdza dostępność poprawek.\n"
+"\tlist-updates, lu\tPokazuje wszystkie dostępne aktualizacje.\n"
+"\tpatches, pch\t\tPokazuje wszystkie dostępne poprawki.\n"
+"\tpackages, pa\t\tPokazuje wszystkie dostępne pakiety.\n"
+"\tpatterns, pt\t\tPokazuje wszystkie dostępne wzorce.\n"
+"\tproducts, pd\t\tPokazuje wszystkie dostępne produkty.\n"
+"\twhat-provides, wp\tPokazuje pakiety dostarczające podanych plików.\n"
 
 #: ../src/zypper.cc:213
 msgid ""
@@ -194,27 +207,32 @@ msgid ""
 "\tremovelock, rl\t\tRemove a package lock.\n"
 "\tlocks, ll\t\tList current package locks.\n"
 msgstr ""
+"\tBlokowanie pakietów:\n"
+"\taddlock, al\t\tDodaje blokadę na podany pakiet.\n"
+"\tremovelock, rl\t\tUsuwa blokadę z danego pakietu.\n"
+"\tlocks, ll\t\tPokazuje wszytskie aktualnie zablokowane pakiety.\n"
 
 #: ../src/zypper.cc:219
-#, fuzzy
 msgid ""
 "  Usage:\n"
 "\tzypper [--global-options] <command> [--command-options] [arguments]\n"
-msgstr "Użycie: {0} <opcje> <polecenie> <opcje polecenia> ..."
+msgstr ""
+"  Użycie:\n"
+"\tzypper [--opcje-globalne] <polecenia> [--opcje-poleceń] [argumenty]\n"
 
 #. translators: %s is "help" or "zypper help" depending on whether
 #. zypper shell is running or not
 #: ../src/zypper.cc:241
 #, c-format
 msgid "Type '%s' to get a list of global options and commands."
-msgstr ""
+msgstr "Proszę wprowadzić '%s', aby zobaczyć listę wszystkich opcji globalnych i poleceń."
 
 #. translators: %s is "help" or "zypper help" depending on whether
 #. zypper shell is running or not
 #: ../src/zypper.cc:250
 #, c-format
 msgid "Type '%s' to get command-specific help."
-msgstr ""
+msgstr "Proszę wprowadzić '%s' aby otrzymać pomoc związaną z danym poleceniem."
 
 #: ../src/zypper.cc:351
 #, c-format
@@ -222,47 +240,44 @@ msgid "Verbosity: %d"
 msgstr "Szczegółowość: %d"
 
 #: ../src/zypper.cc:365
-#, fuzzy, c-format
+#, c-format
 msgid "Invalid table style %d."
-msgstr "Nieprawidłowy styl tabeli"
+msgstr "Nieprawidłowy styl tabeli %d."
 
 #: ../src/zypper.cc:366
 #, c-format
 msgid "Use an integer number from %d to %d"
-msgstr ""
+msgstr "Prosze użyć liczby całkowitej od %d do %d"
 
 #: ../src/zypper.cc:396
 msgid "Entering non-interactive mode."
 msgstr "Rozpoczęto tryb wsadowy."
 
 #: ../src/zypper.cc:402
-#, fuzzy
 msgid "Entering 'no-gpg-checks' mode."
-msgstr "Rozpoczęto tryb bez sprawdzeń gpg"
+msgstr "Rozpoczęto tryb 'bez sprawdzania gpg'."
 
 #: ../src/zypper.cc:412
 msgid "The path specified in the --root option must be absolute."
-msgstr ""
+msgstr "Ścieżka podana jako argument opcji --root musi odnosić się do głównego drzewa katalogów."
 
 #: ../src/zypper.cc:446
 msgid "Repositories disabled, using the database of installed packages only."
 msgstr "Repozytoria wyłączone, użyto tylko bazy zainstalowanych pakietów."
 
 #: ../src/zypper.cc:458
-#, fuzzy
 msgid "Autorefresh disabled."
-msgstr "Autoodświeżanie"
+msgstr "Autoodświeżanie wyłączone."
 
 #: ../src/zypper.cc:465
-#, fuzzy
 msgid "Ignoring installed resolvables."
-msgstr "Zainstalowane pakiety rozwiązywalne zostaną zignorowane"
+msgstr "Zainstalowane pakiety rozwiązywalne zostaną zignorowane."
 
 #. TranslatorExplanation The %s is "--plus-repo"
 #: ../src/zypper.cc:560
 #, c-format
 msgid "The %s option has no effect here, ignoring."
-msgstr ""
+msgstr "Opcja '%s' nie dotyczy tego polecenia, została zignorowana."
 
 #: ../src/zypper.cc:733
 msgid "Unexpected exception."
