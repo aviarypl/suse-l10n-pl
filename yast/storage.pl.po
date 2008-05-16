@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: storage\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-21 10:31+0200\n"
+"POT-Creation-Date: 2008-05-15 16:03+0200\n"
 "PO-Revision-Date: 2008-04-26 19:16+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -69,13 +69,13 @@ msgid "Command line interface for the partitioner module is not available"
 msgstr "Interfejs linii poleceń dla modułu partycjonującego nie jest dostępny"
 
 #. displayed text during action, %1$s is replaced by device name e.g. /dev/hda1
-#: libstorage/src/Container.cc:172 libstorage/src/Volume.cc:2619
+#: libstorage/src/Container.cc:172 libstorage/src/Volume.cc:2635
 #, c-format
 msgid "Creating %1$s"
 msgstr "Tworzenie partycji %1$s"
 
 #. displayed text before action, %1$s is replaced by device name e.g. /dev/hda1
-#: libstorage/src/Container.cc:177 libstorage/src/Volume.cc:2624
+#: libstorage/src/Container.cc:177 libstorage/src/Volume.cc:2640
 #, c-format
 msgid "Create %1$s"
 msgstr "Partycja %1$s zostanie utworzona"
@@ -84,7 +84,7 @@ msgstr "Partycja %1$s zostanie utworzona"
 #. displayed text during action, %1$s is replaced by a name (e.g. pdc_igeeeadj),
 #. displayed text during action, %1$s is replaced by device name e.g. /dev/hda1
 #: libstorage/src/Container.cc:188 libstorage/src/DmPartCo.cc:885
-#: libstorage/src/Volume.cc:2665
+#: libstorage/src/Volume.cc:2681
 #, c-format
 msgid "Removing %1$s"
 msgstr "Usuwanie %1$s"
@@ -93,7 +93,7 @@ msgstr "Usuwanie %1$s"
 #. displayed text before action, %1$s is replaced by a name (e.g. pdc_igeeeadj),
 #. displayed text before action, %1$s is replaced by device name e.g. /dev/hda1
 #: libstorage/src/Container.cc:193 libstorage/src/DmPartCo.cc:890
-#: libstorage/src/Volume.cc:2670
+#: libstorage/src/Volume.cc:2686
 #, c-format
 msgid "Remove %1$s"
 msgstr "Partycja %1$s zostanie usunięta"
@@ -425,7 +425,7 @@ msgstr "Rozszerzanie partycji raid %1$s do %2$s"
 
 #: libstorage/src/Dmraid.cc:179 libstorage/src/Evms.cc:251
 #: libstorage/src/LvmLv.cc:195 libstorage/src/Partition.cc:511
-#: libstorage/src/Volume.cc:2643
+#: libstorage/src/Volume.cc:2659
 msgid " (progress bar might not move)"
 msgstr " (pasek postępu może nie poruszać się)"
 
@@ -1321,43 +1321,55 @@ msgid "Set up encrypted dm device on %1$s"
 msgstr "Zaszyfrowane urządzenie dm zostanie skonfigurowane na %1$s"
 
 #. displayed text during action, %1$s is replaced by device name e.g. /dev/hda1
+#: libstorage/src/Volume.cc:1962
+#, fuzzy, c-format
+msgid "Clearing label on %1$s"
+msgstr "Ustawianie etykiety woluminu %1$s na %2$s"
+
+#. displayed text during action, %1$s is replaced by device name e.g. /dev/hda1
 #. %2$s is replaced by a name e.g. ROOT
-#: libstorage/src/Volume.cc:1961
+#: libstorage/src/Volume.cc:1968
 #, c-format
 msgid "Setting label on %1$s to %2$s"
 msgstr "Ustawianie etykiety woluminu %1$s na %2$s"
 
 #. displayed text before action, %1$s is replaced by device name e.g. /dev/hda1
+#: libstorage/src/Volume.cc:1976
+#, fuzzy, c-format
+msgid "Clear label on %1$s"
+msgstr "Etykieta woluminu %1$s zostanie ustawiona na %2$s"
+
+#. displayed text before action, %1$s is replaced by device name e.g. /dev/hda1
 #. %2$s is replaced by a name e.g. ROOT
-#: libstorage/src/Volume.cc:1967
+#: libstorage/src/Volume.cc:1982
 #, c-format
 msgid "Set label on %1$s to %2$s"
 msgstr "Etykieta woluminu %1$s zostanie ustawiona na %2$s"
 
 #. displayed text during action, %1$s is replaced by device name e.g. /dev/hda1
 #. %2$s is replaced by size (e.g. 623.5 MB)
-#: libstorage/src/Volume.cc:2638
+#: libstorage/src/Volume.cc:2654
 #, c-format
 msgid "Shrinking %1$s to %2$s"
 msgstr "Zmniejszanie %1$s do %2$s"
 
 #. displayed text during action, %1$s is replaced by device name e.g. /dev/hda1
 #. %2$s is replaced by size (e.g. 623.5 MB)
-#: libstorage/src/Volume.cc:2642
+#: libstorage/src/Volume.cc:2658
 #, c-format
 msgid "Extending %1$s to %2$s"
 msgstr "Rozszerzanie %1$s do %2$s"
 
 #. displayed text before action, %1$s is replaced by device name e.g. /dev/hda1
 #. %2$s is replaced by size (e.g. 623.5 MB)
-#: libstorage/src/Volume.cc:2650
+#: libstorage/src/Volume.cc:2666
 #, c-format
 msgid "Shrink %1$s to %2$s"
 msgstr "Zmniejszanie %1$s do %2$s"
 
 #. displayed text before action, %1$s is replaced by device name e.g. /dev/hda1
 #. %2$s is replaced by size (e.g. 623.5 MB)
-#: libstorage/src/Volume.cc:2654
+#: libstorage/src/Volume.cc:2670
 #, c-format
 msgid "Extend %1$s to %2$s"
 msgstr "Rozszerzanie %1$s do %2$s"
@@ -6203,7 +6215,7 @@ msgstr ""
 #. html-format
 #. advise the user to wait for completion
 #. part 1 of 2
-#: storage/src/inst_prepdisk.ycp:57
+#: storage/src/inst_prepdisk.ycp:61
 msgid ""
 "<p>\n"
 "Please wait while your hard disk is prepared for installation...\n"
@@ -6213,7 +6225,7 @@ msgstr ""
 "Proszę czekać, twardy dysk jest przygotowywany do instalacji...\n"
 "<br></p>"
 
-#: storage/src/inst_prepdisk.ycp:62
+#: storage/src/inst_prepdisk.ycp:66
 msgid ""
 "<p>\n"
 "Please wait while your hard disk is prepared...\n"
@@ -6224,7 +6236,7 @@ msgstr ""
 "<br></p>"
 
 #. rich-text format help text part 2 of 2
-#: storage/src/inst_prepdisk.ycp:67
+#: storage/src/inst_prepdisk.ycp:71
 msgid ""
 "<p>\n"
 "Depending on the size of your hard disk and your processor speed, this action\n"
@@ -6241,11 +6253,11 @@ msgstr ""
 "formatowania musi przeprowadzić wiele różnych testów.</p>"
 
 #. hard disk will be made ready for installing Linux
-#: storage/src/inst_prepdisk.ycp:82
+#: storage/src/inst_prepdisk.ycp:86
 msgid "Preparing Your Hard Disk"
 msgstr "Przygotowywanie twardego dysku"
 
-#: storage/src/inst_prepdisk.ycp:101
+#: storage/src/inst_prepdisk.ycp:105
 #, ycp-format
 msgid ""
 "Failure occurred during following action:\n"
