@@ -5,13 +5,14 @@
 # This file is distributed under the same license as @PACKAGE@ package. FIRST
 #
 # Karol Sikora <elektrrrus@gmail.com>, 2008.
+# Wadim Dziedzic <wdziedzic@aviary.pl>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: zypper\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-05-07 13:45+0200\n"
-"PO-Revision-Date: 2008-05-09 23:48+0200\n"
-"Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
+"PO-Revision-Date: 2008-05-17 00:48+0200\n"
+"Last-Translator: Wadim Dziedzic <wdziedzic@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -213,7 +214,7 @@ msgstr ""
 "\tBlokowanie pakietów:\n"
 "\taddlock, al\t\tDodaje blokadę na podany pakiet.\n"
 "\tremovelock, rl\t\tUsuwa blokadę z danego pakietu.\n"
-"\tlocks, ll\t\tPokazuje wszytskie aktualnie zablokowane pakiety.\n"
+"\tlocks, ll\t\tPokazuje wszystkie aktualnie zablokowane pakiety.\n"
 
 #: ../src/zypper.cc:219
 msgid ""
@@ -289,7 +290,7 @@ msgstr "Niespodziewany wyjątek."
 #. TranslatorExplanation the first %s = "package, patch, pattern, product"
 #. and the second %s = "package"
 #: ../src/zypper.cc:817
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "install (in) [options] <capability|rpm_file_uri> ...\n"
 "\n"
@@ -310,17 +311,24 @@ msgid ""
 "    --force-resolution          Force the solver to find a solution (even an agressive).\n"
 "-D, --dry-run                   Test the installation, do not actually install.\n"
 msgstr ""
-"install (in) [opcje] <capability> ...\n"
+"install (in) [opcje] <capability|rpm_file_uri> ...\n"
 "\n"
-"Instaluje obiekty z określonymi capabilities. A capability to NAZWA[OP<WERSJA>], gdzie OP to <, <=, =, >= lub >.\n"
+"Instaluje obiekty z określonymi możliwościami. Możliwość to NAZWA[OP<WERSJA>], gdzie OP to <, <=, =, >= lub >.\n"
 "\n"
 "  Opcje:\n"
-"-r, --repo <alias>              Instaluje obiekty tylko z repozytorium określonego przez alias.\n"
-"-t, --type <type>               Typ obiektu (pakiet, poprawka, wzorzec, produkt) (domyślnie: pakiet)\n"
-"-n, --name                      Wybór obiektów wg nazwy , nie wg capability\n"
+"-r, --repo <alias#|URI>         Instaluje obiekty tylko z repozytorium określonego przez alias.\n"
+"-t, --type <type>               Typ obiektu (%s)\n"
+"                                Domyślnie: %s.\n"
+"-n, --name                      Wybór obiektów wg nazwy , nie wg możliwości.\n"
+"-C, --capability                Wybór obiektów wg możliwości.\n"
+"-f, --force                     Instaluje nawet gdy element jest zainstalowany (ponowna instalacja).\n"
 "-l, --auto-agree-with-licenses  Automatycznie zgadza sie na licencje firm trzecich.\n"
 "                                Więcej informacji wyświetla polecenie \"man zypper\".\n"
 "    --debug-solver              Tworzy test dla mechanizmu rozwiązywania zależności (debugowanie)\n"
+"    --no-recommends             Nie instaluje zalecanych pakietów, a tylko wymagane.\n"
+"-R, --no-force-resolution       Nie wymusza znalezienia rozwiązania, wyświetla pytania.\n"
+"    --force-resolution          Wymusza automatyczne znalezienia rozwiązania (nawet agresywnego).\n"
+"-D, --dry-run                   Test instalacji, bez instalowania pakietów.\n"
 
 #. TranslatorExplanation the first %s = "package, patch, pattern, product"
 #. and the second %s = "package"
@@ -412,6 +420,9 @@ msgid ""
 "\n"
 "List available resolvable types.\n"
 msgstr ""
+"list-resolvables (lr)\n"
+"\n"
+"Wyświetla dostępne typy obiektów rozwiązywalnych.\n"
 
 #: ../src/zypper.cc:1009
 msgid ""
@@ -431,7 +442,6 @@ msgid ""
 msgstr ""
 
 #: ../src/zypper.cc:1036
-#, fuzzy
 msgid ""
 "removerepo (rr) [options] <alias|#|URI>\n"
 "\n"
@@ -441,15 +451,14 @@ msgid ""
 "    --loose-auth   Ignore user authentication data in the URI.\n"
 "    --loose-query  Ignore query string in the URI.\n"
 msgstr ""
-"removerepo (rr) [opcje] <alias|URL>\n"
+"removerepo (rr) [opcje] <alias|URI>\n"
 "\n"
-"Usuwa repozytorium określone przez alias lub adres URL.\n"
+"Usuwa repozytorium określone przez alias lub adres URI.\n"
 "  Opcje polecenia:\n"
-"    --loose-auth\tIgnoruje dane uwoerzytelniania w adresie URL\n"
-"    --loose-query\tIgnoruje ciąg zapytania w adresie URL\n"
+"    --loose-auth\tIgnoruje dane uwierzytelniania w adresie URI\n"
+"    --loose-query\tIgnoruje ciąg zapytania w adresie URI\n"
 
 #: ../src/zypper.cc:1055
-#, fuzzy
 msgid ""
 "renamerepo (nr) [options] <alias|#|URI> <new-alias>\n"
 "\n"
@@ -457,9 +466,9 @@ msgid ""
 "\n"
 "This command has no additional options.\n"
 msgstr ""
-"renamerepo [options] <alias> <nowy-alias>\n"
+"renamerepo [options] <alias|#|URI> <nowy-alias>\n"
 "\n"
-"Przypisuje nowy alias do repozytorium określonego przez alias.\n"
+"Przypisuje nowy alias do repozytorium określonego przez alias, numer lub adres URI.\n"
 "\n"
 "To polecenie nie posiada żadnych dodatkowych opcji.\n"
 
@@ -679,7 +688,6 @@ msgstr ""
 "Znaki specjalne * oraz ? mogą być używane wewnątrz fraz wyszukiwania.\n"
 
 #: ../src/zypper.cc:1348
-#, fuzzy
 msgid ""
 "patch-check (pchk) [options]\n"
 "\n"
@@ -689,16 +697,15 @@ msgid ""
 "\n"
 "-r, --repo <alias|#|URI>  Check for patches only in the specified repository.\n"
 msgstr ""
-"patch-check\n"
+"patch-check (pchk) [opcje]\n"
 "\n"
 "Wyszukuje dostępne poprawki\n"
 "\n"
 "  Opcje:\n"
 "\n"
-"-r, --repo <alias>  Ogranicza tylko do poprawek z repozytorium określonego przez alias.\n"
+"-r, --repo <alias|#|URI>  Ogranicza tylko do poprawek z określonego repozytorium.\n"
 
 #: ../src/zypper.cc:1370
-#, fuzzy
 msgid ""
 "patches (pch) [repository] ...\n"
 "\n"
@@ -708,13 +715,13 @@ msgid ""
 "\n"
 "-r, --repo <alias|#|URI>  Just another means to specify repository.\n"
 msgstr ""
-"patches\n"
+"patches (pch) [repository] ...\n"
 "\n"
-"Wyświetla listę wszystkich dostępnych poprawek\n"
+"Wyświetla listę wszystkich dostępnych w danym repozytorium poprawek\n"
 "\n"
 "  Opcje:\n"
 "\n"
-"-r, --repo <alias>  Ogranicza tylko do poprawek z repozytorium określonego przez alias.\n"
+"-r, --repo <alias|#|URI>  określa repozytorium.\n"
 
 #: ../src/zypper.cc:1397
 #, fuzzy
@@ -795,7 +802,7 @@ msgid ""
 msgstr ""
 
 #: ../src/zypper.cc:1499
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "patch-info <patchname> ...\n"
 "\n"
@@ -807,10 +814,10 @@ msgstr ""
 "\n"
 "Wyświetla szczegółowe informacje na temat poprawek\n"
 "\n"
-"To polecenie to alias dla \"zypper info -t patch\".\n"
+"To polecenie to alias kompatybilności dla \"%s\".\n"
 
 #: ../src/zypper.cc:1518
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "pattern-info <pattern_name> ...\n"
 "\n"
@@ -818,14 +825,14 @@ msgid ""
 "\n"
 "This is a rug compatibility alias for '%s'.\n"
 msgstr ""
-"patch-info <nazwa poprawki> ...\n"
+"pattern-info <nazwa_wzorca> ...\n"
 "\n"
-"Wyświetla szczegółowe informacje na temat poprawek\n"
+"Wyświetla szczegółowe informacje na temat wzorców\n"
 "\n"
-"To polecenie to alias dla \"zypper info -t patch\".\n"
+"To polecenie to alias kompatybilności dla \"%s\".\n"
 
 #: ../src/zypper.cc:1537
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "product-info <product_name> ...\n"
 "\n"
@@ -833,11 +840,11 @@ msgid ""
 "\n"
 "This is a rug compatibility alias for '%s'.\n"
 msgstr ""
-"patch-info <nazwa poprawki> ...\n"
+"product-info <nazwa_produktu> ...\n"
 "\n"
-"Wyświetla szczegółowe informacje na temat poprawek\n"
+"Wyświetla szczegółowe informacje na temat produktów.\n"
 "\n"
-"To polecenie to alias dla \"zypper info -t patch\".\n"
+"To polecenie to alias kompatybilności dla \"%s\".\n"
 
 #: ../src/zypper.cc:1554
 #, fuzzy
@@ -855,7 +862,6 @@ msgstr ""
 "To polecenie nie posiada żadnych opcji.\n"
 
 #: ../src/zypper.cc:1605
-#, fuzzy
 msgid ""
 "moo\n"
 "\n"
@@ -870,7 +876,7 @@ msgstr ""
 "To polecenie nie ma dodatkowych opcji.\n"
 
 #: ../src/zypper.cc:1623
-#, fuzzy, c-format
+#, c-format
 msgid ""
 "xml-updates\n"
 "\n"
@@ -881,10 +887,10 @@ msgid ""
 msgstr ""
 "xml-updates\n"
 "\n"
-"Wyświetla aktualizacje i poprawki w formacie xml\n"
+"Wyświetla aktualizacje i poprawki w formacie xml. Polecenie to jest nieaktualne i zostanie zastąpione przez \"%s\"\n"
 "\n"
 "  Opcje:\n"
-"-r, --repo <alias>  Ogranicza tylko do aktualizacji z repozytorium określonego przez alias.\n"
+"-r, --repo <alias|#|URI>  Ogranicza tylko do aktualizacji z określonego repozytorium.\n"
 
 #: ../src/zypper.cc:1647
 #, c-format
@@ -982,9 +988,8 @@ msgid ""
 msgstr ""
 
 #: ../src/zypper.cc:1824 ../src/zypper.cc:3158
-#, fuzzy
 msgid "Unexpected program flow."
-msgstr "Napotkano nieoczekiwany błąd"
+msgstr "Nieoczekiwany przebieg programu"
 
 #: ../src/zypper.cc:1848
 msgid "Non-option program arguments: "
@@ -1011,18 +1016,17 @@ msgid "Root privileges are required for modifying system repositories."
 msgstr "Do modyfikacji repozytoriów konieczne są uprawnienia administratora."
 
 #: ../src/zypper.cc:1974 ../src/zypper.cc:2282
-#, fuzzy
 msgid "Too few arguments."
-msgstr "Zbyt wiele argumentów."
+msgstr "Zbyt mało parametrów."
 
 #: ../src/zypper.cc:1998
 msgid "If only one argument is used, it must be a URI pointing to a .repo file."
-msgstr ""
+msgstr "Jeśli użyto tylko jednego parametru, to musi to być adres URI pliku .repo."
 
 #: ../src/zypper.cc:2025
 #, c-format
 msgid "Cannot use %s together with %s. Using the %s setting."
-msgstr ""
+msgstr "Nie można użyć %s razem z %s. Użyto ustawienia %s."
 
 #: ../src/zypper.cc:2046
 msgid "Specified type is not a valid repository type:"
@@ -1044,31 +1048,29 @@ msgstr "Użycie"
 #. TranslatorExplanation %s is string which was not found (can be url,
 #. alias or the repo number)
 #: ../src/zypper.cc:2098
-#, fuzzy, c-format
+#, c-format
 msgid "Repository %s not found by alias, number or URI."
-msgstr "Nie znaleziono repozytorium \"%s\" wg aliasu i/lub numeru."
+msgstr "Nie znaleziono repozytorium \"%s\" wg aliasu numeru lub adresu URI."
 
 #: ../src/zypper.cc:2126
-#, fuzzy
 msgid "Too few arguments. At least URI and alias are required."
-msgstr "Zbyt mało parametrów. Wymagany jest conajmniej alias i adres URL."
+msgstr "Zbyt mało parametrów. Wymagany jest conajmniej alias i adres URI."
 
 #: ../src/zypper.cc:2151
-#, fuzzy, c-format
+#, c-format
 msgid "Repository '%s' not found."
-msgstr "Repozytorium \"%s\" nie zostało znalezione"
+msgstr "Repozytorium \"%s\" nie zostało znalezione."
 
 #: ../src/zypper.cc:2182 ../src/zypper.cc:2184
 #, c-format
 msgid "'%s' option is deprecated and will be dropped soon."
-msgstr ""
+msgstr "Opcja \"%s\" jest nieaktualna i zostanie wkrótce usunięta."
 
 #. translators: aggregate option is e.g. "--all". This message will be
 #. followed by mr command help text which will explain it
 #: ../src/zypper.cc:2193
-#, fuzzy
 msgid "Alias or an aggregate option is required."
-msgstr "Nazwa pakietu jest wymaganym parametrem."
+msgstr "Wymagany jest alias lub opcja agregatu."
 
 #: ../src/zypper.cc:2222
 #, c-format
@@ -1082,17 +1084,15 @@ msgstr "Do odświeżania repozytoriów konieczne są uprawnienia administratora.
 #: ../src/zypper.cc:2247
 #, c-format
 msgid "The '%s' global option has no effect here."
-msgstr ""
+msgstr "Opcja globalna \"%s\" nie przynosi tutaj efektu."
 
 #: ../src/zypper.cc:2264
-#, fuzzy
 msgid "Root privileges are required for cleaning local caches."
-msgstr "Do aktualizacji pakietów konieczne są uprawnienia administratora."
+msgstr "Do czyszczenia buforów lokalnych konieczne są uprawnienia administratora."
 
 #: ../src/zypper.cc:2283
-#, fuzzy
 msgid "At least one package name is required."
-msgstr "Nazwa pakietu jest wymaganym parametrem."
+msgstr "Wymagana jest co najmniej jedna nazwa pakietu."
 
 #: ../src/zypper.cc:2297
 msgid "Root privileges are required for installing or uninstalling packages."
@@ -1106,7 +1106,7 @@ msgstr "Nieznany typ pakietu: %s"
 #: ../src/zypper.cc:2330
 #, c-format
 msgid "'%s' looks like an RPM file. Will try to download it."
-msgstr ""
+msgstr "\"%s\" wygląda jak plik RPM. Nastąpi próba pobrania."
 
 #: ../src/zypper.cc:2343
 #, c-format
@@ -3091,3 +3091,4 @@ msgstr "Proszę sprawdzić czy podany adres URL jest dostępny."
 #, c-format
 msgid "Cannot parse capability '%s'."
 msgstr "Nie można zanalizować właściwości \"%s\""
+
