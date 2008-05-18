@@ -15,10 +15,10 @@ while (<INPUTF>)
     if ( $line =~ /^\#, fuzzy/ ) {
 	$fuzzy = 1;
     }
-    elsif ( $line =~ /^#: / ) 
+    elsif ( $line =~ /^#\. / ) 
     {
 	#property name
-	$line =~ /#: (.*)/;
+	$line =~ /#\. (.*)/;
 	$property = $1;
 	if ( $property )
 	{

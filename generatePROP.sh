@@ -45,7 +45,7 @@ do
     
     
     # usuwamy stary (bo może być _en.properties)
-    rm -f $DEST_FILE
+    #rm -f $DEST_FILE
     
     # ew. korekcja dla _pl. w nazwie
     DEST_FILE=`echo $DEST_FILE  | sed -n "s/_en\.properties/_pl\.properties/p"`

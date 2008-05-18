@@ -35,7 +35,7 @@ $CURRENT = $ARGV[1];
 	    $key=substr($line, 0, $result);
 	    $value=substr($line, $result + 1);
 	    $out{$value}=$key."|||".$out{$value};
-	    $comment{$value} = $comment{$value}."#: $key\n";
+	    $comment{$value} = $comment{$value}."#. $key\n";
     	    $en{$value}=$key;
 	    $pl{$key} = "";
 #	    print $key."\n";
