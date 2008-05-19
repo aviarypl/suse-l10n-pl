@@ -16,6 +16,6 @@ mergeDir ()
 }
 
 mergeDir po-rbac
-mergeDir po-idmua
+#mergeDir po-idmua
 
 svn st | grep -v ?
