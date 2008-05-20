@@ -48,7 +48,11 @@ do
     #rm -f $DEST_FILE
     
     # ew. korekcja dla _pl. w nazwie
-    DEST_FILE=`echo $DEST_FILE  | sed -n "s/_en\.properties/_pl\.properties/p"`
+    DX=`echo $DEST_FILE  | sed -n "s/_en\.properties/_pl\.properties/p"`
+    if [ "$DX" != "" ] 
+    then
+	DEST_FILE=$DX
+    fi 
     
     # odpalamy generację .properties dla jednego pliku
     $PO2PROPERTY $i > $DEST_FILE
