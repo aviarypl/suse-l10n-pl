@@ -43,14 +43,12 @@ do
     # szukamy pliku
     DEST_FILE=`find $DEST_DIR -name ${PROP_FILE}* -type f`
     
-    
-    # usuwamy stary (bo może być _en.properties)
-    #rm -f $DEST_FILE
-    
     # ew. korekcja dla _pl. w nazwie
     DX=`echo $DEST_FILE  | sed -n "s/_en\.properties/_pl\.properties/p"`
     if [ "$DX" != "" ] 
     then
+        # usuwamy stary (bo może być _en.properties)
+	rm -f $DEST_FILE
 	DEST_FILE=$DX
     fi 
     

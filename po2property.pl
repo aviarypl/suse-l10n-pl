@@ -51,7 +51,7 @@ while (<INPUTF>)
 	    $prop =  $_;
 	    if ( $prop ne "" ) {
 		if ( $fuzzy == 1 || $trans eq "") {
-		    $value = $original;
+		    $value = escapeCharacters($original);
 		}
 		else {
 		    $value = $trans;
