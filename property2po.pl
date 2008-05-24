@@ -1,10 +1,5 @@
 #!/usr/bin/perl
 
-#
-# TODO: dekodowane polskich encji typu u0107 w odczytanych stringach
-#
-
-
 $IN = $ARGV[0];
 $CURRENT = $ARGV[1];
 
