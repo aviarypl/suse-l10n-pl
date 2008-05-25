@@ -52,9 +52,9 @@ do
 
     if [ $MAKE_POT -eq 0 ] 
     then
-	TRA_FILE_FPATH=`find $TRA_DIR -name $TRA_FILE -type f`
+		TRA_FILE_FPATH=`find $TRA_DIR -name $TRA_FILE -type f`
     else
-	TRA_FILE_FPATH=""
+		TRA_FILE_FPATH=""
     fi
     
     # odpalamy generację .po dla jednego pliku

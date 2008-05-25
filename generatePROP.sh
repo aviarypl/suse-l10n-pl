@@ -2,6 +2,8 @@
 #
 # UWAGA: katalog docelowy powinien zawierać odpowiednią strukturę katalogów i pliki .properties.
 #	 Na początek można po prostu skopiować angielski orginał.
+#     
+#     Pliki .po muszą mieć koniecznie teksty (msgstr/msgid) jednolinijkowe
 #
 
 # katalog docelowy 
@@ -33,7 +35,6 @@ fi
 
 
 for i in `ls $PO_DIR/*.po`
-#for i in `find $ORI_DIR -type f`
 do
     # fragment nazwy do wyszukania pliku docelowego: blabla_pl.po > blabla_
     PROP_FILE=`basename $i | sed -n "s/_pl\.po/_/p"` 
@@ -48,8 +49,8 @@ do
     if [ "$DX" != "" ] 
     then
         # usuwamy stary (bo może być _en.properties)
-	rm -f $DEST_FILE
-	DEST_FILE=$DX
+		rm -f $DEST_FILE
+		DEST_FILE=$DX
     fi 
     
     # odpalamy generację .properties dla jednego pliku
