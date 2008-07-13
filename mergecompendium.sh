@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Przenosi tlumaczenia z wielkiego pliku compendium do plików .po
+
 mergeDir () 
 {
     DIR=$1

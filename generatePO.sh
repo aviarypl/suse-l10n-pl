@@ -1,4 +1,7 @@
 #!/bin/bash
+# #####################
+# generuje pliki .po na podstawie angielskich plikow .properties
+# #####################
 
 # katalog z angielskimi properties
 ORI_DIR=$1

@@ -1,10 +1,12 @@
 #!/bin/bash
+# #####################
+# Generuje pliki properties z plików .po do przygotowanej struktury katalogów
 #
 # UWAGA: katalog docelowy powinien zawierać odpowiednią strukturę katalogów i pliki .properties.
 #	 Na początek można po prostu skopiować angielski orginał.
 #     
-#     Pliki .po muszą mieć koniecznie teksty (msgstr/msgid) jednolinijkowe
-#
+# Pliki .po muszą mieć koniecznie teksty (msgstr/msgid) jednolinijkowe
+# #####################
 
 # katalog docelowy 
 DEST_DIR=$1
