@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zypp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-21 18:58+0200\n"
+"POT-Creation-Date: 2008-07-08 09:39+0200\n"
 "PO-Revision-Date: 2008-04-24 00:08+0100\n"
 "Last-Translator: wadim dziedzic <nikdo@aviary.pl>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: ../zypp/solver/detail/SATResolver.cc:933
+#: ../zypp/solver/detail/SATResolver.cc:1007
 msgid ""
 "\n"
 "uninstallable providers: "
@@ -34,49 +34,65 @@ msgstr ""
 msgid " SSL certificate problem, verify that the CA cert is OK for '%s'."
 msgstr "Problem z certyfikatem SSL, proszę sprawdzić, czy certyfikat CA jest odpowiedni dla \"%s\"."
 
-#: ../zypp/solver/detail/SATResolver.cc:880
+#. timestamp
+#: ../zypp/target/TargetImpl.cc:86
+msgid " executed"
+msgstr ""
+
+#. timestamp
+#: ../zypp/target/TargetImpl.cc:107
+#, fuzzy
+msgid " execution failed"
+msgstr "Usunięcie %s nie powiodło się"
+
+#. timestamp
+#: ../zypp/target/TargetImpl.cc:191
+msgid " execution skipped while aborting"
+msgstr ""
+
+#: ../zypp/solver/detail/SATResolver.cc:954
 #, c-format
 msgid "%s conflicts with %s provided by %s"
 msgstr "%s jest w konflikcie z %s dostarczonym przez %s"
 
 #. %s = filename of rpm package
 #. timestamp
-#: ../zypp/target/rpm/RpmDb.cc:2054
+#: ../zypp/target/rpm/RpmDb.cc:2071
 #, c-format
 msgid "%s install failed"
 msgstr "Instalacja %s nie powiodła się"
 
 #. %s = filename of rpm package
 #. timestamp
-#: ../zypp/target/rpm/RpmDb.cc:2063
+#: ../zypp/target/rpm/RpmDb.cc:2080
 #, c-format
 msgid "%s installed ok"
 msgstr "Pakiet %s poprawnie zainstalowany"
 
-#: ../zypp/solver/detail/SATResolver.cc:866
+#: ../zypp/solver/detail/SATResolver.cc:940
 #, c-format
 msgid "%s is not installable"
 msgstr "%s jest nieinstalowalny"
 
-#: ../zypp/solver/detail/SATResolver.cc:885
+#: ../zypp/solver/detail/SATResolver.cc:959
 #, c-format
 msgid "%s obsoletes %s provided by %s"
 msgstr "%s dezaktualizuje %s dostarczony przez %s"
 
 #. %s = name of rpm package
 #. timestamp
-#: ../zypp/target/rpm/RpmDb.cc:2174
+#: ../zypp/target/rpm/RpmDb.cc:2203
 #, c-format
 msgid "%s remove failed"
 msgstr "Usunięcie %s nie powiodło się"
 
 #. timestamp
-#: ../zypp/target/rpm/RpmDb.cc:2182
+#: ../zypp/target/rpm/RpmDb.cc:2211
 #, c-format
 msgid "%s remove ok"
 msgstr "Usunięcie %s powiodło się"
 
-#: ../zypp/solver/detail/SATResolver.cc:921
+#: ../zypp/solver/detail/SATResolver.cc:995
 #, c-format
 msgid "%s requires %s, but this requirement cannot be provided"
 msgstr "%s wymaga %s, lecz to wymaganie nie może zostać spełnione"
@@ -101,12 +117,12 @@ msgstr "aczoli"
 msgid "Adangme"
 msgstr "adangme"
 
-#: ../zypp/RepoManager.cc:1007
+#: ../zypp/RepoManager.cc:1069
 #, c-format
 msgid "Adding repository '%s'"
 msgstr "Dodawanie repozytorium \"%s\""
 
-#: ../zypp/target/rpm/RpmDb.cc:2066 ../zypp/target/rpm/RpmDb.cc:2185
+#: ../zypp/target/rpm/RpmDb.cc:2083 ../zypp/target/rpm/RpmDb.cc:2214
 msgid "Additional rpm output:"
 msgstr "Dodatkowe wyjście rpm:"
 
@@ -325,7 +341,7 @@ msgstr "Austria"
 msgid "Austronesian (Other)"
 msgstr "języki malajo-polinezyjskie"
 
-#: ../zypp/media/MediaCurl.cc:761 ../zypp/media/MediaCurl.cc:829
+#: ../zypp/media/MediaCurl.cc:764 ../zypp/media/MediaCurl.cc:832
 #, c-format
 msgid "Authentication required for '%s'"
 msgstr "Wymagane uwierzytelnienie dla \"%s\""
@@ -599,7 +615,7 @@ msgstr "Brunei"
 msgid "Buginese"
 msgstr "bugijski"
 
-#: ../zypp/RepoManager.cc:719
+#: ../zypp/RepoManager.cc:776
 #, c-format
 msgid "Building repository '%s' cache"
 msgstr "Budowanie pamięci podręcznej repozytorium \"%s\""
@@ -650,7 +666,7 @@ msgstr "Kambodża"
 msgid "Cameroon"
 msgstr "Kamerun"
 
-#: ../zypp/sat/detail/PoolImpl.cc:147
+#: ../zypp/sat/detail/PoolImpl.cc:148
 msgid "Can not create sat-pool."
 msgstr "Nie można utworzyć \"sat-pool\""
 
@@ -720,7 +736,7 @@ msgstr "Nie można ustawić atrybutu rekurencyjności muteksu"
 msgid "Canada"
 msgstr "Kanada"
 
-#: ../zypp/KeyRing.cc:276
+#: ../zypp/KeyRing.cc:277
 #, c-format
 msgid "Cannot create public key %s from %s keyring to file %s"
 msgstr "Nie można utworzyć klucza publicznego %s z zestawu %s do pliku %s"
@@ -808,7 +824,7 @@ msgstr "chamorro"
 
 #. Translator: %s = name of an rpm package. A list of diffs follows
 #. this message.
-#: ../zypp/target/rpm/RpmDb.cc:1877
+#: ../zypp/target/rpm/RpmDb.cc:1894
 #, c-format
 msgid "Changed configuration files for %s:"
 msgstr "Zmienione pliki konfiguracyjne dla %s:"
@@ -1270,11 +1286,11 @@ msgstr "ewe"
 msgid "Ewondo"
 msgstr "ewondo"
 
-#: ../zypp/KeyRing.cc:558
+#: ../zypp/KeyRing.cc:575
 msgid "Failed to delete key."
 msgstr "Usunięcie klucza nie powiodło się."
 
-#: ../zypp/target/rpm/RpmDb.cc:1045
+#: ../zypp/target/rpm/RpmDb.cc:1062
 #, c-format
 msgid "Failed to import public key from file %s: %s"
 msgstr "Nieudany import klucza publicznego z pliku %s: %s"
@@ -1284,7 +1300,7 @@ msgstr "Nieudany import klucza publicznego z pliku %s: %s"
 msgid "Failed to mount %s on %s"
 msgstr "Montowanie %s na %s  nie powiodło się"
 
-#: ../zypp/target/rpm/RpmDb.cc:1122
+#: ../zypp/target/rpm/RpmDb.cc:1139
 #, c-format
 msgid "Failed to remove public key %s: %s"
 msgstr "Usunięcie klucza publicznego nie powiodło się %s: %s"
@@ -1418,7 +1434,7 @@ msgstr "fiński"
 msgid "Finno-Ugrian (Other)"
 msgstr "ugrofińskie (inne)"
 
-#: ../zypp/solver/detail/ProblemSolutionCombi.cc:73
+#: ../zypp/solver/detail/ProblemSolutionCombi.cc:85
 msgid "Following actions will be done:"
 msgstr "Wykonane zostaną następujące czynności:"
 
@@ -1707,6 +1723,10 @@ msgstr "HalVolume:  niezainicjowany."
 msgid "Hausa"
 msgstr "hausański"
 
+#: ../zypp/solver/detail/SATResolver.cc:936
+msgid "Have you enabled all requested repositories ?"
+msgstr ""
+
 #. language code: haw
 #: ../zypp/LanguageCode.cc:594
 msgid "Hawaiian"
@@ -1868,7 +1888,7 @@ msgstr "indonezyjski"
 msgid "Ingush"
 msgstr "inguski"
 
-#: ../zypp/target/TargetImpl.cc:762
+#: ../zypp/target/TargetImpl.cc:554 ../zypp/target/TargetImpl.cc:785
 msgid "Installation has been aborted as directed."
 msgstr "Instalacja przerwana zgodnie z życzeniem."
 
@@ -1942,12 +1962,12 @@ msgstr "Nieprawidłowy znak parametru podziału mapy"
 msgid "Invalid port component '%s'"
 msgstr "Nieprawidłowy komponent portu '%s'"
 
-#: ../zypp/PoolQuery.cc:419
+#: ../zypp/PoolQuery.cc:443
 #, c-format
 msgid "Invalid regular expression '%s': regcomp returned %d"
 msgstr "Niepoprawne wyrażenie regularne \"%s\": regcomp zwróciło %d"
 
-#: ../zypp/media/MediaCurl.cc:758 ../zypp/media/MediaCurl.cc:826
+#: ../zypp/media/MediaCurl.cc:761 ../zypp/media/MediaCurl.cc:829
 msgid "Invalid user name or password."
 msgstr "Błędna nazwa użytkownika lub hasło."
 
@@ -3182,8 +3202,8 @@ msgid "Query string parsing not supported for this URL"
 msgstr "Analiza zapytania nie jest obsługiwana dla tego adresu URL"
 
 #. TranslatorExplanation after semicolon is error message
-#: ../zypp/target/rpm/RpmDb.cc:888 ../zypp/target/rpm/RpmDb.cc:2057
-#: ../zypp/target/rpm/RpmDb.cc:2177
+#: ../zypp/target/rpm/RpmDb.cc:888 ../zypp/target/rpm/RpmDb.cc:2074
+#: ../zypp/target/rpm/RpmDb.cc:2206
 msgid "RPM failed: "
 msgstr "Błąd RPM:"
 
@@ -3211,7 +3231,7 @@ msgstr "rarotongański"
 msgid "Relative path not allowed if authority exists"
 msgstr "Względna ścieżka nie jest dozwolona, jeśli usługa istnieje"
 
-#: ../zypp/RepoManager.cc:1114
+#: ../zypp/RepoManager.cc:1171
 #, c-format
 msgid "Removing repository '%s'"
 msgstr "Usuwanie repozytorium '%s'"
@@ -3440,7 +3460,7 @@ msgstr "Sierra Leone"
 msgid "Sign Languages"
 msgstr "języki migowe"
 
-#: ../zypp/KeyRing.cc:568
+#: ../zypp/KeyRing.cc:585
 #, c-format
 msgid "Signature file %s not found"
 msgstr "Nie znaleziono pliku sygnatury %s"
@@ -3520,7 +3540,7 @@ msgstr "sogdyjski"
 msgid "Solomon Islands"
 msgstr "Wyspy Salomona"
 
-#: ../zypp/solver/detail/SATResolver.cc:889
+#: ../zypp/solver/detail/SATResolver.cc:963
 #, c-format
 msgid "Solvable %s conflicts with %s provided by itself"
 msgstr "El. rozwiązywalny %s jest w konflikcie z %s dostarczonym przez siebie"
@@ -3839,7 +3859,7 @@ msgstr "tongański (Niasa)"
 msgid "Tonga (Tonga Islands)"
 msgstr "tongański (wyspy Tonga)"
 
-#: ../zypp/KeyRing.cc:507
+#: ../zypp/KeyRing.cc:524
 #, c-format
 msgid "Tried to import not existant key %s into keyring %s"
 msgstr "Próba importu nieistniejącego klucza %s do bazy kluczy %s"
@@ -4005,6 +4025,10 @@ msgstr "Stany Zjednoczone Ameryki Północnej"
 msgid "United States Minor Outlying Islands"
 msgstr "Dalekie Wyspy Mniejsze Stanów Zjednoczonych"
 
+#: ../zypp/target/TargetImpl.cc:823
+msgid "Unknown Distribution"
+msgstr ""
+
 #: ../zypp/CountryCode.cc:135
 msgid "Unknown country: "
 msgstr "Nieznane państwo: "
@@ -4098,7 +4122,7 @@ msgid "Vai"
 msgstr "vai"
 
 #. we will throw this later if no URL checks out fine
-#: ../zypp/RepoManager.cc:526
+#: ../zypp/RepoManager.cc:590
 msgid "Valid metadata not found at specified URL(s)"
 msgstr "Pod podanymi adresami URL nie znaleiono poprawnych metadanych."
 
@@ -4280,72 +4304,72 @@ msgstr "Sprawdzenie applydeltarpm zakończone niepowodzeniem."
 msgid "applydeltarpm failed."
 msgstr "applydeltarpm zakończone niepowodzeniem."
 
-#: ../zypp/solver/detail/SATResolver.cc:1129
+#: ../zypp/solver/detail/SATResolver.cc:1195
 #, c-format
 msgid "architecture change of %s to %s"
 msgstr "zmiana architektury %s na %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:875
+#: ../zypp/solver/detail/SATResolver.cc:949
 #, c-format
 msgid "cannot install both %s and %s"
 msgstr "nie można zainstalować %s i %s na raz"
 
-#: ../zypp/solver/detail/SATResolver.cc:859
+#: ../zypp/solver/detail/SATResolver.cc:929
 msgid "conflicting requests"
 msgstr "sprzeczne żądania"
 
 #. timestamp
-#: ../zypp/target/rpm/RpmDb.cc:2327
+#: ../zypp/target/rpm/RpmDb.cc:2356
 #, c-format
 msgid "created backup %s"
 msgstr "utworzono zapasowy %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:1156
+#: ../zypp/solver/detail/SATResolver.cc:1222
 #, c-format
 msgid "deinstallation of %s"
 msgstr "usunięcie %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:923
+#: ../zypp/solver/detail/SATResolver.cc:997
 msgid "deleted providers: "
 msgstr "usunięci dostawcy:"
 
-#: ../zypp/solver/detail/SATResolver.cc:1077
+#: ../zypp/solver/detail/SATResolver.cc:1143
 #, c-format
 msgid "do not ask to delete all solvables providing %s"
 msgstr "nie pytaj o usunięcie wszystkich elementów rozwiązywalnych dostarczających %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:1062
+#: ../zypp/solver/detail/SATResolver.cc:1135
 #, c-format
 msgid "do not ask to install a solvable providing %s"
 msgstr "nie pytaj o instalację wszystkich elementów rozwiązywalnych dostarczających %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:1015
+#: ../zypp/solver/detail/SATResolver.cc:1089
 #, c-format
 msgid "do not forbid installation of %s"
 msgstr "nie zakazuj instalacji %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:994
-#: ../zypp/solver/detail/SATResolver.cc:1033
+#: ../zypp/solver/detail/SATResolver.cc:1068
+#: ../zypp/solver/detail/SATResolver.cc:1106
 #, c-format
 msgid "do not install %s"
 msgstr "nie instaluj %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:1089
+#: ../zypp/solver/detail/SATResolver.cc:1155
 #, c-format
 msgid "do not install most recent version of %s"
 msgstr "nie instaluj najnowszej wersji %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:989
+#: ../zypp/solver/detail/SATResolver.cc:1063
 #, c-format
 msgid "do not keep %s installed"
 msgstr "nie utrzymuj %s zainstalowanego"
 
-#: ../zypp/solver/detail/SATResolver.cc:1122
+#: ../zypp/solver/detail/SATResolver.cc:1188
 #, c-format
 msgid "downgrade of %s to %s"
 msgstr "przywróć %s do %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:1136
+#: ../zypp/solver/detail/SATResolver.cc:1202
 #, c-format
 msgid ""
 "install %s (with vendor change)\n"
@@ -4358,8 +4382,8 @@ msgstr ""
 "-->\n"
 "  %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:1010
-#: ../zypp/solver/detail/SATResolver.cc:1047
+#: ../zypp/solver/detail/SATResolver.cc:1084
+#: ../zypp/solver/detail/SATResolver.cc:1127
 #, c-format
 msgid "keep %s"
 msgstr "zachowaj %s"
@@ -4372,34 +4396,34 @@ msgstr "libhal_ctx_new: nie można utworzyć kontekstu libhal"
 msgid "libhal_set_dbus_connection: Can't set dbus connection"
 msgstr "libhal_set_dbus_connection: nie można ustanowić połączenia dbus"
 
-#: ../zypp/solver/detail/SATResolver.cc:870
+#: ../zypp/solver/detail/SATResolver.cc:944
 #, c-format
 msgid "nothing provides %s needed by %s"
 msgstr "żaden pakiet nie dostarcza %s wymaganego przez %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:862
+#: ../zypp/solver/detail/SATResolver.cc:935
 #, c-format
 msgid "nothing provides requested %s"
 msgstr "żaden pakiet nie dostarcza żądanego %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:856
+#: ../zypp/solver/detail/SATResolver.cc:926
 #, c-format
 msgid "problem with installed package %s"
 msgstr "problem z zainstalowanym pakietem %s"
 
-#: ../zypp/solver/detail/SATResolver.cc:1144
+#: ../zypp/solver/detail/SATResolver.cc:1210
 #, c-format
 msgid "replacement of %s with %s"
 msgstr "zamiana %s na %s"
 
 #. %s = filenames
-#: ../zypp/target/rpm/RpmDb.cc:2046
+#: ../zypp/target/rpm/RpmDb.cc:2063
 #, c-format
 msgid "rpm created %s as %s, but it was impossible to determine the difference"
 msgstr "rpm utworzył %s jako %s, ale można było określić różnicy"
 
 #. %s = filenames
-#: ../zypp/target/rpm/RpmDb.cc:2048
+#: ../zypp/target/rpm/RpmDb.cc:2065
 #, c-format
 msgid ""
 "rpm created %s as %s.\n"
@@ -4408,18 +4432,18 @@ msgstr ""
 "rpm utworzył %s jako %s.\n"
 "Oto pierwszych 25 linii różnicy:\n"
 
-#: ../zypp/target/rpm/RpmDb.cc:2055 ../zypp/target/rpm/RpmDb.cc:2175
+#: ../zypp/target/rpm/RpmDb.cc:2072 ../zypp/target/rpm/RpmDb.cc:2204
 msgid "rpm output:"
 msgstr "Wyjście rpm:"
 
 #. %s = filenames
-#: ../zypp/target/rpm/RpmDb.cc:2041
+#: ../zypp/target/rpm/RpmDb.cc:2058
 #, c-format
 msgid "rpm saved %s as %s, but it was impossible to determine the difference"
 msgstr "rpm zapisał %s jako %s, ale można było określić różnicy"
 
 #. %s = filenames
-#: ../zypp/target/rpm/RpmDb.cc:2043
+#: ../zypp/target/rpm/RpmDb.cc:2060
 #, c-format
 msgid ""
 "rpm saved %s as %s.\n"
@@ -4428,7 +4452,12 @@ msgstr ""
 "rpm zapisał %s jako %s.\n"
 "Oto pierwszych 25 linii różnicy:\n"
 
-#: ../zypp/solver/detail/SATResolver.cc:935
+#: ../zypp/solver/detail/SATResolver.cc:932
+#, fuzzy
+msgid "some dependency problem"
+msgstr "Zignoruj niektóre zależności %s"
+
+#: ../zypp/solver/detail/SATResolver.cc:1009
 msgid "uninstallable providers: "
 msgstr "nieinstalowalni dostawcy:"
 

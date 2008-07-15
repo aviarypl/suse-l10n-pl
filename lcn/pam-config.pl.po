@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-01 14:51+0200\n"
+"POT-Creation-Date: 2008-07-10 18:05+0200\n"
 "PO-Revision-Date: 2008-04-14 17:24+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -85,6 +85,11 @@ msgstr "OSTRZEŻENIE: Nie znaleziono /etc/security/pam_unix2.conf{.rpmsave} (%m)
 #, c-format
 msgid "WARNING: Couldn't find /etc/security/pam_pwcheck.conf{.rpmsave} (%m).\n"
 msgstr "OSTRZEŻENIE: Nie znaleziono /etc/security/pam_pwcheck.conf{.rpmsave} (%m).\n"
+
+#: src/mod_pam_ck_connector.c:93
+#, fuzzy, c-format
+msgid "ERROR: Could not add pam_ck_connector.so to service '%s'"
+msgstr "BŁĄD: Nie można dodać pam_cryptpass.so do usługi \"%s\""
 
 #: src/mod_pam_cryptpass.c:98
 #, c-format
@@ -227,16 +232,14 @@ msgstr "Opcje modułu dla pojedynczej usługi:\n"
 msgid "      These modules can only be added to single service files.\n"
 msgstr "      Te moduły mogą by dodane tylko do pojedynczych plików usług.\n"
 
-#: src/pam-config.c:125 src/pam-config.c:165 src/pam-config.c:177
-#: src/pam-config.c:853 src/pam-config.c:863 src/pam-config.c:873
-#: src/pam-config.c:884
+#: src/pam-config.c:125 src/pam-config.c:178 src/pam-config.c:850
+#: src/pam-config.c:860 src/pam-config.c:870 src/pam-config.c:881
 #, c-format
 msgid "Error activating %s (%m)\n"
 msgstr "Błąd aktywacji %s (%m)\n"
 
-#: src/pam-config.c:127 src/pam-config.c:167 src/pam-config.c:179
-#: src/pam-config.c:855 src/pam-config.c:865 src/pam-config.c:875
-#: src/pam-config.c:886
+#: src/pam-config.c:127 src/pam-config.c:180 src/pam-config.c:852
+#: src/pam-config.c:862 src/pam-config.c:872 src/pam-config.c:883
 #, c-format
 msgid "New config from %s is not in use!\n"
 msgstr "Nowa konfiguracja z %s nie jest używana.\n"
@@ -251,10 +254,25 @@ msgstr "Plik %s nie jest dowiązaniem do %s.\n"
 msgid "New config from %s is is not in use!\n"
 msgstr "Nowa konfiguracja z %s nie jest używana.\n"
 
-#: src/pam-config.c:173
+#: src/pam-config.c:162
 #, c-format
 msgid "WARNING: file '%s' not found. Omitting backup.\n"
 msgstr "OSTRZEŻENIE: plik '%s' nie został znaleziony. Kopia zapasowa zostanie pominięta.\n"
+
+#: src/pam-config.c:166
+#, fuzzy, c-format
+msgid "WARNING: Backup file '%s' already exist. Omitting backup.\n"
+msgstr "OSTRZEŻENIE: plik '%s' nie został znaleziony. Kopia zapasowa zostanie pominięta.\n"
+
+#: src/pam-config.c:169
+#, fuzzy, c-format
+msgid "ERROR: Cannot create backup file '%s' (%m)\n"
+msgstr "Nie można utworzyć uchwytu pliku: %m\n"
+
+#: src/pam-config.c:173
+#, fuzzy, c-format
+msgid "ERROR: Cannot remove '%s' (%m)\n"
+msgstr "Nie można utworzyć  %s: %m\n"
 
 #: src/pam-config.c:344
 #, c-format
