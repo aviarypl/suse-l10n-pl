@@ -1,0 +1,49 @@
+#!/bin/bash
+
+if [ -z "$1" ]
+then
+  echo ""
+  echo "Składnia: msgmerge-mass [lcn|yast] katalog_merged"
+  echo ""
+  echo "Pierwszy argument określa, z którego katalogu (yast lub lcn)"
+  echo "zostaną pobrane pliki po i pot. Jest on obowiązkowy."
+  echo "Drugi argument to nazwa katalogu, w którym znajdą się pliki wynikowe."
+  echo "Jest opcjonalny; domyślnie jest to nowe/."
+  echo ""
+  echo "Przykłady:"
+  echo "   msgmerge-mass lcn"
+  echo "   msgmerge-mass yast yast-merged"
+  echo ""
+else
+
+TS=`date +%s`
+
+# Utwórz katalog wyjściowy
+
+if [ -z "$2" ] 
+then 
+  DIR="nowe" 
+else
+  DIR="$2"
+fi
+
+mkdir $DIR
+
+# Pobierz najnowsze poty z repozytorium Novella
+echo ""
+echo "Pobieranie plików pot z repozytorium Novella"
+svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/$1/50-pot pot-$TS/
+
+# Pobierz najnowsze po z repozytorium Aviary.pl
+echo ""
+echo "Pobieranie plików po z repozytorium Aviary.pl"
+svn export svn://aviary.pl:143/aviarypl/suse/trunk/$1 po-$TS/
+rm po-$TS/Makefile
+
+rename 's/\.pot/\.pl\.pot/' pot-$TS/*
+cd po-$TS/ && find . -name '*' -exec msgmerge -o ../$DIR/{} --no-wrap {} ../pot-$TS/{}t \;
+
+# Posprzątaj
+cd .. && rm pot-$TS/ po-$TS/ -Rf
+
+fi
