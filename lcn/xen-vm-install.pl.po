@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xen-vm-install\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-07-11 14:30-0600\n"
+"POT-Creation-Date: 2008-08-22 09:29-0600\n"
 "PO-Revision-Date: 2008-04-22 22:45+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -199,6 +199,10 @@ msgstr "Odmowa dostępu podczas próby wykonania operacji na dysku."
 #: src/vminstall/msg.py:87
 msgid "Two of the virtual disks have conflicting virtual names or physical devices."
 msgstr "Dwa dyski wirtualne o takich samych nazwach lub o przypisanym tym samym urządzeniu są ze sobą w konflikcie."
+
+#: src/vminstall/msg.py:88
+msgid "Not enough space on device for disk image."
+msgstr ""
 
 #: src/vminstall/msg.py:91
 msgid "The job was canceled."
@@ -649,136 +653,157 @@ msgid "PXE"
 msgstr "PXE"
 
 #: src/vminstall/msg.py:229
+msgid "Can't reach the pxe server. Possible reasons are an improperly configured network, SuSEfirewall2 or iptables -L"
+msgstr ""
+
+#: src/vminstall/msg.py:230
+msgid "Can't get the pxelinux.cfg/default file from the pxe server."
+msgstr ""
+
+#: src/vminstall/msg.py:231
+msgid "Can't download the kernel and initrd from server."
+msgstr ""
+
+#: src/vminstall/msg.py:232
+msgid "This kernel image may not be a paravirtualized xen kernel required for installation, Continue?"
+msgstr ""
+
+#: src/vminstall/msg.py:235
 msgid "Fully Virtualized AMD PCnet 32"
 msgstr "AMD PCnet 32 w trybie pełnej wirtualizacji"
 
-#: src/vminstall/msg.py:230
+#: src/vminstall/msg.py:236
 msgid "Fully Virtualized NE2000 (ISA Bus)"
 msgstr "NE2000 (ISA Bus) w trybie pełnej wirtualizacji"
 
-#: src/vminstall/msg.py:231
+#: src/vminstall/msg.py:237
 msgid "Fully Virtualized NE2000 (PCI Bus)"
 msgstr "NE2000 (PCI Bus) w trybie pełnej wirtualizacji"
 
-#: src/vminstall/msg.py:232
+#: src/vminstall/msg.py:238
 msgid "Fully Virtualized Realtek 8139"
 msgstr "Realtek 8139 w trybie pełnej wirtualizacji"
 
-#: src/vminstall/msg.py:233
+#: src/vminstall/msg.py:239
 msgid "MAC Address"
 msgstr "Adres MAC"
 
-#: src/vminstall/msg.py:234
+#: src/vminstall/msg.py:240
 msgid "Randomly generated MAC address"
 msgstr "Adres MAC generowany losowo"
 
-#: src/vminstall/msg.py:235
+#: src/vminstall/msg.py:241
 msgid "Specified MAC address"
 msgstr "Określony adres MAC"
 
-#: src/vminstall/msg.py:238
+#: src/vminstall/msg.py:244
 msgid "Additional Arguments"
 msgstr "Dodatkowe argumenty"
 
-#: src/vminstall/msg.py:239
+#: src/vminstall/msg.py:245
 msgid "Network URL"
 msgstr "Sieciowy adres URL"
 
-#: src/vminstall/msg.py:240
+#: src/vminstall/msg.py:246
 msgid "Memory"
 msgstr "Pamięć"
 
-#: src/vminstall/msg.py:241
+#: src/vminstall/msg.py:247
 msgid "Processors"
 msgstr "Procesory"
 
-#: src/vminstall/msg.py:242
+#: src/vminstall/msg.py:248
 msgid "Automated install file or URL"
 msgstr "Ścieżka lokalna lub URL pliku instalacji zautomatyzowanej"
 
-#: src/vminstall/msg.py:243
+#: src/vminstall/msg.py:249
 msgid "Available Memory"
 msgstr "Dostępna pamięć"
 
-#: src/vminstall/msg.py:244
+#: src/vminstall/msg.py:250
 msgid "Available Processors"
 msgstr "Dostępne procesory"
 
-#: src/vminstall/msg.py:245
+#: src/vminstall/msg.py:251
 msgid "Initial Memory"
 msgstr "Pamięć początkowa"
 
-#: src/vminstall/msg.py:246
+#: src/vminstall/msg.py:252
 msgid "Maximum Memory"
 msgstr "Pamięć maksymalna"
 
-#: src/vminstall/msg.py:247
+#: src/vminstall/msg.py:253
 msgid "Virtual Processors"
 msgstr "Procesory wirtualne"
 
-#: src/vminstall/msg.py:248
+#: src/vminstall/msg.py:254
 msgid "Installation Source"
 msgstr "Źródło instalacji"
 
-#: src/vminstall/msg.py:249
+#: src/vminstall/msg.py:255
 msgid "Automated Installation"
 msgstr "Instalacja zautomatyzowana"
 
-#: src/vminstall/msg.py:250
+#: src/vminstall/msg.py:256
 msgid "Operating System"
 msgstr "System operacyjny"
 
-#: src/vminstall/msg.py:253
+#: src/vminstall/msg.py:259
 msgid "Kickstart file or URL"
 msgstr "Położenie lub URL pliku konfiguracji Kickstart"
 
-#: src/vminstall/msg.py:254
+#: src/vminstall/msg.py:260
 msgid "AutoYaST file"
 msgstr "Plik AutoYaST"
 
-#: src/vminstall/msg.py:255
+#: src/vminstall/msg.py:261
 msgid "NetWare response file"
 msgstr "Plik odpowiedzi NetWare"
 
-#: src/vminstall/msg.py:258
+#: src/vminstall/msg.py:264
 msgid "Creating the Virtual Machine"
 msgstr "Tworzenie maszyny wirtualnej"
 
-#: src/vminstall/msg.py:259
+#: src/vminstall/msg.py:265
 #, fuzzy
 msgid "Writing the configuration file"
 msgstr "Przygotowywanie konfiguracji środowiska wykonania..."
 
-#: src/vminstall/msg.py:260
+#: src/vminstall/msg.py:266
 msgid "Locate Operating System Settings File"
 msgstr "Położenie pliku ustawień systemu operacyjego"
 
-#: src/vminstall/msg.py:261
+#: src/vminstall/msg.py:267
 msgid "Locate Disk or Disk Image"
 msgstr "Położenie dysku lub obrazu dysku "
 
 # power-off message
-#: src/vminstall/msg.py:264
+#: src/vminstall/msg.py:270
 msgid "Do you want to add another virtual disk?"
 msgstr "Czy dodać kolejny dysk wirtualny? "
 
-#: src/vminstall/msg.py:265
+#: src/vminstall/msg.py:271
 msgid "Do you want to add another virtual network adapter?"
 msgstr "Czy dodać następną kartę sieciową?"
 
-#: src/vminstall/msg.py:266
+#: src/vminstall/msg.py:272
 msgid "What type of virtual disk do you want to add?"
 msgstr "Proszę wybrać typ dysku wirtualnego do dodania:"
 
-#: src/vminstall/msg.py:267
+#: src/vminstall/msg.py:273
 msgid "Where will the virtual disk physically reside?"
 msgstr "Gdzie będzie przechowywany tworzony dysk wirtualny?"
 
-#: src/vminstall/msg.py:268
+#: src/vminstall/msg.py:274
 msgid "What type of virtual network adapter do you want to add?"
 msgstr "Proszę wybrać typ karty sieciowej do dodania:"
 
-#: src/vminstall/msg.py:270
+#: src/vminstall/msg.py:275
+#, fuzzy
+msgid "Create a sparse image file for the virtual disk?"
+msgstr "Proszę podać nazwę tworzonej maszyny wirtualnej."
+
+#: src/vminstall/msg.py:277
 msgid "Default"
 msgstr "Domyślny"
 

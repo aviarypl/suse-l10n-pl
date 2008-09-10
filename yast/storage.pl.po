@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: storage.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-15 16:03+0200\n"
+"POT-Creation-Date: 2008-08-04 13:16+0200\n"
 "PO-Revision-Date: 2008-07-06 15:45+0200\n"
 "Last-Translator: Mariusz Fik <fisiu82@gmail.com>\n"
 "Language-Team: Polski <pl@li.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: disk/src/disk.ycp:32
+#: disk/src/disk.ycp:27
 msgid ""
 "Only use this program if you are familiar with partitioning hard disks.\n"
 "\n"
@@ -45,31 +45,81 @@ msgstr ""
 "Aby kontynuować pomimo tego ostrzeżenia, należy nacisnąć przycisk \"Tak\".\n"
 
 #. heading text
-#: disk/src/disk.ycp:48 storage/src/inst_custom_part.ycp:2663
+#. DoApply (inst_prepdisk) replaces the wizard contents
+#. TODO: make nicer
+#: disk/src/disk.ycp:43 storage/src/include/ep-main.ycp:242
+#: storage/src/include/ep-main.ycp:280
 msgid "Expert Partitioner"
 msgstr "Zaawansowane narzędzie do partycjonowania"
 
-#: disk/src/disk.ycp:49
+#: disk/src/disk.ycp:44
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
 
-#: disk/src/disk.ycp:50
+#: disk/src/disk.ycp:45
 msgid "<p>Please wait, while volumes are being detected.</p>"
 msgstr "<p>Proszę czekać, woluminy są wykrywane.</p>"
 
-#: disk/src/disk.ycp:62
+#: disk/src/disk.ycp:56
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
 #. translators: command line help text for disk module
-#: disk/src/disk_worker.ycp:46
+#: disk/src/disk_worker.ycp:44
 msgid "Disk partitioner"
 msgstr "Narzędzie do partycjonowania dysków"
 
 #. custum help text (should replace default one)
-#: disk/src/disk_worker.ycp:48
+#: disk/src/disk_worker.ycp:46
 msgid "Command line interface for the partitioner module is not available"
 msgstr "Interfejs linii poleceń dla modułu partycjonującego nie jest dostępny"
+
+#. Byte abbreviated
+#: libstorage/src/AppUtil.cc:547
+#, fuzzy
+msgid "B"
+msgstr "MB"
+
+#. KiloByte abbreviated
+#: libstorage/src/AppUtil.cc:551
+msgid "kB"
+msgstr ""
+
+#. MegaByte abbreviated
+#. Unit for partition resizing - currently Megabytes
+#. label text, short for Megabyte (MB)
+#. label text
+#. end of not yet checked
+#. not test mode
+#. ///////////////////////////////////////////////////////////////////////
+#. END: Preliminary action
+#. ///////////////////////////////////////////////////////////////////////
+#. ///////////////////////////////////////////////////////////////////////
+#. START: GUI
+#. ///////////////////////////////////////////////////////////////////////
+#. set to "true" to test non-graphical version
+#. Unit for parition resizing - currently Megabytes
+#: libstorage/src/AppUtil.cc:555 storage/src/include/ep-dialogs.ycp:334
+#: storage/src/include/partition_defines.ycp:133
+#: storage/src/inst_custom_part.ycp:1334 storage/src/inst_resize_ui.ycp:560
+msgid "MB"
+msgstr "MB"
+
+#. GigaByte abbreviated
+#: libstorage/src/AppUtil.cc:559 storage/src/include/ep-dialogs.ycp:393
+#: storage/src/inst_custom_part.ycp:1340
+msgid "GB"
+msgstr "GB"
+
+#. TeraByte abbreviated
+#: libstorage/src/AppUtil.cc:563
+msgid "TB"
+msgstr ""
+
+#. PetaByte abbreviated
+#: libstorage/src/AppUtil.cc:567
+msgid "PB"
+msgstr ""
 
 #. displayed text during action, %1$s is replaced by device name e.g. /dev/hda1
 #: libstorage/src/Container.cc:172 libstorage/src/Volume.cc:2635
@@ -146,7 +196,7 @@ msgstr "Wywoływanie dasdfmt dla dysków: %1$s..."
 msgid "Execute dasdfmt on disk %1$s"
 msgstr "Wywoływanie dasdfmt na dysku %1$s"
 
-#: libstorage/src/Disk.cc:449
+#: libstorage/src/Disk.cc:447
 #, c-format
 msgid ""
 "The partition table type on disk %1$s cannot be handled by\n"
@@ -164,7 +214,7 @@ msgstr ""
 "nie można dodawać, edytować, zmieniać rozmiaru ani usuwać ich z dysku\n"
 "przy użyciu tego narzędzia."
 
-#: libstorage/src/Disk.cc:844
+#: libstorage/src/Disk.cc:842
 #, c-format
 msgid ""
 "The partitioning on disk %1$s is not readable by\n"
@@ -185,7 +235,7 @@ msgstr ""
 "nie można dodawać, edytować, zmieniać rozmiaru ani usuwać ich z dysku\n"
 "przy użyciu tego narzędzia."
 
-#: libstorage/src/Disk.cc:861
+#: libstorage/src/Disk.cc:859
 #, c-format
 msgid ""
 "Your disk %1$s contains %2$lu partitions. The maximum number\n"
@@ -196,7 +246,7 @@ msgstr ""
 "jaką może obsłużyć sterownik tego dysku w jądrze, to %3$lu.\n"
 "Partycje o numerach powyżej %3$lu są nieosiągalne."
 
-#: libstorage/src/Disk.cc:869
+#: libstorage/src/Disk.cc:867
 msgid ""
 "openSUSE is switching to the new IDE drivers using the libata\n"
 "modules.  These do only support partitions with up to 15\n"
@@ -222,27 +272,27 @@ msgstr ""
 
 #. displayed text during action, %1$s is replaced by disk name (e.g. /dev/hda),
 #. %2$s is replaced by label name (e.g. msdos)
-#: libstorage/src/Disk.cc:1827
+#: libstorage/src/Disk.cc:1843
 #, c-format
 msgid "Setting disk label of disk %1$s to %2$s"
 msgstr "Ustawianie etykiety woluminu dla dysku %1$s na %2$s"
 
 #. displayed text before action, %1$s is replaced by disk name (e.g. /dev/hda),
 #. %2$s is replaced by label name (e.g. msdos)
-#: libstorage/src/Disk.cc:1834
+#: libstorage/src/Disk.cc:1850
 #, c-format
 msgid "Set disk label of disk %1$s to %2$s"
 msgstr "Etykieta woluminu %1$s zostanie ustawiona na %2$s"
 
 #. displayed text during action, %1$s is replaced by device name e.g. /dev/mapper/system
-#: libstorage/src/Dm.cc:352
+#: libstorage/src/Dm.cc:370
 #, c-format
 msgid "Deleting device mapper volume %1$s"
 msgstr "Usuwanie woluminu device-mappera %1$s"
 
 #. displayed text before action, %1$s is replaced by device name e.g. /dev/mapper/system
 #. %2$s is replaced by size (e.g. 623.5 MB)
-#: libstorage/src/Dm.cc:358
+#: libstorage/src/Dm.cc:376
 #, c-format
 msgid "Delete device mapper volume %1$s (%2$s)"
 msgstr "Wolumin device-mappera %1$s (%2$s) zostanie usunięty"
@@ -250,7 +300,7 @@ msgstr "Wolumin device-mappera %1$s (%2$s) zostanie usunięty"
 #. displayed text during action, %1$s is replaced by device name e.g. /dev/mapper/system
 #. %2$s is replaced by size (e.g. 623.5 MB)
 #. %3$s is replaced by file system type (e.g. reiserfs)
-#: libstorage/src/Dm.cc:372
+#: libstorage/src/Dm.cc:390
 #, c-format
 msgid "Formatting device mapper volume %1$s (%2$s) with %3$s "
 msgstr "Formatowanie woluminu device-mappera %1$s (%2$s) z systemem plików %3$s"
@@ -259,7 +309,7 @@ msgstr "Formatowanie woluminu device-mappera %1$s (%2$s) z systemem plików %3$s
 #. %2$s is replaced by size (e.g. 623.5 MB)
 #. %3$s is replaced by file system type (e.g. reiserfs)
 #. %4$s is replaced by mount point (e.g. /usr)
-#: libstorage/src/Dm.cc:385
+#: libstorage/src/Dm.cc:403
 #, c-format
 msgid "Format device mapper volume %1$s (%2$s) for %4$s with %3$s"
 msgstr "Wolumin device-mappera %1$s (%2$s) dla %4$s zostanie sformatowany z systemem plików %3$s"
@@ -268,7 +318,7 @@ msgstr "Wolumin device-mappera %1$s (%2$s) dla %4$s zostanie sformatowany z syst
 #. %2$s is replaced by size (e.g. 623.5 MB)
 #. %3$s is replaced by file system type (e.g. reiserfs)
 #. %4$s is replaced by mount point (e.g. /usr)
-#: libstorage/src/Dm.cc:395
+#: libstorage/src/Dm.cc:413
 #, c-format
 msgid "Format encrypted device mapper volume %1$s (%2$s) for %4$s with %3$s"
 msgstr "Zaszyfrowany wolumin device-mappera %1$s (%2$s) dla %4$s zostanie sformatowany z systemem plików %3$s"
@@ -276,7 +326,7 @@ msgstr "Zaszyfrowany wolumin device-mappera %1$s (%2$s) dla %4$s zostanie sforma
 #. displayed text before action, %1$s is replaced by device name e.g. /dev/mapper/system
 #. %2$s is replaced by size (e.g. 623.5 MB)
 #. %3$s is replaced by file system type (e.g. reiserfs)
-#: libstorage/src/Dm.cc:405
+#: libstorage/src/Dm.cc:423
 #, c-format
 msgid "Format device mapper volume %1$s (%2$s) with %3$s"
 msgstr "Wolumin device-mappera %1$s (%2$s) zostanie sformatowany z systemem plików %3$s"
@@ -909,74 +959,74 @@ msgid "Extend logical volume %1$s to %2$s"
 msgstr "Rozszerzanie woluminu logicznego %1$s do %2$s"
 
 #. displayed text during action, %1$s is replaced by a name (e.g. system),
-#: libstorage/src/LvmVg.cc:854
+#: libstorage/src/LvmVg.cc:855
 #, c-format
 msgid "Removing volume group %1$s"
 msgstr "Usuwanie grupy woluminów %1$s"
 
 #. displayed text before action, %1$s is replaced by a name (e.g. system),
-#: libstorage/src/LvmVg.cc:859
+#: libstorage/src/LvmVg.cc:860
 #, c-format
 msgid "Remove volume group %1$s"
 msgstr "Grupa woluminów %1$s zostanie usunięta"
 
 #. displayed text during action, %1$s is replaced by a name (e.g. system),
 #. %2$ is replaced by one or more devices (e.g /dev/sda1 /dev/sda2)
-#: libstorage/src/LvmVg.cc:872
+#: libstorage/src/LvmVg.cc:873
 #, c-format
 msgid "Creating volume group %1$s from %2$s"
 msgstr "Tworzenie grupy woluminów %1$s z %2$s"
 
 #. displayed text before action, %1$s is replaced by a name (e.g. system),
 #. %2$ is replaced by one or more devices (e.g /dev/sda1 /dev/sda2)
-#: libstorage/src/LvmVg.cc:879
+#: libstorage/src/LvmVg.cc:880
 #, c-format
 msgid "Create volume group %1$s from %2$s"
 msgstr "Tworzenie grupy woluminów %1$s z %2$s"
 
 #. displayed text during action, %1$s is replaced by a name (e.g. system),
 #. %2$s is replaced by a device name (e.g. /dev/hda1)
-#: libstorage/src/LvmVg.cc:893
+#: libstorage/src/LvmVg.cc:894
 #, c-format
 msgid "Extending volume group %1$s with %2$s"
 msgstr "Rozszerzanie grupy woluminów %1$s o %2$s"
 
 #. displayed text before action, %1$s is replaced by a name (e.g. system),
 #. %2$s is replaced by a device name (e.g. /dev/hda1)
-#: libstorage/src/LvmVg.cc:900
+#: libstorage/src/LvmVg.cc:901
 #, c-format
 msgid "Extend volume group %1$s with %2$s"
 msgstr "Grupa woluminów %1$s zostanie rozszerzona o %2$s"
 
 #. displayed text during action, %1$s is replaced by a name (e.g. system),
 #. %2$s is replaced by a device name (e.g. /dev/hda1)
-#: libstorage/src/LvmVg.cc:914
+#: libstorage/src/LvmVg.cc:915
 #, c-format
 msgid "Reducing volume group %1$s by %2$s"
 msgstr "Zmniejszanie grupy woluminów %1$s o %2$s"
 
 #. displayed text before action, %1$s is replaced by a name (e.g. system),
 #. %2$s is replaced by a device name (e.g. /dev/hda1)
-#: libstorage/src/LvmVg.cc:921
+#: libstorage/src/LvmVg.cc:922
 #, c-format
 msgid "Reduce volume group %1$s by %2$s"
 msgstr "Grupa woluminów %1$s zostanie zmniejszona o %2$s"
 
 #. displayed text during action, %1$s is replaced by device name e.g. /dev/md0
-#: libstorage/src/Md.cc:403
+#: libstorage/src/Md.cc:397
 #, c-format
 msgid "Deleting software RAID %1$s"
 msgstr "Usuwanie programowego RAID %1$s"
 
 #. displayed text before action, %1$s is replaced by device name e.g. md0
 #. %2$s is replaced by size (e.g. 623.5 MB)
-#: libstorage/src/Md.cc:409
+#: libstorage/src/Md.cc:403
 #, c-format
 msgid "Delete software RAID %1$s (%2$s)"
 msgstr "Programowy RAID %1$s (%2$s) zostanie usunięty"
 
 #. displayed text during action, %1$s is replaced by device name e.g. /dev/md0
-#: libstorage/src/Md.cc:422
+#: libstorage/src/Md.cc:416
 #, c-format
 msgid "Creating software RAID %1$s"
 msgstr "Tworzenie programowego RAID %1$s"
@@ -985,7 +1035,7 @@ msgstr "Tworzenie programowego RAID %1$s"
 #. %2$s is replaced by size (e.g. 623.5 MB)
 #. %3$s is replaced by file system type (e.g. reiserfs)
 #. %4$s is replaced by mount point (e.g. /usr)
-#: libstorage/src/Md.cc:434
+#: libstorage/src/Md.cc:428
 #, c-format
 msgid "Create software RAID %1$s (%2$s) for %4$s with %3$s"
 msgstr "Programowy RAID %1$s (%2$s) zostanie utworzony dla %4$s z systemem plików %3$s"
@@ -994,14 +1044,14 @@ msgstr "Programowy RAID %1$s (%2$s) zostanie utworzony dla %4$s z systemem plik�
 #. %2$s is replaced by size (e.g. 623.5 MB)
 #. %3$s is replaced by file system type (e.g. reiserfs)
 #. %4$s is replaced by mount point (e.g. /usr)
-#: libstorage/src/Md.cc:444
+#: libstorage/src/Md.cc:438
 #, c-format
 msgid "Create encrypted software RAID %1$s (%2$s) for %4$s with %3$s"
 msgstr "Zaszyfrowany programowy RAID %1$s (%2$s) zostanie utworzony dla %4$s z systemem plików %3$s"
 
 #. displayed text before action, %1$s is replaced by device name e.g. md0
 #. %2$s is replaced by size (e.g. 623.5 MB)
-#: libstorage/src/Md.cc:453
+#: libstorage/src/Md.cc:447
 #, c-format
 msgid "Create software RAID %1$s (%2$s)"
 msgstr "Programowy RAID %1$s (%2$s) zostanie utworzony"
@@ -1009,7 +1059,7 @@ msgstr "Programowy RAID %1$s (%2$s) zostanie utworzony"
 #. displayed text during action, %1$s is replaced by device name e.g. /dev/md0
 #. %2$s is replaced by size (e.g. 623.5 MB)
 #. %3$s is replaced by file system type (e.g. reiserfs)
-#: libstorage/src/Md.cc:469
+#: libstorage/src/Md.cc:463
 #, c-format
 msgid "Formatting software RAID %1$s (%2$s) with %3$s "
 msgstr "Formatowanie programowego RAID %1$s (%2$s) z systemem plików %3$s "
@@ -1018,7 +1068,7 @@ msgstr "Formatowanie programowego RAID %1$s (%2$s) z systemem plików %3$s "
 #. %2$s is replaced by size (e.g. 623.5 MB)
 #. %3$s is replaced by file system type (e.g. reiserfs)
 #. %4$s is replaced by mount point (e.g. /usr)
-#: libstorage/src/Md.cc:482
+#: libstorage/src/Md.cc:476
 #, c-format
 msgid "Format software RAID %1$s (%2$s) for %4$s with %3$s"
 msgstr "Programowy RAID %1$s (%2$s) dla %4$s zostanie sformatowany z systemem plików %3$s"
@@ -1027,7 +1077,7 @@ msgstr "Programowy RAID %1$s (%2$s) dla %4$s zostanie sformatowany z systemem pl
 #. %2$s is replaced by size (e.g. 623.5 MB)
 #. %3$s is replaced by file system type (e.g. reiserfs)
 #. %4$s is replaced by mount point (e.g. /usr)
-#: libstorage/src/Md.cc:492
+#: libstorage/src/Md.cc:486
 #, c-format
 msgid "Format encrypted software RAID %1$s (%2$s) for %4$s with %3$s"
 msgstr "Zaszyfrowany programowy RAID %1$s (%2$s) dla %4$s zostanie sformatowany z systemem plików %3$s"
@@ -1035,7 +1085,7 @@ msgstr "Zaszyfrowany programowy RAID %1$s (%2$s) dla %4$s zostanie sformatowany 
 #. displayed text before action, %1$s is replaced by device name e.g. /dev/md0
 #. %2$s is replaced by size (e.g. 623.5 MB)
 #. %3$s is replaced by file system type (e.g. reiserfs)
-#: libstorage/src/Md.cc:502
+#: libstorage/src/Md.cc:496
 #, c-format
 msgid "Format software RAID %1$s (%2$s) with %3$s"
 msgstr "Programowy RAID %1$s (%2$s) zostanie sformatowany z systemem plików %3$s"
@@ -1377,66 +1427,6 @@ msgstr "Zmniejszanie %1$s do %2$s"
 msgid "Extend %1$s to %2$s"
 msgstr "Rozszerzanie %1$s do %2$s"
 
-#. LVM Helptext headline
-#: lvm/src/lvm_config.ycp:82 lvm/src/lvm_config_ui.ycp:420
-msgid "LVM Configuration"
-msgstr "Konfiguracja EVMS"
-
-#. button text
-#: lvm/src/lvm_config.ycp:88
-msgid "A&pply"
-msgstr "Za&stosuj"
-
-#. popup text
-#: lvm/src/lvm_config.ycp:109
-msgid "All the settings were written and are ready to use."
-msgstr "Wszystkie ustawienia zostały zapisane i są gotowe do użycia."
-
-#. translators: command line help text for lvm_config module
-#: lvm/src/lvm_config.ycp:120
-msgid "LVM configuration"
-msgstr "Konfiguracja LVM"
-
-#. custom help text (should replace default one)
-#: lvm/src/lvm_config.ycp:122
-msgid "Command line interface for the lvm_config module is not available"
-msgstr "Interfejs linii poleceń dla modułu lvm_config nie jest dostępny"
-
-#. popup text, %1 is device name.  %2 is mount point.
-#: lvm/src/lvm_config_ui.ycp:72
-#, ycp-format
-msgid ""
-"Device %1 is already mounted at %2.  \n"
-"A mounted file system cannot be added to a volume group."
-msgstr ""
-"Urządzenie %1 już jest zamontowane na %2.\n"
-"Zamontowany system plików nie może być dodany do grupy woluminów."
-
-#. rwalter: add example VG for translators
-#. popup text, %1 is volume group, such as ???
-#: lvm/src/lvm_config_ui.ycp:337
-#, ycp-format
-msgid "No space available in the current volume group %1."
-msgstr "Brak wolnego miejsca w bieżącej grupie woluminów %1."
-
-#. Popup text
-#: lvm/src/lvm_config_ui.ycp:384 storage/src/inst_lvm_lv.ycp:229
-msgid ""
-"No device selected.\n"
-"Select the device to edit.\n"
-msgstr ""
-"Nie wybrano żadnego urządzenia.\n"
-"Proszę wybrać urządzenie do edycji.\n"
-
-#. Popup text
-#: lvm/src/lvm_config_ui.ycp:406 storage/src/inst_lvm_lv.ycp:249
-msgid ""
-"No device selected.\n"
-"Select the device to remove.\n"
-msgstr ""
-"Nie wybrano urządzenia.\n"
-"Proszę wybrać urządzenie do usunięcia.\n"
-
 #. There is a consistency check for the selection. Next is the message, that
 #. is displayed. The reason is determined within this consistency check and
 #. then the message is passed through this interface transparently
@@ -1699,7 +1689,7 @@ msgid "Delete partition &table and disk label"
 msgstr "Usuń &tablicę partycji i etykietę dysku"
 
 #: storage/src/include/custom_part_check_generated.ycp:398
-#: storage/src/inst_custom_part.ycp:2618
+#: storage/src/inst_custom_part.ycp:2234
 msgid "E&xpert.."
 msgstr "&Zaawansowane..."
 
@@ -2244,38 +2234,42 @@ msgstr ""
 "przed usunięciem partycji rozszerzonej.\n"
 
 #. heading text
-#: storage/src/include/custom_part_dialogs.ycp:51
+#: storage/src/include/custom_part_dialogs.ycp:56
 msgid "Enter your password for the encrypted file system."
 msgstr "Proszę podać hasło dla zaszyfrowanego systemu plików"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:53
+#: storage/src/include/custom_part_dialogs.ycp:58
+#: storage/src/include/ep-dialogs.ycp:221
 msgid "Don't forget what you enter here!"
 msgstr "Proszę nie zapomnieć hasła!"
 
 #. heading text, %1 is replaced by device name (e.g. /dev/hda1)
-#: storage/src/include/custom_part_dialogs.ycp:62
+#: storage/src/include/custom_part_dialogs.ycp:67
 #, ycp-format
 msgid "Password for Encrypted File System on %1"
 msgstr "Hasło dla zaszyfrowanego systemu plików na %1"
 
 #. Label: get password for user root
 #. Please use newline if label is longer than 40 characters
-#: storage/src/include/custom_part_dialogs.ycp:87
-#: storage/src/include/custom_part_dialogs.ycp:222
+#: storage/src/include/custom_part_dialogs.ycp:92
+#: storage/src/include/custom_part_dialogs.ycp:227
+#: storage/src/include/ep-dialogs.ycp:230
 msgid "&Enter a password for your file system:"
 msgstr "Proszę podać hasło dla syst&emu plików:"
 
 #. Label: get same password again for verification
 #. Please use newline if label is longer than 40 characters
-#: storage/src/include/custom_part_dialogs.ycp:96
-#: storage/src/include/custom_part_dialogs.ycp:230
+#: storage/src/include/custom_part_dialogs.ycp:101
+#: storage/src/include/custom_part_dialogs.ycp:235
+#: storage/src/include/ep-dialogs.ycp:234
 msgid "Reenter the password for &verification:"
 msgstr "Proszę podać hasło ponownie, dla &weryfikacji:"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:137
-#: storage/src/include/custom_part_dialogs.ycp:271
+#: storage/src/include/custom_part_dialogs.ycp:142
+#: storage/src/include/custom_part_dialogs.ycp:276
+#: storage/src/include/ep-dialogs.ycp:264
 msgid ""
 "The first and the second version\n"
 "of the password do not match!\n"
@@ -2285,8 +2279,9 @@ msgstr ""
 "Proszę spróbować ponownie."
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:142
-#: storage/src/include/custom_part_dialogs.ycp:276
+#: storage/src/include/custom_part_dialogs.ycp:147
+#: storage/src/include/custom_part_dialogs.ycp:281
+#: storage/src/include/ep-dialogs.ycp:270
 msgid ""
 "You did not enter a password.\n"
 "Try again.\n"
@@ -2295,8 +2290,9 @@ msgstr ""
 "Proszę spróbować ponownie.\n"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:149
-#: storage/src/include/custom_part_dialogs.ycp:287
+#: storage/src/include/custom_part_dialogs.ycp:154
+#: storage/src/include/custom_part_dialogs.ycp:292
+#: storage/src/include/ep-dialogs.ycp:278
 #, ycp-format
 msgid ""
 "The password must have at least %1 characters.\n"
@@ -2306,7 +2302,7 @@ msgstr ""
 "Proszę spróbować ponownie.\n"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:159
+#: storage/src/include/custom_part_dialogs.ycp:164
 msgid ""
 "The password may only contain the following characters:\n"
 " 0..9, a..z, A..Z, and any of \"@#* ,.;:._-+!$%&/|?{[()]}^\\<>\".\n"
@@ -2318,7 +2314,7 @@ msgstr ""
 
 #. translator comment: %1 is the device name, %2 is a directory
 #. example: "...password for device /dev/hda6 mounted on /var"
-#: storage/src/include/custom_part_dialogs.ycp:194
+#: storage/src/include/custom_part_dialogs.ycp:199
 #, ycp-format
 msgid ""
 "Enter your crypt password for\n"
@@ -2328,22 +2324,22 @@ msgstr ""
 "urządzenia %1 zamontowanego na %2.\n"
 
 #. heading text
-#: storage/src/include/custom_part_dialogs.ycp:207
+#: storage/src/include/custom_part_dialogs.ycp:212
 msgid "Enter your password for the encrypted file system"
 msgstr "Proszę podać hasło dla zaszyfrowanego systemu plików"
 
 #. Cancel button
-#: storage/src/include/custom_part_dialogs.ycp:240
+#: storage/src/include/custom_part_dialogs.ycp:245
 msgid "&Skip"
 msgstr "P&omiń"
 
 #. heading text
-#: storage/src/include/custom_part_dialogs.ycp:373
+#: storage/src/include/custom_part_dialogs.ycp:375
 msgid "File system options:"
 msgstr "Opcje systemu plików:"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:460
+#: storage/src/include/custom_part_dialogs.ycp:463
 msgid ""
 "The character '/' is no longer permitted in a volume label.\n"
 "Change your volume label so that it does not contain this character.\n"
@@ -2352,7 +2348,7 @@ msgstr ""
 "Proszę zmienić etykietę woluminu tak, aby nie zawierała tego znaku.\n"
 
 #. help text, richtext format
-#: storage/src/include/custom_part_dialogs.ycp:479
+#: storage/src/include/custom_part_dialogs.ycp:482
 msgid ""
 "<p><b>Mount in /etc/fstab By:</b>\n"
 "Normally, a file system to mount is identified in /etc/fstab\n"
@@ -2368,7 +2364,7 @@ msgstr ""
 "możliwe.\n"
 
 #. help text, richtext format
-#: storage/src/include/custom_part_dialogs.ycp:487
+#: storage/src/include/custom_part_dialogs.ycp:490
 msgid ""
 "<p><b>Volume Label:</b>\n"
 "The name entered in this field is used as the volume label. This usually makes sense only \n"
@@ -2381,32 +2377,32 @@ msgstr ""
 "W etykiecie woluminu nie można stosować znaku / ani spacji.\n"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:499
+#: storage/src/include/custom_part_dialogs.ycp:502
 msgid "Mount in /etc/fstab by"
 msgstr "Montowanie w /etc/fstab przez"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:504
+#: storage/src/include/custom_part_dialogs.ycp:507
 msgid "&Device name"
 msgstr "Nazwa urzą&dzenia"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:507
+#: storage/src/include/custom_part_dialogs.ycp:510
 msgid "Volume &label"
 msgstr "Etykieta wo&luminu"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:515
+#: storage/src/include/custom_part_dialogs.ycp:518
 msgid "Device &ID"
 msgstr "&Identyfikator urządzenia"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:518
+#: storage/src/include/custom_part_dialogs.ycp:521
 msgid "Device &Path"
 msgstr "Ś&cieżka urządzenia"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:525
+#: storage/src/include/custom_part_dialogs.ycp:528
 msgid "Volume &Label"
 msgstr "Etykieta wo&luminu"
 
@@ -2448,10 +2444,9 @@ msgid "File &system"
 msgstr "&System plików"
 
 #. button text
-#. label text
 #: storage/src/include/custom_part_dialogs.ycp:928
-#: storage/src/include/raid_ui.ycp:635
-msgid "O&ptions"
+#, fuzzy
+msgid "O&ptions..."
 msgstr "O&pcje"
 
 #. label text
@@ -2461,9 +2456,16 @@ msgstr "&Identyfikator systemu plików:"
 
 #. label text
 #. table column headings
-#. label text
+#. Column header
 #: storage/src/include/custom_part_dialogs.ycp:1008
-#: storage/src/include/lvm_ui_lib.ycp:241 storage/src/inst_evms.ycp:110
+#: storage/src/include/ep-hd-dialogs.ycp:91
+#: storage/src/include/ep-hd-dialogs.ycp:98
+#: storage/src/include/ep-loop-dialogs.ycp:26
+#: storage/src/include/ep-lvm-dialogs.ycp:314
+#: storage/src/include/ep-lvm-dialogs.ycp:321
+#: storage/src/include/ep-lvm-dialogs.ycp:338
+#: storage/src/include/lvm_ui_lib.ycp:212
+#: storage/src/modules/StorageFields.ycp:80
 msgid "Size"
 msgstr "Rozmiar"
 
@@ -2745,61 +2747,28 @@ msgstr "Pokaż &poprzednie"
 msgid "Show &Next"
 msgstr "Pokaż &następne"
 
-#. label text
-#: storage/src/include/custom_part_dialogs.ycp:1531
-msgid "free"
-msgstr "wolne"
-
-#. %1 is a disk device, example: You have selected the disk /dev/hda, but can only edit a partition like /dev/hda11, /dev/hda2,
-#: storage/src/include/custom_part_dialogs.ycp:1550
-#, ycp-format
-msgid ""
-"\n"
-" You have selected the disk %1, but you can \n"
-"  only edit a partition like %11, %12, ... \n"
-msgstr ""
-"\n"
-" Wybrano dysk %1 ale można tylko \n"
-"  edytować partycje, takie jak %11, %12, ...\n"
-
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:1582
-#, ycp-format
-msgid ""
-"CAUTION\n"
-"If you delete the partition table and disk label of\n"
-"device %1, data on this device will be lost.\n"
-"\n"
-"Really do this?\n"
-msgstr ""
-"UWAGA\n"
-"Jeśli zostanie usunięta tablica partycji i etykieta dysku, \n"
-"urządzenia %1, dane na tym urządzeniu zostaną utracone.\n"
-"\n"
-"Na pewno usunąć?\n"
-
-#. popup text
-#: storage/src/include/custom_part_dialogs.ycp:1607
+#: storage/src/include/custom_part_dialogs.ycp:1494
 msgid "No unsaved changes exist."
 msgstr "Istnieją niezapisane zmiany."
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:1615
+#: storage/src/include/custom_part_dialogs.ycp:1502
 msgid "Changes:"
 msgstr "Zmiany:"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:1625
+#: storage/src/include/custom_part_dialogs.ycp:1512
 msgid " Do you really want to execute these changes?"
 msgstr " Czy na pewno wykonać te zmiany?"
 
 #. button text
-#: storage/src/include/custom_part_dialogs.ycp:1634
+#: storage/src/include/custom_part_dialogs.ycp:1518
 msgid "&Apply"
 msgstr "Z&astosuj"
 
 #. popup text, %1 is replaced by device name
-#: storage/src/include/custom_part_dialogs.ycp:1689
+#: storage/src/include/custom_part_dialogs.ycp:1572
 #, ycp-format
 msgid ""
 "The selected device contains partitions that are currently mounted:\n"
@@ -2813,7 +2782,7 @@ msgstr ""
 "Proszę nacisnąć przycisk \"Anuluj\", chyba że dokładnie wiadomo, co się robi.\n"
 
 #. popup text, Do not translate LVM.
-#: storage/src/include/custom_part_dialogs.ycp:1713
+#: storage/src/include/custom_part_dialogs.ycp:1596
 msgid ""
 "\n"
 "The selected device contains at least one LVM partition\n"
@@ -2827,7 +2796,7 @@ msgstr ""
 "z odpowiednich grup woluminów przed usunięciem urządzenia.\n"
 
 #. popup text, Do not translate RAID.
-#: storage/src/include/custom_part_dialogs.ycp:1723
+#: storage/src/include/custom_part_dialogs.ycp:1606
 msgid ""
 "\n"
 "The selected device contains at least one partition\n"
@@ -2841,7 +2810,7 @@ msgstr ""
 "do odpowiednich systemów RAID przed usunięciem urządzenia.\n"
 
 #. popup text, Do not translate EVMS.
-#: storage/src/include/custom_part_dialogs.ycp:1733
+#: storage/src/include/custom_part_dialogs.ycp:1616
 msgid ""
 "\n"
 "The selected device contains at least one partition\n"
@@ -2854,7 +2823,7 @@ msgstr ""
 "przed usunięciem urządzenia.\n"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:1742
+#: storage/src/include/custom_part_dialogs.ycp:1625
 msgid ""
 "\n"
 "The selected device contains at least one partition\n"
@@ -3686,329 +3655,1166 @@ msgstr ""
 "Zmiana rozmiaru jest niemożliwa z powodu niespójności systemu plików. \n"
 "Należy sprawdzić system plików w systemie Windows."
 
-#. helptext EVMS partitioning. 
-#: storage/src/include/evms_lib.ycp:38
-msgid "<p>The upper part of this dialog contains the container-related functionality. Here, create, edit, and modify EVMS containers. </p>"
-msgstr "<p>W górnej części tego okna można określać funkcje związane z kontenerami. Można utworzyć, edytować i modyfikować kontenery EVMS.</p>"
+#: storage/src/include/ep-all.ycp:27
+#, fuzzy, ycp-format
+msgid "Available Storage on %1"
+msgstr "Dostępny rozmiar:"
 
-#. helptext EVMS partitioning. 
-#: storage/src/include/evms_lib.ycp:41
-msgid ""
-"<p>\n"
-"The lower part with the list contains all available EVMS devices.\n"
-"If at least one EVMS container is available, you can create new \n"
-"devices that use the available space of the current container.</p>\n"
+#: storage/src/include/ep-all.ycp:33
+msgid "<p>Help about view with all devices TODO.</p>"
 msgstr ""
-"<p>\n"
-"Dolna część zawiera listę przedstawiającą wszystkie dostępne urządzenia EVMS. \n"
-"Jeśli jest dostępny przynajmniej jeden kontener EVMS, można utworzyć \n"
-"nowe urządzenia używające przestrzeni aktualnego kontenera.</p>\n"
 
-#. error popup text
-#: storage/src/include/evms_lib.ycp:89
-msgid ""
-"The data entered is invalid.\n"
-"Insert a physical extent size from\n"
-"8KB to 512GB in powers of 2, for example, 4M or 512K.\n"
-msgstr ""
-"Wprowadzone dane są nieprawidłowe.\n"
-"Należy wprowadzić fizyczny zasięg rozmiaru od 8 KB do 512 GB \n"
-"w potęgach 2, na przykład 4 MB lub 512 KB.\n"
+#: storage/src/include/ep-dialogs.ycp:64
+msgid "Format"
+msgstr "Formatuj"
 
-#. popup header
-#: storage/src/include/evms_lib.ycp:308
-msgid "Modify Existing EVMS Container"
-msgstr "Modyfikacja istniejącego kontenera EVMS"
+#: storage/src/include/ep-dialogs.ycp:68
+#, fuzzy
+msgid "Format the partition"
+msgstr "&Partycja podstawowa"
 
-#. popup header
-#: storage/src/include/evms_lib.ycp:314
-msgid "Create EVMS Container"
-msgstr "Utwórz kontener EVMS"
+#: storage/src/include/ep-dialogs.ycp:74
+#, fuzzy
+msgid "Do not format the partition"
+msgstr "&Nie formatuj"
 
-#. popup header
-#: storage/src/include/evms_lib.ycp:319
-msgid "Modify EVMS Container"
-msgstr "Zmodyfikuj kontener EVMS"
+#: storage/src/include/ep-dialogs.ycp:79
+#, fuzzy
+msgid "Mount"
+msgstr "Montuj"
 
-#. popup description
-#: storage/src/include/evms_lib.ycp:324
-msgid ""
-"Change the settings for an EVMS container.\n"
-"Container type, PE size, and container name can only be set when creating\n"
-"the container.\n"
-msgstr ""
-"Zmiana ustawień kontenera EVMS. Typ kontenera, rozmiar PE \n"
-"i nazwa kontenera mogą być ustawione tylko podczas\n"
-"tworzenia nowego kontenera.\n"
+#: storage/src/include/ep-dialogs.ycp:83
+#, fuzzy
+msgid "Mount partition"
+msgstr "Typ partycji: "
 
-#: storage/src/include/evms_lib.ycp:338
-msgid "Container Type"
-msgstr "Typ kontenera"
-
-#. label text
-#: storage/src/include/evms_lib.ycp:340
-msgid "Linux LVM"
-msgstr "Linux LVM"
-
-#. label text
-#: storage/src/include/evms_lib.ycp:342
-msgid "Linux LVM2"
-msgstr "Linux LVM2"
-
-#: storage/src/include/evms_lib.ycp:347
-msgid "Container &Name"
-msgstr "&Nazwa kontenera"
-
-#. label text
-#: storage/src/include/evms_lib.ycp:350
-#: storage/src/include/lvm_ui_dialogs.ycp:494
-msgid "&Physical Extent Size"
-msgstr "&Fizyczny zasięg rozmiaru"
-
-#: storage/src/include/evms_lib.ycp:355
-msgid "Container Size:"
-msgstr "Rozmiar kontenera:"
-
-#. header text
 #. Column header
-#. table header text
-#: storage/src/include/evms_lib.ycp:366 storage/src/inst_custom_part.ycp:2408
-#: storage/src/inst_evms.ycp:147
-msgid "Device"
-msgstr "Urządzenie"
-
-#: storage/src/include/evms_lib.ycp:366 storage/src/inst_evms.ycp:147
-msgid " Size"
-msgstr "Rozmiar"
-
-#. header text
-#: storage/src/include/evms_lib.ycp:368
-msgid " Container"
-msgstr "Kontener"
+#: storage/src/include/ep-dialogs.ycp:87
+#: storage/src/modules/StorageFields.ycp:100
+#, fuzzy
+msgid "Mount Point"
+msgstr "Punkt &montowania"
 
 #. button text
-#: storage/src/include/evms_lib.ycp:375 storage/src/include/lvm_ui_lib.ycp:219
-msgid "&Add Volume"
-msgstr "Dod&aj wolumin"
+#: storage/src/include/ep-dialogs.ycp:90
+#, fuzzy
+msgid "Fs&tab Options..."
+msgstr "Opcje &fstab"
 
-#. button text
-#: storage/src/include/evms_lib.ycp:377 storage/src/include/lvm_ui_lib.ycp:221
-msgid "&Remove Volume"
-msgstr "&Usuń wolumin"
+#: storage/src/include/ep-dialogs.ycp:94
+#, fuzzy
+msgid "Do not mount partition"
+msgstr "Dysk do partycjonowania"
 
-#: storage/src/include/evms_lib.ycp:487
-msgid ""
-"If you remove the selected partition from the container,\n"
-"there will not be enough space for all volumes in this container.\n"
-"To delete the container completely, remove its volumes first."
+#: storage/src/include/ep-dialogs.ycp:223
+msgid "Empty password allowed."
 msgstr ""
-"Po usunięciu zaznaczonej partycji z kontenera, nie będzie \n"
-"wystarczająco dużo miejsca dla wszystkich woluminów w kontenerze. \n"
-"Aby usunąć kontener całkowicie, należy najpierw usunąć woluminy."
 
-#. error popup text
-#: storage/src/include/evms_lib.ycp:521
-msgid ""
-"The data entered is invalid.\n"
-"Insert a container names like \"system\" or \"test\".\n"
-"Do not use ;/`, in this name.\n"
+#: storage/src/include/ep-dialogs.ycp:225
+msgid "Password"
 msgstr ""
-"Wprowadzone dane są nieprawidłowe. \n"
-"Proszę wprowadzić nazwy kontenerów, takie jak \"system\" lub \"test\". \n"
-"W nazwie nie można używać ; / `,.\n"
-
-#. error popup text
-#: storage/src/include/evms_lib.ycp:533
-#, ycp-format
-msgid ""
-"The container named \"%1\" already exists.\n"
-"Choose a different name\n"
-"or cancel this dialog.\n"
-msgstr ""
-"Kontener o nazwie \"%1\" już istnieje.\n"
-"Proszę podać inną nazwę albo anulować.\n"
-
-#. error popup text
-#: storage/src/include/evms_lib.ycp:543
-msgid ""
-"The container contains no physical volume.\n"
-"Every container must consist of at least one physical volume."
-msgstr ""
-"Kontener nie zawiera fizycznych woluminów.\n"
-"Każdy kontener musi zawierać przynajmniej jeden fizyczny wolumin."
-
-#: storage/src/include/evms_lib.ycp:645
-#, ycp-format
-msgid ""
-"The container \"%1\" contains at least one volume.\n"
-"It cannot be removed. Remove all volumes of this container\n"
-"before removing the container"
-msgstr ""
-"Kontener \"%1\" zawiera przynajmniej jeden wolumin.\n"
-"Nie można go usunąć. Przed jego usunięciem należy usunąć wszystkie woluminy tego kontenera."
 
 #. popup text
-#: storage/src/include/evms_lib.ycp:652
-#, ycp-format
-msgid "Really remove container \"%1\"?"
-msgstr "Na pewno usunąć kontener \"%1\"?"
+#: storage/src/include/ep-dialogs.ycp:289
+#, fuzzy
+msgid ""
+"The password may only contain the following characters:\n"
+"0..9, a..z, A..Z, and any of \"@#* ,.;:._-+!$%&/|?{[()]}^\\<>\".\n"
+"Try again."
+msgstr ""
+"Hasło może zawierać wyłącznie następujące znaki:\n"
+" 0..9, a..z, A..Z i dowolne z \"@#* ,.;:._-+!$%&/|?{[()]}^\\<>\".\n"
+"Proszę spróbować ponownie."
 
-#. button text
-#: storage/src/include/evms_lib.ycp:671 storage/src/inst_evms.ycp:106
-msgid "EVMS &Container"
-msgstr "&Kontener EVMS"
-
-#. e.g. %1 is replaced with a size e.g.. "used 5 GB"
-#: storage/src/include/evms_lib.ycp:693
+#. FIXME: add special case for Windows part.
+#. label text %1 is replaced by a number
+#: storage/src/include/ep-dialogs.ycp:359
+#: storage/src/inst_custom_part.ycp:1372
 #, ycp-format
 msgid ""
-"used\n"
+"Space\n"
+"Used\n"
+"%1 "
+msgstr ""
+"Przestrzeń\n"
+"użyta\n"
+"%1 "
+
+#. label text %1 is replaced by a number
+#: storage/src/include/ep-dialogs.ycp:362
+#: storage/src/inst_custom_part.ycp:1376
+#, ycp-format
+msgid ""
+"Swap\n"
+"Space\n"
+"%1 "
+msgstr ""
+"Przestrzeń\n"
+"wymiany\n"
+"%1 "
+
+#. label text %1 is replaced by a number
+#: storage/src/include/ep-dialogs.ycp:364
+#: storage/src/inst_custom_part.ycp:1381
+#, ycp-format
+msgid ""
+"Space\n"
+"Free\n"
+"%1 "
+msgstr ""
+"Przestrzeń\n"
+"wolna\n"
+"%1 "
+
+#. label text, %1 is replaced by a number
+#: storage/src/include/ep-dialogs.ycp:366
+#: storage/src/inst_custom_part.ycp:1384
+#, ycp-format
+msgid ""
+"Unused\n"
+"Disk\n"
+"%1 "
+msgstr ""
+"Dysk\n"
+"nieużywany\n"
+"%1 "
+
+#. Labels for bar graph. "%1" will be replace with a numeric value.
+#: storage/src/include/ep-dialogs.ycp:371
+#, fuzzy, ycp-format
+msgid ""
+"LV\n"
+"Used\n"
 "%1"
 msgstr ""
 "wykorzystane\n"
 "%1"
 
-#. e.g. %1 is replaced with a size e.g.. "free 1 GB"
-#: storage/src/include/evms_lib.ycp:696
-#, ycp-format
+#. Labels for bar graph. "%1" will be replace with a numeric value.
+#: storage/src/include/ep-dialogs.ycp:373
+#, fuzzy, ycp-format
 msgid ""
-"free\n"
+"LV\n"
+"Free\n"
 "%1"
 msgstr ""
 "wolne\n"
 "%1"
 
-#. header for input field size of volume 
-#. header for input field size of Logical volume 
-#: storage/src/include/evms_lib.ycp:873
-#: storage/src/include/lvm_ui_dialogs.ycp:93
-#, ycp-format
-msgid "&Size: (e.g., %1 %2)"
-msgstr "&Rozmiar: (np. %1 %2)"
+#. Labels for bar graph. "%1" will be replace with a numeric value.
+#: storage/src/include/ep-dialogs.ycp:375
+#, fuzzy, ycp-format
+msgid ""
+"VG\n"
+"Free\n"
+"%1"
+msgstr ""
+"wolne\n"
+"%1"
 
-#. header for input field maximum allowd size
-#: storage/src/include/evms_lib.ycp:877
-#: storage/src/include/lvm_ui_dialogs.ycp:103
-#, ycp-format
-msgid "max = %1 "
-msgstr "maks. = %1 "
+#. Heading for dialog
+#: storage/src/include/ep-dialogs.ycp:385
+#, fuzzy, ycp-format
+msgid "Resize Partition %1"
+msgstr "Edycja partycji %1"
 
-#. popup heading 
-#: storage/src/include/evms_lib.ycp:884
-#: storage/src/include/lvm_ui_dialogs.ycp:110
-msgid "Create Logical Volume"
-msgstr "Utwórz wolumin logiczny"
-
-#. popup heading 
-#: storage/src/include/evms_lib.ycp:890 storage/src/include/evms_lib.ycp:902
-#: storage/src/include/lvm_ui_dialogs.ycp:123
-#: storage/src/include/lvm_ui_dialogs.ycp:137
-msgid "Edit Logical Volume"
-msgstr "Edytuj wolumin logiczny"
-
-#: storage/src/include/evms_lib.ycp:898
-msgid "Resize Logical Volume"
+#. Heading for dialog
+#: storage/src/include/ep-dialogs.ycp:409
+#, fuzzy, ycp-format
+msgid "Resize Logical Volume %1"
 msgstr "Zmień rozmiar woluminu logicznego"
 
-#. label text
-#: storage/src/include/evms_lib.ycp:915
-msgid "Volume &Name "
-msgstr "&Nazwa woluminu"
+#. Labels for input fields. "%1" will be replaced with the current unit (MB).
+#: storage/src/include/ep-dialogs.ycp:412
+#, fuzzy, ycp-format
+msgid "LV Free (%1)"
+msgstr "Przestrzeń wolna (%1)"
 
-#. label text
-#: storage/src/include/evms_lib.ycp:917
-#: storage/src/include/lvm_ui_dialogs.ycp:117
-msgid "(e.g. var, opt)"
-msgstr "(np. var, opt)"
+#. Labels for input fields. "%1" will be replaced with the current unit (MB).
+#: storage/src/include/ep-dialogs.ycp:414
+#, fuzzy, ycp-format
+msgid "VG Free (%1)"
+msgstr "Przestrzeń wolna (%1)"
 
-#. label text
-#: storage/src/include/evms_lib.ycp:925
-msgid "Volume Name: "
-msgstr "Nazwa woluminu: "
+#. `Slider(`id(`new_size), `opt(`notify), sformat(_("New Size (in %1)"), unit), vg_min_free,
+#. (lv_used + free - lv_min_free), lv_used )
+#: storage/src/include/ep-dialogs.ycp:426
+#: storage/src/include/ep-dialogs.ycp:433
+#, fuzzy, ycp-format
+msgid "New Size (in %1)"
+msgstr "Nowy rozmiar"
 
+#: storage/src/include/ep-dialogs.ycp:444
+#: storage/src/include/ep-dialogs.ycp:469
+#, ycp-format
+msgid "Free Space Remaining: %1 MB"
+msgstr ""
+
+#: storage/src/include/ep-dialogs.ycp:446
+#, fuzzy, ycp-format
+msgid "Minimum Partition Size: %1 MB"
+msgstr "Edycja partycji %1"
+
+#: storage/src/include/ep-dialogs.ycp:447
+#, fuzzy, ycp-format
+msgid "Maximum Partition Size: %1 MB"
+msgstr "Edycja partycji %1"
+
+#. popup text
+#: storage/src/include/ep-dialogs.ycp:505
+msgid "Rescanning disks..."
+msgstr ""
+
+#: storage/src/include/ep-dm-dialogs.ycp:26
+#, fuzzy, ycp-format
+msgid "Edit DM %1"
+msgstr "&Edytuj RAID"
+
+#: storage/src/include/ep-dm-lib.ycp:15
+msgid "No DM device selected."
+msgstr ""
+
+#: storage/src/include/ep-dm-lib.ycp:24
+#, ycp-format
+msgid ""
+"The DM %1 is in use. It cannot be\n"
+"edited. To edit %1, make sure it is not used."
+msgstr ""
+
+#: storage/src/include/ep-dm.ycp:34
+#, fuzzy
+msgid "Device Mapper (DM)"
+msgstr "Urządzenie"
+
+#: storage/src/include/ep-dm.ycp:41 storage/src/include/ep-dm.ycp:71
+msgid "<p>DM TODO</p>"
+msgstr ""
+
+#: storage/src/include/ep-dm.ycp:60
+#, fuzzy, ycp-format
+msgid "DM Device: %1"
+msgstr "Urządzenie"
+
+#: storage/src/include/ep-dm.ycp:64 storage/src/include/ep-hd.ycp:271
+#: storage/src/include/ep-hd.ycp:373 storage/src/include/ep-loop.ycp:78
+#: storage/src/include/ep-lvm.ycp:130 storage/src/include/ep-lvm.ycp:249
+#: storage/src/include/ep-raid.ycp:79
+#, fuzzy
+msgid "Edit..."
+msgstr "&Edytuj"
+
+#. radio button text
 #. button text
-#: storage/src/include/evms_lib.ycp:943
-#: storage/src/include/lvm_ui_dialogs.ycp:179
-msgid "ma&x"
-msgstr "ma&ks."
+#: storage/src/include/ep-hd-dialogs.ycp:23
+#: storage/src/inst_custom_part.ycp:1986 storage/src/inst_custom_part.ycp:1992
+#: storage/src/inst_custom_part.ycp:1998
+msgid "&Primary Partition"
+msgstr "&Partycja podstawowa"
 
+#. radio button text
 #. button text
-#: storage/src/include/evms_lib.ycp:948
-#: storage/src/include/lvm_ui_dialogs.ycp:185
-msgid "Stri&pes"
-msgstr "Wy&cinki"
+#: storage/src/include/ep-hd-dialogs.ycp:27
+#: storage/src/inst_custom_part.ycp:1994 storage/src/inst_custom_part.ycp:2002
+msgid "&Extended Partition"
+msgstr "Partycja rozsz&erzona"
 
+#. radio button text
 #. button text
-#: storage/src/include/evms_lib.ycp:952
-#: storage/src/include/lvm_ui_dialogs.ycp:189
-msgid "Stripe &Size"
-msgstr "R&ozmiar wycinka"
+#: storage/src/include/ep-hd-dialogs.ycp:31
+#: storage/src/inst_custom_part.ycp:1988 storage/src/inst_custom_part.ycp:2000
+msgid "&Logical Partition"
+msgstr "Partycja &logiczna"
 
-#. label text %1 is prelaced by e.g. 4 GB
-#: storage/src/include/evms_lib.ycp:958
-#, ycp-format
-msgid "Size %1"
-msgstr "Rozmiar %1"
+#. heading for a frame in a dialog
+#. heading in a popup dialog
+#: storage/src/include/ep-hd-dialogs.ycp:34
+#: storage/src/inst_custom_part.ycp:2011
+msgid "Partition Type"
+msgstr "Typ partycji"
 
-#. error popup text
-#: storage/src/include/evms_lib.ycp:1111
-#: storage/src/include/lvm_ui_dialogs.ycp:315
-#, no-c-format
-msgid ""
-"Check your volume name. \n"
-"Use names like \"opt\" or \"var\" ...\n"
-"Do not use ;/`',!\"%#"
+#: storage/src/include/ep-hd-dialogs.ycp:95
+#: storage/src/include/ep-lvm-dialogs.ycp:318
+#, fuzzy, ycp-format
+msgid "Maximum Size (%1)"
+msgstr "Linux - rozmiar (%1)"
+
+#: storage/src/include/ep-hd-dialogs.ycp:96
+#: storage/src/include/ep-lvm-dialogs.ycp:319
+#, fuzzy
+msgid "Manual Size"
+msgstr "Rozmiar"
+
+#: storage/src/include/ep-hd-dialogs.ycp:135
+#: storage/src/include/ep-loop-dialogs.ycp:68
+#: storage/src/include/ep-lvm-dialogs.ycp:382
+#, fuzzy
+msgid "The size entered is invalid. Enter a value like \"500MB\" or \"1GB\"."
 msgstr ""
-"Proszę sprawdzić nazwę woluminu.\n"
-"Należy używać nazw takich jak \"opt\", \"var\"...\n"
-"Nie można używać ;/`',!\"%#"
+"Wprowadzony rozmiar jest nieprawidłowy.\n"
+"Proszę podać odpowiedni rozmiar, jak np. 500 KB, 40 MB albo 1 GB.\n"
 
-#. error popup text
-#: storage/src/include/evms_lib.ycp:1125
+#: storage/src/include/ep-hd-dialogs.ycp:140
+#: storage/src/include/ep-lvm-dialogs.ycp:387
+#, fuzzy, ycp-format
+msgid "The size entered is invalid. Enter a size beteen %1 and %2."
+msgstr ""
+"Wprowadzony rozmiar jest nieprawidłowy.\n"
+"Proszę podać rozmiar od 1 MB do %1, na przykład 40 MB albo 1 GB."
+
+#: storage/src/include/ep-hd-dialogs.ycp:217
+#, fuzzy, ycp-format
+msgid "Add Partition on %1"
+msgstr "Edycja partycji %1"
+
+#. header of the dialog to edit a partition %1 is replaced by device name (e.g. /dev/hda1)
+#: storage/src/include/ep-hd-dialogs.ycp:240
+#: storage/src/inst_custom_part.ycp:2671
+#, ycp-format
+msgid "Edit Partition %1"
+msgstr "Edycja partycji %1"
+
+#: storage/src/include/ep-hd-lib.ycp:15 storage/src/include/ep-hd-lib.ycp:112
+msgid "No hard disk selected."
+msgstr ""
+
+#: storage/src/include/ep-hd-lib.ycp:37
+#, fuzzy, ycp-format
+msgid "Select new partition table type for %1."
+msgstr "Usuń &tablicę partycji i etykietę dysku"
+
+#: storage/src/include/ep-hd-lib.ycp:57
 #, ycp-format
 msgid ""
-"A volume named \"%1\" already exists\n"
-"in container \"%2\". Choose another name\n"
-"or cancel this dialog.\n"
+"Really create new partition table on %1? This will delete all data\n"
+"on %1 and all RAIDs and Volume Groups using partitions on %1."
 msgstr ""
-"Wolumin nazwany \"%1\" już istnieje w kontenerze\n"
-"\"%2\". Proszę wybrać inną nazwę albo anulować.\n"
 
-#: storage/src/include/evms_lib.ycp:1205
-msgid ""
-"A volume with the requested size \n"
-"could not be created. \n"
-msgstr ""
-"Nie można było utworzyć woluminu \n"
-"o żądanym rozmiarze. \n"
-
-#: storage/src/include/evms_lib.ycp:1209 storage/src/include/lvm_lv_lib.ycp:44
-msgid "Try reducing the stripe count of the volume."
-msgstr "Proszę spróbować zmniejszyć rozmiar wycinka dla tego woluminu."
-
-#. popup text %1 is replaced by a container name
-#: storage/src/include/evms_lib.ycp:1230
+#. TODO: give detailed reasons esp. for msdos partition table
+#. popup text , %1 is replaced by a disk name e.g. /dev/hda
+#: storage/src/include/ep-hd-lib.ycp:96 storage/src/inst_custom_part.ycp:2407
 #, ycp-format
-msgid "There is no available space in the current container %1."
-msgstr "Nie ma wolnego miejsca na dysku w bieżącym kontenerze %1."
+msgid "It is not possible to create a partition on %1."
+msgstr "Utworzenie partycji na %1 nie jest możliwe"
 
-#. popup text %1 is replaced by a container name
-#: storage/src/include/evms_lib.ycp:1322
+#: storage/src/include/ep-hd-lib.ycp:160 storage/src/include/ep-hd-lib.ycp:191
+#: storage/src/include/ep-hd-lib.ycp:221
+#, fuzzy
+msgid "No partition selected."
+msgstr "&Oparty o partycje"
+
+#: storage/src/include/ep-hd-lib.ycp:169
 #, ycp-format
 msgid ""
-"You can only delete logical volumes in a container.\n"
-"%1 is not a logical volume produced by a container.\n"
+"The partition %1 is in use. It cannot be\n"
+"edited. To edit %1, make sure it is not used."
 msgstr ""
-"W kontenerze można usuwać tylko logiczne woluminy.\n"
-"%1 nie jest logicznym woluminem wygenerowanym z kontenera.\n"
+
+#: storage/src/include/ep-hd-lib.ycp:207
+#, ycp-format
+msgid ""
+"The partition %1 is in use. It cannot be\n"
+"resized. To resize %1, make sure it is not used."
+msgstr ""
+
+#: storage/src/include/ep-hd-lib.ycp:245 storage/src/inst_custom_part.ycp:2836
+#, ycp-format
+msgid ""
+"Running dasdfmt deletes all data on the disk.\n"
+"Really execute dasdfmt on disk %1?\n"
+msgstr ""
+"Uruchomienie dasdfmt spowoduje usunięcie \n"
+"wszystkich danych na dysku.\n"
+"Naprawdę wywołać dasdfmt na dysku %1?\n"
+
+#: storage/src/include/ep-hd-lib.ycp:256 storage/src/inst_custom_part.ycp:2847
+msgid ""
+"The disk is no longer marked for dasdfmt.\n"
+"\n"
+"Partitions currently present on this disk are again\n"
+"displayed.\n"
+msgstr ""
+"Dysk nie jest już oznaczony dla dasdfmt.\n"
+"\n"
+"Partycje obecne na dysku są ponownie wyświetlone.\n"
+
+#. push button text
+#: storage/src/include/ep-hd.ycp:53
+msgid "Rescan Disks"
+msgstr ""
+
+#. push button text
+#: storage/src/include/ep-hd.ycp:58
+#, fuzzy
+msgid "Import Mount Points..."
+msgstr "Punkt &montowania"
+
+#. menu entry text
+#: storage/src/include/ep-hd.ycp:69
+msgid "Configure &iSCSI..."
+msgstr ""
+
+#. menu entry text
+#: storage/src/include/ep-hd.ycp:74
+msgid "Configure &Multipath..."
+msgstr ""
+
+#. menu entry text
+#: storage/src/include/ep-hd.ycp:79
+msgid "Configure DASD..."
+msgstr ""
+
+#. menu entry text
+#: storage/src/include/ep-hd.ycp:81
+msgid "Configure zFCP..."
+msgstr ""
+
+#. menu entry text
+#: storage/src/include/ep-hd.ycp:83
+msgid "Configure XPRAM..."
+msgstr ""
+
+#. menu button text
+#: storage/src/include/ep-hd.ycp:88
+msgid "Configure..."
+msgstr ""
+
+#: storage/src/include/ep-hd.ycp:94 storage/src/include/ep-main.ycp:164
+#, fuzzy
+msgid "Hard Disks"
+msgstr "Dysk twardy"
+
+#: storage/src/include/ep-hd.ycp:102 storage/src/include/ep-hd.ycp:209
+#: storage/src/include/ep-hd.ycp:279 storage/src/include/ep-hd.ycp:382
+msgid "<p>HD TODO</p>"
+msgstr ""
+
+#. popup text
+#: storage/src/include/ep-hd.ycp:149
+#, fuzzy
+msgid ""
+"Rescaning disks cancels all current changes.\n"
+"Really rescan disks?"
+msgstr ""
+"Ponowne odczytanie tablicy partycji anuluje wszystkie zmiany.\n"
+"Odczytać ponownie tablicę partycji?"
+
+#. popup text
+#: storage/src/include/ep-hd.ycp:155
+#, fuzzy
+msgid ""
+"Calling iSCSI configuration cancels all current changes.\n"
+"Really call iSCSI configuration?"
+msgstr ""
+"Ponowne odczytanie tablicy partycji anuluje wszystkie zmiany.\n"
+"Odczytać ponownie tablicę partycji?"
+
+#. popup text
+#: storage/src/include/ep-hd.ycp:161
+#, fuzzy
+msgid ""
+"Calling Multipath configuration cancels all current changes.\n"
+"Really call Multipath configuration?"
+msgstr ""
+"Ponowne odczytanie tablicy partycji anuluje wszystkie zmiany.\n"
+"Odczytać ponownie tablicę partycji?"
+
+#. popup text
+#: storage/src/include/ep-hd.ycp:167
+#, fuzzy
+msgid ""
+"Calling DASD configuration cancels all current changes.\n"
+"Really call DASD configuration?"
+msgstr ""
+"Ponowne odczytanie tablicy partycji anuluje wszystkie zmiany.\n"
+"Odczytać ponownie tablicę partycji?"
+
+#. popup text
+#: storage/src/include/ep-hd.ycp:173
+#, fuzzy
+msgid ""
+"Calling zFCP configuration cancels all current changes.\n"
+"Really call zFCP configuration?"
+msgstr ""
+"Ponowne odczytanie tablicy partycji anuluje wszystkie zmiany.\n"
+"Odczytać ponownie tablicę partycji?"
+
+#. popup text
+#: storage/src/include/ep-hd.ycp:179
+#, fuzzy
+msgid ""
+"Calling XPRAM configuration cancels all current changes.\n"
+"Really call XPRAM configuration?"
+msgstr ""
+"Ponowne odczytanie tablicy partycji anuluje wszystkie zmiany.\n"
+"Odczytać ponownie tablicę partycji?"
+
+#: storage/src/include/ep-hd.ycp:202
+#, fuzzy
+msgid "Smart..."
+msgstr "Początek"
+
+#: storage/src/include/ep-hd.ycp:203
+msgid "HD Parm..."
+msgstr ""
+
+#. menu entry text
+#: storage/src/include/ep-hd.ycp:253
+#, fuzzy
+msgid "Create New Partition Table"
+msgstr "Usuń tablicę partycji"
+
+#. menu entry text
+#: storage/src/include/ep-hd.ycp:261 storage/src/inst_custom_part.ycp:2198
+msgid "Execute dasd&fmt on the DASD Device"
+msgstr "Wywołaj dasd&fmt na urządzeniu DASD"
+
+#: storage/src/include/ep-hd.ycp:270 storage/src/include/ep-lvm.ycp:129
+#, fuzzy
+msgid "Add..."
+msgstr "&Dodaj"
+
+#: storage/src/include/ep-hd.ycp:272 storage/src/include/ep-hd.ycp:374
+#: storage/src/include/ep-lvm.ycp:76 storage/src/include/ep-lvm.ycp:131
+#: storage/src/include/ep-lvm.ycp:250 storage/src/include/ep-raid.ycp:80
+#, fuzzy
+msgid "Resize..."
+msgstr "Zmień &rozmiar"
+
+#: storage/src/include/ep-hd.ycp:273 storage/src/include/ep-hd.ycp:375
+#: storage/src/include/ep-loop.ycp:79 storage/src/include/ep-lvm.ycp:77
+#: storage/src/include/ep-lvm.ycp:132 storage/src/include/ep-lvm.ycp:251
+#: storage/src/include/ep-raid.ycp:81
+#, fuzzy
+msgid "Delete..."
+msgstr "&Usuń"
+
+#: storage/src/include/ep-hd.ycp:275
+#, fuzzy
+msgid "Expert..."
+msgstr "&Zaawansowane..."
+
+#: storage/src/include/ep-hd.ycp:335
+#, fuzzy, ycp-format
+msgid "Hard Disk: %1"
+msgstr "Dysk twardy"
+
+#: storage/src/include/ep-hd.ycp:337 storage/src/include/ep-lvm.ycp:213
+#: storage/src/include/ep-raid.ycp:156
+msgid "&Overview"
+msgstr ""
+
+#: storage/src/include/ep-hd.ycp:338
+#, fuzzy
+msgid "&Partitions"
+msgstr "&Partycjonowanie"
+
+#: storage/src/include/ep-hd.ycp:370
+#, fuzzy, ycp-format
+msgid "Partition: %1"
+msgstr "Partycja 1"
+
+#: storage/src/include/ep-lib.ycp:79
+#, ycp-format
+msgid "Really delete BIOS RAID %1?"
+msgstr "Na pewno usunąć BIOS RAID %1?"
+
+#. YesNo popup text %1 is replaced by a disk name e.g. /dev/hda
+#: storage/src/include/ep-lib.ycp:87
+#, ycp-format
+msgid "Really delete all partitions on %1?"
+msgstr "Na pewno usunąć wszystkie partycje z %1?"
 
 #. ///////////////////////////////////////////////////
 #. now delete partition!!
 #. YesNo popup text, %1 is replaced by a device name e.g. /dev/hda1
-#: storage/src/include/evms_lib.ycp:1328 storage/src/inst_custom_part.ycp:3205
+#: storage/src/include/ep-lib.ycp:134
 #, ycp-format
 msgid "Really delete %1?"
 msgstr "Na pewno usunąć %1?"
+
+#. YesNo popup.  %1 is path to a file
+#: storage/src/include/ep-lib.ycp:142
+#, ycp-format
+msgid ""
+"\n"
+"Should the loop file %1 also be removed?\n"
+msgstr ""
+"\n"
+"Czy plik pętli %1 ma także zostać usunięty?\n"
+
+#: storage/src/include/ep-log.ycp:21 storage/src/include/ep-main.ycp:173
+msgid "Log"
+msgstr ""
+
+#: storage/src/include/ep-log.ycp:22
+#, ycp-format
+msgid "Contents of %1:"
+msgstr ""
+
+#: storage/src/include/ep-log.ycp:23
+msgid "Update"
+msgstr ""
+
+#: storage/src/include/ep-loop-dialogs.ycp:22
+#, fuzzy
+msgid "Path Name of Loop File"
+msgstr "Ścieżk&a z nazwą pliku"
+
+#: storage/src/include/ep-loop-dialogs.ycp:23
+msgid "Browse..."
+msgstr ""
+
+#: storage/src/include/ep-loop-dialogs.ycp:25
+#, fuzzy
+msgid "Create Loop File"
+msgstr "Utwó&rz plik loop"
+
+#: storage/src/include/ep-loop-dialogs.ycp:73
+#, fuzzy, ycp-format
+msgid "The size entered is invalid. Enter a size of at least %1."
+msgstr ""
+"Wprowadzony rozmiar jest za duży.\n"
+"Proszę podać rozmiar od 1 MB do %1."
+
+#: storage/src/include/ep-loop-dialogs.ycp:114
+#, fuzzy
+msgid "Add Crypt File"
+msgstr "&Edytuj plik zaszyfrowany"
+
+#: storage/src/include/ep-loop-dialogs.ycp:137
+#, fuzzy, ycp-format
+msgid "Edit Crypt File %1"
+msgstr "&Edytuj plik zaszyfrowany"
+
+#: storage/src/include/ep-loop-lib.ycp:47
+#: storage/src/include/ep-loop-lib.ycp:78
+#, fuzzy
+msgid "No crypt file selected."
+msgstr "Zaszyfruj syst&em plików"
+
+#: storage/src/include/ep-loop-lib.ycp:56
+#, ycp-format
+msgid ""
+"The Crypt File %1 is in use. It cannot be\n"
+"edited. To edit %1, make sure it is not used."
+msgstr ""
+
+#: storage/src/include/ep-loop.ycp:34 storage/src/include/ep-main.ycp:167
+#, fuzzy
+msgid "Crypt Files"
+msgstr "Plik zasz&yfrowany..."
+
+#: storage/src/include/ep-loop.ycp:38
+#, fuzzy
+msgid "Add Crypt File..."
+msgstr "Plik zasz&yfrowany..."
+
+#: storage/src/include/ep-loop.ycp:45 storage/src/include/ep-loop.ycp:85
+msgid "<p>Crypt Files TODO</p>"
+msgstr ""
+
+#: storage/src/include/ep-loop.ycp:74
+#, fuzzy, ycp-format
+msgid "Crypt File: %1"
+msgstr "Plik zasz&yfrowany..."
+
+#. error popup text
+#: storage/src/include/ep-lvm-dialogs.ycp:16
+#, fuzzy
+msgid "Enter a name for the volume group."
+msgstr "Na pewno usunąć grupę woluminów \"%1\"?"
+
+#. error popup text
+#: storage/src/include/ep-lvm-dialogs.ycp:23
+msgid "The name for the volume group is longer than 128 characters."
+msgstr ""
+
+#. error popup text
+#: storage/src/include/ep-lvm-dialogs.ycp:30
+msgid "The name for the volume group must not start with a \"-\"."
+msgstr ""
+
+#. error popup text
+#: storage/src/include/ep-lvm-dialogs.ycp:39
+msgid ""
+"The name for the volume group contains illegal characters. Allowed\n"
+"are alphanumeric characters, \".\", \"_\", \"-\" and \"+\"."
+msgstr ""
+
+#. error popup text
+#: storage/src/include/ep-lvm-dialogs.ycp:53
+#, fuzzy, ycp-format
+msgid "The volume group \"%1\" already exists."
+msgstr "Grupa woluminów %1$s zostanie zmniejszona o %2$s"
+
+#. error popup text
+#: storage/src/include/ep-lvm-dialogs.ycp:60
+#: storage/src/include/lvm_ui_dialogs.ycp:556
+#, ycp-format
+msgid ""
+"The volume group name \"%1\" conflicts\n"
+"with another entry in the /dev directory.\n"
+msgstr ""
+"Nazwa grupy woluminów \"%1\" koliduje\n"
+"z inną pozycją w katalogu /dev.\n"
+
+#: storage/src/include/ep-lvm-dialogs.ycp:73
+#, fuzzy
+msgid ""
+"The data entered is invalid. Insert a physical extent size larger than 1kB\n"
+"in powers of 2, for example, \"512kB\" or \"4MB\""
+msgstr ""
+"Wprowadzone dane są nieprawidłowe.\n"
+"Proszę podać fizyczny zakres rozmiaru od 8 KB do 512 MB,\n"
+"w potęgach 2, na przykład \"4 MB\" lub \"512 KB\".\n"
+
+#: storage/src/include/ep-lvm-dialogs.ycp:88
+#, fuzzy, ycp-format
+msgid "Select at least one device."
+msgstr "Proszę wybrać pozycję urządzenia pętli."
+
+#. error popup text
+#: storage/src/include/ep-lvm-dialogs.ycp:103
+#, fuzzy
+msgid "Enter a name for the logical volume."
+msgstr "Usunąć wolumin logiczny %1?"
+
+#. error popup text
+#: storage/src/include/ep-lvm-dialogs.ycp:110
+msgid "The name for the logical volume is longer than 128 characters."
+msgstr ""
+
+#. error popup text
+#: storage/src/include/ep-lvm-dialogs.ycp:119
+msgid ""
+"The name for the logical volume contains illegal characters. Allowed\n"
+"are alphanumeric characters, \".\", \"_\", \"-\" and \"+\"."
+msgstr ""
+
+#. error popup text
+#: storage/src/include/ep-lvm-dialogs.ycp:133
+#, fuzzy, ycp-format
+msgid ""
+"A logical volume named \"%1\" already exists\n"
+"in volume group \"%2\"."
+msgstr ""
+"Logiczny wolumin nazwany \"%1\" już istnieje w grupie\n"
+"woluminów \"%2\". Proszę wybrać inną nazwę albo anulować.\n"
+
+#. label text
+#: storage/src/include/ep-lvm-dialogs.ycp:166
+#: storage/src/include/lvm_ui_dialogs.ycp:494
+msgid "&Physical Extent Size"
+msgstr "&Fizyczny zasięg rozmiaru"
+
+#: storage/src/include/ep-lvm-dialogs.ycp:169
+#: storage/src/include/ep-lvm-dialogs.ycp:238
+#, fuzzy
+msgid "Available Physical Volumes:"
+msgstr "Woluminy fizyczne"
+
+#: storage/src/include/ep-lvm-dialogs.ycp:170
+#: storage/src/include/ep-lvm-dialogs.ycp:239
+#, fuzzy
+msgid "Selected Physical Volumes:"
+msgstr "Woluminy fizyczne"
+
+#: storage/src/include/ep-lvm-dialogs.ycp:292
+#, fuzzy
+msgid "Add Volume Group"
+msgstr "Grupa woluminów"
+
+#: storage/src/include/ep-lvm-dialogs.ycp:337
+msgid "Number"
+msgstr ""
+
+#: storage/src/include/ep-lvm-dialogs.ycp:434
+#, fuzzy, ycp-format
+msgid "Resize Volume Group %1"
+msgstr "Grupa woluminów"
+
+#: storage/src/include/ep-lvm-dialogs.ycp:511
+#, fuzzy, ycp-format
+msgid "Add Logical Volume on %1"
+msgstr "Edytuj wolumin logiczny"
+
+#: storage/src/include/ep-lvm-dialogs.ycp:534
+#, fuzzy, ycp-format
+msgid "Edit Logical Volume %1"
+msgstr "Edytuj wolumin logiczny"
+
+#: storage/src/include/ep-lvm-lib.ycp:47
+msgid ""
+"There are not enough suitable unused devices to create a volume group.\n"
+"\n"
+"To use LVM, at least one unused partition of type 0x8e (or 0x83) or one unused\n"
+"RAID device is required. Change your partition table accordingly."
+msgstr ""
+
+#: storage/src/include/ep-lvm-lib.ycp:80
+#: storage/src/include/ep-lvm-lib.ycp:120
+#, fuzzy
+msgid "No volume group selected."
+msgstr "Grupa woluminów %1$s zostanie usunięta"
+
+#: storage/src/include/ep-lvm-lib.ycp:106
+msgid "Failed to remove some physical devices. TODO"
+msgstr ""
+
+#. Message popup
+#: storage/src/include/ep-lvm-lib.ycp:132
+#, fuzzy, ycp-format
+msgid ""
+"The volume group \"%1\" contains at least one logical\n"
+"volume.  It cannot be removed. Remove all logical volumes then\n"
+"remove the volume group.\n"
+msgstr ""
+"Grupa woluminów \"%1\" zawiera przynajmniej jeden wolumin \n"
+"logiczny. Nie można jej usunąć. Proszę usunąć najpierw \n"
+"wszystkie woluminy logiczne, a następnie grupę.\n"
+
+#. popup text
+#: storage/src/include/ep-lvm-lib.ycp:140
+#, fuzzy, ycp-format
+msgid "Really delete the volume group \"%1\"?"
+msgstr "Na pewno usunąć grupę woluminów \"%1\"?"
+
+#: storage/src/include/ep-lvm-lib.ycp:156
+#: storage/src/include/ep-lvm-lib.ycp:194
+#: storage/src/include/ep-lvm-lib.ycp:218
+#: storage/src/include/ep-lvm-lib.ycp:233
+#, fuzzy
+msgid "No logical volume selected."
+msgstr "Woluminy logiczne"
+
+#: storage/src/include/ep-lvm-lib.ycp:169
+#, fuzzy, ycp-format
+msgid "No free space left in the volume group \"%1\"."
+msgstr "Brak wolnego miejsca w bieżącej grupie woluminów %1."
+
+#: storage/src/include/ep-lvm.ycp:34 storage/src/include/ep-main.ycp:165
+#, fuzzy
+msgid "Volume Management"
+msgstr "&Nazwa woluminu"
+
+#: storage/src/include/ep-lvm.ycp:38
+#, fuzzy
+msgid "Add Volume Group..."
+msgstr "Grupa woluminów"
+
+#: storage/src/include/ep-lvm.ycp:45 storage/src/include/ep-lvm.ycp:83
+#: storage/src/include/ep-lvm.ycp:138 storage/src/include/ep-lvm.ycp:194
+#: storage/src/include/ep-lvm.ycp:258
+msgid "<p>LVM TODO</p>"
+msgstr ""
+
+#: storage/src/include/ep-lvm.ycp:211
+#, fuzzy, ycp-format
+msgid "Volume Group: %1"
+msgstr "Grupa woluminów"
+
+#: storage/src/include/ep-lvm.ycp:214
+#, fuzzy
+msgid "&Logical Volumes"
+msgstr "Woluminy logiczne"
+
+#: storage/src/include/ep-lvm.ycp:215
+#, fuzzy
+msgid "&Physical Volumes"
+msgstr "Woluminy fizyczne"
+
+#: storage/src/include/ep-lvm.ycp:246
+#, fuzzy, ycp-format
+msgid "Logical Volume: %1"
+msgstr "Woluminy logiczne"
+
+#: storage/src/include/ep-main.ycp:166 storage/src/include/ep-raid.ycp:34
+#, fuzzy
+msgid "RAID"
+msgstr "R&AID:"
+
+#: storage/src/include/ep-main.ycp:168
+#, fuzzy
+msgid "Device Mapper"
+msgstr "Nazwa urzą&dzenia"
+
+#: storage/src/include/ep-main.ycp:169
+#, fuzzy
+msgid "NFS"
+msgstr "N&FS"
+
+#: storage/src/include/ep-main.ycp:170 storage/src/include/ep-unused.ycp:50
+#, fuzzy
+msgid "Unused Devices"
+msgstr "Nieużywany dysk (%1)"
+
+#: storage/src/include/ep-main.ycp:172 storage/src/include/ep-settings.ycp:41
+#, fuzzy
+msgid "Settings"
+msgstr "Ustawienia RAID"
+
+#: storage/src/include/ep-main.ycp:233
+msgid "System View"
+msgstr ""
+
+#. popup text %1 will be replaces with button text
+#: storage/src/include/ep-main.ycp:261 storage/src/inst_custom_part.ycp:2949
+#, ycp-format
+msgid ""
+"You have changed the partitioning.\n"
+"These changes are lost if you exit the main dialog with %1.\n"
+"Really quit the main dialog?\n"
+msgstr ""
+"Zmieniono partycjonowanie.\n"
+"Zmiany te zostaną utracone, jeśli główne okno zostanie zamknięte z %1.\n"
+"Kontynuować?\n"
+
+#: storage/src/include/ep-nfs.ycp:29
+msgid "Network File System (NFS)"
+msgstr ""
+
+#: storage/src/include/ep-nfs.ycp:33
+#, fuzzy
+msgid "Add NFS Path..."
+msgstr "Dodaj nową ścieżkę NFS"
+
+#: storage/src/include/ep-nfs.ycp:40 storage/src/include/ep-nfs.ycp:80
+msgid "<p>NFS TODO</p>"
+msgstr ""
+
+#: storage/src/include/ep-nfs.ycp:68
+#, ycp-format
+msgid "NFS Path: %1"
+msgstr ""
+
+#: storage/src/include/ep-raid-dialogs.ycp:27
+#, ycp-format
+msgid "For %1, select at least %2 device."
+msgid_plural "For %1, select at least %2 devices."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#. Column header
+#: storage/src/include/ep-raid-dialogs.ycp:69
+#: storage/src/modules/StorageFields.ycp:175
+#, fuzzy
+msgid "RAID Type"
+msgstr "T&yp RAID"
+
+#. Translators, 'Striping' is a technical term here. Translate only if
+#. you are sure!! If in doubt, leave it in English.
+#. Translators, 'Striping' is a technical term here.  Translate only if 
+#. you are sure!! If in doubt, leave it in English.
+#: storage/src/include/ep-raid-dialogs.ycp:74
+#: storage/src/include/raid_ui.ycp:125
+msgid "RAID &0  (Striping)"
+msgstr "RAID &0  (striping)"
+
+#. Translators, 'Mirroring' is a technical term here. Translate only if
+#. you are sure!! If in doubt, leave it in English.
+#. Translators, 'Mirroring' is a technical term here. Translate only if 
+#. you are sure!! If in doubt, leave it in English.
+#: storage/src/include/ep-raid-dialogs.ycp:78
+#: storage/src/include/raid_ui.ycp:128
+msgid "RAID &1  (Mirroring)"
+msgstr "RAID &1  (mirroring)"
+
+#. Translators, 'Redundant Striping' is a technical term here. Translate
+#. only if you are sure!! If in doubt, leave it in English.
+#. Translators, 'Redundant Striping' is a technical term here. Translate 
+#. only if you are sure!! If in doubt, leave it in English.
+#: storage/src/include/ep-raid-dialogs.ycp:82
+#: storage/src/include/raid_ui.ycp:131
+msgid "RAID &5  (Redundant Striping)"
+msgstr "RAID &5  (nadmiarowy striping)"
+
+#: storage/src/include/ep-raid-dialogs.ycp:89
+#: storage/src/include/ep-raid-dialogs.ycp:220
+#, fuzzy
+msgid "Available Devices:"
+msgstr "Dostępny rozmiar:"
+
+#: storage/src/include/ep-raid-dialogs.ycp:90
+#: storage/src/include/ep-raid-dialogs.ycp:221
+msgid "Selected Devices:"
+msgstr ""
+
+#. Column header
+#: storage/src/include/ep-raid-dialogs.ycp:152
+#: storage/src/modules/StorageFields.ycp:180
+#, fuzzy
+msgid "Chunk Size"
+msgstr "Rozm&iar fragmentu w KB"
+
+#: storage/src/include/ep-raid-dialogs.ycp:158
+#, fuzzy
+msgid "Parity &Algorithm"
+msgstr "&Algorytm parzystości (tylko dla RAID 5)"
+
+#: storage/src/include/ep-raid-dialogs.ycp:166
+#, fuzzy
+msgid "RAID Options"
+msgstr "Ustawienia RAID"
+
+#: storage/src/include/ep-raid-dialogs.ycp:279
+#, fuzzy, ycp-format
+msgid "Add RAID %1"
+msgstr "&Dodaj RAID"
+
+#: storage/src/include/ep-raid-dialogs.ycp:297
+#, fuzzy, ycp-format
+msgid "Resize RAID %1"
+msgstr "&Usuń RAID"
+
+#: storage/src/include/ep-raid-dialogs.ycp:320
+#, fuzzy, ycp-format
+msgid "Edit RAID %1"
+msgstr "&Edytuj RAID"
+
+#: storage/src/include/ep-raid-lib.ycp:47
+msgid "There are not enough suitable unused devices to create a RAID."
+msgstr ""
+
+#: storage/src/include/ep-raid-lib.ycp:92
+#: storage/src/include/ep-raid-lib.ycp:123
+#: storage/src/include/ep-raid-lib.ycp:176
+msgid "No RAID selected."
+msgstr ""
+
+#: storage/src/include/ep-raid-lib.ycp:101
+#, ycp-format
+msgid ""
+"The RAID %1 is in use. It cannot be\n"
+"edited. To edit %1, make sure it is not used."
+msgstr ""
+
+#: storage/src/include/ep-raid-lib.ycp:132
+#, fuzzy, ycp-format
+msgid ""
+"The RAID %1 is already created on disk. It cannot be\n"
+"resized. To resize %1, remove it and create it again."
+msgstr ""
+"System RAID, który ma być zmieniony (%1), już istnieje\n"
+"na dysku. Nie można go zmienić. W celu wprowadzenia \n"
+"zmian w %1, należy go usunąć i utworzyć ponownie.\n"
+
+#: storage/src/include/ep-raid-lib.ycp:139
+#, ycp-format
+msgid ""
+"The RAID %1 is in use. It cannot be\n"
+"resized. To resize %1, make sure it is not used."
+msgstr ""
+
+#: storage/src/include/ep-raid-lib.ycp:162
+msgid "Failed to remove some devices. TODO"
+msgstr ""
+
+#: storage/src/include/ep-raid.ycp:38
+#, fuzzy
+msgid "Add RAID..."
+msgstr "&Dodaj RAID"
+
+#: storage/src/include/ep-raid.ycp:45 storage/src/include/ep-raid.ycp:87
+#: storage/src/include/ep-raid.ycp:138
+msgid "<p>RAID TODO</p>"
+msgstr ""
+
+#: storage/src/include/ep-raid.ycp:154
+#, fuzzy, ycp-format
+msgid "RAID: %1"
+msgstr "R&AID:"
+
+#: storage/src/include/ep-raid.ycp:157
+#, fuzzy
+msgid "&Used Devices"
+msgstr "Urządzenie raid"
+
+#. Column header
+#: storage/src/include/ep-settings.ycp:13
+#: storage/src/modules/StorageFields.ycp:135
+msgid "Label"
+msgstr "Etykieta"
+
+#. Column header
+#: storage/src/include/ep-settings.ycp:14
+#: storage/src/include/ep-settings.ycp:47
+#: storage/src/modules/StorageFields.ycp:130
+#, fuzzy
+msgid "UUID"
+msgstr "ID"
+
+#: storage/src/include/ep-settings.ycp:15
+#, fuzzy
+msgid "Mount by"
+msgstr "Zamontowane wg"
+
+#: storage/src/include/ep-settings.ycp:16
+#, fuzzy
+msgid "Used by"
+msgstr "Użyte przez"
+
+#. Column header
+#: storage/src/include/ep-settings.ycp:17
+#: storage/src/modules/StorageFields.ycp:150
+msgid "BIOS ID"
+msgstr ""
+
+#: storage/src/include/ep-settings.ycp:18
+#, fuzzy
+msgid "Cylinder information"
+msgstr "Odczytywanie informacji o dyskach..."
+
+#: storage/src/include/ep-settings.ycp:19
+msgid "Fibre Channel information"
+msgstr ""
+
+#: storage/src/include/ep-settings.ycp:44
+#, fuzzy
+msgid "Default Mount by"
+msgstr "Zamontowane"
+
+#: storage/src/include/ep-settings.ycp:45
+#: storage/src/include/ep-settings.ycp:60
+#, fuzzy
+msgid "Device Name"
+msgstr "Nazwa urzą&dzenia"
+
+#: storage/src/include/ep-settings.ycp:46
+#, fuzzy
+msgid "Volume Label"
+msgstr "Etykieta wo&luminu"
+
+#. Column header
+#: storage/src/include/ep-settings.ycp:48
+#: storage/src/include/ep-settings.ycp:61
+#: storage/src/modules/StorageFields.ycp:145
+msgid "Device ID"
+msgstr "Identyfikator urządzenia"
+
+#. Column header
+#: storage/src/include/ep-settings.ycp:49
+#: storage/src/include/ep-settings.ycp:62
+#: storage/src/modules/StorageFields.ycp:140
+msgid "Device Path"
+msgstr "Ścieżka urządzenia"
+
+#: storage/src/include/ep-settings.ycp:52
+#, fuzzy
+msgid "Default Filesystem"
+msgstr "&System plików"
+
+#: storage/src/include/ep-settings.ycp:59
+msgid "Show Storage Devices by"
+msgstr ""
+
+#: storage/src/include/ep-settings.ycp:68
+msgid "Visible Information On Storage Devices"
+msgstr ""
+
+#: storage/src/include/ep-unused.ycp:56
+msgid "<p>Unused TODO</p>"
+msgstr ""
 
 #. help text richtext format
 #. %1 is replaced by description text for file pathname
@@ -4140,6 +4946,10 @@ msgstr ""
 "Nie można było utworzyć logicznego woluminu \n"
 "o żądanym rozmiarze.\n"
 
+#: storage/src/include/lvm_lv_lib.ycp:44
+msgid "Try reducing the stripe count of the volume."
+msgstr "Proszę spróbować zmniejszyć rozmiar wycinka dla tego woluminu."
+
 #. message popup
 #: storage/src/include/lvm_pv_lib.ycp:72
 msgid ""
@@ -4186,7 +4996,7 @@ msgstr ""
 "Nie należy on do grupy woluminów.\n"
 
 #. message popup
-#: storage/src/include/lvm_pv_lib.ycp:309
+#: storage/src/include/lvm_pv_lib.ycp:253
 msgid ""
 "You cannot remove the last PV from a volume group.\n"
 "Delete the volume group completely instead.\n"
@@ -4194,23 +5004,38 @@ msgstr ""
 "Nie można usunąć ostatniego PV z grupy woluminów.\n"
 "Zamiast tego należy całkowicie usunąć grupę woluminów.\n"
 
-#. Translators: the text 'do not format' must match the label in the corresponding popup!
-#: storage/src/include/lvm_pv_lib.ycp:326
-msgid ""
-"To use LVM, at least one partition of type 0x8e (or 0x83)\n"
-"is required. Change your partition table accordingly.\n"
-"In most cases, this can be done in the following way:\n"
-"click 'Create', select 'Do not format', and set the File System ID to 0x8e.\n"
-msgstr ""
-"Aby użyć LVM, wymagana jest conajmniej jedna partycja typu 0x8E \n"
-"(lub 0x83). Proszę zmienić odpowiednio tablicę partycji. W większości \n"
-"przypadków można to zrobić w następujący sposób: należy nacisnąć przycisk\n"
-"'Utwórz', wybrać 'Nie formatuj' i ustawić identyfikator partycji na 0x8E.\n"
+#. header for input field size of Logical volume 
+#: storage/src/include/lvm_ui_dialogs.ycp:93
+#, ycp-format
+msgid "&Size: (e.g., %1 %2)"
+msgstr "&Rozmiar: (np. %1 %2)"
+
+#. header for input field maximum allowd size
+#: storage/src/include/lvm_ui_dialogs.ycp:103
+#, ycp-format
+msgid "max = %1 "
+msgstr "maks. = %1 "
+
+#. popup heading 
+#: storage/src/include/lvm_ui_dialogs.ycp:110
+msgid "Create Logical Volume"
+msgstr "Utwórz wolumin logiczny"
 
 #. label text
 #: storage/src/include/lvm_ui_dialogs.ycp:114
 msgid "Logical volume &name "
 msgstr "&Nazwa woluminu logicznego"
+
+#. label text
+#: storage/src/include/lvm_ui_dialogs.ycp:117
+msgid "(e.g. var, opt)"
+msgstr "(np. var, opt)"
+
+#. popup heading 
+#: storage/src/include/lvm_ui_dialogs.ycp:123
+#: storage/src/include/lvm_ui_dialogs.ycp:137
+msgid "Edit Logical Volume"
+msgstr "Edytuj wolumin logiczny"
 
 #. label text
 #: storage/src/include/lvm_ui_dialogs.ycp:129
@@ -4222,6 +5047,33 @@ msgstr "Nazwa woluminu logicznego: "
 #: storage/src/include/lvm_ui_dialogs.ycp:152
 msgid "INTERNAL ERROR"
 msgstr "BŁĄD WEWNĘTRZNY"
+
+#. button text
+#: storage/src/include/lvm_ui_dialogs.ycp:179
+msgid "ma&x"
+msgstr "ma&ks."
+
+#. button text
+#: storage/src/include/lvm_ui_dialogs.ycp:185
+msgid "Stri&pes"
+msgstr "Wy&cinki"
+
+#. button text
+#: storage/src/include/lvm_ui_dialogs.ycp:189
+msgid "Stripe &Size"
+msgstr "R&ozmiar wycinka"
+
+#. error popup text
+#: storage/src/include/lvm_ui_dialogs.ycp:315
+#, no-c-format
+msgid ""
+"Check your volume name. \n"
+"Use names like \"opt\" or \"var\" ...\n"
+"Do not use ;/`',!\"%#"
+msgstr ""
+"Proszę sprawdzić nazwę woluminu.\n"
+"Należy używać nazw takich jak \"opt\", \"var\"...\n"
+"Nie można używać ;/`',!\"%#"
 
 #. error popup text
 #: storage/src/include/lvm_ui_dialogs.ycp:328
@@ -4322,18 +5174,8 @@ msgstr ""
 "Grupa woluminów \"%1\" już istnieje.\n"
 "Proszę wybrać inną nazwę albo anulować.\n"
 
-#. error popup text
-#: storage/src/include/lvm_ui_dialogs.ycp:556
-#, ycp-format
-msgid ""
-"The volume group name \"%1\" conflicts\n"
-"with another entry in the /dev directory.\n"
-msgstr ""
-"Nazwa grupy woluminów \"%1\" koliduje\n"
-"z inną pozycją w katalogu /dev.\n"
-
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:51
+#: storage/src/include/lvm_ui_lib.ycp:50
 msgid ""
 "<p>Here, create the logical \n"
 "volumes used to store your data.</p>\n"
@@ -4342,7 +5184,7 @@ msgstr ""
 "używane do przechowywania danych.</p>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:56
+#: storage/src/include/lvm_ui_lib.ycp:55
 msgid ""
 "<p>\n"
 "Logical volumes are\n"
@@ -4354,7 +5196,7 @@ msgstr ""
 "Woluminy logiczne są użyteczne prawie wszędzie tam, gdzie można użyć normalnych <b>partycji dyskowych</b>. Można utworzyć systemy plików na woluminach logicznych i ich używać, na przykład jako przestrzeni wymiany albo niesformatowanych partycji dla baz danych.</p>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:64
+#: storage/src/include/lvm_ui_lib.ycp:63
 msgid ""
 "<p>\n"
 "If there is still unallocated\n"
@@ -4369,7 +5211,7 @@ msgstr ""
 "gdy będzie on <b>zamontowany</b> i <b>w użyciu</b>.</p>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:72
+#: storage/src/include/lvm_ui_lib.ycp:71
 msgid ""
 "<p>\n"
 "The logical volumes need to be large enough\n"
@@ -4386,12 +5228,12 @@ msgstr ""
 "</p>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:94
+#: storage/src/include/lvm_ui_lib.ycp:93
 msgid "<p><b>Add partitions</b> (called physical volumes) to your volume group.</p>"
 msgstr "<p><b>Dodaj partycje</b> (nazywane też fizycznymi woluminami) do grupy woluminów.</p>"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:97
+#: storage/src/include/lvm_ui_lib.ycp:96
 msgid ""
 "<p>\n"
 "The volume group forms the <b>storage pool</b> from which your logical volumes,\n"
@@ -4401,7 +5243,7 @@ msgstr ""
 "Grupa woluminów tworzy <b>obszar przechowywania</b>, z którego alokowane są woluminy logiczne, takie jak partycje wirtualne.</p>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:103
+#: storage/src/include/lvm_ui_lib.ycp:102
 msgid ""
 "<p>\n"
 "Under normal circumstances, there is no need to have more than one volume \n"
@@ -4416,7 +5258,7 @@ msgstr ""
 "partycję, która należy do tej grupy woluminów.</p>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:111
+#: storage/src/include/lvm_ui_lib.ycp:110
 msgid ""
 "<p>\n"
 "Each physical volume belongs <b>to exactly one</b> volume group. Assign all\n"
@@ -4427,7 +5269,7 @@ msgstr ""
 "Należy przydzielić wszystkie partycje do użycia w grupach woluminów Linux LVM.</p>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:117
+#: storage/src/include/lvm_ui_lib.ycp:116
 msgid ""
 "<p>\n"
 "Additionally, it is possible to remove volume groups \n"
@@ -4437,7 +5279,7 @@ msgstr ""
 "Dodatkowo, można usunąć grupy woluminów, jeśli nie zawierają one żadnych woluminów logicznych.</p>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:136
+#: storage/src/include/lvm_ui_lib.ycp:135
 msgid ""
 "<p>With this tool, manage or create logical volumes.\n"
 "</p>\n"
@@ -4446,7 +5288,7 @@ msgstr ""
 "</p>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:141
+#: storage/src/include/lvm_ui_lib.ycp:140
 msgid ""
 "<ol><li>\n"
 "First, create a volume group, if you have not done this already.\n"
@@ -4457,7 +5299,7 @@ msgstr ""
 "</li>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:147
+#: storage/src/include/lvm_ui_lib.ycp:146
 msgid ""
 "<li>\n"
 "In the next step, add <b>physical volumes</b> (see paragraph below).\n"
@@ -4468,7 +5310,7 @@ msgstr ""
 "</li>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:153
+#: storage/src/include/lvm_ui_lib.ycp:152
 msgid ""
 "<li>\n"
 "In the last step, create <b>logical volumes</b> (see paragraph below).\n"
@@ -4479,7 +5321,7 @@ msgstr ""
 "</li></ol><br>\n"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:159
+#: storage/src/include/lvm_ui_lib.ycp:158
 msgid ""
 "<p>\n"
 "<b>Physical Volumes:</b></p>"
@@ -4488,7 +5330,7 @@ msgstr ""
 "<b>Woluminy fizyczne:</b></p>"
 
 #. helptext LVM partitioning. 
-#: storage/src/include/lvm_ui_lib.ycp:163
+#: storage/src/include/lvm_ui_lib.ycp:162
 msgid ""
 "<p>\n"
 "<b>Logical Volumes:</b></p>"
@@ -4496,139 +5338,115 @@ msgstr ""
 "<p>\n"
 "<b>Woluminy logiczne:</b></p>"
 
-#. label text
-#: storage/src/include/lvm_ui_lib.ycp:187
-msgid "Available size:"
-msgstr "Dostępny rozmiar:"
-
-#. label text
-#: storage/src/include/lvm_ui_lib.ycp:198
-#: storage/src/include/lvm_ui_lib.ycp:414
-msgid "Available Size:"
-msgstr "Dostępny rozmiar:"
-
 #. header text
-#: storage/src/include/lvm_ui_lib.ycp:215
+#: storage/src/include/lvm_ui_lib.ycp:186
 msgid "  Device  "
 msgstr "Urządzenie"
 
-#: storage/src/include/lvm_ui_lib.ycp:215
+#: storage/src/include/lvm_ui_lib.ycp:186
 msgid "  Size  "
 msgstr "Rozmiar"
 
-#: storage/src/include/lvm_ui_lib.ycp:215
+#: storage/src/include/lvm_ui_lib.ycp:186
 msgid "  Type  "
 msgstr "Typ"
 
-#: storage/src/include/lvm_ui_lib.ycp:215
+#: storage/src/include/lvm_ui_lib.ycp:186
 msgid " Volume Group "
 msgstr "Grupa woluminów"
 
+#. button text
+#: storage/src/include/lvm_ui_lib.ycp:190
+msgid "&Add Volume"
+msgstr "Dod&aj wolumin"
+
+#. button text
+#: storage/src/include/lvm_ui_lib.ycp:192
+msgid "&Remove Volume"
+msgstr "&Usuń wolumin"
+
 #. table column headings
-#: storage/src/include/lvm_ui_lib.ycp:237
+#: storage/src/include/lvm_ui_lib.ycp:208
 msgid "Device  "
 msgstr "Urządzenie"
 
-#: storage/src/include/lvm_ui_lib.ycp:237
+#: storage/src/include/lvm_ui_lib.ycp:208
 msgid " Mount   "
 msgstr "Montuj"
 
 #. table column heading Vol.Grp = Volume Group
-#: storage/src/include/lvm_ui_lib.ycp:239
+#: storage/src/include/lvm_ui_lib.ycp:210
 msgid " Vol. Grp."
 msgstr "Grupa wol."
 
-#: storage/src/include/lvm_ui_lib.ycp:241
+#: storage/src/include/lvm_ui_lib.ycp:212
 msgid " Type "
 msgstr "Typ"
 
 #. button text
-#: storage/src/include/lvm_ui_lib.ycp:247
+#: storage/src/include/lvm_ui_lib.ycp:218
 msgid "&View all mount points, not just the current volume group"
 msgstr "Pokaż &wszystkie punkty montowania, nie tylko w bieżącej grupie woluminów"
 
 #. button text
 #. Button in RAID-WF 
-#. button text
-#: storage/src/include/lvm_ui_lib.ycp:251 storage/src/include/raid_ui.ycp:675
-#: storage/src/inst_evms.ycp:152
+#: storage/src/include/lvm_ui_lib.ycp:222 storage/src/include/raid_ui.ycp:675
 msgid "A&dd"
 msgstr "&Dodaj"
 
 #. button text
-#: storage/src/include/lvm_ui_lib.ycp:253
-#: storage/src/inst_custom_part.ycp:2540 storage/src/inst_evms.ycp:154
+#: storage/src/include/lvm_ui_lib.ycp:224
+#: storage/src/inst_custom_part.ycp:2160
 msgid "&Edit"
 msgstr "&Edytuj"
 
 #. button text
 #. Button in RAID-WF 
-#. button text
-#: storage/src/include/lvm_ui_lib.ycp:255 storage/src/include/raid_ui.ycp:677
-#: storage/src/inst_evms.ycp:156
+#: storage/src/include/lvm_ui_lib.ycp:226 storage/src/include/raid_ui.ycp:677
 msgid "&Remove"
 msgstr "&Usuń"
 
-#. label text
-#. Label of Combobox    
-#: storage/src/include/lvm_ui_lib.ycp:279
-#: storage/src/include/lvm_ui_lib.ycp:386
-#: storage/src/include/lvm_ui_lib.ycp:409
-msgid "V&olume Group Name"
-msgstr "Nazwa grupy w&oluminów"
-
 #. button text
-#: storage/src/include/lvm_ui_lib.ycp:283
-#: storage/src/include/lvm_ui_lib.ycp:358
-msgid "A&dd group"
-msgstr "&Dodaj grupę"
-
-#. button text
-#: storage/src/include/lvm_ui_lib.ycp:286
-#: storage/src/include/lvm_ui_lib.ycp:354
-msgid "Remove &group"
-msgstr "Usuń &grupę"
-
-#. label text
-#: storage/src/include/lvm_ui_lib.ycp:291
-msgid "Edit the current volume group:"
-msgstr "Edytuj bieżącą grupę woluminów:"
-
-#. label text
-#: storage/src/include/lvm_ui_lib.ycp:297
-msgid "Physical volumes"
-msgstr "Woluminy fizyczne"
-
-#. label text
-#: storage/src/include/lvm_ui_lib.ycp:301
-msgid "Physical volume size:"
-msgstr "Fizyczny rozmiar woluminów:"
-
-#. label text
-#: storage/src/include/lvm_ui_lib.ycp:311
-msgid "Logical volumes"
-msgstr "Woluminy logiczne"
-
-#. button text
-#: storage/src/include/lvm_ui_lib.ycp:334
+#: storage/src/include/lvm_ui_lib.ycp:241
 msgid "LVM Multipath detection"
 msgstr "Wykrywanie LVM Multipath"
 
 #. button text
-#: storage/src/include/lvm_ui_lib.ycp:342
+#: storage/src/include/lvm_ui_lib.ycp:249
 msgid "Volume &Group:"
 msgstr "&Grupa woluminów:"
 
 #. label text
 #. Label in raid -wf
 #. label text
-#: storage/src/include/lvm_ui_lib.ycp:345 storage/src/include/raid_ui.ycp:620
+#: storage/src/include/lvm_ui_lib.ycp:252 storage/src/include/raid_ui.ycp:620
 #: storage/src/include/raid_ui.ycp:640
 msgid "Size:"
 msgstr "Rozmiar:"
 
+#. button text
+#: storage/src/include/lvm_ui_lib.ycp:261
+msgid "Remove &group"
+msgstr "Usuń &grupę"
+
+#. button text
+#: storage/src/include/lvm_ui_lib.ycp:265
+msgid "A&dd group"
+msgstr "&Dodaj grupę"
+
+#. Label of Combobox    
+#: storage/src/include/lvm_ui_lib.ycp:293
+#: storage/src/include/lvm_ui_lib.ycp:316
+msgid "V&olume Group Name"
+msgstr "Nazwa grupy w&oluminów"
+
 #. label text
-#: storage/src/include/lvm_ui_lib.ycp:507
+#: storage/src/include/lvm_ui_lib.ycp:321
+msgid "Available Size:"
+msgstr "Dostępny rozmiar:"
+
+#. label text
+#: storage/src/include/lvm_ui_lib.ycp:414
 msgid "V&olume Group"
 msgstr "Grupa w&oluminów"
 
@@ -4704,32 +5522,11 @@ msgstr ""
 "nie jest dostępny.\n"
 
 #. column description, if disk space is not known
-#. label text
-#. column description, if disk space is not known
-#: storage/src/include/partition_defines.ycp:99
-#: storage/src/include/partition_defines.ycp:173
-#: storage/src/modules/Partitions.ycp:789
+#: storage/src/include/partition_defines.ycp:80
 msgid "unknown"
 msgstr "nieznany"
 
-#. label text, short for Megabyte (MB)
-#. label text
-#. end of not yet checked
-#. not test mode
-#. ///////////////////////////////////////////////////////////////////////
-#. END: Preliminary action
-#. ///////////////////////////////////////////////////////////////////////
-#. ///////////////////////////////////////////////////////////////////////
-#. START: GUI
-#. ///////////////////////////////////////////////////////////////////////
-#. set to "true" to test non-graphical version
-#. Unit for parition resizing - currently Megabytes
-#: storage/src/include/partition_defines.ycp:176
-#: storage/src/inst_custom_part.ycp:1670 storage/src/inst_resize_ui.ycp:560
-msgid "MB"
-msgstr "MB"
-
-#: storage/src/include/partition_defines.ycp:250
+#: storage/src/include/partition_defines.ycp:207
 msgid ""
 "It is normally not a good idea to use EVMS and non-EVMS\n"
 "entities on the same disk. \n"
@@ -4746,7 +5543,7 @@ msgstr ""
 "\n"
 "Na pewno to wykonać?\n"
 
-#: storage/src/include/partition_defines.ycp:264
+#: storage/src/include/partition_defines.ycp:221
 msgid ""
 "It is normally not a good idea to use EVMS and LVM\n"
 "on the same system.\n"
@@ -4855,24 +5652,6 @@ msgstr "<p><b>Multipath:</b> <br>Ten tryb pozwala na dostęp do tego samego urz�
 msgid "Auto&detect Multipath"
 msgstr "Auto&matyczne wykrywanie Multipath"
 
-#. Translators, 'Striping' is a technical term here.  Translate only if 
-#. you are sure!! If in doubt, leave it in English.
-#: storage/src/include/raid_ui.ycp:125
-msgid "RAID &0  (Striping)"
-msgstr "RAID &0  (striping)"
-
-#. Translators, 'Mirroring' is a technical term here. Translate only if 
-#. you are sure!! If in doubt, leave it in English.
-#: storage/src/include/raid_ui.ycp:128
-msgid "RAID &1  (Mirroring)"
-msgstr "RAID &1  (mirroring)"
-
-#. Translators, 'Redundant Striping' is a technical term here. Translate 
-#. only if you are sure!! If in doubt, leave it in English.
-#: storage/src/include/raid_ui.ycp:131
-msgid "RAID &5  (Redundant Striping)"
-msgstr "RAID &5  (nadmiarowy striping)"
-
 #. label text
 #: storage/src/include/raid_ui.ycp:133
 msgid "&Multipath (Redundant access over two controllers)"
@@ -4915,6 +5694,7 @@ msgstr "Nie wykryto automatycznie konfigurowalnych urządzeń multipath"
 
 #. label text
 #: storage/src/include/raid_ui.ycp:260 storage/src/include/raid_ui.ycp:329
+#: storage/src/modules/StorageFields.ycp:366
 msgid "Yes"
 msgstr "Tak"
 
@@ -4945,6 +5725,7 @@ msgstr "Inne..."
 
 #. label text
 #: storage/src/include/raid_ui.ycp:329
+#: storage/src/modules/StorageFields.ycp:366
 msgid "No"
 msgstr "Nie"
 
@@ -5016,6 +5797,11 @@ msgstr ""
 msgid "RA&ID:"
 msgstr "RA&ID:"
 
+#. label text
+#: storage/src/include/raid_ui.ycp:635
+msgid "O&ptions"
+msgstr "O&pcje"
+
 #. button text
 #: storage/src/include/raid_ui.ycp:648
 msgid "Remo&ve RAID"
@@ -5032,9 +5818,7 @@ msgid "    Device    "
 msgstr "  Urządzenie  "
 
 #. table header
-#. Column header: centered / minimum = 11 characters /
-#. fill with space if needed
-#: storage/src/include/raid_ui.ycp:666 storage/src/inst_custom_part.ycp:2415
+#: storage/src/include/raid_ui.ycp:666
 msgid "    Size    "
 msgstr "  Rozmiar   "
 
@@ -5134,14 +5918,8 @@ msgstr "Dla RAID 10, do %1 należy dodać co najmniej dwie partycje."
 msgid "For Multipath raid, add at least two partitions to %1."
 msgstr "Dla RAID Multipath, do %1 należy dodać co najmniej dwie partycje."
 
-#. label text
-#: storage/src/inst_custom_part.ycp:989
-#, ycp-format
-msgid "DISK %1"
-msgstr "DYSK %1"
-
 #. error popup text
-#: storage/src/inst_custom_part.ycp:1222
+#: storage/src/inst_custom_part.ycp:886
 msgid ""
 "Invalid input for the start of the partition.\n"
 "Enter the start cylinder, for example, 77.\n"
@@ -5150,12 +5928,12 @@ msgstr ""
 "Należy wprowadzić cylinder początkowy, np. 77.\n"
 
 #. error popup text
-#: storage/src/inst_custom_part.ycp:1239
+#: storage/src/inst_custom_part.ycp:903
 msgid "The value entered is invalid. Try again."
 msgstr "Wprowadzona wartość jest nieprawidłowa. Proszę spróbować ponownie."
 
 #. error popup text
-#: storage/src/inst_custom_part.ycp:1250
+#: storage/src/inst_custom_part.ycp:914
 msgid ""
 "The value for the partition end is invalid.\n"
 "\n"
@@ -5169,7 +5947,7 @@ msgstr ""
 
 #. //////////////// STEP E /////////////////////
 #. error popup text, %1, %2, %3 is replaced by numeric value
-#: storage/src/inst_custom_part.ycp:1269
+#: storage/src/inst_custom_part.ycp:933
 #, ycp-format
 msgid ""
 "\n"
@@ -5192,7 +5970,7 @@ msgstr ""
 
 #. error popup text, %1, %3, %4 is replaced by numeric value
 #. %2 is replaced by disk label name (e.g. msdos, gpt)
-#: storage/src/inst_custom_part.ycp:1296
+#: storage/src/inst_custom_part.ycp:960
 #, ycp-format
 msgid ""
 "\n"
@@ -5218,7 +5996,7 @@ msgstr ""
 "Czy użyć maksymalnej dozwolonej wartości?\n"
 
 #. popup text
-#: storage/src/inst_custom_part.ycp:1537
+#: storage/src/inst_custom_part.ycp:1201
 msgid ""
 "\n"
 "You have changed the FSID of an existing partition.\n"
@@ -5233,7 +6011,7 @@ msgstr ""
 "jeśli zmieniono FSID partycji należącej do innego systemu operacyjnego.\n"
 "Proszę kontynuować tylko w przypadku wystarczającej wiedzy.\n"
 
-#: storage/src/inst_custom_part.ycp:1648
+#: storage/src/inst_custom_part.ycp:1312
 #, ycp-format
 msgid ""
 "Partition %1 cannot be resized\n"
@@ -5242,13 +6020,9 @@ msgstr ""
 "Nie można zmienić rozmiaru partycji %1,\n"
 "ponieważ system plików jest niespójny.\n"
 
-#: storage/src/inst_custom_part.ycp:1676
-msgid "GB"
-msgstr "GB"
-
 #. label text %1 is replaced by a number
 #. Labels for bar graph. "%1" will be replace with a numeric value.
-#: storage/src/inst_custom_part.ycp:1699 storage/src/inst_resize_ui.ycp:563
+#: storage/src/inst_custom_part.ycp:1363 storage/src/inst_resize_ui.ycp:563
 #, ycp-format
 msgid ""
 "Windows\n"
@@ -5261,7 +6035,7 @@ msgstr ""
 
 #. label text %1 is replaced by a number
 #. Labels for bar graph. "%1" will be replace with a numeric value.
-#: storage/src/inst_custom_part.ycp:1701 storage/src/inst_resize_ui.ycp:565
+#: storage/src/inst_custom_part.ycp:1365 storage/src/inst_resize_ui.ycp:565
 #, ycp-format
 msgid ""
 "Windows\n"
@@ -5273,7 +6047,7 @@ msgstr ""
 "%1 "
 
 #. label text %1 is replaced by a number
-#: storage/src/inst_custom_part.ycp:1703
+#: storage/src/inst_custom_part.ycp:1367
 #, ycp-format
 msgid ""
 "Linux\n"
@@ -5284,87 +6058,39 @@ msgstr ""
 "rozmiar\n"
 "%1 "
 
-#. label text %1 is replaced by a number
-#: storage/src/inst_custom_part.ycp:1708
-#, ycp-format
-msgid ""
-"Space\n"
-"Used\n"
-"%1 "
-msgstr ""
-"Przestrzeń\n"
-"użyta\n"
-"%1 "
-
-#. label text %1 is replaced by a number
-#: storage/src/inst_custom_part.ycp:1712
-#, ycp-format
-msgid ""
-"Swap\n"
-"Space\n"
-"%1 "
-msgstr ""
-"Przestrzeń\n"
-"wymiany\n"
-"%1 "
-
-#. label text %1 is replaced by a number
-#: storage/src/inst_custom_part.ycp:1717
-#, ycp-format
-msgid ""
-"Space\n"
-"Free\n"
-"%1 "
-msgstr ""
-"Przestrzeń\n"
-"wolna\n"
-"%1 "
-
-#. label text, %1 is replaced by a number
-#: storage/src/inst_custom_part.ycp:1720
-#, ycp-format
-msgid ""
-"Unused\n"
-"Disk\n"
-"%1 "
-msgstr ""
-"Dysk\n"
-"nieużywany\n"
-"%1 "
-
 #. label text, %1 is replaced by a unit value ("MB")
 #. Labels for input fields. "%1" will be replaced with the current unit (MB).
-#: storage/src/inst_custom_part.ycp:1729 storage/src/inst_resize_ui.ycp:570
+#: storage/src/inst_custom_part.ycp:1393 storage/src/inst_resize_ui.ycp:570
 #, ycp-format
 msgid "Windows Free (%1)"
 msgstr "Windows - wolna przestrzeń (%1)"
 
 #. label text, %1 is replaced by a unit value ("MB")
-#: storage/src/inst_custom_part.ycp:1731
+#: storage/src/inst_custom_part.ycp:1395
 #, ycp-format
 msgid "Linux Size (%1)"
 msgstr "Linux - rozmiar (%1)"
 
 #. label text, %1 is replaced by a unit value ("MB")
-#: storage/src/inst_custom_part.ycp:1736
+#: storage/src/inst_custom_part.ycp:1400
 #, ycp-format
 msgid "Unused Disk (%1)"
 msgstr "Nieużywany dysk (%1)"
 
 #. label text, %1 is replaced by a unit value ("MB")
-#: storage/src/inst_custom_part.ycp:1740
+#: storage/src/inst_custom_part.ycp:1404
 #, ycp-format
 msgid "Swap Space (%1) "
 msgstr "Przestrzeń wymiany (%1)"
 
 #. label text, %1 is replaced by a unit value ("MB")
-#: storage/src/inst_custom_part.ycp:1745
+#: storage/src/inst_custom_part.ycp:1409
 #, ycp-format
 msgid "Space Free (%1)"
 msgstr "Przestrzeń wolna (%1)"
 
 #. Message text.  %1 and %2 are numbers. %3 is the unit.
-#: storage/src/inst_custom_part.ycp:1771
+#: storage/src/inst_custom_part.ycp:1435
 #, ycp-format
 msgid ""
 "Your NTFS file system has %1 %3 free space available. Due to limitations in\n"
@@ -5380,7 +6106,7 @@ msgstr ""
 "w kierunku początku partycji.\n"
 
 #. label text
-#: storage/src/inst_custom_part.ycp:1801
+#: storage/src/inst_custom_part.ycp:1465
 msgid "Windows"
 msgstr "Windows"
 
@@ -5388,7 +6114,7 @@ msgstr "Windows"
 #. common part for both graphical mode (with bar graphs)
 #. and non-graphical mode (text only).
 #. %1 is OS label, such as Windows
-#: storage/src/inst_custom_part.ycp:1808
+#: storage/src/inst_custom_part.ycp:1472
 #, ycp-format
 msgid ""
 "<p>\n"
@@ -5401,7 +6127,7 @@ msgstr ""
 
 #. help text (common to both modes), continued
 #. %1 is OS label, such as Windows
-#: storage/src/inst_custom_part.ycp:1814
+#: storage/src/inst_custom_part.ycp:1478
 #, ycp-format
 msgid ""
 "\n"
@@ -5419,7 +6145,7 @@ msgstr ""
 "</p>"
 
 #. help text (common to both modes), continued
-#: storage/src/inst_custom_part.ycp:1822
+#: storage/src/inst_custom_part.ycp:1486
 msgid ""
 "\n"
 "<p>\n"
@@ -5437,7 +6163,7 @@ msgstr ""
 
 #. help text, continued - graphical mode only
 #. this text will be appended to the help text common to both modes.
-#: storage/src/inst_custom_part.ycp:1835
+#: storage/src/inst_custom_part.ycp:1499
 msgid ""
 "\n"
 "<p>\n"
@@ -5454,7 +6180,7 @@ msgstr ""
 "</p>"
 
 #. help text (graphical mode), continued
-#: storage/src/inst_custom_part.ycp:1842 storage/src/inst_resize_ui.ycp:645
+#: storage/src/inst_custom_part.ycp:1506 storage/src/inst_resize_ui.ycp:645
 msgid ""
 "\n"
 "<p>\n"
@@ -5469,25 +6195,25 @@ msgstr ""
 
 #. Headline above bar graph that displays current partition size
 #. Headline above bar graph that displays current windows partition size
-#: storage/src/inst_custom_part.ycp:1875 storage/src/inst_resize_ui.ycp:609
+#: storage/src/inst_custom_part.ycp:1539 storage/src/inst_resize_ui.ycp:609
 msgid "Now"
 msgstr "Teraz"
 
 #. Headline above bar graph that displays future partitions
 #. Headline above bar graph that displays future windows and linux partitions
-#: storage/src/inst_custom_part.ycp:1880 storage/src/inst_resize_ui.ycp:620
+#: storage/src/inst_custom_part.ycp:1544 storage/src/inst_resize_ui.ycp:620
 msgid "After Installation"
 msgstr "Po instalacji"
 
 #. Button text
-#: storage/src/inst_custom_part.ycp:1890 storage/src/inst_custom_part.ycp:1959
+#: storage/src/inst_custom_part.ycp:1554 storage/src/inst_custom_part.ycp:1623
 msgid "&Do Not Resize"
 msgstr "Nie z&mieniaj rozmiaru"
 
 #. help text, continued - non-graphical mode only
 #. this help text will be appended to the help text common to both modes.
 #. %1 is OS label, such as Windows
-#: storage/src/inst_custom_part.ycp:1903
+#: storage/src/inst_custom_part.ycp:1567
 #, ycp-format
 msgid ""
 "\n"
@@ -5500,18 +6226,18 @@ msgstr ""
 
 #. Label text
 #. Label for used part of the Windows partition in non-graphical mode
-#: storage/src/inst_custom_part.ycp:1911 storage/src/inst_resize_ui.ycp:664
+#: storage/src/inst_custom_part.ycp:1575 storage/src/inst_resize_ui.ycp:664
 msgid "Windows Used"
 msgstr "Windows używa"
 
 #. Label text
-#: storage/src/inst_custom_part.ycp:1916
+#: storage/src/inst_custom_part.ycp:1580
 msgid "Used"
 msgstr "Użyte"
 
 #. help text (non-graphical mode), continued
 #. %1 is label text, such as Used. %2 is OS, such as Windows.
-#: storage/src/inst_custom_part.ycp:1920
+#: storage/src/inst_custom_part.ycp:1584
 #, ycp-format
 msgid ""
 "\n"
@@ -5525,7 +6251,7 @@ msgstr ""
 "</p>"
 
 #. help text (non-graphical mode), continued
-#: storage/src/inst_custom_part.ycp:1926
+#: storage/src/inst_custom_part.ycp:1590
 msgid ""
 "\n"
 "<p><b>Free</b> indicates the current free space (before shrinking)\n"
@@ -5538,17 +6264,17 @@ msgstr ""
 
 #. Label for free part of the partition in non-graphical mode
 #. Label for free part of the Windows partition in non-graphical mode
-#: storage/src/inst_custom_part.ycp:1946 storage/src/inst_resize_ui.ycp:671
+#: storage/src/inst_custom_part.ycp:1610 storage/src/inst_resize_ui.ycp:671
 msgid "Free"
 msgstr "Wolne"
 
 #. Edit field label for linux partition size in non-graphical mode
-#: storage/src/inst_custom_part.ycp:1952
+#: storage/src/inst_custom_part.ycp:1616
 msgid "New Size"
 msgstr "Nowy rozmiar"
 
 #. warning popup text
-#: storage/src/inst_custom_part.ycp:2145
+#: storage/src/inst_custom_part.ycp:1809
 msgid ""
 "You have changed the start or end cylinders.\n"
 "Make sure that all logical partitions\n"
@@ -5558,261 +6284,167 @@ msgstr ""
 "Należy się upewnić się, że wszystkie partycje logiczne \n"
 "mieszczą się w tej nowej rozszerzonej partycji.\n"
 
-#: storage/src/inst_custom_part.ycp:2206
+#: storage/src/inst_custom_part.ycp:1870
 #: storage/src/inst_target_selection.ycp:87
 msgid "Available &Disks"
 msgstr "Dostępne &dyski"
 
-#: storage/src/inst_custom_part.ycp:2271
+#: storage/src/inst_custom_part.ycp:1935
 msgid "There are no partitionable disks available."
 msgstr "Brak dostępnych dysków do partycjonowania."
 
-#: storage/src/inst_custom_part.ycp:2274
+#: storage/src/inst_custom_part.ycp:1938
 msgid "You may use dasdfmt in Expert-Button to low level format disks."
 msgstr "Możliwe jest niskopoziomowe formatowanie dysków za pomocą dasdfmt, dostępnego po naciśnięciu przycisku Zaawansowane."
 
 #. menue entry text
-#: storage/src/inst_custom_part.ycp:2286
+#: storage/src/inst_custom_part.ycp:1950
 msgid "&Create RAID..."
 msgstr "&Utwórz RAID..."
 
 #. menu entry text
-#: storage/src/inst_custom_part.ycp:2290
+#: storage/src/inst_custom_part.ycp:1954
 msgid "&Edit RAID"
 msgstr "&Edytuj RAID"
 
 #. button text
-#: storage/src/inst_custom_part.ycp:2292
+#: storage/src/inst_custom_part.ycp:1956
 msgid "&RAID..."
 msgstr "&RAID..."
 
 #. menue entry text
-#: storage/src/inst_custom_part.ycp:2300
+#: storage/src/inst_custom_part.ycp:1964
 msgid "&Create Crypt File"
 msgstr "U&twórz plik zaszyfrowany"
 
 #. menue entry text
-#: storage/src/inst_custom_part.ycp:2304
+#: storage/src/inst_custom_part.ycp:1968
 msgid "&Edit Crypt File"
 msgstr "&Edytuj plik zaszyfrowany"
 
 #. button text
-#: storage/src/inst_custom_part.ycp:2306
+#: storage/src/inst_custom_part.ycp:1970
 msgid "Cr&ypt File..."
 msgstr "Plik zasz&yfrowany..."
 
-#. button text
-#: storage/src/inst_custom_part.ycp:2322 storage/src/inst_custom_part.ycp:2328
-#: storage/src/inst_custom_part.ycp:2334
-msgid "&Primary Partition"
-msgstr "&Partycja podstawowa"
-
-#. button text
-#: storage/src/inst_custom_part.ycp:2324 storage/src/inst_custom_part.ycp:2336
-msgid "&Logical Partition"
-msgstr "Partycja &logiczna"
-
-#. button text
-#: storage/src/inst_custom_part.ycp:2330 storage/src/inst_custom_part.ycp:2338
-msgid "&Extended Partition"
-msgstr "Partycja rozsz&erzona"
-
-#. heading in a popup dialog
-#: storage/src/inst_custom_part.ycp:2347
-msgid "Partition Type"
-msgstr "Typ partycji"
-
 #. complete sentence, appended after other complete sentences.
-#: storage/src/inst_custom_part.ycp:2385
+#: storage/src/inst_custom_part.ycp:2049
 msgid "No extended partition exists."
 msgstr "Nie istnieje żadna partycja rozszerzona."
 
 #. complete sentence, appended after other complete sentences.
-#: storage/src/inst_custom_part.ycp:2388
+#: storage/src/inst_custom_part.ycp:2052
 msgid "There are already four primary and extended partitions."
 msgstr "Istnieją już cztery partycje podstawowe i rozszerzona."
 
 #. complete sentence, appended after other complete sentences.
-#: storage/src/inst_custom_part.ycp:2391
+#: storage/src/inst_custom_part.ycp:2055
 msgid "No space is left in the extended partition."
 msgstr "Nie ma miejsca na partycji rozszerzonej."
 
 #. complete sentence, appended after other complete sentences.
-#: storage/src/inst_custom_part.ycp:2394
+#: storage/src/inst_custom_part.ycp:2058
 msgid "Too many logical drives already exist."
 msgstr "Istnieje już za dużo dysków logicznych."
 
 #. complete sentence, appended after other complete sentences.
-#: storage/src/inst_custom_part.ycp:2397
+#: storage/src/inst_custom_part.ycp:2061
 msgid "No space remains."
 msgstr "Nie ma już wolnego miejsca."
 
 #. complete sentence, appended after other complete sentences.
-#: storage/src/inst_custom_part.ycp:2400
+#: storage/src/inst_custom_part.ycp:2064
 msgid "An extended partition already exists."
 msgstr "Partycja rozszerzona już istnieje."
 
-#. Column header
-#: storage/src/inst_custom_part.ycp:2411
-msgid "ID"
-msgstr "ID"
-
-#. Column header: centered / minimum = 3 characters /
-#. fill with space if needed
-#: storage/src/inst_custom_part.ycp:2419
-msgid " F "
-msgstr " F "
-
-#. Column header
-#: storage/src/inst_custom_part.ycp:2422 storage/src/inst_evms.ycp:149
-msgid "Type"
-msgstr "Typ"
-
-#. Column header: centered / minimum = 7 characters /
-#. fill with space if needed
-#: storage/src/inst_custom_part.ycp:2426
-msgid " Mount "
-msgstr "Zamontowane"
-
-#. Column header
-#: storage/src/inst_custom_part.ycp:2429
-msgid "Mount By"
-msgstr "Zamontowane wg"
-
-#. Column header: minimum = 5 characters   fill with space if needed
-#: storage/src/inst_custom_part.ycp:2432
-msgid "Start"
-msgstr "Początek"
-
-#. Column header: minimum = 4 characters   fill with space if needed
-#: storage/src/inst_custom_part.ycp:2435
-msgid "End "
-msgstr "Koniec"
-
-#. Column header
-#: storage/src/inst_custom_part.ycp:2438
-msgid "Used By"
-msgstr "Użyte przez"
-
-#. Column header
-#: storage/src/inst_custom_part.ycp:2441
-msgid "Label"
-msgstr "Etykieta"
-
-#. Column header
-#: storage/src/inst_custom_part.ycp:2444
-msgid "Device ID"
-msgstr "Identyfikator urządzenia"
-
-#. Column header
-#: storage/src/inst_custom_part.ycp:2447
-msgid "Device Path"
-msgstr "Ścieżka urządzenia"
-
 #. complete sentence. gets combined with other sentences.
-#: storage/src/inst_custom_part.ycp:2474
+#: storage/src/inst_custom_part.ycp:2091
 msgid "A primary partition can be created.\n"
 msgstr "Można utworzyć partycję podstawową.\n"
 
 #. complete sentence. gets combined with other sentences.
-#: storage/src/inst_custom_part.ycp:2477
+#: storage/src/inst_custom_part.ycp:2094
 msgid "A primary partition cannot be created."
 msgstr "Nie można utworzyć partycji podstawowej."
 
 #. complete sentence. gets combined with other sentences.
-#: storage/src/inst_custom_part.ycp:2482
+#: storage/src/inst_custom_part.ycp:2099
 msgid "A logical partition can be created.\n"
 msgstr "Można utworzyć partycję logiczną.\n"
 
 #. complete sentence. gets combined with other sentences.
-#: storage/src/inst_custom_part.ycp:2486
+#: storage/src/inst_custom_part.ycp:2103
 msgid "A logical partition cannot be created."
 msgstr "Nie można utworzyć partycji logicznej."
 
 #. complete sentence. gets combined with other sentences.
-#: storage/src/inst_custom_part.ycp:2491
+#: storage/src/inst_custom_part.ycp:2108
 msgid "An extended partition can be created.\n"
 msgstr "Można utworzyć partycję rozszerzoną.\n"
 
 #. complete sentence. gets combined with other sentences.
-#: storage/src/inst_custom_part.ycp:2495
+#: storage/src/inst_custom_part.ycp:2112
 msgid "An extended partition cannot be created."
 msgstr "Nie można utworzyć partycji rozszerzonej."
 
-#: storage/src/inst_custom_part.ycp:2536
+#: storage/src/inst_custom_part.ycp:2156
 msgid "&Create"
 msgstr "U&twórz"
 
-#: storage/src/inst_custom_part.ycp:2545
+#: storage/src/inst_custom_part.ycp:2165
 msgid "&Delete"
 msgstr "&Usuń"
 
-#: storage/src/inst_custom_part.ycp:2550
+#: storage/src/inst_custom_part.ycp:2170
 msgid "Re&size"
 msgstr "Zmień &rozmiar"
 
 #. menu entry text
-#: storage/src/inst_custom_part.ycp:2559
+#: storage/src/inst_custom_part.ycp:2179
 msgid "&Reread Partition Table"
 msgstr "&Odczytaj ponownie tablicę partycji"
 
 #. menu entry text
-#: storage/src/inst_custom_part.ycp:2565
+#: storage/src/inst_custom_part.ycp:2185
 msgid "&Import Mount Points from Existing /etc/fstab"
 msgstr "&Importuj punkty montowania z istniejącego pliku /etc/fstab"
 
 #. menu entry text
-#: storage/src/inst_custom_part.ycp:2571
+#: storage/src/inst_custom_part.ycp:2191
 msgid "Delete Partition &Table and Disk Label"
 msgstr "Usuń &tablicę partycji i etykietę dysku"
 
-#. menu entry text
-#: storage/src/inst_custom_part.ycp:2578
-msgid "Execute dasd&fmt on the DASD Device"
-msgstr "Wywołaj dasd&fmt na urządzeniu DASD"
-
 #. button text using case-senstive command name.  dasdfmt should not normally be translated.
-#: storage/src/inst_custom_part.ycp:2581
+#: storage/src/inst_custom_part.ycp:2201
 msgid "dasd&fmt"
 msgstr "dasd&fmt"
 
 #. menu entry text
-#: storage/src/inst_custom_part.ycp:2586
+#: storage/src/inst_custom_part.ycp:2206
 msgid "Call &iSCSI configuration"
 msgstr "Odczytywanie konfiguracji iSCSI..."
 
 #. main dialog: Button LVM
-#: storage/src/inst_custom_part.ycp:2592
+#: storage/src/inst_custom_part.ycp:2212
 msgid "&LVM..."
 msgstr "&LVM..."
 
-#. main dialog: Button EVMS
-#: storage/src/inst_custom_part.ycp:2596
-msgid "E&VMS..."
-msgstr "E&VMS..."
-
-#: storage/src/inst_custom_part.ycp:2613
+#: storage/src/inst_custom_part.ycp:2229
 msgid "&NFS..."
 msgstr "N&FS"
 
-#: storage/src/inst_custom_part.ycp:2623
+#: storage/src/inst_custom_part.ycp:2239
 msgid "&Show Details"
 msgstr "Pokaż &szczegóły"
 
 #. popup text
-#: storage/src/inst_custom_part.ycp:2713
+#: storage/src/inst_custom_part.ycp:2315
 msgid "Disk to Partition"
 msgstr "Dysk do partycjonowania"
 
 #. popup text , %1 is replaced by a disk name e.g. /dev/hda
-#: storage/src/inst_custom_part.ycp:2805
-#, ycp-format
-msgid "It is not possible to create a partition on %1."
-msgstr "Utworzenie partycji na %1 nie jest możliwe"
-
-#. popup text , %1 is replaced by a disk name e.g. /dev/hda
 #. %2 is replaced by an explanation
-#: storage/src/inst_custom_part.ycp:2811
+#: storage/src/inst_custom_part.ycp:2413
 #, ycp-format
 msgid ""
 "It is not possible to create a partition on %1.\n"
@@ -5824,30 +6456,30 @@ msgstr ""
 "%2\n"
 
 #. Popup Create Partition: Description of partition %1 is for example "/dev/hda"
-#: storage/src/inst_custom_part.ycp:2870
+#: storage/src/inst_custom_part.ycp:2472
 #, ycp-format
 msgid " Create a Primary Partition on %1 "
 msgstr " Utwórz partycję podstawową na %1 "
 
 #. Popup Create Partition: Description of partition %1 is for example "/dev/hda"
-#: storage/src/inst_custom_part.ycp:2872
+#: storage/src/inst_custom_part.ycp:2474
 #, ycp-format
 msgid " Create an Extended Partition on %1 "
 msgstr " Utwórz partycję rozszerzoną na %1 "
 
 #. Popup Create Partition: Description of partition %1 is for example "/dev/hda"
-#: storage/src/inst_custom_part.ycp:2874
+#: storage/src/inst_custom_part.ycp:2476
 #, ycp-format
 msgid " Create a Logical Partition on %1 "
 msgstr " Utwórz partycję logiczną na %1 "
 
 #. header of the dialog edit a partition
-#: storage/src/inst_custom_part.ycp:3038
+#: storage/src/inst_custom_part.ycp:2633
 msgid "Edit an Extended Partition"
 msgstr "Edycja partycji rozszerzonej"
 
 #. error popup text
-#: storage/src/inst_custom_part.ycp:3052
+#: storage/src/inst_custom_part.ycp:2647
 msgid ""
 "An already-existing extended partition cannot be changed.\n"
 "Delete this partition then create a new one using\n"
@@ -5861,50 +6493,23 @@ msgstr ""
 "jeśli zostanie ona usunięta."
 
 #. header of the dialog to edit a partition %1 is replaced by device name (e.g. /dev/hda1)
-#: storage/src/inst_custom_part.ycp:3065
+#: storage/src/inst_custom_part.ycp:2660
 #, ycp-format
 msgid "Edit Existing Partition %1"
 msgstr "Edycja istniejącej partycji %1"
 
-#: storage/src/inst_custom_part.ycp:3069
+#: storage/src/inst_custom_part.ycp:2664
 #, ycp-format
 msgid "Edit Existing Device %1"
 msgstr "Edytuj istniejące urządzenie %1"
 
-#. header of the dialog to edit a partition %1 is replaced by device name (e.g. /dev/hda1)
-#: storage/src/inst_custom_part.ycp:3076
-#, ycp-format
-msgid "Edit Partition %1"
-msgstr "Edycja partycji %1"
-
 #. popup text
-#: storage/src/inst_custom_part.ycp:3106
+#: storage/src/inst_custom_part.ycp:2701
 msgid "Select the partition to edit in the main dialog."
 msgstr "Proszę wybrać partycję do edycji w głównym oknie."
 
-#: storage/src/inst_custom_part.ycp:3149
-#, ycp-format
-msgid "Really delete BIOS RAID %1?"
-msgstr "Na pewno usunąć BIOS RAID %1?"
-
-#. YesNo popup text %1 is replaced by a disk name e.g. /dev/hda
-#: storage/src/inst_custom_part.ycp:3156
-#, ycp-format
-msgid "Really delete all partitions on %1?"
-msgstr "Na pewno usunąć wszystkie partycje z %1?"
-
-#. YesNo popup.  %1 is path to a file
-#: storage/src/inst_custom_part.ycp:3213
-#, ycp-format
-msgid ""
-"\n"
-"Should the loop file %1 also be removed?\n"
-msgstr ""
-"\n"
-"Czy plik pętli %1 ma także zostać usunięty?\n"
-
 #. popup text
-#: storage/src/inst_custom_part.ycp:3280
+#: storage/src/inst_custom_part.ycp:2744
 msgid ""
 "\n"
 "You cannot resize a disk device, LVM volume group, LVM physical volume,\n"
@@ -5915,7 +6520,7 @@ msgstr ""
 "fizycznego woluminu LVM, systemu plików NFS ani urządzenia MD.\n"
 
 #. popup text
-#: storage/src/inst_custom_part.ycp:3289
+#: storage/src/inst_custom_part.ycp:2753
 msgid ""
 "\n"
 "You cannot resize the selected partition because the file system\n"
@@ -5926,7 +6531,7 @@ msgstr ""
 "na tej partycji nie obsługuje operacji zmiany rozmiaru.\n"
 
 #. popup text
-#: storage/src/inst_custom_part.ycp:3328
+#: storage/src/inst_custom_part.ycp:2792
 msgid ""
 "\n"
 "You decreased the size available for Linux partitions.\n"
@@ -5939,7 +6544,7 @@ msgstr ""
 "Zaleca się sprawdzić nowe rozmiary w tablicy partycji.\n"
 
 #. popup text
-#: storage/src/inst_custom_part.ycp:3338
+#: storage/src/inst_custom_part.ycp:2802
 msgid ""
 "\n"
 "You decreased a partition that is followed by a newly-created partition.\n"
@@ -5951,34 +6556,8 @@ msgstr ""
 "Czy ta nowo utworzona partycja ma być automatycznie zwiększona, aby zająć\n"
 "całą zwolnioną przestrzeń dyskową?\n"
 
-#. heading text
-#: storage/src/inst_custom_part.ycp:3363
-msgid "Delete Partition Table"
-msgstr "Usuń tablicę partycji"
-
-#: storage/src/inst_custom_part.ycp:3384
-#, ycp-format
-msgid ""
-"Running dasdfmt deletes all data on the disk.\n"
-"Really execute dasdfmt on disk %1?\n"
-msgstr ""
-"Uruchomienie dasdfmt spowoduje usunięcie \n"
-"wszystkich danych na dysku.\n"
-"Naprawdę wywołać dasdfmt na dysku %1?\n"
-
-#: storage/src/inst_custom_part.ycp:3395
-msgid ""
-"The disk is no longer marked for dasdfmt.\n"
-"\n"
-"Partitions currently present on this disk are again\n"
-"displayed.\n"
-msgstr ""
-"Dysk nie jest już oznaczony dla dasdfmt.\n"
-"\n"
-"Partycje obecne na dysku są ponownie wyświetlone.\n"
-
 #. popup text
-#: storage/src/inst_custom_part.ycp:3406
+#: storage/src/inst_custom_part.ycp:2858
 msgid ""
 "No DASD disk selected.\n"
 "Select the DASD disk on which dasdfmt should be executed."
@@ -5987,7 +6566,7 @@ msgstr ""
 "Należy wybrać dysk DASD, na którym ma zostać wywołane dasdfmt."
 
 #. popup text
-#: storage/src/inst_custom_part.ycp:3418
+#: storage/src/inst_custom_part.ycp:2870
 msgid ""
 "Calling iSCSI configuration cancels all current changes.\n"
 "Really do this?"
@@ -5995,31 +6574,9 @@ msgstr ""
 "Ponowne odczytanie tablicy partycji anuluje wszystkie zmiany.\n"
 "Odczytać ponownie tablicę partycji?"
 
-#: storage/src/inst_custom_part.ycp:3432
+#: storage/src/inst_custom_part.ycp:2884
 msgid "Rereading disk information..."
 msgstr "Odczytywanie informacji o dyskach..."
-
-#. popup text
-#: storage/src/inst_custom_part.ycp:3451
-msgid "Rereading the partition table cancels all current changes. Really reread the partition table?"
-msgstr "Ponowne odczytanie tablicy partycji anuluje wszystkie zmiany. Naprawdę odczytać ponownie tablicę partycji?"
-
-#. popup text
-#: storage/src/inst_custom_part.ycp:3482
-msgid "Select a loop device entry."
-msgstr "Proszę wybrać pozycję urządzenia pętli."
-
-#. popup text %1 will be replaces with button text
-#: storage/src/inst_custom_part.ycp:3576
-#, ycp-format
-msgid ""
-"You have changed the partitioning.\n"
-"These changes are lost if you exit the main dialog with %1.\n"
-"Really quit the main dialog?\n"
-msgstr ""
-"Zmieniono partycjonowanie.\n"
-"Zmiany te zostaną utracone, jeśli główne okno zostanie zamknięte z %1.\n"
-"Kontynuować?\n"
 
 #: storage/src/inst_disk_proposal.ycp:59
 msgid ""
@@ -6138,82 +6695,9 @@ msgstr ""
 "<p>\n"
 "Aby stworzyć system oparty na LVM należy wybrać odpowiedni przycisk.</p>\n"
 
-#: storage/src/inst_disk_proposal.ycp:327
+#: storage/src/inst_disk_proposal.ycp:330
 msgid "Impossible to create the requested proposal."
 msgstr "Nie można utworzyć żądanej konfiguracji."
-
-#. label text
-#: storage/src/inst_evms.ycp:112
-msgid "Available"
-msgstr "Dostępne"
-
-#. button text
-#: storage/src/inst_evms.ycp:130
-msgid "C&reate Container"
-msgstr "Utwó&rz kontener"
-
-#. button text
-#: storage/src/inst_evms.ycp:134
-msgid "&Edit Container"
-msgstr "&Edytuj kontener"
-
-#. button text
-#: storage/src/inst_evms.ycp:138
-msgid "&Remove Container"
-msgstr "Us&uń kontener"
-
-#: storage/src/inst_evms.ycp:148
-msgid "Format"
-msgstr "Formatuj"
-
-#: storage/src/inst_evms.ycp:148
-msgid " Mount"
-msgstr "Montuj"
-
-#. heading text
-#: storage/src/inst_evms.ycp:168
-msgid "EVMS Configuration"
-msgstr "Konfiguracja EVMS"
-
-#. popup text 
-#: storage/src/inst_evms.ycp:325
-msgid ""
-"You have changed the EVMS configuration.\n"
-"These changes will be lost if you exit the dialog now.\n"
-"Continue?\n"
-msgstr ""
-"Zmieniono konfigurację EVMS.\n"
-"Zmiany te zostaną utracone, jeśli opuści się teraz to okno.\n"
-"Kontynuować?\n"
-
-#. heading text
-#: storage/src/inst_lvm_lv.ycp:75
-msgid "Logical Volume Manager: Logical Volumes"
-msgstr "Zarządzanie logicznymi woluminami: logiczne woluminy"
-
-#. popup text %1 is replaced by a volume group name 
-#: storage/src/inst_lvm_lv.ycp:182
-#, ycp-format
-msgid "There is no available space in volume group %1."
-msgstr "Nie ma wolnego miejsca w grupie woluminów %1."
-
-#. heading text
-#: storage/src/inst_lvm_pv.ycp:61
-msgid "Logical Volume Manager: Physical Volume Setup"
-msgstr "Zarządzanie logicznymi woluminami: ustawienia fizycznych woluminów"
-
-#: storage/src/inst_lvm_pv.ycp:266
-#, ycp-format
-msgid ""
-"The volume group %1 does not have \n"
-"any physical volumes assigned. This is not possible.\n"
-"Either remove this volume group or add at least\n"
-"one physical volume to it.\n"
-msgstr ""
-"Grupa woluminów %1 nie posiada przypisanych \n"
-"żadnych woluminów fizycznych. To nie jest możliwe.\n"
-"Należy usunąć tę grupę woluminów, albo dodać do niej \n"
-"przynajmniej jeden wolumin fizyczny.\n"
 
 #. html-format
 #. advise the user to wait for completion
@@ -6701,6 +7185,36 @@ msgstr "Przygotowywanie twardego dysku: etap 1"
 msgid "Select one of the options to continue."
 msgstr "Proszę wybrać jedną z opcji aby kontynuować."
 
+#: storage/src/modules/DevicesSelectionBox.ycp:59
+#, ycp-format
+msgid "Total size: %1"
+msgstr ""
+
+#: storage/src/modules/DevicesSelectionBox.ycp:66
+#, fuzzy, ycp-format
+msgid "Resulting size: %1"
+msgstr "Rozmiar cylindra: "
+
+#: storage/src/modules/DualMultiSelectionBox.ycp:52
+#, fuzzy
+msgid "Add"
+msgstr "&Dodaj"
+
+#: storage/src/modules/DualMultiSelectionBox.ycp:53
+#, fuzzy
+msgid "Add All"
+msgstr "&Dodaj RAID"
+
+#: storage/src/modules/DualMultiSelectionBox.ycp:55
+#, fuzzy
+msgid "Remove"
+msgstr "&Usuń"
+
+#: storage/src/modules/DualMultiSelectionBox.ycp:56
+#, fuzzy
+msgid "Remove All"
+msgstr "&Usuń RAID"
+
 #. button text
 #: storage/src/modules/FileSystems.ycp:233
 msgid "Mount &read-only"
@@ -6853,7 +7367,6 @@ msgstr ""
 
 #. label text
 #: storage/src/modules/FileSystems.ycp:379
-#: storage/src/modules/FileSystems.ycp:524
 msgid "Char&set for file names"
 msgstr "Ze&staw znaków dla nazw plików"
 
@@ -6957,7 +7470,7 @@ msgstr ""
 
 #. label text
 #: storage/src/modules/FileSystems.ycp:475
-#: storage/src/modules/FileSystems.ycp:578
+#: storage/src/modules/FileSystems.ycp:580
 msgid "Block &size in bytes"
 msgstr "Rozmiar &bloku w bajtach"
 
@@ -6972,13 +7485,13 @@ msgstr ""
 
 #. label text
 #: storage/src/modules/FileSystems.ycp:485
-#: storage/src/modules/FileSystems.ycp:629
+#: storage/src/modules/FileSystems.ycp:631
 msgid "&Inode Size"
 msgstr "Rozmiar &inode"
 
 #. help text, richtext format
 #: storage/src/modules/FileSystems.ycp:489
-#: storage/src/modules/FileSystems.ycp:633
+#: storage/src/modules/FileSystems.ycp:635
 msgid ""
 "<p><b>Inode Size:</b>\n"
 "This option specifies the inode size of the file system.</p>\n"
@@ -7016,22 +7529,13 @@ msgstr ""
 "<p><b>Uporządkowane inode:</b>\n"
 "Opcja \"Uporządkowane inode\" używana jest do okreslenia, czy alokacja węzłów inode jest uporządkowana. Domyślnie węzły inode są uporządkowane. Dostęp do uporządkowanych węzłów inode jest zwykle bardziej wydajny niż do nieuporządkowanych.</p>\n"
 
-#. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:531
-msgid ""
-"<p><b>Charset for File Names:</b>\n"
-"Set the charset used to display file names on the partition.</p>\n"
-msgstr ""
-"<p><b>Zestaw znaków dla nazw plików:</b>\n"
-"Opcja służąca do określania zestawów znaków dla nazw plików na partycji.</p>\n"
-
 #. label text
-#: storage/src/modules/FileSystems.ycp:538
+#: storage/src/modules/FileSystems.ycp:540
 msgid "&Log size in megabytes"
 msgstr "Rozmiar &logu w megabajtach"
 
 #. popup text
-#: storage/src/modules/FileSystems.ycp:545
+#: storage/src/modules/FileSystems.ycp:547
 msgid ""
 "The \"Log size\" value is incorrect.\n"
 "Please enter a value greater than zero."
@@ -7040,7 +7544,7 @@ msgstr ""
 "Proszę podać wartość większą od zera."
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:548
+#: storage/src/modules/FileSystems.ycp:550
 #, no-c-format
 msgid ""
 "<p><b>Log size</b>\n"
@@ -7050,17 +7554,17 @@ msgstr ""
 "Opcja do określenia rozmiar logu (w megabajtach). Jeśli ustawiono \"auto\", domyślnie ustawione zostanie 40% zagregowanej przestrzeni.</p>"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:553
+#: storage/src/modules/FileSystems.ycp:555
 msgid "Invoke Bad Blocks List &Utility"
 msgstr "Wywołaj narzędzie do wyświetlania &uszkodzonych bloków"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:562
+#: storage/src/modules/FileSystems.ycp:564
 msgid "Stride &length in blocks"
 msgstr "Krok długości w b&lokach"
 
 #. popup text
-#: storage/src/modules/FileSystems.ycp:568
+#: storage/src/modules/FileSystems.ycp:570
 msgid ""
 "The \"Stride length in blocks\" value is not possible.\n"
 "Please select a value greater than 1."
@@ -7069,7 +7573,7 @@ msgstr ""
 "Proszę wybrać wartość większą od 1."
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:570
+#: storage/src/modules/FileSystems.ycp:572
 msgid ""
 "<p><b>Stride Length in Blocks:</b>\n"
 "Set RAID-related options for the file system. Currently, the only supported\n"
@@ -7080,7 +7584,7 @@ msgstr ""
 "Opcja do ustawienia wartości związanych z RAID dla systemu plików. Obecnie jedynym obsługiwanym parametrem jest 'stride' (krok), który pobiera numer bloków w pasie RAID jako parametr.</p>\n"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:582
+#: storage/src/modules/FileSystems.ycp:584
 msgid ""
 "<p><b>Block size:</b>\n"
 "Specify the size of blocks in bytes. Valid block size values are 1024, 2048, and 4096 bytes per block. If auto is selected, the block size is determined by the file system size and the expected use of the file system.</p>\n"
@@ -7089,12 +7593,12 @@ msgstr ""
 "Opcja do określenia rozmiaru bloku w bajtach. Dopuszczalne wartości rozmiaru to 1024, 2048 i 4096 bajtów na blok. Jeśli wybrano \"auto\", rozmiar bloku determinowany jest przez rozmiar systemu plików i jego przewidywane wykorzystanie.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:587
+#: storage/src/modules/FileSystems.ycp:589
 msgid "Bytes per &inode"
 msgstr "Bajtów na &inode"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:591
+#: storage/src/modules/FileSystems.ycp:593
 msgid ""
 "<p><b>Bytes per inode:</b>\n"
 "Specify the bytes to inode ratio. YaST2 creates an inode for every &lt;bytes-per-inode&gt; bytes of space on the disk. The larger the bytes-per-inode ratio, the fewer inodes will be created.\n"
@@ -7107,12 +7611,12 @@ msgstr ""
 "w systemie plików po jego utworzeniu, więc należy upewnić się, że wprowadzono rozsądną wartość tego parametru.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:599
+#: storage/src/modules/FileSystems.ycp:601
 msgid "Percentage of blocks &reserved for root"
 msgstr "Udział bloków za&rezerwowanych dla użytkownika root"
 
 #. popup text
-#: storage/src/modules/FileSystems.ycp:607
+#: storage/src/modules/FileSystems.ycp:609
 msgid ""
 "The \"Percentage of blocks reserved for root\" value is incorrect.\n"
 "Please use a value between 0 and 99."
@@ -7121,18 +7625,18 @@ msgstr ""
 "Proszę podać wartość pomiędzy 0 a 99."
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:610
+#: storage/src/modules/FileSystems.ycp:612
 #, no-c-format
 msgid "<p><b>Percentage of blocks reserved for root:</b> Specify the percentage of blocks reserved for the super user. This value defaults to 5%.</p>"
 msgstr "<p><b>Udział bloków zarezerwowanych dla użytkownika root:</b> Opcja określająca udział bloków zarezerwowanych dla administratora. Ta wartość domyślnie ustawiona jest na 5%.</p>"
 
 #. checkbox text
-#: storage/src/modules/FileSystems.ycp:614
+#: storage/src/modules/FileSystems.ycp:616
 msgid "Disable regular checks"
 msgstr "Wyłącz regularne sprawdzanie"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:621
+#: storage/src/modules/FileSystems.ycp:623
 msgid ""
 "<p><b>Disable regular checks:</b>\n"
 "Disable regular file system check at booting.</p>\n"
@@ -7141,12 +7645,12 @@ msgstr ""
 "Wyłącz regularne sprawdzanie systemu plików podczas uruchamiania.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:638
+#: storage/src/modules/FileSystems.ycp:640
 msgid "&Directory Index Feature"
 msgstr "&Narzędzie indeksowania katalogów"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:644
+#: storage/src/modules/FileSystems.ycp:646
 msgid ""
 "<p><b>Directory Index:</b>\n"
 "Enables use of hashed b-trees to speed up lookups in large directories.</p>\n"
@@ -7155,17 +7659,17 @@ msgstr ""
 "Włącza użycie hashed b-trees w celu przyspieszenia wyszukiwania w dużych katalogach.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:811
+#: storage/src/modules/FileSystems.ycp:813
 msgid "Swap &Priority"
 msgstr "&Priorytet swap"
 
 #. popup text
-#: storage/src/modules/FileSystems.ycp:817
+#: storage/src/modules/FileSystems.ycp:819
 msgid "Value must be between 0 and 32767. Try again."
 msgstr "Wartość musi być pomiędzy 0 a 32767. Proszę spróbować ponownie."
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:822
+#: storage/src/modules/FileSystems.ycp:824
 msgid ""
 "<p><b>Swap Priority:</b>\n"
 "Enter the swap priority. Higher numbers mean higher priority.</p>\n"
@@ -7174,7 +7678,7 @@ msgstr ""
 "Proszę określić priorytet swap. Większe liczby oznaczają wyższy priorytet.</p>\n"
 
 #. popup text %1 is replaced by disk name e.g. /dev/hda
-#: storage/src/modules/Partitions.ycp:726
+#: storage/src/modules/Partitions.ycp:735
 #, ycp-format
 msgid ""
 "\n"
@@ -7197,7 +7701,7 @@ msgstr ""
 "edytować, zmieniać rozmiaru ani usuwać ich z dysku w tym miejscu.\n"
 
 #. popup text 
-#: storage/src/modules/Partitions.ycp:738
+#: storage/src/modules/Partitions.ycp:747
 msgid ""
 "\n"
 "\n"
@@ -7213,7 +7717,7 @@ msgstr ""
 "etykietę dysku\", ale to zniszczy wszystkie dane na wszystkich \n"
 "partycjach tego dysku.\n"
 
-#: storage/src/modules/Partitions.ycp:748
+#: storage/src/modules/Partitions.ycp:757
 msgid ""
 "\n"
 "\n"
@@ -7225,16 +7729,29 @@ msgstr ""
 "Jeśli nie zamierza się wykorzystywać tego dysku podczas \n"
 "instalacji, można zignorować ten komunikat.\n"
 
+#: storage/src/modules/Storage.ycp:314
+msgid ""
+"The storage subsystem is locked by an unknown application.\n"
+"You must quit that application before you can continue."
+msgstr ""
+
+#: storage/src/modules/Storage.ycp:322
+#, ycp-format
+msgid ""
+"The storage subsystem is locked by the application \"%1\" (%2).\n"
+"You must quit that application before you can continue."
+msgstr ""
+
 #. internal error popup
-#: storage/src/modules/Storage.ycp:703
+#: storage/src/modules/Storage.ycp:793
 msgid "Too many loop devices (cryptofs ...)"
 msgstr "Za dużo urządzeń pętli (cryptofs ...)"
 
-#: storage/src/modules/Storage.ycp:811
+#: storage/src/modules/Storage.ycp:901
 msgid "Resize Not Possible:"
 msgstr "Zmiana rozmiaru nie jest możliwa:"
 
-#: storage/src/modules/Storage.ycp:2609
+#: storage/src/modules/Storage.ycp:2744
 #, ycp-format
 msgid ""
 "Could not set encryption.\n"
@@ -7247,7 +7764,7 @@ msgstr ""
 "\n"
 "Podane hasło szyfrujące może być nieprawidłowe.\n"
 
-#: storage/src/modules/Storage.ycp:4092
+#: storage/src/modules/Storage.ycp:4315
 #, ycp-format
 msgid ""
 "\n"
@@ -7258,7 +7775,7 @@ msgstr ""
 "Urządzenie %1 nie może zostać mzodyfikowane ponieważ zawiera aktywną\n"
 "przestrzeń wymiany która jest wymagana przez instalator.\n"
 
-#: storage/src/modules/Storage.ycp:4105
+#: storage/src/modules/Storage.ycp:4328
 #, ycp-format
 msgid ""
 "\n"
@@ -7269,7 +7786,7 @@ msgstr ""
 "Urządzenie %1 nie może być zmodyfikowane ponieważ zawiera dane\n"
 "konieczne do ukończenia instalacji.\n"
 
-#: storage/src/modules/Storage.ycp:4126
+#: storage/src/modules/Storage.ycp:4349
 #, ycp-format
 msgid ""
 "\n"
@@ -7280,7 +7797,7 @@ msgstr ""
 "Urządzenie %1 nie może być usunięte ponieważ zawiera aktywną\n"
 "przestrzeń wymiany która jest wymagana przez instalator.\n"
 
-#: storage/src/modules/Storage.ycp:4133
+#: storage/src/modules/Storage.ycp:4356
 #, ycp-format
 msgid ""
 "\n"
@@ -7291,7 +7808,7 @@ msgstr ""
 "Urządzenie %1 nie może być usunięte ponieważ zawiera dane\n"
 "konieczne do ukończenia procesu instalacji.\n"
 
-#: storage/src/modules/Storage.ycp:4159
+#: storage/src/modules/Storage.ycp:4382
 #, ycp-format
 msgid ""
 "\n"
@@ -7304,7 +7821,7 @@ msgstr ""
 "urządzenia %2, które zawiera aktywną przestrzeń wymiany\n"
 "wymaganą przez instalator.\n"
 
-#: storage/src/modules/Storage.ycp:4167
+#: storage/src/modules/Storage.ycp:4390
 #, ycp-format
 msgid ""
 "\n"
@@ -7380,6 +7897,263 @@ msgstr ""
 "Nie ma aktywnych urządzeń DASD.\n"
 "Instalacja nie jest możliwa bez aktywnych urządzeń DASD."
 
+#. Column header
+#: storage/src/modules/StorageFields.ycp:75
+msgid "Device"
+msgstr "Urządzenie"
+
+#. Column header
+#: storage/src/modules/StorageFields.ycp:85
+msgid "Type"
+msgstr "Typ"
+
+#. Column header, abbreviation for "format" (to format a partition)
+#: storage/src/modules/StorageFields.ycp:90
+msgid "F"
+msgstr ""
+
+#. Column header, abbreviation for "Filesystem Type"
+#: storage/src/modules/StorageFields.ycp:95
+#, fuzzy
+msgid "FS Type"
+msgstr "Typ"
+
+#. Column header
+#: storage/src/modules/StorageFields.ycp:105
+msgid "Mount By"
+msgstr "Zamontowane wg"
+
+#. Column header
+#: storage/src/modules/StorageFields.ycp:110
+msgid "Used By"
+msgstr "Użyte przez"
+
+#. Column header
+#: storage/src/modules/StorageFields.ycp:115
+msgid "Start"
+msgstr "Początek"
+
+#. Column header
+#: storage/src/modules/StorageFields.ycp:120
+#, fuzzy
+msgid "End"
+msgstr "Koniec"
+
+#. Column header
+#: storage/src/modules/StorageFields.ycp:125
+msgid "FS Id"
+msgstr ""
+
+#. Column header
+#: storage/src/modules/StorageFields.ycp:155
+#, fuzzy
+msgid "Disk Label"
+msgstr "Etykieta"
+
+#. Column header
+#: storage/src/modules/StorageFields.ycp:160
+msgid "Metadata"
+msgstr ""
+
+#. Column header, abbreviation for "Physical Extent"
+#: storage/src/modules/StorageFields.ycp:165
+#, fuzzy
+msgid "PE Size"
+msgstr "Rozmiar"
+
+#. Column header
+#: storage/src/modules/StorageFields.ycp:170
+#, fuzzy
+msgid "Stripes"
+msgstr "Wy&cinki"
+
+#. Column header
+#: storage/src/modules/StorageFields.ycp:185
+msgid "Parity Algorithm"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:278
+#, fuzzy, ycp-format
+msgid "Device: %1"
+msgstr "Urządzenie"
+
+#: storage/src/modules/StorageFields.ycp:287
+#, fuzzy, ycp-format
+msgid "Size: %1"
+msgstr "Rozmiar %1"
+
+#. label text
+#: storage/src/modules/StorageFields.ycp:326
+#, ycp-format
+msgid "DISK %1"
+msgstr "DYSK %1"
+
+#: storage/src/modules/StorageFields.ycp:343
+#, fuzzy, ycp-format
+msgid "Type: %1"
+msgstr "Typ"
+
+#: storage/src/modules/StorageFields.ycp:361
+#, fuzzy, ycp-format
+msgid "Format: %1"
+msgstr "Formatuj"
+
+#: storage/src/modules/StorageFields.ycp:370
+#, ycp-format
+msgid "Encrypted: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:379
+#, fuzzy, ycp-format
+msgid "File System: %1"
+msgstr "&System plików"
+
+#: storage/src/modules/StorageFields.ycp:390
+#, fuzzy, ycp-format
+msgid "Mount Point: %1"
+msgstr "Punkt &montowania"
+
+#: storage/src/modules/StorageFields.ycp:404
+#, fuzzy, ycp-format
+msgid "Mount By: %1"
+msgstr "Zamontowane wg"
+
+#: storage/src/modules/StorageFields.ycp:413
+#, fuzzy, ycp-format
+msgid "Used By: %1"
+msgstr "Użyte przez"
+
+#: storage/src/modules/StorageFields.ycp:422
+#, ycp-format
+msgid "UUID: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:431
+#, fuzzy, ycp-format
+msgid "Label: %1"
+msgstr "Etykieta"
+
+#: storage/src/modules/StorageFields.ycp:440
+#, ycp-format
+msgid "Path: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:450
+#, ycp-format
+msgid "ID %1: %2"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:461
+#, ycp-format
+msgid "BIOS ID: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:470
+#, ycp-format
+msgid "Disk Label: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:479
+#, ycp-format
+msgid "Vendor: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:488
+#, ycp-format
+msgid "Model: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:497
+#, ycp-format
+msgid "Bus: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:508
+#, ycp-format
+msgid "Metadata Type: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:519
+#, fuzzy, ycp-format
+msgid "Physical Extent Size: %1"
+msgstr "&Fizyczny zasięg rozmiaru"
+
+#: storage/src/modules/StorageFields.ycp:537
+#, fuzzy, ycp-format
+msgid "Stripes: %1"
+msgstr "Wy&cinki"
+
+#: storage/src/modules/StorageFields.ycp:546
+#, fuzzy, ycp-format
+msgid "RAID Type: %1"
+msgstr "T&yp RAID"
+
+#: storage/src/modules/StorageFields.ycp:559
+#, fuzzy, ycp-format
+msgid "Chunk Size: %1"
+msgstr "Rozmiar %1"
+
+#: storage/src/modules/StorageFields.ycp:572
+#, ycp-format
+msgid "Parity Algorithm: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:583
+#, ycp-format
+msgid "Number of Cylinders: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:594
+#, fuzzy, ycp-format
+msgid "Cylinder Size: %1"
+msgstr "Rozmiar cylindra: "
+
+#: storage/src/modules/StorageFields.ycp:609
+#, fuzzy, ycp-format
+msgid "Start Cylinder: %1"
+msgstr "Cylinder począ&tkowy:"
+
+#: storage/src/modules/StorageFields.ycp:624
+#, fuzzy, ycp-format
+msgid "End Cylinder: %1"
+msgstr ""
+"\n"
+"Cylinder końcowy:  "
+
+#: storage/src/modules/StorageFields.ycp:634
+#, ycp-format
+msgid "FS Id: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:644
+#, ycp-format
+msgid "File Path: %1"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:901
+#, fuzzy
+msgid "Device:"
+msgstr "Urządzenie"
+
+#: storage/src/modules/StorageFields.ycp:903
+#, fuzzy
+msgid "File System:"
+msgstr "&System plików"
+
+#: storage/src/modules/StorageFields.ycp:905
+#, fuzzy
+msgid "Hard Disk:"
+msgstr "Dysk twardy"
+
+#: storage/src/modules/StorageFields.ycp:907
+msgid "LVM:"
+msgstr ""
+
+#: storage/src/modules/StorageFields.ycp:909
+#, fuzzy
+msgid "RAID:"
+msgstr "R&AID:"
+
 #. label text
 #: storage/src/proposal/partitions_proposal.ycp:188
 msgid "Partitioning"
@@ -7391,6 +8165,278 @@ msgid "&Partitioning"
 msgstr "&Partycjonowanie"
 
 #. progress step title
-#: storage/src/storage_finish.ycp:47
+#: storage/src/storage_finish.ycp:48
 msgid "Saving file system configuration..."
 msgstr "Zapisywanie konfiguracji systemu plików..."
+
+#~ msgid "LVM Configuration"
+#~ msgstr "Konfiguracja EVMS"
+
+#~ msgid "A&pply"
+#~ msgstr "Za&stosuj"
+
+#~ msgid "All the settings were written and are ready to use."
+#~ msgstr "Wszystkie ustawienia zostały zapisane i są gotowe do użycia."
+
+#~ msgid "LVM configuration"
+#~ msgstr "Konfiguracja LVM"
+
+#~ msgid "Command line interface for the lvm_config module is not available"
+#~ msgstr "Interfejs linii poleceń dla modułu lvm_config nie jest dostępny"
+
+#~ msgid ""
+#~ "Device %1 is already mounted at %2.  \n"
+#~ "A mounted file system cannot be added to a volume group."
+#~ msgstr ""
+#~ "Urządzenie %1 już jest zamontowane na %2.\n"
+#~ "Zamontowany system plików nie może być dodany do grupy woluminów."
+
+#~ msgid ""
+#~ "No device selected.\n"
+#~ "Select the device to edit.\n"
+#~ msgstr ""
+#~ "Nie wybrano żadnego urządzenia.\n"
+#~ "Proszę wybrać urządzenie do edycji.\n"
+
+#~ msgid ""
+#~ "No device selected.\n"
+#~ "Select the device to remove.\n"
+#~ msgstr ""
+#~ "Nie wybrano urządzenia.\n"
+#~ "Proszę wybrać urządzenie do usunięcia.\n"
+
+#~ msgid "free"
+#~ msgstr "wolne"
+
+#~ msgid ""
+#~ "\n"
+#~ " You have selected the disk %1, but you can \n"
+#~ "  only edit a partition like %11, %12, ... \n"
+#~ msgstr ""
+#~ "\n"
+#~ " Wybrano dysk %1 ale można tylko \n"
+#~ "  edytować partycje, takie jak %11, %12, ...\n"
+
+#~ msgid ""
+#~ "CAUTION\n"
+#~ "If you delete the partition table and disk label of\n"
+#~ "device %1, data on this device will be lost.\n"
+#~ "\n"
+#~ "Really do this?\n"
+#~ msgstr ""
+#~ "UWAGA\n"
+#~ "Jeśli zostanie usunięta tablica partycji i etykieta dysku, \n"
+#~ "urządzenia %1, dane na tym urządzeniu zostaną utracone.\n"
+#~ "\n"
+#~ "Na pewno usunąć?\n"
+
+#~ msgid "<p>The upper part of this dialog contains the container-related functionality. Here, create, edit, and modify EVMS containers. </p>"
+#~ msgstr "<p>W górnej części tego okna można określać funkcje związane z kontenerami. Można utworzyć, edytować i modyfikować kontenery EVMS.</p>"
+
+#~ msgid ""
+#~ "<p>\n"
+#~ "The lower part with the list contains all available EVMS devices.\n"
+#~ "If at least one EVMS container is available, you can create new \n"
+#~ "devices that use the available space of the current container.</p>\n"
+#~ msgstr ""
+#~ "<p>\n"
+#~ "Dolna część zawiera listę przedstawiającą wszystkie dostępne urządzenia EVMS. \n"
+#~ "Jeśli jest dostępny przynajmniej jeden kontener EVMS, można utworzyć \n"
+#~ "nowe urządzenia używające przestrzeni aktualnego kontenera.</p>\n"
+
+#~ msgid ""
+#~ "The data entered is invalid.\n"
+#~ "Insert a physical extent size from\n"
+#~ "8KB to 512GB in powers of 2, for example, 4M or 512K.\n"
+#~ msgstr ""
+#~ "Wprowadzone dane są nieprawidłowe.\n"
+#~ "Należy wprowadzić fizyczny zasięg rozmiaru od 8 KB do 512 GB \n"
+#~ "w potęgach 2, na przykład 4 MB lub 512 KB.\n"
+
+#~ msgid "Modify Existing EVMS Container"
+#~ msgstr "Modyfikacja istniejącego kontenera EVMS"
+
+#~ msgid "Create EVMS Container"
+#~ msgstr "Utwórz kontener EVMS"
+
+#~ msgid "Modify EVMS Container"
+#~ msgstr "Zmodyfikuj kontener EVMS"
+
+#~ msgid ""
+#~ "Change the settings for an EVMS container.\n"
+#~ "Container type, PE size, and container name can only be set when creating\n"
+#~ "the container.\n"
+#~ msgstr ""
+#~ "Zmiana ustawień kontenera EVMS. Typ kontenera, rozmiar PE \n"
+#~ "i nazwa kontenera mogą być ustawione tylko podczas\n"
+#~ "tworzenia nowego kontenera.\n"
+
+#~ msgid "Container Type"
+#~ msgstr "Typ kontenera"
+
+#~ msgid "Linux LVM"
+#~ msgstr "Linux LVM"
+
+#~ msgid "Linux LVM2"
+#~ msgstr "Linux LVM2"
+
+#~ msgid "Container &Name"
+#~ msgstr "&Nazwa kontenera"
+
+#~ msgid "Container Size:"
+#~ msgstr "Rozmiar kontenera:"
+
+#~ msgid " Container"
+#~ msgstr "Kontener"
+
+#~ msgid ""
+#~ "If you remove the selected partition from the container,\n"
+#~ "there will not be enough space for all volumes in this container.\n"
+#~ "To delete the container completely, remove its volumes first."
+#~ msgstr ""
+#~ "Po usunięciu zaznaczonej partycji z kontenera, nie będzie \n"
+#~ "wystarczająco dużo miejsca dla wszystkich woluminów w kontenerze. \n"
+#~ "Aby usunąć kontener całkowicie, należy najpierw usunąć woluminy."
+
+#~ msgid ""
+#~ "The data entered is invalid.\n"
+#~ "Insert a container names like \"system\" or \"test\".\n"
+#~ "Do not use ;/`, in this name.\n"
+#~ msgstr ""
+#~ "Wprowadzone dane są nieprawidłowe. \n"
+#~ "Proszę wprowadzić nazwy kontenerów, takie jak \"system\" lub \"test\". \n"
+#~ "W nazwie nie można używać ; / `,.\n"
+
+#~ msgid ""
+#~ "The container named \"%1\" already exists.\n"
+#~ "Choose a different name\n"
+#~ "or cancel this dialog.\n"
+#~ msgstr ""
+#~ "Kontener o nazwie \"%1\" już istnieje.\n"
+#~ "Proszę podać inną nazwę albo anulować.\n"
+
+#~ msgid ""
+#~ "The container contains no physical volume.\n"
+#~ "Every container must consist of at least one physical volume."
+#~ msgstr ""
+#~ "Kontener nie zawiera fizycznych woluminów.\n"
+#~ "Każdy kontener musi zawierać przynajmniej jeden fizyczny wolumin."
+
+#~ msgid ""
+#~ "The container \"%1\" contains at least one volume.\n"
+#~ "It cannot be removed. Remove all volumes of this container\n"
+#~ "before removing the container"
+#~ msgstr ""
+#~ "Kontener \"%1\" zawiera przynajmniej jeden wolumin.\n"
+#~ "Nie można go usunąć. Przed jego usunięciem należy usunąć wszystkie woluminy tego kontenera."
+
+#~ msgid "Really remove container \"%1\"?"
+#~ msgstr "Na pewno usunąć kontener \"%1\"?"
+
+#~ msgid "EVMS &Container"
+#~ msgstr "&Kontener EVMS"
+
+#~ msgid "Volume Name: "
+#~ msgstr "Nazwa woluminu: "
+
+#~ msgid ""
+#~ "A volume named \"%1\" already exists\n"
+#~ "in container \"%2\". Choose another name\n"
+#~ "or cancel this dialog.\n"
+#~ msgstr ""
+#~ "Wolumin nazwany \"%1\" już istnieje w kontenerze\n"
+#~ "\"%2\". Proszę wybrać inną nazwę albo anulować.\n"
+
+#~ msgid ""
+#~ "A volume with the requested size \n"
+#~ "could not be created. \n"
+#~ msgstr ""
+#~ "Nie można było utworzyć woluminu \n"
+#~ "o żądanym rozmiarze. \n"
+
+#~ msgid "There is no available space in the current container %1."
+#~ msgstr "Nie ma wolnego miejsca na dysku w bieżącym kontenerze %1."
+
+#~ msgid ""
+#~ "You can only delete logical volumes in a container.\n"
+#~ "%1 is not a logical volume produced by a container.\n"
+#~ msgstr ""
+#~ "W kontenerze można usuwać tylko logiczne woluminy.\n"
+#~ "%1 nie jest logicznym woluminem wygenerowanym z kontenera.\n"
+
+#~ msgid ""
+#~ "To use LVM, at least one partition of type 0x8e (or 0x83)\n"
+#~ "is required. Change your partition table accordingly.\n"
+#~ "In most cases, this can be done in the following way:\n"
+#~ "click 'Create', select 'Do not format', and set the File System ID to 0x8e.\n"
+#~ msgstr ""
+#~ "Aby użyć LVM, wymagana jest conajmniej jedna partycja typu 0x8E \n"
+#~ "(lub 0x83). Proszę zmienić odpowiednio tablicę partycji. W większości \n"
+#~ "przypadków można to zrobić w następujący sposób: należy nacisnąć przycisk\n"
+#~ "'Utwórz', wybrać 'Nie formatuj' i ustawić identyfikator partycji na 0x8E.\n"
+
+#~ msgid "Edit the current volume group:"
+#~ msgstr "Edytuj bieżącą grupę woluminów:"
+
+#~ msgid "Physical volume size:"
+#~ msgstr "Fizyczny rozmiar woluminów:"
+
+#~ msgid " F "
+#~ msgstr " F "
+
+#~ msgid "E&VMS..."
+#~ msgstr "E&VMS..."
+
+#~ msgid "Rereading the partition table cancels all current changes. Really reread the partition table?"
+#~ msgstr "Ponowne odczytanie tablicy partycji anuluje wszystkie zmiany. Naprawdę odczytać ponownie tablicę partycji?"
+
+#~ msgid "Available"
+#~ msgstr "Dostępne"
+
+#~ msgid "C&reate Container"
+#~ msgstr "Utwó&rz kontener"
+
+#~ msgid "&Edit Container"
+#~ msgstr "&Edytuj kontener"
+
+#~ msgid "&Remove Container"
+#~ msgstr "Us&uń kontener"
+
+#~ msgid "EVMS Configuration"
+#~ msgstr "Konfiguracja EVMS"
+
+#~ msgid ""
+#~ "You have changed the EVMS configuration.\n"
+#~ "These changes will be lost if you exit the dialog now.\n"
+#~ "Continue?\n"
+#~ msgstr ""
+#~ "Zmieniono konfigurację EVMS.\n"
+#~ "Zmiany te zostaną utracone, jeśli opuści się teraz to okno.\n"
+#~ "Kontynuować?\n"
+
+#~ msgid "Logical Volume Manager: Logical Volumes"
+#~ msgstr "Zarządzanie logicznymi woluminami: logiczne woluminy"
+
+#~ msgid "There is no available space in volume group %1."
+#~ msgstr "Nie ma wolnego miejsca w grupie woluminów %1."
+
+#~ msgid "Logical Volume Manager: Physical Volume Setup"
+#~ msgstr "Zarządzanie logicznymi woluminami: ustawienia fizycznych woluminów"
+
+#~ msgid ""
+#~ "The volume group %1 does not have \n"
+#~ "any physical volumes assigned. This is not possible.\n"
+#~ "Either remove this volume group or add at least\n"
+#~ "one physical volume to it.\n"
+#~ msgstr ""
+#~ "Grupa woluminów %1 nie posiada przypisanych \n"
+#~ "żadnych woluminów fizycznych. To nie jest możliwe.\n"
+#~ "Należy usunąć tę grupę woluminów, albo dodać do niej \n"
+#~ "przynajmniej jeden wolumin fizyczny.\n"
+
+#~ msgid ""
+#~ "<p><b>Charset for File Names:</b>\n"
+#~ "Set the charset used to display file names on the partition.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Zestaw znaków dla nazw plików:</b>\n"
+#~ "Opcja służąca do określania zestawów znaków dla nazw plików na partycji.</p>\n"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: online-update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-29 17:08+0200\n"
+"POT-Creation-Date: 2008-08-04 10:29+0200\n"
 "PO-Revision-Date: 2008-05-05 09:33+0200\n"
 "Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -49,35 +49,35 @@ msgid "Saturday"
 msgstr "Sobota"
 
 #. summary header (yes/no follows)
-#: src/AutoOnlineUpdate.ycp:292
+#: src/AutoOnlineUpdate.ycp:291
 msgid "Scheduled Online Update Enabled"
 msgstr "Włączone planowe aktualizacje online"
 
-#: src/AutoOnlineUpdate.ycp:293 src/AutoOnlineUpdate.ycp:327
+#: src/AutoOnlineUpdate.ycp:292 src/AutoOnlineUpdate.ycp:326
 msgid "Yes"
 msgstr "Tak"
 
-#: src/AutoOnlineUpdate.ycp:293 src/AutoOnlineUpdate.ycp:327
+#: src/AutoOnlineUpdate.ycp:292 src/AutoOnlineUpdate.ycp:326
 msgid "No"
 msgstr "Nie"
 
 #. radibutton label
-#: src/AutoOnlineUpdate.ycp:301 src/OnlineUpdateDialogs.ycp:111
+#: src/AutoOnlineUpdate.ycp:300 src/OnlineUpdateDialogs.ycp:111
 msgid "Daily"
 msgstr "Codziennie"
 
-#: src/AutoOnlineUpdate.ycp:308
+#: src/AutoOnlineUpdate.ycp:307
 #, ycp-format
 msgid "%1 at %2:%3"
 msgstr "%1 o %2:%3"
 
-#: src/AutoOnlineUpdate.ycp:312
+#: src/AutoOnlineUpdate.ycp:311
 #, ycp-format
 msgid "%1 at a Random Time"
 msgstr "%1 w losowym czasie"
 
 #. summary header
-#: src/AutoOnlineUpdate.ycp:316
+#: src/AutoOnlineUpdate.ycp:315
 msgid "Time of Scheduled Online Update"
 msgstr "Czas planowych aktualizacji online"
 
@@ -87,7 +87,7 @@ msgstr "Czas planowych aktualizacji online"
 #. summary = Summary::AddLine(summary, autoget ? _("Yes") : _("No") );
 #.
 #. summary header
-#: src/AutoOnlineUpdate.ycp:326
+#: src/AutoOnlineUpdate.ycp:325
 msgid "Skip packages with preinstall information?"
 msgstr "Pominąć pakiety z informacją przedinstalacyjną?"
 
@@ -109,6 +109,24 @@ msgstr ""
 "Co najmniej jedno z zainstalowanych uaktualnień wymaga do poprawnego\n"
 "działania ponownego uruchomienia systemu. Proszę uruchomić system ponownie."
 
+#. continue/cancel popup text
+#: src/OnlineUpdate.ycp:36
+msgid ""
+"There are patches for package management available requiring restart of YaST.\n"
+"They should be installed first and all other patches after the restart.\n"
+"\n"
+"You selected some other patches to be installed now.\n"
+"\n"
+"Continue with installing your selection?"
+msgstr ""
+"Wybrano do instalacji poprawki, które wymagają restartu YaST.\n"
+"Powinny one zostać zainstalowane przed wszystkimi innymi poprawkami,\n"
+"natomiast wszystkie inne po restarcie programu YaST.\n"
+"\n"
+"Wybrano inne poprawki do instalacji teraz.\n"
+"\n"
+"Kontynuować instalowanie?"
+
 #. progress log item (%1 is name of package)
 #: src/OnlineUpdateCallbacks.ycp:94
 #, ycp-format
@@ -120,84 +138,91 @@ msgstr "Pobieranie %1..."
 msgid "Package Download Progress"
 msgstr "Postęp w ściąganiu pakietów"
 
-#. progress log item (%1 is name of package, %2 is summary)
+#. progress log action (what is being done with the package)
 #: src/OnlineUpdateCallbacks.ycp:128
-#, ycp-format
-msgid "Installing %1: \"%2\" "
+msgid "Removing"
+msgstr ""
+
+#: src/OnlineUpdateCallbacks.ycp:128
+#, fuzzy
+msgid "Installing"
 msgstr "Instalowanie %1: \"%2\" "
 
 #. progress bar label
-#: src/OnlineUpdateCallbacks.ycp:133
+#: src/OnlineUpdateCallbacks.ycp:141
 msgid "Package Installation Progress"
 msgstr "Postęp w instalowaniu pakietów"
 
 #. progress log item (=previous action finished correctly)
-#: src/OnlineUpdateCallbacks.ycp:146
+#: src/OnlineUpdateCallbacks.ycp:154
 msgid "OK"
 msgstr "OK"
 
-#: src/OnlineUpdateCallbacks.ycp:212
+#. Progress log. Leave the space at the end, some other text may follow
+#: src/OnlineUpdateCallbacks.ycp:222
 #, ycp-format
 msgid "Downloading delta RPM %1 "
 msgstr "Pobieranie pakietów przyrostowych %1"
 
 #. progress bar label
-#: src/OnlineUpdateCallbacks.ycp:217
+#: src/OnlineUpdateCallbacks.ycp:227
 msgid "Delta RPM Download Progress"
 msgstr "Postęp w ściąganiu pakietów przyrostowych"
 
 #. progress log item (previous action failed(%1 is reason)
-#: src/OnlineUpdateCallbacks.ycp:243
+#: src/OnlineUpdateCallbacks.ycp:253
 #, ycp-format
 msgid "Failed to download delta RPM: %1"
 msgstr "Ściąganie pakietu przyrostowego %1 nie powiodło się."
 
-#. progress log item (%1 is name of delta RPM)
-#: src/OnlineUpdateCallbacks.ycp:254
+#. Progress log item (%1 is name of delta RPM).
+#. Leave the space at the end, some other text may follow.
+#: src/OnlineUpdateCallbacks.ycp:265
 #, ycp-format
 msgid "Applying delta RPM: %1 "
 msgstr "Instalacja pakietu przyrostowego: %1"
 
 #. progress bar label
-#: src/OnlineUpdateCallbacks.ycp:259
+#: src/OnlineUpdateCallbacks.ycp:270
 msgid "Delta RPM Application Progress"
 msgstr "Postęp aktualizacji "
 
 #. progress log item (previous action failed(%1 is reason)
-#: src/OnlineUpdateCallbacks.ycp:285
+#: src/OnlineUpdateCallbacks.ycp:296
 #, ycp-format
 msgid "Failed to apply delta RPM: %1"
 msgstr "Zastosowanie pliku przyrostowego %1 nie powiodło się."
 
-#: src/OnlineUpdateCallbacks.ycp:299
+#. Progress log; lave the space at the end, some other text may follow.
+#: src/OnlineUpdateCallbacks.ycp:311
 #, ycp-format
 msgid "Downloading patch RPM %1 "
 msgstr "Pobieranie poprawki %1"
 
 #. progress bar label
-#: src/OnlineUpdateCallbacks.ycp:304
+#: src/OnlineUpdateCallbacks.ycp:316
 msgid "Patch RPM Download Progress"
 msgstr "Postęp w pobieraniu poprawki"
 
 #. progress log item (previous action failed(%1 is reason)
-#: src/OnlineUpdateCallbacks.ycp:330
+#: src/OnlineUpdateCallbacks.ycp:342
 #, ycp-format
 msgid "Failed to download patch RPM: %1"
 msgstr "Nie powiodło sie pobieranie poprawki %1."
 
 #. progress bar label
-#: src/OnlineUpdateCallbacks.ycp:356
+#: src/OnlineUpdateCallbacks.ycp:368
 msgid "Script Execution Progress"
 msgstr "Postęp wykonania skryptu"
 
 #. log entry, %1 is name of the patch which contains the script
-#: src/OnlineUpdateCallbacks.ycp:361
+#: src/OnlineUpdateCallbacks.ycp:373
 #, ycp-format
 msgid "Starting script %1"
 msgstr "Uruchamianie skryptu %1"
 
 #. label, %1 is patch name with version and architecture
-#: src/OnlineUpdateCallbacks.ycp:432
+#: src/OnlineUpdateCallbacks.ycp:446
 #, ycp-format
 msgid ""
 "Patch %1\n"
@@ -207,7 +232,7 @@ msgstr ""
 "\n"
 
 #. error popoup (detailed info follows)
-#: src/OnlineUpdateCallbacks.ycp:503
+#: src/OnlineUpdateCallbacks.ycp:519
 msgid "There was an error in the repository initialization."
 msgstr "Napotkano błąd podczas inicjalizacji repozytorium."
 
@@ -411,12 +436,12 @@ msgstr ""
 "inicjalizacja..."
 
 #. popup heading, with rich text widget and Yes/No buttons
-#: src/inst_you.ycp:227
+#: src/inst_you.ycp:250
 msgid "Do you accept this license agreement?"
 msgstr "Czy akceptują Państwo tę umowę licencyjną?"
 
 #. message popup
-#: src/inst_you.ycp:263
+#: src/inst_you.ycp:286
 msgid ""
 "The kernel has been updated. The system will\n"
 "reboot now then continue the installation.\n"
@@ -425,52 +450,58 @@ msgstr ""
 "uruchomiony ponownie, po czym instalacja będzie kontynuowana.\n"
 
 #. help text for online-update initialization
-#: src/online_update.ycp:38
+#: src/online_update.ycp:39
 msgid "<p>The system is initializing the installation and update repositories. Software repositories can be altered in the <b>Installation Source</b> module.</p>"
 msgstr "<p>System inicjalizuje źródła instalacji i aktualizacji. Ustawienia tych źrodeł można zmienić w module <b>Źródła instalacji</b></p>"
 
 #. progress stage label
-#: src/online_update.ycp:42
+#: src/online_update.ycp:43
 msgid "Initialize the target system"
 msgstr "Inicjalizacja systemu docelowego"
 
 #. progress stage label
-#: src/online_update.ycp:44
+#: src/online_update.ycp:45
 msgid "Refresh software repositories"
 msgstr "Odświeżanie źródeł oprogramowania"
 
 #. progress stage label
-#: src/online_update.ycp:46
+#: src/online_update.ycp:47
 msgid "Check for available updates"
 msgstr "Sprawdź dostępne aktualizacje"
 
 #. progress step label
-#: src/online_update.ycp:50
+#: src/online_update.ycp:51
 msgid "Initializing the target system..."
 msgstr "Uruchamianie systemu docelowego..."
 
 #. progress step label
-#: src/online_update.ycp:52
+#: src/online_update.ycp:53
 msgid "Refreshing software repositories..."
 msgstr "Odświeżanie źródeł oprogramowania..."
 
 #. progress step label
-#: src/online_update.ycp:54
+#: src/online_update.ycp:55
 msgid "Checking for available updates..."
 msgstr "Sprawdzanie dostępnych aktualizacji..."
 
 #. final progress step label
-#: src/online_update.ycp:56
+#: src/online_update.ycp:57
 msgid "Finished"
 msgstr "Zakończono"
 
 #. dialog caption
-#: src/online_update.ycp:60
+#: src/online_update.ycp:62
+#, fuzzy
+msgid "Initializing CD Update"
+msgstr "Uruchamianie aktualizacji online"
+
+#. dialog caption
+#: src/online_update.ycp:64
 msgid "Initializing Online Update"
 msgstr "Uruchamianie aktualizacji online"
 
 #. continue/cancel message
-#: src/online_update.ycp:93
+#: src/online_update.ycp:98
 msgid ""
 "No active update repository available.\n"
 "Exit Online Update now?\n"
@@ -479,28 +510,28 @@ msgstr ""
 "Zakończyć moduł aktualizacji online?\n"
 
 #. command line help text
-#: src/online_update.ycp:245
+#: src/online_update.ycp:262
 msgid "Online Update module"
 msgstr "moduł aktualizacji online"
 
 #. command line help text for cd_update action
-#: src/online_update.ycp:251
+#: src/online_update.ycp:268
 msgid "Start Patch CD Update"
 msgstr "Uruchamia aktualizacje z płyty z poprawkami"
 
 #. command line help text for simple_mode action
-#: src/online_update.ycp:256
+#: src/online_update.ycp:273
 msgid "Use simple package selector"
 msgstr "Używa prostego wyboru pakietów"
 
 #. command line help text for cd_url option
-#: src/online_update.ycp:262
+#: src/online_update.ycp:279
 #, ycp-format
 msgid "URL for Patch CD (default value is '%1')"
 msgstr "Adres płyty z poprawkami (domyślnie '%1')"
 
 #. command line help text for cd_directory option
-#: src/online_update.ycp:268
+#: src/online_update.ycp:285
 #, ycp-format
 msgid "Directory for patch data on Patch CD (default value is '%1')"
 msgstr "Katalog z poprawkami na płycie z poprawkami (domyślnie '%1')"
@@ -572,24 +603,6 @@ msgstr ""
 "Inicjalizacja zakończona niepowodzeniem.\n"
 "Proszę sprawdzić, czy w napędzie\n"
 "znajduje się właściwa płyta CD.\n"
-
-#. continue/cancel popup
-#: src/online_update_select.ycp:122
-msgid ""
-"There are patches for package management available requiring restart of YaST.\n"
-"They should be installed first and all other patches after the restart.\n"
-"\n"
-"You selected some other patches to be installed now.\n"
-"\n"
-"Continue with installing your selection?"
-msgstr ""
-"Wybrano do instalacji poprawki, które wymagają restartu YaST.\n"
-"Powinny one zostać zainstalowane przed wszystkimi innymi poprawkami,\n"
-"natomiast wszystkie inne po restarcie programu YaST.\n"
-"\n"
-"Wybrano inne poprawki do instalacji teraz.\n"
-"\n"
-"Kontynuować instalowanie?"
 
 #. command line error message
 #: src/online_update_setup.ycp:49

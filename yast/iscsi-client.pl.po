@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: iscsi-client\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-21 10:39+0200\n"
+"POT-Creation-Date: 2008-08-04 10:36+0200\n"
 "PO-Revision-Date: 2008-04-24 21:02+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -19,87 +19,78 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: src/IscsiClient.ycp:90
+#: src/IscsiClient.ycp:91
 #, ycp-format
 msgid "<p>To configure the iSCSI initiator, the <b>%1</b> package must be installed.</p>"
 msgstr "<p>Aby skonfigurować moduł inicjujący iSCSI, należy zainstalować pakiet <b>%1</b>.</p>"
 
-#: src/IscsiClient.ycp:91
+#: src/IscsiClient.ycp:92
 msgid "<p>Install it now?</p>"
 msgstr "<p>Czy zainstalować go teraz?</p>"
 
 #. IscsiClient read dialog caption
-#: src/IscsiClient.ycp:137
+#: src/IscsiClient.ycp:138
 msgid "Initializing iSCSI Initiator Configuration"
 msgstr "Inicjalizacja konfiguracji modułu inicjującego iSCSI"
 
 #. Progress stage 1/3
-#: src/IscsiClient.ycp:149
+#: src/IscsiClient.ycp:150
 msgid "Read the database"
 msgstr "Odczytywanie bazy danych"
 
 #. Progress stage 2/3
-#: src/IscsiClient.ycp:151
+#: src/IscsiClient.ycp:152
 msgid "Read the previous settings"
 msgstr "Odczytywanie poprzednich ustawień"
 
 #. Progress stage 3/3
-#: src/IscsiClient.ycp:153
+#: src/IscsiClient.ycp:154
 msgid "Detect the devices"
 msgstr "Wykrywanie urządzeń"
 
 #. Progress step 1/3
-#: src/IscsiClient.ycp:156
+#: src/IscsiClient.ycp:157
 msgid "Reading the database..."
 msgstr "Wczytywanie bazy danych..."
 
 #. Progress step 2/3
-#: src/IscsiClient.ycp:158
+#: src/IscsiClient.ycp:159
 msgid "Reading the previous settings..."
 msgstr "Wczytywanie poprzednich ustawień..."
 
 #. Progress step 3/3
-#: src/IscsiClient.ycp:160
+#: src/IscsiClient.ycp:161
 msgid "Detecting the devices..."
 msgstr "Wykrywanie urządzeń..."
 
 #. Progress finished
-#: src/IscsiClient.ycp:162 src/IscsiClient.ycp:239
+#: src/IscsiClient.ycp:163
 msgid "Finished"
 msgstr "Zakończono"
 
 #. IscsiClient read dialog caption
-#: src/IscsiClient.ycp:218
+#: src/IscsiClient.ycp:219
 msgid "Saving iSCSI Initiator Configuration"
 msgstr "Zapisywanie konfiguracji modułu inicjującego iSCSI"
 
 #. Progress stage 1/2
-#: src/IscsiClient.ycp:230
-msgid "Write the settings"
+#: src/IscsiClient.ycp:228
+#, fuzzy
+msgid "Write the autoYaST settings"
 msgstr "Zapisywanie ustawień"
 
 #. Progress stage 2/2
-#: src/IscsiClient.ycp:232
-msgid "Run SuSEconfig"
-msgstr "Uruchom SuSEconfig"
-
-#. Progress step 1/2
-#: src/IscsiClient.ycp:235
-msgid "Writing the settings..."
-msgstr "Zapisywanie ustawień..."
-
-#. Progress step 2/2
-#: src/IscsiClient.ycp:237
-msgid "Running SuSEconfig..."
-msgstr "Uruchamianie SuSEconfig..."
+#: src/IscsiClient.ycp:230
+msgid "Set up service status"
+msgstr ""
 
 #. TODO FIXME: your code here...
 #. Configuration summary text for autoyast
-#: src/IscsiClient.ycp:285
+#: src/IscsiClient.ycp:279
 msgid "Configuration summary..."
 msgstr "Podsumowanie konfiguracji..."
 
-#: src/IscsiClientLib.ycp:284
+#: src/IscsiClientLib.ycp:292
 msgid ""
 "InitiatorName from iBFT and from <tt>/etc/iscsi/initiatorname.iscsi</tt> differ.\n"
 "The old initiatorname will be replaced by the value of iBFT and create a backup.\n"
@@ -421,7 +412,7 @@ msgid "Configuration of an iSCSI initiator"
 msgstr "Konfiguracja modułu inicjującego iSCSI"
 
 #. progress step title
-#: src/iscsi-client_finish.ycp:41
+#: src/iscsi-client_finish.ycp:43
 msgid "Saving iSCSI configuration..."
 msgstr "Zapisywanie konfiguracji iSCSI..."
 
@@ -471,11 +462,13 @@ msgstr "Brak poprawnego adresu IP"
 msgid "Port field cannot be empty"
 msgstr "Pole port nie może być puste"
 
-#: src/widgets.ycp:264
+#: src/widgets.ycp:263
+#, fuzzy
 msgid ""
 "Incorrect InitiatorName.\n"
 "The correct syntax is\n"
-"iqn.yyyy-mm.reversed domain name[:identifier]\n"
+"iqn.yyyy-mm.reversed.domain.name[:identifier]\n"
+"or eui.yyyy-mm.reversed.domain.name[:identifier]\n"
 "\n"
 "Example:\n"
 "iqn.2007-04.cz.server:storage.disk.sdb\n"
@@ -524,6 +517,15 @@ msgstr "Konfiguracja modułu inicjującego iSCSI"
 #: src/wizards.ycp:125
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
+#~ msgid "Run SuSEconfig"
+#~ msgstr "Uruchom SuSEconfig"
+
+#~ msgid "Writing the settings..."
+#~ msgstr "Zapisywanie ustawień..."
+
+#~ msgid "Running SuSEconfig..."
+#~ msgstr "Uruchamianie SuSEconfig..."
 
 #~ msgid "Insert the IP address."
 #~ msgstr "Wstaw adres IP"
