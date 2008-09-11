@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ldap-server\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-04 10:31+0200\n"
+"POT-Creation-Date: 2008-09-11 09:39+0200\n"
 "PO-Revision-Date: 2008-05-16 23:12+0200\n"
 "Last-Translator: Wadim Dziedzic <wdziedzic@aviary.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -21,252 +21,699 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#. don't count frontend and Config DB
-#: src/LdapDatabase.ycp:22
+#: src/LdapDatabase.ycp:27
+msgid "Password Policy Settings"
+msgstr "Ustawienia reguł haseł"
+
+#: src/LdapDatabase.ycp:31
+msgid "Enable Password Policies"
+msgstr "Włącz &ustawienia reguł haseł"
+
+#: src/LdapDatabase.ycp:37
+msgid "Hash Clear Text Passwords"
+msgstr "Szyfrowanie haseł z otwartym tekstem"
+
+#: src/LdapDatabase.ycp:43
+msgid "Disclose \"Account Locked\" Status"
+msgstr "Ujawnij stan \"Konta zamkniętego\""
+
+#: src/LdapDatabase.ycp:51
+msgid "Default Policy Object DN"
+msgstr "Domyślny obiekt reguł DN"
+
+#: src/LdapDatabase.ycp:57 src/widgets.ycp:216
+msgid "&Append Base DN"
+msgstr "Dodaj B&ase DN"
+
+#: src/LdapDatabase.ycp:88
 #, fuzzy
 msgid "New Database"
 msgstr "Bazy danych"
 
-#: src/LdapDatabase.ycp:33 src/widgets.ycp:140
+#: src/LdapDatabase.ycp:92
 #, fuzzy
-msgid "Basic Settings"
-msgstr "Ustawienia TLS"
+msgid "Basic Database Settings"
+msgstr "Bazy danych"
 
-#: src/LdapDatabase.ycp:37 src/dialogs.ycp:300 src/widgets.ycp:209
+#: src/LdapDatabase.ycp:96
+#, fuzzy
+msgid "Database Type"
+msgstr "Bazy danych"
+
+#: src/LdapDatabase.ycp:99 src/widgets.ycp:208
 msgid "&Base DN"
 msgstr "&Base DN"
 
-#: src/LdapDatabase.ycp:43 src/dialogs.ycp:306
+#: src/LdapDatabase.ycp:105
 #, fuzzy
 msgid "&Administrator DN"
 msgstr "&Hasło administratora"
 
-#: src/LdapDatabase.ycp:48 src/dialogs.ycp:310
+#: src/LdapDatabase.ycp:110
 msgid "A&ppend Base DN"
 msgstr "D&odaj Base DN"
 
-#: src/LdapDatabase.ycp:58 src/dialogs.ycp:319
+#: src/LdapDatabase.ycp:120
 #, fuzzy
 msgid "LDAP Administrator &Password"
 msgstr "&Hasło administratora"
 
-#: src/LdapDatabase.ycp:62 src/complex.ycp:347 src/dialogs.ycp:322
-#: src/widgets.ycp:324
+#: src/LdapDatabase.ycp:124 src/complex.ycp:332 src/widgets.ycp:306
 msgid "&Validate Password"
 msgstr "Spra&wdzenie hasła"
 
-#: src/LdapDatabase.ycp:65 src/complex.ycp:349 src/dialogs.ycp:325
-#: src/widgets.ycp:326
-#, fuzzy
-msgid "Password &Encryption"
-msgstr "Szyfrowani&e"
-
-#: src/LdapDatabase.ycp:72
+#: src/LdapDatabase.ycp:131
 msgid "&Database Directory"
 msgstr "Katalog bazy &danych"
 
-#: src/LdapDatabase.ycp:76 src/widgets.ycp:180
+#: src/LdapDatabase.ycp:135 src/widgets.ycp:179
 msgid "&Browse..."
 msgstr "Przeg&lądaj..."
 
-#: src/LdapDatabase.ycp:90
+#: src/LdapDatabase.ycp:140
+msgid "Use this database as the default for OpenLDAP clients"
+msgstr ""
+
+#: src/LdapDatabase.ycp:189
 msgid "Select Database Directory"
 msgstr "Wybór katalogu bazy danych"
 
-#: src/LdapDatabase.ycp:129
+#: src/LdapDatabase.ycp:231
 msgid "Base DN must be set."
 msgstr "Base DN musi być zdefiniowany."
 
-#: src/LdapDatabase.ycp:138
+#: src/LdapDatabase.ycp:242
 msgid "A database with that Base DN already exists."
 msgstr "Baza danych z podanym Base DN już istnieje."
 
-#: src/LdapDatabase.ycp:149
+#: src/LdapDatabase.ycp:286
 msgid "Root DN must be set if a password is given."
 msgstr "Jeśli zostało podane hasło, należy ustawić Root DN."
 
-#. error popup
-#: src/LdapDatabase.ycp:154 src/dialogs.ycp:369
+#: src/LdapDatabase.ycp:291
 msgid "Password validation failed."
 msgstr "Nieprawidłowe hasło."
 
-#: src/LdapDatabase.ycp:159
+#: src/LdapDatabase.ycp:302
 msgid "A directory must be specified."
 msgstr "Należy podać katalog."
 
-#: src/LdapDatabase.ycp:164
+#: src/LdapDatabase.ycp:307
 msgid "The directory does not exist. Create it?"
 msgstr "Katalog nie istnieje. Czy utworzyć go?"
 
-#: src/LdapDatabase.ycp:197
+#: src/LdapDatabase.ycp:332
 #, fuzzy
 msgid "Syncprov settings"
 msgstr "Ustawienia TLS"
 
-#: src/LdapDatabase.ycp:222
+#: src/LdapDatabase.ycp:501
 #, fuzzy
-msgid "ppolicy settings"
+msgid "Authentication failed. The password is probably incorrect.\n"
+msgstr ""
+"Uwierzytelnianie nie powiodło się. Prawdopodobnie hasło było nieprawidłowe.\n"
+"Komunikat błędu: '%s'.\n"
+"Czy ponowić próbę? \n"
+
+#: src/LdapDatabase.ycp:502
+msgid "The error message was: '"
+msgstr ""
+
+#: src/LdapDatabase.ycp:503
+msgid "Try again?"
+msgstr ""
+
+#: src/LdapDatabase.ycp:555
+#, fuzzy
+msgid "Available Attribute Types"
+msgstr "Dostępne bazy danych:"
+
+#: src/LdapDatabase.ycp:560
+#, fuzzy
+msgid "Selected Attribute Types"
+msgstr "Wybór typu"
+
+#: src/LdapDatabase.ycp:605
+msgid "All Entries"
+msgstr ""
+
+#: src/LdapDatabase.ycp:606
+msgid "All Entries in the subtree"
+msgstr ""
+
+#: src/LdapDatabase.ycp:607
+msgid "The Entry with the DN"
+msgstr ""
+
+#: src/LdapDatabase.ycp:611
+msgid "Everybody"
+msgstr ""
+
+#: src/LdapDatabase.ycp:612
+msgid "Authenticated Clients"
+msgstr ""
+
+#: src/LdapDatabase.ycp:613
+msgid "Anonymous Clients"
+msgstr ""
+
+#: src/LdapDatabase.ycp:614
+msgid "The accessed Entry (self)"
+msgstr ""
+
+#: src/LdapDatabase.ycp:615
+msgid "The user with the DN"
+msgstr ""
+
+#: src/LdapDatabase.ycp:616
+msgid "All entries in the subtree"
+msgstr ""
+
+#: src/LdapDatabase.ycp:617
+msgid "All members of the group"
+msgstr ""
+
+#: src/LdapDatabase.ycp:630
+msgid "No Access"
+msgstr ""
+
+#: src/LdapDatabase.ycp:631
+msgid "No Access (but disclose information on error)"
+msgstr ""
+
+#: src/LdapDatabase.ycp:632
+msgid "Authenticate"
+msgstr ""
+
+#: src/LdapDatabase.ycp:633
+msgid "Compare"
+msgstr ""
+
+#: src/LdapDatabase.ycp:634
+msgid "Read"
+msgstr ""
+
+#: src/LdapDatabase.ycp:635
+msgid "Write"
+msgstr ""
+
+#: src/LdapDatabase.ycp:636
+msgid "Manage (full access)"
+msgstr ""
+
+#: src/LdapDatabase.ycp:672 src/LdapDatabase.ycp:802
+msgid "Who should this rule apply to"
+msgstr ""
+
+#: src/LdapDatabase.ycp:676 src/LdapDatabase.ycp:762 src/LdapDatabase.ycp:804
+#: src/LdapDatabase.ycp:1012
+msgid "Entry DN"
+msgstr ""
+
+#: src/LdapDatabase.ycp:678 src/LdapDatabase.ycp:806
+#, fuzzy
+msgid "Select"
+msgstr "Wybór typu"
+
+#: src/LdapDatabase.ycp:683
+msgid "Define the Access Level"
+msgstr ""
+
+#: src/LdapDatabase.ycp:727
+msgid "Please enter a DN into the Textfield"
+msgstr ""
+
+#: src/LdapDatabase.ycp:734 src/LdapDatabase.ycp:953
+msgid "is not a valid LDAP DN"
+msgstr ""
+
+#: src/LdapDatabase.ycp:766 src/LdapDatabase.ycp:878 src/LdapDatabase.ycp:1008
+msgid "Subtree DN"
+msgstr ""
+
+#: src/LdapDatabase.ycp:770
+msgid "Group DN"
+msgstr ""
+
+#: src/LdapDatabase.ycp:794
+msgid "Edit Access Control Rule"
+msgstr ""
+
+#: src/LdapDatabase.ycp:798
+msgid "Target Objects"
+msgstr ""
+
+#: src/LdapDatabase.ycp:813
+msgid "Matching the filter:"
+msgstr ""
+
+#: src/LdapDatabase.ycp:816
+#, fuzzy
+msgid "LDAP Filter"
+msgstr "Serwer LDAP"
+
+#: src/LdapDatabase.ycp:822
+msgid "Apply this rule only to the listed Attribute"
+msgstr ""
+
+#: src/LdapDatabase.ycp:826 src/LdapDatabase.ycp:1120
+msgid "Attributes"
+msgstr ""
+
+#: src/LdapDatabase.ycp:829 src/LdapDatabase.ycp:849 src/LdapDatabase.ycp:1130
+#: src/widgets.ycp:293
+msgid "Edit"
+msgstr ""
+
+#: src/LdapDatabase.ycp:835 src/LdapDatabase.ycp:839
+msgid "Access Level"
+msgstr ""
+
+#: src/LdapDatabase.ycp:839
+msgid "Who"
+msgstr ""
+
+#: src/LdapDatabase.ycp:839 src/LdapDatabase.ycp:1120
+msgid "DN"
+msgstr ""
+
+#: src/LdapDatabase.ycp:842 src/LdapDatabase.ycp:1123
+msgid "Up"
+msgstr ""
+
+#: src/LdapDatabase.ycp:843 src/LdapDatabase.ycp:1124
+msgid "Down"
+msgstr ""
+
+#: src/LdapDatabase.ycp:847 src/LdapDatabase.ycp:1128 src/widgets.ycp:292
+msgid "Add"
+msgstr ""
+
+#: src/LdapDatabase.ycp:848 src/LdapDatabase.ycp:1129 src/widgets.ycp:294
+msgid "Delete"
+msgstr ""
+
+#: src/LdapDatabase.ycp:966
+msgid "Please enter a List of valid Attributes into the \"Attributes\" textfield"
+msgstr ""
+
+#: src/LdapDatabase.ycp:979
+msgid "Please enter valid LDAP Filter into textfield"
+msgstr ""
+
+#: src/LdapDatabase.ycp:1120
+msgid "Target"
+msgstr ""
+
+#: src/LdapDatabase.ycp:1120
+#, fuzzy
+msgid "Filter"
+msgstr "Plik"
+
+#: src/LdapDatabase.ycp:1149
+msgid ""
+"The selected Database contains Access Control Rules that are currently\n"
+"not supported by this YaST Module. The Access Control Dialog will be disabled."
+msgstr ""
+
+#: src/LdapDatabase.ycp:1370
+#, fuzzy
+msgid "Password Policy settings"
 msgstr "Ustawienia reguł haseł"
 
+#. service was disabled during this session, just disable the service
+#. in the system, stop it and ignore any configuration changes.
+#: src/LdapServer.pm:436
+#, fuzzy
+msgid "Enabling LDAP Server"
+msgstr "Serwer LDAP"
+
+#: src/LdapServer.pm:437 src/LdapServer.pm:449
+#, fuzzy
+msgid "Starting LDAP Server"
+msgstr "Uruchom serwer LDAP"
+
+#: src/LdapServer.pm:439
+#, fuzzy
+msgid "Activating OpenLDAP Server"
+msgstr "Serwer OpenLDAP"
+
+#: src/LdapServer.pm:450
+#, fuzzy
+msgid "Restarting OpenLDAP Server"
+msgstr "Serwer OpenLDAP"
+
+#: src/LdapServer.pm:471
+#, fuzzy
+msgid "Writing Startup Configuration"
+msgstr "Bieżąca konfiguracja:"
+
+#: src/LdapServer.pm:472
+msgid "Cleaning up config directory"
+msgstr ""
+
+#: src/LdapServer.pm:473
+#, fuzzy
+msgid "Creating Configuration"
+msgstr "Konfiguracja:"
+
+#: src/LdapServer.pm:474
+#, fuzzy
+msgid "Starting OpenLDAP Server"
+msgstr "Uruchom serwer LDAP"
+
+#: src/LdapServer.pm:475
+#, fuzzy
+msgid "Creating Base Objects"
+msgstr "Tworzenie obiektów reguł ustawiania haseł"
+
+#: src/LdapServer.pm:484 src/LdapServer.pm:946
+msgid "Switch from slapd.conf to config backend failed."
+msgstr ""
+
+#: src/LdapServer.pm:492
+msgid "Enabling thi LDAPI Protocol listener failed."
+msgstr ""
+
+#: src/LdapServer.pm:506
+msgid "Config Directory cleanup failed."
+msgstr ""
+
+#: src/LdapServer.pm:527
+msgid "Error while populating the configurations database with \"slapadd\"."
+msgstr ""
+
+#: src/LdapServer.pm:547
+#, fuzzy
+msgid "Enabling the LDAP Service failed."
+msgstr "Włączenie usługi"
+
+#: src/LdapServer.pm:563 src/LdapServer.pm:977
+#, fuzzy
+msgid "Starting the LDAP service failed."
+msgstr "Uruchomienie serwera LDAP:"
+
+#: src/LdapServer.pm:572
+#, fuzzy
+msgid "Creating base objects failed."
+msgstr "Edycja bazy danych nie powiodła się."
+
+#. service was disabled during this session, just disable the service
+#. in the system, stop it and ignore any configuration changes.
+#: src/LdapServer.pm:592
+#, fuzzy
+msgid "Stopping LDAP Server"
+msgstr "Serwer OpenLDAP"
+
+#: src/LdapServer.pm:593
+#, fuzzy
+msgid "Disabling LDAP Server"
+msgstr "W&yłącz serwer"
+
+#: src/LdapServer.pm:691 src/tree_structure.ycp:862
+#, fuzzy
+msgid "Startup Configuration"
+msgstr "Bieżąca konfiguracja:"
+
+#: src/LdapServer.pm:692 src/ldap-server_proposal.ycp:125
+#: src/ldap-server_proposal.ycp:130
+msgid "Start LDAP Server: "
+msgstr "Uruchomienie serwera LDAP:"
+
+#: src/LdapServer.pm:692 src/LdapServer.pm:693 src/tree_structure.ycp:714
+#: src/tree_structure.ycp:718 src/tree_structure.ycp:722
+msgid "Yes"
+msgstr ""
+
+#: src/LdapServer.pm:692 src/LdapServer.pm:693 src/tree_structure.ycp:707
+#: src/tree_structure.ycp:708 src/tree_structure.ycp:709
+#: src/tree_structure.ycp:710
+msgid "No"
+msgstr ""
+
+#: src/LdapServer.pm:693
+#, fuzzy
+msgid "Register at SLP Service: "
+msgstr "Rejestracja demona SLP:"
+
+#: src/LdapServer.pm:694
+msgid "Create initial Database with the following Parameters"
+msgstr ""
+
+#: src/LdapServer.pm:695
+#, fuzzy
+msgid "Database Suffix: "
+msgstr "Bazy danych"
+
+#: src/LdapServer.pm:696
+#, fuzzy
+msgid "Administrator DN: "
+msgstr "&Hasło administratora"
+
+#: src/LdapServer.pm:866
+#, fuzzy
+msgid "CA Certificate File does not exist"
+msgstr "Plik certyfikatu CA nie istnieje."
+
+#: src/LdapServer.pm:871
+#, fuzzy
+msgid "Certificate File does not exist"
+msgstr "Plik certyfikatu nie istnieje."
+
+#: src/LdapServer.pm:876
+#, fuzzy
+msgid "Certificate Key File does not exist"
+msgstr "Plik klucza certyfikatu nie istnieje."
+
+#: src/LdapServer.pm:883 src/LdapServer.pm:900
+msgid "Can not set a filesystem acl on the private key"
+msgstr ""
+
+#: src/LdapServer.pm:922
+#, fuzzy
+msgid "Cleaning up directory for config database"
+msgstr "Katalog bazy danych"
+
+#: src/LdapServer.pm:923
+msgid "Converting slapd.conf to config database"
+msgstr ""
+
+#: src/LdapServer.pm:924
+msgid "Switching startup configuration to use config database"
+msgstr ""
+
+#: src/LdapServer.pm:925
+#, fuzzy
+msgid "Restarting LDAP Server"
+msgstr "Uruchom serwer LDAP"
+
+#: src/LdapServer.pm:936
+msgid "Output of \"slaptest\":\n"
+msgstr ""
+
+#: src/LdapServer.pm:937
+#, fuzzy
+msgid "Migration of existing configuration failed."
+msgstr "Bieżąca konfiguracja:"
+
+#: src/LdapServer.pm:956 src/LdapServer.pm:964
+msgid "Enabling LDAPI listener failed."
+msgstr ""
+
+#: src/LdapServer.pm:1057
+#, fuzzy
+msgid "Common server certificate not available. StartTLS is disabled."
+msgstr ""
+"Serwer OpenLDAP: Brak certyfikatów serwera.\n"
+"StartTLS zostało wyłączone."
+
+#: src/LdapServer.pm:1373 src/LdapServer.pm:1378 src/LdapServer.pm:1383
+#: src/LdapServer.pm:1388
+msgid "\""
+msgstr ""
+
+#: src/LdapServer.pm:1411 src/LdapServer.pm:1416
+#, fuzzy
+msgid "Base DN \""
+msgstr "Base DN: "
+
+#: src/LdapServer.pm:1425 src/LdapServer.pm:1430
+#, fuzzy
+msgid "Root DN \""
+msgstr "Root DN: "
+
+#: src/LdapServer.pm:1437
+msgid "The Root DN must be a child object of the Base DN."
+msgstr ""
+
+#: src/LdapServer.pm:1457 src/YaPI/LdapServer.pm:484
+msgid "Could not create directory."
+msgstr "Nie można utworzyć katalogu."
+
+#: src/LdapServer.pm:1464 src/YaPI/LdapServer.pm:498
+#, fuzzy
+msgid "Could adjust ownership of database directory."
+msgstr "Nie można utworzyć katalogu."
+
 #. error at paramter check
-#: src/YaPI/LdapServer.pm:272
-#, perl-format
-msgid "Database type '%s' is not supported. Allowed are 'bdb' and 'ldbm'."
+#: src/YaPI/LdapServer.pm:301
+#, fuzzy, perl-format
+msgid "Database type '%s' is not supported. Allowed are 'bdb' and 'hdb'."
 msgstr "Baza danych typu \"%s\" nie jest obsługiwana. Dopuszczalne są bazy typu \"bdb\" i \"ldbm\"."
 
 #. parameter check failed
-#: src/YaPI/LdapServer.pm:318
+#: src/YaPI/LdapServer.pm:347
 msgid "The countryName must be an ISO-3166 country 2-letter code."
 msgstr "Atrybut countryName musi być dwuliterowym kodem ISO-3166 kraju."
 
 #. parameter check failed
-#: src/YaPI/LdapServer.pm:344
+#: src/YaPI/LdapServer.pm:373
 msgid "First part of suffix must be c=, st=, l=, o=, ou= or dc=."
 msgstr "Pierwszą częścią przyrostka musi być c=, st=, l=, o=, ou= lub dc=."
 
 #. parameter check failed
-#: src/YaPI/LdapServer.pm:362 src/YaPI/LdapServer.pm:652
+#: src/YaPI/LdapServer.pm:391 src/YaPI/LdapServer.pm:726
 msgid "Invalid 'rootdn'."
 msgstr "Nieprawidłowe \"rootdn\"."
 
 #. parameter check failed
-#: src/YaPI/LdapServer.pm:371 src/YaPI/LdapServer.pm:660
+#: src/YaPI/LdapServer.pm:400 src/YaPI/LdapServer.pm:734
 msgid "'rootdn' must be below the 'suffix'."
 msgstr "\"rootdn\" musi być poniżej \"przyrostka\"."
 
 #. parameter check failed
-#: src/YaPI/LdapServer.pm:386
+#: src/YaPI/LdapServer.pm:415
 msgid "To set a password, you must define 'rootdn'."
 msgstr "Aby ustawić hasło, należy zdefiniować \"rootdn\"."
 
 #. parameter check failed
-#: src/YaPI/LdapServer.pm:393 src/YaPI/LdapServer.pm:679
-#: src/YaPI/LdapServer.pm:684
-msgid "Define 'passwd'."
+#: src/YaPI/LdapServer.pm:422
+#, fuzzy
+msgid "Define 'rootpw'."
 msgstr "Proszę zdefiniować \"hasło\"."
 
 #. parameter check failed
-#: src/YaPI/LdapServer.pm:403 src/YaPI/LdapServer.pm:694
+#: src/YaPI/LdapServer.pm:435 src/YaPI/LdapServer.pm:768
 #, perl-format
 msgid "'%s' is an unsupported crypt method."
 msgstr "\"%s\" nie jest obsługiwanym sposobem szyfrowania."
 
 #. parameter check failed
-#: src/YaPI/LdapServer.pm:442
+#: src/YaPI/LdapServer.pm:475
 msgid "Define 'directory'."
 msgstr "Proszę zdefiniować \"katalog\"."
 
-#: src/YaPI/LdapServer.pm:451
-msgid "Could not create directory."
-msgstr "Nie można utworzyć katalogu."
-
-#: src/YaPI/LdapServer.pm:456
+#: src/YaPI/LdapServer.pm:489
 msgid "The directory does not exist."
 msgstr "Katalog nie istnieje."
 
-#: src/YaPI/LdapServer.pm:469 src/YaPI/LdapServer.pm:739
-#: src/YaPI/LdapServer.pm:748
+#: src/YaPI/LdapServer.pm:511 src/YaPI/LdapServer.pm:526
 msgid "Invalid cache size value."
 msgstr "Nieprawidłowy rozmiar bufora."
 
-#: src/YaPI/LdapServer.pm:489 src/YaPI/LdapServer.pm:776
-#: src/YaPI/LdapServer.pm:786
+#: src/YaPI/LdapServer.pm:547
 msgid "Invalid checkpoint value."
 msgstr "Niepoprawna wartość kontrolna."
 
-#: src/YaPI/LdapServer.pm:803
+#. parameter check failed
+#: src/YaPI/LdapServer.pm:753 src/YaPI/LdapServer.pm:758
+msgid "Define 'passwd'."
+msgstr "Proszę zdefiniować \"hasło\"."
+
+#: src/YaPI/LdapServer.pm:805
 msgid "Database edit failed."
 msgstr "Edycja bazy danych nie powiodła się."
 
 #. error message at parameter check
-#: src/YaPI/LdapServer.pm:854 src/YaPI/LdapServer.pm:901
+#: src/YaPI/LdapServer.pm:865 src/YaPI/LdapServer.pm:938
+#: src/YaPI/LdapServer.pm:1086 src/YaPI/LdapServer.pm:1129
 msgid "Missing parameter 'suffix'."
 msgstr "Brak parametru \"przyrostek\"."
 
-#: src/YaPI/LdapServer.pm:1564
+#: src/YaPI/LdapServer.pm:1533
 msgid "Cannot restart the service."
 msgstr "Nie można ponownie uruchomić usługi."
 
-#: src/YaPI/LdapServer.pm:1571
+#: src/YaPI/LdapServer.pm:1540
 msgid "Cannot stop the service."
 msgstr "Nie można zatrzymać usługi."
 
 #. error message
-#: src/YaPI/LdapServer.pm:1734
+#: src/YaPI/LdapServer.pm:1703
 msgid "CA certificate file does not exist."
 msgstr "Plik certyfikatu CA nie istnieje."
 
 #. error message
-#: src/YaPI/LdapServer.pm:1750
+#: src/YaPI/LdapServer.pm:1719
 msgid "CA certificate path does not exist."
 msgstr "Ścieżka certyfikatu CA nie istnieje."
 
 #. error message
-#: src/YaPI/LdapServer.pm:1766
+#: src/YaPI/LdapServer.pm:1735
 msgid "Certificate file does not exist."
 msgstr "Plik certyfikatu nie istnieje."
 
 #. error message
-#: src/YaPI/LdapServer.pm:1783
+#: src/YaPI/LdapServer.pm:1752
 msgid "Certificate key file does not exist."
 msgstr "Plik klucza certyfikatu nie istnieje."
 
 #. error message
-#: src/YaPI/LdapServer.pm:1801
+#: src/YaPI/LdapServer.pm:1770
 msgid "Invalid value for 'TLSVerifyClient'."
 msgstr "Nieprawidłowa wartość dla 'TLSVerifyClient'"
 
-#: src/YaPI/LdapServer.pm:1810
+#: src/YaPI/LdapServer.pm:1779
 msgid "Writing failed."
 msgstr "Zapis nie powiódł się."
 
-#: src/YaPI/LdapServer.pm:1975
+#: src/YaPI/LdapServer.pm:1944
 msgid "Missing 'ServerCertificateFile' parameter."
 msgstr "Brak parametru \"ServerCertificateFile\"."
 
-#: src/YaPI/LdapServer.pm:1981
+#: src/YaPI/LdapServer.pm:1950
 msgid "Cannot read certificate file."
 msgstr "Nie można odczytać pliku certyfikatu."
 
-#: src/YaPI/LdapServer.pm:1986
+#: src/YaPI/LdapServer.pm:1955
 msgid "Missing 'ServerCertificateData' parameter."
 msgstr "Brak parametru \"ServerCertificateData\"."
 
-#: src/YaPI/LdapServer.pm:1993 src/YaPI/LdapServer.pm:2018
-#: src/YaPI/LdapServer.pm:2034 src/YaPI/LdapServer.pm:2043
+#: src/YaPI/LdapServer.pm:1962 src/YaPI/LdapServer.pm:1987
+#: src/YaPI/LdapServer.pm:2003 src/YaPI/LdapServer.pm:2012
 msgid "Corrupt PEM data."
 msgstr "Uszkodzone dane PEM."
 
-#: src/YaPI/LdapServer.pm:2000
+#: src/YaPI/LdapServer.pm:1969
 msgid "Missing 'ServerKeyFile' parameter."
 msgstr "Brak parametru \"ServerKeyFile\"."
 
-#: src/YaPI/LdapServer.pm:2006
+#: src/YaPI/LdapServer.pm:1975
 msgid "Cannot read key file."
 msgstr "Nie można odczytać pliku klucza."
 
-#: src/YaPI/LdapServer.pm:2011
+#: src/YaPI/LdapServer.pm:1980
 msgid "Missing 'ServerKeyData' parameter."
 msgstr "Brak parametru \"ServerKeyData\"."
 
-#: src/YaPI/LdapServer.pm:2029
+#: src/YaPI/LdapServer.pm:1998
 msgid "Cannot read CA certificate file."
 msgstr "Nie można odczytać pliku certyfikatu CA."
 
-#: src/YaPI/LdapServer.pm:2052
+#: src/YaPI/LdapServer.pm:2021
 msgid "Cannot write certificate file."
 msgstr "Nie można zapisać pliku certyfikatu."
 
-#: src/YaPI/LdapServer.pm:2058
+#: src/YaPI/LdapServer.pm:2027
 msgid "Cannot write key file."
 msgstr "Nie można zapisać pliku klucza."
 
-#: src/YaPI/LdapServer.pm:2077
+#: src/YaPI/LdapServer.pm:2046
 msgid "Cannot write CA certificate file."
 msgstr "Nie można zapisać pliku certyfikatu CA."
 
 #. translators: error popup before aborting the module
-#: src/complex.ycp:67 src/ldap-server_proposal.ycp:182
+#: src/complex.ycp:51 src/ldap-server_proposal.ycp:182
 #, ycp-format
 msgid ""
 "The package '%1' is not available.\n"
@@ -278,7 +725,7 @@ msgstr ""
 "bez zainstalowania tego pakietu."
 
 #. translators: error popup before aborting the module
-#: src/complex.ycp:74 src/ldap-server_proposal.ycp:187
+#: src/complex.ycp:58 src/ldap-server_proposal.ycp:187
 msgid ""
 "YaST2 cannot continue the configuration\n"
 "without installing the required packages."
@@ -286,152 +733,151 @@ msgstr ""
 "Program YaST2 nie może kontynuować konfiguracji \n"
 "bez zainstalowania wymaganych pakietów."
 
-#: src/complex.ycp:189
-msgid "You have an existing configuration but the LDAP Server is not running currently."
+#: src/complex.ycp:173
+msgid "You have an existing configuration but the LDAP Server is not currently running."
 msgstr ""
 
-#: src/complex.ycp:189
+#: src/complex.ycp:173
 msgid "Do you want to start it now to re-read its configuration data or do you want to create a new configuration from scratch?"
 msgstr ""
 
-#: src/complex.ycp:189 src/dialogs.ycp:123
+#: src/complex.ycp:173 src/dialogs.ycp:120
 msgid "Restart"
 msgstr ""
 
-#: src/complex.ycp:189 src/dialogs.ycp:123
+#: src/complex.ycp:173 src/dialogs.ycp:120
 #, fuzzy
 msgid "New Configuration"
 msgstr "Konfiguracja:"
 
-#: src/complex.ycp:214
+#: src/complex.ycp:198
 msgid ""
 "Your system is currently configured to use the configuration \n"
-"file /etc/openldap/slapd.conf. This YaST module does only support the dynamich\n"
+"file /etc/openldap/slapd.conf. This YaST module only supports the dynamic\n"
 "configuration database of OpenLDAP (back-config). Do you want to migrate your\n"
-"existing configuration to the configuration database?"
+"existing configuration to the configuration database?\n"
 msgstr ""
 
-#: src/complex.ycp:226
+#: src/complex.ycp:211
 #, fuzzy
 msgid "Migrate existing configuration"
 msgstr "Bieżąca konfiguracja:"
 
-#: src/complex.ycp:229
+#: src/complex.ycp:214
 msgid "Create a new configuration from scratch"
 msgstr ""
 
-#: src/complex.ycp:317
+#: src/complex.ycp:302
 msgid ""
 "In order to access the server configration after the migration you need\n"
 "to configure how YaST should authenticate against the configuration database."
 msgstr ""
 
-#: src/complex.ycp:334
+#: src/complex.ycp:319
 msgid ""
 "Access the Server via LDAP over Unix Domain Sockets (ldapi)\n"
 "and give \"root\" full access to the configuration."
 msgstr ""
 
-#: src/complex.ycp:339
+#: src/complex.ycp:324
 msgid ""
 "Use a \"normal\" encrypted LDAP connection with LDAP\n"
 "simple authentication."
 msgstr ""
 
-#: src/complex.ycp:343
-msgid "Please set a password of the configuration user (cn=config)"
+#: src/complex.ycp:328
+msgid "Please enter a password for the configuration user (cn=config)"
 msgstr ""
 
-#: src/complex.ycp:345
+#: src/complex.ycp:330
 #, fuzzy
 msgid "New &Password"
 msgstr "Hasło LDA&P"
 
+#: src/complex.ycp:334 src/widgets.ycp:308
+#, fuzzy
+msgid "Password &Encryption"
+msgstr "Szyfrowani&e"
+
 #. LdapServer summary dialog caption
-#: src/complex.ycp:476
+#: src/complex.ycp:459
 #, fuzzy
 msgid "LDAP Server Configuration Summary"
 msgstr "Konfiguracja serwera LDAP"
 
-#: src/complex.ycp:485
-#, fuzzy
-msgid "Advanced Configuration"
-msgstr "Konfiguracja serwera LDAP"
-
 #. heading for all dialogs
 #. Initialization dialog caption
-#: src/dialogs.ycp:30 src/wizards.ycp:55 src/wizards.ycp:112
-#: src/wizards.ycp:217
+#: src/dialogs.ycp:27 src/wizards.ycp:55 src/wizards.ycp:115
+#: src/wizards.ycp:220
 msgid "LDAP Server Configuration"
 msgstr "Konfiguracja serwera LDAP"
 
-#: src/dialogs.ycp:116
-msgid "The LDAP Server is disabled currently, no configuration changes possible."
+#: src/dialogs.ycp:113
+msgid "The LDAP Server is currently disabled, no configuration changes are possible."
 msgstr ""
 
-#: src/dialogs.ycp:123
+#: src/dialogs.ycp:120
 #, fuzzy
 msgid "The LDAP Server is not running."
 msgstr "Serwer LDAP do skonfigurowania"
 
-#: src/dialogs.ycp:123
+#: src/dialogs.ycp:120
 msgid "Do you want to start it now to re-read its configuration data or do you want to creat a new configuration from scratch?"
 msgstr ""
 
-#: src/dialogs.ycp:162
+#: src/dialogs.ycp:159
 msgid "General Settings"
 msgstr "Ustawienia ogólne"
 
-#: src/dialogs.ycp:164 src/widgets.ycp:25
+#: src/dialogs.ycp:161 src/widgets.ycp:28
 #, fuzzy
 msgid "&Start LDAP Server"
 msgstr "Uruchom serwer LDAP"
 
-#: src/dialogs.ycp:177
+#: src/dialogs.ycp:174
 msgid "Register at an &SLP Daemon"
 msgstr "Zarejestrowanie demona &SLP"
 
-#: src/dialogs.ycp:185 src/widgets.ycp:71
+#: src/dialogs.ycp:182 src/widgets.ycp:74
 #, fuzzy
 msgid "Firewall Settings"
 msgstr "Ustawienia ogólne"
 
-#: src/dialogs.ycp:296
-#, fuzzy
-msgid "Database Settings"
-msgstr "Bazy danych"
-
-#: src/dialogs.ycp:361
-msgid "Please enter a password for the Administrator user"
-msgstr ""
-
 #. tree widget headline
-#: src/dialogs.ycp:446
+#: src/dialogs.ycp:350
 msgid "Configuration:"
 msgstr "Konfiguracja:"
 
-#. Proposal help 1/6
-#: src/helps.ycp:19
-msgid ""
-"<p><b><big>LDAP Server Configuration</big></b><br>\n"
-"Change the settings of the initial LDAP database here.</p>\n"
-msgstr ""
-"<p><b><big>Konfiguracja serwera LDAP</big></b><br>\n"
-"W tym miejscu można zmienić ustawienia początkowej bazy LDAP.<br></p>\n"
+#: src/helps.ycp:20
+#, fuzzy
+msgid "<h3>Basic Database Settings</h3>"
+msgstr "Bazy danych"
 
-#. Proposal help 2/6
-#: src/helps.ycp:24
-msgid "<p>The <b>Base DN</b> option specifies the root of the database that will be created.</p>"
+#: src/helps.ycp:21
+msgid ""
+"<p>Choose the <b>Database</b> from <b>hdb</b> and <b>bdb</b>. <b>Hdb</b> is a \n"
+"variant of the <b>bdb</b> backend that uses a hierarchical database layout and \n"
+"supports subtree renames. It is otherwise identical to <b>bdb</b>. A <b>hdb</b>-Database\n"
+"needs a larger <b>idlcachesize</b> for good search performance than a <b>bdb</b>-Database.\n"
+"</p>"
+msgstr ""
+
+#: src/helps.ycp:26
+#, fuzzy
+msgid ""
+"<p>The <b>Base DN</b> option specifies the name of the root entry \n"
+"of the database being created.</p>"
 msgstr "<p>Opcja <b>Base DN</b> określa korzeń bazy danych, która zostanie utworzona.</p>"
 
-#. Proposal help 3/6
-#: src/helps.ycp:27
+#: src/helps.ycp:28
+#, fuzzy
 msgid ""
-"<p>A <b>Root DN</b> along with a <b>Root Password</b> makes it possible to\n"
-"to authenticate as the superuser for the database, surpassing all ACLs and other \n"
+"<p>The <b>Administrator DN</b> along with a <b>LDAP Administrator Password</b> \n"
+"specifieds a superuser identity for the database, surpassing all ACLs and other \n"
 "administrative limit restrictions. Checking <b>Append Base DN</b> appends the \n"
-"<b>Base DN</b> entered above, for example, a base DN of <tt>dc=com</tt> and root DN of \n"
-"<tt>c=Admin</tt> would combine to an effective root DN of <tt>c=Admin,dc=com</tt>.<p>\n"
+"<b>Base DN</b> entered above, for example, a base DN of <tt>dc=example,dc=com</tt>\n"
+"and Administrator DN of <tt>c=Admin</tt> would combine to an effective Administrator DN\n"
+"of <tt>c=Admin,dc=example,dc=com</tt>.<p> "
 msgstr ""
 "<p><b>Root DN</b>, razem z <b>Hasłem administratora (użytkownika root)</b>, daje możliwość uwierzytelnienia \n"
 "do bazy danych jako superużytkownik, pomijając całą kontrolę dostępu ACL i inne\n"
@@ -439,45 +885,125 @@ msgstr ""
 "<b>Base DN</b> podany powyżej, np. base DN z <tt>dc=com</tt> i root DN z\n"
 "<tt>c=Admin</tt> zostaną połączone w jedno root DN <tt>c=Admin,dc=com</tt>.<p>\n"
 
-#. Proposal help 4/6
-#: src/helps.ycp:35
+#: src/helps.ycp:34
 msgid ""
-"<p>The <b>Root Password</b> is initially set to the system root password\n"
-"entered earlier in the installation process. Change it in the\n"
-"edit fields. Change the password encryption method in the relevant field.</p>\n"
+"<p>If this wizard was starteg during installation, the \n"
+"<b>LDAP Administrator Password</b> is initially set to the system's root password\n"
+"entered earlier in the installation process.</p> "
 msgstr ""
-"<p><b>Hasło użytkownika root</b> jest początkowo ustawione na hasło\n"
-"systemowego użytkownika root podane wcześniej w czasie instalacji. \n"
-"Można je zmienić w polach edycji. W odpowiednim polu można także zmienić metodę\n"
-"szyfrowania.</p>\n"
 
-#. Proposal help 5/6
-#: src/helps.ycp:41
+#: src/helps.ycp:37
 msgid ""
-"<p>Checking the <b>Activate StartTLS</b> option enables the LDAP server to\n"
-"process incoming StartTLS requests. This requires the common server certificate\n"
-"that can be set up in the <b>CA Management</b> YaST module.</p>\n"
+"<p>To use this database as the default database for the OpenLDAP client tools\n"
+"(e.g. ldapsearch) check <b>Use this database as the default for OpenLDAP clients</b>. This\n"
+"will result in the hostname \"localhost\" and the above entered <b>Base DN</b> being written\n"
+"to the OpenLDAP client configuration file <tt>/etc/openldap/ldap.conf</tt>.  This checkbox\n"
+"is selected by default when creating the first database on a Server.</p>"
 msgstr ""
-"<p>Zaznaczenie opcji <b>Aktywuj StartTLS</b> włącza przetwarzanie przez serwer LDAP\n"
-"przychodzących żądań StartTLS. Wymaga to certyfikatu serwera, który można \n"
-"ustawić w module YaST <b>Zarządzanie CA</b>.</p>\n"
 
-#. Proposal help 6/6
+#: src/helps.ycp:44
+#, fuzzy
+msgid "<h3>Password Policy Settings</h3>"
+msgstr "<h4>Ustawienia reguł haseł</h4>"
+
+#: src/helps.ycp:45
+#, fuzzy
+msgid ""
+"<p>To make use of password policies for this database, enable \n"
+"<b>Enable Password Policies</b>.<p>"
+msgstr "<p>Aby umożliwić ustawienia reguł haseł dla tej bazy danych, należy wybrać opcję <b>Zezwól na ustawienia reguł haseł</b>.</p>"
+
 #: src/helps.ycp:47
+#, fuzzy
 msgid ""
-"<p>If <b>Register at an SLP Daemon</b> is checked, the LDAP server tries\n"
-"to find a running SLP daemon at which to register.</p>\n"
+"<p>Check <b>Hash Clear Text Passwords</b> to specify that the OpenLDAP server\n"
+"should encrypt clear text passwords present in add and modify requests before storing them\n"
+"in the database. Note that this violates the  X.500/LDAP information model, but may be\n"
+"needed to compensate for LDAP clients that do not use the password modify extended operation \n"
+"to manage passwords.</p> "
 msgstr ""
-"<p>Jeśli zaznaczona jest opcja <b>Zarejestruj demona SLP</b>, to serwer LDAP spróbuje\n"
-"znaleźć działającego demona SLP, u którego mógłby się zarejestrować.</p>\n"
+"<p>Proszę zaznaczyć <b>Szyfrowanie haseł z otwartym tekstem</b>, aby serwer OpenLDAP szyfrował hasła obecne w\n"
+"żądaniach dodawania i modyfikacji, przed umieszczeniem ich w bazie danych. Uwaga: jest to sprzeczne z modelem informacji X.500/LDAP,\n"
+"ale może być konieczne w przypadku klientów LDAP, które nie używają rozszerzonej operacji modyfikowania haseł do\n"
+"zarządzania hasłami.</p>\n"
+
+#: src/helps.ycp:52
+#, fuzzy
+msgid ""
+"<p>If <b>Disclose \"Account Locked\" Status</b> is enabled, users  trying to authenticate\n"
+"to a locked account get a notification that their account is locked. This notification\n"
+"might provide useful information to an attacker. Sites that are sensitive to security issues\n"
+"should not enable this option.</p> "
+msgstr ""
+"<p>Jeśli wybrana została opcja <b>ujawnienia stanu \"Konta zamkniętego\"</b>, użytkownicy korzystający z\n"
+"uwierzytelniania konta otrzymają komunikat o tym fakcie. Komunikat ten może stanowić przydatną informację dla\n"
+"niepożądanych użytkowników. Na witrynach, w których ważną rolę odgrywa bezpieczeństwo danych, nie powinno się wybierać tej opcji.</p>\n"
+
+#: src/helps.ycp:56
+msgid "<p>Enter the name of the default policy object in <b>Default Policy Object DN</b>.</p>"
+msgstr "<p>Proszę wprowadzić nazwę domyślnego obiektu reguł w polu <b>DN domyślnego obiektu reguł</b>.</p>"
+
+#: src/helps.ycp:59
+#, fuzzy
+msgid "<h3>Index Configuration</h3>"
+msgstr "Konfiguracja:"
+
+#: src/helps.ycp:60
+msgid "<p>This dialog allows you to change the indexing options of a hdb of bdb-Database.</p>"
+msgstr ""
+
+#: src/helps.ycp:61
+msgid "<p>The table displays a list of attribute which have an index defined currently.</p>"
+msgstr ""
+
+#: src/helps.ycp:62
+msgid ""
+"<p>Indexes are used by OpenLDAP to improve search performance on specific type of\n"
+"searches. Indexes should be configured corresponding to the most common searches that are used\n"
+"on a database. This YaST modul allows to setup three different types indexes.</p>"
+msgstr ""
+
+#: src/helps.ycp:65
+msgid ""
+"<p><b>Presence</b>: This index is used for searches using presence filters\n"
+"(i.e. <tt>(attributeType=*)</tt> ). Presence indexes should only be configured for attributes\n"
+"that occur very rarely in the database</p>"
+msgstr ""
+
+#: src/helps.ycp:68
+msgid ""
+"<p><b>Equality</b>: This index is used for searches using equality filters (i.e.\n"
+"(<tt>(attributeType=&lt;exact values&gt;)</tt>). An <b>Equality</b> index should always be configured of the\n"
+"<tt>objectclass</tt> attribute.</p>"
+msgstr ""
+
+#: src/helps.ycp:71
+msgid ""
+"<p><b>Substring</b>: This index is used for searches using substring filter\n"
+"(i.e. <tt>(attributeType=&lt;substring&gt;*)</tt> )</p>"
+msgstr ""
+
+#: src/helps.ycp:73
+msgid ""
+"<p>Use <b>Add</b> to define indexing options for a new attribute, <b>Delete</b> to \n"
+"delete an existing index and <b>Edit</b> to change the indexing options of an already indexed\n"
+"Attribute.</p>"
+msgstr ""
+
+#: src/helps.ycp:76
+msgid ""
+"<p>Note: Depending on the database size it can take a while until newly added\n"
+"indexes, will get active on a database. After the configuration has been written to the server.\n"
+"a background task will start to generated the indexing information for the database.</p>"
+msgstr ""
 
 #. Read dialog help 1/2
-#: src/helps.ycp:52
+#: src/helps.ycp:81
 msgid "<p><b><big>Initializing LDAP Server Configuration</big></b><br>Please wait...<br></p>"
 msgstr "<p><b><big>Inicjowanie konfiguracji serwera LDAP</big></b><br>Proszę czekać...<br></p>"
 
 #. Read dialog help 2/2
-#: src/helps.ycp:55
+#: src/helps.ycp:84
 msgid ""
 "<p><b><big>Aborting Initialization:</big></b><br>\n"
 "Safely abort the configuration utility by pressing <b>Abort</b> now.</p>"
@@ -486,7 +1012,7 @@ msgstr ""
 "Aby bezpiecznie przerwać działania konfiguratora, proszę nacisnąć przycisk <b>Przerwij</b>.</p>"
 
 #. Write dialog help 1/2
-#: src/helps.ycp:59
+#: src/helps.ycp:88
 msgid ""
 "<p><b><big>Saving LDAP Server Configuration</big></b><br>\n"
 "Please wait...<br></p>\n"
@@ -495,7 +1021,7 @@ msgstr ""
 "Proszę czekać...<br></p>\n"
 
 #. Write dialog help 2/2
-#: src/helps.ycp:64
+#: src/helps.ycp:93
 msgid ""
 "<p><b><big>Aborting Saving:</big></b><br>\n"
 "Abort the save procedure by pressing <b>Abort</b>.\n"
@@ -507,40 +1033,20 @@ msgstr ""
 "Zostanie wyświetlone dodatkowe okno z informacją, czy jest to bezpieczne.\n"
 "</p>\n"
 
-#. Summary dialog help 1/3
-#: src/helps.ycp:71
-msgid ""
-"<p><b><big>LDAP Server Configuration</big></b><br>\n"
-"Configure an LDAP server here.<br></p>\n"
-msgstr ""
-"<p><b><big>Konfiguracja serwera LDAP</big></b><br>\n"
-"Tutaj skonfiguruj serwer LDAP.<br></p>\n"
+#: src/helps.ycp:101
+#, fuzzy
+msgid "<h3>LDAP Server Configuration Summary</h3>"
+msgstr "Konfiguracja serwera LDAP"
 
-#. Summary dialog help 2/3
-#: src/helps.ycp:76
+#: src/helps.ycp:102
 msgid ""
-"<p><b><big>Adding an LDAP Server:</big></b><br>\n"
-"Choose an LDAP server from the list of detected LDAP servers.\n"
-"If your LDAP server was not autodetected, use <b>Other (not detected)</b>.\n"
-"Then press <b>Configure</b>.</p>\n"
+"<p>This dialog just gives a short summary about the configartion you just\n"
+"created. Click <b>Finish</b> to write that configuration and leave the LDAP\n"
+"Server module</p>"
 msgstr ""
-"<p><b><big>Dodawanie serwera LDAP:</big></b><br>\n"
-"Proszę wybrać serwer LDAP z listy znalezionych serwerów LDAP.\n"
-"Jeśli żądany serwer LDAP nie został automatycznie wykryty, należy wybrać <b>Inny (nie wykryty)</b> i następnie nacisnąć przycisk <b>Konfiguracja</b>.</p>\n"
-
-#. Summary dialog help 3/3
-#: src/helps.ycp:83
-msgid ""
-"<p><b><big>Editing or Deleting:</big></b><br>\n"
-"If you press <b>Edit</b>, an additional dialog in which to change\n"
-"the configuration opens.</p>\n"
-msgstr ""
-"<p><b><big>Edycja lub usuwanie:</big></b><br>\n"
-"Naciśnięcie przycisku <b>Edytuj</b> spowoduje otwarcie nowego okna, w którym\n"
-"można zmienić konfigurację.</p>\n"
 
 #. Ovreview dialog help 1/3
-#: src/helps.ycp:89
+#: src/helps.ycp:107
 msgid ""
 "<p><b><big>LDAP Server Configuration Overview</big></b><br>\n"
 "Obtain an overview of installed LDAP servers. Additionally\n"
@@ -551,7 +1057,7 @@ msgstr ""
 "Dodatkowo, można zmienić ich konfigurację.<br></p>\n"
 
 #. Ovreview dialog help 2/3
-#: src/helps.ycp:95
+#: src/helps.ycp:113
 msgid ""
 "<p><b><big>Adding an LDAP Server:</big></b><br>\n"
 "Press <b>Add</b> to configure an LDAP server.</p>\n"
@@ -560,7 +1066,7 @@ msgstr ""
 "Aby skonfigurować serwer LDAP, należy nacisnąć przycisk <b>Dodaj</b>.</p>\n"
 
 #. Ovreview dialog help 3/3
-#: src/helps.ycp:100
+#: src/helps.ycp:118
 msgid ""
 "<p><b><big>Editing or Deleting:</big></b><br>\n"
 "Choose an LDAP server to change or remove.\n"
@@ -570,7 +1076,7 @@ msgstr ""
 "Aby zmodyfikować lub usunąć serwer LDAP, należy nacisnąć <b>Edytuj</b> or <b>Usuń</b>.</p>\n"
 
 #. Configure1 dialog help 1/2
-#: src/helps.ycp:106
+#: src/helps.ycp:124
 msgid ""
 "<p><b><big>Configuration Part One</big></b><br>\n"
 "Press <b>Next</b>.\n"
@@ -582,7 +1088,7 @@ msgstr ""
 
 #. Configure1 dialog help 2/2
 #. Configure2 dialog help 2/2
-#: src/helps.ycp:112 src/helps.ycp:123
+#: src/helps.ycp:130 src/helps.ycp:141
 msgid ""
 "<p><b><big>Selecting something:</big></b><br>\n"
 "It is not possible, you must code it first :-)\n"
@@ -593,7 +1099,7 @@ msgstr ""
 "</p>"
 
 #. Configure2 dialog help 1/2
-#: src/helps.ycp:117
+#: src/helps.ycp:135
 msgid ""
 "<p><b><big>Configuration Part Two</big></b><br>\n"
 "Press <b>Next</b>.\n"
@@ -603,29 +1109,79 @@ msgstr ""
 "Proszę nacisnąć przycisk <b>Dalej</b>.\n"
 "<br></p>\n"
 
-#. Configuration Startup Dialog 1/2
-#: src/helps.ycp:128
-msgid ""
-"<p>With <b>Start LDAP Server Yes or No</b>, \n"
-"start or stop the LDAP server.</p>\n"
-"    \n"
+#: src/helps.ycp:147
+#, fuzzy
+msgid "<p>With <b>Start LDAP Server Yes or No</b>, start or stop the LDAP server.</p> "
 msgstr ""
 "<p>Za pomocą opcji <b>Uruchom serwer LDAP</b>, można\n"
 "uruchomić lub zatrzymać serwer LDAP.</p>\n"
 "    \n"
 
+#: src/helps.ycp:148
+msgid "<p>If <b>Yes</b> is selected, you can click <b>Next</b> to start the configuration wizard</p>"
+msgstr ""
+
 #. Configuration Startup Dialog 2/2
-#: src/helps.ycp:134
-msgid "<p>Click <b>Configure...</p> to configure the LDAP server.</p>"
-msgstr "<p>Aby skonfigurować serwer LDAP, należy nacisnąć przycisk <b>Skonfiguruj...</b> .</p>"
+#: src/helps.ycp:150
+msgid ""
+"<p>If the Firewall is enabled you can open the required network ports\n"
+"for OpenLDAP by checking the corresponding Checkbox."
+msgstr ""
+
+#: src/helps.ycp:154
+#, fuzzy
+msgid "<h3>TLS Settings</h3>"
+msgstr "Ustawienia TLS"
+
+#: src/helps.ycp:156
+#, fuzzy
+msgid "<h4>Basic Settings</h4>"
+msgstr "<h4>Ustawienia ogólne</h4>"
+
+#: src/helps.ycp:157
+msgid ""
+"<p>To enable encryption via TLS/SSL check the <b>Enabled TLS</b> checkbox. Additionally you \n"
+"need to configure which Certificates the the Server should use.</p>"
+msgstr ""
+
+#: src/helps.ycp:159
+msgid ""
+"<p>By checking <b>Enabled LDAP over SSL (ldaps) interface</b> you enable the server to\n"
+"accept LDAPS connections on port 636. If not checked OpenLDAP will only support TLS encrypted connections\n"
+"through the StartTLS extended operation</p>"
+msgstr ""
+
+#: src/helps.ycp:162
+msgid ""
+"<p>If you already have a Common Server Certificate installed using the corresponding YaST Module, \n"
+"you can check <b>Use common Server Certificate</b> to have the OpenLDAP server use that certificate</p>"
+msgstr ""
+
+#: src/helps.ycp:165
+#, fuzzy
+msgid "<h4>Import Certificate</h4>"
+msgstr "Import certyfikatu"
+
+#: src/helps.ycp:166
+msgid ""
+"<p>If you have no Common Server Certificate or you want OpenLDAP to use a different certifcate\n"
+"you can enter the file names of teh <b>CA Certifiate File</b>, <b>Certificate File</b> and \n"
+"<b>Certifcate Key File</b> into the corresponding textfields</p>"
+msgstr ""
+
+#: src/helps.ycp:169
+msgid ""
+"<p>To create a new CA or certificate you can launch the CA-Management Module by clicking\n"
+"<b>Launch CA Management Module</b></p>"
+msgstr ""
 
 #. Tree Item Dialog "global" 1/1
-#: src/helps.ycp:138
+#: src/helps.ycp:173
 msgid "<p>Below this item, configure some global parameters.</p>"
 msgstr "<p>Wybierając opcje znajdujące się poniżej tego elementu, można skonfigurować parametry globalne.</p>"
 
 #. Tree Item Dialog "schema" 1/
-#: src/helps.ycp:141
+#: src/helps.ycp:176
 msgid ""
 "<p>Add or remove schema files in this dialog. Press <b>Add</b>\n"
 "to open a file dialog in which to choose a new schema.</p>\n"
@@ -634,14 +1190,14 @@ msgstr ""
 "<b>Dodaj</b> spowoduje otwarcie okna, w którym można wybrać nowy schemat.</p>\n"
 
 #. Tree Item Dialog "schema" 2/
-#: src/helps.ycp:146
+#: src/helps.ycp:181
 msgid ""
 "<p>Select a schema file in the list and press <b>Delete</b> to remove it from the\n"
 "configuration file.</p>"
 msgstr "<p>Aby usunąć plik schematu z pliku konfiguracyjnego, należy wybrać go z listy i nacisnąć przycisk <b>Usuń</b> .</p>"
 
 #. Tree Item Dialog "schema 3/
-#: src/helps.ycp:150
+#: src/helps.ycp:185
 msgid ""
 "<p>With the <b>Up</b> and <b>Down</b> buttons, change the position of the\n"
 "selected schema file. Keep in mind that some schema files depend on others. An incorrect\n"
@@ -652,92 +1208,58 @@ msgstr ""
 "zależą od innych. Nieprawidłowa kolejność sprawi, że serwer LDAP nie zostanie uruchomiony.</p>\n"
 
 #. Tree Item Dialog "loglevel" 1/1
-#: src/helps.ycp:156
+#: src/helps.ycp:191
 msgid "<p>Specify the level at which debugging statements and operation statistics should be written to syslog.</p>"
 msgstr "<p>W tym miejscu można określić poziom, przy którym polecenia debugujące i statystyki działania powinny być zapisywane do demona systlog.</p>"
 
 #. Tree Item Dialog "allow" 1/1
-#: src/helps.ycp:159
+#: src/helps.ycp:194
 msgid "<p>Here, enable or disable a set of special features.</p>"
 msgstr "<p>W tym miejscu można włączyć lub wyłączyć zestaw funkcji specjalnych.</p>"
 
 #. Tree Item Dialog "TLS" 1/2
-#: src/helps.ycp:162
+#: src/helps.ycp:197
 msgid "<p>If TLS is active, view the current settings here.</p>"
 msgstr "<p>Jeśli TLS jest aktywne, w tym miejscu wyświetlane są jego bieżące ustawienia.</p>"
 
 #. Tree Item Dialog "TLS" 2/2
-#: src/helps.ycp:165
+#: src/helps.ycp:200
 msgid "<p>With <b>Select Certificate...</b>, configure new certificates for this service.</p>"
 msgstr "<p>Za pomocą opcji <b>Wybierz certyfikat...</b> można skonfigurować nowy certyfikat dla tej usługi.</p>"
 
 #. Tree Item Dialog "databases" 1/2
-#: src/helps.ycp:168
+#: src/helps.ycp:203
 msgid "<p>You can see a list of configured databases.</p>"
 msgstr "<p>Oto lista skonfigurowanych baz danych.</p>"
 
 #. Tree Item Dialog "databases" 2/2
-#: src/helps.ycp:171
+#: src/helps.ycp:206
 msgid "<p>To add a new database, press <b>Add Database...</b>.</p>"
 msgstr "<p>Aby dodać nową bazę danych, należy nacisnąć przycisk <b>Dodaj bazę danych...</b>.</p>"
 
-#: src/helps.ycp:173
+#: src/helps.ycp:208
 msgid "<p>In this dialog, edit some parameters of this database.<p>"
 msgstr "<p>W tym miejscu można edytować niektóre parametry bazy danych.<p>"
 
-#: src/helps.ycp:174
+#: src/helps.ycp:209
 msgid "<h4>General Settings</h4>"
 msgstr "<h4>Ustawienia ogólne</h4>"
 
-#: src/helps.ycp:175
+#: src/helps.ycp:210
 msgid "<p>With <b>Root DN</b>, change the DN for the administrator."
 msgstr "<p>Używając <b>Root DN</b>, można zmienić DN dla administratora."
 
-#: src/helps.ycp:176
+#: src/helps.ycp:211
 msgid "Enter the complete DN or only the first part and append the base DN automatically with <b>Append Base DN</b>.</p>"
 msgstr "Proszę wprowadzić pełną nazwę DN albo tylko część początkową i dodać automatycznie base DN za pomocą przycisku <b>Dodaj Base DN</b>.</p>"
 
-#: src/helps.ycp:177
+#: src/helps.ycp:212
 msgid "<p>To change the password for the root account, enter a new one and select the <b>Encryption</b>.</p>"
 msgstr "<p>Aby zmienić hasło administratora (root), należy wprowadzić nowe i wybrać <b>Szyfrowanie</b>.</p>"
 
-#: src/helps.ycp:178
+#: src/helps.ycp:213
 msgid "<p>The password fields are initially empty, even if a password is already set in the configuration file.</p>"
 msgstr "<p>Pola haseł są początkowo puste, nawet jeśli hasło jest już ustawione w pliku konfiguracyjnym.</p>"
-
-#: src/helps.ycp:179
-msgid "<h4>Password Policy Settings</h4>"
-msgstr "<h4>Ustawienia reguł haseł</h4>"
-
-#: src/helps.ycp:180
-msgid "<p>To make use of password policies for this database, enable <b>Enable Password Policies</b>.<p>"
-msgstr "<p>Aby umożliwić ustawienia reguł haseł dla tej bazy danych, należy wybrać opcję <b>Zezwól na ustawienia reguł haseł</b>.</p>"
-
-#: src/helps.ycp:181
-msgid ""
-"<p>Check <b>Hash Clear Text Passwords</b> to specify that the OpenLDAP server should encrypt clear text passwords\n"
-"present in add and modify requests before storing them in the database. Note that this violates the  X.500/LDAP information\n"
-"model, but may be needed to compensate for LDAP clients that do not use the password modify extended operation to \n"
-"manage passwords.</p>\n"
-msgstr ""
-"<p>Proszę zaznaczyć <b>Szyfrowanie haseł z otwartym tekstem</b>, aby serwer OpenLDAP szyfrował hasła obecne w\n"
-"żądaniach dodawania i modyfikacji, przed umieszczeniem ich w bazie danych. Uwaga: jest to sprzeczne z modelem informacji X.500/LDAP,\n"
-"ale może być konieczne w przypadku klientów LDAP, które nie używają rozszerzonej operacji modyfikowania haseł do\n"
-"zarządzania hasłami.</p>\n"
-
-#: src/helps.ycp:186
-msgid ""
-"<p>If <b>Disclose \"Account Locked\" Status</b> is enabled, users authenticating to a locked account\n"
-"get a notification that their account is locked. This notification might provide useful information\n"
-"to an attacker. Sites that are sensitive to security issues should not enable this option.</p>\n"
-msgstr ""
-"<p>Jeśli wybrana została opcja <b>ujawnienia stanu \"Konta zamkniętego\"</b>, użytkownicy korzystający z\n"
-"uwierzytelniania konta otrzymają komunikat o tym fakcie. Komunikat ten może stanowić przydatną informację dla\n"
-"niepożądanych użytkowników. Na witrynach, w których ważną rolę odgrywa bezpieczeństwo danych, nie powinno się wybierać tej opcji.</p>\n"
-
-#: src/helps.ycp:190
-msgid "<p>Enter the name of the default policy object in <b>Default Policy Object DN</b>.</p>"
-msgstr "<p>Proszę wprowadzić nazwę domyślnego obiektu reguł w polu <b>DN domyślnego obiektu reguł</b>.</p>"
 
 #. Command line help text for the Xldap-server module
 #: src/ldap-server.ycp:203
@@ -745,7 +1267,8 @@ msgid "Configuration of LDAP server"
 msgstr "Konfiguracja serwera LDAP"
 
 #: src/ldap-server.ycp:210
-msgid "Enable/disable the service"
+#, fuzzy
+msgid "Enable/Disable the service"
 msgstr "Włącz/wyłącz usługę"
 
 #: src/ldap-server.ycp:214
@@ -851,10 +1374,6 @@ msgstr "Root DN: "
 msgid "LDAP Password: "
 msgstr "Hasło LDAP:"
 
-#: src/ldap-server_proposal.ycp:125 src/ldap-server_proposal.ycp:130
-msgid "Start LDAP Server: "
-msgstr "Uruchomienie serwera LDAP:"
-
 #: src/ldap-server_proposal.ycp:126
 msgid "Register at SLP Daemon: "
 msgstr "Rejestracja demona SLP:"
@@ -896,7 +1415,22 @@ msgstr "Proszę wybrać nowy plik schematu"
 msgid "The schema file is already in the list."
 msgstr "Plik schematu znajduje się już na liście."
 
-#: src/tree_structure.ycp:440
+#: src/tree_structure.ycp:373
+#, fuzzy
+msgid "Please select a valid CA Certificate File"
+msgstr "Proszę wybrać plik certyfikatu CA"
+
+#: src/tree_structure.ycp:378
+#, fuzzy
+msgid "Please select a valid Certificate File"
+msgstr "Proszę wybrać plik certyfikat"
+
+#: src/tree_structure.ycp:383
+#, fuzzy
+msgid "Please select a valid Certificate Key File"
+msgstr "Proszę wybrać plik klucza certyfikatu"
+
+#: src/tree_structure.ycp:456
 #, fuzzy
 msgid "A common server certificate is not available"
 msgstr ""
@@ -904,373 +1438,445 @@ msgstr ""
 "StartTLS zostało wyłączone."
 
 #. file selection headline
-#: src/tree_structure.ycp:451
+#: src/tree_structure.ycp:467
 msgid "Select CA Certificate File"
 msgstr "Proszę wybrać plik certyfikatu CA"
 
 #. file selection headline
-#: src/tree_structure.ycp:457
+#: src/tree_structure.ycp:473
 msgid "Select Certificate File"
 msgstr "Proszę wybrać plik certyfikat"
 
 #. file selection headline
-#: src/tree_structure.ycp:463
+#: src/tree_structure.ycp:479
 msgid "Select Certificate Key File"
 msgstr "Proszę wybrać plik klucza certyfikatu"
 
-#: src/tree_structure.ycp:487
-msgid "Available Databases:"
-msgstr "Dostępne bazy danych:"
+#: src/tree_structure.ycp:575
+#, fuzzy
+msgid "Can not delete Frontend database"
+msgstr "Nie można zapisać bazy danych \"%s\"."
+
+#: src/tree_structure.ycp:579
+#, fuzzy
+msgid "Can not delete Config database"
+msgstr "Nie można dodać nowej bazy danych \"%s\"."
+
+#: src/tree_structure.ycp:583
+msgid "Do you really want to delete the database?"
+msgstr ""
 
 #. Error Popup
-#: src/tree_structure.ycp:550
+#: src/tree_structure.ycp:609
 msgid "Unable to write settings for the current database."
 msgstr "Nie można zapisać ustawień dla bieżącej bazy danych."
 
-#: src/tree_structure.ycp:631
+#: src/tree_structure.ycp:644
 msgid "Unable to read settings for the current database."
 msgstr "Nie można odczytać ustawień bieżącej bazy danych."
 
-#: src/tree_structure.ycp:723 src/tree_structure.ycp:724
-#: src/tree_structure.ycp:725 src/tree_structure.ycp:726
-msgid "No"
-msgstr ""
-
-#: src/tree_structure.ycp:730 src/tree_structure.ycp:734
-#: src/tree_structure.ycp:738
-msgid "Yes"
-msgstr ""
-
-#: src/tree_structure.ycp:964
-#, fuzzy
-msgid "Startup Configuration"
-msgstr "Bieżąca konfiguracja:"
-
 #. Tree item
-#: src/tree_structure.ycp:973
+#: src/tree_structure.ycp:871
 msgid "Global Settings"
 msgstr "Ustawienia globalne"
 
 #. Tree item
-#: src/tree_structure.ycp:978
+#: src/tree_structure.ycp:876
 msgid "Schema Files"
 msgstr "Pliki schematu"
 
 #. Tree item
-#: src/tree_structure.ycp:986
+#: src/tree_structure.ycp:884
 msgid "Log Level Settings"
 msgstr "Ustawienia poziomu dziennika zdarzeń"
 
 #. Tree item
-#: src/tree_structure.ycp:994
+#: src/tree_structure.ycp:892
 msgid "Allow/Disallow Features"
 msgstr ""
 
 #. Tree item
-#: src/tree_structure.ycp:1002 src/widgets.ycp:137
+#: src/tree_structure.ycp:900 src/widgets.ycp:136
 msgid "TLS Settings"
 msgstr "Ustawienia TLS"
 
 #. Tree item
-#: src/tree_structure.ycp:1010
+#: src/tree_structure.ycp:908
 msgid "Databases"
 msgstr "Bazy danych"
 
-#. Button Text
-#: src/tree_structure.ycp:1014
+#: src/tree_structure.ycp:911
+msgid "Suffix DN"
+msgstr ""
+
+#: src/tree_structure.ycp:911
+#, fuzzy
+msgid "Database type"
+msgstr "Bazy danych"
+
+#: src/tree_structure.ycp:914
 msgid "A&dd Database..."
 msgstr "&Dodaj bazę danych..."
 
-#: src/tree_structure.ycp:1031
+#: src/tree_structure.ycp:915
+#, fuzzy
+msgid "Delete Database"
+msgstr "Bazy danych"
+
+#: src/tree_structure.ycp:932
 #, fuzzy
 msgid "Index Configuration"
 msgstr "Konfiguracja:"
 
-#: src/tree_structure.ycp:1038
+#: src/tree_structure.ycp:940
 #, fuzzy
 msgid "Password Policy Configuration"
 msgstr "Ustawienia reguł haseł"
 
-#: src/widgets.ycp:42
+#: src/tree_structure.ycp:949
+#, fuzzy
+msgid "Access Control Configuration"
+msgstr "Ustawienia reguł haseł"
+
+#: src/widgets.ycp:45
 msgid "Protocol Listeners"
 msgstr ""
 
-#: src/widgets.ycp:46
+#: src/widgets.ycp:49
 msgid "LDAP"
 msgstr ""
 
-#: src/widgets.ycp:53
+#: src/widgets.ycp:56
 msgid "LDAP over SSL (ldaps)"
 msgstr ""
 
-#: src/widgets.ycp:60
+#: src/widgets.ycp:63
 msgid "LDAP over IPC (ldapi)"
 msgstr ""
 
-#: src/widgets.ycp:83
+#: src/widgets.ycp:86
 msgid "Included &Schema Files"
 msgstr "Dołączone pliki &schematów"
 
-#: src/widgets.ycp:95
+#: src/widgets.ycp:94
 msgid "Select &Log Level Flags:"
 msgstr "Wy&bierz znaczniki poziomu dziennika zdarzeń:"
 
-#: src/widgets.ycp:96
+#: src/widgets.ycp:95
 msgid "Trace Function Calls"
 msgstr "Śledź wywołania funkcji"
 
-#: src/widgets.ycp:97
+#: src/widgets.ycp:96
 msgid "Debug Packet Handling"
 msgstr "Debuguj obsługę pakietów"
 
-#: src/widgets.ycp:98
+#: src/widgets.ycp:97
 #, fuzzy
 msgid "Heavy Trace Debugging (function args)"
 msgstr "Zastosuj debugowanie typu Heavy Trace"
 
-#: src/widgets.ycp:99
+#: src/widgets.ycp:98
 msgid "Connection Management"
 msgstr "Zarządzanie połączeniami"
 
-#: src/widgets.ycp:100
+#: src/widgets.ycp:99
 msgid "Print Packets Sent and Received"
 msgstr "Wyświetlaj wysłane i odebrane pakiety"
 
-#: src/widgets.ycp:101
+#: src/widgets.ycp:100
 msgid "Search Filter Processing"
 msgstr "Przetwarzanie filtrów wyszukiwania"
 
-#: src/widgets.ycp:102
+#: src/widgets.ycp:101
 msgid "Configuration File Processing"
 msgstr "Przetwarzanie plików konfiguracyjnych"
 
-#: src/widgets.ycp:103
+#: src/widgets.ycp:102
 msgid "Access Control List Processing"
 msgstr "Przetwarzanie list praw dostępu"
 
-#: src/widgets.ycp:104
+#: src/widgets.ycp:103
 msgid "Log Connections, Operations, and Result"
 msgstr "Rejestruj połączenia, operacje i wyniki"
 
-#: src/widgets.ycp:105
+#: src/widgets.ycp:104
 msgid "Log Entries Sent"
 msgstr "Wysłane pozycje dziennika zdarzeń"
 
-#: src/widgets.ycp:106
+#: src/widgets.ycp:105
 msgid "Print Communication with Shell Back-Ends"
 msgstr "Komunikacja drukowania z powłoką"
 
-#: src/widgets.ycp:107
+#: src/widgets.ycp:106
 msgid "Entry Parsing"
 msgstr "Parsowanie pozycji"
 
-#: src/widgets.ycp:108
+#: src/widgets.ycp:107
 msgid "LDAPSync Replication"
 msgstr ""
 
-#: src/widgets.ycp:109
+#: src/widgets.ycp:108
 msgid "None"
 msgstr ""
 
-#: src/widgets.ycp:110
+#: src/widgets.ycp:109
 msgid "Proxy Cache"
 msgstr ""
 
-#: src/widgets.ycp:117
+#: src/widgets.ycp:116
 msgid "Select &Allow Flags:"
 msgstr "Proszę wybrać zn&acznki zezwoleń:"
 
-#: src/widgets.ycp:118
+#: src/widgets.ycp:117
 msgid "LDAPv2 Bind Requests"
 msgstr "Żądania LDAPv2 Bind"
 
-#: src/widgets.ycp:119
+#: src/widgets.ycp:118
 msgid "Anonymous Bind when Credentials Not Empty"
 msgstr "Anonimowe żądania Bind kiedy uwierzytelnienia niepuste"
 
-#: src/widgets.ycp:120
+#: src/widgets.ycp:119
 msgid "Unauthenticated Bind when DN Not Empty"
 msgstr "Nieuwierzytelnione Bind gdy DN niepuste"
 
-#: src/widgets.ycp:121
+#: src/widgets.ycp:120
 msgid "Unauthenticated Update Options to Process"
 msgstr "Nieuwierzytelnione opcje aktualizacji do przetworzenia"
 
-#: src/widgets.ycp:125
+#: src/widgets.ycp:124
 #, fuzzy
 msgid "Select &Disallow Flags:"
 msgstr "Proszę wybrać zn&acznki zezwoleń:"
 
-#: src/widgets.ycp:126
+#: src/widgets.ycp:125
 msgid "Disable acceptance of anonymous Bind Requests (does not prohibit anonymous directory access)"
 msgstr ""
 
-#: src/widgets.ycp:127
+#: src/widgets.ycp:126
 msgid "Disable Simple Bind authentication"
 msgstr ""
 
-#: src/widgets.ycp:128
+#: src/widgets.ycp:127
 msgid "Disable forcing session to anonymous status upon StartTLS operation receipt"
 msgstr ""
 
-#: src/widgets.ycp:129
+#: src/widgets.ycp:128
 msgid "Disallow the StartTLS operation if authenticated"
 msgstr ""
 
-#: src/widgets.ycp:144
+#: src/widgets.ycp:139
+#, fuzzy
+msgid "Basic Settings"
+msgstr "Ustawienia TLS"
+
+#: src/widgets.ycp:143
 #, fuzzy
 msgid "Enable TLS"
 msgstr "Włą&cz serwer"
 
-#: src/widgets.ycp:148
+#: src/widgets.ycp:147
 msgid "Enable LDAP over SSL (ldaps) interface"
 msgstr ""
 
-#: src/widgets.ycp:152
+#: src/widgets.ycp:151
 #, fuzzy
 msgid "Use common Server Certificate"
 msgstr "Użyj certyfikatu C&ommon Server Certificate"
 
-#: src/widgets.ycp:161
+#: src/widgets.ycp:160
 msgid "Import Certificate"
 msgstr "Import certyfikatu"
 
-#: src/widgets.ycp:166
+#: src/widgets.ycp:165
 msgid "C&A Certificate File (PEM Format)"
 msgstr "Plik certyfikatu C&A (w formacie PEM)"
 
-#: src/widgets.ycp:169
+#: src/widgets.ycp:168
 msgid "Bro&wse..."
 msgstr "Przegląda&j..."
 
-#: src/widgets.ycp:177
+#: src/widgets.ycp:176
 msgid "Certificate &File (PEM Format)"
 msgstr "Plik certyfikatu (w &formacie PEM)"
 
-#: src/widgets.ycp:188
+#: src/widgets.ycp:187
 #, fuzzy
 msgid "Certificate &Key File (PEM Format - Unencrypted)"
 msgstr "Plik z &kluczem certyfikatu (w formacie PEM -- niezaszyfrowany)"
 
-#: src/widgets.ycp:191
+#: src/widgets.ycp:190
 msgid "B&rowse..."
 msgstr "Prze&glądaj..."
 
-#: src/widgets.ycp:200
+#: src/widgets.ycp:199
 msgid "Launch CA Management Module"
 msgstr ""
 
-#: src/widgets.ycp:214
+#: src/widgets.ycp:213
 msgid "&Root DN"
 msgstr "&Root DN"
 
-#: src/widgets.ycp:218 src/widgets.ycp:304
-msgid "&Append Base DN"
-msgstr "Dodaj B&ase DN"
-
-#: src/widgets.ycp:226
+#: src/widgets.ycp:220
 #, fuzzy
 msgid "Change Password"
 msgstr "Spra&wdzenie hasła"
 
 #: src/widgets.ycp:230
 #, fuzzy
-msgid "Database is read-only"
-msgstr "Katalog bazy &danych"
-
-#: src/widgets.ycp:233
-msgid "Enable Monitoring"
-msgstr ""
-
-#: src/widgets.ycp:240
-#, fuzzy
 msgid "Edit BDB Database"
 msgstr "Edycja bazy danych"
 
-#: src/widgets.ycp:248
+#: src/widgets.ycp:238
+msgid "Entry Cache"
+msgstr ""
+
+#: src/widgets.ycp:244
+msgid "Index Cache (IDL cache)"
+msgstr ""
+
+#: src/widgets.ycp:253
+#, fuzzy
+msgid "Checkpoint settings"
+msgstr "Ustawienia reguł haseł"
+
+#: src/widgets.ycp:261
+msgid "kilobytes"
+msgstr ""
+
+#: src/widgets.ycp:267
+msgid "minutes"
+msgstr ""
+
+#: src/widgets.ycp:276
 msgid "Edit Database"
 msgstr "Edycja bazy danych"
 
-#: src/widgets.ycp:250
+#: src/widgets.ycp:278
 #, fuzzy
-msgid "Databasetype not supported currently"
+msgid "Database type not currently supported."
 msgstr "Baza danych typu \"%s\" nie jest obsługiwana. Dopuszczalne są bazy typu \"bdb\" i \"ldbm\"."
 
-#: src/widgets.ycp:256
+#: src/widgets.ycp:284
 #, fuzzy
-msgid "Edit Index Configuration"
+msgid "Indexing Configuration"
 msgstr "Konfiguracja:"
 
-#: src/widgets.ycp:264
-msgid "Add"
+#: src/widgets.ycp:287
+msgid "Attrbute"
 msgstr ""
 
-#: src/widgets.ycp:265
-msgid "Edit"
+#: src/widgets.ycp:287 src/widgets.ycp:363
+msgid "Presence"
 msgstr ""
 
-#: src/widgets.ycp:266
-msgid "Delete"
+#: src/widgets.ycp:287 src/widgets.ycp:366
+msgid "Equality"
 msgstr ""
 
-#: src/widgets.ycp:274
-msgid "Password Policy Settings"
-msgstr "Ustawienia reguł haseł"
+#: src/widgets.ycp:287 src/widgets.ycp:369
+msgid "Substring"
+msgstr ""
 
-#: src/widgets.ycp:278
-msgid "Enable Password Policies"
-msgstr "Włącz &ustawienia reguł haseł"
-
-#: src/widgets.ycp:284
-msgid "Hash Clear Text Passwords"
-msgstr "Szyfrowanie haseł z otwartym tekstem"
-
-#: src/widgets.ycp:290
-msgid "Disclose \"Account Locked\" Status"
-msgstr "Ujawnij stan \"Konta zamkniętego\""
-
-#: src/widgets.ycp:298
-msgid "Default Policy Object DN"
-msgstr "Domyślny obiekt reguł DN"
-
-#: src/widgets.ycp:321
+#: src/widgets.ycp:303
 #, fuzzy
 msgid "Change Administrator Password"
 msgstr "&Hasło administratora"
 
-#: src/widgets.ycp:322
+#: src/widgets.ycp:304
 #, fuzzy
 msgid "New Administrator &Password"
 msgstr "&Hasło administratora"
 
-#: src/widgets.ycp:347
+#: src/widgets.ycp:329
 msgid "Please enter a password"
 msgstr ""
 
-#: src/widgets.ycp:360
+#: src/widgets.ycp:342
 msgid "The passwords you have enter do not match. Please try again"
 msgstr ""
 
-#: src/widgets.ycp:376
+#: src/widgets.ycp:358
 msgid "Add Index"
 msgstr ""
 
-#: src/widgets.ycp:381
-msgid "Presence"
-msgstr ""
-
-#: src/widgets.ycp:384
-msgid "Equality"
-msgstr ""
-
-#: src/widgets.ycp:387
-msgid "Substring"
-msgstr ""
-
 #. Initialization dialog contents
-#: src/wizards.ycp:57 src/wizards.ycp:114 src/wizards.ycp:219
+#: src/wizards.ycp:57 src/wizards.ycp:117 src/wizards.ycp:222
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
+#, fuzzy
+#~ msgid "Advanced Configuration"
+#~ msgstr "Konfiguracja serwera LDAP"
+
+#~ msgid ""
+#~ "<p><b><big>LDAP Server Configuration</big></b><br>\n"
+#~ "Change the settings of the initial LDAP database here.</p>\n"
+#~ msgstr ""
+#~ "<p><b><big>Konfiguracja serwera LDAP</big></b><br>\n"
+#~ "W tym miejscu można zmienić ustawienia początkowej bazy LDAP.<br></p>\n"
+
+#~ msgid ""
+#~ "<p>The <b>Root Password</b> is initially set to the system root password\n"
+#~ "entered earlier in the installation process. Change it in the\n"
+#~ "edit fields. Change the password encryption method in the relevant field.</p>\n"
+#~ msgstr ""
+#~ "<p><b>Hasło użytkownika root</b> jest początkowo ustawione na hasło\n"
+#~ "systemowego użytkownika root podane wcześniej w czasie instalacji. \n"
+#~ "Można je zmienić w polach edycji. W odpowiednim polu można także zmienić metodę\n"
+#~ "szyfrowania.</p>\n"
+
+#~ msgid ""
+#~ "<p>Checking the <b>Activate StartTLS</b> option enables the LDAP server to\n"
+#~ "process incoming StartTLS requests. This requires the common server certificate\n"
+#~ "that can be set up in the <b>CA Management</b> YaST module.</p>\n"
+#~ msgstr ""
+#~ "<p>Zaznaczenie opcji <b>Aktywuj StartTLS</b> włącza przetwarzanie przez serwer LDAP\n"
+#~ "przychodzących żądań StartTLS. Wymaga to certyfikatu serwera, który można \n"
+#~ "ustawić w module YaST <b>Zarządzanie CA</b>.</p>\n"
+
+#~ msgid ""
+#~ "<p>If <b>Register at an SLP Daemon</b> is checked, the LDAP server tries\n"
+#~ "to find a running SLP daemon at which to register.</p>\n"
+#~ msgstr ""
+#~ "<p>Jeśli zaznaczona jest opcja <b>Zarejestruj demona SLP</b>, to serwer LDAP spróbuje\n"
+#~ "znaleźć działającego demona SLP, u którego mógłby się zarejestrować.</p>\n"
+
+#~ msgid ""
+#~ "<p><b><big>LDAP Server Configuration</big></b><br>\n"
+#~ "Configure an LDAP server here.<br></p>\n"
+#~ msgstr ""
+#~ "<p><b><big>Konfiguracja serwera LDAP</big></b><br>\n"
+#~ "Tutaj skonfiguruj serwer LDAP.<br></p>\n"
+
+#~ msgid ""
+#~ "<p><b><big>Adding an LDAP Server:</big></b><br>\n"
+#~ "Choose an LDAP server from the list of detected LDAP servers.\n"
+#~ "If your LDAP server was not autodetected, use <b>Other (not detected)</b>.\n"
+#~ "Then press <b>Configure</b>.</p>\n"
+#~ msgstr ""
+#~ "<p><b><big>Dodawanie serwera LDAP:</big></b><br>\n"
+#~ "Proszę wybrać serwer LDAP z listy znalezionych serwerów LDAP.\n"
+#~ "Jeśli żądany serwer LDAP nie został automatycznie wykryty, należy wybrać <b>Inny (nie wykryty)</b> i następnie nacisnąć przycisk <b>Konfiguracja</b>.</p>\n"
+
+#~ msgid ""
+#~ "<p><b><big>Editing or Deleting:</big></b><br>\n"
+#~ "If you press <b>Edit</b>, an additional dialog in which to change\n"
+#~ "the configuration opens.</p>\n"
+#~ msgstr ""
+#~ "<p><b><big>Edycja lub usuwanie:</big></b><br>\n"
+#~ "Naciśnięcie przycisku <b>Edytuj</b> spowoduje otwarcie nowego okna, w którym\n"
+#~ "można zmienić konfigurację.</p>\n"
+
+#~ msgid "<p>Click <b>Configure...</p> to configure the LDAP server.</p>"
+#~ msgstr "<p>Aby skonfigurować serwer LDAP, należy nacisnąć przycisk <b>Skonfiguruj...</b> .</p>"
+
+#, fuzzy
+#~ msgid "Database is read-only"
+#~ msgstr "Katalog bazy &danych"
+
+#, fuzzy
+#~ msgid "Edit Index Configuration"
+#~ msgstr "Konfiguracja:"
 
 #~ msgid "Invalid suffix."
 #~ msgstr "Nieprawidłowy przyrostek."
@@ -1350,15 +1956,6 @@ msgstr "Inicjalizacja..."
 #~ msgid "Cannot write 'TLS Settings'."
 #~ msgstr "Nie można zapisać \"ustawień TLS\"."
 
-#~ msgid "Cannot add new database '%s'."
-#~ msgstr "Nie można dodać nowej bazy danych \"%s\"."
-
-#~ msgid "Cannot write the database '%s'."
-#~ msgstr "Nie można zapisać bazy danych \"%s\"."
-
-#~ msgid "Creating Password Policy Objects"
-#~ msgstr "Tworzenie obiektów reguł ustawiania haseł"
-
 #~ msgid "Check password policy objects"
 #~ msgstr "Sprawdzanie obiektów reguł ustawiania haseł"
 
@@ -1373,32 +1970,17 @@ msgstr "Inicjalizacja..."
 #~ "\n"
 #~ "Czy go utworzyć?\n"
 
-#~ msgid ""
-#~ "Authentication failed. The password is probably incorrect.\n"
-#~ "The error message was: '%s'.\n"
-#~ "Try again? \n"
-#~ msgstr ""
-#~ "Uwierzytelnianie nie powiodło się. Prawdopodobnie hasło było nieprawidłowe.\n"
-#~ "Komunikat błędu: '%s'.\n"
-#~ "Czy ponowić próbę? \n"
-
 #~ msgid "LDAP Server Overview"
 #~ msgstr "Przegląd serwera LDAP"
 
 #~ msgid "Number"
 #~ msgstr "Liczba"
 
-#~ msgid "LDAP Server"
-#~ msgstr "Serwer LDAP"
-
 #~ msgid "&Configure..."
 #~ msgstr "Skon&figuruj..."
 
 #~ msgid "OpenLDAP Server Settings"
 #~ msgstr "Ustawienia serwera OpenLDAP"
-
-#~ msgid "&Disable Server"
-#~ msgstr "W&yłącz serwer"
 
 #~ msgid "Activate Start&TLS with Common Server Certificate"
 #~ msgstr "Aktywuj Start&TLS z użyciem certyfikatu Common Server Certificate"
@@ -1458,9 +2040,6 @@ msgstr "Inicjalizacja..."
 
 #~ msgid "&Select Certificate..."
 #~ msgstr "Wybierz &certyfikat..."
-
-#~ msgid "Select Type"
-#~ msgstr "Wybór typu"
 
 #~ msgid "&Import Certificates"
 #~ msgstr "&Importuj certyfikaty"

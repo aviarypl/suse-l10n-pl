@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bootloader.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-04 10:28+0200\n"
+"POT-Creation-Date: 2008-09-11 08:48+0200\n"
 "PO-Revision-Date: 2008-07-06 16:08+0200\n"
 "Last-Translator: Mariusz Fik <fisiu82@gmail.com>\n"
 "Language-Team: Polski <pl@li.org>\n"
@@ -106,14 +106,14 @@ msgid "The value of the option"
 msgstr "Wartość opcji"
 
 #. progress step title
-#: src/clients/bootloader_finish.ycp:53
+#: src/clients/bootloader_finish.ycp:52
 msgid "Saving bootloader configuration..."
 msgstr "Zapisywanie konfiguracji programu rozruchowego..."
 
 #. for s390:
 #. Message that will be displayed along with information
 #. how the boot loader was installed
-#: src/clients/bootloader_finish.ycp:103
+#: src/clients/bootloader_finish.ycp:102
 msgid ""
 "\n"
 "Your system will now shut down.\n"
@@ -139,7 +139,7 @@ msgstr ""
 #. for s390:
 #. Message that will be displayed along with information
 #. how the boot loader was installed
-#: src/clients/bootloader_finish.ycp:117
+#: src/clients/bootloader_finish.ycp:116
 msgid ""
 "\n"
 "Your system will shut down now.\n"
@@ -161,7 +161,7 @@ msgstr ""
 #. and we're ready to start (boot into) the installed system
 #. Message that will be displayed along with information
 #. how the boot loader was installed
-#: src/clients/bootloader_finish.ycp:133
+#: src/clients/bootloader_finish.ycp:132
 msgid ""
 "The system will reboot now.\n"
 "After reboot, reconnect and run the following:\n"
@@ -176,34 +176,34 @@ msgstr ""
 #. and we're ready to start (boot into) the installed system
 #. Message that will be displayed along with information
 #. how the boot loader was installed
-#: src/clients/bootloader_finish.ycp:141
+#: src/clients/bootloader_finish.ycp:140
 msgid "The system will reboot now..."
 msgstr "Nastąpi ponowne uruchomienie systemu..."
 
 #: src/clients/bootloader_proposal.ycp:116
 #, fuzzy
 msgid ""
-"Configure a valid boot loader location before continuing.<br>\n"
-"The device map includes more than 8 devices and the boot device is out of range. \n"
-"The range is the first 8 devices by BIOS."
+"Configure a valid boot loader location before continuing.<br/>\n"
+"The device map includes more than 8 devices and the boot device is out of range.\n"
+"The range is limited by BIOS to the first 8 devices."
 msgstr ""
 "Proszę skonfigurować poprawne położenie programu rozruchowego.<br>\n"
 "Jeśli nie ma możliwości wyboru, prawdopodobnie trzeba będzie utworzyć partycję PReP-boot."
 
-#: src/clients/bootloader_proposal.ycp:152
+#: src/clients/bootloader_proposal.ycp:146
 msgid "No boot loader is selected for installation. Your system might not be bootable."
 msgstr "Nie wybrano do zainstalowania żadnego programu rozruchowego. System może się nie uruchomić."
 
 #. error in the proposal
-#: src/clients/bootloader_proposal.ycp:159
+#: src/clients/bootloader_proposal.ycp:153
 msgid "Because of the partitioning, the bootloader cannot be installed properly"
 msgstr "Z powodu wybranego podziału na partycje nie można prawidłowo zainstalować programu rozruchowego."
 
-#: src/clients/bootloader_proposal.ycp:173
+#: src/clients/bootloader_proposal.ycp:167
 msgid "The selected boot path will not be activated for your installation. Your system may not be bootable."
 msgstr "Wybrana ścieżka do programu rozruchowego nie zostanie uaktywniona. System może się nie uruchomić."
 
-#: src/clients/bootloader_proposal.ycp:190
+#: src/clients/bootloader_proposal.ycp:184
 msgid ""
 "Configure a valid boot loader location before continuing.<br>\n"
 "In case that no selection can be made it may be necessary to create a PReP Boot partition."
@@ -212,12 +212,12 @@ msgstr ""
 "Jeśli nie ma możliwości wyboru, prawdopodobnie trzeba będzie utworzyć partycję PReP-boot."
 
 #. proposal part - bootloader label
-#: src/clients/bootloader_proposal.ycp:234
+#: src/clients/bootloader_proposal.ycp:228
 msgid "Booting"
 msgstr "Uruchamianie systemu"
 
 #. menubutton entry
-#: src/clients/bootloader_proposal.ycp:236
+#: src/clients/bootloader_proposal.ycp:230
 msgid "&Booting"
 msgstr "&Uruchamianie systemu"
 
@@ -234,16 +234,17 @@ msgid "<p><b>Default Boot Section</b></p>"
 msgstr "<p><b>Domyślna sekcja startowa</b></p>"
 
 #: src/elilo/helps.ycp:28
+#, fuzzy
 msgid ""
-"<p><b>Timeout in tenth of seconds</b><br> Specifies the the time the\n"
-"bootloader will wait in interactive mode until the default entry is\n"
-"booted.</p>"
+"<p><b>Timeout in tenths of a second</b><br> Specifies the time the\n"
+"bootloader will wait in interactive mode until booting the default\n"
+"entry.</p>\n"
 msgstr ""
 "<p><b>Czas oczekiwania w dziesiątych częściach sekundy</b><br>Określenie czasu\n"
 "oczekiwania programu rozruchowego w trybie internatywnym, przed uruchomieniem \n"
 "pozycji domyślnej.</p>"
 
-#: src/elilo/helps.ycp:32
+#: src/elilo/helps.ycp:33
 msgid ""
 "<p><b>Set level of verbosity [0-5]</b><br> Increase verbosity of ELILO\n"
 "in case of boot problems.</p>"
@@ -251,32 +252,34 @@ msgstr ""
 "<p><b>Określ poziom szczegółowości komunikatów [0-5]</b><br>W razie problemów\n"
 "z rozruchem należy zwiększyć szczegółowość komunikatów ELILO.</p>"
 
-#: src/elilo/helps.ycp:35
+#: src/elilo/helps.ycp:36
+#, fuzzy
 msgid ""
-"<p><b>Global Append string of options to kernel command line</b><br>\n"
-"Lets you define global, additional parameters to pass to the kernel. These are\n"
-"used if no 'append' appears in a given section.</p>"
+"<p><b>Append string for.global options to pass to kernel command line</b><br>\n"
+"Lets you define additional global parameters to pass to the kernel. These are\n"
+"used if no 'append' appears in a given section.</p>\n"
 msgstr ""
 "<p><b>Globalny dodatkowy łańcuch opcji polecenia wywołania jądra</b><br>\n"
 "Opcja ta pozwala na zdefiniowanie globalnych, dodatkowych parametrów przekazywanych\n"
 "do jądra. Są one używane, jeśli w danej sekcji nie pojawiają się żadne dodatki.</p> "
 
-#: src/elilo/helps.ycp:39
+#: src/elilo/helps.ycp:41
+#, fuzzy
 msgid ""
-"<p><b>Name of default initrd file</b>, if non-empty, defines the initial\n"
+"<p><b>Name of the default initrd file</b>, if not empty, defines the initial\n"
 "ramdisk to use. Either enter the path and file name directly or choose by using\n"
-"<b>Browse</b></p>"
+"<b>Browse</b></p>\n"
 msgstr ""
 "<p><b>Nazwa domyślnego pliku initrd</b> - jeśli nie jest pozostawiona pusta -\n"
 "określa mający być używany początkowy pseudodysk (RAM-dysk). Albo należy \n"
 "podać bezpośrednio nazwę pliku wraz z ścieżką dostępu, albo wybrać go \n"
 "korzystając z <b>Przeglądaj</b></p>"
 
-#: src/elilo/helps.ycp:43
+#: src/elilo/helps.ycp:46
 msgid "<p><b>Name of default image file</b></p>"
 msgstr "<p><b>Nazwa domyślnego pliku obrazu</b></p>"
 
-#: src/elilo/helps.ycp:45
+#: src/elilo/helps.ycp:48
 msgid ""
 "<p><b>Specify user interface for ELILO ('simple' or 'textmenu')</b><br>\n"
 "Beware: 'textmenu' has occasionally caused problems on some machines.</p>"
@@ -284,13 +287,14 @@ msgstr ""
 "<p><b>Określ interfejs użytkownika dla ELILO ('prosty' albo 'menu tekstowe')</b><br>\n"
 "Uwaga: 'menu tekstowe' sprawia czasami problemy w niektórych komputerach.</p>"
 
-#: src/elilo/helps.ycp:48
+#: src/elilo/helps.ycp:51
+#, fuzzy
 msgid ""
 "<p><b>Prevent EDD30 mode</b><br>\n"
-"By default, if EDD30 is off, elilo will try and set the variable to TRUE.\n"
+"By default, if EDD30 is off, ELILO will try and set the variable to TRUE.\n"
 "However, some controllers do not support EDD30 and forcing the variable\n"
-"may cause problems. Therefore as of elilo-3.2, there is an option to \n"
-"avoid forcing the variable.</p>"
+"may cause problems. Therefore, as of elilo-3.2, there is an option to \n"
+"avoid forcing the variable.</p>\n"
 msgstr ""
 "<p><b>Nie dopuszczaj trybu EDD30</b><br>\n"
 "Domyślnie, jeżeli tryb EDD30 jest wyłączony, program ELILO będzie\n"
@@ -299,7 +303,7 @@ msgstr ""
 "Dlatego, jak w ELILO-3.2, istnieje opcja niedopuszczania do wymuszania \n"
 "tej zmiennej.</p>"
 
-#: src/elilo/helps.ycp:54
+#: src/elilo/helps.ycp:58
 msgid ""
 "<p><b>Allow attempt to relocate</b><br>\n"
 "In case of memory allocation error at initial load point of\n"
@@ -312,7 +316,7 @@ msgstr ""
 "że jadro może być relokowane).\n"
 "</p>"
 
-#: src/elilo/helps.ycp:59
+#: src/elilo/helps.ycp:63
 msgid ""
 "<p><b>Optional kernel command line parameter</b></p>\n"
 "May be empty, if already specified in global section.</p>"
@@ -320,7 +324,7 @@ msgstr ""
 "<p><b>Opcjonalne parametry polecenia wywołania jądra</b></p>\n"
 "Można pozostawić puste, jeśli już określono w sekcji globalnej.</p>"
 
-#: src/elilo/helps.ycp:62
+#: src/elilo/helps.ycp:66
 msgid ""
 "<p><b>Force root filesystem to be mounted read-only</b><br>\n"
 "Usually specified in global section</p>"
@@ -328,7 +332,7 @@ msgstr ""
 "<p><b>Wymuś montowanie głównego systemu plików tylko do odczytu</b><br>\n"
 "Opcja zazwyczaj określana w sekcji globanej</p>"
 
-#: src/elilo/helps.ycp:65
+#: src/elilo/helps.ycp:69
 msgid ""
 "<p><b>Allow attempt to relocate</b></p>\n"
 "Usually specified in global section</p>"
@@ -336,107 +340,107 @@ msgstr ""
 "<p><b>Zezwól na próby relokacji</b></p>\n"
 "Zazwyczaj określone w sekcji globalnej.</p>"
 
-#: src/elilo/helps.ycp:71 src/generic/helps.ycp:73 src/zipl/helps.ycp:34
+#: src/elilo/helps.ycp:75 src/generic/helps.ycp:73 src/zipl/helps.ycp:35
 msgid "Boot Image Location"
 msgstr "Położenie obrazu programu rozruchowego"
 
-#: src/elilo/helps.ycp:72 src/grub/helps.ycp:132 src/ppc/helps.ycp:33
+#: src/elilo/helps.ycp:76 src/grub/helps.ycp:153 src/ppc/helps.ycp:33
 msgid "Default Boot Section"
 msgstr "Domyślna sekcja startowa"
 
-#: src/elilo/helps.ycp:73
+#: src/elilo/helps.ycp:77
 msgid "Timeout in tenth of seconds (in interactive mode)"
 msgstr "Czas oczekiwania w dziesiątych częściach sekundy (w trybie internaktywnym)"
 
-#: src/elilo/helps.ycp:74
+#: src/elilo/helps.ycp:78
 msgid "Delay to wait before auto booting in seconds (used if not in interactive mode)"
 msgstr "Opóźnienie w sekundach, przed automatycznym uruchomieniem systemu (używane w trybie nieinteraktywnym)"
 
-#: src/elilo/helps.ycp:75
+#: src/elilo/helps.ycp:79
 msgid "Force interactive mode"
 msgstr "Wymuś tryb interaktywny"
 
-#: src/elilo/helps.ycp:76
+#: src/elilo/helps.ycp:80
 msgid "Set level of verbosity [0-5]"
 msgstr "Określ poziom szczegółowości komunikatów [0-5]"
 
-#: src/elilo/helps.ycp:77
+#: src/elilo/helps.ycp:81
 msgid "Set default root filesystem"
 msgstr "Określ główny system plików"
 
-#: src/elilo/helps.ycp:78
+#: src/elilo/helps.ycp:82
 msgid "Force rootfs to be mounted read-only"
 msgstr "Wymuś montowanie głównego systemu plików tylko do odczytu"
 
-#: src/elilo/helps.ycp:79
+#: src/elilo/helps.ycp:83
 msgid "Global append string of options to kernel command line"
 msgstr "Globalny dodatkowy łańcuch opcji polecenia wywołania jądra"
 
-#: src/elilo/helps.ycp:80
+#: src/elilo/helps.ycp:84
 msgid "Name of default initrd file"
 msgstr "Nazwa domyślnego pliku initrd"
 
-#: src/elilo/helps.ycp:81
+#: src/elilo/helps.ycp:85
 msgid "Name of default image file"
 msgstr "Nazwa domyślnego pliku obrazu"
 
-#: src/elilo/helps.ycp:82
+#: src/elilo/helps.ycp:86
 msgid "Specify user interface for ELILO ('simple' or 'textmenu')"
 msgstr "Należy określić interfejs dla ELILO ('simple' albo 'textmenu')"
 
-#: src/elilo/helps.ycp:83
+#: src/elilo/helps.ycp:87
 msgid "Message printed on main screen (if supported)"
 msgstr "Komunikaty wyświetlane na ekranie głównym (o ile obsługiwane)"
 
-#: src/elilo/helps.ycp:84
+#: src/elilo/helps.ycp:88
 msgid "Display the content of a file by function keys"
 msgstr "Wyświetlanie zawartości pliku przy pomocy klawiszy funkcyjnych"
 
-#: src/elilo/helps.ycp:85
+#: src/elilo/helps.ycp:89
 msgid "Prevent EDD30 mode"
 msgstr "Nie dopuszczaj trybu EDD30"
 
-#: src/elilo/helps.ycp:86
+#: src/elilo/helps.ycp:90
 msgid "Specify the filename for a specific FPSWA to load"
 msgstr "Podaj nazwę pliku do wczytania, dla wybranego FPSWA"
 
-#: src/elilo/helps.ycp:87 src/elilo/helps.ycp:96
+#: src/elilo/helps.ycp:91 src/elilo/helps.ycp:100
 msgid "Allow attempt to relocate"
 msgstr "Zezwól na próbę relokacji"
 
-#: src/elilo/helps.ycp:88 src/grub/helps.ycp:134
+#: src/elilo/helps.ycp:92 src/grub/helps.ycp:156
 msgid "Custom Boot Partition"
 msgstr "Partycja rozruchowa wybrana przez użytkownika"
 
-#: src/elilo/helps.ycp:89 src/grub/helps.ycp:147 src/zipl/helps.ycp:36
+#: src/elilo/helps.ycp:93 src/grub/helps.ycp:169 src/zipl/helps.ycp:37
 msgid "Image Section"
 msgstr "Sekcja obrazu"
 
-#: src/elilo/helps.ycp:90
+#: src/elilo/helps.ycp:94
 msgid "Optional kernel command line parameter"
 msgstr "Opcjonalne parametry polecenia wywołania jądra"
 
-#: src/elilo/helps.ycp:91
+#: src/elilo/helps.ycp:95
 msgid "One line text description of the image"
 msgstr "Jednowierszowy opis tekstowy obrazu"
 
-#: src/elilo/helps.ycp:92
+#: src/elilo/helps.ycp:96
 msgid "Kernel image"
 msgstr "Obraz jądra"
 
-#: src/elilo/helps.ycp:93
+#: src/elilo/helps.ycp:97
 msgid "Initial RAM disk"
 msgstr "RAM-dysk początkowy"
 
-#: src/elilo/helps.ycp:94
+#: src/elilo/helps.ycp:98
 msgid "Do not verify filesystem before booting"
 msgstr "Nie sprawdzaj systemu plików przed rozruchem"
 
-#: src/elilo/helps.ycp:95
+#: src/elilo/helps.ycp:99
 msgid "Force root filesystem to be mounted read-only"
 msgstr "Wymuś montowanie głównego systemu plików tylko do odczytu"
 
-#: src/elilo/helps.ycp:97 src/zipl/helps.ycp:41
+#: src/elilo/helps.ycp:101 src/zipl/helps.ycp:42
 msgid "Root device"
 msgstr "Urządzenie główne"
 
@@ -456,15 +460,58 @@ msgstr "Nazwa wpisu &EFI"
 msgid "&Remove Old EFI Entry (%1)"
 msgstr "Usuń sta&ry wpis EFI (%1)"
 
-#: src/generic/boot_loader_locations_widget.ycp:104
+#: src/generic/boot_loader_locations_widget.ycp:117
 msgid "Nothing to select"
 msgstr "Nie ma nic do wybrania"
 
 #. frame
-#: src/generic/boot_loader_locations_widget.ycp:129
-#: src/routines/global_widgets.ycp:552
+#: src/generic/boot_loader_locations_widget.ycp:142
+#: src/routines/global_widgets.ycp:571
 msgid "Boot Loader Location"
 msgstr "Położenie programu rozruchowego"
+
+#. frame
+#. label / table cell
+#. frame
+#: src/generic/device_map_edit_widget.ycp:40 src/grub/widgets.ycp:608
+#: src/routines/dialogs_i386.ycp:41
+msgid "Disk Order"
+msgstr "Kolejność dysków"
+
+#. selectionn box label
+#: src/generic/device_map_edit_widget.ycp:46 src/grub/widgets.ycp:485
+#: src/grub/widgets.ycp:493 src/grub/widgets.ycp:521 src/grub/widgets.ycp:530
+#: src/grub/widgets.ycp:547 src/grub/widgets.ycp:620
+#: src/routines/dialogs_i386.ycp:47
+msgid "D&isks"
+msgstr "D&yski"
+
+#. pushbutton
+#: src/generic/device_map_edit_widget.ycp:60
+#: src/generic/sections_widget.ycp:223 src/grub/widgets.ycp:632
+#: src/routines/dialogs_i386.ycp:61 src/routines/global_widgets.ycp:258
+msgid "&Up"
+msgstr "W &górę"
+
+#. pushbutton
+#: src/generic/device_map_edit_widget.ycp:61
+#: src/generic/sections_widget.ycp:225 src/grub/widgets.ycp:633
+#: src/routines/dialogs_i386.ycp:62 src/routines/global_widgets.ycp:260
+msgid "&Down"
+msgstr "W &dół"
+
+#. dialog caption
+#: src/generic/device_map_edit_widget.ycp:74
+#, fuzzy
+msgid "Boot Loader Device Map"
+msgstr "Położenie programu rozruchowego"
+
+#. textentry header
+#. combo box
+#: src/generic/device_map_edit_widget.ycp:103 src/grub/widgets.ycp:500
+#: src/routines/dialogs_i386.ycp:126 src/routines/section_widgets.ycp:466
+msgid "&Device"
+msgstr "Urzą&dzenie"
 
 #. dialog caption
 #: src/generic/dialogs.ycp:133 src/routines/dialogs_i386.ycp:247
@@ -472,12 +519,12 @@ msgid "Boot Loader Options"
 msgstr "Opcje programu rozruchowego"
 
 #. frame
-#: src/generic/global_options_widget.ycp:104 src/routines/widgets_i386.ycp:75
+#: src/generic/global_options_widget.ycp:119 src/routines/widgets_i386.ycp:75
 msgid "Boot Menu"
 msgstr "Menu rozruchowe"
 
 #. help text 1/1
-#: src/generic/helps.ycp:28 src/routines/helps_i386.ycp:78
+#: src/generic/helps.ycp:28 src/routines/helps_i386.ycp:92
 msgid ""
 "<p><big><b>Boot Menu</b></big><br>\n"
 "To show the boot loader menu during the boot process, set\n"
@@ -550,17 +597,17 @@ msgstr ""
 "używa się do uruchamiania innych systemów operacyjnych.</p>"
 
 #. radio button
-#: src/generic/helps.ycp:74 src/routines/section_widgets.ycp:268
+#: src/generic/helps.ycp:74 src/routines/section_widgets.ycp:269
 msgid "Clone Selected Section"
 msgstr "Sklonuj wybraną sekcję"
 
 #. frame
-#: src/generic/section_type_widget.ycp:86 src/routines/section_widgets.ycp:288
+#: src/generic/section_type_widget.ycp:86 src/routines/section_widgets.ycp:289
 msgid "Section Type"
 msgstr "Typ sekcji"
 
 #. text entry
-#: src/generic/section_widgets.ycp:81 src/routines/section_widgets.ycp:343
+#: src/generic/section_widgets.ycp:81 src/routines/section_widgets.ycp:385
 msgid "Section &Name"
 msgstr "&Nazwa sekcji"
 
@@ -576,7 +623,7 @@ msgstr "Etykieta"
 
 #. table header
 #: src/generic/sections_widget.ycp:213 src/routines/global_widgets.ycp:248
-#: src/routines/global_widgets.ycp:904
+#: src/routines/global_widgets.ycp:923
 msgid "Type"
 msgstr "Typ"
 
@@ -586,18 +633,6 @@ msgstr "Typ"
 #: src/generic/sections_widget.ycp:217
 msgid "Section Summary"
 msgstr "Podsumowanie sekcji"
-
-#. pushbutton
-#: src/generic/sections_widget.ycp:223 src/routines/dialogs_i386.ycp:61
-#: src/routines/global_widgets.ycp:258
-msgid "&Up"
-msgstr "W &górę"
-
-#. pushbutton
-#: src/generic/sections_widget.ycp:225 src/routines/dialogs_i386.ycp:62
-#: src/routines/global_widgets.ycp:260
-msgid "&Down"
-msgstr "W &dół"
 
 #. pushbutton
 #: src/generic/sections_widget.ycp:236 src/routines/global_widgets.ycp:271
@@ -619,19 +654,19 @@ msgid "Select a file name"
 msgstr "Proszę wybrać nazwę pliku."
 
 #. heading
-#: src/generic/wizards.ycp:69
+#: src/generic/wizards.ycp:68
 msgid "Section Editor"
 msgstr "Edytor sekcji"
 
 #. frame
-#: src/generic/wizards.ycp:74 src/routines/dialogs.ycp:173
-#: src/routines/dialogs.ycp:223
+#: src/generic/wizards.ycp:73 src/routines/dialogs.ycp:167
+#: src/routines/dialogs.ycp:217
 msgid "Section Settings"
 msgstr "Ustawienia sekcji"
 
 #. dialog caption
-#: src/generic/wizards.ycp:90 src/routines/dialogs.ycp:194
-#: src/routines/dialogs.ycp:239 src/routines/dialogs.ycp:269
+#: src/generic/wizards.ycp:91 src/routines/dialogs.ycp:188
+#: src/routines/dialogs.ycp:233 src/routines/dialogs.ycp:263
 msgid "Boot Loader Settings: Section Management"
 msgstr "Ustawienia programu rozruchowego: zarządzanie sekcjami"
 
@@ -654,21 +689,23 @@ msgstr ""
 "jeśli program rozruchowy był zainstalowany w głównym sektorze startowym.</p>"
 
 #: src/grub/helps.ycp:31
+#, fuzzy
 msgid ""
 "<p><b>Timeout in Seconds</b><br>\n"
-"Specifies the the time the bootloader will wait until the default kernel is loaded.</p>"
+"Specifies the time the bootloader will wait until the default kernel is loaded.</p>\n"
 msgstr ""
 "<p><b>Czas oczekiwania w sekundach</b><br>\n"
 "Określenie czasu oczekiwania programu rozruchowego na wczytanie domyślnego jądra.</p>"
 
-#: src/grub/helps.ycp:34
+#: src/grub/helps.ycp:35
+#, fuzzy
 msgid ""
-"<p> By pressing <b>Set as Default</b> you mark the selected \n"
-"section as default. When booting, the boot loader will provide \n"
-"a boot menu and wait for the user to select the kernel or another \n"
-"OS to boot. If no key is pressed before the time-out, the default \n"
-"kernel or OS will be booted. The order of the sections in the boot loader\n"
-"menu can be changed using the <b>Up</b> and <b>Down</b> buttons.</p>"
+"<p> By pressing <b>Set as Default</b> you mark the selected section as\n"
+"the default. When booting, the boot loader will provide a boot menu and\n"
+"wait for the user to select a kernel or OS to boot. If no\n"
+"key is pressed before the timeout, the default kernel or OS will\n"
+"boot. The order of the sections in the boot loader menu can be changed\n"
+"using the <b>Up</b> and <b>Down</b> buttons.</p>\n"
 msgstr ""
 "<p>Proszę zaznaczyć wybraną sekcję jako domyślną za pomocą\n"
 "przycisku <b>Ustaw jako domyślną</b>. Podczas uruchamiania systemu\n"
@@ -678,7 +715,7 @@ msgstr ""
 "zostanie domyślny system lub jądro. Kolejność sekcji w menu rozruchowym\n"
 "może być zmieniona przy użyciu przycisków <b>W górę</b> i <b>W dół</b>.</p>"
 
-#: src/grub/helps.ycp:41
+#: src/grub/helps.ycp:43
 msgid ""
 "<p><big><b>Write generic Boot Code to MBR</b></big><br>\n"
 "To replace the master boot record of your disk with generic code (OS independent code which\n"
@@ -689,7 +726,7 @@ msgstr ""
 "(niezależnym od systemu operacyjnego, uruchamiającym aktywną partycję),\n"
 "należy ustawić <b>Zastąp główny sektor rozruchowy kodem domyślnym</b>.</p>"
 
-#: src/grub/helps.ycp:45
+#: src/grub/helps.ycp:47
 msgid ""
 "<p><b>Boot from Boot Partition</b> is one of the recommended options, the other is\n"
 "<b>Boot from Root Partition</b>.</p>"
@@ -697,7 +734,13 @@ msgstr ""
 "<p><b>Uruchom z partycji rozruchowej</b> jest jedną z zalecanych opcji, druga to\n"
 "<b>Uruchom z partycji głównej (root)</b>.</p>"
 
-#: src/grub/helps.ycp:48
+#: src/grub/helps.ycp:50
+msgid ""
+"<p><b>Use Trusted Grub</b> means install trusted grub and use it. Option <i>Grafical Menu File</i> will be ignored.\n"
+"It is recommended to install grub to MBR</p>"
+msgstr ""
+
+#: src/grub/helps.ycp:53
 msgid ""
 "<p><b>Boot from Master Boot Record</b> is not recommended if you have another operating system\n"
 "installed on your computer</p>"
@@ -706,7 +749,7 @@ msgstr ""
 "Nie jest to zalecane, jeśli w komputerze jest zainstalowany\n"
 "inny system operacyjny.</p>"
 
-#: src/grub/helps.ycp:51
+#: src/grub/helps.ycp:56
 msgid ""
 "<p><b>Boot from Root Partition</b> is the recommended option whenever there is a suitable\n"
 "partition. Either select <b>Set active Flag in Partition Table for Boot Partition</b> and <b>Write generic Boot Code to MBR</b>\n"
@@ -719,11 +762,12 @@ msgstr ""
 "programu rozruchowego</b>, aby - jeśli zajdzie potrzeba - zaktualizować główny sektor startowy,\n"
 "albo skonfigurować inny program rozruchowy do uruchamiania tej sekcji.</p>"
 
-#: src/grub/helps.ycp:56
-msgid "<p><b>Custom Boot Partition</b> lets you choose a partition to boot from</p>"
+#: src/grub/helps.ycp:61
+#, fuzzy
+msgid "<p><b>Custom Boot Partition</b> lets you choose a partition to boot from.</p>"
 msgstr "<p><b>Wybierz partycję rozruchową</b> - opcja ta pozwala na wybór partycji do uruchamiania systemu.</p>"
 
-#: src/grub/helps.ycp:58
+#: src/grub/helps.ycp:63
 msgid ""
 "<p><b>Serial Connection Parameters</b> lets you define the paramters to use\n"
 "for a serial console. Please see the grub documentation (<code>info grub</code>) for details.</p>"
@@ -732,7 +776,7 @@ msgstr ""
 "parametrów w celu użycia szeregowej konsoli. Szczegóły podano w dokumentacji\n"
 "programu GRUB (<code>info grub</code>).</p>"
 
-#: src/grub/helps.ycp:61
+#: src/grub/helps.ycp:66
 msgid ""
 "<p><b>Terminal Definition</b></p><br>\n"
 "Defines the type of terminal you want to use. For a serial terminal (eg. a serial console),\n"
@@ -747,7 +791,7 @@ msgstr ""
 "przypadku terminal, w którym zostanie naciśnięty dowolny klawisz, będzie oznaczony \n"
 "jako terminal GRUB.</p>"
 
-#: src/grub/helps.ycp:67
+#: src/grub/helps.ycp:72
 msgid ""
 "<p><b>Fallback Sections if default Fails</b> contains a list of section numbers\n"
 "that will be used for booting in case the default section is unbootable.</p>"
@@ -755,15 +799,16 @@ msgstr ""
 "<p><b>Sekcje awaryjne (jeśli domyślne zawiodą)</b> zawiera listę numerów sekcji, które będą używane \n"
 "do rozruchu w przypadku gdyby nie można było uruchomić sekcji domyślnej.</p>"
 
-#: src/grub/helps.ycp:70
-msgid "<p>Selecting <b>Hide Menu on Boot</b> will hide the boot menu</p>"
+#: src/grub/helps.ycp:75
+#, fuzzy
+msgid "<p>Selecting <b>Hide Menu on Boot</b> will hide the boot menu.</p>"
 msgstr "<p>Zaznaczenie opcji <b>Ukryj menu podczas rozruchu</b> powoduje ukrycie menu rozruchowego.</p>"
 
-#: src/grub/helps.ycp:72
+#: src/grub/helps.ycp:77
 msgid "<p><b>Graphical Menu File</b> defines the file to use for the graphical boot menu.</p>"
 msgstr "<p><b>Plik menu graficznego</b> - opcja określa plik, który ma być użyty do graficznego menu rozruchowego.</p>"
 
-#: src/grub/helps.ycp:74
+#: src/grub/helps.ycp:79
 msgid ""
 "<p><b>Password for the Menu Interface</b><br>\n"
 "Define the password that will be required to access the boot menu. YaST will only accept the password if you repeat\n"
@@ -772,269 +817,460 @@ msgstr ""
 "<p><b>Hasło menu rozruchowego</b><br>\n"
 "Proszę określić hasło, które będzie wymagane do uzyskania dostępu do menu rozruchowego. Hasło zostanie zaakceptowane po powtórzeniu go w polu <b>Proszę powtórzyć hasło</b>.</p>"
 
-#: src/grub/helps.ycp:78
+#: src/grub/helps.ycp:83
 msgid "<p><b>Image Section</b></p>"
 msgstr "<p><b>Sekcja obrazu</b></p>"
 
-#: src/grub/helps.ycp:80 src/grub/helps.ycp:107
-msgid "<p><b>Kernel Image</b> defines the kernel to boot. Either enter the name directly or choose via <b>Browse</b></p>"
+#: src/grub/helps.ycp:85 src/grub/helps.ycp:115
+#, fuzzy
+msgid "<p><b>Kernel Image</b> defines the kernel to boot. Either enter the name directly or choose via <b>Browse</b>.</p>"
 msgstr "<p><b>Obraz jądra</b> - określenie jądra, które ma być uruchamiane. Należy albo bezpośrednio podać nazwę jądra, albo wybrać je przy pomocy <b>Przeglądaj</b>.</p>"
 
-#: src/grub/helps.ycp:82 src/grub/helps.ycp:113
+#: src/grub/helps.ycp:87 src/grub/helps.ycp:121
 msgid "<p><b>Root Device</b> sets the device to pass to the kernel as root device.</p>"
 msgstr "<p><b>Urządzenie główne</b> określa urządzenie, przekazywane do jądra jako urządzenie główne (root).</p>"
 
-#: src/grub/helps.ycp:84 src/grub/helps.ycp:115
-msgid "<p><b>Vga Mode</b> defines the VGA mode for the <i>console</i> the kernel should set when booting</p>"
+#: src/grub/helps.ycp:89 src/grub/helps.ycp:123
+#, fuzzy
+msgid "<p><b>Vga Mode</b> defines the VGA mode the kernel should set the <i>console</i> to when booting.</p>"
 msgstr "<p><b>Tryb VGA</b> - określenie trybu VGA dla <i>konsoli</i>, który ma być użyty przez jądro podczas uruchamiania.</p>"
 
-#: src/grub/helps.ycp:86 src/grub/helps.ycp:109
-msgid "<p><b>Optional Kernel Command Line Parameter</b> lets you define additional parameters to pass to the kernel</p>"
+#: src/grub/helps.ycp:91 src/grub/helps.ycp:117
+#, fuzzy
+msgid "<p><b>Optional Kernel Command Line Parameter</b> lets you define additional parameters to pass to the kernel.</p>"
 msgstr "<p><b>Opcjonalne parametry polecenia wywołania jądra</b> pozwalają na określenie dodatkowych parametrów przekazywanych do jądra.</p>"
 
-#: src/grub/helps.ycp:88
+#: src/grub/helps.ycp:93
+#, fuzzy
 msgid ""
-"<p><b>Initial RAM Disk</b>, if non-empty, defines the initial ramdisk to use. Either enter the path and file name\n"
-"directly or choose by using <b>Browse</b></p>"
+"<p><b>Initial RAM Disk</b>, if not empty, defines the initial ramdisk to use. Either enter the path and file name\n"
+"directly or choose by using <b>Browse</b>.</p>\n"
 msgstr ""
 "<p><b>RAM-dysk początkowy</b> - opcja określa początkowy pseudodysk (RAM-dysk),\n"
 "który ma być użyty. Należy albo bezpośrednio podać nazwę pliku i ścieżkę dostępu, albo \n"
 "wybrać go korzystając z <b>Przeglądaj</b>.</p>"
 
-#: src/grub/helps.ycp:91
+#: src/grub/helps.ycp:97
 msgid "<p>Selecting <b>Do not verify Filesystem before Booting</b> will skip all file system checks.</p>"
 msgstr "<p>Zaznaczenie opcji <b>Nie sprawdzaj systemu plików przed rozruchem</b> spowoduje pomięcie kontroli wszystkich systemów plików.</p>"
 
-#: src/grub/helps.ycp:93
-msgid "<p>Select <b>Chainloader Section</b> if you want to define a section for booting an OS other than Linux</p>"
+#: src/grub/helps.ycp:99
+#, fuzzy
+msgid "<p>Select <b>Chainloader Section</b> if you want to define a section for booting an OS other than Linux.</p>"
 msgstr "<p>Aby zdefiniować sekcję do rozruchu systemu operacyjnego innego niż Linux, proszę wybrać <b>Uruchamianie łańcuchowe</b>.</p>"
 
-#: src/grub/helps.ycp:95
-msgid "<p>Setting <b>Use Password Protection</p> will require a password to select this section</p>"
+#: src/grub/helps.ycp:101
+#, fuzzy
+msgid "<p>Setting <b>Use Password Protection</p> will require a password to select this section.</p>"
 msgstr "<p>Zaznaczenie <b>Zabezpieczenie hasłem</p> spowoduje konieczność podania hasła w celu wyboru tej sekcji.</p>"
 
-#: src/grub/helps.ycp:97
+#: src/grub/helps.ycp:103
 msgid "<p><b>Other System</b> lets you choose among the non-Linux operating systems found on your computer.</p>"
 msgstr "<p><b>Inny system</b> - opcja pozwala na wybór wśród nielinuksowych systemów operacyjnych, znalezionych w komputerze.</p>"
 
-#: src/grub/helps.ycp:99
+#: src/grub/helps.ycp:105
 msgid "<p>Select <b>Activate this Partition when selected for Boot</b> if your BIOS needs this flag set in order to boot it</p>"
 msgstr "<p>Proszę zaznaczyć <b>Aktywuj tę partycję po wybraniu do uruchomienia</b>, jeśli BIOS wymaga ustawienia flagi aktywności do rozruchu tej partycji.</p>"
 
-#: src/grub/helps.ycp:101
+#: src/grub/helps.ycp:107
+#, fuzzy
 msgid ""
 "<p><b>Block Offset for Chainloading</b> lets you specify the list of blocks to boot. In most cases you want\n"
-"to specify <code>+1</code> here. For specifics on blocklist notation see the grub documentation</p>"
+"to specify <code>+1</code> here. For specifics on blocklist notation see the grub documentation.</p>\n"
 msgstr ""
 "<p><b>Przesunięcie bloku do uruchamiania łańcuchowego</b> pozwala na określenie listy\n"
 "bloków do uruchomienia. Najczęściej wystarczy ustawienie <code>+1</code>. Specyfikację\n"
 "składni listy bloków podano w dokumentacji programu GRUB.</p>"
 
-#: src/grub/helps.ycp:104
+#: src/grub/helps.ycp:111
+#, fuzzy
 msgid ""
-"<p>Select <b>Xen Section</b> to add a new Linux kernel or other image,\n"
-"but to start it in a XEN environment.</p>"
+"<p>Select <b>Xen Section</b> if you want to add a new Linux kernel or other image \n"
+"and start it in a XEN environment.</p>\n"
 msgstr ""
 "<p>Proszę wybrać <b>Jądro w XEN</b>, aby dodać nowe jądro systemu Linux,\n"
 "albo inny obraz, który należy uruchomić w środowisku XEN.</p>"
 
-#: src/grub/helps.ycp:111
+#: src/grub/helps.ycp:119
 msgid "<p><b>Hypervisor</b> specifies the Hypervisor to use.</p>"
 msgstr "<p><b>Hiperwizor</b> określa wykorzystywany program nadzorujący (hiperwizor).</p>"
 
-#: src/grub/helps.ycp:117
+#: src/grub/helps.ycp:125
+#, fuzzy
 msgid ""
-"<p><b>Initial RAM Disk</b>,if non-empty, defines the initial ramdisk to use. Either enter the path and file name\n"
-"directly or choose by using <b>Browse</b></p>"
+"<p><b>Initial RAM Disk</b>,if not empty, defines the initial ramdisk to use. Either enter the path and file name\n"
+"directly or choose by using <b>Browse</b>.</p>\n"
 msgstr ""
 "<p><b>RAM-dysk początkowy</b> - opcja określa początkowy pseudodysk (RAM-dysk),\n"
 "który ma być użyty. Należy albo bezpośrednio podać nazwę pliku i ścieżkę dostępu, albo \n"
 "wybrać go korzystając z <b>Przeglądaj</b>.</p>"
 
-#: src/grub/helps.ycp:120
+#: src/grub/helps.ycp:129
 msgid "<p><b>Menu Section</b></p>"
 msgstr "<p><b>Sekcja menu</b><br>"
 
-#: src/grub/helps.ycp:122
+#: src/grub/helps.ycp:131
 msgid "<p><b>Partition of Menu File</b></p>"
 msgstr "<p><b>Partycja z plikiem menu</b></p>"
 
-#: src/grub/helps.ycp:124
+#: src/grub/helps.ycp:133
 msgid "<p><b>Menu Description File<b></p>"
 msgstr "<p><b>Plik opisu menu</b></p>"
 
-#: src/grub/helps.ycp:129
+#: src/grub/helps.ycp:135
+msgid "<p><b>Map Section to the First Disk from Device Map</b> Windows usually need to be on the first disk.</p>"
+msgstr ""
+
+#: src/grub/helps.ycp:137
+msgid ""
+"<p><b>Measures</b> includes measured files with PCR. Change table is possible via buttons: <b>Add</b> , \n"
+"<b>Edit</b> and <b>Delete</b></p>"
+msgstr ""
+
+#: src/grub/helps.ycp:140
+msgid "<p><b>PCR Index of Kernel<b> is Platform Configuration Register for kernel</p>"
+msgstr ""
+
+#: src/grub/helps.ycp:142
+msgid "<p><b>PCR Index of Kernel<b> is Platform Configuration Register for initrd</p>"
+msgstr ""
+
+#: src/grub/helps.ycp:144
+msgid "<p><b>PCR Index of Kernel<b> is Platform Configuration Register for chainloader</p>"
+msgstr ""
+
+#: src/grub/helps.ycp:150
 msgid "Boot Loader Locations"
 msgstr "Położenia programu rozruchowego"
 
-#: src/grub/helps.ycp:130
+#: src/grub/helps.ycp:151
 msgid "Set active Flag in Partition Table for Boot Partition"
 msgstr "Ustaw flagę aktywności w tablicy partycji dla partycji rozruchowej"
 
-#: src/grub/helps.ycp:131
+#: src/grub/helps.ycp:152
 msgid "Timeout in Seconds"
 msgstr "Czas oczekiwania w sekundach"
 
-#: src/grub/helps.ycp:133
+#: src/grub/helps.ycp:154
 msgid "Write generic Boot Code to MBR"
 msgstr "Zapisz standardowy kod rozruchowy do głównego sektora rozruchowego (MBR)"
 
-#: src/grub/helps.ycp:135
+#: src/grub/helps.ycp:155
+msgid "Use Trusted Grub"
+msgstr ""
+
+#: src/grub/helps.ycp:157
 msgid "Boot from Master Boot Record"
 msgstr "Uruchom z głównego sektora rozruchowego (MBR)"
 
-#: src/grub/helps.ycp:136
+#: src/grub/helps.ycp:158
 msgid "Boot from Root Partition"
 msgstr "Uruchom z partycji głównej"
 
-#: src/grub/helps.ycp:137
+#: src/grub/helps.ycp:159
 msgid "Boot from Boot Partition"
 msgstr "Uruchom z partycji rozruchowej"
 
-#: src/grub/helps.ycp:138
+#: src/grub/helps.ycp:160
 msgid "Boot from Extended Partition"
 msgstr "Uruchom z partycji rozszerzonej"
 
-#: src/grub/helps.ycp:139
+#: src/grub/helps.ycp:161
 #, fuzzy
 msgid "Former default Image Flavor"
 msgstr "Nazwa domyślnego pliku obrazu"
 
-#: src/grub/helps.ycp:140
+#: src/grub/helps.ycp:162
 msgid "Serial Connection Parameters"
 msgstr "Parametry połączenia szeregowego"
 
-#: src/grub/helps.ycp:141
+#: src/grub/helps.ycp:163
 msgid "Terminal Definition"
 msgstr "Typ terminala"
 
-#: src/grub/helps.ycp:142
-msgid "Fallback Sections if default Fails"
+#: src/grub/helps.ycp:164
+#, fuzzy
+msgid "Fallback Sections if Default fails"
 msgstr "Sekcje awaryjne, jeśli domyślne zawiodą"
 
-#: src/grub/helps.ycp:143
+#: src/grub/helps.ycp:165
 msgid "Hide Menu on Boot"
 msgstr "Ukryj menu podczas rozruchu"
 
-#: src/grub/helps.ycp:144
+#: src/grub/helps.ycp:166
 msgid "Graphical Menu File"
 msgstr "Plik graficznego menu rozruchowego"
 
-#: src/grub/helps.ycp:145
+#: src/grub/helps.ycp:167
 msgid "Password for the Menu Interface"
 msgstr "Hasło do interfejsu menu"
 
-#: src/grub/helps.ycp:146
+#: src/grub/helps.ycp:168
 msgid "Debugging Flag"
 msgstr "Flaga debugowania"
 
 #. file open popup caption
-#: src/grub/helps.ycp:148 src/grub/helps.ycp:163 src/ppc/helps.ycp:49
-#: src/routines/section_widgets.ycp:127 src/zipl/helps.ycp:38
+#: src/grub/helps.ycp:170 src/grub/helps.ycp:186 src/ppc/helps.ycp:49
+#: src/routines/section_widgets.ycp:128 src/zipl/helps.ycp:39
 msgid "Kernel Image"
 msgstr "Obraz jądra"
 
-#: src/grub/helps.ycp:149 src/grub/helps.ycp:164 src/ppc/helps.ycp:50
+#: src/grub/helps.ycp:171 src/grub/helps.ycp:187 src/ppc/helps.ycp:50
 msgid "Root Device"
 msgstr "Urządzenie główne"
 
-#: src/grub/helps.ycp:150 src/grub/helps.ycp:165
+#: src/grub/helps.ycp:172 src/grub/helps.ycp:188
 msgid "Vga Mode"
 msgstr "Tryb VGA"
 
-#: src/grub/helps.ycp:151 src/grub/helps.ycp:166 src/ppc/helps.ycp:51
+#: src/grub/helps.ycp:173 src/grub/helps.ycp:189 src/ppc/helps.ycp:51
 msgid "Optional Kernel Command Line Parameter"
 msgstr "Opcjonalne parametry polecenia wywołania jądra"
 
 #. file open popup caption
-#: src/grub/helps.ycp:152 src/grub/helps.ycp:167 src/ppc/helps.ycp:52
-#: src/routines/section_widgets.ycp:157 src/zipl/helps.ycp:39
+#: src/grub/helps.ycp:174 src/grub/helps.ycp:190 src/ppc/helps.ycp:52
+#: src/routines/section_widgets.ycp:158 src/zipl/helps.ycp:40
 msgid "Initial RAM Disk"
 msgstr "RAM-dysk początkowy"
 
-#: src/grub/helps.ycp:153 src/grub/helps.ycp:157
+#: src/grub/helps.ycp:175 src/grub/helps.ycp:179
 msgid "Do not verify Filesystem before Booting"
 msgstr "Nie sprawdzaj systemu plików przed rozruchem"
 
-#: src/grub/helps.ycp:154
+#: src/grub/helps.ycp:176
 msgid "Chainloader Section"
 msgstr "Sekcja uruchamiania łańcuchowego"
 
-#: src/grub/helps.ycp:155
+#: src/grub/helps.ycp:177
 msgid "Use Password Protection"
 msgstr "Używaj zabezpieczenia hasłem"
 
-#: src/grub/helps.ycp:156
+#: src/grub/helps.ycp:178
 msgid "Other System"
 msgstr "Inny system"
 
-#: src/grub/helps.ycp:158
+#: src/grub/helps.ycp:180
 msgid "Activate this Partition when selected for Boot"
 msgstr "Aktywuj tę partycję, jeśli jest ona zaznaczona jako rozruchowa"
 
-#: src/grub/helps.ycp:159
+#: src/grub/helps.ycp:181
 msgid "Block Offset for Chainloading"
 msgstr "Przesunięcie bloku dla uruchamiania łańcuchowego"
 
-#: src/grub/helps.ycp:160
+#: src/grub/helps.ycp:182
+msgid "Map Section to the First Disk in Device Map"
+msgstr ""
+
+#: src/grub/helps.ycp:183
 msgid "Xen Section"
 msgstr "Sekcja Xen"
 
-#: src/grub/helps.ycp:161
+#: src/grub/helps.ycp:184
 msgid "Hypervisor"
 msgstr "Hiperwizor"
 
-#: src/grub/helps.ycp:162
+#: src/grub/helps.ycp:185
 msgid "Additional Xen Hypervisor Parameters"
 msgstr "Dodatkowe parametry hiperwizora Xen"
 
-#: src/grub/helps.ycp:168 src/zipl/helps.ycp:47
+#: src/grub/helps.ycp:191 src/zipl/helps.ycp:48
 msgid "Menu Section"
 msgstr "Sekcja menu"
 
-#: src/grub/helps.ycp:169
+#: src/grub/helps.ycp:192
 msgid "Partition of Menu File"
 msgstr "Partycja z plikiem menu"
 
-#: src/grub/helps.ycp:170
+#: src/grub/helps.ycp:193
 msgid "Menu Description File"
 msgstr "Plik opisu menu"
 
+#: src/grub/trusted_grub_edit.ycp:41
+msgid "Edit Measure"
+msgstr ""
+
+#: src/grub/trusted_grub_edit.ycp:41
+msgid "Add New Measure"
+msgstr ""
+
+#: src/grub/trusted_grub_edit.ycp:44
+msgid "Measure File"
+msgstr ""
+
+#: src/grub/trusted_grub_edit.ycp:49
+msgid "PCR Index of File"
+msgstr ""
+
+#: src/grub/trusted_grub_edit.ycp:60
+msgid "Please Select File"
+msgstr ""
+
+#: src/grub/trusted_grub_edit.ycp:116
+#, ycp-format
+msgid "Really delete measured file: %1 with PCR: %2 ?"
+msgstr ""
+
+#. TRANSLATORS: RadioButtonGroup Label
+#: src/grub/trusted_grub_edit.ycp:224
+msgid "Measurement of Grub"
+msgstr ""
+
+#: src/grub/trusted_grub_edit.ycp:226
+msgid "Measures"
+msgstr ""
+
+#. table header, Measure
+#: src/grub/trusted_grub_edit.ycp:233
+msgid "Measure"
+msgstr ""
+
+#. table header, PCR
+#: src/grub/trusted_grub_edit.ycp:235
+msgid "PCR"
+msgstr ""
+
+#. TRANSLATORS: IntField Label
+#: src/grub/trusted_grub_edit.ycp:260
+msgid "PCR Index of &Kernel"
+msgstr ""
+
+#. TRANSLATORS: IntField Label
+#: src/grub/trusted_grub_edit.ycp:274
+msgid "PCR Index of &Initrd"
+msgstr ""
+
+#. TRANSLATORS: IntField Label
+#: src/grub/trusted_grub_edit.ycp:287
+msgid "PCR &Index of Chainloader"
+msgstr ""
+
+#. dialog caption
+#: src/grub/trusted_grub_edit.ycp:319
+msgid "Trusted GRUB Options"
+msgstr ""
+
+#. yes-no popup
+#: src/grub/widgets.ycp:46
+msgid ""
+"You chose to install the boot loader to the floppy.\n"
+"The menu of the boot loader contains an entry to boot from the floppy.\n"
+"Replace it with an entry to boot from the hard disk?"
+msgstr ""
+
+#. yes-no popup
+#: src/grub/widgets.ycp:51
+msgid ""
+"You chose to install the boot loader to the hard disk.\n"
+"The menu of the boot loader contains an entry to boot from the hard disk.\n"
+"Replace it with an entry  to boot from the floppy?"
+msgstr ""
+
+#. yes-no popup, %1 is device name (eg. /dev/hda)
+#: src/grub/widgets.ycp:116
+#, ycp-format
+msgid ""
+"You selected the master boot record of %1. According to the\n"
+"current configuration, %1 is not meant to be the boot disk\n"
+"of your machine.\n"
+"If your machine is configured to boot from %1, the order\n"
+"of the disks in the configuration of the boot loader should\n"
+"be adapted.\n"
+"Adapt it?\n"
+msgstr ""
+
+#. table cell
+#: src/grub/widgets.ycp:247
+#, fuzzy
+msgid "other"
+msgstr "Inne"
+
+#. table cell
+#: src/grub/widgets.ycp:249
+#, fuzzy
+msgid "image"
+msgstr "Obraz"
+
+#. table item / label
+#: src/grub/widgets.ycp:766 src/grub/widgets.ycp:858
+msgid "Yes"
+msgstr ""
+
+#. table item / label
+#: src/grub/widgets.ycp:769 src/grub/widgets.ycp:861
+msgid "No"
+msgstr ""
+
+#. table item / label
+#: src/grub/widgets.ycp:780
+msgid "Add Saved MBR to Boot Loader Menu"
+msgstr ""
+
+#. yes-no popup
+#: src/grub/widgets.ycp:812
+msgid ""
+"If you set the password, the boot dialog is displayed\n"
+"only in the text mode. Continue?\n"
+msgstr ""
+
+#. table item / label
+#. checkbox label
+#: src/grub/widgets.ycp:872 src/grub/widgets.ycp:888
+#, fuzzy
+msgid "Use Dedicated Boot Loader Area"
+msgstr "Użyj d&edykowanej przestrzeni programu rozruchowego"
+
+#. label displayed as help
+#: src/grub/widgets.ycp:883
+#, fuzzy
+msgid ""
+"Using the dedicated boot loader area prevents\n"
+"boot loader files from being moved during\n"
+"automatic disk defragmentation.  The movement could prevent the\n"
+"boot loader from loading."
+msgstr ""
+"<p><big><b>Dedykowana przestrzeń programu rozruchowego</b></big><br>\n"
+"Użycie dedykowanej przestrzeni programu rozruchowego zabezpiecza\n"
+"pliki tego programu przed przesunięciem ich w czasie automatycznej \n"
+"defragmentacji. Takie przesunięcie może uniemożliwić uruchomienie\n"
+"programu rozruchowego.\n"
+"Aby użyć dedykowanej przestrzeni programu rozruchowego należy ustawić\n"
+"<b>Użyj dedykowanej przestrzeni programu rozruchowego<b>.</p>"
+
 #. summary part, %1 is a list of device names
-#: src/modules/BootCommon.ycp:871
+#: src/modules/BootCommon.ycp:881
 #, ycp-format
 msgid "Master boot records of disks %1"
 msgstr "Główne sektory startowe (MBR) dysków %1"
 
 #. summary text, %1 is bootloader name (eg. LILO)
-#: src/modules/BootCommon.ycp:883 src/modules/BootGRUB.ycp:653
+#: src/modules/BootCommon.ycp:893 src/modules/BootGRUB.ycp:658
 #, ycp-format
 msgid "Boot Loader Type: %1"
 msgstr "Typ programu rozruchowego: %1"
 
 #. summary text, location is location description (eg. /dev/hda)
 #. FIXME: should we translate all devices to names and add MBR suffixes?
-#: src/modules/BootCommon.ycp:886 src/modules/BootGRUB.ycp:671
+#: src/modules/BootCommon.ycp:896 src/modules/BootGRUB.ycp:676
 #: src/modules/BootPOWERLILO.ycp:944
 #, ycp-format
 msgid "Location: %1"
 msgstr "Lokalizacja: %1"
 
 #. section name "suffix" for default section
-#: src/modules/BootCommon.ycp:891 src/modules/BootELILO.ycp:376
-#: src/modules/BootGRUB.ycp:681 src/modules/BootPOWERLILO.ycp:951
+#: src/modules/BootCommon.ycp:901 src/modules/BootELILO.ycp:384
+#: src/modules/BootGRUB.ycp:686 src/modules/BootPOWERLILO.ycp:951
 msgid " (default)"
 msgstr " (domyślnie)"
 
 #. summary text. %1 is list of bootloader sections
-#: src/modules/BootCommon.ycp:895 src/modules/BootELILO.ycp:381
-#: src/modules/BootGRUB.ycp:685 src/modules/BootPOWERLILO.ycp:956
+#: src/modules/BootCommon.ycp:905 src/modules/BootELILO.ycp:389
+#: src/modules/BootGRUB.ycp:690 src/modules/BootPOWERLILO.ycp:956
 #, ycp-format
 msgid "Sections:<br>%1"
 msgstr "Sekcje:<br>%1"
 
 #. summary text
-#: src/modules/BootCommon.ycp:899
+#: src/modules/BootCommon.ycp:909
 #, fuzzy
 msgid ""
 "Do not install boot loader; just create \n"
@@ -1044,18 +1280,18 @@ msgstr ""
 "utwórz tylko pliki konfiguracyjne"
 
 #. summary text, %1 is bootloader name (eg. LILO)
-#: src/modules/BootELILO.ycp:355 src/modules/BootPOWERLILO.ycp:927
+#: src/modules/BootELILO.ycp:363 src/modules/BootPOWERLILO.ycp:927
 #, ycp-format
 msgid "Boot loader type: %1"
 msgstr "Typ programu rozruchowego: %1"
 
 #. summary text
-#: src/modules/BootELILO.ycp:362
+#: src/modules/BootELILO.ycp:370
 msgid "Do Not Create EFI Boot Manager Entry"
 msgstr "Nie twórz pozycji EFI w programie rozruchowym"
 
 #. summary text, %1 is label of the entry of EFI boot manager
-#: src/modules/BootELILO.ycp:368
+#: src/modules/BootELILO.ycp:376
 #, ycp-format
 msgid "Create EFI Boot Manager Entry %1"
 msgstr "Utwórz pozycję EFI %1 w programie rozruchowym"
@@ -1063,27 +1299,47 @@ msgstr "Utwórz pozycję EFI %1 w programie rozruchowym"
 #. means: process received signal SIGSEGV
 #. please, use some usual translation
 #. proofreaders: don't change this text
-#: src/modules/BootELILO.ycp:425
+#: src/modules/BootELILO.ycp:433
 msgid "Segmentation fault"
 msgstr "Segmentacja nie powiodła się"
 
 #. error popup - label, %1 is bootloader name
-#: src/modules/BootELILO.ycp:430
+#: src/modules/BootELILO.ycp:438
 #, ycp-format
 msgid "Error Occurred while Installing %1"
 msgstr "Wystąpił błąd podczas instalacji %1"
 
+#: src/modules/BootELILO.ycp:456
+msgid ""
+"System was not booted via EFI firmware. To boot your\n"
+"computer, you need to load ELILO via the EFI shell."
+msgstr ""
+
 #. summary text
-#: src/modules/BootGRUB.ycp:690
+#: src/modules/BootGRUB.ycp:695
 msgid "Do not install boot loader; just create configuration files"
 msgstr ""
 "Nie instaluj programu rozruchowego;\n"
 "utwórz tylko pliki konfiguracyjne"
 
 #. menubutton item, keep as short as possible
-#: src/modules/BootGRUB.ycp:812
+#: src/modules/BootGRUB.ycp:819
 msgid "Propose and &Merge with Existing GRUB Menus"
 msgstr "Wyszukaj i p&ołącz z istniejącym menu GRUB"
+
+#: src/modules/BootSupportCheck.ycp:56
+#, fuzzy, ycp-format
+msgid "Unknown bootloader: %1"
+msgstr "Typ programu rozruchowego: %1"
+
+#: src/modules/BootSupportCheck.ycp:86
+#, ycp-format
+msgid "Unsupported combination of hardware platform %1 and bootloader %2"
+msgstr ""
+
+#: src/modules/BootSupportCheck.ycp:110
+msgid "Partitin number > 3 is being used for booting with GPT partition table"
+msgstr ""
 
 #. error report
 #: src/modules/BootZIPL.ycp:141
@@ -1130,48 +1386,48 @@ msgstr "Odczytywanie ustawień programu rozruchowego..."
 msgid "Initializing Boot Loader Configuration"
 msgstr "Inicjalizacja konfiguracji programu rozruchowego"
 
-#: src/modules/Bootloader.ycp:304 src/routines/dialogs.ycp:102
+#: src/modules/Bootloader.ycp:300 src/routines/dialogs.ycp:96
 msgid "The boot partition is of type NFS. Bootloader cannot be installed."
 msgstr "Partycja rozruchowa jest typu NFS. Nie prawidłowo zainstalować programu rozruchowego."
 
 #. part of summary, %1 is a part of kernel command line
-#: src/modules/Bootloader.ycp:336
+#: src/modules/Bootloader.ycp:332
 #, ycp-format
 msgid "Added Kernel Parameters: %1"
 msgstr "Dodatkowe parametry jądra: %1"
 
 #. progress stage, text in dialog (short)
-#: src/modules/Bootloader.ycp:426
+#: src/modules/Bootloader.ycp:422
 msgid "Create initrd"
 msgstr "Tworzenie initrd"
 
 #. progress stage, text in dialog (short)
-#: src/modules/Bootloader.ycp:428
+#: src/modules/Bootloader.ycp:424
 msgid "Save boot loader configuration files"
 msgstr "Zapis plików konfiguracyjnych programu rozruchowego"
 
 #. progress stage, text in dialog (short)
-#: src/modules/Bootloader.ycp:430
+#: src/modules/Bootloader.ycp:426
 msgid "Install boot loader"
 msgstr "Instalacja programu rozruchowego"
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:434
+#: src/modules/Bootloader.ycp:430
 msgid "Creating initrd..."
 msgstr "Tworzenie initrd..."
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:436
+#: src/modules/Bootloader.ycp:432
 msgid "Saving boot loader configuration files..."
 msgstr "Zapisywanie plików konfiguracyjnych programu rozruchowego..."
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:438
+#: src/modules/Bootloader.ycp:434
 msgid "Installing boot loader..."
 msgstr "Instalowanie programu rozruchowego..."
 
 #. progress line
-#: src/modules/Bootloader.ycp:444
+#: src/modules/Bootloader.ycp:440
 msgid "Saving Boot Loader Configuration"
 msgstr "Zapisywanie konfiguracji programu rozruchowego"
 
@@ -1364,7 +1620,7 @@ msgid "HFS Boot Partition"
 msgstr "Partycja rozruchowa HFS"
 
 #. heading
-#: src/ppc/helps.ycp:48 src/routines/dialogs.ycp:168
+#: src/ppc/helps.ycp:48 src/routines/dialogs.ycp:162
 msgid "Kernel Section"
 msgstr "Sekcja jądra"
 
@@ -1385,50 +1641,40 @@ msgid "Boot Partition of Other System"
 msgstr "Partycja rozruchowa innego systemu"
 
 #. dialog caption
-#: src/routines/dialogs.ycp:121
+#: src/routines/dialogs.ycp:115
 msgid "Boot Loader Settings"
 msgstr "Ustawienia uruchamiania systemu"
 
 #. message
-#: src/routines/dialogs.ycp:151
+#: src/routines/dialogs.ycp:145
 msgid "There are no options to set for the current boot loader."
 msgstr "Nie ma żadnych opcji do ustawienia dla tego programu rozruchowego."
 
 #. label
-#: src/routines/dialogs.ycp:216
+#: src/routines/dialogs.ycp:210
 msgid "Other System Section"
 msgstr "Sekcja innych systemów"
 
 #. combobox label
-#: src/routines/dialogs.ycp:343
+#: src/routines/dialogs.ycp:337
 msgid "&Filename"
 msgstr "Nazwa &pliku"
 
 #. label. %1 is name of file (eg. /etc/lilo.conf
-#: src/routines/dialogs.ycp:346
+#: src/routines/dialogs.ycp:340
 #, ycp-format
 msgid "Filename: %1"
 msgstr "Nazwa pliku: %1"
 
 #. multiline edit header
-#: src/routines/dialogs.ycp:354
+#: src/routines/dialogs.ycp:348
 msgid "Fi&le Contents"
 msgstr "Z&awartość pliku"
 
 #. dialog caption
-#: src/routines/dialogs.ycp:359
+#: src/routines/dialogs.ycp:353
 msgid "Expert Manual Configuration"
 msgstr "Zaawansowana konfiguracja ręczna"
-
-#. frame
-#: src/routines/dialogs_i386.ycp:41
-msgid "Disk Order"
-msgstr "Kolejność dysków"
-
-#. selectionn box label
-#: src/routines/dialogs_i386.ycp:47
-msgid "D&isks"
-msgstr "D&yski"
 
 #. frame
 #: src/routines/dialogs_i386.ycp:71
@@ -1455,15 +1701,9 @@ msgstr "Użyj d&edykowanej przestrzeni programu rozruchowego"
 msgid "Boot Loader Installation Details"
 msgstr "Szczegóły instalacji programu rozruchowego"
 
-#. textentry header
-#. combo box
-#: src/routines/dialogs_i386.ycp:126 src/routines/section_widgets.ycp:424
-msgid "&Device"
-msgstr "Urzą&dzenie"
-
 #. table header
 #. menu button
-#: src/routines/global_widgets.ycp:117 src/routines/global_widgets.ycp:757
+#: src/routines/global_widgets.ycp:117 src/routines/global_widgets.ycp:776
 msgid "Other"
 msgstr "Inne"
 
@@ -1499,8 +1739,26 @@ msgstr ""
 "\n"
 "Czy kontynuować?\n"
 
+#. continue/cancel pop-up
+#: src/routines/global_widgets.ycp:340
+msgid ""
+"\n"
+"ELILO supports only the EFI boot architecture. If yor\n"
+"firmware does not support it, your computer will not\n"
+"boot."
+msgstr ""
+
+#. continue/cancel pop-up
+#: src/routines/global_widgets.ycp:348
+msgid ""
+"\n"
+"Bootloader you selected does not support the EFI boot\n"
+"architecture. If your firmware does not support legacy\n"
+"booting, your computer will not boot."
+msgstr ""
+
 #. warning - popup, followed by radio buttons
-#: src/routines/global_widgets.ycp:338
+#: src/routines/global_widgets.ycp:357
 msgid ""
 "\n"
 "You chose to change your boot loader. When converting \n"
@@ -1523,77 +1781,77 @@ msgstr ""
 
 #. radiobutton
 #. menubutton item, keep as short as possible
-#: src/routines/global_widgets.ycp:355 src/routines/global_widgets.ycp:718
+#: src/routines/global_widgets.ycp:374 src/routines/global_widgets.ycp:737
 msgid "&Propose New Configuration"
 msgstr "Za&proponuj nową konfigurację"
 
 #. radiobutton
-#: src/routines/global_widgets.ycp:358
+#: src/routines/global_widgets.ycp:377
 msgid "Co&nvert Current Configuration"
 msgstr "Ko&nwertuj aktualną konfigurację"
 
 #. radiobutton
-#: src/routines/global_widgets.ycp:362
+#: src/routines/global_widgets.ycp:381
 msgid "&Start New Configuration from Scratch"
 msgstr "Zacznij nową konfigurację od pod&staw"
 
 #. radiobutton
-#: src/routines/global_widgets.ycp:366
+#: src/routines/global_widgets.ycp:385
 msgid "&Read Configuration Saved on Disk"
 msgstr "Odczytaj konfigu&rację zapisaną na dysku"
 
 #. radiobutton
-#: src/routines/global_widgets.ycp:372
+#: src/routines/global_widgets.ycp:391
 msgid "Res&tore Configuration Saved before Conversion"
 msgstr "Przywróć konfigurację zapi&saną przed konwersją"
 
 #. popup message
-#: src/routines/global_widgets.ycp:443
+#: src/routines/global_widgets.ycp:462
 msgid "Select the boot loader before editing sections."
 msgstr "Przed edycją sekcji proszę wybrać program rozruchowy."
 
 #. radio button
-#: src/routines/global_widgets.ycp:474
+#: src/routines/global_widgets.ycp:493
 msgid "&Master Boot Record"
 msgstr "&Główny sektor startowy"
 
 #. radiobutton, %1 is device (eg. /dev/hda)
-#: src/routines/global_widgets.ycp:476
+#: src/routines/global_widgets.ycp:495
 #, ycp-format
 msgid "&Master Boot Record of %1"
 msgstr "&Główny sektor startowy %1"
 
 #. radiobutton, %1 is a list of devices (eg. /dev/hda1)
-#: src/routines/global_widgets.ycp:495
+#: src/routines/global_widgets.ycp:514
 #, ycp-format
 msgid "MB&Rs of Disks %1"
 msgstr "Główne sekto&ry startowe dysków %1"
 
 #. radiobutton, %1 is device (eg. /dev/hda1)
-#: src/routines/global_widgets.ycp:506
+#: src/routines/global_widgets.ycp:525
 #, ycp-format
 msgid "Boot &Sector of Boot Partition %1"
 msgstr "&Sektor startowy partycji startowej %1"
 
 #. radiobutton, %1 is device (eg. /dev/hda1)
-#: src/routines/global_widgets.ycp:518
+#: src/routines/global_widgets.ycp:537
 #, ycp-format
 msgid "Boot Sector of Roo&t Partition %1"
 msgstr "Sektor startowy partycji głównej (roo&t) %1"
 
 #. radiobutton, %1 is device name, typically /dev/fd0
-#: src/routines/global_widgets.ycp:530
+#: src/routines/global_widgets.ycp:549
 #, ycp-format
 msgid "&Floppy Disk %1"
 msgstr "D&yskietka %1"
 
 #. radiobutton
-#: src/routines/global_widgets.ycp:538
+#: src/routines/global_widgets.ycp:557
 msgid "Ot&her"
 msgstr "&Inne"
 
 #. yes-no popup
-#: src/routines/global_widgets.ycp:649
+#: src/routines/global_widgets.ycp:668
 msgid ""
 "The partition selected for boot loader installation\n"
 "does not have enough free space in its boot sector\n"
@@ -1613,57 +1871,57 @@ msgstr ""
 
 #. pushbutton
 #. menu button entry
-#: src/routines/global_widgets.ycp:692 src/routines/global_widgets.ycp:713
+#: src/routines/global_widgets.ycp:711 src/routines/global_widgets.ycp:732
 msgid "E&dit Configuration Files"
 msgstr "E&dytuj pliki konfiguracyjne"
 
 #. menubutton item, keep as short as possible
-#: src/routines/global_widgets.ycp:724
+#: src/routines/global_widgets.ycp:743
 msgid "&Start from Scratch"
 msgstr "Zacznij od pod&staw"
 
 #. menubutton item, keep as short as possible
-#: src/routines/global_widgets.ycp:731
+#: src/routines/global_widgets.ycp:750
 msgid "&Reread Configuration from Disk"
 msgstr "Ponownie odczytaj konfigu&rację z dysku"
 
 #. menubutton item, keep as short as possible
-#: src/routines/global_widgets.ycp:743
+#: src/routines/global_widgets.ycp:762
 msgid "Restore MBR of Hard Disk"
 msgstr "Przywróć główny sektor startowy dysku"
 
 #. menubutton item, keep as short as possible
-#: src/routines/global_widgets.ycp:750
+#: src/routines/global_widgets.ycp:769
 msgid "Write bootloader boot code to disk"
 msgstr "Zapisz program rozruchowy na dysku"
 
 #. message popup
-#: src/routines/global_widgets.ycp:786
+#: src/routines/global_widgets.ycp:805
 msgid "MBR restored successfully."
 msgstr "Główny sektor startowy odtworzony pomyślnie."
 
 #. message popup
-#: src/routines/global_widgets.ycp:789
+#: src/routines/global_widgets.ycp:808
 msgid "Failed to restore MBR."
 msgstr "Odtworzenie głównego sektora startowego nie powiodło się."
 
 #. tab header
-#: src/routines/global_widgets.ycp:889
+#: src/routines/global_widgets.ycp:908
 msgid "&Section Management"
 msgstr "Zarządzanie &sekcjami"
 
 #. tab header
-#: src/routines/global_widgets.ycp:901
+#: src/routines/global_widgets.ycp:920
 msgid "Boot Loader &Installation"
 msgstr "&Instalacja programu rozruchowego"
 
 #. push button
-#: src/routines/global_widgets.ycp:963
+#: src/routines/global_widgets.ycp:982
 msgid "Boot &Loader Options"
 msgstr "Opcje programu ro&zruchowego"
 
 #. push button
-#: src/routines/global_widgets.ycp:982
+#: src/routines/global_widgets.ycp:1001
 msgid "Boot Loader Installation &Details"
 msgstr "Szczegóły &instalacji programu rozruchowego"
 
@@ -2001,8 +2259,15 @@ msgstr ""
 "która wczytuje i uruchamia sektor startowy z partycji na dysku. Opcji tej używa\n"
 "się do uruchamiania innych systemów operacyjnych.</p>"
 
+#. help text 1/1
+#: src/routines/helps.ycp:314
+msgid ""
+"<p><b>Trusted GRUB Details</b><br>\n"
+"allows to add aditional measured files and also to define own PCR for kernel, initrd or chainloader</p>"
+msgstr ""
+
 #. help text 1/5
-#: src/routines/helps_i386.ycp:28
+#: src/routines/helps_i386.ycp:28 src/routines/helps_i386.ycp:62
 msgid ""
 "<p><big><b>Disks Order</b></big><br>\n"
 "To specify the order of the disks according to the order in BIOS, use\n"
@@ -2013,7 +2278,7 @@ msgstr ""
 "użyć klawiszy <b>W górę</b> i <b>W dół</b>, do zmiany kolejności wpisów.</p>"
 
 #. help text 2/5, optional (only for autoinstallation)
-#: src/routines/helps_i386.ycp:33
+#: src/routines/helps_i386.ycp:33 src/routines/helps_i386.ycp:67
 msgid ""
 "<p>To add a disk, push <b>Add</b>.\n"
 " To remove a disk, push <b>Remove</b>.</p>"
@@ -2069,7 +2334,7 @@ msgstr ""
 "<b>Użyj dedykowanej przestrzeni programu rozruchowego<b>.</p>"
 
 #. help text 1/1
-#: src/routines/helps_i386.ycp:65
+#: src/routines/helps_i386.ycp:79
 msgid ""
 "<p><big><b>Password Protection</b></big><br>\n"
 "To protect the boot loader using a password,\n"
@@ -2082,7 +2347,7 @@ msgstr ""
 "i powtórzyć w polu <b>Powtórz hasło</b>.</p>\n"
 
 #. error popup - label, %1 is bootloader name
-#: src/routines/lib_iface.ycp:277
+#: src/routines/lib_iface.ycp:282
 #, ycp-format
 msgid "Error occurred while installing %1."
 msgstr "Wystąpił błąd podczas instalacji %1."
@@ -2094,45 +2359,45 @@ msgid "Order of Hard Disks: %1"
 msgstr "Kolejność dysków twardych: %1"
 
 #. summary string
-#: src/routines/misc.ycp:56
+#: src/routines/misc.ycp:57
 msgid "Do not install any boot loader"
 msgstr "Nie instaluj żadnego programu rozruchowego"
 
 #. combo box item
-#: src/routines/misc.ycp:58
+#: src/routines/misc.ycp:59
 msgid "Do Not Install Any Boot Loader"
 msgstr "Nie instaluj żadnego programu rozruchowego"
 
 #. summary string
-#: src/routines/misc.ycp:64
+#: src/routines/misc.ycp:65
 msgid "Install the default boot loader"
 msgstr "Instaluj domyślny program rozruchowy"
 
 #. combo box item
-#: src/routines/misc.ycp:66
+#: src/routines/misc.ycp:67
 msgid "Install Default Boot Loader"
 msgstr "Instaluj domyślny program rozruchowy"
 
 #. summary string
-#: src/routines/misc.ycp:70
+#: src/routines/misc.ycp:71
 msgid "Boot loader"
 msgstr "Program rozruchowy"
 
 #. combo box item
-#: src/routines/misc.ycp:72
+#: src/routines/misc.ycp:73
 msgid "Boot Loader"
 msgstr "Program rozruchowy"
 
 #. popup, %1 is bootloader name
 #. data saved to floppy disk
 #. popup, %1 is bootloader name
-#: src/routines/misc.ycp:112 src/routines/popups.ycp:332
+#: src/routines/misc.ycp:113 src/routines/popups.ycp:332
 #, ycp-format
 msgid "The %1 boot sector has been written to the floppy disk."
 msgstr "Sektor startowy %1 został zapisany na dyskietce."
 
 #. popup - continuing
-#: src/routines/misc.ycp:122
+#: src/routines/misc.ycp:123
 msgid "Leave the floppy disk in the drive."
 msgstr "Proszę pozostawić dyskietkę w napędzie."
 
@@ -2366,62 +2631,67 @@ msgstr "&Tak, nadpisz"
 #. %2 is Y serolution (height) in pixels
 #. %3 is color depth (usually one of 8, 16, 24, 32)
 #. %4 is the VGA mode ID (hexadecimal number)
-#: src/routines/section_widgets.ycp:223
+#: src/routines/section_widgets.ycp:224
 #, ycp-format
 msgid "%1x%2, %3 bits (mode %4)"
 msgstr "%1x%2, %3 bity (tryb %4)"
 
 #. item of a combo box
-#: src/routines/section_widgets.ycp:227
+#: src/routines/section_widgets.ycp:228
 msgid "Text Mode"
 msgstr "Tryb tekstowy"
 
 #. file open popup caption
-#: src/routines/section_widgets.ycp:251
+#: src/routines/section_widgets.ycp:252
 msgid "Device to Boot"
 msgstr "Urządzenie do uruchomienia"
 
 #. radio button
-#: src/routines/section_widgets.ycp:274
+#: src/routines/section_widgets.ycp:275
 msgid "Kernel (Linux)"
 msgstr "Jądro (Linux)"
 
 #. radio button
-#: src/routines/section_widgets.ycp:276
+#: src/routines/section_widgets.ycp:277
 msgid "Kernel via XEN"
 msgstr "Jądro w XEN"
 
 #. radio button (don't translate 'chainloader')
-#: src/routines/section_widgets.ycp:278
+#: src/routines/section_widgets.ycp:279
 msgid "Other System (Chainloader)"
 msgstr "Inny system (uruchamianie łańcuchowe)"
 
 #. text entry
 #. combo box
-#: src/routines/section_widgets.ycp:355 src/routines/section_widgets.ycp:359
+#: src/routines/section_widgets.ycp:397 src/routines/section_widgets.ycp:401
 msgid "&Kernel"
 msgstr "&Jądro"
 
 #. text entry
 #. combo box
-#: src/routines/section_widgets.ycp:377 src/routines/section_widgets.ycp:381
+#: src/routines/section_widgets.ycp:419 src/routines/section_widgets.ycp:423
 msgid "&Initial RAM Disk"
 msgstr "RAM-d&ysk początkowy"
 
 #. combo box
-#: src/routines/section_widgets.ycp:397
+#: src/routines/section_widgets.ycp:439
 msgid "Root &Device"
 msgstr "Urzą&dzenie główne"
 
 #. combo box
-#: src/routines/section_widgets.ycp:407
+#: src/routines/section_widgets.ycp:449
 msgid "&VGA Mode"
 msgstr "Tryb &VGA"
 
 #. text entry
-#: src/routines/section_widgets.ycp:414
+#: src/routines/section_widgets.ycp:456
 msgid "Other Kernel &Parameters"
 msgstr "Inne &parametry jądra"
+
+#. push button
+#: src/routines/section_widgets.ycp:494
+msgid "&Trusted GRUB Details"
+msgstr ""
 
 #. check box
 #: src/routines/widgets_i386.ycp:79
@@ -2468,61 +2738,62 @@ msgstr ""
 "albo w pliku na partycji SCSI.</p>"
 
 #: src/zipl/helps.ycp:28
+#, fuzzy
 msgid ""
 "<p>Select <b>Menu Section</b> to add a new menu to the configuration.\n"
-"Menu sections represent a list of tasks which are grouped together</p>"
+"Menu sections represent a list of tasks which are grouped together.</p>\n"
 msgstr ""
 "<p>Proszę wybrać <b>Sekcja menu</b>, aby dodać nową pozycję menu\n"
 "do konfiguracji. Sekcje menu reprezentują listę pogrupowanych zadań.</p>"
 
-#: src/zipl/helps.ycp:35
+#: src/zipl/helps.ycp:36
 msgid "Default Boot Section/Menu"
 msgstr "Domyślna sekcja/menu rozruchowe"
 
-#: src/zipl/helps.ycp:37
+#: src/zipl/helps.ycp:38
 msgid "Target Directory for Image Section"
 msgstr "Katalog docelowy dla sekcji obrazu"
 
-#: src/zipl/helps.ycp:40
+#: src/zipl/helps.ycp:41
 msgid "Optional Kernel Parameters"
 msgstr "Opcjonalne parametry jądra"
 
-#: src/zipl/helps.ycp:42
+#: src/zipl/helps.ycp:43
 msgid "Optional Parameter File"
 msgstr "Opcjonalny plik parametrów"
 
-#: src/zipl/helps.ycp:43
+#: src/zipl/helps.ycp:44
 msgid "Dump Section (obsolete)"
 msgstr "Sekcja kopii (nieaktualna)"
 
-#: src/zipl/helps.ycp:44
+#: src/zipl/helps.ycp:45
 msgid "Target Directory for Dump Section"
 msgstr "Katalog docelowy dla sekcji kopii"
 
-#: src/zipl/helps.ycp:45
+#: src/zipl/helps.ycp:46
 msgid "Dump Device"
 msgstr "Urządzenie do zapisu kopii"
 
-#: src/zipl/helps.ycp:46
+#: src/zipl/helps.ycp:47
 msgid "SCSI Dump Device"
 msgstr "Urządzenie SCSI do zapisu kopii"
 
-#: src/zipl/helps.ycp:48
+#: src/zipl/helps.ycp:49
 msgid "Target Directory for Menu Section"
 msgstr "Katalog docelowy dla sekcji menu"
 
-#: src/zipl/helps.ycp:49
+#: src/zipl/helps.ycp:50
 msgid "List of Menu Entries"
 msgstr "Lista pozycji menu"
 
-#: src/zipl/helps.ycp:50
+#: src/zipl/helps.ycp:51
 msgid "Number of Default Entry"
 msgstr "Numer pozycji domyślnej"
 
-#: src/zipl/helps.ycp:51
+#: src/zipl/helps.ycp:52
 msgid "Timeout in seconds"
 msgstr "Czas oczekiwania w sekundach"
 
-#: src/zipl/helps.ycp:52
+#: src/zipl/helps.ycp:53
 msgid "Show boot menu"
 msgstr "Pokaż menu rozruchowe"
