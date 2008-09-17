@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: nfs\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-09-11 08:51+0200\n"
-"PO-Revision-Date: 2008-04-23 12:20+0100\n"
-"Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
+"PO-Revision-Date: 2008-09-17 16:15+0100\n"
+"Last-Translator: Paulina Budzoń <paulina.bu@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,7 +88,8 @@ msgid "%1 entries configured"
 msgstr "%1 pozycje skonfigurowane"
 
 #. table header
-#: src/nfs.ycp:58 src/ui.ycp:443
+#: src/nfs.ycp:58
+#: src/ui.ycp:443
 msgid "Server"
 msgstr "Serwer"
 
@@ -97,17 +98,20 @@ msgid "Remote File System"
 msgstr "Zdalny system plików"
 
 #. table header
-#: src/nfs.ycp:60 src/ui.ycp:446
+#: src/nfs.ycp:60
+#: src/ui.ycp:446
 msgid "Mount Point"
 msgstr "Punkt montowania"
 
 #. table header
-#: src/nfs.ycp:61 src/ui.ycp:450
+#: src/nfs.ycp:61
+#: src/ui.ycp:450
 msgid "Options"
 msgstr "Opcje"
 
 #. error
-#: src/nfs.ycp:116 src/nfs.ycp:194
+#: src/nfs.ycp:116
+#: src/nfs.ycp:194
 msgid "No NFS mount specified."
 msgstr "Nie podano katalogu NFS."
 
@@ -338,7 +342,7 @@ msgid ""
 "read the man page mount(8).</p>"
 msgstr ""
 "<p>Listę <b>Opcji</b> można znaleźć\n"
-"na stronie podręcznika systemowego dla mount(8).</p>"
+"na stronie podręcznika systemowego mount(8).</p>"
 
 #. popup heading
 #: src/ui.ycp:392
@@ -351,6 +355,8 @@ msgid ""
 "<p>The table contains all directories \n"
 "exported from remote servers and mounted locally via NFS (NFS shares).</p>"
 msgstr ""
+"<p>Tabela zawiera listę wszystkich katalogów \n"
+"udostępnionych na zdalnych serwerach i zamontowanych localnie przez NFS (udziały NFS).</p>"
 
 #. Help, part 2 of 3
 #: src/ui.ycp:420
@@ -360,6 +366,10 @@ msgid ""
 "NFS type (either plain nfs or nfsv4) and mount options. For further information \n"
 "about mounting NFS and mount options, refer to <tt>man nfs.</tt></p>"
 msgstr ""
+"<p>Każdy udział NFS jest identyfikowany przez adres zdalnego serwera NFS,\n"
+"udostępniony katalog, lokalny katalog, do którego zamontowany jest zdalny katalog, \n"
+"typie NFS (zwykły nfs lub nfsv4) i opcjach montowania. Więcej informacji \n"
+"na temat montowania NFS oraz jego opcji można znaleźć w podręczniku <tt>man nfs.</tt></p>"
 
 #. Help, part 3 of 3
 #: src/ui.ycp:426
@@ -368,6 +378,9 @@ msgid ""
 "currently mounted share, use <B>Edit</B> button. Remove and unmount selected share by \n"
 "<B>Delete</B> button.</p>"
 msgstr ""
+"<p>Aby zamontować udział NFS, należy użyć przycisku <B>Dodaj</B>. Aby zmienić konfigurację\n"
+"aktualnie zamontowanego udziału, należy użyć przycisku <B>Edytuj</B>. Usunięcie i odmontowanie\n"
+"zaznaczonego udziału można wykonać przez przycisk <B>Usuń</B>.</p>"
 
 #: src/ui.ycp:431
 msgid ""
@@ -376,10 +389,14 @@ msgid ""
 "specific <b>NFSv4 Domain Name</b>, required for correct setting of file/directory access\n"
 "rights."
 msgstr ""
+"Jeśli konieczny jest dostęp do udziałów NFSv4 (NFSvd jest nowszą wersją\n"
+"protokołu NFS), można użyć opcji <b>Włączanie NFSv4</b>. W tym wypadku\n"
+"należy podać <b>Nazwę domeny NFSv4</b>, wymaganej do poprawnego ustawienia\n"
+"praw dostępu do katalogu/pliku,"
 
 #: src/ui.ycp:444
 msgid "Remote Directory"
-msgstr "Katalogi wyeksportowane"
+msgstr "Katalog wyeksportowany"
 
 #. table header
 #: src/ui.ycp:448
@@ -388,25 +405,24 @@ msgstr "Typ NFS"
 
 #: src/ui.ycp:472
 msgid "Enable NFSv4"
-msgstr "Włączone NFSv4"
+msgstr "Włączanie NFSv4"
 
 #: src/ui.ycp:473
 msgid "NFSv4 Domain Name"
 msgstr "Nazwa Domeny NFSv4"
 
 #: src/ui.ycp:489
-#, fuzzy
 msgid "&NFS Shares"
-msgstr "Serwery &NFS"
+msgstr "Udziały &NFS"
 
 #: src/ui.ycp:490
 msgid "NFS &Settings"
-msgstr ""
+msgstr "Ustawienia &NFS"
 
 #: src/ui.ycp:579
 #, ycp-format
 msgid "Really delete %1?"
-msgstr ""
+msgstr "Czy na pewno usunąć %1?"
 
 #. dialog heading
 #: src/ui.ycp:620
@@ -423,20 +439,18 @@ msgstr "Konfiguracja klienta NFS"
 #~ "z pliku /etc/fstab.\n"
 #~ "Do zmiany konfiguracji służą przyciski <B>Dodaj</B>, <B>Edycja</B> i\n"
 #~ "<B>Usuń</B>.</P>\n"
-
 #~ msgid ""
 #~ "<P>To confirm the changes, press <B>Finish</B>. To cancel them,\n"
 #~ "use <B>Back</B>.</P>\n"
 #~ msgstr ""
 #~ "<P>Aby potwierdzić zmiany, proszę nacisnąć przycisk <B>Zakończ</B>.\n"
 #~ "Aby poorzuciś je, należy użyć <B>Powrót</B>.</P>\n"
-
 #~ msgid ""
 #~ "<P>For further information about fstab,\n"
 #~ "refer to <tt>man fstab</tt>.</P>\n"
 #~ msgstr ""
 #~ "<P>Więcej informacji o pliku fstab można uzyskać\n"
 #~ "po wywołaniu polecenia <tt>man fstab</tt>.</P>\n"
-
 #~ msgid "&Remote File System"
 #~ msgstr "Z&dalny system plików"
+
