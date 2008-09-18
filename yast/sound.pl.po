@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sound\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-11 08:50+0200\n"
+"POT-Creation-Date: 2008-09-18 14:02+0200\n"
 "PO-Revision-Date: 2008-09-12 07:00+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -27,6 +27,28 @@ msgstr "Typowy joystick analogowy"
 #: sound/src/Joystick.ycp:342
 msgid "Summary of the joystick configuration..."
 msgstr "Podsumowanie konfiguracji joysticka..."
+
+#. summary string
+#: sound/src/PulseAudio.ycp:57
+#, fuzzy
+msgid "PulseAudio is not configured"
+msgstr "Nieskonfigurowane"
+
+#. summary string, %1 is "enabled" or "disabled"
+#: sound/src/PulseAudio.ycp:61
+#, ycp-format
+msgid "PulseAudio is %1"
+msgstr ""
+
+#. part of a summary text (disabled/enabled status)
+#: sound/src/PulseAudio.ycp:63
+#, fuzzy
+msgid "enabled"
+msgstr "Wysokie"
+
+#: sound/src/PulseAudio.ycp:63
+msgid "disabled"
+msgstr ""
 
 #. yes/no popup text, %1 is chip name
 #: sound/src/Sound.ycp:285
@@ -137,7 +159,7 @@ msgid "Reading previously saved configuration..."
 msgstr "Wczytywanie poprzednio zapisanej konfiguracji..."
 
 #. progress step label
-#: sound/src/Sound.ycp:727 sound/src/sound_proposal.ycp:42
+#: sound/src/Sound.ycp:727 sound/src/sound_proposal.ycp:43
 msgid "Detecting sound cards..."
 msgstr "Wykrywanie kart dźwiękowych..."
 
@@ -167,22 +189,22 @@ msgstr "Skonfigurowano jako: %1."
 msgid "Sound card"
 msgstr "Karta dźwiękowa"
 
-#: sound/src/complex.ycp:59
+#: sound/src/complex.ycp:60
 #, ycp-format
 msgid "Configured as sound card number %1"
 msgstr "Skonfigurowana jako karta nr %1"
 
-#: sound/src/complex.ycp:64 sound/src/complex.ycp:95
+#: sound/src/complex.ycp:65 sound/src/complex.ycp:96
 #, ycp-format
 msgid "Driver %1"
 msgstr "Sterownik %1"
 
-#: sound/src/complex.ycp:100
+#: sound/src/complex.ycp:101
 msgid "Not configured"
 msgstr "Nieskonfigurowane"
 
 #. popup question text
-#: sound/src/complex.ycp:245
+#: sound/src/complex.ycp:246
 msgid ""
 "To apply changes, the sound system\n"
 "must be restarted.\n"
@@ -192,7 +214,7 @@ msgstr ""
 "ponownie uruchomić podsystem dźwięku.\n"
 "Czy uruchomić podsystem dźwięku ponownie?\n"
 
-#: sound/src/complex.ycp:257
+#: sound/src/complex.ycp:258
 msgid ""
 "Restart of the sound system has failed.\n"
 "Check options of the driver.\n"
@@ -201,51 +223,63 @@ msgstr ""
 "Proszę sprawdzić ustawienia sterownika dźwięku. \n"
 
 #. frame label
-#: sound/src/complex.ycp:319
+#. menu item
+#: sound/src/complex.ycp:321 sound/src/complex.ycp:458
+#, fuzzy
+msgid "PulseAudio Configuration"
+msgstr "Konfiguracja dźwięku"
+
+#. check box label
+#: sound/src/complex.ycp:326
+msgid "&Enable PulseAudio Support"
+msgstr ""
+
+#. frame label
+#: sound/src/complex.ycp:364
 msgid "Advanced Options"
 msgstr "Opcje z&aawansowane"
 
 #. check box label
-#: sound/src/complex.ycp:324
+#: sound/src/complex.ycp:369
 msgid "&Start Sequencer (Load MIDI Drivers)"
 msgstr "Uruchom &sekwencer(Ładuje sterownik MIDI)"
 
 #. menu item
-#: sound/src/complex.ycp:408
+#: sound/src/complex.ycp:450
 msgid "&Volume..."
 msgstr "&Głośność..."
 
 #. menu item
-#: sound/src/complex.ycp:410
+#: sound/src/complex.ycp:452
 msgid "Play &Test Sound"
 msgstr "Odtwórz &dźwięk testowy"
 
 #. menu item
-#: sound/src/complex.ycp:412
+#: sound/src/complex.ycp:454
 msgid "&Start Sequencer"
 msgstr "Uruchom &sekwencer"
 
 #. menu item
-#: sound/src/complex.ycp:414
+#: sound/src/complex.ycp:456
 msgid "Set as the &Primary Card"
 msgstr "Ustaw jako kartę &domyślną"
 
 #. menu item
-#: sound/src/complex.ycp:420
+#: sound/src/complex.ycp:464
 msgid "&Install soundfonts..."
 msgstr "Za&instaluj pliki soundfonts..."
 
 #. dialog title
-#: sound/src/complex.ycp:424
+#: sound/src/complex.ycp:468
 msgid "Sound Configuration"
 msgstr "Konfiguracja dźwięku"
 
 #. table header
-#: sound/src/complex.ycp:427
+#: sound/src/complex.ycp:471
 msgid "Index"
 msgstr "Indeks"
 
-#: sound/src/complex.ycp:427
+#: sound/src/complex.ycp:471
 msgid "Card Model"
 msgstr "Model karty"
 
@@ -762,36 +796,36 @@ msgstr ""
 "i spowodować niestabilność systemu.\n"
 
 #. popup error message
-#: sound/src/sound.ycp:54
+#: sound/src/sound.ycp:55
 msgid "Sound card database not found. Please check your installation."
 msgstr "Nie znaleziono bazy danych o kartach dźwiękowych. Proszę sprawdzić instalację."
 
 #. result message, %1 is card name
-#: sound/src/sound.ycp:178
+#: sound/src/sound.ycp:179
 #, ycp-format
 msgid "Successfully added card '%1'."
 msgstr "Dodano kartę '%1'."
 
 #. error message
-#: sound/src/sound.ycp:207 sound/src/sound.ycp:305 sound/src/sound.ycp:384
-#: sound/src/sound.ycp:427
+#: sound/src/sound.ycp:208 sound/src/sound.ycp:306 sound/src/sound.ycp:385
+#: sound/src/sound.ycp:428
 msgid "You must specify the card number."
 msgstr "Należy określić numer karty."
 
 #. error message
-#: sound/src/sound.ycp:213 sound/src/sound.ycp:240 sound/src/sound.ycp:266
-#: sound/src/sound.ycp:312 sound/src/sound.ycp:391 sound/src/sound.ycp:434
+#: sound/src/sound.ycp:214 sound/src/sound.ycp:241 sound/src/sound.ycp:267
+#: sound/src/sound.ycp:313 sound/src/sound.ycp:392 sound/src/sound.ycp:435
 msgid "There is no such sound card."
 msgstr "Nie ma takiej karty dźwiękowej."
 
 #. label: list of card parameters will follow; %1 is card name, %2 driver
-#: sound/src/sound.ycp:274
+#: sound/src/sound.ycp:275
 #, ycp-format
 msgid "Parameters of card '%1' (using module %2):\n"
 msgstr "Parametry karty '%1' (używającej modułu %2):\n"
 
 #. label (default value of sound module parameter)
-#: sound/src/sound.ycp:282
+#: sound/src/sound.ycp:283
 #, ycp-format
 msgid ""
 "\n"
@@ -801,7 +835,7 @@ msgstr ""
 "\tWartość domyślna: %1"
 
 #. label (current value of sound module parameter)
-#: sound/src/sound.ycp:285
+#: sound/src/sound.ycp:286
 #, ycp-format
 msgid ""
 "\n"
@@ -811,104 +845,104 @@ msgstr ""
 "\tWartość bieżąca: %1"
 
 #. translators: command line help text for Sound module
-#: sound/src/sound.ycp:484
+#: sound/src/sound.ycp:485
 msgid "Sound card configuration module."
 msgstr "Moduł konfiguracji karty dźwiękowej."
 
 #. translators: command line help text for summary action
-#: sound/src/sound.ycp:492
+#: sound/src/sound.ycp:493
 msgid "Configuration summary of sound cards"
 msgstr "Podsumowanie konfiguracji kart dźwiękowych"
 
 #. translators: command line help text for add action
-#: sound/src/sound.ycp:497
+#: sound/src/sound.ycp:498
 msgid "Add sound card. Without parameters, add first one detected."
 msgstr "Dodaje kartę dźwiękową. Jeśli nie określono parametrów, dodaje pierwszą wykrytą."
 
 #. help text for unknownd parameters
-#: sound/src/sound.ycp:500
+#: sound/src/sound.ycp:501
 msgid "Value of the specific module parameter."
 msgstr "Wartość danego parametru modułu."
 
 #. translators: command line help text for remove action
-#: sound/src/sound.ycp:505
+#: sound/src/sound.ycp:506
 msgid "Remove sound cards"
 msgstr "Usuwa karty dźwiękowe"
 
 #. translators: command line help text for test action
-#: sound/src/sound.ycp:510
+#: sound/src/sound.ycp:511
 msgid "Play test sound on given sound card"
 msgstr "Odtwarza testowy dźwięk na danej karcie dźwiękowej"
 
 #. translators: command line help text for test action
-#: sound/src/sound.ycp:515
+#: sound/src/sound.ycp:516
 msgid "Show the information of given sound card"
 msgstr "Pokazuje informacje o wybranej karcie dźwiękowej"
 
 #. translators: command line help text for set action
-#: sound/src/sound.ycp:520
+#: sound/src/sound.ycp:521
 msgid "Set the new values for given card parameters."
 msgstr "Ustawia nowe wartości dla podanych parametrów karty."
 
 #. - for unknown parameter names
 #. help text for unknownd parameters; do not translate 'show'
-#: sound/src/sound.ycp:523
+#: sound/src/sound.ycp:524
 msgid "Value of the specific module parameter. Use the 'show' command to see a list of allowed parameters."
 msgstr "Wartość danego parametru modułu. Aby zobaczyć listę dopuszczalnych parametrów, należy użyć polecenia \"show\"."
 
 #. translators: command line help text for volume action
-#: sound/src/sound.ycp:528
+#: sound/src/sound.ycp:529
 msgid "Set the volume of specific channels of the given card."
 msgstr "Ustawia głośność poszczególnych kanałów karty."
 
 #. - for unknown parameter names
 #. help text;  do not translate 'channels' as command name
-#: sound/src/sound.ycp:531
+#: sound/src/sound.ycp:532
 msgid "Value of the specific channel (0-100). Use the 'channels' command to see a list of available channels."
 msgstr "Wartość dla danego kanału (0-100). Aby zobaczyć listę dostępnych kanałów, należy użyć polecenia \"channels\"."
 
 #. translators: command line help text for modules action
-#: sound/src/sound.ycp:536
+#: sound/src/sound.ycp:537
 msgid "List all available sound kernel modules."
 msgstr "Wyświetla wszystkie dostępne moduły jądra do obsługi dźwięku."
 
 #. translators: command line help text for channels action
-#: sound/src/sound.ycp:541
+#: sound/src/sound.ycp:542
 msgid "List available volume channels of given card."
 msgstr "Wyświetla dostępne kanały głośności podanej karty."
 
 #. translators: command line help text for the 'card' option
-#: sound/src/sound.ycp:547
+#: sound/src/sound.ycp:548
 msgid "Number of sound card"
 msgstr "Numer karty dźwiękowej"
 
 #. translators: command line help text for the 'all' option
-#: sound/src/sound.ycp:552
+#: sound/src/sound.ycp:553
 msgid "All available sound cards"
 msgstr "Wszystkie dostępne karty dźwiękowe"
 
 #. translators: command line help text for the 'module' option
-#: sound/src/sound.ycp:556
+#: sound/src/sound.ycp:557
 msgid "Kernel module (driver) for the sound card"
 msgstr "Moduł jądra (sterownik) do karty dźwiękowej"
 
 #. translators: command line help text for the 'play' option
-#: sound/src/sound.ycp:561
+#: sound/src/sound.ycp:562
 msgid "Play the test sound when the card is configured"
 msgstr "Odtworzy testowy dźwięk, kiedy karta zostanie skonfigurowana"
 
 #. translators: command line help text for the 'volume' option
-#: sound/src/sound.ycp:565
+#: sound/src/sound.ycp:566
 msgid "Volume value for the sound card (0-100)"
 msgstr "Wartość głośności karty dźwiękowej (0-100)"
 
 #. section name in proposal dialog
-#: sound/src/sound_proposal.ycp:81
+#: sound/src/sound_proposal.ycp:82
 msgid "Sound"
 msgstr "Dźwięk"
 
 #. section name in proposal - menu item
-#: sound/src/sound_proposal.ycp:83
+#: sound/src/sound_proposal.ycp:84
 msgid "&Sound"
 msgstr "Dźwię&k"
 

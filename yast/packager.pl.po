@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: packager.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-11 08:46+0200\n"
+"POT-Creation-Date: 2008-09-18 13:58+0200\n"
 "PO-Revision-Date: 2008-09-16 23:56+0200\n"
 "Last-Translator: Mariusz Fik <fisiu82@gmail.com>\n"
 "Language-Team: Polski <pl@li.org>\n"
@@ -196,7 +196,7 @@ msgstr "Nie wybrano środowiska graficznego. Proszę wybrać środowisko do zain
 
 #. part of item in summary
 #: src/clients/inst_media.ycp:33 src/clients/repositories.ycp:228
-#: src/clients/repositories.ycp:257 src/clients/repositories.ycp:260
+#: src/clients/repositories.ycp:258 src/clients/repositories.ycp:261
 #: src/modules/SourceManager.ycp:553 src/modules/SourceManager.ycp:611
 msgid "Unknown"
 msgstr "Nieznany"
@@ -224,7 +224,7 @@ msgstr ""
 #. table header
 #. table header - name of the repo
 #: src/clients/inst_media.ycp:58 src/clients/inst_mediacopy.ycp:61
-#: src/clients/repositories.ycp:435 src/clients/repositories.ycp:446
+#: src/clients/repositories.ycp:436 src/clients/repositories.ycp:447
 #: src/clients/webpin_package_search.ycp:179
 #: src/include/key_manager_dialogs.ycp:268
 msgid "Name"
@@ -573,106 +573,46 @@ msgstr "Zapis listy zewnętrznych repozytoriów"
 msgid "<p>Please wait while the repository manager downloads the repository details...</p>"
 msgstr "<p>Proszę poczekać, menedżer repozytoriów pobiera dane repozytorium...</p>"
 
-#. error report
-#: src/clients/inst_rpmcopy.ycp:188
-msgid "Error occurred while switching the service pack repository."
-msgstr "Podczas przełączania repozytorium Service Pack wystąpił błąd."
-
-#. error report
-#: src/clients/inst_rpmcopy.ycp:209
-msgid ""
-"An error occurred while switching the cached \n"
-"repository back to CD."
-msgstr ""
-"Napotkano błąd podczas przełączania\n"
-"buforowanego repozytorium na CD."
-
-#. error report
-#: src/clients/inst_rpmcopy.ycp:302
-#, ycp-format
-msgid ""
-"An error occurred while creating directory %1:\n"
-"%2"
-msgstr ""
-"Napotkano błąd podczas tworzenia katalogu %1:\n"
-"%2"
-
-#. error report
-#: src/clients/inst_rpmcopy.ycp:317 src/clients/inst_rpmcopy.ycp:343
-#, ycp-format
-msgid "An error occurred while getting temporary directory. %1"
-msgstr "Napotkano błąd podczas dostępu do katalogu tymczasowego. %1"
-
-#. error report
-#: src/clients/inst_rpmcopy.ycp:437
-msgid "An error occurred while getting the directory with updated packages"
-msgstr "Napotkano błąd podczas dostępu do katalogu z zaktualizowanymi pakietami"
-
-#. 3. Copy <cached_source_datadir>/<arch>/<package> from cached source to Installation::destdir+"/{var?}/tmp"
-#. translators: this is an information popup, %1 is a number
-#: src/clients/inst_rpmcopy.ycp:444
-#, ycp-format
-msgid "Copying files from CD %1 to disk..."
-msgstr "Kopiowanie plików z CD %1 na dysk..."
-
-#. error report
-#: src/clients/inst_rpmcopy.ycp:460
-#, ycp-format
-msgid ""
-"An error occurred while copying packages\n"
-"from the source CD to the disk"
-msgstr ""
-"Napotkano błąd przy kopiowaniu pakietów\n"
-"ze źródłowego dysku CD na dysk twardy"
-
-#. error report
-#: src/clients/inst_rpmcopy.ycp:484
-#, ycp-format
-msgid ""
-"An error occurred while copying packages\n"
-"from the source CD to the disk cache"
-msgstr ""
-"Napotkano błąd przy kopiowaniu pakietów\n"
-"ze źródłowego dysku CD do bufora dyskowego"
-
-#. error report
-#: src/clients/inst_rpmcopy.ycp:513
-msgid "Switching to disk cache failed."
-msgstr "Napotkano błąd podczas przełączania na bufor dyskowy."
-
 #. error report, %1 is number
-#: src/clients/inst_rpmcopy.ycp:613
+#: src/clients/inst_rpmcopy.ycp:145
 #, ycp-format
 msgid "Failed to select %1 packages for installation."
 msgstr "Nie udało się zaznaczyć %1 pakietów do instalacji."
 
-#: src/clients/inst_rpmcopy.ycp:681
+#: src/clients/inst_rpmcopy.ycp:176
 #, ycp-format
 msgid "Could not set patterns: %1."
 msgstr "Nie można ustawić wzorca: %1."
 
-#: src/clients/inst_rpmcopy.ycp:687
+#: src/clients/inst_rpmcopy.ycp:182
 msgid "The package resolver run failed. Please check your software section in the autoyast profile."
 msgstr "Test rozwiązywania zależności zakończony błędem. Proszę sprawdzić sekcję oprogramowania w profilu autoyast."
 
-#. TODO: use better message, this is a reused string due to text-freeze
-#. dialog headline
-#: src/clients/inst_rpmcopy.ycp:717 src/modules/PackageInstallation.ycp:51
-msgid "Installation of Some Packages Failed"
-msgstr "Instalacja niektórych pakietów nie powiodła się."
+#. error message - displayed in a scrollable text area
+#. %1 - an error message (details)
+#: src/clients/inst_rpmcopy.ycp:214
+#, ycp-format
+msgid ""
+"Installation Failed\n"
+"\n"
+"Details:\n"
+"%1\n"
+"\n"
+"Package installation will be aborted.\n"
+msgstr ""
 
 #. continue-cancel popup
-#: src/clients/inst_rpmcopy.ycp:860
+#: src/clients/inst_rpmcopy.ycp:366
 msgid "Initializing the target directory failed"
 msgstr "Błąd podczas inicjalizacji katalogu docelowego"
 
-#: src/clients/inst_rpmcopy.ycp:909 src/clients/sw_single.ycp:535
+#: src/clients/inst_rpmcopy.ycp:414 src/clients/sw_single.ycp:544
 msgid "Installing Packages..."
 msgstr "Instalowanie pakietów..."
 
 #. dialog caption
-#: src/clients/key_manager.ycp:65 src/clients/repositories.ycp:1056
-#: src/modules/AddOnProduct.ycp:445
+#: src/clients/key_manager.ycp:65 src/clients/repositories.ycp:1083
+#: src/modules/AddOnProduct.ycp:451
 msgid "Initializing..."
 msgstr "Inicjalizowanie..."
 
@@ -706,30 +646,30 @@ msgid "Unknown Name"
 msgstr "Nieznana nazwa"
 
 #. label to be used instead of URL if not found
-#: src/clients/repositories.ycp:231 src/clients/repositories.ycp:257
-#: src/modules/AddOnProduct.ycp:957
+#: src/clients/repositories.ycp:231 src/clients/repositories.ycp:258
+#: src/modules/AddOnProduct.ycp:976
 #, ycp-format
 msgid "URL: %1"
 msgstr "URL: %1"
 
 #. heading - in case repo name not found
-#: src/clients/repositories.ycp:254
+#: src/clients/repositories.ycp:255
 msgid "Unknown repository name"
 msgstr "Nieznana nazwa repozytorium"
 
 #. label, %1 is repo category (eg. YUM)
-#: src/clients/repositories.ycp:260
+#: src/clients/repositories.ycp:261
 #, ycp-format
 msgid "Category: %1"
 msgstr "Kategoria: %1"
 
-#: src/clients/repositories.ycp:267
+#: src/clients/repositories.ycp:268
 #, ycp-format
 msgid "Service: %1"
 msgstr "Usługa: %1"
 
 #. yes/no popup
-#: src/clients/repositories.ycp:363
+#: src/clients/repositories.ycp:364
 msgid ""
 "Repository synchronization with ZMD failed.\n"
 "Save changes anyway?"
@@ -739,112 +679,112 @@ msgstr ""
 "Zapisać zmiany mimo wszystko?"
 
 #. true = open the node
-#: src/clients/repositories.ycp:416
+#: src/clients/repositories.ycp:417
 msgid "Services"
 msgstr "Usługi"
 
-#: src/clients/repositories.ycp:417
+#: src/clients/repositories.ycp:418
 msgid "Repositories"
 msgstr "Repozytoria"
 
 #. table header - priority of the repository - keep the translation as short as possible!
-#: src/clients/repositories.ycp:428
+#: src/clients/repositories.ycp:429
 msgid "Priority"
 msgstr "Priorytet"
 
 #. table header - is the repo enabled? - keep the translation as short as possible!
 #. status info, to be used inside summary
-#: src/clients/repositories.ycp:430 src/clients/repositories.ycp:441
+#: src/clients/repositories.ycp:431 src/clients/repositories.ycp:442
 #: src/modules/SourceManager.ycp:524
 msgid "Enabled"
 msgstr "Włączone"
 
 #. table header - is autorefresh enabled for the repo?
 #. keep the translation as short as possible!
-#: src/clients/repositories.ycp:433 src/clients/repositories.ycp:444
+#: src/clients/repositories.ycp:434 src/clients/repositories.ycp:445
 msgid "Autorefresh"
 msgstr "Autoodświeżanie"
 
 #. table header - URL of the repo
-#: src/clients/repositories.ycp:437 src/clients/repositories.ycp:448
+#: src/clients/repositories.ycp:438 src/clients/repositories.ycp:449
 msgid "URL"
 msgstr "URL"
 
-#: src/clients/repositories.ycp:459 src/clients/repositories.ycp:510
+#: src/clients/repositories.ycp:460 src/clients/repositories.ycp:511
 msgid "&Priority"
 msgstr "&Priorytet"
 
 #. push button - change URL of the selected repository
-#: src/clients/repositories.ycp:466
+#: src/clients/repositories.ycp:467
 msgid "&Replace..."
 msgstr "&Zamień..."
 
 #. push button - refresh the selected repository now
-#: src/clients/repositories.ycp:468
+#: src/clients/repositories.ycp:469
 msgid "Re&fresh Now"
 msgstr "&Odśwież..."
 
 #. push button - disable/enable the selected repository
-#: src/clients/repositories.ycp:470
+#: src/clients/repositories.ycp:471
 msgid "Status &On or Off"
 msgstr "&Włącz / Wyłącz"
 
 #. push button - disable/enable automatic refresh of the selected repository
-#: src/clients/repositories.ycp:472
+#: src/clients/repositories.ycp:473
 msgid "Refre&sh On or Off"
 msgstr "Odś&wieżanie wł./wył."
 
 #. push button - set name of the selected repository
-#: src/clients/repositories.ycp:474
+#: src/clients/repositories.ycp:475
 msgid "Set &Name..."
 msgstr "Ustaw &Nazwę..."
 
 #. label
-#: src/clients/repositories.ycp:500
+#: src/clients/repositories.ycp:501
 msgid "Properties"
 msgstr "Właściwości"
 
-#: src/clients/repositories.ycp:505
+#: src/clients/repositories.ycp:506
 msgid "&Enabled"
 msgstr "&Włączone"
 
 #. check box
-#: src/clients/repositories.ycp:507
+#: src/clients/repositories.ycp:508
 msgid "Automatically &Refresh"
 msgstr "Odświeżanie automatyczne"
 
 #. Checkbox label
-#: src/clients/repositories.ycp:517
+#: src/clients/repositories.ycp:518
 msgid "Synchronize Changes with &ZENworks"
 msgstr "Synchronizuj zmiany z &ZENworks"
 
-#: src/clients/repositories.ycp:535
+#: src/clients/repositories.ycp:536
 msgid "&GPG Keys..."
 msgstr "Klucze &GPG..."
 
 #. menu button label
-#: src/clients/repositories.ycp:537
+#: src/clients/repositories.ycp:538
 msgid "Refresh"
 msgstr "Odświeżanie"
 
 #. menu button label
-#: src/clients/repositories.ycp:540
+#: src/clients/repositories.ycp:541
 msgid "Refresh All Autor&efreshed"
 msgstr "Odśwież wszystko: Autoodświ&eżanie"
 
 #. menu button label
-#: src/clients/repositories.ycp:542
+#: src/clients/repositories.ycp:543
 msgid "Refresh All &Enabled"
 msgstr "Odśwież wszystko: Włączone"
 
 #. dialog caption
-#: src/clients/repositories.ycp:550
+#: src/clients/repositories.ycp:551
 msgid "Configured Software Repositories"
 msgstr "Repozytoria oprogramowania"
 
 #. string title = _("Media Containing the Software Repository");
 #. help
-#: src/clients/repositories.ycp:554
+#: src/clients/repositories.ycp:555
 msgid ""
 "<p>\n"
 "In this dialog, manage configured software repositories.</p>"
@@ -852,7 +792,7 @@ msgstr ""
 "<p>\n"
 "W tym oknie można zarządzać repozytoriami oprogramowania.</p>"
 
-#: src/clients/repositories.ycp:557
+#: src/clients/repositories.ycp:558
 msgid ""
 "<p>\n"
 "<b>Adding a New Repository</b><br>\n"
@@ -865,7 +805,7 @@ msgstr ""
 "</p>"
 
 #. help, continued
-#: src/clients/repositories.ycp:563
+#: src/clients/repositories.ycp:564
 msgid ""
 "<p>\n"
 "To install packages from <b>CD</b>,\n"
@@ -878,7 +818,7 @@ msgstr ""
 "</p>\n"
 
 #. help, continued
-#: src/clients/repositories.ycp:570
+#: src/clients/repositories.ycp:571
 msgid ""
 "<p>\n"
 "The CDs can be copied to <b>hard disk</b>\n"
@@ -899,7 +839,7 @@ msgstr ""
 "wystarczy podać tylko nazwę tego katalogu. </p>\n"
 
 #. help, continued
-#: src/clients/repositories.ycp:582
+#: src/clients/repositories.ycp:583
 msgid ""
 "<p>\n"
 "<b>Modifying a Repository Status</b><br>\n"
@@ -915,7 +855,7 @@ msgstr ""
 "</p>\n"
 
 #. help, continued
-#: src/clients/repositories.ycp:592
+#: src/clients/repositories.ycp:593
 msgid ""
 "<p>\n"
 "<b>Synchronize Changes with ZENworks</b> will also call <tt>rug</tt>\n"
@@ -927,7 +867,7 @@ msgstr ""
 " systemie zarządzania pakietami.</p>\n"
 
 #. help text, continued
-#: src/clients/repositories.ycp:599
+#: src/clients/repositories.ycp:600
 msgid ""
 "<P><B>Priority of a Repository</B><BR>\n"
 "Priority of a repository is an integer value between 0 (the highest priority) and 200 (the lowest priority). Default priority is 99. If a package is available in more repositories the repository with the highest priority is used.</P>"
@@ -936,7 +876,7 @@ msgstr ""
 "Priorytet repozytorium jest to liczba całkowita z zakresu od 0 (najwyższy priorytet) do 200 (najniższy priorytet). Wartością domyślną jest 99. Jeśli pakiet jest dostępny w więcej niż jednym repozytorium, zostanie użyte to z wyższym priorytetem.</p>"
 
 #. popup message part 1
-#: src/clients/repositories.ycp:658
+#: src/clients/repositories.ycp:662
 msgid ""
 "Unable to save changes to the repository\n"
 "configuration."
@@ -946,7 +886,7 @@ msgstr ""
 
 #. popup message part 2 followed by other info
 #. popup message, after message header, header of details
-#: src/clients/repositories.ycp:662 src/modules/Packages.ycp:913
+#: src/clients/repositories.ycp:666 src/modules/Packages.ycp:913
 #: src/modules/SourceManager.ycp:255 src/modules/SourceManager.ycp:430
 msgid "Details:"
 msgstr "Szczegóły:"
@@ -954,19 +894,19 @@ msgstr "Szczegóły:"
 #. popup message part 3
 #. popup message part 2
 #. end of popup message, question
-#: src/clients/repositories.ycp:665 src/include/repositories_include.ycp:226
+#: src/clients/repositories.ycp:669 src/include/repositories_include.ycp:225
 #: src/modules/Packages.ycp:914 src/modules/SourceManager.ycp:257
 #: src/modules/SourceManager.ycp:432
 msgid "Try again?"
 msgstr "Spróbować ponownie?"
 
 #. popup headline
-#: src/clients/repositories.ycp:687
+#: src/clients/repositories.ycp:691
 msgid "Abort Repository Configuration"
 msgstr "Przerwanie konfiguracji repozytorium"
 
 #. popup message
-#: src/clients/repositories.ycp:689
+#: src/clients/repositories.ycp:693
 msgid ""
 "Abort the repository configuration?\n"
 "All changes will be lost."
@@ -975,41 +915,42 @@ msgstr ""
 "Wszystkie zmiany zostaną utracone."
 
 #. TODO: add help text
-#: src/clients/repositories.ycp:794
+#: src/clients/repositories.ycp:798
 msgid "Refreshing Repositories"
 msgstr "Odświeżanie repozytoriów"
 
-#: src/clients/repositories.ycp:794
+#: src/clients/repositories.ycp:798
 msgid "Refresh Repositories"
 msgstr "Odświeżenie repozytoriów"
 
 #. progress bar label
-#: src/clients/repositories.ycp:811
+#: src/clients/repositories.ycp:815
 #, ycp-format
 msgid "Refreshing Repository %1..."
 msgstr "Odświeżanie repozytorium %1..."
 
 #. yes-no popup
-#: src/clients/repositories.ycp:839
+#: src/clients/repositories.ycp:843
 msgid "Delete the selected repository from the list?"
 msgstr "Na pewno usunąć wybrane repozytorium z listy?"
 
 #. popup message
-#: src/clients/repositories.ycp:894
+#: src/clients/repositories.ycp:900
+#, fuzzy
 msgid ""
 "For the selected repository, refresh\n"
-"cannot be set."
+"    cannot be set."
 msgstr ""
 "Dla wybranego repozytorium nie można\n"
 "ustawić odświeżania."
 
 #. Error popup
-#: src/clients/repositories.ycp:1084
+#: src/clients/repositories.ycp:1111
 msgid "<p>There were errors while restoring the repository configuration.</p>\n"
 msgstr "<p>Podczas przywracania konfiguracji repozytorium wystąpiły błędy.</p>\n"
 
 #. Command line help text for the repository module, %1 is "zypper"
-#: src/clients/repositories.ycp:1160
+#: src/clients/repositories.ycp:1187
 #, ycp-format
 msgid "Installation Repositories - this module doesn't support the command line interface, use '%1' instead."
 msgstr "Repozytoria instalacji - ten moduł YaST2 nie obsługuje interfejsu z linii poleceń. Proszę użyć polecenia \"%1\"."
@@ -1101,7 +1042,7 @@ msgstr ""
 "Zainstalować je teraz?\n"
 
 #. error report, %1 is a list of packages
-#: src/clients/sw_single.ycp:464
+#: src/clients/sw_single.ycp:473
 #, ycp-format
 msgid ""
 "Following packages haven't been found on the medium:\n"
@@ -1111,7 +1052,7 @@ msgstr ""
 "%1"
 
 #. Command line help text for the software management module, %1 is "zypper"
-#: src/clients/sw_single.ycp:582
+#: src/clients/sw_single.ycp:591
 #, ycp-format
 msgid "Software installation - this module doesn't support the command line interface, use '%1' instead."
 msgstr "Instalacja oprogramowania - ten moduł YaST2 nie obsługuje interfejsu z linii poleceń. Proszę użyć polecenia \"%1\"."
@@ -1567,12 +1508,12 @@ msgstr ""
 "Czy na pewno usunąć klucz '%1'\n"
 "'%2'?"
 
-#: src/include/repositories_include.ycp:76
+#: src/include/repositories_include.ycp:75
 msgid "Repository"
 msgstr "Repozytorium"
 
 #. continue-back popup
-#: src/include/repositories_include.ycp:140 src/modules/SourceManager.ycp:450
+#: src/include/repositories_include.ycp:139 src/modules/SourceManager.ycp:450
 msgid ""
 "There is no product information available at the given location.\n"
 "If you expected to address a product, return back and enter\n"
@@ -1587,7 +1528,7 @@ msgstr ""
 "w podanym miejscu do listy wyboru pakietów."
 
 #. popup message part 1
-#: src/include/repositories_include.ycp:223 src/modules/Packages.ycp:912
+#: src/include/repositories_include.ycp:222 src/modules/Packages.ycp:912
 #: src/modules/SourceManager.ycp:427
 #, ycp-format
 msgid ""
@@ -1598,7 +1539,7 @@ msgstr ""
 "z adresu URL: '%1'."
 
 #. popup error message, %1 is the package name
-#: src/include/repositories_include.ycp:281
+#: src/include/repositories_include.ycp:280
 #, ycp-format
 msgid ""
 "Cannot search for SLP repositories\n"
@@ -1609,39 +1550,39 @@ msgstr ""
 
 #. error report
 #. popup error
-#: src/modules/AddOnProduct.ycp:307 src/modules/AddOnProduct.ycp:396
+#: src/modules/AddOnProduct.ycp:308 src/modules/AddOnProduct.ycp:397
 #: src/modules/ProductLicense.ycp:356 src/modules/ProductLicense.ycp:494
 msgid "An error occurred while preparing the installation system."
 msgstr "Wystąpił błąd podczas przygotowywania systemu instalacyjnego."
 
 #. error report
-#: src/modules/AddOnProduct.ycp:427
+#: src/modules/AddOnProduct.ycp:428
 #, ycp-format
 msgid "Control file %1 not found on media."
 msgstr "Na nośniku nie znaleziono pliku sterującego %1."
 
 #. TRANSLATORS: error report
-#: src/modules/AddOnProduct.ycp:886 src/modules/AddOnProduct.ycp:1029
+#: src/modules/AddOnProduct.ycp:905 src/modules/AddOnProduct.ycp:1048
 msgid "Unable to use additional products."
 msgstr "Nie można korzystać z dodatkowych produktów."
 
-#: src/modules/AddOnProduct.ycp:951 src/modules/AddOnProduct.ycp:953
+#: src/modules/AddOnProduct.ycp:970 src/modules/AddOnProduct.ycp:972
 #, ycp-format
 msgid "%1, URL: %2"
 msgstr "%1, URL: %2"
 
-#: src/modules/AddOnProduct.ycp:955
+#: src/modules/AddOnProduct.ycp:974
 #, ycp-format
 msgid "URL: %1, Path: %2"
 msgstr "URL: %1, Ścieżka: %2"
 
 #. TRANSLATORS: popup heading
-#: src/modules/AddOnProduct.ycp:977
+#: src/modules/AddOnProduct.ycp:996
 msgid "Additional Products"
 msgstr "Produkty dodatkowe"
 
 #. TRANSLATORS: additional dialog information
-#: src/modules/AddOnProduct.ycp:981
+#: src/modules/AddOnProduct.ycp:1000
 msgid ""
 "The installation repository contains also the listed additional repositories.\n"
 "Select those you want to use."
@@ -1649,16 +1590,16 @@ msgstr ""
 "Instalacja repozytorium zawiera również wymienione dodatkowe repozytoria.\n"
 "Wybierz te, których chcesz użyć."
 
-#: src/modules/AddOnProduct.ycp:988
+#: src/modules/AddOnProduct.ycp:1007
 msgid "Additional Products to Select"
 msgstr "Dodatkowe produkty do wybrania"
 
-#: src/modules/AddOnProduct.ycp:994
+#: src/modules/AddOnProduct.ycp:1013
 msgid "Add Selected Products"
 msgstr "Dodaj zaznaczone produkty"
 
 #. TRANSLATORS: error message, %1 is replaced with product URL
-#: src/modules/AddOnProduct.ycp:1151
+#: src/modules/AddOnProduct.ycp:1170
 #, ycp-format
 msgid "Unable to add product %1."
 msgstr "Nie można dodać produktu %1."
@@ -1697,6 +1638,11 @@ msgstr "&Pokaż listę błędnych pakietów"
 #: src/modules/PackageInstallation.ycp:42
 msgid "&Show Full Log"
 msgstr "&Pokaż dziennik"
+
+#. dialog headline
+#: src/modules/PackageInstallation.ycp:51
+msgid "Installation of Some Packages Failed"
+msgstr "Instalacja niektórych pakietów nie powiodła się."
 
 #. the string is follwed by a media number, e.g. "Medium 1"
 #: src/modules/PackageSlideShow.ycp:27
@@ -2223,7 +2169,7 @@ msgstr ""
 
 #. dialog caption
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:650 src/modules/SourceDialogs.ycp:1957
+#: src/modules/SourceDialogs.ycp:650 src/modules/SourceDialogs.ycp:1953
 msgid "Local Directory"
 msgstr "Katalog lokalny"
 
@@ -2436,7 +2382,7 @@ msgid "HTT&PS"
 msgstr "HTT&PS"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1430 src/modules/SourceDialogs.ycp:1642
+#: src/modules/SourceDialogs.ycp:1430 src/modules/SourceDialogs.ycp:1640
 msgid "&SMB/CIFS"
 msgstr "&SMB/CIFS"
 
@@ -2481,80 +2427,75 @@ msgstr "&Skanuj używając SLP..."
 
 #. radio button
 #: src/modules/SourceDialogs.ycp:1628
-msgid "Register &Update Repositories..."
-msgstr "Rejestracja repozytoriów akt&ualizacji..."
-
-#. radio button
-#: src/modules/SourceDialogs.ycp:1630
 msgid "Commun&ity Repositories"
 msgstr "Repozytoria społecznośc&i"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1633 src/modules/SourceDialogs.ycp:1673
+#: src/modules/SourceDialogs.ycp:1631 src/modules/SourceDialogs.ycp:1671
 msgid "Specify &URL..."
 msgstr "Określ &URL..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1636
+#: src/modules/SourceDialogs.ycp:1634
 msgid "&FTP..."
 msgstr "&FTP..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1638
+#: src/modules/SourceDialogs.ycp:1636
 msgid "&HTTP..."
 msgstr "&HTTP..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1640
+#: src/modules/SourceDialogs.ycp:1638
 msgid "HTT&PS..."
 msgstr "HTT&PS..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1644
+#: src/modules/SourceDialogs.ycp:1642
 msgid "&NFS..."
 msgstr "&NFS..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1646 src/modules/SourceDialogs.ycp:1676
+#: src/modules/SourceDialogs.ycp:1644 src/modules/SourceDialogs.ycp:1674
 msgid "&CD..."
 msgstr "&CD..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1648 src/modules/SourceDialogs.ycp:1678
+#: src/modules/SourceDialogs.ycp:1646 src/modules/SourceDialogs.ycp:1676
 msgid "&DVD..."
 msgstr "&DVD..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1650 src/modules/SourceDialogs.ycp:1680
+#: src/modules/SourceDialogs.ycp:1648 src/modules/SourceDialogs.ycp:1678
 msgid "&Hard Disk..."
 msgstr "Dysk &twardy..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1652
+#: src/modules/SourceDialogs.ycp:1650
 msgid "&USB Mass Storage (USB Stick, Disk)..."
 msgstr "Pamięć masowa &USB (pamięci, dyski USB)"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1654 src/modules/SourceDialogs.ycp:1684
+#: src/modules/SourceDialogs.ycp:1652 src/modules/SourceDialogs.ycp:1682
 msgid "&Local Directory..."
 msgstr "Katalog &lokalny..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1656 src/modules/SourceDialogs.ycp:1686
+#: src/modules/SourceDialogs.ycp:1654 src/modules/SourceDialogs.ycp:1684
 msgid "&Local ISO Image..."
 msgstr "&Lokalny obraz ISO..."
 
-#: src/modules/SourceDialogs.ycp:1660 src/modules/SourceDialogs.ycp:1690
+#: src/modules/SourceDialogs.ycp:1658 src/modules/SourceDialogs.ycp:1688
 msgid "&Download repository description files"
 msgstr "&Pobierz opisy repozytoriów"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1682
+#: src/modules/SourceDialogs.ycp:1680
 msgid "&USB Stick or Disk..."
 msgstr "Pamięć lub dysk &USB..."
 
 #. help text
-#: src/modules/SourceDialogs.ycp:1715
+#: src/modules/SourceDialogs.ycp:1713
 msgid ""
 "<p><big><b>Media Type</b></big><br>\n"
 "The software repository can be located on CD, on a network server,\n"
@@ -2565,7 +2506,7 @@ msgstr ""
 "na serwerze sieciowym lub na twardym dysku.</p>"
 
 #. help, continued
-#: src/modules/SourceDialogs.ycp:1720
+#: src/modules/SourceDialogs.ycp:1718
 msgid ""
 "<p>\n"
 "To add  <b>CD</b> or <b>DVD</b>,\n"
@@ -2575,7 +2516,7 @@ msgstr ""
 "Aby dodać katalog z <b>CD</b> lub <b>DVD</b> wymagane są odpowiednie płyty.</p>"
 
 #. help, continued
-#: src/modules/SourceDialogs.ycp:1725
+#: src/modules/SourceDialogs.ycp:1723
 msgid ""
 "<p>\n"
 "The product CDs can be copied to the hard disk.\n"
@@ -2592,7 +2533,7 @@ msgstr ""
 "katalogu, wystarczy podać tylko jego nazwę. </p>\n"
 
 #. help, continued
-#: src/modules/SourceDialogs.ycp:1734
+#: src/modules/SourceDialogs.ycp:1732
 msgid ""
 "<p>\n"
 "Network installation requires a working network connection.\n"
@@ -2605,23 +2546,23 @@ msgstr ""
 "z pierwszego dysku CD, np. /data1/CD1.</p>\n"
 
 #. error popup
-#: src/modules/SourceDialogs.ycp:1747
+#: src/modules/SourceDialogs.ycp:1745
 msgid "Select the media type."
 msgstr "Proszę wybrać typ nośnika."
 
-#: src/modules/SourceDialogs.ycp:1754
+#: src/modules/SourceDialogs.ycp:1752
 msgid "Insert the add-on product CD"
 msgstr "Proszę umieścić w napędzie płytę CD produktu dodatkowego"
 
-#: src/modules/SourceDialogs.ycp:1755
+#: src/modules/SourceDialogs.ycp:1753
 msgid "Insert the add-on product DVD"
 msgstr "Proszę umieścić w napędzie płytę DVD produktu dodatkowego"
 
-#: src/modules/SourceDialogs.ycp:1765
+#: src/modules/SourceDialogs.ycp:1763
 msgid "No USB disk was detected."
 msgstr "Nie wykryto żadnego dysku USB."
 
-#: src/modules/SourceDialogs.ycp:1885
+#: src/modules/SourceDialogs.ycp:1881
 msgid ""
 "<p><b>Download Files</b><br>\n"
 "Each repository has description files which describe content of the repository.\n"
@@ -2636,44 +2577,44 @@ msgstr ""
 "pobranie plików przez Yast, kiedy będą one potrzebne. </p>\n"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1945 src/modules/SourceManagerSLP.ycp:258
+#: src/modules/SourceDialogs.ycp:1941 src/modules/SourceManagerSLP.ycp:258
 msgid "Repository URL"
 msgstr "Adres URL repozytorium"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1947
+#: src/modules/SourceDialogs.ycp:1943
 msgid "NFS Server"
 msgstr "Serwer NFS"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1949 src/modules/SourceDialogs.ycp:1951
+#: src/modules/SourceDialogs.ycp:1945 src/modules/SourceDialogs.ycp:1947
 msgid "CD or DVD Media"
 msgstr "Typ nośnika CD/DVD"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1953
+#: src/modules/SourceDialogs.ycp:1949
 msgid "Hard Disk"
 msgstr "Dysk twardy"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1955
+#: src/modules/SourceDialogs.ycp:1951
 msgid "USB Stick or Disk"
 msgstr "Pamięć lub dysk USB"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:1959
+#: src/modules/SourceDialogs.ycp:1955
 msgid "Local ISO Image"
 msgstr "Lokalny obraz ISO"
 
 #. label / dialog caption
+#: src/modules/SourceDialogs.ycp:1957 src/modules/SourceDialogs.ycp:1959
 #: src/modules/SourceDialogs.ycp:1961 src/modules/SourceDialogs.ycp:1963
-#: src/modules/SourceDialogs.ycp:1965 src/modules/SourceDialogs.ycp:1967
-#: src/modules/SourceDialogs.ycp:1969
+#: src/modules/SourceDialogs.ycp:1965
 msgid "Server and Directory"
 msgstr "Serwer i katalog"
 
 #. dialog caption
-#: src/modules/SourceDialogs.ycp:2103 src/modules/SourceDialogs.ycp:2125
+#: src/modules/SourceDialogs.ycp:2099 src/modules/SourceDialogs.ycp:2121
 msgid "Media Type"
 msgstr "Typ nośnika"
 
@@ -2927,3 +2868,49 @@ msgstr "Nieznane repozytorium"
 #, fuzzy
 msgid "No further information available, use at your own risk."
 msgstr "Brak dalszych informacji, użycie na własne ryzyko."
+
+#~ msgid "Error occurred while switching the service pack repository."
+#~ msgstr "Podczas przełączania repozytorium Service Pack wystąpił błąd."
+
+#~ msgid ""
+#~ "An error occurred while switching the cached \n"
+#~ "repository back to CD."
+#~ msgstr ""
+#~ "Napotkano błąd podczas przełączania\n"
+#~ "buforowanego repozytorium na CD."
+
+#~ msgid ""
+#~ "An error occurred while creating directory %1:\n"
+#~ "%2"
+#~ msgstr ""
+#~ "Napotkano błąd podczas tworzenia katalogu %1:\n"
+#~ "%2"
+
+#~ msgid "An error occurred while getting temporary directory. %1"
+#~ msgstr "Napotkano błąd podczas dostępu do katalogu tymczasowego. %1"
+
+#~ msgid "An error occurred while getting the directory with updated packages"
+#~ msgstr "Napotkano błąd podczas dostępu do katalogu z zaktualizowanymi pakietami"
+
+#~ msgid "Copying files from CD %1 to disk..."
+#~ msgstr "Kopiowanie plików z CD %1 na dysk..."
+
+#~ msgid ""
+#~ "An error occurred while copying packages\n"
+#~ "from the source CD to the disk"
+#~ msgstr ""
+#~ "Napotkano błąd przy kopiowaniu pakietów\n"
+#~ "ze źródłowego dysku CD na dysk twardy"
+
+#~ msgid ""
+#~ "An error occurred while copying packages\n"
+#~ "from the source CD to the disk cache"
+#~ msgstr ""
+#~ "Napotkano błąd przy kopiowaniu pakietów\n"
+#~ "ze źródłowego dysku CD do bufora dyskowego"
+
+#~ msgid "Switching to disk cache failed."
+#~ msgstr "Napotkano błąd podczas przełączania na bufor dyskowy."
+
+#~ msgid "Register &Update Repositories..."
+#~ msgstr "Rejestracja repozytoriów akt&ualizacji..."

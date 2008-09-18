@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nis.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-11 08:50+0200\n"
+"POT-Creation-Date: 2008-09-18 14:02+0200\n"
 "PO-Revision-Date: 2008-09-12 07:06+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
 "Language-Team: Polski <pl@li.org>\n"
@@ -80,7 +80,7 @@ msgstr "Serwery NIS"
 
 #. summary header
 #. table header
-#: src/Nis.ycp:772 src/ui.ycp:846
+#: src/Nis.ycp:772 src/ui.ycp:851
 msgid "Broadcast"
 msgstr "Rozgłaszanie"
 
@@ -111,13 +111,13 @@ msgstr "Automounter włączony"
 
 #. summary item
 #. table header
-#: src/Nis.ycp:820 src/ui.ycp:850
+#: src/Nis.ycp:820 src/ui.ycp:855
 msgid "Servers"
 msgstr "Serwery"
 
 #. summary item
 #. table header
-#: src/Nis.ycp:822 src/ui.ycp:844
+#: src/Nis.ycp:822 src/ui.ycp:849
 msgid "Domain"
 msgstr "Domena"
 
@@ -131,47 +131,47 @@ msgid "No"
 msgstr "Nie"
 
 #. dialog label
-#: src/Nis.ycp:1160
+#: src/Nis.ycp:1159
 msgid "Writing NIS Configuration..."
 msgstr "Zapisywanie konfiguracji NIS..."
 
 #. progress stage label
-#: src/Nis.ycp:1162
+#: src/Nis.ycp:1161
 msgid "Stop services"
 msgstr "Zatrzymanie usług"
 
 #. progress stage label
-#: src/Nis.ycp:1164
+#: src/Nis.ycp:1163
 msgid "Start services"
 msgstr "Uruchomienie usług"
 
 #. progress step label
-#: src/Nis.ycp:1167
+#: src/Nis.ycp:1166
 msgid "Stopping services..."
 msgstr "Zatrzymywanie usług..."
 
 #. progress step label
-#: src/Nis.ycp:1169
+#: src/Nis.ycp:1168
 msgid "Starting services..."
 msgstr "Uruchamianie usług..."
 
 #. final progress step label
-#: src/Nis.ycp:1171
+#: src/Nis.ycp:1170
 msgid "Finished"
 msgstr "Zakończono"
 
 #. help text
-#: src/Nis.ycp:1175
+#: src/Nis.ycp:1174
 msgid "Writing NIS client settings"
 msgstr "Zapisanie ustawień klienta NIS"
 
 #. error popup message
-#: src/Nis.ycp:1211
+#: src/Nis.ycp:1210
 msgid "Error while running ypclient."
 msgstr "Błąd przy uruchamianiu programu ypclient."
 
 #. error popup message
-#: src/Nis.ycp:1221
+#: src/Nis.ycp:1220
 msgid "NIS server not found."
 msgstr "Nie znaleziono serwera NIS."
 
@@ -238,15 +238,8 @@ msgstr ""
 "odpowiedziały. Włączenie tej opcji obniża bezpieczeństwo systemu.</p>\n"
 
 #. const
-#. Translators: help text
-#. DHCP = Dynamic host configuration protocol
-#: src/ui.ycp:56
-msgid "<p>If you are using <b>DHCP</b> and the server provides the NIS domain name or servers, you can enable their use here. DHCP itself can be set up in the network module.</p>"
-msgstr "<p>Możliwe jest wykorzystanie nazwy domeny i serwera NIS dostarczanych przez serwer DHCP (o ile sieć korzysta z DHCP). Samo DHCP można skonfigurować w module konfiguracji sieci.</p>"
-
-#. const
 #. Translators: short for Expert settings
-#: src/ui.ycp:60
+#: src/ui.ycp:55
 msgid ""
 "<p><b>Expert</b> gives access to some\n"
 "less frequently used settings.</p>\n"
@@ -256,31 +249,31 @@ msgstr ""
 
 #. pushbutton label
 #. Select all items (in this case NIS servers) of a list
-#: src/ui.ycp:96
+#: src/ui.ycp:91
 msgid "Select &All"
 msgstr "Wybierz w&szystkie"
 
 #. pushbutton label
 #. Deselect all items (in this case NIS servers) of a list
-#: src/ui.ycp:99
+#: src/ui.ycp:94
 msgid "Select &None"
 msgstr "Odz&nacz wszystkie"
 
 #. popup window
 #. LAN: local area network
-#: src/ui.ycp:159
+#: src/ui.ycp:154
 #, ycp-format
 msgid "Scanning for NIS servers in domain %1 on this LAN..."
 msgstr "Szukanie serwerów NIS dla domeny %1 w sieci lokalnej..."
 
 #. selection box label
-#: src/ui.ycp:170
+#: src/ui.ycp:165
 #, ycp-format
 msgid "&NIS Servers in Domain %1"
 msgstr "Serwery &NIS w domenie %1"
 
 #. firewall openning help
-#: src/ui.ycp:194
+#: src/ui.ycp:189
 msgid ""
 "<p><b>Firewall Settings</b><br>\n"
 "To open the firewall to allow accessing the 'ypbind' service\n"
@@ -296,7 +289,7 @@ msgstr ""
 "gdy zapora sieciowa jest włączona.</p>\n"
 
 #. help text
-#: src/ui.ycp:204
+#: src/ui.ycp:199
 msgid ""
 "<p>Enter your NIS domain, such as example.com,\n"
 " and the NIS server's address, such as nis.example.com or 10.20.1.1.</p>\n"
@@ -304,8 +297,15 @@ msgstr ""
 "<p>Proszę wprowadzić swoją domenę NIS, np. example.com,\n"
 "oraz adresy serwerów NIS, np. nis.example.com albo 10.20.1.1.</p>\n"
 
+#. help text for netconfig part
+#: src/ui.ycp:204
+msgid ""
+"<p>Select the way how NIS configuration  will be modified. Normally, it is handled by netconfig script which merges the data statically defined here with those obtained dynamically (e.g. from DHCP client, NetworkManager etc.). This is the default, Default Policy option and it is sufficient for most of the configurations.\n"
+"By choosing Only Manual Changes option, netconfig will no longer be allowed to modify configuration. You can however edit the file manually. By choosing Custom Policy option, you may specify a custom policy string, which consists of space-separated list of interface names, including wildcards, with STATIC/STATIC_FALLBACK as predefined special values. For more information, see netconfig manual page.</p>"
+msgstr ""
+
 #. help text
-#: src/ui.ycp:209
+#: src/ui.ycp:208
 msgid ""
 "<p>Specify multiple servers\n"
 "by separating their addresses with spaces.</p>\n"
@@ -313,9 +313,8 @@ msgstr ""
 "<p>Adresy wielu serwerów należy\n"
 "oddzielać odstępami.</p>\n"
 
-#. help_text = help_text + dhcp_help;
 #. help text
-#: src/ui.ycp:218
+#: src/ui.ycp:215
 msgid ""
 "<p>Automounter is a daemon that mounts directories automatically,\n"
 "such as users' home directories.\n"
@@ -328,94 +327,112 @@ msgstr ""
 "lokalnie albo że są dostępne przez NIS.</p>"
 
 #. radio button label
-#: src/ui.ycp:266
+#: src/ui.ycp:263
 msgid "Au&tomatic Setup (Via NetworkManager and DHCP)"
 msgstr "Konfiguracja au&tomatyczna (przez NetworkManager i DHCP)"
 
 #. radio button label
-#: src/ui.ycp:268
+#: src/ui.ycp:265
 msgid "Au&tomatic Setup (via DHCP)"
 msgstr "Konfiguracja au&tomatyczna (przez DHCP)"
 
 #. frame label
-#: src/ui.ycp:272 src/ui.ycp:870
+#: src/ui.ycp:269 src/ui.ycp:875
 msgid "NIS client"
 msgstr "Klient NIS"
 
 #. combo box label
-#: src/ui.ycp:277
-msgid "Nis &Policy"
+#: src/ui.ycp:275
+#, fuzzy
+msgid "Netconfig NIS &Policy"
 msgstr "&Polityka Nis"
 
+#. combo box item
+#: src/ui.ycp:277
+msgid "Only Manual Changes"
+msgstr ""
+
+#. combo box item
+#: src/ui.ycp:279
+#, fuzzy
+msgid "Default Policy"
+msgstr "N&iestandardowe Polityki"
+
+#. combo box item
+#: src/ui.ycp:281
+#, fuzzy
+msgid "Custom Policy"
+msgstr "N&iestandardowe Polityki"
+
 #. text entry label
-#: src/ui.ycp:284
+#: src/ui.ycp:285
 msgid "C&ustom Policy"
 msgstr "N&iestandardowe Polityki"
 
 #. text entry label
-#: src/ui.ycp:288
+#: src/ui.ycp:289
 msgid "N&IS Domain"
 msgstr "Domena N&IS"
 
 #. text entry label
-#: src/ui.ycp:293
+#: src/ui.ycp:294
 msgid "&Addresses of NIS servers"
 msgstr "&Adresy serwerów NIS"
 
 #. check box label
-#: src/ui.ycp:296
+#: src/ui.ycp:297
 msgid "Br&oadcast"
 msgstr "R&ozgłaszanie"
 
 #. pushbutton label, find nis servers
 #. Shortcut must not conflict with Finish and Next (#29960)
-#: src/ui.ycp:299 src/ui.ycp:699
+#: src/ui.ycp:300 src/ui.ycp:704
 msgid "Fin&d"
 msgstr "Znaj&dź"
 
-#: src/ui.ycp:303
+#: src/ui.ycp:304
 msgid "Additional NIS Domains"
 msgstr "Dodatkowe domeny NIS"
 
 #. button label
-#: src/ui.ycp:313
+#: src/ui.ycp:314
 msgid "&Edit"
 msgstr "&Edytuj"
 
 #. radio button label
-#: src/ui.ycp:326
+#: src/ui.ycp:327
 msgid "Do &not use NIS"
 msgstr "&Nie używaj NIS"
 
 #. radio button label
-#: src/ui.ycp:330
+#: src/ui.ycp:331
 msgid "&Use NIS"
 msgstr "&Używaj NIS"
 
 #. checkbox label
-#: src/ui.ycp:339
+#: src/ui.ycp:340
 msgid "Start Auto&mounter"
 msgstr "Uruchom Auto&mounter"
 
 #. button label
 #. (short for Expert settings)
-#: src/ui.ycp:344
+#: src/ui.ycp:345
 msgid "E&xpert..."
 msgstr "&Zaawansowane..."
 
 #. dialog title
-#: src/ui.ycp:351 src/ui.ycp:877
+#: src/ui.ycp:352 src/ui.ycp:882
 msgid "Configuration of NIS client"
 msgstr "Konfiguracja klienta NIS"
 
 #. Message popup. The user wants to Find servers
 #. but the domain is unknown.
-#: src/ui.ycp:427 src/ui.ycp:744
+#: src/ui.ycp:428 src/ui.ycp:749
 msgid "Finding servers works only when the domain is known."
 msgstr "Znajdowanie serwera działa tylko wtedy, gdy znana jest domena."
 
 #. yes-no popup
-#: src/ui.ycp:448
+#: src/ui.ycp:449
 msgid ""
 "When you configure your machine as a NIS client,\n"
 "you cannot retrieve the user data from LDAP.\n"
@@ -426,82 +443,82 @@ msgstr ""
 "Czy na pewno kontynuować?"
 
 #. help text 1/4
-#: src/ui.ycp:534
+#: src/ui.ycp:539
 msgid "<p>Normally, it is possible for any host to query which server a client is using. Disabling <b>Answer Remote Hosts</b> restricts this only to the local host.</p>"
 msgstr "<p>Zazwyczaj każdy host może zapytać, którego serwera używa dany klient. Wyłączenie opcji <b>Odpowiadaj komputerom zdalnym</b> ogranicza to prawo jedynie do hosta lokalnego.</p>"
 
 #. help text 2/4
 #. Check, ie. turn on a check box
-#: src/ui.ycp:538
+#: src/ui.ycp:543
 msgid "<p>Check <b>Broken server</b> if answers from servers running on an unprivileged port should be accepted. It is a security risk and it is better to replace such a server.</p>"
 msgstr "<p>Aby akceptować odpowiedzi z serwerów pracujących na nieuprzywilejowanych portach, należy wybrać <b>Uszkodzony serwer</b>. Zaznaczenie tej opcji obniża bezpieczeństwo systemu i dlatego zaleca się nieużywanie takich serwerów.</p>"
 
 #. help text 3/4
-#: src/ui.ycp:541
+#: src/ui.ycp:546
 msgid "<p>See <b>man ypbind</b> for details on other options.</p>"
 msgstr "<p>Szczegóły dotyczące innych opcji znajdują w podręczniku <b>man ypbind</b>.</p>"
 
 #. frame label
 #. dialog title
-#: src/ui.ycp:551 src/ui.ycp:570
+#: src/ui.ycp:556 src/ui.ycp:575
 msgid "Expert settings"
 msgstr "Ustawienia zaawansowane"
 
 #. check box label
-#: src/ui.ycp:555
+#: src/ui.ycp:560
 msgid "Ans&wer Remote Hosts"
 msgstr "Odpo&wiadaj hostom zdalnym"
 
 #. check box label
-#: src/ui.ycp:557
+#: src/ui.ycp:562
 msgid "Br&oken server"
 msgstr "Uszk&odzony serwer"
 
 #. text entry label (do not translate 'ypbind')
-#: src/ui.ycp:561
+#: src/ui.ycp:566
 msgid "Other &ypbind options"
 msgstr "Inne opcje &ypbind"
 
 #. Translators: multilineedit label
 #. comma: ","
-#: src/ui.ycp:688
+#: src/ui.ycp:693
 msgid "&Servers (separated by spaces or commas)"
 msgstr "&Serwery (oddzielone odstępami lub przecinkami)"
 
 #. checkbox label
-#: src/ui.ycp:693
+#: src/ui.ycp:698
 msgid "&Broadcast"
 msgstr "Rozgła&szanie"
 
 #. checkbox label
-#: src/ui.ycp:696
+#: src/ui.ycp:701
 msgid "&SLP"
 msgstr "&SLP"
 
 #. Translators: popup dialog heading
-#: src/ui.ycp:710
+#: src/ui.ycp:715
 msgid "Domain Settings"
 msgstr "Ustawienia domeny"
 
 #. Add a domain, Adding a domain? Edit...
 #. Translators: text entry label
-#: src/ui.ycp:713
+#: src/ui.ycp:718
 msgid "&Domain name"
 msgstr "Nazwa &domeny"
 
 #. Translators: error message
-#: src/ui.ycp:781
+#: src/ui.ycp:786
 msgid "This domain is already defined."
 msgstr "Ta domena została już zdefiniowana."
 
 #. Translators: error message
-#: src/ui.ycp:788
+#: src/ui.ycp:793
 #, ycp-format
 msgid "The format of server address '%1' is not correct."
 msgstr "Adres serwera '%1' jest nieprawidłowy."
 
 #. error message, 'Broadcast' and 'SLP' are checkboxes
-#: src/ui.ycp:796
+#: src/ui.ycp:801
 msgid ""
 "Enabling both Broadcast and SLP options\n"
 "does not make any sense. Select just one option."
@@ -510,40 +527,43 @@ msgstr ""
 "mija się z celem. Proszę wybrać tylko jedną z nich."
 
 #. help text
-#: src/ui.ycp:823
+#: src/ui.ycp:828
 msgid "<p>Specify the servers for additional domains.</p>"
 msgstr "<p>Należy podać serwery dla dodatkowych domen.</p>"
 
 #. help text
-#: src/ui.ycp:829
+#: src/ui.ycp:834
 msgid "<p>The Service Location Protocol (<b>SLP</b>) can be used to find NIS server.</p>"
 msgstr "<p>Do znalezienia serwera NIS może zostać wykorzystany protokół odnajdywania usług (<b>SLP</b>).</p>"
 
 #. dialog label
 #. dialog subtitle
-#: src/ui.ycp:838 src/ui.ycp:879
+#: src/ui.ycp:843 src/ui.ycp:884
 msgid "Additional Domains"
 msgstr "Dodatkowe domeny"
 
 #. table header - Service Location Protocol
-#: src/ui.ycp:848
+#: src/ui.ycp:853
 msgid "SLP"
 msgstr "SLP"
 
 #. button label
-#: src/ui.ycp:855
+#: src/ui.ycp:860
 msgid "A&dd"
 msgstr "&Dodaj"
 
 #. Translators: a yes-no popup
-#: src/ui.ycp:956
+#: src/ui.ycp:961
 msgid "Really delete this domain?"
 msgstr "Czy na pewno usunąć tę domenę?"
 
 #. popup text FIXME better...
-#: src/ui.ycp:1135
+#: src/ui.ycp:1140
 msgid "NIS is now enabled."
 msgstr "NIS jest teraz aktywny."
+
+#~ msgid "<p>If you are using <b>DHCP</b> and the server provides the NIS domain name or servers, you can enable their use here. DHCP itself can be set up in the network module.</p>"
+#~ msgstr "<p>Możliwe jest wykorzystanie nazwy domeny i serwera NIS dostarczanych przez serwer DHCP (o ile sieć korzysta z DHCP). Samo DHCP można skonfigurować w module konfiguracji sieci.</p>"
 
 #~ msgid "Error while running portmapper."
 #~ msgstr "Błąd przy uruchamianiu programu portmapper."

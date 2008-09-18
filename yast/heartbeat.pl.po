@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: heartbeat\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-11 08:55+0200\n"
+"POT-Creation-Date: 2008-09-18 14:07+0200\n"
 "PO-Revision-Date: 2008-09-12 07:40+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -602,6 +602,7 @@ msgstr ""
 "modułów i akceptowanych przez nie parametrów.</p>\n"
 
 #: src/helps.ycp:153
+#, fuzzy
 msgid ""
 "<p><b><big>Booting</big></b><br>\n"
 "To start the Heartbeat software each time this cluster server\n"
@@ -609,6 +610,10 @@ msgid ""
 "must start Heartbeat manually each time this cluster server\n"
 "is booted. You can start the Heartbeat server manually using\n"
 "the <tt>/etc/init.d/heartbeat start</tt> command.</p>\n"
+"<p>To propagate the configuration to all nodes of the cluster and \n"
+"to enable heartbeat service on them, run the commandline utility \n"
+"<tt>/usr/lib/heartbeat/ha_propagate</tt> on this node after the \n"
+"configuration is saved.</p>"
 msgstr ""
 "<p><b><big>Uruchamianie systemu</big></b><br>\n"
 "Aby uruchamiać oprogramowanie Heartbeat przy każdym uruchomieniu\n"
@@ -617,7 +622,7 @@ msgstr ""
 "po każdym uruchomieniu serwera klastra. Do ręcznego uruchamiania\n"
 " Heartbeat służy polecenie  <tt>/etc/init.d/heartbeat start</tt>.</p>\n"
 
-#: src/helps.ycp:161
+#: src/helps.ycp:164
 msgid ""
 "<p>Heartbeat uses a variety of timers to tune and configure its behavior.\n"
 "All timers are specified in seconds.</p>\n"
@@ -625,7 +630,7 @@ msgstr ""
 "<p>Do skonfigurowania działania Heartbeat używa różnych liczników.\n"
 "Wartości wszystkich są podane w sekundach.</p>\n"
 
-#: src/helps.ycp:164
+#: src/helps.ycp:167
 msgid ""
 "<p><b>Keep Alive</b> specifies the interval at which a node announces itself on\n"
 "the network.</p>\n"
@@ -633,7 +638,7 @@ msgstr ""
 "<p><b>Aktywność</b> określa czas, po którym węzeł wysyła informacje \n"
 "o sobie w sieci.</p>\n"
 
-#: src/helps.ycp:167
+#: src/helps.ycp:170
 msgid ""
 "<p><b>Dead Time</b> is the time after which a node is presumed to be dead.\n"
 "It should probably default to five times the Keep Alive interval.</p>\n"
@@ -641,7 +646,7 @@ msgstr ""
 "<p><b>Czas śmierci</b> jest czasem, po którym zakłada się, że węzeł jest \n"
 "martwy. Dobrą wartością domyślną jest czas pięć razy dłuższy niż czas aktywności.</p>\n"
 
-#: src/helps.ycp:170
+#: src/helps.ycp:173
 msgid ""
 "<p><b>Warn Time</b> is the time after which Heartbeat warns in the log files\n"
 "that a node has been slow in sending its heartbeats. This should\n"
@@ -652,7 +657,7 @@ msgstr ""
 "synchronizacji. Dobrą wartością domyślną jest czas trzy razy dłuższy niż czas \n"
 "aktywności.</p>\n"
 
-#: src/helps.ycp:174
+#: src/helps.ycp:177
 msgid ""
 "<p><b>Init Dead Time</b> is the time a node waits after start-up for the other\n"
 "nodes, given that sometimes network interfaces, routing, etc., take a\n"
@@ -663,7 +668,7 @@ msgstr ""
 "sieciowych, routingu, itp. zajmuje pewien czas. Domyślnie powinno\n"
 "to być co najmniej dwa razy dłużej niż czas śmierci.</p>\n"
 
-#: src/helps.ycp:178
+#: src/helps.ycp:181
 msgid ""
 "If the <b>Watchdog Timer</b> is enabled, Heartbeat uses\n"
 "the in-kernel watchdog for monitoring the local node itself. If\n"
@@ -675,7 +680,7 @@ msgstr ""
 "Heartbeat nie wykona zapisu do tego pliku po każdych sześćdziesięciu\n"
 "sekundach, jądro wymusi ponowne uruchomienie węzła.</p>\n"
 
-#: src/helps.ycp:184
+#: src/helps.ycp:187
 msgid ""
 "<p><b>IP Fail</b> allows monitoring of external\n"
 "hosts and moving the resources accordingly (i.e., to the host with the\n"
@@ -685,7 +690,7 @@ msgstr ""
 "komputerów i odpowiednie przenoszenie zasobów (np. na węzeł z \n"
 "<i>najlepszym</i> połączeniem).</p>\n"
 
-#: src/helps.ycp:188
+#: src/helps.ycp:191
 msgid ""
 "<p>If enabled, Heartbeat needs a <b>Ping List</b> of external nodes to ping.\n"
 "The minimum if IP fail is enabled is one. A maximum of four to eight nodes seems sensible.</p>\n"
@@ -694,11 +699,11 @@ msgstr ""
 "zewnętrzne węzły. Minimalną liczbą elementów na liście w przypadku włączenia \n"
 "opcji \"Awaria IP\" jest jeden. Sensownym maksimum wydają się cztery węzły.</p>\n"
 
-#: src/helps.ycp:191
+#: src/helps.ycp:194
 msgid "<p>For more complex configurations, Heartbeat also supports <i>Ping Groups</i>."
 msgstr "<p>Dla skomplikowanych konfiguracji, Heartbeat obsługuje także <i>Grupy pingowania</i>."
 
-#: src/helps.ycp:193
+#: src/helps.ycp:196
 msgid ""
 "A list of IP addresses is grouped together and if any\n"
 "of them is reachable, the node is deemed able to communicate with\n"
@@ -918,23 +923,11 @@ msgstr "Uruchom serwer Heartbeat"
 msgid "Stop Heartbeat Server Now"
 msgstr "Zatrzymaj serwer Heartbeat"
 
-#: src/startup_conf.ycp:46
-msgid "Propagate Configuration"
-msgstr "Skopiuj ustawienia"
-
-#: src/startup_conf.ycp:51
-msgid ""
-"To propagate this configuration to the rest of the nodes,\n"
-"run the command line utility ha_propagate."
-msgstr ""
-"Aby skopiować te ustawienia do pozostałych węzłów, \n"
-"należy skorzystać z tekstowego programu 'ha_propagate'."
-
-#: src/startup_conf.ycp:77
+#: src/startup_conf.ycp:69
 msgid "Heartbeat server is running."
 msgstr "Serwer Heartbeat jest uruchomiony."
 
-#: src/startup_conf.ycp:77
+#: src/startup_conf.ycp:69
 msgid "Heartbeat server is not running."
 msgstr "Serwer Heartbeat nie działa."
 
@@ -979,6 +972,16 @@ msgstr "Konfiguracja Heartbeat"
 #: src/wizards.ycp:146
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
+#~ msgid "Propagate Configuration"
+#~ msgstr "Skopiuj ustawienia"
+
+#~ msgid ""
+#~ "To propagate this configuration to the rest of the nodes,\n"
+#~ "run the command line utility ha_propagate."
+#~ msgstr ""
+#~ "Aby skopiować te ustawienia do pozostałych węzłów, \n"
+#~ "należy skorzystać z tekstowego programu 'ha_propagate'."
 
 #~ msgid "Configuration of Heartbeat"
 #~ msgstr "Konfiguracja Heartbeat"
