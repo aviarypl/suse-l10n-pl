@@ -12,9 +12,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scanner.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-18 14:12+0200\n"
-"PO-Revision-Date: 2008-04-23 21:01+0100\n"
-"Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
+"POT-Creation-Date: 2008-09-11 09:00+0200\n"
+"PO-Revision-Date: 2008-09-20 10:48+0100\n"
+"Last-Translator: Mirosław Rogoziński <miroslaw.rogozinski@gmail.com>\n"
 "Language-Team:  <en@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -127,6 +127,14 @@ msgid ""
 "In this case it should help to disable the net metadriver\n"
 "as a workaround until the issue in the network is fixed.\n"
 msgstr ""
+"Nie można określić aktywne skanery.\n"
+"Kiedy sieciowy metasterownik jest aktywny i coś jest nie tak w sieci\n"
+"może się zdażyć, że komenda 'scanimage -L' nie będzie odpowiadać.\n"
+"Np. kiedy komunikacja z serwerem, który powinien być użyty przez\n"
+"sieciowy metasterownik, zostanie naruszona  przez odrzucenie części\n"
+"ruchu sieciowego przez zaporę sieciową. W takim wypadku powinno pomóc\n"
+"zablokowanie sieciowego metasterownika jako rozwiązanie tymczasowe\n"
+"dopóki problem w sieci nie zostanie rozwiązany.\n"
 
 #. Message of a Report::Error.
 #. Only a simple message because this error does not happen on a normal system
@@ -140,7 +148,9 @@ msgstr "Wykrywanie aktywnych skanerów nie powiodło się."
 #. Message of a Report::Error where %1 will be replaced by the file name.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Scanner.ycp:532 src/Scanner.ycp:579 src/Scanner.ycp:627
+#: src/Scanner.ycp:532
+#: src/Scanner.ycp:579
+#: src/Scanner.ycp:627
 #: src/Scanner.ycp:2446
 #, ycp-format
 msgid "File %1 does not exist."
@@ -149,7 +159,9 @@ msgstr "Plik %1 nie istnieje."
 #. Message of a Report::Error where %1 will be replaced by the file name.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Scanner.ycp:544 src/Scanner.ycp:591 src/Scanner.ycp:639
+#: src/Scanner.ycp:544
+#: src/Scanner.ycp:591
+#: src/Scanner.ycp:639
 #: src/Scanner.ycp:2458
 #, ycp-format
 msgid "Failed to read %1."
@@ -191,7 +203,8 @@ msgstr "Wczytywanie lub tworzenie bazy danych skanerów"
 
 #. 3. progress stage name of a Progress::New:
 #. 5. progress stage name of a Progress::New:
-#: src/Scanner.ycp:766 src/Scanner.ycp:1884
+#: src/Scanner.ycp:766
+#: src/Scanner.ycp:1884
 msgid "Determine active scanners"
 msgstr "Określanie aktywnych skanerów"
 
@@ -217,7 +230,8 @@ msgstr "Wczytywanie lub tworzenie bazy danych skanerów..."
 
 #. 3. progress step progress bar title of a Progress::New:
 #. 5. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:777 src/Scanner.ycp:1897
+#: src/Scanner.ycp:777
+#: src/Scanner.ycp:1897
 msgid "Determining active scanners..."
 msgstr "Wykrywanie aktywnych skanerów..."
 
@@ -229,12 +243,16 @@ msgstr "Wykrywanie aktywnych sterowników..."
 #. 5. progress step progress bar title of a Progress::New:
 #. Busy message:
 #. Body of a Popup::ShowFeedback:
-#: src/Scanner.ycp:781 src/Scanner.ycp:958 src/Scanner.ycp:1032
+#: src/Scanner.ycp:781
+#: src/Scanner.ycp:958
+#: src/Scanner.ycp:1032
 msgid "Detecting scanners..."
 msgstr "Wykrywanie skanerów..."
 
 #. Last progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:783 src/Scanner.ycp:994 src/Scanner.ycp:1901
+#: src/Scanner.ycp:783
+#: src/Scanner.ycp:994
+#: src/Scanner.ycp:1901
 msgid "Finished"
 msgstr "Ukończono"
 
@@ -279,7 +297,6 @@ msgstr "Zapisywanie bieżącego środowiska..."
 #. Do not change or translate "hp-setup", it is a program name.
 #. Do not change or translate "HPLIP", it is a subsystem name.
 #: src/Scanner.ycp:1059
-#, fuzzy
 msgid ""
 "There is at least one printer configuration that uses the ptal service.\n"
 "It is possible to proceed but then the running ptal service could prevent\n"
@@ -289,7 +306,7 @@ msgid ""
 "and start the scanner configuration again afterwards.\n"
 msgstr ""
 "Istnieje co najmniej jedna konfiguracja drukarki, która używa usługi ptal. \n"
-"Można kontynuować, ale działanie ptal może zakłócić pracę programu \n"
+"Można kontynuować, ale uruchomienie usługi ptal może zakłócić pracę programu \n"
 "hp-setup. Zaleca się przerwanie konfiguracji skanera w tym momencie, \n"
 "zatrzymanie uslugi ptal, skonfigurowanie drukarki do stosowania HPLIP \n"
 "i ponowne rozpoczęcie konfiguracji skanera.\n"
@@ -354,17 +371,20 @@ msgid "Not Configured:"
 msgstr "Nieskonfigurowane:"
 
 #. Fallback device name if the real device name is missing:
-#: src/Scanner.ycp:1276 src/Scanner.ycp:2165
+#: src/Scanner.ycp:1276
+#: src/Scanner.ycp:2165
 msgid "Unknown device"
 msgstr "Nieznane urządzenie"
 
 #. Fallback manufacturer name if the real manufacturer name is missing:
-#: src/Scanner.ycp:1278 src/Scanner.ycp:2161
+#: src/Scanner.ycp:1278
+#: src/Scanner.ycp:2161
 msgid "Unknown manufacturer"
 msgstr "Nieznany producent"
 
 #. Fallback model name if the real model name is missing:
-#: src/Scanner.ycp:1280 src/Scanner.ycp:2163
+#: src/Scanner.ycp:1280
+#: src/Scanner.ycp:2163
 msgid "Unknown model"
 msgstr "Nieznany model"
 
@@ -377,7 +397,8 @@ msgstr "Nieznany model"
 #. %1 will be replaced by the manufacturer name
 #. %2 will be replaced by the model name
 #. %3 will be replaced by the device name where the scanner is connected to:
-#: src/Scanner.ycp:1302 src/Scanner.ycp:2159
+#: src/Scanner.ycp:1302
+#: src/Scanner.ycp:2159
 #, ycp-format
 msgid "%1 %2 at %3"
 msgstr "%1 %2 na %3"
@@ -609,6 +630,23 @@ msgid ""
 "For this workaround choose 'Scanning via Network'\n"
 "and select the 'Local Host Configuration'.\n"
 msgstr ""
+"Skaner nie został rozpoznany przez HAL.\n"
+"Aby uzyskać dostęp do skaneru jako zwykły użytkownik,\n"
+"udev, HAL i hal-resmgr jest wymagane udzielenie\n"
+"odpowiednich uprawnien dostępu automatycznie.\n"
+"Dlatego model skaneru musi być rozpoznany dla HAL.\n"
+"Jeśli skaner nie jest rozpoznawany przez HAL, podłączenie\n"
+"ponowne skaneru USB powinno pomóc.\n"
+"Poza tym komputer powinien zostać ponownie uruchomiony\n"
+"w celu zrestartowania całego udev/HAL/hal-resmgr.\n"
+"Sprawdz czy skaner jest wyświetlony w wyjściu lshal.\n"
+"Jeśli skaner SCSI, który został przełączony w czasie startu\n"
+"nie został wyświetlony przez lshal, to powodem tego może być\n"
+"to, że moduł jądra dla skanerów SCSI nie inforumje HAL o urządzeniu.\n"
+"Jeśli uruchomienie ponowne nie pomoże, możesz uzyskać dostęp do\n"
+"skaneru przez saned jako rozwiązanie tymczasowe.\n"
+"Aby skorzystać z rozwiązania tymczasowego, wybierz 'Skanowanie przez sieć'\n"
+"i 'Konfiguracja lokalnego hosta.\n"
 
 #. Define the progress stages:
 #. Header of a Progress::New:
@@ -685,8 +723,11 @@ msgid "The driver %1 requires the package %2."
 msgstr "Sterownik %1 wymaga pakietu %2."
 
 #. Last progress step progress bar title when the Progress was aborted:
-#: src/Scanner.ycp:1928 src/Scanner.ycp:1970 src/Scanner.ycp:2021
-#: src/Scanner.ycp:2039 src/Scanner.ycp:2049
+#: src/Scanner.ycp:1928
+#: src/Scanner.ycp:1970
+#: src/Scanner.ycp:2021
+#: src/Scanner.ycp:2039
+#: src/Scanner.ycp:2049
 msgid "Aborted"
 msgstr "Przerwano"
 
@@ -751,7 +792,9 @@ msgstr ""
 #. Message of a Popup::Error where %1 will be replaced by the driver (backend) name.
 #. Only a simple message because before the function Scanner::DeactivateBackend
 #. was called and this function would have shown more specific messages.
-#: src/Scanner.ycp:2181 src/dialogs.ycp:358 src/dialogs.ycp:787
+#: src/Scanner.ycp:2181
+#: src/dialogs.ycp:358
+#: src/dialogs.ycp:787
 #, ycp-format
 msgid "Failed to deactivate %1."
 msgstr "Deaktywacja %1 nie powiodła się."
@@ -814,6 +857,23 @@ msgid ""
 "For this workaround choose 'Scanning via Network'\n"
 "and select the 'Local Host Configuration'.\n"
 msgstr ""
+"Skaner nie został rozpoznany przez HAL.\n"
+"Aby uzyskać dostęp do skaneru jako zwykły użytkownik,\n"
+"udev, HAL i hal-resmgr jest wymagane udzielenie\n"
+"odpowiednich uprawnien dostępu automatycznie.\n"
+"Dlatego model skaneru musi być rozpoznany dla HAL.\n"
+"Jeśli skaner nie jest rozpoznawany przez HAL, podłączenie\n"
+"ponowne skaneru USB powinno pomóc.\n"
+"Poza tym komputer powinien zostać ponownie uruchomiony\n"
+"w celu zrestartowania całego udev/HAL/hal-resmgr.\n"
+"Sprawdz czy skaner jest wyświetlony w wyjściu lshal.\n"
+"Jeśli skaner SCSI, który został przełączony w czasie startu\n"
+"nie został wyświetlony przez lshal, to powodem tego może być\n"
+"to, że moduł jądra dla skanerów SCSI nie inforumje HAL o urządzeniu.\n"
+"Jeśli uruchomienie ponowne nie pomoże, możesz uzyskać dostęp do\n"
+"skaneru przez saned jako rozwiązanie tymczasowe.\n"
+"Aby skorzystać z rozwiązania tymczasowego, wybierz 'Skanowanie przez sieć'\n"
+"i 'Konfiguracja lokalnego hosta.\n"
 
 #. Header of a Report::ShowText where %1 will be replaced by the driver name:
 #: src/Scanner.ycp:2319
@@ -863,7 +923,8 @@ msgstr ""
 "%2"
 
 #. Fallback message if the real results are missing:
-#: src/Scanner.ycp:2369 src/Scanner.ycp:2393
+#: src/Scanner.ycp:2369
+#: src/Scanner.ycp:2393
 msgid "(no results available)"
 msgstr "(brak wyników)"
 
@@ -896,7 +957,7 @@ msgstr ""
 #: src/Scanner.ycp:2410
 #, ycp-format
 msgid "The following SANE device is not know to HAL: '%1'"
-msgstr ""
+msgstr "Podane urządzenie SANE nie zostało rozpoznane przez HAL: '%1'"
 
 #. Message of a Report::Error.
 #. Only a simple message because this error does not happen on a normal system
@@ -937,7 +998,9 @@ msgstr "Zapisanie ustawień zapory dotyczących skanowania poprzez sieć nie pow
 #. Caption of the OverviewDialog
 #. (the same as the caption of the matching help text)
 #. Text for the command_line_description:
-#: src/dialogs.ycp:89 src/scanner.ycp:35 src/wizards.ycp:128
+#: src/dialogs.ycp:89
+#: src/scanner.ycp:35
+#: src/wizards.ycp:128
 msgid "Scanner Configuration"
 msgstr "Konfiguracja skanera"
 
@@ -980,15 +1043,23 @@ msgstr "Ska&nowanie przez sieć..."
 
 #. Header of a Popup::AnyMessage when nothing was selected:
 #. Header of a Popup::AnyMessage when no model was selected:
-#: src/dialogs.ycp:163 src/dialogs.ycp:266 src/dialogs.ycp:339
-#: src/dialogs.ycp:375 src/dialogs.ycp:444 src/dialogs.ycp:642
+#: src/dialogs.ycp:163
+#: src/dialogs.ycp:266
+#: src/dialogs.ycp:339
+#: src/dialogs.ycp:375
+#: src/dialogs.ycp:444
+#: src/dialogs.ycp:642
 msgid "Nothing Selected"
 msgstr "Nic nie wybrano"
 
 #. Body of a Popup::AnyMessage when nothing was selected:
 #. Body of a Popup::AnyMessage when no model was selected:
-#: src/dialogs.ycp:165 src/dialogs.ycp:268 src/dialogs.ycp:341
-#: src/dialogs.ycp:377 src/dialogs.ycp:446 src/dialogs.ycp:644
+#: src/dialogs.ycp:165
+#: src/dialogs.ycp:268
+#: src/dialogs.ycp:341
+#: src/dialogs.ycp:377
+#: src/dialogs.ycp:446
+#: src/dialogs.ycp:644
 msgid "Select an entry."
 msgstr "Proszę wybrać pozycję."
 
@@ -1002,7 +1073,8 @@ msgstr "Proszę wybrać pozycję."
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Edit] button.
 #. Translate 'Edit' to the exact label of the [Edit] button.
-#: src/dialogs.ycp:222 src/dialogs.ycp:236
+#: src/dialogs.ycp:222
+#: src/dialogs.ycp:236
 msgid "Edit Not Possible"
 msgstr "Edycja nie jest możliwa"
 
@@ -1014,7 +1086,8 @@ msgstr "Edycja nie jest możliwa"
 #. without a matching active scanner was selected
 #. and then the user clicked the [Test] button:
 #. Translate 'delete' to the exact label of the [Delete] button.
-#: src/dialogs.ycp:227 src/dialogs.ycp:418
+#: src/dialogs.ycp:227
+#: src/dialogs.ycp:418
 msgid "It is only possible to delete a driver without a matching scanner."
 msgstr "Możliwe jest usunięcie tylko tych sterowników, do których nie jest przypisany żaden skaner."
 
@@ -1030,7 +1103,9 @@ msgstr "Możliwe jest usunięcie tylko tych sterowników, do których nie jest p
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Test] button.
 #. Translate 'add' to the exact label of the [Add] button.
-#: src/dialogs.ycp:241 src/dialogs.ycp:307 src/dialogs.ycp:432
+#: src/dialogs.ycp:241
+#: src/dialogs.ycp:307
+#: src/dialogs.ycp:432
 msgid "It is only possible to add a scanner."
 msgstr "Możliwe jest tylko dodanie skanera."
 
@@ -1044,7 +1119,8 @@ msgstr "Możliwe jest tylko dodanie skanera."
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Delete] button.
 #. Translate 'Delete' to the exact label of the [Delete] button.
-#: src/dialogs.ycp:288 src/dialogs.ycp:302
+#: src/dialogs.ycp:288
+#: src/dialogs.ycp:302
 msgid "Delete Not Possible"
 msgstr "Usunięcie nie jest możliwe"
 
@@ -1056,7 +1132,8 @@ msgstr "Usunięcie nie jest możliwe"
 #. which is not yet configured was selected
 #. and then the user clicked the [Test] button:
 #. Translate 'edit' to the exact label of the [Edit] button.
-#: src/dialogs.ycp:293 src/dialogs.ycp:402
+#: src/dialogs.ycp:293
+#: src/dialogs.ycp:402
 msgid "It is only possible to edit a detected scanner."
 msgstr "Możliwa jest wyłącznie edycja wykrytego skanera."
 
@@ -1083,7 +1160,9 @@ msgstr "Deaktywować %1?"
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Test] button.
 #. Translate 'Test' to the exact label of the [Test] button.
-#: src/dialogs.ycp:397 src/dialogs.ycp:413 src/dialogs.ycp:427
+#: src/dialogs.ycp:397
+#: src/dialogs.ycp:413
+#: src/dialogs.ycp:427
 msgid "Test Not Possible"
 msgstr "Test nie jest możliwy"
 
@@ -1124,7 +1203,8 @@ msgid "Show Complete &List"
 msgstr "&Pokaż pełną listę"
 
 #. Header of a SelectionBox with a list of models:
-#: src/dialogs.ycp:590 src/dialogs.ycp:619
+#: src/dialogs.ycp:590
+#: src/dialogs.ycp:619
 msgid "Scanner &Models"
 msgstr "&Modele skanerów"
 
@@ -1452,7 +1532,6 @@ msgstr ""
 #. Do not change or translate "hp-setup", it is a command name.
 #. Do not change or translate "lsusb", it is a command name.
 #: src/helps.ycp:52
-#, fuzzy
 msgid ""
 "<p>\n"
 "A normal USB scanner should be detected automatically.\n"
@@ -1490,7 +1569,7 @@ msgstr ""
 "Jeśli pojawią się problemy z konfiguracją skanera za pomocą tego narzędzia, \n"
 "należy sprawdzić, czy jest ono wymienione w wyniku działania polecenia <tt>lsusb</tt>.\n"
 "Jeśli urządzenie nie jest obecne na tej liście, system USB nie może komunikować się ze skanerem.\n"
-"</p>"
+"</p>\n"
 
 #. Overview dialog help 4/8:
 #. Do not change or translate "lsscsi", it is a command name.
@@ -1516,7 +1595,6 @@ msgstr ""
 #. Overview dialog help 5/8:
 #. Do not change or translate "hp-setup", it is a command name.
 #: src/helps.ycp:82
-#, fuzzy
 msgid ""
 "<p>\n"
 "Parallel port scanners cannot be configured with this tool\n"
@@ -1534,7 +1612,7 @@ msgstr ""
 "Zazwyczaj, urządzenia podłączane przez port równoległy (LPT) muszą być \n"
 "konfigurowane ręcznie. Aby skonfigurować skaner urządzenia wielofunkcyjnego HP, \n"
 "podłączonego do portu równoległego, należy uruchomić <tt>hp-setup</tt> poprzez \n"
-"<b>inne</b> i <b>Uruchom hp-setup</b>, zanim możliwe będzie ustawienie skanera \n"
+"<b>Inne</b> i <b>Uruchom hp-setup</b>, zanim możliwe będzie ustawienie skanera \n"
 "w tym narzędziu (używając <b>Dodaj</b>).\n"
 "</p>"
 
@@ -1974,22 +2052,18 @@ msgstr "Inicjalizacja..."
 #~ "systemu PTAL.\n"
 #~ "\n"
 #~ "Czy uaktywnić i uruchomić teraz usługę hplip?\n"
-
 #~ msgid "If the hplip service is not running, no device status can be shown in hp-toolbox."
 #~ msgstr "Jeśli usługa hplip nie działa, niemożliwe jest wyświetlenie statusu urządzeń w hp-toolbox."
-
 #~ msgid ""
 #~ "Failed to set up the hplip service.\n"
 #~ "%1"
 #~ msgstr ""
 #~ "Konfiguracja usługi hplip nie powiodła się.\n"
 #~ "%1"
-
 #~ msgid "The driver hpaio is deactivated but the associated service hplip is not deactivated because it is needed by the CUPS printing system."
 #~ msgstr "Sterownik hpaio jest nieaktywny, ale związana z nim usługa hplip jest aktywna, ponieważ jest wymagana przez system drukowania CUPS."
-
 #~ msgid "Failed to stop the hplip service."
 #~ msgstr "Zatrzymanie usługi hplip nie powiodło się."
-
 #~ msgid "Failed to disable the hplip service."
 #~ msgstr "Wyłączanie usługi hplip nie powiodło się."
+
