@@ -10,13 +10,14 @@
 # Karol Sikora <elektrrrus@gmail.com>, 2007.
 # Mariusz Fik <fisiu82@gmail.com>, 2008.
 # Wadim Dziedzic <wdziedzic@aviary.pl>, 2008.
+# Karol Kozioł <7c0.000@gmail.com>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: yast2-apparmor\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-09-18 14:04+0200\n"
-"PO-Revision-Date: 2008-09-10 08:01+0100\n"
-"Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
+"PO-Revision-Date: 2008-09-23 20:48+0200\n"
+"Last-Translator: Karol Kozioł <7c0.000@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,12 +27,12 @@ msgstr ""
 
 #: src/agents/ag_genprof.pm:46
 msgid "SubDomain does not appear to be started.  Please enable SubDomain and try again."
-msgstr "Prawdopodobnie poddomena nie jest uruchomiona. Proszę włączyć poddomenę i spróbować ponowie"
+msgstr "Prawdopodobnie subdomena nie jest uruchomiona. Proszę włączyć poddomenę i spróbować ponowie"
 
 #: src/agents/ag_genprof.pm:53
 #, perl-format
 msgid "Can't find subdomain profiles in %s."
-msgstr "Nie można znaleźć profilów poddomeny w %s."
+msgstr "Nie można znaleźć profilów subdomeny w %s."
 
 #: src/agents/ag_genprof.pm:65
 msgid ""
@@ -478,12 +479,12 @@ msgid ""
 "        <li>TZDIR</li> </ul>\n"
 msgstr ""
 "     <b>Kreator tworzenia profili AppArmor</b><br>\n"
-"       Kreator ten przedstawia pozycje generowane przez moduł kontroli dostępu AppArmor. Korzystając z sugestii programu AppArmor, można generować profile wysoce zoptymalizowane o dużym bezpieczeństwie. AppArmor sugeruje zezwolenie lub zabronienie dostępu do określonych zasobów, albo zdefiniowanie uprawnień do uruchomienia poszczególnych pozycji. Wyświetlane problemy zostały zarejestrowane podczas testu działania programu, wykonanego wcześniej. <br>\n"
+"       Kreator ten przedstawia pozycje generowane przez moduł kontroli dostępu AppArmor. Korzystając z sugestii programu AppArmor, można generować wysoce zoptymalizowane profile o dużym stopniu bezpieczeństwa. AppArmor proponuje udzielenie zgody lub zabronienie dostępu do określonych zasobów, albo zdefiniowanie uprawnień do uruchomienia poszczególnych pozycji. Wyświetlane zapytania zostały zarejestrowane podczas wykonanego wcześniej testu działania programu. <br>\n"
 "       Poniższy tekst pomocy opisuje szczegóły składni profili bezpieczeństwa, używanej przez AppArmor. <br><br>Na każdym poziomie można dostosować pozycje profilu, przez zmianę sugerowanej odpowiedzi. Opis ten ma na celu ułatwienie podejmowania decyzji. Szczegółowe instrukcje dostępne są w Przewodniku administratora.\n"
 "<br><br>\n"
 "       <b>Tryby dostępu</b><br>\n"
 "\n"
-"       Tryby dostępu do plików określone są przez połączenie nastepujących\n"
+"       Tryby dostępu do plików określone są przez połączenie następujących\n"
 "       sześciu uprawnień:\n"
 "\n"
 "<ul>   <li>r    - odczyt</li>\n"
@@ -500,7 +501,7 @@ msgstr ""
 "       <b>Tryb odczytu</b><br>\n"
 "           Zezwala programowi na dostęp do zasobu na poziomie odczytu.\n"
 "           Dostęp do odczytu jest wymagany dla skryptów powłoki i innych\n"
-"           zawartości interpretowanych, i określa czy może nastąpić zrzut\n"
+"           zawartości interpretowanych, oraz określa czy może nastąpić zrzut\n"
 "           obrazu procesu albo czy proces może być dołączony do ptrace(2)\n"
 "           (ptrace(2) jest używany przez narzędzia takie, jak strace(1),\n"
 "           ltrace(1) i gdb(1)).\n"
@@ -522,8 +523,8 @@ msgstr ""
 "       \n"
 "           Zezwala programowi na wykonywanie zasobu, bez stosowania\n"
 "           do niego żadnego profilu AppArmor. Wymaga także trybu\n"
-"           rejestrowanego wykonywania. Niekompatybilny z dziedziczonym \n"
-"           i nieciągłym trybem wykonywania.\n"
+"           rejestrowanego wykonywania. Tryb ten jest niekompatybilny z\n"
+"            dziedziczonym i nieciągłym trybem wykonywania.\n"
 "           <br>\n"
 "       <br><br>\n"
 "\n"
@@ -539,8 +540,8 @@ msgstr ""
 "            Tryb ten wymaga, aby określony był nieciągły profil\n"
 "            bezpieczeństwa dla zasobu wykonywanego podczas zmiany\n"
 "            domeny AppArmor. Jeśli profil ten nie istnieje, wówczas dostęp\n"
-"            zostanie wzbroniony. Niekompatybilny z dziedziczonym\n"
-"            i nieograniczonym  trybem wykonywania\n"
+"            zostanie wzbroniony. Tryb ten jest niekompatybilny z \n"
+"            dziedziczonym i nieograniczonym  trybem wykonywania\n"
 "       <br>\n"
 "   <br> \n"
 "    <b>Tryb tworzenia dowiązań</b><br>\n"
@@ -1708,7 +1709,7 @@ msgstr "<li><b>Wpisy sieci</b><br>Dodaj regułę sieci dla tego profilu. Ta opcj
 #: src/include/subdomain/profile_dialogs.ycp:748
 #, fuzzy
 msgid "<li><b>Hat</b><br>Add a sub-profile for this profile - called a Hat. This option is analagous to manually creating a new profile, which can selected during execution only in the context of being asked for by a <b>changehat aware</b> application. For more information on changehat please see <b>man changehat</b> on your system or the Novell AppArmor Administration Guide.</li>"
-msgstr "<li><b>Podprofil</b><br> Dodanie do tego profilu podprofilu (zwanego 'Hat'). Opcja ta jest analogiczna do ręcznego tworzenia nowego profilu, which can selected during execution only in the context of being asked for by a <b>changehat aware</b> application. Więcej informacji odnośnie 'changehat' znaleźć można w podręczniku systemowym - <b>man changehat</b>, albo w Podręczniku użytkownika Novell AppArmor.</li>"
+msgstr "<li><b>Podprofil</b><br> Dodanie do tego profilu podprofilu (zwanego 'Hat'). Opcja ta jest analogiczna do ręcznego tworzenia nowego profilu, który można wybrać podczas wykonywania tylko w kontekście bycia zapytanym o by a <b>changehat aware</b> application. Więcej informacji odnośnie 'changehat' znaleźć można w podręczniku systemowym - <b>man changehat</b>, albo w Podręczniku użytkownika Novell AppArmor.</li>"
 
 #: src/include/subdomain/profile_dialogs.ycp:749
 msgid "</ul><p><b>Edit Entry:</b><br>Edit the selected entry.<p>"
@@ -2854,3 +2855,4 @@ msgstr "Sko&nfiguruj"
 #, perl-format
 msgid "Failed copying %s."
 msgstr "Kopiowanie %s nie powiodło się."
+
