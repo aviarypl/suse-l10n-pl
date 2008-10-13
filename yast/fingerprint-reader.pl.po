@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-02 12:58+0200\n"
+"POT-Creation-Date: 2008-10-09 17:12+0200\n"
 "PO-Revision-Date: 2008-09-12 07:41+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
 "Language-Team: Polish <i18n@suse.de>\n"
@@ -15,54 +15,49 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. error popup: no config of non-existent device
-#: src/FingerprintReader.ycp:133
+#: src/FingerprintReader.ycp:131
 msgid "Fingerprint reader device is not available on this system."
 msgstr "Czytnik linii papilarnych nie jest dostępny w systemie"
 
-#. error popup (pam_thinkfinger cannot work with pam_mount)
-#: src/FingerprintReader.ycp:139
+#. error popup (pam_fp cannot work with pam_mount)
+#: src/FingerprintReader.ycp:137
 msgid "Fingerprint reader devices cannot be used when encrypted directories are used."
 msgstr "Czytnik linii papilarnych nie może być używany równocześnie z szyfrowanymi katalogami."
 
 #. FingerprintReader read dialog captio
-#: src/FingerprintReader.ycp:158
+#: src/FingerprintReader.ycp:156
 msgid "Saving Fingerprint Reader Configuration"
 msgstr "Zapisywanie konfiguracji czytnika linii papilarnych"
 
 #. Progress stage
-#: src/FingerprintReader.ycp:166
+#: src/FingerprintReader.ycp:164
 msgid "Write the PAM settings"
 msgstr "Zapisywanie ustawień PAM"
 
 #. Progress stage
-#: src/FingerprintReader.ycp:168
+#: src/FingerprintReader.ycp:166
 msgid "Import fingerprint files"
 msgstr "Importowanie plików linii papilarnych"
 
 #. Progress step
-#: src/FingerprintReader.ycp:171
+#: src/FingerprintReader.ycp:169
 msgid "Writing the PAM settings..."
 msgstr "Zapisywanie ustawień PAM..."
 
 #. Progress step
-#: src/FingerprintReader.ycp:173
+#: src/FingerprintReader.ycp:171
 msgid "Importing fingerprint files..."
 msgstr "Importowanie plików linii papilarnych..."
 
 #. Progress finished
-#: src/FingerprintReader.ycp:175
+#: src/FingerprintReader.ycp:173
 msgid "Finished"
 msgstr "Zakończono"
 
 #. Error message
-#: src/FingerprintReader.ycp:186
+#: src/FingerprintReader.ycp:184
 msgid "Cannot write PAM settings."
 msgstr "Nie można zapisać ustawień PAM."
-
-#. error popup
-#: src/FingerprintReader.ycp:208
-msgid "Importing fingerprint files failed."
-msgstr "Importowanie plików linii papilarnych zakończone niepowodzeniem."
 
 #. summary header
 #: src/FingerprintReader.ycp:252
@@ -96,18 +91,18 @@ msgid "No"
 msgstr "Nie"
 
 #. plugin name
-#: src/UsersPluginFingerprintReader.pm:174
+#: src/UsersPluginFingerprintReader.pm:172
 msgid "Fingerprint configuration"
 msgstr "Ustawienia dotyczące linii papilarnych"
 
 #. plugin summary (table item)
-#: src/UsersPluginFingerprintReader.pm:184
+#: src/UsersPluginFingerprintReader.pm:182
 msgid "Set the User's Fingerprint"
 msgstr "Ustaw odcisk palca użytkownika"
 
 #. error popup
-#: src/UsersPluginFingerprintReader.pm:255
-#: src/UsersPluginFingerprintReader.pm:285
+#: src/UsersPluginFingerprintReader.pm:253
+#: src/UsersPluginFingerprintReader.pm:283
 msgid "Fingerprint reader is not configured. Run 'yast2-fingerprint-reader' to configure it"
 msgstr "Czytnik linii papilarnych nie jest skonfigurowany. Uruchom 'yast2-fingerprint-reader' aby go skonfigurować"
 
@@ -130,9 +125,8 @@ msgstr ""
 
 #. help text, cont.
 #: src/dialogs.ycp:88
-#, ycp-format
-msgid "<p>To <b>Import Fingerprint Files</b> from different installations, choose the directory where the original files are located. The files will be copied to directory %1.</p>"
-msgstr "<p>Aby <b>zaimportować pliki linii papilarnych</b> z innej instalacji, podaj folder, w którym te pliki się znajdują. Pliki zostaną skopiowane do %1 katalogu.</p> "
+msgid "<p>To configure user fingerprints, start YaST User Management and see the Plug-Ins tab of selected user. When <b>Start User Management after finish</b> is checked, it will be opened automatically after the device configuration is done.</p>"
+msgstr ""
 
 #. frame label
 #: src/dialogs.ycp:92
@@ -149,18 +143,10 @@ msgstr "&Nie używaj czytnika linii papilarnych"
 msgid "&Use Fingerprint Reader"
 msgstr "&Używaj czytnika linii papilarnych"
 
-#: src/dialogs.ycp:110
-msgid "Directory with fingerprint files for import"
-msgstr "Katalog z plikami linii papilarnych do zaimportowania"
-
-#. error popup
-#: src/dialogs.ycp:160
-msgid ""
-"The path to fingerprint files\n"
-"does not point to the valid directory."
+#. button label
+#: src/dialogs.ycp:109
+msgid "&Start User Management after finish"
 msgstr ""
-"Ścieżka do plików linii papilarnych\n"
-"nie wskazuje na prawidłowy katalog."
 
 #. Command line help text for the Xfingerprint-reader module
 #: src/fingerprint-reader.ycp:95
@@ -237,109 +223,109 @@ msgid "Initializing fingerprint reader..."
 msgstr "Inicjalizacja czytnika linii papilarnych..."
 
 #. status label (canceled after user action)
-#: src/users_plugin_fingerprint_reader.ycp:111
-#: src/users_plugin_fingerprint_reader.ycp:248
+#: src/users_plugin_fingerprint_reader.ycp:112
+#: src/users_plugin_fingerprint_reader.ycp:240
 msgid "Canceled"
 msgstr "Anulowano"
 
-#. status message (%1, %2 are numbers)
-#: src/users_plugin_fingerprint_reader.ycp:124
-#, ycp-format
-msgid "Successful swipes: %1, failed swipes: %2"
-msgstr "Udane próby: %1, nieudane próby: %2"
-
-#: src/users_plugin_fingerprint_reader.ycp:141
+#: src/users_plugin_fingerprint_reader.ycp:131
 msgid "Initialization of fingerprint reader failed."
 msgstr "Inicjalizacja czytnika linii papilarnych zakończona niepowodzeniem."
 
 #. status label
-#: src/users_plugin_fingerprint_reader.ycp:146
+#: src/users_plugin_fingerprint_reader.ycp:136
 msgid "Device initialized."
 msgstr ""
 
 #. status message
-#: src/users_plugin_fingerprint_reader.ycp:148
+#: src/users_plugin_fingerprint_reader.ycp:138
 msgid "Swipe your right index finger."
 msgstr ""
 
 #. status label
-#: src/users_plugin_fingerprint_reader.ycp:161
+#: src/users_plugin_fingerprint_reader.ycp:151
 msgid "Storing data..."
 msgstr "Zapisywanie danych..."
 
 #. status label
-#: src/users_plugin_fingerprint_reader.ycp:169
-#: src/users_plugin_fingerprint_reader.ycp:189
-#: src/users_plugin_fingerprint_reader.ycp:198
-#: src/users_plugin_fingerprint_reader.ycp:208
+#: src/users_plugin_fingerprint_reader.ycp:159
+#: src/users_plugin_fingerprint_reader.ycp:181
+#: src/users_plugin_fingerprint_reader.ycp:190
+#: src/users_plugin_fingerprint_reader.ycp:200
 msgid "Scan failed."
 msgstr ""
 
 #. status message
-#: src/users_plugin_fingerprint_reader.ycp:171
-#: src/users_plugin_fingerprint_reader.ycp:182
+#: src/users_plugin_fingerprint_reader.ycp:161
+#: src/users_plugin_fingerprint_reader.ycp:170
 msgid "Swipe finger again."
 msgstr ""
 
 #. status label
-#: src/users_plugin_fingerprint_reader.ycp:180
+#: src/users_plugin_fingerprint_reader.ycp:168
 msgid "Enroll stage passed."
 msgstr ""
 
+#. status message (%1 is number)
+#: src/users_plugin_fingerprint_reader.ycp:173
+#, fuzzy, ycp-format
+msgid "Successful swipes: %1"
+msgstr "Udane próby: %1, nieudane próby: %2"
+
 #. status message
-#: src/users_plugin_fingerprint_reader.ycp:191
+#: src/users_plugin_fingerprint_reader.ycp:183
 msgid "Swipe was too short, try again."
 msgstr ""
 
 #. status message
-#: src/users_plugin_fingerprint_reader.ycp:200
+#: src/users_plugin_fingerprint_reader.ycp:192
 msgid "Center your finger on the sensor and try again."
 msgstr ""
 
 #. status message
-#: src/users_plugin_fingerprint_reader.ycp:210
-msgid "Remove your finger and try again."
+#: src/users_plugin_fingerprint_reader.ycp:202
+msgid "Remove your finger from the sensor and try again."
 msgstr ""
 
 #. status label
-#: src/users_plugin_fingerprint_reader.ycp:217
-#: src/users_plugin_fingerprint_reader.ycp:227
+#: src/users_plugin_fingerprint_reader.ycp:209
+#: src/users_plugin_fingerprint_reader.ycp:219
 msgid "Acquiring fingerprint failed."
 msgstr "Pobranie odcisku palca nie powiodło się."
 
 #. status label
-#: src/users_plugin_fingerprint_reader.ycp:258
+#: src/users_plugin_fingerprint_reader.ycp:251
 msgid "Fingerprint acquired successfully."
 msgstr "Odcisk palca pobrany pomyślnie"
 
 #. error message, part 1
-#: src/users_plugin_fingerprint_reader.ycp:267
+#: src/users_plugin_fingerprint_reader.ycp:260
 msgid "Could not acquire fingerprint."
 msgstr "Nie można pozyskać odcisku palca."
 
 #. error message, part 2
-#: src/users_plugin_fingerprint_reader.ycp:272
+#: src/users_plugin_fingerprint_reader.ycp:265
 #, fuzzy
 msgid "Initialization failed."
 msgstr "Inicjalizacja czytnika linii papilarnych zakończona niepowodzeniem."
 
 #. error message, part 2
-#: src/users_plugin_fingerprint_reader.ycp:275
+#: src/users_plugin_fingerprint_reader.ycp:268
 msgid "No devices detected."
 msgstr ""
 
 #. error message, part 2
-#: src/users_plugin_fingerprint_reader.ycp:278
+#: src/users_plugin_fingerprint_reader.ycp:271
 msgid "Device could not be opened."
 msgstr ""
 
 #. error message, part 2
-#: src/users_plugin_fingerprint_reader.ycp:281
+#: src/users_plugin_fingerprint_reader.ycp:274
 msgid "USB error occured."
 msgstr "Npotkano błąd USB."
 
 #. error message, part 2
-#: src/users_plugin_fingerprint_reader.ycp:284
+#: src/users_plugin_fingerprint_reader.ycp:277
 msgid "Communication with fingerprint reader failed."
 msgstr "Komunikacja z czytnikiem liniii papilarnych zakończyła się niepowodzeniem."
 
@@ -347,6 +333,22 @@ msgstr "Komunikacja z czytnikiem liniii papilarnych zakończyła się niepowodze
 #: src/wizards.ycp:108
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
+#~ msgid "Importing fingerprint files failed."
+#~ msgstr "Importowanie plików linii papilarnych zakończone niepowodzeniem."
+
+#~ msgid "<p>To <b>Import Fingerprint Files</b> from different installations, choose the directory where the original files are located. The files will be copied to directory %1.</p>"
+#~ msgstr "<p>Aby <b>zaimportować pliki linii papilarnych</b> z innej instalacji, podaj folder, w którym te pliki się znajdują. Pliki zostaną skopiowane do %1 katalogu.</p> "
+
+#~ msgid "Directory with fingerprint files for import"
+#~ msgstr "Katalog z plikami linii papilarnych do zaimportowania"
+
+#~ msgid ""
+#~ "The path to fingerprint files\n"
+#~ "does not point to the valid directory."
+#~ msgstr ""
+#~ "Ścieżka do plików linii papilarnych\n"
+#~ "nie wskazuje na prawidłowy katalog."
 
 #~ msgid "Please swipe your finger..."
 #~ msgstr "Proszę zeskanować swój odcisk palca..."

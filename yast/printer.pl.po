@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: printer.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-02 13:02+0200\n"
+"POT-Creation-Date: 2008-10-09 17:16+0200\n"
 "PO-Revision-Date: 2008-10-03 00:28+0100\n"
 "Last-Translator: Przemysław Bojczuk <pbojczuk@gmail.com>\n"
 "Language-Team: Polski <pl@li.org>\n"
@@ -25,22 +25,22 @@ msgstr ""
 #. Header of a DownloadProgress indicator:
 #. Busy message:
 #. Body of a Popup::ShowFeedback:
-#: src/Printer.ycp:267 src/Printer.ycp:282
+#: src/Printer.ycp:268 src/Printer.ycp:283
 msgid "Retrieving printer driver information..."
 msgstr "Otrzymywanie informacji o sterowniku drukarki..."
 
 #. Popup::ErrorDetails message.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Printer.ycp:295
+#: src/Printer.ycp:296
 msgid "Failed to create PPD database."
 msgstr "Nie udało się utworzyć bazy PPD"
 
 #. Message of a Popup::Error where %1 will be replaced by the file name.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Printer.ycp:311 src/Printer.ycp:434 src/Printer.ycp:513
-#: src/Printer.ycp:573
+#: src/Printer.ycp:312 src/Printer.ycp:435 src/Printer.ycp:514
+#: src/Printer.ycp:574
 #, ycp-format
 msgid "File %1 does not exist."
 msgstr "Plik %1 nie istnieje."
@@ -48,21 +48,21 @@ msgstr "Plik %1 nie istnieje."
 #. Message of a Popup::Error where %1 will be replaced by the file name.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Printer.ycp:329 src/Printer.ycp:452 src/Printer.ycp:525
-#: src/Printer.ycp:585
+#: src/Printer.ycp:330 src/Printer.ycp:453 src/Printer.ycp:526
+#: src/Printer.ycp:586
 #, ycp-format
 msgid "Failed to read %1."
 msgstr "Nie można wczytać %1."
 
 #. Header for a finished ProgressBar:
-#: src/Printer.ycp:352
+#: src/Printer.ycp:353
 msgid "Retrieved printer driver information"
 msgstr "Otrzymano informacje o sterowniku drukarki."
 
 #. Header of a DownloadProgress indicator:
 #. Busy message:
 #. Body of a Popup::ShowFeedback:
-#: src/Printer.ycp:386 src/Printer.ycp:403
+#: src/Printer.ycp:387 src/Printer.ycp:404
 msgid "Detecting printers..."
 msgstr "Wykrywanie drukarek..."
 
@@ -71,12 +71,12 @@ msgstr "Wykrywanie drukarek..."
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no printer was autodetected.
 #. The latter results no error.
-#: src/Printer.ycp:418
+#: src/Printer.ycp:419
 msgid "Failed to detect printers automatically."
 msgstr "Automatyczne wykrywanie drukarek zakończyło się niepowodzeniem."
 
 #. Header for a finished ProgressBar:
-#: src/Printer.ycp:466
+#: src/Printer.ycp:467
 msgid "Detected printers"
 msgstr "Wykryte drukarki"
 
@@ -85,7 +85,7 @@ msgstr "Wykryte drukarki"
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no queue was detected
 #. (e.g. simply because there is no queue). This results no error.
-#: src/Printer.ycp:503
+#: src/Printer.ycp:504
 msgid "Failed to detect print queues."
 msgstr "Nie udało się wykryć kolejek drukowania."
 
@@ -94,45 +94,58 @@ msgstr "Nie udało się wykryć kolejek drukowania."
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no queue was detected
 #. (e.g. simply because there is no queue). This results no error.
-#: src/Printer.ycp:561
+#: src/Printer.ycp:562
 #, ycp-format
 msgid "Failed to determine driver options for queue %1."
 msgstr "Nie udało się określić opcji sterownika dla kolejki %1."
 
 #. Define the progress stages:
 #. Header of a Progress::New:
-#: src/Printer.ycp:603
+#: src/Printer.ycp:604
 msgid "Initializing Printer Configuration"
 msgstr "Inicjalizacja konfiguracji drukarek"
 
 #. 1. progress stage name of a Progress::New:
-#: src/Printer.ycp:607
-msgid "Autodetect already configured printers"
-msgstr "Automatycznie wykryj skonfigurowane drukarki"
+#: src/Printer.ycp:608
+msgid "Check installed packages"
+msgstr ""
+
+#. 2. progress stage name of a Progress::New:
+#: src/Printer.ycp:610
+#, fuzzy
+msgid "Determine basic print system settings"
+msgstr "Zapisywanie ustawień systemu..."
 
 #. 1. progress step progress bar title of a Progress::New:
-#: src/Printer.ycp:610
-msgid "Autodetecting already configured printers..."
-msgstr "Automatyczne wykrywanie skonfigurowanych drukarek..."
+#: src/Printer.ycp:613
+#, fuzzy
+msgid "Checking installed packages..."
+msgstr "Sprawdzanie bazy danych drukarek..."
+
+#. 2. progress step progress bar title of a Progress::New:
+#: src/Printer.ycp:615
+#, fuzzy
+msgid "Determining basic print system settings..."
+msgstr "Zapisywanie ustawień systemu..."
 
 #. Last progress step progress bar title of a Progress::New:
-#: src/Printer.ycp:612 src/Printer.ycp:656
+#: src/Printer.ycp:617 src/Printer.ycp:676
 msgid "Finished"
 msgstr "Zakończono"
 
 #. Define the progress stages:
 #. Header of a Progress::New:
-#: src/Printer.ycp:647
+#: src/Printer.ycp:667
 msgid "Finishing Printer Configuration"
 msgstr "Kończenie konfiguracji drukarki"
 
 #. 1. progress stage name of a Progress::New:
-#: src/Printer.ycp:651
+#: src/Printer.ycp:671
 msgid "Finish printer configuration"
 msgstr "Zakończ konfigurację drukarki"
 
 #. 1. progress step progress bar title of a Progress::New:
-#: src/Printer.ycp:654
+#: src/Printer.ycp:674
 msgid "Finishing printer configuration..."
 msgstr "Kończenie konfiguracji druarki..."
 
@@ -141,126 +154,148 @@ msgstr "Kończenie konfiguracji druarki..."
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no queue was detected
 #. (e.g. simply because there is no queue). This results no error.
-#: src/Printer.ycp:756
+#: src/Printer.ycp:776
 msgid "Cannot show print queues (failed to detect print queues)."
 msgstr "Nie można wyświetlić kolejek wydruku (nie udało się wykryć kolejek drukowania)."
 
 #. When the queue configuration exists on the local host:
-#: src/Printer.ycp:780
+#: src/Printer.ycp:800
 msgid "Local"
 msgstr "Lokalna"
 
 #. When the queue configuration exists on a remote machine:
-#: src/Printer.ycp:784
+#: src/Printer.ycp:804
 msgid "Remote"
 msgstr "Zdalna"
 
 #. When the queue is the default queue on the local host:
-#: src/Printer.ycp:788
+#: src/Printer.ycp:808
 msgid "Yes"
 msgstr "Tak"
 
 #. When the queue accepts print jobs and printing is enabled:
-#: src/Printer.ycp:791
+#: src/Printer.ycp:811
 msgid "Ready"
 msgstr "Gotowa"
 
 #. When printing is disabled for the queue:
-#: src/Printer.ycp:794
+#: src/Printer.ycp:814
 msgid "Printout disabled"
 msgstr "Wyjścia drukarki zablokowane"
 
 #. When the queue rejects print jobs and printing is disabled:
-#: src/Printer.ycp:799
+#: src/Printer.ycp:819
 msgid "Rejecting print jobs, printout disabled"
 msgstr "Odrzucanie zadań drukowania, wyjście drukarki zablokowane"
 
 #. When the queue rejects print jobs:
-#: src/Printer.ycp:803
+#: src/Printer.ycp:823
 msgid "Rejecting print jobs"
 msgstr "Odrzucaj zadania drukowania"
 
 #. Show a fallback text if there are no local queues:
-#: src/Printer.ycp:827
+#: src/Printer.ycp:847
 msgid "There is no print queue."
 msgstr "Kolejka drukarki nie istnieje."
 
 #. Message of a Popup::Error.
 #. Only a simple message because before the function AutodetectPrinters
 #. was called and this function would have shown more specific messages.
-#: src/Printer.ycp:865
+#: src/Printer.ycp:885
 msgid "Failed to autodetect printers."
 msgstr "Wykrywanie drukarek zakończone niepowodzeniem."
 
 #. Message of a Popup::Error.
 #. Only a simple message because before the function CreateDatabase
 #. was called and this function would have shown more specific messages.
-#: src/Printer.ycp:1100
+#: src/Printer.ycp:1158
 msgid "Failed to create the printer driver database."
 msgstr "Tworzenie bazy danych sterowników drukarek zakończone niepowdzeniem."
 
 #. If no driver was already selected, show a meaningful text as
 #. fallback entry for a SelectionBox when no connection is selected.
 #. It will be replaced by real content, when a connection is selected.
-#: src/Printer.ycp:1125
+#: src/Printer.ycp:1183
 msgid "Select a connection, then matching drivers show up here."
 msgstr "Po wybraniu połączenia pojawi się odpowiedni sterownik."
 
 #. Busy message:
 #. Body of a Popup::ShowFeedback:
-#: src/Printer.ycp:1137
+#: src/Printer.ycp:1195
 msgid "Determine available drivers..."
 msgstr "Określanie dostępnych sterowników..."
 
 #. If the driver_items list is empty (e.g. because of a too restrictive driver_filter_string),
 #. show a meaningful text as fallback entry.
-#: src/Printer.ycp:1171
+#: src/Printer.ycp:1229
 msgid "No matching driver found. Try 'More Drivers' or 'All Drivers'."
 msgstr "Nie znaleziono odpowiedniego sterownika. Spróbuj 'Więcej sterowników' lub 'Wszystkie sterowniki'."
 
 #. Busy message:
 #. Body of a Popup::ShowFeedback:
-#: src/Printer.ycp:1190
+#: src/Printer.ycp:1248
 msgid "Processing many drivers. Please wait..."
 msgstr "Przetwarzanie wielu sterowników. Proszę czekać..."
 
 #. Message of a Popup::Error.
 #. Only a simple message because this is only a fallback case
 #. which should not happen at all:
-#: src/Printer.ycp:1580
+#: src/Printer.ycp:1644
 msgid "Failed to determine the driver options."
 msgstr "Nie udało się określić opcji sterownika."
 
 #. Return at least a list with only a fallback string so that the user is informed:
 #. Header of a Popup::AnyMessage when "Driver Options" was selected:
-#: src/Printer.ycp:1583 src/Printer.ycp:1698 src/basicmodify.ycp:545
+#: src/Printer.ycp:1647 src/Printer.ycp:1762 src/basicmodify.ycp:545
 msgid "No driver options available"
 msgstr "Nie są dostępne żadne opcje sterownika"
 
 #. Dummy info for a currently selected item:
-#: src/Printer.ycp:1636
+#: src/Printer.ycp:1700
 msgid "currently selected"
 msgstr "aktualnie wybrany"
 
 #. Info when a currently selected item is already set:
-#: src/Printer.ycp:1639
+#: src/Printer.ycp:1703
 msgid "current setting of the print queue"
 msgstr "bieżące ustawienia kolejki drukowania"
+
+#. Message of a Popup::Error where %1 will be replaced by the package name:
+#: src/Printerlib.ycp:96
+#, ycp-format
+msgid "Required package %1 is not installed and there is no package repository available."
+msgstr ""
+
+#. Message of a Popup::Error where %1 will be replaced by the package name:
+#: src/Printerlib.ycp:105
+#, ycp-format
+msgid "Required package %1 is not installed and not available in the repository."
+msgstr ""
+
+#. Message of a Popup::Error where %1 will be replaced by the package name.
+#. Only a simple message because:
+#. Either the user has explicitely rejected to install the package,
+#. or this error does not happen on a normal system
+#. (i.e. a system which is not totally broken or totally messed up).
+#: src/Printerlib.ycp:118
+#, fuzzy, ycp-format
+msgid "Failed to install required package %1."
+msgstr "Nie udało się wydrukować strony testowej dla %1."
 
 #. Enforce user confirmation before a new service is started
 #. to be on the safe side that the user knows about it:
 #. PopupYesNoHeadline headline:
-#: src/Printerlib.ycp:97
+#: src/Printerlib.ycp:146
 msgid "Start local running CUPS daemon"
 msgstr "Uruchom lokalny demon CUPS"
 
 #. PopupYesNoHeadline body:
-#: src/Printerlib.ycp:99
+#: src/Printerlib.ycp:148
 msgid "A local running CUPS daemon is needed."
 msgstr "Lokalny demon CUPS jest wymagany."
 
 #. Popup::ErrorDetails message:
-#: src/Printerlib.ycp:106
+#: src/Printerlib.ycp:155
 msgid "Failed to start the CUPS daemon"
 msgstr "Uruchomienie demona CUPS zakończyło się niepowodzeniem."
 
@@ -269,7 +304,7 @@ msgstr "Uruchomienie demona CUPS zakończyło się niepowodzeniem."
 #. the BrowseInterval in cupsd.conf on remote CUPS servers is by default 30 seconds
 #. so that the local cupsd should listen at least 31 seconds to get Browsing info
 #. before e.g. the Overview dialog can be shown with the right current queues.
-#: src/Printerlib.ycp:118
+#: src/Printerlib.ycp:167
 msgid ""
 "Started the CUPS daemon.\n"
 "Waiting half a minute so that it is ready to operate..."
@@ -283,7 +318,7 @@ msgstr ""
 #. E.g. because parsing of thousands of PPDs may need much time.
 #. Therefore enforce waiting one minute now.
 #. (Plain busy message without title.)
-#: src/Printerlib.ycp:129
+#: src/Printerlib.ycp:178
 msgid ""
 "The CUPS daemon in not yet accessible.\n"
 "Waiting one minute so that it is ready to operate..."
@@ -292,12 +327,12 @@ msgstr ""
 "W ciagu minuty CUPS będzie gotów do pracy..."
 
 #. Popup::Error message:
-#: src/Printerlib.ycp:136 src/Printerlib.ycp:184
+#: src/Printerlib.ycp:185 src/Printerlib.ycp:233
 msgid "No local running CUPS daemon is accessible."
 msgstr "Lokalny demon CUPS nie jest dostępny."
 
 #. Popup::ErrorDetails message:
-#: src/Printerlib.ycp:142 src/Printerlib.ycp:199
+#: src/Printerlib.ycp:191 src/Printerlib.ycp:248
 msgid "Failed to enable starting of the CUPS daemon during system boot"
 msgstr "Nie udało się odblokować uruchamiania demona CUPS w czasie uruchamiania systemu"
 
@@ -305,17 +340,17 @@ msgstr "Nie udało się odblokować uruchamiania demona CUPS w czasie uruchamian
 #. to be on the safe side regarding complaints in an enterprise environment
 #. because a restart disrupts all currently actively printing jobs:
 #. PopupYesNoHeadline headline:
-#: src/Printerlib.ycp:155
+#: src/Printerlib.ycp:204
 msgid "Restart local running CUPS daemon"
 msgstr "Uruchom ponownie lokalny demon CUPS"
 
 #. PopupYesNoHeadline body:
-#: src/Printerlib.ycp:157
+#: src/Printerlib.ycp:206
 msgid "A restart disrupts all currently actively printing jobs."
 msgstr "Ponowne uruchomienie zakłóci wszystkie aktywne zadania drukowania."
 
 #. Popup::ErrorDetails message:
-#: src/Printerlib.ycp:164
+#: src/Printerlib.ycp:213
 msgid "Failed to restart the CUPS daemon"
 msgstr "Ponowne uruchomienie demona CUPS zakończyło się niepowodzeniem"
 
@@ -324,7 +359,7 @@ msgstr "Ponowne uruchomienie demona CUPS zakończyło się niepowodzeniem"
 #. the BrowseInterval in cupsd.conf on remote CUPS servers is by default 30 seconds
 #. so that the local cupsd should listen at least 31 seconds to get Browsing info
 #. before e.g. the Overview dialog can be shown with the right current queues.
-#: src/Printerlib.ycp:178
+#: src/Printerlib.ycp:227
 msgid ""
 "Restarted the CUPS daemon.\n"
 "Waiting half a minute so that it is ready to operate..."
@@ -333,12 +368,12 @@ msgstr ""
 "W ciagu 30 sekund CUPS będzie gotów do pracy..."
 
 #. PopupYesNoHeadline headline:
-#: src/Printerlib.ycp:192
+#: src/Printerlib.ycp:241
 msgid "Enable starting of the CUPS daemon during system boot"
 msgstr "Odblokuj uruchamianie demona CUPS w czasie uruchamiania systemu"
 
 #. PopupYesNoHeadline body:
-#: src/Printerlib.ycp:194
+#: src/Printerlib.ycp:243
 msgid "Currently the CUPS daemon is not started during system boot."
 msgstr "Biążacy demon CUPS nie jest uruchamiany w czasie uruchamiania systemu."
 
@@ -346,17 +381,17 @@ msgstr "Biążacy demon CUPS nie jest uruchamiany w czasie uruchamiania systemu.
 #. to be on the safe side regarding complaints in an enterprise environment
 #. because a stop disrupts all currently actively printing jobs:
 #. PopupYesNoHeadline headline:
-#: src/Printerlib.ycp:214
+#: src/Printerlib.ycp:263
 msgid "Stop local running CUPS daemon"
 msgstr "Zatrzymaj lokalny demon CUPS"
 
 #. PopupYesNoHeadline body:
-#: src/Printerlib.ycp:216
+#: src/Printerlib.ycp:265
 msgid "A stop disrupts all currently actively printing jobs."
 msgstr "Zatrzymanie zakłóci wszystkie aktywne zadania drukowania."
 
 #. Popup::Error message:
-#: src/Printerlib.ycp:232
+#: src/Printerlib.ycp:281
 msgid "A local running CUPS daemon is still accessible."
 msgstr "Lokalny demon CUPS wciąż jest dostępny."
 
@@ -364,7 +399,7 @@ msgstr "Lokalny demon CUPS wciąż jest dostępny."
 #. cups_client_only fails when the client-only server is not accessible:
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the server name.
-#: src/Printerlib.ycp:278
+#: src/Printerlib.ycp:327
 #, ycp-format
 msgid "The CUPS server '%1' is not accessible"
 msgstr "Usługa CUPS '%1' jest niedostępny."
@@ -416,7 +451,7 @@ msgstr "&Więcej połączeń"
 
 #. Label of a PushButton to go to the "Connection Wizard"
 #. to specify the printer connection individually:
-#: src/basicadd.ycp:107 src/basicmodify.ycp:291
+#: src/basicadd.ycp:107 src/basicmodify.ycp:291 src/printingvianetwork.ycp:158
 msgid "Connection &Wizard"
 msgstr "&Kreator połączeń"
 
@@ -622,7 +657,7 @@ msgid "Failed to modify %1."
 msgstr "Nie udało się zmienić %1."
 
 #. Message of a Popup::ShowFeedback when nothing was changed:
-#: src/basicmodify.ycp:519 src/printingvianetwork.ycp:811 src/sharing.ycp:957
+#: src/basicmodify.ycp:519 src/printingvianetwork.ycp:844 src/sharing.ycp:933
 msgid "Nothing changed."
 msgstr "Nic nie zmieniono."
 
@@ -874,7 +909,47 @@ msgstr "Ustawienia połączenia"
 msgid "Connection Wizard"
 msgstr "Kreator połączeń"
 
-#: src/dialogs.ycp:52
+#: src/dialogs.ycp:48
+msgid "Specify in which way USB printers are configured automatically"
+msgstr "Określ w jaki sposób drukarka USB zostanie skonfigurowana automatycznie"
+
+#: src/dialogs.ycp:49
+msgid "Enable &Automatic Configuration of New Printers"
+msgstr "Odblokuj automatyczną konfigurację nowych drukarek"
+
+#: src/dialogs.ycp:50
+msgid "&Disable Printout when Disconnecting USB Printer"
+msgstr "&Zablokuj wyjście drukarki kiedy zostanie odłączona"
+
+#: src/dialogs.ycp:51
+msgid "The name of the CUPS &policy to assign to newly configured printers"
+msgstr "Nazwa &zasady CUPS do przypisania do nowo skonfigurowanych drukarek"
+
+#: src/dialogs.ycp:134 src/dialogs.ycp:135
+msgid "Printer Configurations"
+msgstr "Konfiguracje drukarek"
+
+#: src/dialogs.ycp:142 src/dialogs.ycp:143
+msgid "Print via Network"
+msgstr "Drukowanie przez sieć"
+
+#: src/dialogs.ycp:150 src/dialogs.ycp:151
+msgid "Share Printers"
+msgstr "Udostępnianie drukarek"
+
+#: src/dialogs.ycp:158 src/dialogs.ycp:159
+msgid "Policies"
+msgstr "Polityki"
+
+#: src/dialogs.ycp:166 src/dialogs.ycp:167
+msgid "Autoconfig Settings"
+msgstr "Ustawienia autokonfiguracji"
+
+#: src/dialogs.ycp:177
+msgid "Detected Printers"
+msgstr "Wykryte drukarki"
+
+#: src/driveroptions.ycp:48
 msgid "Driver Options for Queue"
 msgstr "Opcje sterownika dla kolejki"
 
@@ -882,58 +957,10 @@ msgstr "Opcje sterownika dla kolejki"
 #. where %1 will be replaced by the queue name.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/dialogs.ycp:115
+#: src/driveroptions.ycp:113
 #, ycp-format
 msgid "Failed to set driver options for queue %1."
 msgstr "Nie udało się ustawić opcji sterownika dla kolejki %1."
-
-#: src/dialogs.ycp:166
-msgid "Specify in which way USB printers are configured automatically"
-msgstr "Określ w jaki sposób drukarka USB zostanie skonfigurowana automatycznie"
-
-#: src/dialogs.ycp:167
-msgid "Enable &Automatic Configuration of New Printers"
-msgstr "Odblokuj automatyczną konfigurację nowych drukarek"
-
-#: src/dialogs.ycp:168
-msgid "&Disable Printout when Disconnecting USB Printer"
-msgstr "&Zablokuj wyjście drukarki kiedy zostanie odłączona"
-
-#: src/dialogs.ycp:169
-msgid "The name of the CUPS &policy to assign to newly configured printers"
-msgstr "Nazwa &zasady CUPS do przypisania do nowo skonfigurowanych drukarek"
-
-#: src/dialogs.ycp:211
-msgid "Specify the operation policy"
-msgstr "Określ zasady operacji"
-
-#: src/dialogs.ycp:212
-msgid "The operation &policy"
-msgstr "Zasady operacji"
-
-#: src/dialogs.ycp:296 src/dialogs.ycp:297
-msgid "Printer Configurations"
-msgstr "Konfiguracje drukarek"
-
-#: src/dialogs.ycp:304 src/dialogs.ycp:305
-msgid "Print via Network"
-msgstr "Drukowanie przez sieć"
-
-#: src/dialogs.ycp:312 src/dialogs.ycp:313
-msgid "Share Printers"
-msgstr "Udostępnianie drukarek"
-
-#: src/dialogs.ycp:320 src/dialogs.ycp:321
-msgid "Operation Policy"
-msgstr "Zasady operacji"
-
-#: src/dialogs.ycp:328 src/dialogs.ycp:329
-msgid "Autoconfig Settings"
-msgstr "Ustawienia autokonfiguracji"
-
-#: src/dialogs.ycp:339
-msgid "Detected Printers"
-msgstr "Wykryte drukarki"
 
 #. Read dialog help 1/1:
 #: src/helps.ycp:42
@@ -1792,7 +1819,7 @@ msgstr ""
 "do serwera.\n"
 "</p>"
 
-#. Operation Policy help 1/1:
+#. Policies help 1/1:
 #: src/helps.ycp:461
 msgid ""
 "<p>\n"
@@ -2019,7 +2046,7 @@ msgstr "Wyśwli stronę testową do %1. Za chwilę powinno rozpocząć się druk
 #. so that the client-only config is to be disabled in any case:
 #. PopupYesNoHeadline headline
 #. where %1 will be replaced by the server name:
-#: src/overview.ycp:341 src/printingvianetwork.ycp:435 src/sharing.ycp:506
+#: src/overview.ycp:341 src/printingvianetwork.ycp:466 src/sharing.ycp:488
 #, ycp-format
 msgid "Disable remote CUPS server '%1'"
 msgstr "Zablokuj zdalny serwer CUPS '%1'"
@@ -2033,9 +2060,9 @@ msgstr "Zdalny serwer CUPS stwarza problemy przy dodawaniu konfiguracji"
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Popup::ErrorDetails message:
-#: src/overview.ycp:353 src/printingvianetwork.ycp:396
-#: src/printingvianetwork.ycp:445 src/printingvianetwork.ycp:553
-#: src/sharing.ycp:522
+#: src/overview.ycp:353 src/printingvianetwork.ycp:421
+#: src/printingvianetwork.ycp:476 src/printingvianetwork.ycp:584
+#: src/sharing.ycp:504
 msgid "Failed to remove the 'ServerName' entry in /etc/cups/client.conf"
 msgstr "Nie można usunąć wpis 'ServerName' z /etc/cups/client.conf"
 
@@ -2048,6 +2075,14 @@ msgstr "Nie można zmienić"
 #: src/overview.ycp:390
 msgid "This is a remote configuration. Only local configurations can be modified."
 msgstr "To jest konfiguracja zdalna. Tylko lokalna konfiguracja może być zmieniona."
+
+#: src/policies.ycp:43
+msgid "Specify the operation policy"
+msgstr "Określ zasady operacji"
+
+#: src/policies.ycp:44
+msgid "The operation &policy"
+msgstr "Zasady operacji"
 
 #. Command line help text for the Xprinter module
 #: src/printer.ycp:54
@@ -2064,92 +2099,113 @@ msgstr "Drukarka"
 msgid "&Printer"
 msgstr "&Drukarka"
 
-#: src/printingvianetwork.ycp:46
+#. A caption for a Frame to set up to use CUPS to print via network:
+#: src/printingvianetwork.ycp:47
 msgid "Use CUPS to Print Via Network"
 msgstr "Użyj CUPS do drukowania przez sieć"
 
-#: src/printingvianetwork.ycp:54
+#. A RadioButton to not receive printer information from remote CUPS servers:
+#: src/printingvianetwork.ycp:56
 msgid "&Do not Receive Printer Information from Remote CUPS servers"
 msgstr "&Nie odbieraj informacji drukarki ze zdalnego serwera CUPS"
 
-#: src/printingvianetwork.ycp:61
+#. A RadioButton to receive printer information from remote CUPS servers:
+#: src/printingvianetwork.ycp:64
 msgid "Receive Printer &Information from Remote CUPS servers"
 msgstr "Odbierz informacje drukarki z zdalnego serwera CUPS"
 
-#: src/printingvianetwork.ycp:70
+#. A header for a section to set up from which remote CUPS servers
+#. printer information is accepted:
+#: src/printingvianetwork.ycp:75
 msgid "Accept Information from the Following Servers"
 msgstr "Zatwierdź informacje z podanego serwera"
 
-#: src/printingvianetwork.ycp:77
+#. A header for a ComboBox from which the user can select
+#. a usual general setting from which remote CUPS servers
+#. printer information is accepted:
+#: src/printingvianetwork.ycp:85
 msgid "Usual &General Setting"
 msgstr "Zwyczajne ustawienia główne"
 
-#: src/printingvianetwork.ycp:87
+#. A header for a TextEntry where the user can optionally
+#. enter specific IP addresses and/or network/netmask
+#. from where remote printer information is accepted:
+#: src/printingvianetwork.ycp:98
 msgid "Optional Specific IP Addresses or &Network/Netmask"
 msgstr "Opcjonalne adresy IP lub sieć/maska"
 
-#: src/printingvianetwork.ycp:93
+#. Label to show the syntax for the TextEntry where the user can
+#. enter specific IP addresses and/or network/netmask
+#. from where remote printer information is accepted:
+#. Label to show the syntax for the TextEntry to allow remote access
+#. to local print queues from IP addresses and/or networks:
+#: src/printingvianetwork.ycp:107 src/sharing.ycp:170
 msgid "(each nnn.nnn.nnn.nnn or nnn.nnn.nnn.nnn/mmm.mmm.mmm.mmm separated by one space)"
 msgstr "(każdy adres nnn.nnn.nnn.nnn lub nnn.nnn.nnn.nnn/mmm.mmm.mmm.mmm musi być odzielony jedną spacją)"
 
-#: src/printingvianetwork.ycp:103
+#. A RadioButton to do all printing tasks directly
+#. only via one single remote CUPS server:
+#: src/printingvianetwork.ycp:119
 msgid "Do All Your Printing Directly via &One Remote CUPS Server"
 msgstr "Czy wszystkie wydruki mają być bezpośrednio przez &jeden zdalny serwer CUPS"
 
-#: src/printingvianetwork.ycp:112
+#. A header for a TextEntry where the user can enter
+#. the one single remote CUPS server which is used
+#. to do all his printing tasks:
+#: src/printingvianetwork.ycp:131
 msgid "&Hostname / IP Address"
 msgstr "Nazwa hosta / adres IP"
 
-#: src/printingvianetwork.ycp:119
+#. A PushButton to test whether or not the one single remote CUPS server
+#. which is used to do all printing tasks is accessible:
+#: src/printingvianetwork.ycp:140
 msgid "&Test Server"
 msgstr "&Testuj serwer"
 
-#: src/printingvianetwork.ycp:129
+#. A caption for a Frame to set up to use another (i.e. non-CUPS) print server
+#. or to set up to use a network printer directly:
+#: src/printingvianetwork.ycp:152
 msgid "Use Another Print Server or Use a Network Printer Directly"
 msgstr "Użyj innego serwera wydruku lub użyj drukarki sieciowej bezpośrednio"
 
-#: src/printingvianetwork.ycp:133
-msgid "&Connection Wizard"
-msgstr "Kreator połączeń"
-
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:149
+#: src/printingvianetwork.ycp:174
 #, ycp-format
 msgid "The server '%1' is accessible via port 631 (IPP/CUPS)."
 msgstr "Serwer '%1' jest dostępny przez por 631 (IPP/CUPS)"
 
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:154
+#: src/printingvianetwork.ycp:179
 #, ycp-format
 msgid "The server '%1' is not accessible via port 631 (IPP/CUPS)."
 msgstr "Serwer '%1' jest nie dostępny przez port 631 (IPP/CUPS)"
 
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:159
+#: src/printingvianetwork.ycp:184
 #, ycp-format
 msgid "The server '%1' responds to a 'ping' in the network."
 msgstr "Serwer '%1' odpowiada na 'ping' w sieci."
 
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:164
+#: src/printingvianetwork.ycp:189
 #, ycp-format
 msgid "The server '%1' does not respond to a 'ping' in the network."
 msgstr "Serwer '%1' nie odpowiada na 'ping' w sieci."
 
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:169
+#: src/printingvianetwork.ycp:194
 #, ycp-format
 msgid "The server name '%1' is known in the network."
 msgstr "Nazwa serwera '%1' nie jest znana w sieci."
 
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:174
+#: src/printingvianetwork.ycp:199
 #, ycp-format
 msgid "The server name '%1' is not known in the network."
 msgstr "Serwer '%1' nie jest znany w sieci."
@@ -2157,24 +2213,24 @@ msgstr "Serwer '%1' nie jest znany w sieci."
 #. netcat is required for a meaningful test.
 #. Show negative feedback:
 #. Popup::ErrorDetails message:
-#: src/printingvianetwork.ycp:190
+#: src/printingvianetwork.ycp:215
 msgid "Cannot execute the program 'netcat'"
 msgstr "Nie można uruchomić program 'netcat'"
 
 #. Popup::ErrorDetails details:
-#: src/printingvianetwork.ycp:192
+#: src/printingvianetwork.ycp:217
 msgid "The RPM package 'netcat' is required for a meaningful test."
 msgstr "Pakiet rpm 'netcat' jest wymagany do testów."
 
 #. ping is required for the less meaningful test.
 #. Show negative feedback:
 #. Popup::ErrorDetails message
-#: src/printingvianetwork.ycp:226
+#: src/printingvianetwork.ycp:251
 msgid "Cannot execute the program 'ping'"
 msgstr "Nie można uruchomić programu 'ping'"
 
 #. Popup::ErrorDetails details:
-#: src/printingvianetwork.ycp:228
+#: src/printingvianetwork.ycp:253
 msgid "The RPM package 'iputils' is required for a meaningful test."
 msgstr "Pakiet rpm 'iputils' jest wymagany do testów."
 
@@ -2182,7 +2238,7 @@ msgstr "Pakiet rpm 'iputils' jest wymagany do testów."
 #. Show negative feedback:
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:241
+#: src/printingvianetwork.ycp:266
 #, ycp-format
 msgid "The server '%1' is not accessible"
 msgstr "Sewer %1 jest niedostępny."
@@ -2190,12 +2246,12 @@ msgstr "Sewer %1 jest niedostępny."
 #. host is required for the last test.
 #. Show negative feedback:
 #. Popup::ErrorDetails message
-#: src/printingvianetwork.ycp:263
+#: src/printingvianetwork.ycp:288
 msgid "Cannot execute the program 'host'"
 msgstr "Nie można wykonać programu 'host'"
 
 #. Popup::ErrorDetails details:
-#: src/printingvianetwork.ycp:265
+#: src/printingvianetwork.ycp:290
 msgid "The RPM package 'bind-utils' is required for a meaningful test."
 msgstr "Pakiet rpm 'bind-utils' jest wymagany do testów"
 
@@ -2203,7 +2259,7 @@ msgstr "Pakiet rpm 'bind-utils' jest wymagany do testów"
 #. Show negative feedback:
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:278
+#: src/printingvianetwork.ycp:303
 #, ycp-format
 msgid "The server '%1' does not respond in the network"
 msgstr "Serwer '%1' nie odpowiada w sieci"
@@ -2212,13 +2268,13 @@ msgstr "Serwer '%1' nie odpowiada w sieci"
 #. Show negative feedback:
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:294
+#: src/printingvianetwork.ycp:319
 #, ycp-format
 msgid "The server '%1' is unknown"
 msgstr "Nieznany serwer '%1'"
 
 #. Popup::ErrorDetails message:
-#: src/printingvianetwork.ycp:331
+#: src/printingvianetwork.ycp:356
 msgid "Failed to set 'BrowseAllow none' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić 'BrowseAllow none' w /etc/cups/cupsd.conf"
 
@@ -2234,7 +2290,7 @@ msgstr "Nie udało się ustawić 'BrowseAllow none' w /etc/cups/cupsd.conf"
 #. because they can just click the [OK] button to continue but then
 #. they are at least informend why there may be still remote queues:
 #. Popup message:
-#: src/printingvianetwork.ycp:353
+#: src/printingvianetwork.ycp:378
 msgid ""
 "When switching from 'receive information' to 'do not receive information'\n"
 "it takes usually 5 minutes until already received information faded away..."
@@ -2244,24 +2300,24 @@ msgstr ""
 
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:384 src/printingvianetwork.ycp:640
+#: src/printingvianetwork.ycp:409 src/printingvianetwork.ycp:671
 #, ycp-format
 msgid "Failed to set 'ServerName %1' in /etc/cups/client.conf"
 msgstr "Nie udało się ustawić 'ServerName %1' w /etc/cups/client.conf"
 
 #. PopupYesNoHeadline body:
-#: src/printingvianetwork.ycp:437
+#: src/printingvianetwork.ycp:468
 msgid "A remote CUPS server setting conflicts with receiving printer information."
 msgstr "Zdalny serwer CUPS ma problemy z otrzymywanymi informacjami o drukarce"
 
 #. Popup::ErrorDetails message:
-#: src/printingvianetwork.ycp:498 src/sharing.ycp:464
+#: src/printingvianetwork.ycp:529 src/sharing.ycp:446
 msgid "Failed to set 'Browsing On' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić 'Przeglądania w' w /etc/cups/cupsd.conf"
 
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the values for BrowseAllow.
-#: src/printingvianetwork.ycp:512
+#: src/printingvianetwork.ycp:543
 #, ycp-format
 msgid "Failed to set BrowseAllow value(s) '%1' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić wartości BrowseAllow '%1' w /etc/cups/cupsd.conf"
@@ -2269,14 +2325,14 @@ msgstr "Nie udało się ustawić wartości BrowseAllow '%1' w /etc/cups/cupsd.co
 #. Header of a Popup::ContinueCancelHeadline
 #. when a client-only server is not accessible
 #. where %1 will be replaced by the server name:
-#: src/printingvianetwork.ycp:575
+#: src/printingvianetwork.ycp:606
 #, ycp-format
 msgid "Continue regardless that '%1' is not accessible?"
 msgstr "Czy kontynuować mimo, że '%1' jest niedostępny?"
 
 #. Body of a Popup::ContinueCancelHeadline
 #. when a client-only server is not accessible:
-#: src/printingvianetwork.ycp:580
+#: src/printingvianetwork.ycp:611
 msgid "A non-accessible server leads to an endless sequence of further failures."
 msgstr "Niedostępny serwer spowodował nieskończoną sekwencję następujących błedów."
 
@@ -2286,151 +2342,133 @@ msgstr "Niedostępny serwer spowodował nieskończoną sekwencję następującyc
 #. Therefore a Popup::MessageDetails is shown to inform about the actual result:
 #. Popup::MessageDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:632
+#: src/printingvianetwork.ycp:663
 #, ycp-format
 msgid "Tried to set 'ServerName %1' in /etc/cups/client.conf"
 msgstr "Została podjęta próba ustawienia 'ServerName %1' w /etc/cups/client.conf"
 
 #. Popup::Error message:
-#: src/printingvianetwork.ycp:803 src/sharing.ycp:949
+#: src/printingvianetwork.ycp:836 src/sharing.ycp:925
 msgid "Failed to apply the settings to the system."
 msgstr "Nie udało się zastosować ustawień dla systemu"
 
 #. A RadioButton label to deny remote access to local print queues:
-#: src/sharing.ycp:63
+#: src/sharing.ycp:64
 msgid "&Deny remote access"
 msgstr "&Odmów zdalnego dostępu"
 
 #. A RadioButton label to allow remote access to local print queues:
-#: src/sharing.ycp:73
+#: src/sharing.ycp:74
 msgid "&Allow remote access"
 msgstr "&Zezwól na zdalny dostęp"
 
 #. A CheckBox label to allow remote access to local print queues
 #. for computers within the local network:
-#: src/sharing.ycp:89
+#: src/sharing.ycp:90
 msgid "For computers within the &local network"
 msgstr "Dla komputerów w sieci &lokalnej"
 
 #. A CheckBox label to publish local print queues by default within the local network:
-#: src/sharing.ycp:100
+#: src/sharing.ycp:101
 msgid "&Publish printers by default within the local network"
 msgstr "&Udostępnij drukarki domyślnie w sieci lokalnej"
 
 #. A caption for a table to allow remote access to local print queues
 #. via network interfaces specified in the table below:
-#: src/sharing.ycp:111
+#: src/sharing.ycp:112
 msgid "Via network interfaces specified below"
 msgstr "Przez interfejsy sieciowe określone poniżej"
 
 #. A table column header where the column lists network interfaces:
-#: src/sharing.ycp:118
+#: src/sharing.ycp:120
 msgid "Interface"
 msgstr "Interfejs"
 
 #. A table column header where the column shows whether or not
 #. local print queues are published by default
 #. via the network interface in the other table column:
-#: src/sharing.ycp:122
+#: src/sharing.ycp:124
 msgid "Publish printers by default via this interface"
 msgstr "Udostępnij drukarki domyślnie przez ten interfejs"
 
 #. A PushButton label to add a network interface to the table which shows
 #. the network interfaces to allow remote access to local print queues:
-#: src/sharing.ycp:132
+#: src/sharing.ycp:134
 msgid "&Add"
 msgstr "&Dodaj"
 
 #. A PushButton label to change a network interface in the table which shows
 #. the network interfaces to allow remote access to local print queues:
-#: src/sharing.ycp:138
+#: src/sharing.ycp:140
 msgid "&Edit"
 msgstr "&Edytuj"
 
 #. A PushButton label to delete a network interface from the table which shows
 #. the network interfaces to allow remote access to local print queues:
-#: src/sharing.ycp:144
+#: src/sharing.ycp:146
 msgid "&Delete"
 msgstr "&Usuń"
 
-#. A caption for a table to allow remote access to local print queues
-#. for hosts and/or networks specified in the table below:
-#: src/sharing.ycp:161
-msgid "For hosts / networks specified below"
-msgstr "Dla hostów / sieci określonych poniżej"
+#. A caption to allow remote access to local print queues
+#. for hosts and/or networks specified in two TextEntries below:
+#: src/sharing.ycp:155
+#, fuzzy
+msgid "For Experts: Optional Specific IP Addresses or Networks"
+msgstr "Opcjonalne adresy IP lub sieć/maska"
 
-#. A table column header where the column lists IP addresses:
-#: src/sharing.ycp:168
-msgid "IP address"
-msgstr "Adres IP"
+#. TextEntry to allow remote access to local print queues
+#. for hosts and/or networks:
+#: src/sharing.ycp:162
+#, fuzzy
+msgid "Allow remote access from those IP addresses or &network/netmask"
+msgstr "Opcjonalne adresy IP lub sieć/maska"
 
-#. A table column header where the column shows whether or not
-#. local print queues are published by default
-#. via the IP address in the other table column:
-#: src/sharing.ycp:172
-msgid "Publish printers by default for this address"
-msgstr "Udostępnij drukarki domyślny dla tego adresu"
+#. TextEntry to publish local print queues
+#. to IP addresses and/or network broadcast addresses:
+#: src/sharing.ycp:180
+msgid "Publish to those IP addresses or network &broadcast addresses"
+msgstr ""
 
-#. A PushButton label to add an IP address to the table which shows
-#. the IP addresses to allow remote access to local print queues:
-#: src/sharing.ycp:182
-msgid "A&dd"
-msgstr "Dodaj"
-
-#. A PushButton label to change an IP address in the table which shows
-#. the IP addresses to allow remote access to local print queues:
-#: src/sharing.ycp:188
-msgid "Ed&it"
-msgstr "Edytuj"
-
-#. A PushButton label to delete an IP address from the table which shows
-#. the IP addresses to allow remote access to local print queues:
-#: src/sharing.ycp:194
-msgid "De&lete"
-msgstr "Usuń"
+#. Label to show the syntax for the TextEntry to to publish
+#. local print queues to hosts and/or networks:
+#: src/sharing.ycp:191
+#, fuzzy
+msgid "(each nnn.nnn.nnn.nnn or nnn.nnn.nnn.255 separated by one space)"
+msgstr "(każdy adres nnn.nnn.nnn.nnn lub nnn.nnn.nnn.nnn/mmm.mmm.mmm.mmm musi być odzielony jedną spacją)"
 
 #. A CheckBox label to publish local print queues by default
 #. via a partivular network interface which is shown below.
-#: src/sharing.ycp:215
+#: src/sharing.ycp:210
 msgid "&Publish printers by default via the network interface below."
 msgstr "Udostę&pnij drukarki domyślnie przez poniższy interfejs"
 
 #. A header for a ComboBox which lists network interfaces:
-#: src/sharing.ycp:222
+#: src/sharing.ycp:217
 msgid "Available Network &Interfaces:"
 msgstr "Dostępne &interfejsy sieciowe:"
 
-#: src/sharing.ycp:256
-msgid "&Publish printers by default via "
-msgstr "&Udostępnij druraki domyślnie przez"
-
-#. translators: input field label for list of configured IPs
-#: src/sharing.ycp:258
-msgid "Network &Address:"
-msgstr "Adres sieciowy:"
-
 #. Popup::ErrorDetails message.
 #. Do not change or translate "Listen localhost", it is a system settings name.
-#: src/sharing.ycp:353
+#: src/sharing.ycp:322
 msgid "Failed to set only 'Listen localhost' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić 'Nasłuchuj na localhost' w /etc/cups/cupsd.conf"
 
 #. Popup::ErrorDetails message.
 #. Do not change or translate "Allow", it is a system settings name.
-#: src/sharing.ycp:361
+#: src/sharing.ycp:330
 msgid "Failed to remove 'Allow' entries from /etc/cups/cupsd.conf"
 msgstr "Nie udało się usunąć wpisów 'Allow' (pozwól)  w /etc/cups/cupsd.conf"
 
 #. Popup::ErrorDetails message.
 #. Do not change or translate "BrowseAddress", it is a system settings name.
-#: src/sharing.ycp:374
+#: src/sharing.ycp:343
 msgid "Failed to remove 'BrowseAddress' entries from /etc/cups/cupsd.conf"
 msgstr "Nie udało się usunąć wpisów 'BrowseAddress' (przeglądaj adresy) w /etc/cups/cupsd.conf"
 
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by one or more system settings values.
 #. Do not change or translate "Allow", it is a system settings name.
-#: src/sharing.ycp:436
+#: src/sharing.ycp:418
 #, ycp-format
 msgid "Failed to set 'Allow' entries '%1' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić wpisów 'Allow' (pozwól) '%1' w /etc/cups/cupsd.conf"
@@ -2438,31 +2476,67 @@ msgstr "Nie udało się ustawić wpisów 'Allow' (pozwól) '%1' w /etc/cups/cups
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by one or more system settings values.
 #. Do not change or translate "BrowseAddress", it is a system settings name.
-#: src/sharing.ycp:453
+#: src/sharing.ycp:435
 #, ycp-format
 msgid "Failed to set 'BrowseAddress' entries '%1' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić wpisów 'BrowseAllow' (przeglądaj adresy) '%1' w /etc/cups/cupsd.conf"
 
 #. Popup::ErrorDetails message.
 #. Do not change or translate "Listen *:631", it is a system settings name.
-#: src/sharing.ycp:479
+#: src/sharing.ycp:461
 msgid "Failed to set 'Listen *:631' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić 'Nasłuchuj na *.631' w /etc/cups/cupsd.conf"
 
 #. PopupYesNoHeadline body:
-#: src/sharing.ycp:510
+#: src/sharing.ycp:492
 msgid "A remote CUPS server setting conflicts with sharing local printer configurations."
 msgstr "Ustawienia konfiguracji CUPS na zdalnej maszynie konfliktują z ustawieniami współdzielonej drukarki lokalnej. "
 
 #. Initialization dialog caption
-#: src/wizards.ycp:124
+#: src/wizards.ycp:125
 msgid "Printer Configuration"
 msgstr "Konfiguracja drukarki"
 
 #. Initialization dialog contents
-#: src/wizards.ycp:126
+#: src/wizards.ycp:127
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
+#~ msgid "Autodetect already configured printers"
+#~ msgstr "Automatycznie wykryj skonfigurowane drukarki"
+
+#~ msgid "Autodetecting already configured printers..."
+#~ msgstr "Automatyczne wykrywanie skonfigurowanych drukarek..."
+
+#~ msgid "Operation Policy"
+#~ msgstr "Zasady operacji"
+
+#~ msgid "&Connection Wizard"
+#~ msgstr "Kreator połączeń"
+
+#~ msgid "For hosts / networks specified below"
+#~ msgstr "Dla hostów / sieci określonych poniżej"
+
+#~ msgid "IP address"
+#~ msgstr "Adres IP"
+
+#~ msgid "Publish printers by default for this address"
+#~ msgstr "Udostępnij drukarki domyślny dla tego adresu"
+
+#~ msgid "A&dd"
+#~ msgstr "Dodaj"
+
+#~ msgid "Ed&it"
+#~ msgstr "Edytuj"
+
+#~ msgid "De&lete"
+#~ msgstr "Usuń"
+
+#~ msgid "&Publish printers by default via "
+#~ msgstr "&Udostępnij druraki domyślnie przez"
+
+#~ msgid "Network &Address:"
+#~ msgstr "Adres sieciowy:"
 
 #~ msgid ""
 #~ "Restarted the CUPS daemon.\n"
@@ -3294,9 +3368,6 @@ msgstr "Inicjalizacja..."
 
 #~ msgid "Set As Default"
 #~ msgstr "Ustaw jako domyślną"
-
-#~ msgid "Policies"
-#~ msgstr "Polityki"
 
 #~ msgid "Banners"
 #~ msgstr "Nagłówki"
@@ -4801,9 +4872,6 @@ msgstr "Inicjalizacja..."
 #~ msgid "Reading firewall settings..."
 #~ msgstr "Wczytywanie ustawień zapory sieciowej..."
 
-#~ msgid "Checking database of printers..."
-#~ msgstr "Sprawdzanie bazy danych drukarek..."
-
 #~ msgid "Loading current settings..."
 #~ msgstr "Wczytywanie bieżących ustawień..."
 
@@ -4843,9 +4911,6 @@ msgstr "Inicjalizacja..."
 
 #~ msgid "Setting default queue..."
 #~ msgstr "Ustawianie kolejki domyślnej..."
-
-#~ msgid "Saving system settings..."
-#~ msgstr "Zapisywanie ustawień systemu..."
 
 #~ msgid "Saving firewall settings..."
 #~ msgstr "Zapisywanie ustawień zapory sieciowej..."
