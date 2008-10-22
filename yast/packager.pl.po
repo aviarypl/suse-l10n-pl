@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: packager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-09 17:04+0200\n"
+"POT-Creation-Date: 2008-10-16 12:56+0200\n"
 "PO-Revision-Date: 2008-10-03 19:28+0200\n"
 "Last-Translator: Mariusz Fik <fisiu82@gmail.com>\n"
 "Language-Team: Polski <pl@li.org>\n"
@@ -617,7 +617,7 @@ msgid "Installing Packages..."
 msgstr "Instalowanie pakietów..."
 
 #. dialog caption
-#: src/clients/key_manager.ycp:65 src/clients/repositories.ycp:1377
+#: src/clients/key_manager.ycp:65 src/clients/repositories.ycp:1382
 #: src/modules/AddOnProduct.ycp:495
 msgid "Initializing..."
 msgstr "Inicjalizowanie..."
@@ -791,18 +791,25 @@ msgstr "Repozytoria oprogramowania"
 #. string title = _("Media Containing the Software Repository");
 #. help
 #: src/clients/repositories.ycp:679
+#, fuzzy
 msgid ""
 "<p>\n"
-"In this dialog, manage configured software repositories.</p>"
+"In this dialog, manage configured software repositories and services.</p>"
 msgstr ""
 "<p>\n"
 "W tym oknie można zarządzać repozytoriami oprogramowania.</p>"
 
 #: src/clients/repositories.ycp:682
+msgid "<P>A <B>service</B> or <B>Repository Index Service (RIS) </B> is a protocol for package repository management. A service can offer one or more software repositories which can be dynamically changed by the service administrator.</P>"
+msgstr ""
+
+#: src/clients/repositories.ycp:684
+#, fuzzy
 msgid ""
 "<p>\n"
-"<b>Adding a New Repository</b><br>\n"
-"To add a new repository, use <b>Add</b> and specify the software repository.\n"
+"<b>Adding a New Repository or a Service</b><br>\n"
+"To add a new repository, use <b>Add</b> and specify the software repository or service.\n"
+"Yast will automatically detect whether a service or a repository is available at the entered location.\n"
 "</p>"
 msgstr ""
 "<p>\n"
@@ -811,7 +818,7 @@ msgstr ""
 "</p>"
 
 #. help, continued
-#: src/clients/repositories.ycp:688
+#: src/clients/repositories.ycp:691
 msgid ""
 "<p>\n"
 "To install packages from <b>CD</b>,\n"
@@ -824,7 +831,7 @@ msgstr ""
 "</p>\n"
 
 #. help, continued
-#: src/clients/repositories.ycp:695
+#: src/clients/repositories.ycp:698
 msgid ""
 "<p>\n"
 "The CDs can be copied to <b>hard disk</b>\n"
@@ -845,10 +852,11 @@ msgstr ""
 "wystarczy podać tylko nazwę tego katalogu. </p>\n"
 
 #. help, continued
-#: src/clients/repositories.ycp:707
+#: src/clients/repositories.ycp:710
+#, fuzzy
 msgid ""
 "<p>\n"
-"<b>Modifying a Repository Status</b><br>\n"
+"<b>Modifying Status of a Repository or a Service</b><br>\n"
 "To change a repository location, use <b>Edit</b>. To remove a repository, use\n"
 "<b>Delete</b>. To enable or disable the repository or to change the refresh status at initialization time, select the repository in the table and use the check boxes below.\n"
 "</p>\n"
@@ -861,7 +869,7 @@ msgstr ""
 "</p>\n"
 
 #. help, continued
-#: src/clients/repositories.ycp:717
+#: src/clients/repositories.ycp:720
 msgid ""
 "<p>\n"
 "<b>Synchronize Changes with ZENworks</b> will also call <tt>rug</tt>\n"
@@ -873,7 +881,7 @@ msgstr ""
 " systemie zarządzania pakietami.</p>\n"
 
 #. help text, continued
-#: src/clients/repositories.ycp:724
+#: src/clients/repositories.ycp:727
 msgid ""
 "<P><B>Priority of a Repository</B><BR>\n"
 "Priority of a repository is an integer value between 0 (the highest priority) and 200 (the lowest priority). Default priority is 99. If a package is available in more repositories the repository with the highest priority is used.</P>"
@@ -881,8 +889,12 @@ msgstr ""
 "<p><b>Priorytet repozytorium</b><br>\n"
 "Priorytet repozytorium jest to liczba całkowita z zakresu od 0 (najwyższy priorytet) do 200 (najniższy priorytet). Wartością domyślną jest 99. Jeśli pakiet jest dostępny w więcej niż jednym repozytorium, zostanie użyte to z wyższym priorytetem.</p>"
 
+#: src/clients/repositories.ycp:730
+msgid "<P>Use the tree displayed on the left side for navigation in repositories and services.</P>"
+msgstr ""
+
 #. popup message part 1
-#: src/clients/repositories.ycp:786
+#: src/clients/repositories.ycp:791
 msgid ""
 "Unable to save changes to the repository\n"
 "configuration."
@@ -892,7 +904,7 @@ msgstr ""
 
 #. popup message part 2 followed by other info
 #. popup message, after message header, header of details
-#: src/clients/repositories.ycp:791 src/modules/Packages.ycp:995
+#: src/clients/repositories.ycp:796 src/modules/Packages.ycp:995
 #: src/modules/SourceManager.ycp:255 src/modules/SourceManager.ycp:430
 msgid "Details:"
 msgstr "Szczegóły:"
@@ -900,19 +912,19 @@ msgstr "Szczegóły:"
 #. popup message part 3
 #. popup message part 2
 #. end of popup message, question
-#: src/clients/repositories.ycp:794 src/include/repositories_include.ycp:265
+#: src/clients/repositories.ycp:799 src/include/repositories_include.ycp:265
 #: src/modules/Packages.ycp:996 src/modules/SourceManager.ycp:257
 #: src/modules/SourceManager.ycp:432
 msgid "Try again?"
 msgstr "Spróbować ponownie?"
 
 #. popup headline
-#: src/clients/repositories.ycp:816
+#: src/clients/repositories.ycp:821
 msgid "Abort Repository Configuration"
 msgstr "Przerwanie konfiguracji repozytorium"
 
 #. popup message
-#: src/clients/repositories.ycp:818
+#: src/clients/repositories.ycp:823
 msgid ""
 "Abort the repository configuration?\n"
 "All changes will be lost."
@@ -920,7 +932,7 @@ msgstr ""
 "Przerwać konfigurację repozytorium?\n"
 "Wszystkie zmiany zostaną utracone."
 
-#: src/clients/repositories.ycp:1000
+#: src/clients/repositories.ycp:1005
 #, ycp-format
 msgid ""
 "There is no service at URL:\n"
@@ -930,48 +942,48 @@ msgstr ""
 "%1"
 
 #. TODO: add help text
-#: src/clients/repositories.ycp:1099
+#: src/clients/repositories.ycp:1104
 msgid "Refreshing Repositories"
 msgstr "Odświeżanie repozytoriów"
 
-#: src/clients/repositories.ycp:1099
+#: src/clients/repositories.ycp:1104
 msgid "Refreshing Services"
 msgstr "Odświeżanie repozytoriów"
 
-#: src/clients/repositories.ycp:1100
+#: src/clients/repositories.ycp:1105
 msgid "Refresh Repositories"
 msgstr "Odświeżenie repozytoriów"
 
-#: src/clients/repositories.ycp:1100
+#: src/clients/repositories.ycp:1105
 msgid "Refresh Services"
 msgstr "Odświeżenie repozytoriów"
 
 #. progress bar label
-#: src/clients/repositories.ycp:1120
+#: src/clients/repositories.ycp:1125
 #, ycp-format
 msgid "Refreshing Repository %1..."
 msgstr "Odświeżanie repozytorium %1..."
 
 #. refreshing services
 #. progress bar label
-#: src/clients/repositories.ycp:1144
+#: src/clients/repositories.ycp:1149
 #, ycp-format
 msgid "Refreshing Service %1..."
 msgstr "Odświeżanie repozytorium %1..."
 
 #. yes-no popup
-#: src/clients/repositories.ycp:1161
+#: src/clients/repositories.ycp:1166
 msgid "Delete the selected repository from the list?"
 msgstr "Na pewno usunąć wybrane repozytorium z listy?"
 
 #. yes-no popup
-#: src/clients/repositories.ycp:1171
+#: src/clients/repositories.ycp:1176
 #, ycp-format
 msgid "Delete service %1?"
 msgstr "Usunąć repozytorium %1?"
 
 #. popup message
-#: src/clients/repositories.ycp:1228
+#: src/clients/repositories.ycp:1233
 msgid ""
 "For the selected repository, refresh\n"
 "cannot be set."
@@ -980,12 +992,12 @@ msgstr ""
 "nie może być ustawione."
 
 #. Error popup
-#: src/clients/repositories.ycp:1403
+#: src/clients/repositories.ycp:1408
 msgid "<p>There were errors while restoring the repository configuration.</p>\n"
 msgstr "<p>Podczas przywracania konfiguracji repozytorium wystąpiły błędy.</p>\n"
 
 #. Command line help text for the repository module, %1 is "zypper"
-#: src/clients/repositories.ycp:1479
+#: src/clients/repositories.ycp:1484
 #, ycp-format
 msgid "Installation Repositories - this module doesn't support the command line interface, use '%1' instead."
 msgstr "Repozytoria instalacji - ten moduł YaST2 nie obsługuje interfejsu z linii poleceń. Proszę użyć polecenia \"%1\"."
@@ -2895,13 +2907,13 @@ msgid "No SLP repositories have been found on your network."
 msgstr "W sieci lokalnej nie znaleziono repozytorium SLP."
 
 #. Warning message, e.g.: Partition /usr needs 35 MB more disk space
-#: src/modules/SpaceCalculation.ycp:467
+#: src/modules/SpaceCalculation.ycp:485
 #, ycp-format
 msgid "Partition \"%1\" needs %2 more disk space."
 msgstr "Na partycji \"%1\" brakuje %2 miejsca."
 
 #. popup message
-#: src/modules/SpaceCalculation.ycp:484
+#: src/modules/SpaceCalculation.ycp:502
 msgid ""
 "Deselect some packages or delete some data\n"
 "or temporary files before updating the system."
@@ -2910,7 +2922,7 @@ msgstr ""
 "albo pliki tymczasowe przed aktualizacją systemu."
 
 #. popup message
-#: src/modules/SpaceCalculation.ycp:490
+#: src/modules/SpaceCalculation.ycp:508
 msgid "Please deselect some packages."
 msgstr "Proszę zrezygnować z niektórych pakietów."
 
