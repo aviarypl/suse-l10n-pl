@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kupdateapplet\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-26 16:18+0200\n"
+"POT-Creation-Date: 2008-10-22 10:56+0200\n"
 "PO-Revision-Date: 2008-09-26 12:49+0100\n"
 "Last-Translator: Mirosław Rogoziński <miroslaw.rogozinski@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -22,16 +22,19 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: ../src/packagekit/pklicensedialog.cpp:28 ../src/zypp/licensedialog.cpp:27
+#: ../src/zypp/licensedialog.cpp:27 ../src/packagekit/pklicensedialog.cpp:28
 msgid "Accept"
 msgstr "Akceptuję"
 
-#: ../src/packagekit/pklicensedialog.cpp:29 ../src/zypp/licensedialog.cpp:28
+#: ../src/zypp/licensedialog.cpp:28 ../src/packagekit/pklicensedialog.cpp:29
 msgid "Decline"
 msgstr "Odrzucam"
 
-#: ../src/zypp/zyppupdater.cpp:150
-#, c-format
+#: ../src/zypp/zyppupdater.cpp:146
+msgid "Exit Status: %1"
+msgstr ""
+
+#: ../src/zypp/zyppupdater.cpp:146 ../src/zypp/zyppupdater.cpp:150
 msgid ""
 "helper program returned:\n"
 "%1"
@@ -43,12 +46,16 @@ msgstr ""
 msgid "Refresh failed. Please run 'zypper refresh' as user root."
 msgstr "Odświerzanie się nie powiodło. Proszę uruchomić 'zypper ref' jako root."
 
-#: ../src/zypp/zyppupdater.cpp:455
+#: ../src/zypp/zyppupdater.cpp:418 ../src/zypp/zyppupdater.cpp:443
+#: ../src/packagekit/packagekit_updater.cpp:644
+msgid "License of %1"
+msgstr ""
+
+#: ../src/zypp/zyppupdater.cpp:456
 msgid "No patches and no packages marked for installation."
 msgstr "Brak poprawiek i pakietów zaznaczonych do instalacji."
 
-#: ../src/zypp/zyppupdater.cpp:547
-#, c-format
+#: ../src/zypp/zyppupdater.cpp:548
 msgid "Operation was too complex: %1"
 msgstr "Operacja jest zbyt złożona: %1"
 
@@ -60,6 +67,13 @@ msgstr "<b>Dostępne jest nowe opogramowanie</b>"
 #: ../src/simpleview.cpp:55
 msgid "Choose the updates to be installed:"
 msgstr "Aktualizacje do zainstalowania:"
+
+#: ../src/simpleview.cpp:61 ../src/simpleview.cpp:67 ../src/simpleview.cpp:293
+msgid "Install %1 recommended update additionally"
+msgid_plural "Install %1 recommended updates additionally"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
 
 #: ../src/simpleview.cpp:70
 msgid "Don't install updates that require a restart"
@@ -78,7 +92,7 @@ msgstr "Konfiguruj teraz"
 msgid "Start YaST and install updates manually"
 msgstr "Włącz YaST i zainstaluj aktualizację ręcznie"
 
-#: ../src/mainwindow.cpp:200 ../src/simpleview.cpp:84 ../src/simpleview.cpp:85
+#: ../src/simpleview.cpp:84 ../src/simpleview.cpp:85 ../src/mainwindow.cpp:200
 msgid "Install"
 msgstr "Instaluj"
 
@@ -118,6 +132,43 @@ msgstr "<b>Brak aktualizacji</b>"
 msgid "Updates that affect your updater itself are available."
 msgstr "Dostępne są aktualizacje dla programu aktualizatora."
 
+#: ../src/simpleview.cpp:283
+#, fuzzy
+msgid "%1 security update is available"
+msgid_plural "%1 security updates are available"
+msgstr[0] "Dostępne są uaktualnienia dystrubucji:"
+msgstr[1] "Dostępne są uaktualnienia dystrubucji:"
+msgstr[2] "Dostępne są uaktualnienia dystrubucji:"
+
+#: ../src/simpleview.cpp:301
+#, fuzzy
+msgid "%1 recommended update is available"
+msgid_plural "%1 recommended updates are available"
+msgstr[0] "Brak aktualizacji"
+msgstr[1] "Brak aktualizacji"
+msgstr[2] "Brak aktualizacji"
+
+#: ../src/simpleview.cpp:329 ../src/simpleview.cpp:350
+msgid "1 optional update is available.<br>You can select optional updates in the detailed dialog."
+msgid_plural "%1 optional updates are available.<br>You can select optional updates in the detailed dialog."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ../src/simpleview.cpp:335
+msgid "%1 optional upgrade is available.<br>You can select optional upgrades in the detailed dialog."
+msgid_plural "%1 optional upgrades are available.<br>You can select optional upgrades in the detailed dialog."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
+#: ../src/simpleview.cpp:340
+msgid "%1 optional update and upgrade is available.<br>You can select optional updates and upgrades in the detailed dialog."
+msgid_plural "%1 optional updates and upgrades are available.<br>You can select optional updates and upgrades in the detailed dialog."
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+
 #: ../src/simpleview.cpp:362
 msgid "<b>Updating...</b>"
 msgstr "<a>Aktualizacja...</b>"
@@ -150,6 +201,8 @@ msgid "Name"
 msgstr "Nazwa"
 
 #. FIXME driverList->setColumnWidthMode( COLUMN_NAME, QTreeWidget::Maximum );
+#. FIXME patchList->setColumnWidthMode( COLUMN_NAME, QTreeWidget::Maximum );
+#. FIXME packageList->setColumnWidthMode( COLUMN_NAME, QTreeWidget::Maximum );
 #: ../src/mainwindow.cpp:65 ../src/mainwindow.cpp:104
 #: ../src/mainwindow.cpp:157
 msgid "Summary"
@@ -223,17 +276,16 @@ msgstr "Dostępne aktualizacje"
 msgid "<h2>Available Updates</h2>"
 msgstr "<h2>Dostępne aktualizacje</h2>"
 
-#: ../src/packagekit/packagekit_updater.cpp:601
+#: ../src/packagekit/packagekit_updater.cpp:600
 msgid "Repository Signature Required"
 msgstr "Wymagana sygnatura repozytorium"
 
 # power-off message
-#: ../src/packagekit/packagekit_updater.cpp:602
+#: ../src/packagekit/packagekit_updater.cpp:601
 msgid "Do you want to accept this repository signature?"
 msgstr "Czy akceptować sygnaturę repozytorium?"
 
-#: ../src/packagekit/packagekit_updater.cpp:682
-#, c-format
+#: ../src/packagekit/packagekit_updater.cpp:681
 msgid ""
 "Reboot your system as soon as possible.\n"
 "%1"
@@ -241,8 +293,7 @@ msgstr ""
 "Proszę najszybciej jak to możliwe uruchomić komputer ponownie.\n"
 "%1"
 
-#: ../src/packagekit/packagekit_updater.cpp:684
-#, c-format
+#: ../src/packagekit/packagekit_updater.cpp:683
 msgid ""
 "Relogin into your system as soon as possible.\n"
 "%1"
@@ -250,8 +301,7 @@ msgstr ""
 "Proszę najszybciej jak to możliwe zalogować sie ponownie w systemie.\n"
 "%1"
 
-#: ../src/packagekit/packagekit_updater.cpp:686
-#, c-format
+#: ../src/packagekit/packagekit_updater.cpp:685
 msgid ""
 "Restart this application as soon as possible.\n"
 "%1"
@@ -321,18 +371,21 @@ msgstr "Animacja ikony podczas sprawdzania"
 
 #. i18n: tag string
 #. i18n: file ../src/configwidgetui.ui line 150
+#. i18n: tag label
 #: ../src/rc.cpp:33 ../src/rc.cpp:67
 msgid "Check for updates only when the system is connected to charger"
 msgstr "Sprawdzanie dostępności aktualizacji tylko gdy system jest podłączony do ładowarki"
 
 #. i18n: tag string
 #. i18n: file ../src/configwidgetui.ui line 157
+#. i18n: tag label
 #: ../src/rc.cpp:36 ../src/rc.cpp:65
 msgid "Check for updates only when the system is under low load"
 msgstr "Sprawdzanie dostępności aktualizacji tylko gdy system nie jest obciążony"
 
 #. i18n: tag string
 #. i18n: file ../src/configwidgetui.ui line 164
+#. i18n: tag label
 #: ../src/rc.cpp:39 ../src/rc.cpp:69
 msgid "Search for drivers when new hardware is attached"
 msgstr "Szukaj sterowników jeśli zostanie podłączone nowe urządzenie"
@@ -492,6 +545,10 @@ msgid ""
 msgstr ""
 "Wtyczka mechanizmu nie jest poprawnie skonfigurowana.\n"
 "Poprawną wtyczkę można wybrać w oknie konfiguracji."
+
+#: ../src/updaterapplication.cpp:205
+msgid "Unable to find any backend plugin. Please install one and restart %1"
+msgstr ""
 
 #~ msgid "Start now"
 #~ msgstr "Uruchom teraz"

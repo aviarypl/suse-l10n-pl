@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: storage\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-16 12:57+0200\n"
+"POT-Creation-Date: 2008-10-23 14:00+0200\n"
 "PO-Revision-Date: 2008-10-03 18:55+0200\n"
 "Last-Translator: Mariusz Fik <fisiu82@gmail.com>\n"
 "Language-Team: Polski <pl@li.org>\n"
@@ -72,14 +72,26 @@ msgid "Command line interface for the partitioner module is not available"
 msgstr "Interfejs linii poleceń dla modułu partycjonującego nie jest dostępny"
 
 #. Byte abbreviated
-#: libstorage/src/AppUtil.cc:531
+#: libstorage/src/AppUtil.cc:534
 msgid "B"
 msgstr "B"
 
+#. Kilo abbreviated
+#: libstorage/src/AppUtil.cc:539
+#, fuzzy
+msgid "k"
+msgstr "kB"
+
 #. KiloByte abbreviated
-#: libstorage/src/AppUtil.cc:535
+#: libstorage/src/AppUtil.cc:542
 msgid "kB"
 msgstr "kB"
+
+#. Mega abbreviated
+#: libstorage/src/AppUtil.cc:547
+#, fuzzy
+msgid "M"
+msgstr "MB"
 
 #. MegaByte abbreviated
 #. Unit for partition resizing
@@ -95,25 +107,43 @@ msgstr "kB"
 #. ///////////////////////////////////////////////////////////////////////
 #. set to "true" to test non-graphical version
 #. Unit for parition resizing - currently Megabytes
-#: libstorage/src/AppUtil.cc:539 storage/src/include/ep-dialogs.ycp:474
+#: libstorage/src/AppUtil.cc:550 storage/src/include/ep-dialogs.ycp:474
 #: storage/src/include/partition_defines.ycp:185
 #: storage/src/inst_custom_part.ycp:1249 storage/src/inst_resize_ui.ycp:560
 msgid "MB"
 msgstr "MB"
 
+#. Giga abbreviated
+#: libstorage/src/AppUtil.cc:555
+#, fuzzy
+msgid "G"
+msgstr "GB"
+
 #. GigaByte abbreviated
-#: libstorage/src/AppUtil.cc:543 storage/src/include/ep-dialogs.ycp:493
+#: libstorage/src/AppUtil.cc:558 storage/src/include/ep-dialogs.ycp:493
 #: storage/src/inst_custom_part.ycp:1255
 msgid "GB"
 msgstr "GB"
 
+#. Tera abbreviated
+#: libstorage/src/AppUtil.cc:563
+#, fuzzy
+msgid "T"
+msgstr "TB"
+
 #. TeraByte abbreviated
-#: libstorage/src/AppUtil.cc:547
+#: libstorage/src/AppUtil.cc:566
 msgid "TB"
 msgstr "TB"
 
+#. Peta abbreviated
+#: libstorage/src/AppUtil.cc:571
+#, fuzzy
+msgid "P"
+msgstr "PB"
+
 #. PetaByte abbreviated
-#: libstorage/src/AppUtil.cc:551
+#: libstorage/src/AppUtil.cc:574
 msgid "PB"
 msgstr "PB"
 
@@ -194,7 +224,7 @@ msgid "Execute dasdfmt on disk %1$s"
 msgstr "Wywoływanie dasdfmt na dysku %1$s"
 
 #. popup text %1$s is replaced by disk name e.g. /dev/hda
-#: libstorage/src/Disk.cc:441
+#: libstorage/src/Disk.cc:437
 #, c-format
 msgid ""
 "The partition table type on disk %1$s cannot be handled by\n"
@@ -213,7 +243,7 @@ msgstr ""
 "przy użyciu tego narzędzia."
 
 #. popup text %1$s is replaced by disk name e.g. /dev/hda
-#: libstorage/src/Disk.cc:836
+#: libstorage/src/Disk.cc:832
 #, c-format
 msgid ""
 "The partitioning on disk %1$s is not readable by\n"
@@ -236,7 +266,7 @@ msgstr ""
 
 #. popup text %1$s is replaced by disk name e.g. /dev/hda
 #. %2$lu and %3$lu are replaced by numbers.
-#: libstorage/src/Disk.cc:853
+#: libstorage/src/Disk.cc:849
 #, c-format
 msgid ""
 "Your disk %1$s contains %2$lu partitions. The maximum number\n"
@@ -248,7 +278,7 @@ msgstr ""
 "Partycje o numerach powyżej %3$lu są nieosiągalne."
 
 #. popup text
-#: libstorage/src/Disk.cc:862
+#: libstorage/src/Disk.cc:858
 msgid ""
 "openSUSE is switching to the new IDE drivers using the libata\n"
 "modules.  These do only support partitions with up to 15\n"
@@ -274,14 +304,14 @@ msgstr ""
 
 #. displayed text during action, %1$s is replaced by disk name (e.g. /dev/hda),
 #. %2$s is replaced by label name (e.g. msdos)
-#: libstorage/src/Disk.cc:1865
+#: libstorage/src/Disk.cc:1861
 #, c-format
 msgid "Setting disk label of disk %1$s to %2$s"
 msgstr "Ustawianie etykiety woluminu dla dysku %1$s na %2$s"
 
 #. displayed text before action, %1$s is replaced by disk name (e.g. /dev/hda),
 #. %2$s is replaced by label name (e.g. msdos)
-#: libstorage/src/Disk.cc:1872
+#: libstorage/src/Disk.cc:1868
 #, c-format
 msgid "Set disk label of disk %1$s to %2$s"
 msgstr "Etykieta woluminu %1$s zostanie ustawiona na %2$s"
@@ -3649,36 +3679,36 @@ msgstr ""
 msgid "Formatting Options"
 msgstr "Parametry formatowania"
 
-#: storage/src/include/ep-dialogs.ycp:111
+#: storage/src/include/ep-dialogs.ycp:110
 #, fuzzy
 msgid "Format partition"
 msgstr "Formatuje partycję"
 
-#: storage/src/include/ep-dialogs.ycp:117
+#: storage/src/include/ep-dialogs.ycp:116
 #, fuzzy
 msgid "Do not format partition"
 msgstr "Nie formatuje partycji"
 
-#: storage/src/include/ep-dialogs.ycp:123
+#: storage/src/include/ep-dialogs.ycp:121
 msgid "Mounting Options"
 msgstr "OParametry formatowania"
 
-#: storage/src/include/ep-dialogs.ycp:128
+#: storage/src/include/ep-dialogs.ycp:125
 msgid "Mount partition"
 msgstr "Montuj partycję"
 
 #. Column header
-#: storage/src/include/ep-dialogs.ycp:132
+#: storage/src/include/ep-dialogs.ycp:129
 #: storage/src/modules/StorageFields.ycp:111
 msgid "Mount Point"
 msgstr "Punkt montowania"
 
 #. button text
-#: storage/src/include/ep-dialogs.ycp:135
+#: storage/src/include/ep-dialogs.ycp:132
 msgid "Fs&tab Options..."
 msgstr "Opcje &fstab"
 
-#: storage/src/include/ep-dialogs.ycp:139
+#: storage/src/include/ep-dialogs.ycp:136
 msgid "Do not mount partition"
 msgstr "Nie montuj partycji"
 
@@ -3876,12 +3906,20 @@ msgstr "Minimalny rozmiar partycji: %1 %2"
 msgid "Maximum Partition Size: %1 %2"
 msgstr "Maksymalny rozmiar partycji: %1 %2"
 
-#: storage/src/include/ep-dialogs.ycp:653
-msgid "Partition Resizing"
-msgstr "Zmiana rozmiaru partycji"
+#. help text
+#: storage/src/include/ep-dialogs.ycp:643
+#, fuzzy
+msgid ""
+"<p>Choose the new size by draging the slider or by entering a\n"
+"numeric value in either input field.</p>"
+msgstr ""
+"\n"
+"<p>\n"
+"Aby zmienić sugerowaną wartość należy przesunąć suwak lub wprowadzić wartość numeryczną w którymkolwiek polu.\n"
+"</p>"
 
 #. popup text
-#: storage/src/include/ep-dialogs.ycp:733
+#: storage/src/include/ep-dialogs.ycp:735
 msgid "Rescanning disks..."
 msgstr "Ponowne skanowanie dysków..."
 
@@ -4006,14 +4044,14 @@ msgid "New Partition Size"
 msgstr "Nowy rozmiar partycji"
 
 #. radio button text, %1 is replaced by size
-#: storage/src/include/ep-hd-dialogs.ycp:117
+#: storage/src/include/ep-hd-dialogs.ycp:116
 #: storage/src/include/ep-lvm-dialogs.ycp:361
 #, ycp-format
 msgid "Maximum Size (%1)"
 msgstr "Maksymalna wielkość (%1)"
 
 #. radio button text
-#: storage/src/include/ep-hd-dialogs.ycp:119
+#: storage/src/include/ep-hd-dialogs.ycp:118
 msgid "Custom Size"
 msgstr "Własny rozmiar "
 
@@ -4021,8 +4059,24 @@ msgstr "Własny rozmiar "
 msgid "Size (e.g. 9.0 MB or 9.0 GB)"
 msgstr "Rozmiar (np.: 9.0 MB lub 9.0 GB)"
 
+#. radio button text
+#: storage/src/include/ep-hd-dialogs.ycp:124
+#, fuzzy
+msgid "Custom Region"
+msgstr "Własny rozmiar "
+
+#: storage/src/include/ep-hd-dialogs.ycp:127
+#, fuzzy
+msgid "Start Cylinder"
+msgstr "Cylinder początkowy: %1"
+
+#: storage/src/include/ep-hd-dialogs.ycp:129
+#, fuzzy
+msgid "End Cylinder"
+msgstr "Cylinder końcowy: %1"
+
 #. error popup, %1 and %2 are replaced by sizes
-#: storage/src/include/ep-hd-dialogs.ycp:160
+#: storage/src/include/ep-hd-dialogs.ycp:175
 #: storage/src/include/ep-loop-dialogs.ycp:108
 #: storage/src/include/ep-lvm-dialogs.ycp:428
 #, ycp-format
@@ -4032,7 +4086,7 @@ msgstr ""
 "\"%1\" lub \"%2\". "
 
 #. error popup, %1 and %2 are replaced by sizes
-#: storage/src/include/ep-hd-dialogs.ycp:168
+#: storage/src/include/ep-hd-dialogs.ycp:183
 #: storage/src/include/ep-lvm-dialogs.ycp:434
 #, ycp-format
 msgid "The size entered is invalid. Enter a size between %1 and %2."
@@ -4041,13 +4095,13 @@ msgstr ""
 "Wpisz wartość pomiędzy %1 a %2"
 
 #. dialog title
-#: storage/src/include/ep-hd-dialogs.ycp:246
+#: storage/src/include/ep-hd-dialogs.ycp:261
 #, ycp-format
 msgid "Add Partition on %1"
 msgstr "Dodaj partycję na %1"
 
 #. dialog title
-#: storage/src/include/ep-hd-dialogs.ycp:270
+#: storage/src/include/ep-hd-dialogs.ycp:285
 #, ycp-format
 msgid "Edit Partition %1"
 msgstr "Edycja partycji %1"
@@ -4102,8 +4156,8 @@ msgid "It is not possible to create a partition on %1."
 msgstr "Utworzenie partycji na %1 nie jest możliwe"
 
 #. error popup
-#: storage/src/include/ep-hd-lib.ycp:209 storage/src/include/ep-hd-lib.ycp:240
-#: storage/src/include/ep-hd-lib.ycp:276
+#: storage/src/include/ep-hd-lib.ycp:209 storage/src/include/ep-hd-lib.ycp:247
+#: storage/src/include/ep-hd-lib.ycp:290
 msgid "No partition selected."
 msgstr "Niewybrano partycji"
 
@@ -4118,8 +4172,14 @@ msgstr ""
 "modyfikować. Należy upewnić się, że\n"
 "%1 nie jest w użyciu."
 
+#. error popup text
+#: storage/src/include/ep-hd-lib.ycp:227
+#, fuzzy
+msgid "An extended partition cannot be edited."
+msgstr "Nie można utworzyć partycji rozszerzonej."
+
 #. error popup, %1 is replace by partition device name, e.g. /dev/sdb1
-#: storage/src/include/ep-hd-lib.ycp:257
+#: storage/src/include/ep-hd-lib.ycp:264
 #, ycp-format
 msgid ""
 "The partition %1 is in use. It cannot be\n"
@@ -4129,8 +4189,14 @@ msgstr ""
 "jej rozmiaru. Nalezy upewnić się, że nie jest\n"
 "w użyciu, by zmienić rozmiar %1."
 
+#. error popup text
+#: storage/src/include/ep-hd-lib.ycp:272
+#, fuzzy
+msgid "An extended partition cannot be resized."
+msgstr "Nie można utworzyć partycji rozszerzonej."
+
 #. popup text, %1 is replaced by a dasd name e.g. /dev/dasda
-#: storage/src/include/ep-hd-lib.ycp:299
+#: storage/src/include/ep-hd-lib.ycp:313
 #, ycp-format
 msgid ""
 "Running dasdfmt deletes all data on the disk.\n"
@@ -4141,7 +4207,7 @@ msgstr ""
 "Naprawdę wywołać dasdfmt na dysku %1?\n"
 
 #. popup text
-#: storage/src/include/ep-hd-lib.ycp:311
+#: storage/src/include/ep-hd-lib.ycp:325
 msgid ""
 "The disk is no longer marked for dasdfmt.\n"
 "\n"
@@ -4870,7 +4936,7 @@ msgstr "Widok systemu"
 
 #. popup text, %1 will be replaces with button text
 #. popup text %1 will be replaces with button text
-#: storage/src/include/ep-main.ycp:288 storage/src/inst_custom_part.ycp:1995
+#: storage/src/include/ep-main.ycp:288 storage/src/inst_custom_part.ycp:1986
 #, ycp-format
 msgid ""
 "You have changed the partitioning.\n"
@@ -6331,7 +6397,7 @@ msgid "An extended partition cannot be created."
 msgstr "Nie można utworzyć partycji rozszerzonej."
 
 #. popup text
-#: storage/src/inst_custom_part.ycp:1903
+#: storage/src/inst_custom_part.ycp:1894
 msgid ""
 "\n"
 "You cannot resize a disk device, LVM volume group, LVM physical volume,\n"
@@ -6342,7 +6408,7 @@ msgstr ""
 "fizycznego woluminu LVM, systemu plików NFS ani urządzenia MD.\n"
 
 #. popup text
-#: storage/src/inst_custom_part.ycp:1912
+#: storage/src/inst_custom_part.ycp:1903
 msgid ""
 "\n"
 "You cannot resize the selected partition because the file system\n"
@@ -6353,7 +6419,7 @@ msgstr ""
 "na tej partycji nie obsługuje operacji zmiany rozmiaru.\n"
 
 #. popup text
-#: storage/src/inst_custom_part.ycp:1951
+#: storage/src/inst_custom_part.ycp:1942
 msgid ""
 "\n"
 "You decreased the size available for Linux partitions.\n"
@@ -6366,7 +6432,7 @@ msgstr ""
 "Zaleca się sprawdzić nowe rozmiary w tablicy partycji.\n"
 
 #. popup text
-#: storage/src/inst_custom_part.ycp:1961
+#: storage/src/inst_custom_part.ycp:1952
 msgid ""
 "\n"
 "You decreased a partition that is followed by a newly-created partition.\n"
@@ -6378,7 +6444,7 @@ msgstr ""
 "Czy ta nowo utworzona partycja ma być automatycznie zwiększona, aby zająć\n"
 "całą zwolnioną przestrzeń dyskową?\n"
 
-#: storage/src/inst_disk_proposal.ycp:59
+#: storage/src/inst_disk_proposal.ycp:45
 msgid ""
 "Computing this proposal will overwrite manual changes \n"
 "done so far. Continue with computing proposal?"
@@ -6387,33 +6453,33 @@ msgstr ""
 "wprowadzonych przed chwilą ręcznie. Kontynuować?"
 
 #. Title for dialogue
-#: storage/src/inst_disk_proposal.ycp:142
+#: storage/src/inst_disk_proposal.ycp:128
 msgid "Suggested Partitioning"
 msgstr "Zalecane partycjonowanie"
 
 #. Radiobutton for partition dialog
-#: storage/src/inst_disk_proposal.ycp:144
+#: storage/src/inst_disk_proposal.ycp:130
 msgid "&Edit Partition Setup..."
 msgstr "&Edytuj ustawienia partycji..."
 
 #. Radiobutton for partition dialog
-#: storage/src/inst_disk_proposal.ycp:146
+#: storage/src/inst_disk_proposal.ycp:132
 msgid "&Create Partition Setup..."
 msgstr "&Utwórz własny rozkład partycji..."
 
 #. Radiobutton for partition dialog
-#: storage/src/inst_disk_proposal.ycp:148
+#: storage/src/inst_disk_proposal.ycp:134
 msgid "&Partition Based"
 msgstr "&Oparty o partycje"
 
 #. Radiobutton for partition dialog
-#: storage/src/inst_disk_proposal.ycp:150
+#: storage/src/inst_disk_proposal.ycp:136
 msgid "&LVM Based"
 msgstr "Oparty o &LVM"
 
 #. popup text
-#: storage/src/inst_disk_proposal.ycp:183
-#: storage/src/proposal/partitions_proposal.ycp:86
+#: storage/src/inst_disk_proposal.ycp:169
+#: storage/src/proposal/partitions_proposal.ycp:73
 msgid ""
 "No automatic proposal possible.\n"
 "Specify mount points manually in the 'Partitioner' dialog."
@@ -6422,7 +6488,7 @@ msgstr ""
 "Proszę ręcznie określić punkty montowania w oknie 'Partycjonowanie'."
 
 #. help on suggested partitioning
-#: storage/src/inst_disk_proposal.ycp:234
+#: storage/src/inst_disk_proposal.ycp:220
 msgid ""
 "<p>\n"
 "Your hard disks have been checked. The partition setup\n"
@@ -6434,7 +6500,7 @@ msgstr ""
 
 #. help text continued
 #. %1 is replaced by button text
-#: storage/src/inst_disk_proposal.ycp:240
+#: storage/src/inst_disk_proposal.ycp:226
 #, ycp-format
 msgid ""
 "<p>\n"
@@ -6450,7 +6516,7 @@ msgstr ""
 "zaawansowanych.</p>\n"
 
 #. help text continued
-#: storage/src/inst_disk_proposal.ycp:248
+#: storage/src/inst_disk_proposal.ycp:234
 #, ycp-format
 msgid ""
 "<p>\n"
@@ -6471,7 +6537,7 @@ msgstr ""
 
 #. help text continued
 #. %1 is replaced by button text
-#: storage/src/inst_disk_proposal.ycp:259
+#: storage/src/inst_disk_proposal.ycp:245
 msgid ""
 "<p>\n"
 "To create an LVM based proposal, choose the corresponding button.</p>\n"
@@ -6479,7 +6545,7 @@ msgstr ""
 "<p>\n"
 "Aby stworzyć system oparty na LVM należy wybrać odpowiedni przycisk.</p>\n"
 
-#: storage/src/inst_disk_proposal.ycp:305
+#: storage/src/inst_disk_proposal.ycp:291
 msgid "Impossible to create the requested proposal."
 msgstr "Nie można utworzyć żądanej konfiguracji."
 
@@ -8307,12 +8373,12 @@ msgid "RAID:"
 msgstr "RAID:"
 
 #. label text
-#: storage/src/proposal/partitions_proposal.ycp:194
+#: storage/src/proposal/partitions_proposal.ycp:181
 msgid "Partitioning"
 msgstr "Partycjonowanie"
 
 #. label text
-#: storage/src/proposal/partitions_proposal.ycp:196
+#: storage/src/proposal/partitions_proposal.ycp:183
 msgid "&Partitioning"
 msgstr "&Partycjonowanie"
 
@@ -8320,3 +8386,6 @@ msgstr "&Partycjonowanie"
 #: storage/src/storage_finish.ycp:46
 msgid "Saving file system configuration..."
 msgstr "Zapisywanie konfiguracji systemu plików..."
+
+#~ msgid "Partition Resizing"
+#~ msgstr "Zmiana rozmiaru partycji"
