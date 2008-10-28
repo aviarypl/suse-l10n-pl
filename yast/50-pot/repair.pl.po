@@ -1,0 +1,3058 @@
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: repair\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-10-16 13:10+0200\n"
+"PO-Revision-Date: 2008-10-28 17:20\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. popup text: %1 is tool name ("System Repair" translated)
+#: src/OSR.ycp:331
+#, ycp-format
+msgid "\nError during initialization.\nHalting %1.\n"
+msgstr "\nBłąd podczas inicjalizacji.\nZatrzymywanie %1.\n"
+
+#. popup text: %1 is function name, %2 is "System Repair" (translated)
+#: src/OSR.ycp:357
+#, ycp-format
+msgid "An error occurred during execution\nof the init functions of module %1.\n\nHalting %2.\n"
+msgstr "Wystąpił błąd podczas wykonywania\nfunkcji init modułu %1.\n\nZatrzymywanie %2.\n"
+
+#. show error message and close the main window
+#. %1 is translation of "System Repair"
+#: src/OSR.ycp:426
+#, ycp-format
+msgid "\nNot all dependencies between the\nmodules were successfully solved.\n\nHalting %1."
+msgstr "\nNie wszystkie zależności między \nmodułami zostały poprawnie rozwiązane.\n\nZatrzymywanie %1."
+
+#. error message: %1 is explanation, %2 is list of packages
+#: src/OSRBoot.ycp:498
+#, ycp-format
+msgid "\n%1\n\n%2\n\nPress Repair to install these packages.\n"
+msgstr "\n%1\n\n%2\n\nProszę nacisnąć przycisk Napraw, aby zainstalować te pakiety.\n"
+
+#: src/OSRBoot.ycp:507
+msgid "Boot Loader Package Missing"
+msgstr "Brak pakietu programu rozruchowego"
+
+#: src/OSRBoot.ycp:551
+msgid "\nThe variable INITRD_MODULES contains the list of modules\nto add to the initial RAM disk by calling the script mkinitrd.\nExamples are drivers for SCSI controllers, LVM, reiserfs.\n"
+msgstr "\nZmienna INITRD_MODULES zawiera listę modułów, które powinny\nbyć dodane do początkowego ramdysku, poprzez wywołanie\nskryptu mkinitrd. Przykładami są sterowniki SCSI, LVM, reiserfs.\n"
+
+#. %1 is file name, %2 is list of kernel modules
+#: src/OSRBoot.ycp:557
+#, ycp-format
+msgid "\nThe file %1 contains a list\nof modules to add to the initial\nRAM disk by calling the script mkinitrd.\nYaST is missing the following modules:\n\n%2\n\nPress Repair to add the missing\nmodules to the initial RAM disk.\n"
+msgstr "\nPlik %1 zawiera listę modułów,\nktóre skrypt mkinitrd powinien\ndodać do początkowego ramdysku.\nYaST nie może odnaleźć następujących modułów:\n\n%2\n\nProszę nacisnąć przycisk Napraw, aby dodać\nbrakujące moduły do początkowego ramdysku.\n"
+
+#. initrd is case-sensitive
+#: src/OSRBoot.ycp:581
+msgid "initrd Modules Missing"
+msgstr "Brak modułów initrd"
+
+#. question in a popup box
+#: src/OSRBoot.ycp:604
+msgid "Calling mkinitrd failed.\nDisplay the log file?\n"
+msgstr "Nie udało się uruchomić mkinitrd.\nCzy pokazać plik dziennika?\n"
+
+#: src/OSRBoot.ycp:608
+msgid "The Output of the Script mkinitrd"
+msgstr "Wyjście skryptu mkinitrd"
+
+#. No conf file found
+#: src/OSRBoot.ycp:630
+#, ycp-format
+msgid "\n<p>The file %1 was not found.</p>"
+msgstr "\n<p>Plik %1 nie został odnaleziony.</p>"
+
+#: src/OSRBoot.ycp:633
+msgid "<p>The boot loader configuration file contains\ndefective data. Depending on the boot loader\ntype, the syntax of the configuration file\ndiffers. </p>\n"
+msgstr "<p>Pliki konfiguracyjne programu rozruchowego\nzawierają uszkodzone dane. Składnia pliku \nkonfiguracyjnego zależy od rodzaju programu \nrozruchowego. </p>\n"
+
+#: src/OSRBoot.ycp:639
+msgid "\nThe main configuration file of the boot loader was\nnot found.\n\nIf you changed the boot loader configuration\nmanually and the system starts correctly,\nskip this dialog and continue the detection\nsequence.\nIf you never changed anything affecting\nthe boot loader, press Repair\nto create a new configuration file.\n"
+msgstr "\nNie znaleziono głównego pliku konfiguracyjnego \nprogramu rozruchowego.\n\nJeśli konfiguracja programu rozruchowego\nbyła wykonywana ręcznie i system uruchamia się\npoprawnie, proszę pomiąć to okno i kontynuować\nsekwencję wykrywania.\nJeśli nie zmieniano niczego związanego z programem\nrozruchowym, należy nacisnąć przycisk Napraw, aby\nutworzyć nowy plik konfiguracyjny.\n"
+
+#. help text 1/2
+#: src/OSRBoot.ycp:683
+msgid "\n<p>The command /sbin/lilo -t checks the syntax\nof the LILO boot loader configuration file.</p>\n"
+msgstr "\n<p>Polecenie /sbin/lilo -t służy do sprawdzenia składni\npliku konfiguracyjnego programu rozruchowego LILO.</p>\n"
+
+#. help text 2/2
+#: src/OSRBoot.ycp:689
+msgid "<p>This command returned an error. This normally means\nyour system is not bootable.\n\nIt is recommended to create a new configuration\nfile.</P>\n"
+msgstr "<p>Polecenie zwróciło błąd. Zwykle oznacza to, że\nsystemu nie da się uruchomić.\n\nZalecane jest utworzenie nowego pliku \nkonfiguracyjnego.</P>\n"
+
+#. error message
+#: src/OSRBoot.ycp:697
+msgid "\nThe syntax of the boot loader configuration\nfile is not valid.\nThe configuration file contains defective\ndata needed for booting the Linux system.\n\nPress Repair to generate a new\nconfiguration file automatically.\n\nIf you are sure your configuration file\ncontains no errors, press Skip.\n"
+msgstr "\nNieprawidłowa składnia pliku konfiguracyjnego \nprogramu rozruchowego.\nDane w pliku konfiguracyjnym, konieczne do\nuruchomienia systemu Linux, zostały uszkodzone.\n\nProszę nacisnąć przycisk Napraw aby automatycznie\nwygenerować nowy plik konfiguracyjny.\n\nW razie pewności, że plik konfiguracyjny nie\nzawiera błędów, proszę nacisnąć przycisk Pomiń.\n"
+
+#. help text 1/4
+#: src/OSRBoot.ycp:1180
+msgid "\n<p>A default GRUB installation needs three\nconfiguration files:</p>\n"
+msgstr "\n<p>Domyślna instalacja programu GRUB wymaga\ntrzech plików konfiguracyjnych:</p>\n"
+
+#. help text 2/4
+#: src/OSRBoot.ycp:1192
+msgid "<P>The following files\nare not valid:</p>\n"
+msgstr "<P>Następujące pliki\nnie są prawidłowe:</p>\n"
+
+#. help text 3/4
+#: src/OSRBoot.ycp:1199
+msgid "<p>This generally means that your system is not\nbootable.</p>\n"
+msgstr "<p>Zwykle oznacza to, że system nie da się\nuruchomić.</p>\n"
+
+#. help text 4/4
+#: src/OSRBoot.ycp:1204
+msgid "<p>Creating a new boot loader\nconfiguration is recommended.</p>\n"
+msgstr "<p>Zaleca się utworzenie nowej konfiguracji\nprogramu rozruchowego.</p>\n"
+
+#. error text
+#: src/OSRBoot.ycp:1209
+msgid "\nThe configuration of the boot loader\ncontains errors.\n\nPress Repair to generate a new\nconfiguration automatically.\n\nIf you are sure your configuration\ncontains no errors and your system\nis bootable, press Skip.\n"
+msgstr "\nBłędna konfiguracja programu\nrozruchowego.\n\nProszę nacisnąć przycisk Napraw, aby automatycznie\nwygenerować nową konfigurację.\n\nW razie pewności, że konfiguracja nie\nzawiera błędów, a system się uruchamia, \nproszę nacisnąć przycisk Pomiń.\n"
+
+#. message popup
+#: src/OSRBoot.ycp:1287
+msgid "The boot loader was installed successfully."
+msgstr "Program rozruchowy został poprawnie zainstalowany."
+
+#. popup headline
+#: src/OSRBoot.ycp:1305
+msgid "Boot Loader Error Detected"
+msgstr "Wykryto błąd programu rozruchowego"
+
+#: src/OSRBoot.ycp:1328
+msgid "\nNo valid boot loader installation\ncan be found. Installing\na new boot loader is recommended.\n\nIf you are sure your system boots\ncorrectly, it is not necessary to\nreinstall the boot loader.\n\nOtherwise, press Repair\nto install a new boot loader.\n"
+msgstr "\nNie można znaleźć poprawnie zainstalowanego\nprogramu rozruchowego. Zaleca się zainstalowanie\nnowego programu rozruchowego.\n\nW razie pewności, że system uruchamia się\npoprawnie, ponowna instalacja rozruchowego\nnie jest konieczna.\n\nW przeciwnym przypadku proszę nacisnąć przycisk\nNapraw, aby zainstalować nowy program rozruchowy.\n"
+
+#: src/OSRBoot.ycp:1341
+msgid "\n<P>The boot loader is the first thing\nyou should see after you turn\non a computer with a Linux installation.\nStarting a Linux system without\na boot loader is not possible.</P>\n"
+msgstr "\n<P>Program rozruchowy jest pierwszą rzeczą,\njaką powinno się zobaczyć po włączeniu komputera\nz systemem Linux.\nUruchomienie systemu Linux bez programu\nrozruchowego nie jest możliwe.</P>\n"
+
+#: src/OSRBoot.ycp:1349 src/osr_module_bootloader.ycp:670
+msgid "<P>If you have installed more than\none operating system on a computer,\nthe boot loader allows you to select\nwhich system to start.</P>\n"
+msgstr "<P>Jeśli na komputerze zainstalowano więcej\nniż jeden system operacyjny, program rozruchowy\npozwala wybrać, który system\nma być uruchomiony.</P>\n"
+
+#: src/OSRBoot.ycp:1368
+#, ycp-format
+msgid "\nThe file %1 was not found.\nIt cannot be recovered.\n"
+msgstr "\nNie znaleziono pliku %1.\nNie można odzyskać tego pliku.\n"
+
+#: src/OSRBoot.ycp:1377
+#, ycp-format
+msgid "\nThe following configuration \nfiles cannot be found:\n\n%1\n\nInstalling a new\nboot loader is recommended.\n\nIf you are sure your system boots\ncorrectly, it is not necessary to\nreinstall the boot loader.\n\nOtherwise, press Repair\nto install a new boot loader.\n"
+msgstr "\nNie można znaleźć następujących\nplików konfiguracyjnych:\n\n%1\n\nDlatego zalecana jest instalacja\nnowego programu rozruchowego.\n\nW razie pewności, że system uruchamia\nsię poprawnie, to ponowna instalacja\nprogramu rozruchowego nie jest konieczna.\n\nW przeciwnym przypadku proszę nacisnąć przycisk Napraw,\nw celu zainstalowania nowego programu rozruchowego.\n"
+
+#. ---------------------------------------------------------------------
+#. from OSRRepair.ycp:
+#. *
+#. * The name of the repair and rescue tool.
+#.
+#: src/OSRCommon.ycp:91
+msgid "System Repair"
+msgstr "Naprawa systemu"
+
+#. header (options with buttons will follow)
+#: src/OSRDirect.ycp:80
+msgid "Repair Tools"
+msgstr "Narzędzia do naprawy"
+
+#. menubutton label
+#: src/OSRDirect.ycp:121
+msgid "Re&pair Tools..."
+msgstr "Narzędzia do na&prawy..."
+
+#. wait popup
+#: src/OSRDirect.ycp:153
+msgid "Reading system settings..."
+msgstr "Wczytywanie ustawień systemu..."
+
+#. error message
+#: src/OSRFloppy.ycp:77
+msgid "\nNo floppy device was detected. Loading a\nfile from a removable device is not possible.\n"
+msgstr "\nNie wykryto stacji dysków. Wczytanie plików\nz dyskietki jest niemożliwe.\n"
+
+#. error popup, %1 is name of kernel module (driver)
+#: src/OSRFloppy.ycp:106
+#, ycp-format
+msgid "\nAn error occurred while loading the %1 kernel\nmodule. Mounting the floppy device is not possible.\nSystem information cannot be read.\n\n"
+msgstr "\nWystąpił błąd podczas wczytywania modułu jądra %1.\nZamontowanie dyskietki nie jest możliwe. Nie da się \nodczytać informacji o systemie.\n\n"
+
+#. error popup (%1 is mount point, e.g. /media/floppy)
+#: src/OSRFloppy.ycp:134
+#, ycp-format
+msgid "\nThe default floppy mount point %1\ndoes not exist and cannot be created.\n"
+msgstr "\nDomyślny punkt montowania dyskietki %1\nnie istnieje i nie można go utworzyć.\n"
+
+#. error popup
+#: src/OSRFloppy.ycp:173
+msgid "\nAn error occurred while mounting the floppy."
+msgstr "\nWystąpił błąd podczas montowania dyskietki."
+
+#. error popup
+#: src/OSRFloppy.ycp:193
+msgid "An error occurred while unmounting the floppy."
+msgstr "Wystąpił błąd podczas odmontowania dyskietki."
+
+#. progress bar label
+#: src/OSRFloppy.ycp:268
+msgid "Checking floppy device..."
+msgstr "Sprawdzanie napędu dyskietki..."
+
+#. label text
+#: src/OSRFloppy.ycp:272
+msgid "Loading file system modules..."
+msgstr "Wczytywanie modułów systemu plików..."
+
+#. label text
+#: src/OSRFloppy.ycp:276
+msgid "Checking mount point..."
+msgstr "Sprawdzanie punktu montowania..."
+
+#. label text
+#: src/OSRFloppy.ycp:280
+msgid "Mounting floppy..."
+msgstr "Montowanie dyskietki..."
+
+#. label text
+#: src/OSRFloppy.ycp:298
+msgid "Unmounting floppy..."
+msgstr "Odmontowywanie dyskietki..."
+
+#. error message, %1 is filesystem type, %2 partition
+#: src/OSRFsck.ycp:565
+#, ycp-format
+msgid "\nThe %1 file system of the partition %2 is corrupted.\nTo repair the file system, press Repair.\n\nPress Skip if you do not want this repair.\n"
+msgstr "\nUszkodzony system plików %1 na partycji %2. Aby\nnaprawić ten system plików, należy nacisnąć przycisk Napraw.\n\nProszę nacisnąć przycisk Pomiń, aby nie naprawiać.\n"
+
+#. error message
+#: src/OSRFsck.ycp:573
+msgid "\n<p>An inconsistent file system occurs when\na partition is not correctly unmounted.\nThis could happen during a system crash.</p>\n"
+msgstr "\n<p>Niespójność systemu plików jest efektem\nnieprawidłowego odmontowania partycji.\nMogło się to zdarzyć podczas awarii systemu.</p>\n"
+
+#. error message
+#: src/OSRFsck.ycp:580
+msgid "<p>There is a repair method for each file\nsystem. For example, if the file system\nof the damaged partition is ext2 or\next3, use fsck.ext2 (e2fsck) with the\ncorresponding options to repair the\nfile system. The following lines list\nthe repair tools of the different Linux\nfile systems.</p>\n"
+msgstr "<p>Istnieją metody naprawy dla każdego systemu plików. \nNa przykład, jeśli na uszkodzonej \npartycji znajduje się system ext2 lub ext3, \ndo naprawy tego systemu plików \nnależy użyć fsck.ext2 (e2fsck) z odpowiednimi\nopcjami. Poniżej przedstawiono narzędzia do naprawy\nróżnych systemów plików Linuksa.</p>\n"
+
+#: src/OSRFsck.ycp:590
+msgid "<p><pre>\next2 and ext2: fsck.ext2 or e2fsck\nreiserfs:      reiserfsck\njfs:           fsck.jfs\nxfs:           xfs_repair\nmsdos (fat):   fsck.msdos</pre></p>"
+msgstr "<p><pre>\next2 i ext2:   fsck.ext2 lub e2fsck\nreiserfs:      reiserfsck\njfs:           fsck.jfs\nxfs:           xfs_repair\nmsdos (fat):   fsck.msdos</pre></p>"
+
+#: src/OSRFsck.ycp:600
+msgid "<p>If you know what kind of file system\nyou have and how to use the corresponding\ntool, close this program and repair the\ndamaged file system on your own. Otherwise,\nclose this help dialog and press \nRepair for automatic repair.</p>\n"
+msgstr "<p>Jeśli znany jest używany system plików\ni wiadomo, jak używać odpowiednich narzędzi, proszę wyjść\nz tego programu i samodzielnie naprawić uszkodzenie systemu\nplików. W przeciwnym przypadku proszę zamknąć to\nokienko i nacisnąć przycisk Napraw, a naprawa\nzostanie wykonana automatycznie.</p>\n"
+
+#: src/OSRFsck.ycp:610 src/OSRPtbl.ycp:551 src/OSRSwap.ycp:67
+msgid "Error Detected"
+msgstr "Wykryto błąd"
+
+#: src/OSRFsck.ycp:613
+msgid "Repairing file system..."
+msgstr "Naprawianie systemu plików..."
+
+#. %1 is file system, %2 is partition
+#: src/OSRFsck.ycp:635
+#, ycp-format
+msgid "\nSuccessfully Repaired %1 on %2"
+msgstr "\nPomyślnie naprawione %1 na %2"
+
+#. %1 is file system, %2 is partition
+#: src/OSRFsck.ycp:642
+#, ycp-format
+msgid "\nFailed Repair of %1 on %2"
+msgstr "\nNieudana naprawa %1 na %2"
+
+#. popup headline, reiserfs is file system
+#: src/OSRFsck.ycp:709
+msgid "Fatal Corruptions on reiserfs"
+msgstr "Uszkodzenie krytyczne reiserfs"
+
+#. popup text (yes/no)
+#: src/OSRFsck.ycp:711
+msgid "\nChecking the file system (reiserfs) reports\nfatal corruptions. Only a rebuild of the reiserfs\nfile system tree (reiserfsck --rebuild-tree)\ncould solve the problem.\n\nTo rebuild your reiserfs tree,\npress Repair. Otherwise press\nSkip and repair the file system manually.\n"
+msgstr "\nSprawdzenie systemu plików (reiserfs) wykazało\nkrytyczne uszkodzenia. Rozwiązać problem można\nwyłącznie przez odtworzenie drzewa systemu\nreiserfs (reiserfsck --rebuild-tree).\n\nAby odtworzyć drzewo reiserfs, należy nacisnąć przycisk\nNapraw. W przeciwnym razie proszę nacisnąć przycisk Pomiń\ni naprawić system plików ręcznie.\n"
+
+#: src/OSRFstab.ycp:57
+msgid "Remove"
+msgstr "Usuń"
+
+#: src/OSRFstab.ycp:58 src/OSRPtbl.ycp:36
+msgid "Ignore"
+msgstr "Ignoruj"
+
+#: src/OSRFstab.ycp:59
+msgid "Replace"
+msgstr "Zamień"
+
+#: src/OSRFstab.ycp:60
+msgid "Create"
+msgstr "Utwórz"
+
+#: src/OSRFstab.ycp:62
+msgid "Device"
+msgstr "Urządzenie"
+
+#: src/OSRFstab.ycp:63
+msgid "Mount Point"
+msgstr "Punkt montowania"
+
+#: src/OSRFstab.ycp:64
+msgid "Create Mount Point"
+msgstr "Utwórz punkt montowania"
+
+#: src/OSRFstab.ycp:65
+msgid "State"
+msgstr "Stan"
+
+#. fstab is file name
+#: src/OSRFstab.ycp:67
+msgid "fstab Line"
+msgstr "Wiersz fstab"
+
+#. button label
+#. pushbutton label
+#: src/OSRFstab.ycp:70 src/OSRPopup.ycp:34
+msgid "&Ignore"
+msgstr "&Ignoruj"
+
+#. button label
+#: src/OSRFstab.ycp:72
+msgid "&Create"
+msgstr "&Utwórz"
+
+#. button label
+#: src/OSRFstab.ycp:74
+msgid "&Remove"
+msgstr "U&suń"
+
+#. button label
+#: src/OSRFstab.ycp:76
+msgid "Change &Mount Point"
+msgstr "Zmień punkt &montowania"
+
+#. button label
+#: src/OSRFstab.ycp:78
+msgid "R&eplace"
+msgstr "Zami&eń"
+
+#. yes/no popup headline, fstab is file name
+#: src/OSRFstab.ycp:460
+msgid "Cannot Read fstab"
+msgstr "Nie można odczytać pliku fstab"
+
+#. yes/no popup text
+#: src/OSRFstab.ycp:462
+msgid "\nNo existing fstab file found. \nCreate a new one?\n"
+msgstr "\nNie znaleziono pliku fstab.\nCzy utworzyć nowy?\n"
+
+#. popup message
+#: src/OSRFstab.ycp:1226
+msgid "\nAll missing mount points were\ncreated successfully.\n"
+msgstr "\nWszystkie brakujące punkty montowania\nzostały utworzone.\n"
+
+#. error popup
+#: src/OSRFstab.ycp:1234
+#, ycp-format
+msgid "\nCould not create the\nfollowing mount points:\n%1\n"
+msgstr "\nNie można utworzyć następujących\npunktów montowania:\n%1\n"
+
+#: src/OSRFstab.ycp:1243
+#, ycp-format
+msgid "\nCould not create the \nmount point:\n%1\n"
+msgstr "\nNie można utworzyć\npunktu montowania:\n%1\n"
+
+#. help text for the /etc/fstab dialog
+#: src/OSRFstab.ycp:1263
+msgid "\n<P>No valid fstab entry was found for the devices listed in the table.</P>\n<P>\nSelect the devices for which to create a new fstab entry.\n</P>\n<p>Press <b>Change</b> to accept the changes proposed in this dialog.</p>"
+msgstr "\n<P>Nie znaleziono prawidłowych wpisów fstab dla urządzeń wymienionych w tabeli</P>\n<P>\nProszę wybrać urządzenia, dla których należy utworzyć nowe wpisy fstab.\n</P>\n<p>Naciśnij przycisk <b>Zmień</b> aby zaakceptować zmiany zaproponowane w tym oknie.</p>"
+
+#. help text for table entry
+#: src/OSRFstab.ycp:1272
+msgid "The name of the device for which no valid fstab\nentry was found.\n"
+msgstr "Nazwa urządzenia, dla którego nie znaleziono\nprawidłowego wpisu w pliku fstab.\n"
+
+#. help text for table entry
+#: src/OSRFstab.ycp:1277
+msgid "The mount point for the found device. This\nmount point is created in the file system. If you leave the mount point field empty, no fstab entry will be created.\n"
+msgstr "Punkt montowania dla znalezionego urządzenia. Punkt montowania\ntworzony jest w systemie plików. Pozostawienie pustego punktu montowania spowoduje, że nie zostanie utworzony wpis w pliku fstab.\n"
+
+#. help text for Change Mount Point button
+#: src/OSRFstab.ycp:1282
+msgid "Specify a mount point for a device different from the proposed one."
+msgstr "Proszę określić punkt montowania dla urządzenia inny, niż zaproponowany"
+
+#. dialog caption
+#: src/OSRFstab.ycp:1285
+msgid "Add fstab Entries"
+msgstr "Dodaj wpisy fstab"
+
+#: src/OSRFstab.ycp:1286
+msgid "\nSelect the devices for which to\ncreate a new fstab entry and enter a mount point.\n"
+msgstr "\nProszę wskazać urządzenia, dla których należy utworzyć\nnowe wpisy w pliku fstab i podać punkty montowania.\n"
+
+#: src/OSRFstab.ycp:1291
+msgid "Devices without Valid fstab Entry"
+msgstr "Urządzenia bez prawidłowych wpisów w pliku fstab"
+
+#. TextEntry label, %1 is device label
+#. TextEntry label, %1 is device
+#: src/OSRFstab.ycp:1309 src/OSRFstab.ycp:1497
+#, ycp-format
+msgid "\nMount Point for %1\n"
+msgstr "\nPunkt montowania dla %1\n"
+
+#: src/OSRFstab.ycp:1330
+msgid "\nFirst create mount points\nfor the listed devices.\n"
+msgstr "\nNajpierw proszę utworzyć punkty montowania\ndla podanych urządzeń.\n"
+
+#. yes/no popup headline
+#: src/OSRFstab.ycp:1340
+msgid "Empty Mount Point"
+msgstr "Pusty punkt montowania"
+
+#. yes/no popup text
+#: src/OSRFstab.ycp:1342
+msgid "\nValid mount points are required to\ncreate fstab entries for devices.\nYou did not enter a mount point\nfor all devices. If you continue\nnow, fstab entries are only created\nfor devices with mount points. \nReally continue?\n"
+msgstr "\nDo utworzenia wpisów w pliku fstab dla urządzeń\nkonieczne są prawidłowe punkty montowania.\nNie podano punktów montowania dla\nwszystkich urządzeń. W takiej sytuacji\nzostaną utworzone wpisy fstab wyłącznie dla\nurządzeń z określonymi punktami\nmontowania.\nCzy naprawdę kontynuować?\n"
+
+#. help text
+#: src/OSRFstab.ycp:1428
+msgid "\n<P>The /etc/fstab file does not contain\nvalid mount points for the listed devices.\n</P>"
+msgstr "\n<P>Plik /etc/fstab nie zawiera\nprawidłowych punktów montownia dla podanych urządzeń.\n</P>"
+
+#. %1 is Ignore label and %2 is Create label
+#: src/OSRFstab.ycp:1433
+#, ycp-format
+msgid "\nThe status of a listed line can be switched between\n%1 and %2. Mount points for a partition are only created\nif the the status is %2.\n"
+msgstr "\nStan pokazanego wiersza może być przełączany pomiędzy\n%1 i %2. Punkt montowania dla partycji zostanie utworzony\ntylko wtedy, gdy stan będzie %2.\n"
+
+#: src/OSRFstab.ycp:1440
+msgid "\nThis field contains the present entry\nof the mount point in fstab.\nChange this field to a valid mount point.\nIf you do not want to create the mount point,\nselect the corresponding line in the table and change\nthe status to ignore.\n"
+msgstr "\nTo pole zawiera aktualny wpis pliku fstab\ndla punktu montowania.\nProszę zmienić zawartość pola na prawidłowy punkt montowania.\nJeśli nie ma potrzeby tworzenia punktu montowania,\nproszę wybrać odpowiedni wiersz w tabeli i zmienić\njego stan na 'ignoruj'.\n"
+
+#. %1 is Ignore label
+#. %1 is Create label
+#. %1 is Ignore label
+#. %1 is Remove label
+#. %1 is Ignore label
+#. %1 is Replace label
+#: src/OSRFstab.ycp:1449 src/OSRFstab.ycp:1453 src/OSRFstab.ycp:1605
+#: src/OSRFstab.ycp:1609 src/OSRFstab.ycp:1835 src/OSRFstab.ycp:1839
+#, ycp-format
+msgid "Change the status of the line to %1.\n"
+msgstr "Zmień stan wiersza na %1.\n"
+
+#: src/OSRFstab.ycp:1456
+msgid "Create Mount Points"
+msgstr "Utwórz punkty montowania"
+
+#: src/OSRFstab.ycp:1457
+msgid "\nSome mount points for fstab entries are missing in\nthe file system. Change the status of the\nlines for which to create a mount point.\n"
+msgstr "\nNiektóre punkty montowania podane w fstab nie istnieją\nw systemie plików. Proszę zmienić stan wierszy, dla\nktórych mają być utworzone punkty montowania.\n"
+
+#: src/OSRFstab.ycp:1463
+msgid "Missing or Invalid Mount Points"
+msgstr "Stwierdzono brak lub błędy punktów montowania"
+
+#. help text in fstab dialog, %1 is Ignore label, %2 is Remove label
+#: src/OSRFstab.ycp:1598
+#, ycp-format
+msgid "\nThe status of a listed line can be switched between\n%1 and %2. fstab entries are only removed if the the status of the\ncorresponding line is %2.\n"
+msgstr "\nStan pokazanego wiersza może być przełączany między\n%1 i %2. Punkty montowania są usuwane tylko\nwtedy, gdy stan odpowiedniego wiersza jest ustawiony na %2.\n"
+
+#. dialog caption, fstab is filename
+#: src/OSRFstab.ycp:1614
+msgid "Remove fstab Entries"
+msgstr "Usuń wpis fstab"
+
+#. dialog text
+#: src/OSRFstab.ycp:1616
+msgid "Could not find existing devices for the following fstab lines.\nTo remove the lines from fstab, select them in the table and \nchange the status.\n"
+msgstr "Nie można odnaleźć urządzeń dla następujących wierszy pliku fstab.\nAby usunąć te wiersze z fstab, proszę wskazać je w tabeli\ni zmienić ich status.\n"
+
+#. label (table will follow)
+#: src/OSRFstab.ycp:1623
+msgid "Invalid or Obsolete Lines in fstab"
+msgstr "Nieprawidłowe lub nieaktualne wpisy w fstab"
+
+#. label of table, fstab is filename
+#: src/OSRFstab.ycp:1813
+msgid "Existing fstab Lines"
+msgstr "Istniejące wpisy fstab"
+
+#. label of table, fstab is filename
+#: src/OSRFstab.ycp:1815
+msgid "Suggested fstab Lines"
+msgstr "Proponowane wpisy fstab"
+
+#. help text, %1 is table label for Suggested.  %2 is Replace button label
+#: src/OSRFstab.ycp:1818
+#, ycp-format
+msgid "\nOne or more existing fstab entries seem to\nbe invalid. Compare the suggested entry\nwith the existing one.\nTo replace an existing line with a suggested\nline, select the corresponding line\nin the %1 table and\npress %2.\n"
+msgstr "\nPrawdopodobnie w pliku fstab co najmniej jeden wiersz \nnie jest prawidłowy. Proszę porównać proponowaną pozycję\nz istniejącą.\nAby zastąpić istniejący wiersz sugerowanym,\nproszę wybrać odpowiedni wiersz w tabeli %1 \ni naciśnąć %2.\n"
+
+#. %1 is Ignore label, %2 is replace label
+#: src/OSRFstab.ycp:1829
+#, ycp-format
+msgid "\nThe status of a listed line can be switched between\n%1 and %2. Lines are only replaced if the status is %2.\n"
+msgstr "\nStan pokazanego wiersza może być przełączany pomiędzy\n%1 i %2. Wiersze są zastępowane tylko wtedy, gdy stan będzie %2.\n"
+
+#. dialog headline
+#: src/OSRFstab.ycp:1843
+msgid "Change Existing fstab Entries"
+msgstr "Zmień istniejące wpisy fstab"
+
+#. dialog description
+#: src/OSRFstab.ycp:1845
+msgid "\nOne or more existing fstab entries seem invalid. \nCompare the suggested entry with the existing one."
+msgstr "\nPrawdopodobnie w pliku fstab co najmniej jeden wpis \nnie jest prawidłowy. Porównaj sugerowany wpis z istniejącym."
+
+#: src/OSRFstab.ycp:1898
+msgid "\nSet the status of at least one\ntable entry to replace.\n"
+msgstr "\nUstaw status co najmniej jednej \npozycji tabeli na 'wymień'.\n"
+
+#. yes/no popup headline
+#: src/OSRFstab.ycp:1908
+msgid "Not All Replaced"
+msgstr "Nie wszystko zostało zastąpione"
+
+#. yes/no popup text
+#: src/OSRFstab.ycp:1910
+msgid "\nOnly the fstab lines marked for replacement \nare replaced. Really replace only the\nselected lines?\n"
+msgstr "\nZastąpione zostaną tylko zaznaczone wiersze\npliku fstab. Czy naprawdę zastąpić tylko\nwybranie wiersze?\n"
+
+#. popup headline
+#: src/OSRFstab.ycp:2150
+msgid "Select a Root Partition"
+msgstr "Proszę wybrać partycję główną (root)"
+
+#. popup text (radio buttons wil follow
+#: src/OSRFstab.ycp:2152
+msgid "There are several valid root partitions in your system.\nSelect one item in the list.\n"
+msgstr "W tym systemie znajduje się kilka prawidłowych partycji głównych.\nProszę wybrać jedną pozycję z listy.\n"
+
+#. error popup: no root partition found
+#: src/OSRFstab.ycp:2273
+msgid "\nNo valid root partition found. \nGo back and select all scan \noptions. Afterwards, restart \nscanning.\n"
+msgstr "\nNie udało się znaleźć prawidłowej\npartycji głównej. Proszę wrócić i wybrać\nwszystkie opcje sprawdzania systemu.\nNastępnie proszę ponownie uruchomić sprawdzanie.\n"
+
+#: src/OSRFstab.ycp:2341
+msgid "\nCannot read the file /etc/fstab.\nInitialization of the target system\nis not possible. Go back\nand select all scan options.\n"
+msgstr "\nNie można odczytać pliku /etc/fstab.\nInicjalizacja systemu docelowego jest \nniemożliwa. Proszę wrócić i wybrać wszystkie\nopcje przeglądania.\n"
+
+#. error popup
+#: src/OSRMode.ycp:73
+msgid "\nFinish installation before\nstarting the repair system.\n\nHalting the repair system.\n"
+msgstr "\nProszę zakończyć instalację przed\nuruchomieniem systemu naprawy.\n\nZatrzymywanie systemu naprawy.\n"
+
+#. general help text about package database
+#: src/OSRPkg.ycp:144
+msgid "\n<p>The package database administers all\ninformation of the installed software packages.\nThe most common way to add a new program or library\nto a Linux system is to install a new package.\nIn doing so, the install routine copies all files of the\npackage to the target and registers the package in\nthe package database.</P>\n"
+msgstr "\n<p>Baza danych pakietów służy do administrowania wszystkimi\ninformacjami o zainstalowanych pakietach oprogramowania.\nNajpopularniejszą metodą dodawania nowych programów\ni bibliotek do systemu Linux jest instalowanie pakietów.\nPolega to na skopiowaniu przez procedury instalacyjne\nwszystkich plików tworzących pakiet do ich miejsc docelowych\noraz zarejestrowaniu pakietu w bazie danych pakietów.</P>\n"
+
+#. general help text about damaged package database
+#: src/OSRPkg.ycp:155
+msgid "\n<P>If the package database is damaged, installing\nand removing packages or updating the system\nis not possible.</P>\n"
+msgstr "\n<P>Uszkodzenie bazy danych pakietów powoduje,\nże nie jest możliwe instalowanie i usuwanie pakietów\nani uaktualnianie systemu.</P>\n"
+
+#. error popup
+#: src/OSRPkg.ycp:284
+msgid "\nCannot open the package database.\nTry rebuilding the package\ndatabase or reverting to a backup.\n"
+msgstr "\nNie można otworzyć bazy danych\npakietów. Proszę spróbować ponownie utworzyć \ntę bazę lub odtworzyć ją z kopii zapasowych.\n"
+
+#. continue/cancel popup, %1 is tool name ('System repair')
+#. %2-%3 are name and version of product with yast2-repair (e.g. the one on CD/DVD)
+#. %4-%5 are name and version of installed product (the one being checked/repaired)
+#: src/OSRPkg.ycp:326
+#, ycp-format
+msgid "You seem to be using %1 from\na product (%2 %3) different\nthan the installed one (%4 %5).\n\nBecause the package database of the installed product\ncan be damaged, only the package database from the correct \ninstallation media can be used for the package database checking.\nChecking the package database with a different product\nshould be skipped. \n\nReally continue to package database check?\n"
+msgstr "Wygląda na to, że używasz %1 z\nproduktu (%2 %3) innego niż\nzainstalowany (%4 %5).\n\nPonieważ baza danych pakietów zainstalowanych produktów\nmoże być uszkodzona, tylko baza danych pakietów z prawidłowego \nnośnika instalacyjnego może zostać użyta do sprawdzenia.\nSprawdzanie bazy danych pakietów z innym produktem\npowinno zostać pominięte.\n\nCzy na pewno kontynuować sprawdzanie bazy danych pakietów?\n"
+
+#. error message: files (%1) not found
+#: src/OSRPkg.ycp:374
+#, ycp-format
+msgid "\nThe package database was checked.\nThe following files that belong \nto the package database were not\nfound.\n\n%1\n"
+msgstr "\nBaza pakietów została sprawdzona.\nNie znaleziono następujących plików,\nktóre należą do tej bazy.\n\n%1\n"
+
+#: src/OSRPkg.ycp:439
+msgid "\nReverting to the backup was successful.\n"
+msgstr "\nOdtwarzanie z kopii zapasowej nie powiodło się.\n"
+
+#. error popup
+#: src/OSRPkg.ycp:446
+msgid "\nReverting to the backup was not\nsuccessful. Select another\nbackup or try to rebuild\nthe package database.\n"
+msgstr "\nOdtwarzanie z kopii zapasowej nie \npowiodło się. Proszę wskazać inną kopię\nzapasową lub spróbować przebudować\nbazę pakietów.\n"
+
+#. wait popup label
+#: src/OSRPkg.ycp:466
+msgid "Rebuilding the package database..."
+msgstr "Przebudowywanie bazy pakietów..."
+
+#: src/OSRPkg.ycp:490
+msgid "\nSuccessfully rebuilt the \npackage database.\n"
+msgstr "\nPrzebudowanie bazy pakietów\npowiodło się.\n"
+
+#: src/OSRPkg.ycp:497
+msgid "\nCould not rebuild the package\ndatabase. Revert to a backup of\nthe package database.\n"
+msgstr "\nNie można przebudować bazy \npakietów. Proszę odtworzyć bazę pakietów\nz kopii zapasowej.\n"
+
+#: src/OSRPkg.ycp:548
+#, ycp-format
+msgid "\nNo package database backup files\nfound. Normally, a cron job creates\ndaily backups of the package database and\nstores the backups in the directory\n%1. However, no backup files could\nbe found in this directory.\nTry another repair method.\n"
+msgstr "\nNie można znaleźć kopii zapasowej\nbazy pakietów. Zazwyczaj zadanie programu cron tworzy\ncodzienną kopię zapasową bazy pakietów i umieszcza\ntę kopię w katalogu %1. Jednak w tym katalogu\nnie znaleziono żadnych kopii zapasowych.\nProszę spróbować innej metody naprawy.\n"
+
+#: src/OSRPkg.ycp:560
+msgid "Backup to Use"
+msgstr "Kopia zapasowa do użycia"
+
+#: src/OSRPkg.ycp:561
+msgid "\nSeveral backups of the \npackage database were found.\nSelect the date (YYYY/MM/DD)\nof the backup to which \nto revert.\n"
+msgstr "\nZnaleziono kilka kopii zapasowych\nbazy pakietów.\nProszę wskazać datę (YYYY/MM/DD) kopii\nzapasowej, która ma być odtworzona.\n"
+
+#: src/OSRPkg.ycp:581
+msgid "\nReverting to the backup of the package\ndatabase was successful.\n"
+msgstr "\nOdtworzenie bazy pakietów z kopii zapasowej\nzakończone powodzeniem.\n"
+
+#: src/OSRPkg.ycp:590
+msgid "\nReverting to the backup of the package\ndatabase was not successful.\n"
+msgstr "\nOdtworzenie bazy pakietów z kopii zapasowej\nnie powiodło się.\n"
+
+#: src/OSRPkg.ycp:612
+msgid "Repair Package Database"
+msgstr "Napraw bazę pakietów"
+
+#. popup headline
+#. dialog caption
+#: src/OSRPkg.ycp:623 src/OSRRepairUI.ycp:76
+msgid "Repair Method"
+msgstr "Sposób naprawy"
+
+#. radio button label
+#: src/OSRPkg.ycp:627
+msgid "Rebuild Package Database"
+msgstr "Przebuduj bazę pakietów"
+
+#. radio button label
+#: src/OSRPkg.ycp:631
+msgid "Revert to Daily Backup"
+msgstr "Odtwórz codzienną kopię zapasową"
+
+#: src/OSRPkg.ycp:640
+msgid "Revert to Orginal Package Database (saved by YaST)"
+msgstr "Odtwórz oryginalną bazę pakietów (zachowaną przez YaST)"
+
+#. headline
+#: src/OSRPkg.ycp:757
+msgid "Missing Packages"
+msgstr "Brakujące pakiety"
+
+#. check for package minimum summary, 1st part (table follows)
+#: src/OSRPkg.ycp:759
+msgid "\nThe following packages are\nnot installed."
+msgstr "\nNastępujące pakiety nie \nsą zainstalowane."
+
+#. check for package minimum summary, last part (below table)
+#: src/OSRPkg.ycp:764
+msgid "\nThe listed packages belong to the minimal\npackage selection. Installing these\npackages is recommended.  Press\nRepair  to install all selected \npackages in the list.\n"
+msgstr "\nWypisane pakiety należą do zestawu minimalnego.\nZalecane jest zainstalowanie tych pakietów. \nProszę nacisnąć przycisk Napraw, aby zainstalować\nwszystkie pakiety wskazane na liście.\n"
+
+#. check for package minimum help text 1/2
+#: src/OSRPkg.ycp:772
+msgid "\n<P>&product; needs at least some packages for\nbasic system functionality. Without these\npackages, the system might be not executable.</P>\n"
+msgstr "\n<p>&product; wymaga co najmniej kilku pakietów do \nzapewnienia podstawowej funkcjonalności systemu.\nBez tych pakietów systemu może się nie uruchomić.</p>\n"
+
+#. check for package minimum help text 2/2, %1 is tool name
+#: src/OSRPkg.ycp:779
+#, ycp-format
+msgid "<P>%1 checks if all required packages for a\nminimal system are installed. If\nsome packages are missing, %1 offers to\ninstall the missing packages.</P>\n"
+msgstr "<p>%1 sprawdza, czy wszystkie pakiety wymagane\nw instalacji minimalnej są zainstalowane. Jeśli\njakichś pakietów brakuje, %1 zaproponuje\nich zainstalowanie.</p>\n"
+
+#. table headline (package list follows)
+#: src/OSRPkg.ycp:785
+msgid "&Missing Packages to Install"
+msgstr "&Brakujące pakiety do zainstalowania"
+
+#. dialog headline
+#: src/OSRPkg.ycp:836
+msgid "Verifying Base Packages"
+msgstr "Weryfikowanie pakietów podstawowych"
+
+#. dialog headline
+#: src/OSRPkg.ycp:838
+msgid "Verifying All Installed Packages"
+msgstr "Weryfikowanie wszystkich zainstalowanych pakietów"
+
+#. button label
+#: src/OSRPkg.ycp:920
+msgid "Show Log"
+msgstr "Pokaż dziennik"
+
+#. dialog headline
+#: src/OSRPkg.ycp:924
+msgid "Unverified Packages"
+msgstr "Pakiety niezweryfikowane"
+
+#. package verification summary, 1st part (table follows)
+#: src/OSRPkg.ycp:926
+msgid "\nVerified the installed software\nand found problems in the following\npackages.\n"
+msgstr "\nW czasie weryfikacji zainstalowanego oprogramowania\nstwierdzono problemy w następujących\npakietach.\n"
+
+#. package verification summary, last part
+#: src/OSRPkg.ycp:932
+msgid "\nThese packages probably differ from their\noriginally installed versions. Check\nthe packages to reinstall and start\nthe reinstallation process by pressing\nRepair.\n"
+msgstr "\nPakiety te prawdopodobnie różnią się od ich\npierwotnie zainstalowanych wersji. Proszę zaznaczyć\npakiety do ponownego zainstalowania i uruchomić proces\ninstalacji naciskając Napraw.\n"
+
+#. package verification summary, help text (%1 is button label)
+#: src/OSRPkg.ycp:941
+#, ycp-format
+msgid "\n<p>All installed packages have been verified. Some\nof these packages contain errors. For details,\nsee the log of the verification process.\nTo open the log, press <b>%1</b>.</p>\n"
+msgstr "\n<p>Wszystkie zainstalowane pakiety zostały zweryfikowane.\nNiektóre z nich zawierają błędy. Szczegóły są zapisane \nw pliku dziennika procesu weryfikacji. Aby otworzyć dziennik \nnależy nacisnąć przycisk<b>%1</b>.</p>\n"
+
+#. package verification summary 2/3
+#: src/OSRPkg.ycp:949
+msgid "<p>There, see if files of the package are\nmissing or the data of the package in the package\ndatabase differs from the installed files of the\npackage.</P>"
+msgstr "<p>Tu można zobaczyć, czy brakuje plików należących\ndo pakietu albo czy dane o pakiecie w bazie pakietów\nróżnią się od rzeczywiście zainstalowanych plików\npakietu.</P>"
+
+#. package verification summary 3/3
+#: src/OSRPkg.ycp:955
+msgid "<p>Sometimes, verification of the package could \nreport errors even if the package is correctly\ninstalled and works fine. That is why you should\nreinstall only the packages that do not work properly.</p>\n"
+msgstr "<p>Weryfikacja pakietu może czasem zgłosić błąd,\nnawet jeśli pakiet został poprawnie zainstalowany\ni działa jak trzeba. Dlatego należy ponownie zainstalować\ntylko te pakiety, które nie działają poprawnie.</p>\n"
+
+#. table headline (package list follows)
+#: src/OSRPkg.ycp:961
+msgid "Packages with Problems"
+msgstr "Pakiety z problemami"
+
+#. buttons label
+#. button label
+#: src/OSRPkgUI.ycp:44 src/OSRRepairUI.ycp:51
+msgid "&Pause"
+msgstr "&Pauza"
+
+#. buttons label
+#. button label
+#: src/OSRPkgUI.ycp:46 src/OSRRepairUI.ycp:676
+msgid "&Continue"
+msgstr "&Dalej"
+
+#. 'rpm -V <package>' output flag
+#: src/OSRPkgUI.ycp:53
+msgid "The File Size"
+msgstr "Rozmiar pliku"
+
+#: src/OSRPkgUI.ycp:54
+msgid "The File Mode"
+msgstr "Tryb pliku"
+
+#: src/OSRPkgUI.ycp:55
+msgid "The MD5 Checksum of the File"
+msgstr "Suma kontrolna MD5 pliku"
+
+#: src/OSRPkgUI.ycp:56
+msgid "The File Major and Minor Number"
+msgstr "Główny i porządkowy numer pliku"
+
+#: src/OSRPkgUI.ycp:57
+msgid "The File Symbolic Link Content"
+msgstr "Zawartość dowiązania symbolicznego"
+
+#: src/OSRPkgUI.ycp:58
+msgid "The Owner of the File"
+msgstr "Właściciel pliku"
+
+#: src/OSRPkgUI.ycp:59
+msgid "The File Group"
+msgstr "Właściciel grupowy pliku"
+
+#: src/OSRPkgUI.ycp:60
+msgid "The Last Modification Time"
+msgstr "Data ostatniej modyfikacji"
+
+#: src/OSRPkgUI.ycp:147
+msgid "Package Name"
+msgstr "Nazwa pakietu"
+
+#: src/OSRPkgUI.ycp:148
+msgid "Files"
+msgstr "Pliki"
+
+#: src/OSRPkgUI.ycp:149 src/OSRPkgUI.ycp:525
+msgid "Configuration File"
+msgstr "Plik konfiguracyjny"
+
+#: src/OSRPkgUI.ycp:150 src/OSRPkgUI.ycp:525 src/OSRPtbl.ycp:319
+msgid "Status"
+msgstr "Stan"
+
+#. current action label; %1 is current package number, %2 all packages
+#: src/OSRPkgUI.ycp:266
+#, ycp-format
+msgid "Package %1 of %2"
+msgstr "Pakiet %1 z %2"
+
+#: src/OSRPkgUI.ycp:279
+msgid "Show &Details"
+msgstr "Pokaż szcz&egóły"
+
+#: src/OSRPkgUI.ycp:281
+msgid "Also Show Successfully Verified &Packages"
+msgstr "Pokaż także &pakiety zweryfikowane pozytywnie"
+
+#. table entry (value in the column "Configuration file")
+#. translate it either as True/False or Yes/No
+#: src/OSRPkgUI.ycp:371
+msgid "Yes"
+msgstr "Tak"
+
+#: src/OSRPkgUI.ycp:371
+msgid "No"
+msgstr "Nie"
+
+#. last entry of file list (cut because of length)
+#: src/OSRPkgUI.ycp:412
+msgid "more..."
+msgstr "więcej..."
+
+#: src/OSRPkgUI.ycp:464
+msgid "Package:"
+msgstr "Pakiet:"
+
+#: src/OSRPkgUI.ycp:465
+msgid "Files:"
+msgstr "Pliki:"
+
+#. label - %1 is package name; file list (=result) will follow
+#: src/OSRPkgUI.ycp:497
+#, ycp-format
+msgid "Result of Package '%1' Verification"
+msgstr "Wyniki weryfikacji pakietu '%1'"
+
+#: src/OSRPkgUI.ycp:525
+msgid "Files "
+msgstr "Pliki"
+
+#. popup headline
+#: src/OSRPkgUI.ycp:542
+msgid "Package Details"
+msgstr "Szczegóły pakietu"
+
+#. checkbox label
+#: src/OSRPkgUI.ycp:546
+msgid "Reinstall the Package"
+msgstr "Zainstaluj pakiet ponownie"
+
+#. popup question
+#: src/OSRPkgUI.ycp:601
+msgid "Really cancel package verification?"
+msgstr "Czy naprawdę anulować weryfikację pakietu?"
+
+#. if the dialog in the expert mode and the
+#. user clicked a package status open a
+#. dialog with the following message.
+#: src/OSRPkgUI.ycp:635
+#, ycp-format
+msgid "\nVerifying the package %1 was successful.\n"
+msgstr "\nWeryfikacja pakietów %1 zakończona pomyślnie.\n"
+
+#. helptext: why the error is not so important
+#: src/OSRPkgVerify.ycp:77
+msgid "The file is a noncritical type."
+msgstr "Plik nie jest krytyczny."
+
+#. helptext: why the error is not so important
+#: src/OSRPkgVerify.ycp:79
+msgid "The file is located in a noncritical directory."
+msgstr "Plik znajduje się w katalogu, który nie jest krytyczny."
+
+#. helptext: why the error is not so important
+#: src/OSRPkgVerify.ycp:81
+msgid "The file is a configuration file."
+msgstr "Ten plik jest plikiem konfiguracyjnym."
+
+#. helptext: why the error is not so important
+#: src/OSRPkgVerify.ycp:84
+msgid "The package has been updated with the online update."
+msgstr "Pakiet został uaktualniony w ramach uaktualnień online."
+
+#. helptext: why the error is not so important
+#: src/OSRPkgVerify.ycp:87
+msgid "The test failure seems to be caused by an incorrectly built package."
+msgstr "Negatywny wynik testu prawdopodobnie jest wynikiem nieprawidłowo zbudowanego pakietu."
+
+#. pushbutton label
+#: src/OSRPopup.ycp:26
+msgid "&Skip"
+msgstr "P&omiń"
+
+#. pushbutton label
+#. button label
+#: src/OSRPopup.ycp:28 src/osr_module_bootloader.ycp:542
+msgid "&Repair"
+msgstr "Nap&raw"
+
+#. pushbutton label
+#: src/OSRPopup.ycp:30
+msgid "&Change"
+msgstr "Zmi&eń"
+
+#. pushbutton label
+#: src/OSRPopup.ycp:32
+msgid "&Recover"
+msgstr "Nap&raw"
+
+#. dialog caption: %1 is tool name ("System Repair")
+#: src/OSRPopup.ycp:38
+#, ycp-format
+msgid "%1 Help"
+msgstr "%1 - Pomoc"
+
+#: src/OSRPtbl.ycp:37
+msgid "Recover"
+msgstr "Napraw"
+
+#: src/OSRPtbl.ycp:54
+msgid "&Copy Saved Partition Table from Floppy"
+msgstr "Skopiuj za&chowaną tablicę partycji z dyskietki"
+
+#: src/OSRPtbl.ycp:59
+msgid "Have &gpart Suggest Partition Table"
+msgstr "Użyj &gpart dla sugerowanej tablicy partycji"
+
+#: src/OSRPtbl.ycp:65
+msgid "Have g&part Suggest Partition Table (Expert Mode)"
+msgstr "Użyj g&part dla sugerowanej tablicy partycji (tryb zaawansowany)"
+
+#: src/OSRPtbl.ycp:71
+msgid "&Restore Original Partition Table"
+msgstr "Odtwó&rz oryginalną tablicę partycji"
+
+#. %1 is device label, such as /dev/hda
+#: src/OSRPtbl.ycp:132
+#, ycp-format
+msgid "\n<p><h3>No Partition Table Found for Hard Disk %1</h3></BR>\n\nThe repair system will search for a valid partition table of disk %1\non the inserted floppy disk. If it cannot find\none, it will start the program gpart to guess the lost\npartition table. You can decide if the information gpart\nfinds is valid for your system.</p>\n"
+msgstr "\n<p><h3>Nie znaleziono tablicy partycji dysku %1</h3></BR>\n\nNaprawa polega na wyszukaniu poprawnej tablicy partycji\ndysku %1 na dyskietce włożonej do napędu. Jeśli nie uda się znaleźć\ntablicy partycji, to w następnym kroku zostanie uruchomiony program\ngpart, który pomoże odgadnąć jak wyglądała utracona tablica\npartycji. Będzie można zdecydować, czy informacje znalezione\nprzez gpart są poprawne dla tego systemu.</p>\n"
+
+#: src/OSRPtbl.ycp:142
+msgid "<p>gpart may be of some help when the primary partition table\nhas been lost or destroyed, but it can, under no circumstances,\nreplace proper disk and partition table backups. To save the\nmaster boot record (MBR) including the primary partition\ntable to the file /tmp/hda.mbr, enter the command\n\n<pre>\ndd if=/dev/hda of=/tmp/hda.mbr bs=512 count=1\n</pre>\n\nreplacing /dev/hda with the block device name of the disk\nin question. This should be done for all disks in the system.\nTo restore the primary partition table without overwriting\nthe MBR, enter\n\n<pre>\ndd if=/tmp/hda.mbr of=/dev/hda bs=1 count=64 skip=446 seek=446\n</pre></p>\n"
+msgstr "<p>gpart może być pewną pomocą w sytuacji, gdy główna tablica partycji\nzostała utracona lub uszkodzona, ale w żadnej sytuacji nie może\nzastąpić prawidłowych kopii zapasowych dysku i tablicy partycji.\nAby zapisać master boot record (MBR) zawierający główną tablicę\npartycji do pliku /tmp/hda.mbr, proszę napisać\n\n<pre>\ndd if=/dev/hda of=/tmp/hda.mbr bs=512 count=1\n</pre>\n\nzastępując /dev/hda nazwą urządzenia blokowego odpowiedniego\ndysku. Należy to zrobić dla wszystkich dysków w systemie.\nAby odtworzyć główną tablicę partycji, bez zamazywania\nzawartości MBR, należy napisać\n\n<pre>\ndd if=/tmp/hda.mbr of=/dev/hda bs=1 count=64 skip=446 seek=446\n</pre></p>\n"
+
+#: src/OSRPtbl.ycp:162
+msgid "<p>Warning: Make sure that all parameters are entered as shown\nand the disk device is correct. Failing to do so may\nresult in severe corruption of the file system. The saved file\nshould be stored in a safe place like a floppy disk.</p>\n"
+msgstr "<p>Ostrzeżenie: Proszę się upewnić, że wszystkie parametry zostały wpisane\ndokładnie jak to pokazano i urządzenie dla dysku jest wybrane prawidłowo.\nPomyłka może skutkować poważnym uszkodzeniem systemu plików. Zapisany\nplik powinien być przechowywany w bezpiecznym miejscu, np. na dyskietce.</p>\n"
+
+#: src/OSRPtbl.ycp:168 src/OSRPtbl.ycp:214
+msgid "<p>From the manual page of gpart:<br>\n\"It should be stressed that gpart does a very heuristic\njob, never believe its output without any plausability\nchecks. It can be easily right in its guesswork but it can\nalso be terribly wrong. You have been warned.\"</p>"
+msgstr "<p>Z podręcznika systemowego gpart:<br>\n\"Należy podkreślić, że gpart wykorzystuje metody bardzo heurystyczne,\nnigdy nie należy wierzyć w wyniki jego działania bez sprawdzenia.\nWynik odgadywania może być prawidłowy, ale równie dobrze może być\nbardzo odległy od rzeczywistości. Zostałeś ostrzeżony.\"</p>"
+
+#. %1 is device label, such as /dev/hda
+#: src/OSRPtbl.ycp:181
+#, ycp-format
+msgid "\n<P><h3>No Partition Table Found for Hard Disk %1</h3><BR>\n\nThe repair system will start gpart to guess the primary partition\ntable of disk %1.</p>\n"
+msgstr "\n<P><h3>Nie znaleziono tablicy partycji dla dysku %1</h3><BR>\n\nNaprawa polega na uruchomieniu programu gpart w celu\nodgadnięcia głównej tablicy partycji dysku %1.</p>\n"
+
+#: src/OSRPtbl.ycp:188
+msgid "<p>gpart may be of some help when the primary partition table\nwas lost or destroyed, but it can, under no circumstances,\nreplace proper disk and partition table backups. To save the\nmaster boot record (MBR) including the primary partition\ntable to the file /tmp/hda.mbr, enter\n\n<pre>\ndd if=/dev/hda of=/tmp/hda.mbr bs=512 count=1\n</pre>\n\nreplacing /dev/hda with the block device name of the disk\nin question. This should be done for all disks in the system.\nTo restore the primary partition table without overwriting\nthe MBR, enter\n\n<pre>\ndd if=/tmp/hda.mbr of=/dev/hda bs=1 count=64 skip=446 seek=446\n</pre></p>\n"
+msgstr "<p>gpart może być pewną pomocą w sytuacji, gdy główna tablica partycji\nzostała utracona lub uszkodzona, ale w żadnej sytuacji nie może\nzastąpić prawidłowych kopii zapasowych dysku i tablicy partycji.\nAby zapisać master sektor startowy (MBR) zawierający główną tablicę\npartycji do pliku /tmp/hda.mbr, proszę napisać\n\n<pre>\ndd if=/dev/hda of=/tmp/hda.mbr bs=512 count=1\n</pre>\n\nzastępując /dev/hda nazwą urządzenia blokowego odpowiedniego\ndysku. Należy to zrobić dla wszystkich dysków w systemie.\nAby odtworzyć główną tablicę partycji, bez zamazywania\nzawartości MBR, proszę napisać\n\n<pre>\ndd if=/tmp/hda.mbr of=/dev/hda bs=1 count=64 skip=446 seek=446\n</pre></p>\n"
+
+#: src/OSRPtbl.ycp:208
+msgid "<p>Warning: Make sure that all parameters are typed as shown\nand the disk device is correct. Failing to do so may\nresult in severe corruption of the file system. The saved file\nshould be stored in a safe place like a floppy disk.</p>\n"
+msgstr "<p>Ostrzeżenie: Proszę się upewnić, że wszystkie parametry zostały wpisane\ndokładnie jak to pokazano i urządzenie dla dysku jest wybrane poprawnie.\nPomyłka może skutkować poważnym uszkodzeniem systemu plików. Zapisany\nplik powinien być przechowywany w bezpiecznym miejscu, takim jak dyskietka.</p>\n"
+
+#. %1 is device label, such as /dev/hda
+#: src/OSRPtbl.ycp:228
+#, ycp-format
+msgid "\nBefore starting any scan or repair sequence,\na backup of the original partition table \nof the device %1 is created.\n"
+msgstr "\nPrzed rozpoczęciem przeszukiwania i naprawiania\nzostanie utworzona kopia zapasowa oryginalnej tablicy\npartycji urządzenia %1.\n"
+
+#. popup message
+#: src/OSRPtbl.ycp:284
+msgid "\nPartition table successfully repaired.\n"
+msgstr "\nTablica partycji została pomyślnie naprawiona.\n"
+
+#. popup message
+#: src/OSRPtbl.ycp:291
+msgid "\nPartition table was not successfully repaired.\n"
+msgstr "\nNaprawa tablicy partycji nie powiodła się.\n"
+
+#: src/OSRPtbl.ycp:320
+msgid "Name"
+msgstr "Nazwa"
+
+#. File System ID
+#: src/OSRPtbl.ycp:322
+msgid "FSID"
+msgstr "FSID"
+
+#: src/OSRPtbl.ycp:323
+msgid "Start"
+msgstr "Start"
+
+#: src/OSRPtbl.ycp:324
+msgid "End"
+msgstr "Koniec"
+
+#: src/OSRPtbl.ycp:325
+msgid "Size"
+msgstr "Rozmiar"
+
+#: src/OSRPtbl.ycp:326
+msgid "Restore the Entire Master Boot Record"
+msgstr "Odtwórz wpis sektora startowego"
+
+#. help_text  first sentence.
+#: src/OSRPtbl.ycp:346
+msgid "<P>The table in the center of the dialog shows the partitions\nthat could be recovered.</P>\n"
+msgstr "<P>Tabela w środku okna zawiera listę partycji,\nktóre mogą zostać odtworzone.</P>\n"
+
+#. %1 is Ignore label
+#. %1 is Recover label
+#: src/OSRPtbl.ycp:351 src/OSRPtbl.ycp:353
+#, ycp-format
+msgid "Change the status of a partition to %1."
+msgstr "Zmień status partycji na %1."
+
+#. %1 is Change label
+#: src/OSRPtbl.ycp:356
+#, ycp-format
+msgid "If you have changed the status of all partitions for recovering\nto %1, press <b>Change</b> to execute the recovery process.\n"
+msgstr "Jeśli zmieniono status wszystkich partycji przeznaczonych do odzyskiwania\ndo %1, należy nacisnąć przycisk <b>Napraw</b>, w celu rozpoczęcia procesu odzyskiwania.\n"
+
+#. help_text description for table column, %1 ignore, %2 recover
+#: src/OSRPtbl.ycp:361
+#, ycp-format
+msgid "The status of a listed partition\ncan be switched between %1 and %2. Only\npartitions with the status\n%2 are recovered.\n"
+msgstr "Stan partycji na liście można przełączać\npomiędzy %1 i %2. Naprawić można tylko\npartycje w stanie %2.\n"
+
+#: src/OSRPtbl.ycp:367
+msgid "Name of the partition that could be\nrecovered.\n"
+msgstr "Nazwa partycji, która może być\nnaprawiona.\n"
+
+#: src/OSRPtbl.ycp:371
+msgid "The file system ID of the partition.\nFor example, 131 is a normal Linux partition and 6, 11, 12, and 14 are fat and fat32 partitions.\n"
+msgstr "Identyfikator systemu plików partycji.\nNa przykład 131 to zwykła partycja linuksowa, a 6, 11, 12 i 14 to partycje fat i fat32.\n"
+
+#: src/OSRPtbl.ycp:375
+msgid "The start cylinder of the partition."
+msgstr "Początkowy cylinder partycji."
+
+#: src/OSRPtbl.ycp:377
+msgid "The end cylinder of the partition."
+msgstr "Końcowy cylinder partycji."
+
+#: src/OSRPtbl.ycp:379
+msgid "Size of the partition."
+msgstr "Rozmiar partycji."
+
+#: src/OSRPtbl.ycp:385
+msgid "Select this option to\nrecover the entire master boot record with all partitions.\n"
+msgstr "Proszę wybrać tę opcję, aby\nnaprawić sektor startowy wszystkich partycji.\n"
+
+#. dialog caption
+#. module method action label
+#: src/OSRPtbl.ycp:392 src/osr_module_partition.ycp:1586
+msgid "Recover Lost Partitions"
+msgstr "Odzyskaj utracone partycje"
+
+#. dialog text, %1 is device label
+#: src/OSRPtbl.ycp:394
+#, ycp-format
+msgid "\nThe following partitions were found on device %1.\nTo recover a partition, select the entry\nin the table and press Recover.\n"
+msgstr "\nZnaleziono następujące partycje na urządzeniu %1.\nAby naprawić partycję, proszę wybrać pozycję\nw tabeli i nacisnąć przycisk Napraw.\n"
+
+#: src/OSRPtbl.ycp:485
+msgid "Recovering partition table..."
+msgstr "Odzyskiwanie tablicy partycji..."
+
+#. %1 is device label, such as /dev/hda
+#: src/OSRPtbl.ycp:520
+#, ycp-format
+msgid "No primary partition table was found on hard disk %1."
+msgstr "Na dysku %1 nie znaleziono głównej tablicy partycji."
+
+#. %1 is device label, such as /dev/hda
+#: src/OSRPtbl.ycp:522
+#, ycp-format
+msgid "\n\nIf you have a floppy with some\nup-to-date system information from a former rescue\nsession, insert it in your drive and press Repair.\n\nPress Skip and repair manually if you have a\nbackup of the partition table of disk %1.\n\nPress Help to learn how to\nmake a backup of a partition table manually\nand how to restore it.\n"
+msgstr "\n\nJeśli istnieje dyskietka z aktualnymi informacjami\nsystemowymi z poprzedniej sesji naprawczej, proszę\numieścić ją w napędzie i nacisnąć przycisk Napraw.\n\nProszę nacisnąć przycisk  Pomiń i naprawić ręcznie, jeśli\nistnieje kopia zapasowa tablicy partycji dysku %1.\n\nAby dowiedzieć się jak wykonać ręcznie kopię zapasową\ntablicy partycji i jak ją odtworzyć, należy nacisnąć przycisk Pomoc.\n"
+
+#. display that no floppy drive was detected
+#: src/OSRPtbl.ycp:542
+msgid "\nCannot detect a floppy drive\nin your system. A backup copy of the\nprimary partition table could not be\nread.\n"
+msgstr "\nNie można znaleźć napędu dyskietek\nw tym systemie. Nie można odczytać kopii\nzapasowej głównej tablicy partycji.\n"
+
+#: src/OSRPtbl.ycp:555
+msgid "Searching for partition table..."
+msgstr "Szukanie tablicy partycji..."
+
+#: src/OSRPtbl.ycp:565
+msgid "\nCould not find a valid partition table.\nInsert another floppy disk and\ntry again or have gpart suggest a\npartition table.\n"
+msgstr "\nNie można znaleźć prawidłowej tablicy partycji.\nProszę włożyć inną dyskietkę i spróbować ponownie\nalbo użyć programu gpart do odgadywania\ntablicy partycji.\n"
+
+#: src/OSRPtbl.ycp:580
+msgid "Restoring old partition table..."
+msgstr "Odczytywanie starej tablicy partycji..."
+
+#: src/OSRPtbl.ycp:591
+msgid "\nCould not find a valid master boot\nrecord on the floppy disk. Insert\nanother floppy disk and try again or\nhave gpart suggest the partition table.\n"
+msgstr "\nNie można znaleźć prawidłowego sektora startowego\nna dyskietce. Proszę włożyć inną dyskietkę i spróbować\nponownie albo użyć programu gpart do odgadywania\ntablicy partycji.\n"
+
+#. error message
+#: src/OSRPtbl.ycp:621
+msgid "\nRestoring the partition table\nwas not successful.\nInsert another floppy disk\nand try again or have gpart\nsuggest the partition table.\n"
+msgstr "\nOdczytywanie tablicy partycji\nnie powiodło się. Proszę włożyć inną dyskietkę \ni spróbować ponownie albo użyć programu \ngpart do odgadywania tablicy partycji.\n"
+
+#. error message
+#: src/OSRPtbl.ycp:634
+msgid "\nEither no floppy disk is inserted in\nthe drive or the inserted floppy is not\ncorrectly formatted. Insert\nanother floppy disk and try again or\nhave gpart suggest the partition table.\n"
+msgstr "\nBrak dyskietki w napędzie lub dyskietka jest\nnieprawidłowo sformatowana. Proszę włożyć inną dyskietkę \ni spróbować ponownie albo użyć programu \ngpart do odgadywania tablicy partycji.\n"
+
+#. checkbox label
+#: src/OSRPtbl.ycp:690
+msgid "Full Scan"
+msgstr "Pełne przeszukiwanie"
+
+#. button label
+#: src/OSRPtbl.ycp:692
+msgid "Start Detection"
+msgstr "Uruchom wykrywanie"
+
+#. help text label
+#: src/OSRPtbl.ycp:706
+msgid "<P>\n<BIG><B>Help for Expert Mode</B></BIG>\n</P>\n"
+msgstr "<P>\n<BIG><B>Pomoc dla trybu zaawansowanego</B></BIG>\n</P>\n"
+
+#. help text (restorng partition)
+#: src/OSRPtbl.ycp:711
+msgid "\n<P>When a possible partition is found,\ngpart normally skips all sectors this entry seems\nto occupy and continues the scan from the end of\nthe last possible partition. The disk scan can take\nquite a while when using this option. Be patient.</P>\n"
+msgstr "\n<P>Po znalezieniu możliwej partycji, gpart\nzwykle pomija sektory, które może ona zajmować i prowadzi \nprzeszukiwanie od końca ostatniej możliwej partycji.\nPo ustawieniu tej opcji przeszukiwanie dysku \nmoże zająć sporo czasu. Prosi się o cierpliwość.</P>\n"
+
+#. headline label, gpart is command
+#: src/OSRPtbl.ycp:726
+msgid "Scan Options for gpart"
+msgstr "Proszę wybrać opcje przeszukiwania dla gpart"
+
+#. checkbox label
+#: src/OSRPtbl.ycp:729
+msgid "Do Not Try to &Identify Extended Partition Tables"
+msgstr "Nie próbuj &Identyfikować rozszerzonych tablic partycji"
+
+#. checkbox label
+#: src/OSRPtbl.ycp:731
+msgid "Do Not &Skip Disk Read Errors"
+msgstr "Nie pomijaj błędów odczytu dy&sku"
+
+#. partition info 1/3, %1,%2 are numbers
+#: src/OSRPtbl.ycp:831
+#, ycp-format
+msgid "Cylinders %1-%2, "
+msgstr "Cylindry %1-%2, "
+
+#. partition info 2/3, %1 is partition ID (number)
+#: src/OSRPtbl.ycp:834
+#, ycp-format
+msgid "ID %1, "
+msgstr "ID %1, "
+
+#. partition info 3/3, %1 is partition size (number)
+#: src/OSRPtbl.ycp:836
+#, ycp-format
+msgid "Size %1"
+msgstr "Rozmiar %1"
+
+#. label: partition number
+#: src/OSRPtbl.ycp:854
+msgid "First Partition Found"
+msgstr "Pierwsza znaleziona partycja"
+
+#: src/OSRPtbl.ycp:855
+msgid "Second Partition Found"
+msgstr "Druga znaleziona partycja"
+
+#: src/OSRPtbl.ycp:856
+msgid "Third Partition Found"
+msgstr "Trzecia znaleziona partycja"
+
+#: src/OSRPtbl.ycp:857
+msgid "Fourth Partition Found"
+msgstr "Czwarta znaleziona partycja"
+
+#. %1 is number.  %2 is text like "First Partition Found", %3 is partition info
+#. %1 in number, %2 is text like "Second Partition Found", %3 is partition info
+#: src/OSRPtbl.ycp:867 src/OSRPtbl.ycp:893
+#, ycp-format
+msgid "&%1: %2: %3"
+msgstr "&%1: %2: %3"
+
+#. label: %1 is device name, %2,%3 numbers
+#: src/OSRPtbl.ycp:881
+#, ycp-format
+msgid "Partition %1 must be deleted to recover cylinders %2-%3."
+msgstr "Należy usunąć partycję %1, aby odtworzyć cylindry %2-%3."
+
+#. heading
+#: src/OSRPtbl.ycp:900
+msgid "Conflicts with Existing Partitions"
+msgstr "Konflikt z istniejącymi partycjami"
+
+#. popup message
+#: src/OSRPtbl.ycp:919
+msgid "No lost partition found."
+msgstr "Nie znaleziono utraconych partycji."
+
+#. help text of partition recovery 1/2
+#: src/OSRPtbl.ycp:924
+msgid "\n<p>\nRead the following points carefully\nand select only the partition that should\nreally be recovered.\n</P>\n"
+msgstr "\n<p>\nProszę przeczytać uważnie poniższe punkty\ni wybrać tylko te partycje, które\nnaprawdę mają być naprawione.\n</P>\n"
+
+#. help text of partition recovery 2/2
+#: src/OSRPtbl.ycp:933
+msgid "<P><B>Use caution.</B> Sometimes an existing partition must\nbe deleted to recover another partition.</P>\n"
+msgstr "<P><B>Uwaga dla użytkowników.</B> Czasem należy usunąć istniejącą\npartycję, aby możliwe było naprawienie innej partycji.</P>\n"
+
+#. help text for button
+#: src/OSRPtbl.ycp:939
+msgid "Start the recovery process."
+msgstr "Rozpocznij proces naprawy."
+
+#. popup headline
+#: src/OSRPtbl.ycp:943
+msgid "Recover Previously Existing Partitions"
+msgstr "Napraw istniejące wcześniej partycje"
+
+#. warning popup, %1 is device name, %2 list of partitions
+#: src/OSRPtbl.ycp:970
+#, ycp-format
+msgid "\nRecovering the selected partition %1 is only\npossible by deleting the following partitions:\n%2\nPress Continue to delete the partitions\nand recover %1."
+msgstr "\nNaprawienie wskazanej partycji %1 będzie możliwe\nwyłącznie po usunięciu następujących partycji:\n%2\nAby usunąć te partycje i naprawić %1, należy nacisnąć \nprzycisk Dalej."
+
+#. error popup, %1 is paritition number, %2 info
+#: src/OSRPtbl.ycp:1035
+#, ycp-format
+msgid "\nRecovering the partition %1 (%2) is not\npossible. The partition number conflicts\nwith an existing partition. Solving the\nconflict is not possible.\n"
+msgstr "\nNaprawienie znalezionej partycji %1 (%2) jest\nniemożliwe. Numer partycji koliduje z istniejącą\npartycją. Rozwiązanie konfliktu jest\nniemożliwe.\n"
+
+#. headline of partition scan popup
+#: src/OSRPtbl.ycp:1076
+msgid "Search for Lost Partitions"
+msgstr "Szukaj utraconych partycji"
+
+#. addtional info for partition scan
+#: src/OSRPtbl.ycp:1081
+msgid "This can take a lot of time depending on the\nsystem performance and the hard disk size."
+msgstr "Może to zająć dużo czasu, w zależności od\nwydajności systemu i rozmiaru dysku twardego."
+
+#. label text (device name follows)
+#: src/OSRPtbl.ycp:1085
+msgid "Hard Disk: "
+msgstr "Dysk twardy: "
+
+#: src/OSRPtbl.ycp:1090
+msgid "&Start"
+msgstr "&Start"
+
+#. error popup, %1 is device
+#: src/OSRPtbl.ycp:1184
+#, ycp-format
+msgid "\nNo valid partitions found for the \npartition table of %1. If there were\nsome partitions on the disk, you can try\nto restore them manually. To do\nthat, enter the cylinder values\nin fdisk or the partitioning tool.\n"
+msgstr "\nNie znaleziono żadnych prawidłowych partycji\ndla tablicy partycji %1. Jeśli na dysku były\njakieś partycje, to można spróbować odtworzyć\nje ręcznie. Aby to zrobić, należy wprowadzić\nnumery cylindrów w programie fdisk lub \nprogramie do partycjonowania.\n"
+
+#. error popup message
+#: src/OSRPtbl.ycp:1215
+msgid "Partition table was not successfully repaired."
+msgstr "Naprawianie tablicy partycji nie powiodło się."
+
+#: src/OSRPtbl.ycp:1241
+#, ycp-format
+msgid "Writing the backup of %1 was successful."
+msgstr "Zapisanie kopii zapasowej %1 zakończone pomyślnie."
+
+#: src/OSRPtbl.ycp:1244
+#, ycp-format
+msgid "Writing the backup of %1 was not successful."
+msgstr "Zapisanie kopii zapasowej %1 nie powiodło się."
+
+#. %1 is device label, such as /dev/hda
+#: src/OSRPtbl.ycp:1263
+#, ycp-format
+msgid "Restore Original Partition Table of %1"
+msgstr "Odtwarzanie oryginalnej tablicy partycji %1"
+
+#. %1 is OK button label, %2 is device like /dev/hda
+#: src/OSRPtbl.ycp:1267
+#, ycp-format
+msgid "\nIf you press %1, the partition table \nof %2 will be replaced with \nthe backup.\n"
+msgstr "\nPo wciśnięciu %1 tablica partycji %2\nzostanie zastąpiona jej kopią zapasową.\n"
+
+#: src/OSRPtbl.ycp:1329
+msgid "Select a repair method or skip repairing."
+msgstr "Wskaż metodę naprawy lub pomiń naprawianie."
+
+#. %1 is device label, such as /dev/hda
+#. sometimes it is not a problem (see bug 366856) => calm user with the
+#. last sentence
+#: src/OSRPtbl.ycp:1341
+#, ycp-format
+msgid "\nNo partition table was found for hard disk %1.\nIf at least one partition should exist for %1,\nselect one of the following repair methods.  If\nno partition ever existed on this hard disk,\nskip the repair.\nIf in doubt, skip the repair.\n\n"
+msgstr "\nNie znaleziono tablicy partycji dla dysku twardego %1.\nJeśli dla %1 powinna istnieć co najmniej jedna partycja,\nto należy wybrać jedną z następujących metod\nnaprawy. Jeśli na tym dysku nigdy nie było\npartycji lub użytkownik ma wątpliwości, to \nnależy pominąć tę naprawę.\n\n"
+
+#. %1 is device label, such as /dev/hda
+#. dialog headline, %1 is device label live /dev/hda
+#: src/OSRPtbl.ycp:1352 src/OSRPtbl.ycp:1380
+#, ycp-format
+msgid "Repair Partition Table of %1"
+msgstr "Napraw tablicę partycji %1"
+
+#. popup message (see bug #186580)
+#: src/OSRRepairUI.ycp:65
+msgid "The system will be restarted now."
+msgstr "System zostanie uruchomiony ponownie."
+
+#. dialog caption, %1 is tool name ("System Repair")
+#: src/OSRRepairUI.ycp:73
+#, ycp-format
+msgid "%1 Initialization"
+msgstr "%1 - Inicjalizacja"
+
+#. dialog caption
+#: src/OSRRepairUI.ycp:78
+msgid "Custom Repair"
+msgstr "Naprawy niestandardowe"
+
+#. dialog caption
+#: src/OSRRepairUI.ycp:80
+msgid "Repair Tool Box"
+msgstr "Narzędzia do naprawy"
+
+#. dialog caption
+#. progress bar label
+#: src/OSRRepairUI.ycp:82 src/OSRRepairUI.ycp:601
+msgid "System Check"
+msgstr "Sprawdzanie systemu"
+
+#. popup label
+#: src/OSRRepairUI.ycp:103
+msgid "Really abort the system repair tool?"
+msgstr "Na pewno przerwać naprawę systemu?"
+
+#. init dialog help text
+#: src/OSRRepairUI.ycp:123
+msgid "Initializing the system. Please wait..."
+msgstr "Inicjowanie systemu. Proszę czekać..."
+
+#. progress stage
+#: src/OSRRepairUI.ycp:138
+msgid "Load rescue modules"
+msgstr "Wczytaj moduły naprawcze"
+
+#. progress stage
+#: src/OSRRepairUI.ycp:140
+msgid "Probe floppy disk devices"
+msgstr "Sprawdź napędy dyskietek"
+
+#. progress stage
+#: src/OSRRepairUI.ycp:142
+msgid "Probe hard disk controllers"
+msgstr "Sprawdź kontrolery dysków twardych"
+
+#. progress stage
+#: src/OSRRepairUI.ycp:144
+msgid "Load kernel modules for hard disk controllers"
+msgstr "Wczytaj moduły jądra do obsługi kontrolerów dysków"
+
+#. progress stage
+#: src/OSRRepairUI.ycp:146
+msgid "Probe hard disks"
+msgstr "Sprawdź dyski twarde"
+
+#. progress stage
+#: src/OSRRepairUI.ycp:148
+msgid "Probe USB"
+msgstr "Sprawdź USB"
+
+#. progress step
+#: src/OSRRepairUI.ycp:151
+msgid "Loading rescue modules..."
+msgstr "Wczytywanie modułów naprawczych..."
+
+#. progress step
+#: src/OSRRepairUI.ycp:153
+msgid "Probing floppy disk devices..."
+msgstr "Sprawdzanie napędów dyskietek..."
+
+#. progress step
+#: src/OSRRepairUI.ycp:155
+msgid "Probing hard disk controllers..."
+msgstr "Sprawdzanie kontrolerów dysków..."
+
+#. progress step
+#: src/OSRRepairUI.ycp:157
+msgid "Loading kernel modules for hard disk controllers..."
+msgstr "Wczytywanie modułów jądra do obsługi kontrolerów dysków..."
+
+#. progress step
+#: src/OSRRepairUI.ycp:159
+msgid "Probing hard disks..."
+msgstr "Sprawdzanie dysków..."
+
+#. progress step
+#: src/OSRRepairUI.ycp:161
+msgid "Probing USB..."
+msgstr "Sprawdzanie urządzeń USB..."
+
+#. progress step
+#: src/OSRRepairUI.ycp:163
+msgid "Finished"
+msgstr "Zakończono"
+
+#. error popup
+#. error popue
+#: src/OSRRepairUI.ycp:206 src/OSRRepairUI.ycp:238
+msgid "No hard disks were found.\nCheck your hardware.\n"
+msgstr "Nie znaleziono żadnych dysków twardych.\nProszę sprawdzić urządzenia w komputerze.\n"
+
+#. MultiSelectionBox label
+#: src/OSRRepairUI.ycp:301
+msgid "Scan and Repair &Options"
+msgstr "&Opcje przeszukiwania i naprawy"
+
+#. summary help text 1/3
+#: src/OSRRepairUI.ycp:327
+msgid "<p>The system repair tool\ncan repair some parts of a damaged system. Therefore, the\ntool scans the system and reports the errors found.</p>\n"
+msgstr "<p>Narzędzie naprawy systemu\nmoże naprawić pewne fragmenty uszkodzonego systemu. Dlatego\nprogramy narzędziowe przeszukują system i informują o znalezionych błędach.</p>\n"
+
+#. summary help text 2/3
+#: src/OSRRepairUI.ycp:333
+msgid "<p>After an error was found, select from the suggested\nrepair method or cancel the repair\nprocess.</p>\n"
+msgstr "<p>Po znalezieniu błędu, proszę wybrać jeden\nz sugerowanych sposobów naprawy albo\nanulować proces naprawy.</p>\n"
+
+#. summary help text 3/3
+#: src/OSRRepairUI.ycp:339
+msgid "<p>Nothing will be repaired automatically.\nChanges are only made if you accept\nthe repair propsal.</P>\n"
+msgstr "<p>Nic nie zostanie naprawione automatycznie.\nSystem może zostać zmieniony tylko po zaakceptowaniu\npropozycji napraw.</P>\n"
+
+#. First entry - automatic analysis (headline)
+#: src/OSRRepairUI.ycp:347
+msgid "&Automatic Repair"
+msgstr "Naprawy &automatyczne"
+
+#. First entry - automatic analysis (description)
+#: src/OSRRepairUI.ycp:350
+msgid "Automatic analysis with repair\nproposals. Fits in most cases.\n"
+msgstr "Automatyczne analizy z propozycjami napraw.\nOdpowiednie dla większości przypadków.\n"
+
+#. First entry - automatic analysis (additional help text)
+#: src/OSRRepairUI.ycp:354
+msgid "Analyze the entire system automatically and\ndisplay repair proposals."
+msgstr "Automatycznie analizuj system i pokaż\npropozycje napraw."
+
+#. Second entry - customise analyse (headline)
+#: src/OSRRepairUI.ycp:359
+msgid "&Customized Repair"
+msgstr "Naprawy niestan&dardowe"
+
+#. Second entry - customise analyse (description)
+#: src/OSRRepairUI.ycp:362
+msgid "Select the desired system analysis \nprocedures. Usable if you already\nknow a little bit about your problem.\n"
+msgstr "Proszę wybrać elementy systemu do analizy.\nOpcja ta jest użyteczna, jeśli posiada się pewne\ninformacje o problemie.\n"
+
+#. Second entry - customise analyse (additional help text)
+#: src/OSRRepairUI.ycp:367
+msgid "For example, deselect a category group, like\nthe boot loader test, then start analysis."
+msgstr "Na przykład, można odznaczyć grupę kategorii, takich jak\ntestowanie programu rozruchowego, a potem\nrozpocząć analizę."
+
+#. Third entry - direct repair tools (headline)
+#: src/OSRRepairUI.ycp:373
+msgid "E&xpert Tools"
+msgstr "Narzędzia &zaawansowane"
+
+#. Third entry - direct repair tools (description)
+#: src/OSRRepairUI.ycp:376
+msgid "Use if the automatic detection\nfails or you know the exact type of\nproblem.\n"
+msgstr "Są one odpowiednie, gdy automatyczne wykrywanie\nnie daje rezultatów lub dokładnie znany jest rodzaj\nproblemu.\n"
+
+#. Third entry - direct repair tools (additional help text)
+#: src/OSRRepairUI.ycp:381
+msgid "For example, directly recover a lost\npartition table or verify the package database."
+msgstr "Na przykład, bezpośrednie przejście do odzyskiwania\nutraconej partycji lub weryfikowanie bazy pakietów."
+
+#. button label
+#: src/OSRRepairUI.ycp:432
+msgid "&Select All"
+msgstr "Wybierz w&szystko"
+
+#. button label
+#: src/OSRRepairUI.ycp:434
+msgid "&Deselect All"
+msgstr "O&dznacz wszystko"
+
+#. help text for "custom scan" dialog 1/3
+#: src/OSRRepairUI.ycp:437
+msgid "<P>The system repair scans a\nlot of system parts automatically. Usually, only one\nor two scopes, like the boot loader or the file system,\nare damaged.</P>\n"
+msgstr "<P>Funkcja naprawy systemu przegląda\nautomatycznie wiele części systemu. Zwykle uszkodzona jest\njedna lub dwie części systemu, takie jak program rozruchowy\nlub system plików.</P>\n"
+
+#. help text for "custom scan" dialog 2/3
+#: src/OSRRepairUI.ycp:444
+msgid "<P>Therefore, this dialog enables the selection\nof system parts that should be scanned.</P>\n"
+msgstr "<P>Dlatego w tymoknie można wskazać\nelementy systemu, które mają być przeglądane.</P>\n"
+
+#. help text for "custom scan" dialog 2/3
+#: src/OSRRepairUI.ycp:449
+msgid "Some of the groups shown at the right side of\nthe dialog need other groups. These dependencies\nare resolved automatically.\n"
+msgstr "Niektóre grupy pokazane z prawej strony okna wymagają\ninnych grup. Zależności te są uwzględniane automatycznie.\n"
+
+#. help text for '&Select All' button
+#: src/OSRRepairUI.ycp:455
+msgid "Select all entries in the list."
+msgstr "Wybiera wszystkie pozycje z listy."
+
+#. help text for '&Deselect All' button
+#: src/OSRRepairUI.ycp:458
+msgid "Deselect all entries in the list."
+msgstr "Odznacz wszystkie pozycje z listy."
+
+#. error label (user should select the action to do)
+#: src/OSRRepairUI.ycp:518
+msgid "Select at least one item."
+msgstr "Proszę wybrać przynajmniej jeden element."
+
+#. popup label: wait while dependencies are being solved
+#: src/OSRRepairUI.ycp:531
+msgid "Resolving the dependencies\nbetween the selected groups...\n"
+msgstr "Rozwiązywanie zależności pomiędzy\nwybranymi grupami...\n"
+
+#. help text for "expert tools" dialog 1/2
+#: src/OSRRepairUI.ycp:554
+msgid "<P>The repair system allows the\ndirect repair of damaged system areas with the\ntools shown at the right side of the dialog.</P> \n"
+msgstr "<P>System naprawy pozwala na\nbezpośrednią naprawę uszkodzonych części systemu,\nprzy pomocy narzędzi pokazanych po prawej stronie okna.</P> \n"
+
+#. help text for "expert tools" dialog 2/2
+#: src/OSRRepairUI.ycp:560
+msgid "<P>Each tool has a special functionality.\nRead the description of the different options\nand select one. If no entry matches your problem,\ngo back and start the automatic analysis.</P>\n"
+msgstr "<P>Każde z narzędzi posiada określoną funkcjonalność.\nProszę przeczytać opis różnych opcji i wybrać jedną z nich.\nJeśli żadna z pozycji nie pasuje do istniejącego problemu,\nnależy się cofnąć i rozpocząć analizę automatyczną.</P>\n"
+
+#. progress bar label
+#: src/OSRRepairUI.ycp:599
+msgid "Module Check"
+msgstr "Sprawdzanie modułu"
+
+#. button label
+#: src/OSRRepairUI.ycp:603
+msgid "&Show All Details"
+msgstr "Pokaż wszystkie &szczegóły"
+
+#. Help text for automatic check/repair process 1/4 
+#: src/OSRRepairUI.ycp:637
+#, ycp-format
+msgid "<p>Now checking your system.</p>\n"
+msgstr "<p>Sprawdzanie systemu.</p>\n"
+
+#. Help text for automatic check/repair process 2/4
+#: src/OSRRepairUI.ycp:641
+msgid "<p>Depending on the CPU and the amount of memory, this can\ntake some time.</p>\n"
+msgstr "<p>Może to zająć trochę czasu, który zależy od procesora\ni ilości pamięci.</p>\n"
+
+#. Help text for automatic check/repair process 3/4
+#: src/OSRRepairUI.ycp:646
+msgid "<p>The file system checks with fsck are especially\ntime consuming.</p>\n"
+msgstr "<p>Zwykle najbardziej czasochłonne jest sprawdzanie \nsystemu plików przez fsck.</p>\n"
+
+#. Help text for automatic check/repair process 4/4
+#: src/OSRRepairUI.ycp:651
+#, ycp-format
+msgid "<P>If the scan sequence finds an error, \none or more repair proposals are made. \nThen select one proposal or cancel the repair. </P>\n"
+msgstr "<P>Jeśli przeszukiwanie wykaże błąd, zostanie\nproponowany jeden lub więcej sposobów naprawy.\nProszę wybrać jedną propozycję albo anulować naprawę.</P>\n"
+
+#. help text for '&Pause' button
+#: src/OSRRepairUI.ycp:658
+msgid "Pause or continue analyzing the system."
+msgstr "Wstrzymaj albo kontynuuj analizowanie systemu."
+
+#. help text for '&Show All Details' button
+#: src/OSRRepairUI.ycp:662
+msgid "Activate or disable reporting details."
+msgstr "Zezwól lub zabroń raportowania szczegółów."
+
+#. popup label
+#: src/OSRRepairUI.ycp:834
+msgid "Really finish the system repair tool?"
+msgstr "Na pewno zakończyć naprawę systemu?"
+
+#: src/OSRStatus.ycp:29
+msgid "OK"
+msgstr "OK"
+
+#: src/OSRStatus.ycp:35
+msgid "Error"
+msgstr "Błąd"
+
+#: src/OSRStatus.ycp:41
+msgid "Problematic"
+msgstr "Z problemami"
+
+#: src/OSRStatus.ycp:47 src/OSRStatus.ycp:65
+msgid "Omitted"
+msgstr "Pominięto"
+
+#: src/OSRStatus.ycp:53
+msgid "Repaired"
+msgstr "Naprawiono"
+
+#: src/OSRStatus.ycp:59
+msgid "Failed"
+msgstr "Nie powiodło się"
+
+#: src/OSRStatus.ycp:71
+msgid "Open"
+msgstr "Otwarty"
+
+#: src/OSRStatus.ycp:77
+msgid "Not found"
+msgstr "Nie znaleziono"
+
+#: src/OSRSummary.ycp:367
+msgid "Finish"
+msgstr "Zakończ"
+
+#. ////////////////////////////////////////////////////////////////////////
+#.
+#. Repair swap area with mkswap
+#.
+#. ////////////////////////////////////////////////////////////////////////
+#. "%1": will be replaced with "/dev/hda" or "/dev/sda" ...
+#: src/OSRSwap.ycp:40
+#, ycp-format
+msgid "\nThe partition %1 has the file system ID 130, but\ncontains no valid swap area. To create\na valid swap area, press Repair.\n\nPress Skip to not perform the repair.\n"
+msgstr "\nPartycja %1 ma system plików z ID 130, ale nie zawiera\nprawidłowego obszaru wymiany. Aby utworzyć prawidłowy\nobszar wymiany należy nacisnąć przycisk Napraw.\n\nAby nie naprawiać, proszę nacisnąć przycisk Pomiń.\n"
+
+#. helptext 1/2
+#: src/OSRSwap.ycp:49
+msgid "\n<p>A partition with the ID 130 should be \na Linux swap partition. All swap partitions\nneed a valid swap area, which is created with\nthe tool mkswap.</p>\n"
+msgstr "\n<p>Partycja z ID 130 powinna być partycją\nwymiany Linuksa. Wszystkie partycje wymiany\nmuszą mieć prawidłowy obszar wymiany. Można\ngo utworzyć przy pomocy narzędzia mkswap.</p>\n"
+
+#. helptext 2/2
+#: src/OSRSwap.ycp:57
+msgid "<p>If you know how to use mkswap, \nclose this tool and create a new swap area\non the damaged swap partition. Otherwise\nclose this help dialog and press\nRepair for automatic\nrepair.</p>\n"
+msgstr "<p>Jeśli sposób użycia mkswap jest znany, należy zamknąć\nten program i utworzyć nowy obszar wymiany na uszkodzonej\npartycji wymiany. Jeśli nie, należy zamknąć to okno i nacisnąć\nprzycisk Napraw w celu automatycznego wykonania naprawy.</p>\n"
+
+#: src/OSRSwap.ycp:71
+msgid "Creating swap area..."
+msgstr "Tworzenie obszaru wymiany..."
+
+#: src/OSRSystem.ycp:55
+msgid "\nChanging environment to target\nsystem was not successful."
+msgstr "\nZmiana środowiska do systemu\ndocelowego nie powiodła się."
+
+#. summary error text, %1 are file names
+#: src/osr_module_bootloader.ycp:61
+#, ycp-format
+msgid "The following configuration files were not found:<br>%1"
+msgstr "Następujące pliki konfiguracyjne nie zostały znalezione:<br>%1"
+
+#. summary header
+#: src/osr_module_bootloader.ycp:66 src/osr_module_bootloader.ycp:108
+msgid "Installing new boot loader..."
+msgstr "Instalowanie nowego programu rozruchowego..."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:68
+msgid "New boot loader installation was successful."
+msgstr "Instalacja nowego programu rozruchowego zakończona powodzeniem."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:70
+msgid "Skipped installing a new boot loader."
+msgstr "Pominiecie instalacji nowego programu rozruchowego."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:72
+msgid "New boot loader installation was not successful."
+msgstr "Instalacja nowego programu rozruchowego nie powiodła się."
+
+#. summary text, %1 are file names
+#: src/osr_module_bootloader.ycp:78
+#, ycp-format
+msgid "Configuration files were found:<br>%1"
+msgstr "Znaleziono pliki konfiguracyjne:<br>%1"
+
+#. summary text, %1 is boot loader type
+#: src/osr_module_bootloader.ycp:100
+#, ycp-format
+msgid "Found %1 boot loader"
+msgstr "Znaleziono program rozruchowy %1"
+
+#. summary error text
+#: src/osr_module_bootloader.ycp:105
+msgid "No boot loader was found"
+msgstr "Nie znaleziono programu rozruchowego"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:110
+msgid "New boot loader installation was successful"
+msgstr "Nowy program rozruchowy został pomyślnie zainstalowany"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:112
+msgid "Skipped installing a new boot loader"
+msgstr "Pominięta instalacja nowego programu rozruchowego"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:114
+msgid "New boot loader installation was not successful"
+msgstr "Instalacja nowego programu rozruchowego nie powiodła się"
+
+#. summary header
+#: src/osr_module_bootloader.ycp:163
+msgid "Searching for root device..."
+msgstr "Wyszukiwanie urządzenia głównego..."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:168
+#, ycp-format
+msgid "Root device was found: %1"
+msgstr "Znaleziono urządzenie główne: %1"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:173
+msgid "No root device was found"
+msgstr "Nie znaleziono urządzenia głównego"
+
+#. summary header
+#: src/osr_module_bootloader.ycp:178
+msgid "Searching for boot device..."
+msgstr "Wyszukiwanie urządzenia rozruchowego..."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:183
+#, ycp-format
+msgid "Boot device was found: %1"
+msgstr "Znaleziono urządzenie rozruchowe: %1"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:188
+msgid "No boot device was found"
+msgstr "Nie znaleziono urządzenia rozruchowego"
+
+#. popup header
+#: src/osr_module_bootloader.ycp:197
+msgid "No Valid Root Partition"
+msgstr "Nie znaleziono prawidłowej partycji głównej"
+
+#. popup text
+#: src/osr_module_bootloader.ycp:199
+msgid "\nNo valid root partitions detected\nin your system. Probably, there is no valid\nLinux system on this computer. If you are\nsure that you installed a Linux system, \npress Retry Scanning. Otherwise, skip scanning\nthe system and start a new installation.\n"
+msgstr "\nNie wykryto prawidłowej partycji głównej\nw tym systemie. Prawdopodobnie na tym komputerze\nnie ma prawidłowego systemu Linux. W razie pewności,\nże system Linux został tu zainstalowany, proszę nacisnąć\nprzycisk \"Ponów sprawdzanie\". W przeciwnym razie należy \npominąć sprawdzanie systemu i rozpocząć nową instalację.\n"
+
+#. popup header
+#: src/osr_module_bootloader.ycp:211
+msgid "No Valid Boot Partition Found"
+msgstr "Nie znaleziono prawidłowej partycji startowej"
+
+#. popup text
+#: src/osr_module_bootloader.ycp:213
+msgid "\nNo valid boot partitions detected\nin your system. Probably, there is no valid\nLinux system on this computer. If you are\nsure that you installed a Linux system, \npress Retry Scanning. Otherwise, skip scanning\nthe system and start a new installation.\n"
+msgstr "\nNie wykryto prawidłowej partycji startowej\nw tym systemie. Prawdopodobnie na tym komputerze\nnie ma prawidłowego systemu Linux. W razie pewności,\nże system Linux jest zainstalowany, proszę nacisnąć\nprzycisk \"Ponów sprawdzanie\". W przeciwnym razie należy \npominąć sprawdzanie systemu i rozpocząć nową instalację.\n"
+
+#. button label
+#: src/osr_module_bootloader.ycp:224 src/osr_module_bootloader.ycp:316
+#: src/osr_module_partition.ycp:501 src/osr_module_partition.ycp:566
+#: src/osr_module_partition.ycp:664
+msgid "&Retry Scanning"
+msgstr "Ponów sp&rawdzanie"
+
+#. summary text, %1 are packages
+#: src/osr_module_bootloader.ycp:271
+#, ycp-format
+msgid "Packages needed by the boot loader were found:<br>%1"
+msgstr "Znaleziono pakiety wymagane przez program rozruchowy:<br>%1"
+
+#. summary (error) text, %1 are packages
+#: src/osr_module_bootloader.ycp:280
+#, ycp-format
+msgid "Missing packages needed by the boot loader:<br>%1"
+msgstr "Brakujące pakiety wymagane przez program rozruchowy:<br>%1"
+
+#. popup text
+#: src/osr_module_bootloader.ycp:285
+msgid "\nThe following packages needed by the\nboot loader are not installed in the\nsystem.\n"
+msgstr "\nNastępujące pakiety wymagane przez \nprogram rozruchowy nie są zainstalowane.\n"
+
+#. summary header
+#: src/osr_module_bootloader.ycp:291
+msgid "Installing packages..."
+msgstr "Instalowanie pakietów..."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:293
+msgid "Package installation was successful."
+msgstr "Instalowanie pakietu zakończone powodzeniem."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:295
+msgid "Missing packages were not installed."
+msgstr "Brakujące pakiety nie zostały zainstalowane."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:297
+msgid "Package installation was not successful."
+msgstr "Instalacja pakietów zakończona niepowodzeniem."
+
+#. summary (error) text
+#: src/osr_module_bootloader.ycp:302 src/osr_module_packages.ycp:260
+msgid "Cannot initialize package database."
+msgstr "Nie można zainicjować bazy danych pakietów."
+
+#. popup header
+#: src/osr_module_bootloader.ycp:305
+msgid "Cannot Initialize the Package Database"
+msgstr "Nie można zainicjować bazy danych pakietów"
+
+#. popup text
+#: src/osr_module_bootloader.ycp:307
+msgid "\nCould not initialize the package database.\nProbably, there is no valid package database\non this computer.\nTo check the package database,\npress Retry Scanning.\nOtherwise press Cancel and continue with other tests.\n"
+msgstr "\nNie udało się zainicjować bazy danych pakietów.\nPrawdopodobnie na tym komputerze nie ma prawidłowej\nbazy danych pakietów.\nAby sprawdzić bazę danych pakietów, proszę nacisnąć\nprzycisk \"Ponów sprawdzanie\".\nJeśli nie, należy nacisnąć przycisk Anuluj i kontynuować inne testy.\n"
+
+#. summary text, %1 are packages
+#: src/osr_module_bootloader.ycp:338
+#, ycp-format
+msgid "Packages needed by the boot loader were checked successfully:<br>%1"
+msgstr "Pakiety wymagane przez program rozruchowy zostały poprawnie zweryfikowane:<br>%1"
+
+#. summary text (error), %1 are packages
+#: src/osr_module_bootloader.ycp:347
+#, ycp-format
+msgid "Packages needed by the boot loader were not checked successfully:<br>%1"
+msgstr "Pakiety wymagane przez program rozruchowy nie zostały zweryfikowane z powodzeniem:<br>%1"
+
+#. popup text
+#: src/osr_module_bootloader.ycp:352
+msgid "\nThe state of the following packages\nneeded by the boot loader is not\nvalid. Press Repair to update\nthese packages.\n"
+msgstr "\nStan następujących pakietów wymaganych\nprzez program rozruchowy nie jest prawidłowy.\nProszę nacisnąć przycisk Napraw, aby \nzaktualizować te pakiety.\n"
+
+#. summary header
+#: src/osr_module_bootloader.ycp:359 src/osr_module_bootloader.ycp:400
+msgid "Updating packages..."
+msgstr "Uaktualnianie pakietów..."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:361 src/osr_module_bootloader.ycp:402
+msgid "Successfully updated packages."
+msgstr "Pakiety uaktualnione z powodzeniem."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:363 src/osr_module_bootloader.ycp:404
+msgid "Packages were not updated."
+msgstr "Pakiety nie zostały zaktualizowane."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:365 src/osr_module_bootloader.ycp:406
+msgid "Package update was not successful."
+msgstr "Uaktualnianie pakietów zakończone niepowodzeniem."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:379
+#, ycp-format
+msgid "Package versions are OK:<br>%1"
+msgstr "Wersje pakietów są poprawne:<br>%1"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:388
+#, ycp-format
+msgid "Package versions are obsolete:<br>%1"
+msgstr "Wersje pakietów są nieaktualne:<br>%1"
+
+#. popup text
+#: src/osr_module_bootloader.ycp:394
+msgid "\nThe following packages are \nobsolete. Press Repair to update\nthese packages.\n"
+msgstr "\nWersje następujących pakietów są \nnieaktualne. Proszę nacisnąć przycisk Napraw, \naby uaktualnić te pakiety.\n"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:417
+#, ycp-format
+msgid "All needed initrd modules found"
+msgstr "Znaleziono wszystkie potrzebne moduły initrd"
+
+#. summary header
+#: src/osr_module_bootloader.ycp:424
+msgid "Repairing missing initrd modules..."
+msgstr "Naprawianie brakujących modułów initrd..."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:426
+msgid "Repair was successful."
+msgstr "Naprawa się powiodła."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:428
+msgid "Repair was skipped."
+msgstr "Naprawę pominięto."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:430
+msgid "Repair was not successful."
+msgstr "Naprawa nie powiodła się."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:447
+msgid "File exists"
+msgstr "Plik istnieje"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:454
+msgid "Configuration file was not found or is empty"
+msgstr "Plik konfiguracyjny nie został znaleziony albo jest pusty"
+
+#. summary header
+#: src/osr_module_bootloader.ycp:458
+msgid "Creating new boot loader configuration file..."
+msgstr "Tworzenie nowego pliku konfiguracyjnego programu rozruchowego..."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:460 src/osr_module_bootloader.ycp:464
+msgid "Creation was not successful"
+msgstr "Tworzenie nie powiodło się"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:462
+msgid "Creation was skipped"
+msgstr "Tworzenie pominięto"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:484
+msgid "Boot loader configuration file check was successful"
+msgstr "Weryfikacja pliku konfiguracyjnego programu rozruchowego zakończona powodzeniem"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:491
+msgid "Boot loader configuration file contains errors"
+msgstr "Plik konfiguracyjny programu rozruchowego zawiera błędy"
+
+#. summary header
+#: src/osr_module_bootloader.ycp:494 src/osr_module_bootloader.ycp:551
+msgid "Repairing boot loader configuration..."
+msgstr "Naprawianie konfiguracji programu rozruchowego..."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:496 src/osr_module_bootloader.ycp:553
+#: src/osr_module_partition.ycp:456
+msgid "Repair was successful"
+msgstr "Naprawa się powiodła"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:498 src/osr_module_bootloader.ycp:555
+#: src/osr_module_partition.ycp:458 src/osr_module_partition.ycp:848
+#: src/osr_module_partition.ycp:882
+msgid "Repair was skipped"
+msgstr "Naprawę pominięto"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:500 src/osr_module_bootloader.ycp:557
+#: src/osr_module_partition.ycp:129 src/osr_module_partition.ycp:460
+#: src/osr_module_partition.ycp:850 src/osr_module_partition.ycp:884
+msgid "Repair was not successful"
+msgstr "Naprawa nie powiodła się"
+
+#. summary header
+#: src/osr_module_bootloader.ycp:512
+msgid "Asking about boot loader..."
+msgstr "Sprawdzanie programu rozruchowego..."
+
+#. popup header
+#: src/osr_module_bootloader.ycp:523
+msgid "Boot Loader Check"
+msgstr "Weryfikacja programu rozruchowego"
+
+#. popup text
+#: src/osr_module_bootloader.ycp:525
+msgid "\nNo error found in the boot loader \nsettings of the system. \n\nIt is sometimes possible that your\nboot loader is damaged anyway. The only way to\ndetect such an exceptional case is to ask\nthe user.\n\nIf you can shut down your system and have it \nstart correctly, you have a valid\nboot loader installation. In this case, \npress Continue.\nIf your system does not start correctly,\npress Repair.\n"
+msgstr "\nNie znaleziono błędów w konfiguracji\nprogramu rozruchowego.\n\nMimo tego może się zdarzyć, że program\nrozruchowy jest uszkodzony. Jedyną możliwością\nwykrycia takiej wyjątkowej sytuacji jest\nzapytanie użytkownika.\n\nJeśli po wyłączeniu systemu i ponownym jego \nuruchomieniu wszystko jest w porządku, oznacza to, \nże program rozruchowy jest poprawnie zainstalowany.\nW takim przypadku należy nacisnąć przycisk Dalej.\nJeśli system nie uruchamia się poprawnie,\nproszę nacisnąć przycisk Napraw.\n"
+
+#. summary text
+#: src/osr_module_bootloader.ycp:548
+msgid "Error detected by user..."
+msgstr "Błąd wykryty przez użytkownika..."
+
+#. summary text
+#: src/osr_module_bootloader.ycp:561
+msgid "No error found..."
+msgstr "Nie znaleziono błędów..."
+
+#. module headline
+#: src/osr_module_bootloader.ycp:654
+msgid "Boot Loader"
+msgstr "Program rozruchowy"
+
+#. module action label
+#: src/osr_module_bootloader.ycp:659
+msgid "Check Boot Loader Configuration"
+msgstr "Sprawdź konfigurację programu rozruchowego"
+
+#. bootloader module helptext
+#: src/osr_module_bootloader.ycp:661
+msgid "\n<p>\nThe boot loader is the first thing\nyou should see after you turn\non a computer with a Linux installion.\nStarting a Linux system without\na boot loader is not possible.</P>\n"
+msgstr "\n<P>Program rozruchowy jest pierwszą rzeczą,\njaką powinno się zobaczyć po włączeniu komputera\nz systemem Linux.\nUruchomienie systemu Linux bez programu\nrozruchowego nie jest możliwe.</P>\n"
+
+#: src/osr_module_bootloader.ycp:676
+msgid "<P>For this check, the repair system \ntries to detect the installed boot\nloader. Afterwards, the configuration\nfiles of the found boot loader are\nchecked. If no boot loader or an error\nin the configuration is detected, you\nhave the possibility to install a new\nboot loader. \n</P>\n"
+msgstr "<P>System naprawczy próbuje wykryć zainstalowany program\nrozruchowy. Potem sprawdza pliki konfiguracyjne\nznalezionego programu rozruchowego. Jeśli nie \nma programu rozruchowego albo zostaną stwierdzone błędy\nkonfiguracji, będzie możliwe zainstalowanie\nnowego programu rozruchowego.\n</P>\n"
+
+#. summary
+#: src/osr_module_bootloader.ycp:692
+msgid "Resetting boot loader settings..."
+msgstr "Przywracanie ustawień programu rozruchowego..."
+
+#. module method progress label
+#: src/osr_module_bootloader.ycp:701
+msgid "Searching configuration files..."
+msgstr "Przeszukiwanie plików konfiguracyjnych..."
+
+#. module method progress label
+#: src/osr_module_bootloader.ycp:710
+msgid "Searching for boot loader..."
+msgstr "Szukanie programu rozruchowego..."
+
+#. module method progress label
+#: src/osr_module_bootloader.ycp:727
+msgid "Searching for packages..."
+msgstr "Wyszukiwanie pakietów..."
+
+#. module method progress label
+#: src/osr_module_bootloader.ycp:736
+msgid "Verifying packages..."
+msgstr "Sprawdzanie pakietów..."
+
+#. module method progress label
+#: src/osr_module_bootloader.ycp:745
+msgid "Checking versions..."
+msgstr "Sprawdzanie wersji..."
+
+#. module method progress label
+#: src/osr_module_bootloader.ycp:754
+msgid "Checking initrd modules..."
+msgstr "Sprawdzanie modułów initrd..."
+
+#. module method progress label
+#: src/osr_module_bootloader.ycp:763
+msgid "Searching boot loader configuration file..."
+msgstr "Szukanie pliku konfiguracyjnego programu rozruchowego..."
+
+#. module method progress label
+#: src/osr_module_bootloader.ycp:772
+msgid "Checking boot loader configuration file..."
+msgstr "Sprawdzanie pliku konfiguracyjnego programu rozruchowego..."
+
+#. module method action label
+#: src/osr_module_bootloader.ycp:792
+msgid "Install New Boot Loader"
+msgstr "Instaluj nowy program rozruchowy"
+
+#: src/osr_module_bootloader.ycp:795
+msgid "\nIf you do not see a boot menu after\nturning on your computer or after\nrestarting, press this button to\ninstall a new boot loader.\n"
+msgstr "\nJeśli po włączeniu komputera lub po jego \nrestarcie nie pojawia się menu startowe, \nnależy nacisnąć ten przycisk w celu zainstalowania\nnowego programu rozruchowego.\n"
+
+#. summary text, %1 is floppy device
+#: src/osr_module_init.ycp:49
+#, ycp-format
+msgid "Floppy device found on %1"
+msgstr "Znaleziono napęd dyskietek %1"
+
+#. summary text, %1 are floppy devices
+#: src/osr_module_init.ycp:63
+#, ycp-format
+msgid "Several floppy devices found<br>%1"
+msgstr "Znaleziono kilka napędów dyskietek<br> %1"
+
+#. popup headline
+#: src/osr_module_init.ycp:70
+msgid "Select the Floppy Device"
+msgstr "Proszę wybrać urządzenie stacji dyskietek"
+
+#. radibutton group description
+#: src/osr_module_init.ycp:72
+msgid "Select one of the floppy\ndevices for later use."
+msgstr "Proszę wybrać jedną ze stacji dyskietek \ndo wykorzystania później."
+
+#. summary text, %1 is floppy device
+#: src/osr_module_init.ycp:80
+#, ycp-format
+msgid "Selected floppy device %1"
+msgstr "Wybrano stację dyskietek %1"
+
+#. summary text
+#: src/osr_module_init.ycp:87
+msgid "No floppy device found"
+msgstr "Nie znaleziono napędu dyskietek"
+
+#. summary text
+#: src/osr_module_init.ycp:97 src/osr_module_packages.ycp:74
+msgid "Target system initialized"
+msgstr "System docelowy zainicjalizowany"
+
+#. module headline
+#: src/osr_module_init.ycp:132
+msgid "OSRInit"
+msgstr "OSRInit"
+
+#. module action label
+#: src/osr_module_init.ycp:136
+msgid "Initialize Repair System"
+msgstr "Inicjalizuj system naprawy"
+
+#. module helptext
+#: src/osr_module_init.ycp:138
+msgid "TODO"
+msgstr "Do zrobienia"
+
+#. module method progress label
+#: src/osr_module_init.ycp:145
+msgid "Probing floppy..."
+msgstr "Testowanie dyskietki..."
+
+#. module method progress label
+#: src/osr_module_init.ycp:154
+msgid "Initializing target system..."
+msgstr "Inicjalizacja systemu docelowego..."
+
+#. summary text
+#: src/osr_module_packages.ycp:57
+msgid "Target system was not initialized"
+msgstr "System docelowy nie został zainicjowany"
+
+#. summary text
+#: src/osr_module_packages.ycp:67
+#, ycp-format
+msgid "Following devices cannot be mounted:<br>%1"
+msgstr "Następujące urządzenia nie mogą być zamontowane:<br>%1"
+
+#. summary text
+#: src/osr_module_packages.ycp:94
+msgid "Package database was found"
+msgstr "Znaleziono bazę danych pakietów"
+
+#. summary text
+#: src/osr_module_packages.ycp:100
+msgid "No package database was found"
+msgstr "Baza danych pakietów nie została znaleziona"
+
+#. summary header
+#: src/osr_module_packages.ycp:103
+msgid "Initializing new package database..."
+msgstr "Inicjalizacja nowej bazy danych pakietów..."
+
+#. summary text
+#: src/osr_module_packages.ycp:105
+msgid "Successfully initialized new package database"
+msgstr "Poprawnie zainicjowano nową bazę danych pakietów"
+
+#. summary text
+#: src/osr_module_packages.ycp:107
+msgid "Skipped initializing new package database"
+msgstr "Pominięto inicjalizację nowej bazy danych pakietów"
+
+#. summary text
+#: src/osr_module_packages.ycp:109
+msgid "Initialization of the new package database was not successful"
+msgstr "Inicjalizacja nowej bazy danych pakietów zakończona niepowodzeniem"
+
+#. error text in summary
+#: src/osr_module_packages.ycp:116
+msgid "Different versions of products"
+msgstr "Różne wersje produktów"
+
+#. summary text
+#: src/osr_module_packages.ycp:136
+msgid "Minimum required packages were found"
+msgstr "Znaleziono minimum wymaganych pakietów"
+
+#. summary text
+#: src/osr_module_packages.ycp:142
+msgid "Some packages of the minimum requirement were missing"
+msgstr "Brak części pakietów z wymagań minimalnych"
+
+#. summary heder
+#: src/osr_module_packages.ycp:145
+msgid "Installing missing packages..."
+msgstr "Instalowanie brakujących pakietów..."
+
+#. summary text
+#: src/osr_module_packages.ycp:147
+msgid "Installation of missing packages was successful"
+msgstr "Instalacja brakujących pakietów zakończona pomyślnie"
+
+#. summary text
+#: src/osr_module_packages.ycp:149
+msgid "Installation of missing packages was skipped"
+msgstr "Pominięto instalację brakujących pakietów"
+
+#. summary text
+#: src/osr_module_packages.ycp:151
+msgid "Installation of missing packages was not successful"
+msgstr "Instalacja brakujących pakietów zakończona niepowodzeniem"
+
+#. summary text
+#: src/osr_module_packages.ycp:172
+msgid "Package verification was canceled"
+msgstr "Weryfikacja pakietu została pominięta"
+
+#. summary text
+#: src/osr_module_packages.ycp:177
+msgid "Package verification failed"
+msgstr "Weryfikacja pakietu zakończona niepowodzeniem"
+
+#. summary text
+#: src/osr_module_packages.ycp:184
+msgid "Reinstallation of unverified packages was successful"
+msgstr "Ponowna instalacja niezweryfikowanych pakietów powiodła się"
+
+#. summary text
+#: src/osr_module_packages.ycp:186
+msgid "Reinstallation of unverified packages was skipped"
+msgstr "Pominięto ponowną instalację niezweryfikowanych pakietów"
+
+#. summary text
+#: src/osr_module_packages.ycp:188
+msgid "Reinstallation of unverified packages was not successful"
+msgstr "Ponowna instalacja niezweryfikowanych pakietów nie powiodła się"
+
+#. summary text
+#: src/osr_module_packages.ycp:193
+msgid "All packages were verified successfully"
+msgstr "Wszystkie pakiety zweryfikowano pomyślnie"
+
+#. radio button label
+#: src/osr_module_packages.ycp:228
+msgid "Base Packages Only"
+msgstr "Tylko pakiety podstawowe"
+
+#. radio button label
+#: src/osr_module_packages.ycp:230
+msgid "All Installed Packages"
+msgstr "Wszystkie pakiety zainstalowane"
+
+#. RadioButtonGroup label
+#: src/osr_module_packages.ycp:236
+msgid "Package Range"
+msgstr "Zakres pakietów"
+
+#. RadioButtonGroup text
+#: src/osr_module_packages.ycp:238
+msgid "\nYou can verify all packages\nor only the base packages. Verifying all packages \nis very time consuming.\n"
+msgstr "\nMożna weryfikować wszystkie pakiety lub tylko\npakiety podstawowe. Weryfikowanie wszystkich\npakietów zajmuje bardzo dużo czasu.\n"
+
+#: src/osr_module_packages.ycp:268
+#, ycp-format
+msgid "Verified %1 packages successfully.\n"
+msgstr "Pomyślna weryfikacja %1 pakietów.\n"
+
+#. helptext
+#: src/osr_module_packages.ycp:306
+msgid "The most common way to add a new program or library\nto a Linux system is to install a new package.\nIn doing so, the install routine copies all files of the\npackage to the target and registers the package in\nthe package database.\n"
+msgstr "Najpopularniejszą metodą dodawania nowych programów\ni bibliotek do systemu Linux jest instalowanie pakietów.\nPolega to na skopiowaniu przez procedury instalacyjne\nwszystkich plików tworzących pakiet do ich miejsc docelowych\noraz zarejestrowaniu pakietu w bazie danych pakietów.\n"
+
+#. helptext, %1 adds additional sentences
+#: src/osr_module_packages.ycp:314
+#, ycp-format
+msgid "\n%1\nThe package database administers all\ninformation about the installed software packages.\nVerifying a package means that the information\nin the package database about a package is\ncompared with the actual installed files.\n"
+msgstr "\n%1\nBaza danych pakietów służy do administrowania wszystkimi\ninformacjami o zainstalowanych pakietach oprogramowania.\nWeryfikowanie pakietów oznacza porównanie informacji\nw bazie pakietów z rzeczywiście zainstalowanymi plikami.\n"
+
+#. module action label
+#: src/osr_module_packages.ycp:326
+msgid "Check Package Database"
+msgstr "Sprawdź bazę pakietów"
+
+#. %1 adds some sentences
+#: src/osr_module_packages.ycp:328
+#, ycp-format
+msgid "\n<p>\nThe package database administers all\ninformation about the installed software packages.\n%1\nThis makes it possible to remove the package later.</P>\n"
+msgstr "\n<p>\nBaza danych pakietów służy do administrowania wszystkimi\ninformacjami o zainstalowanych pakietach oprogramowania.\n%1\nDzięki temu możliwe jest usunięcie pakietu w przyszłości.</P>\n"
+
+#. helptext
+#: src/osr_module_packages.ycp:336
+msgid "<P>\nThis procedure checks all files that pertain to the\npackage database. If some files are missing\nor the package database cannot be opened,\nyou can rebuild the database or\nrevert to a backup.</P>\n"
+msgstr "<P>\nProcedura ta sprawdza wszystkie pliki należące do\nbazy pakietów. Jeśli brakuje jakichś plików\nlub nie da się otworzyć bazy danych,\nmożna przebudować bazę danych albo\npowrócić do kopii zapasowej.</P>\n"
+
+#. module action label
+#: src/osr_module_packages.ycp:346
+msgid "Check Minimal Package Selection"
+msgstr "Sprawdź minimalny zestaw pakietów"
+
+#. helptext, %1 is some sentences
+#: src/osr_module_packages.ycp:348
+#, ycp-format
+msgid "\n\n<P>\n%1\n&product; needs at least some packages for\nthe basic system functionality. Without these\npackages, the system is not executable.</P>\n"
+msgstr "\n\n<P>\n%1\n&product; wymaga co najmniej kilku pakietów do \nzapewnienia podstawowej funkcjonalności systemu.\nBez tych pakietów systemu nie można uruchomić.</p>\n"
+
+#. helptext
+#: src/osr_module_packages.ycp:358
+msgid "<P>\nThis procedure checks if all packages of a minimal installation\nare installed. If\nsome packages are missing, you can\ninstall the missing packages.</P>\n"
+msgstr "<P>Procedura sprawdza, czy wszystkie pakiety instalacji\nminimalnej są zainstalowane. Jeśli\nbrakuje jakichś pakietów, można\nzainstalować brakujące.</P>\n"
+
+#. module action label
+#: src/osr_module_packages.ycp:369
+msgid "Verify Base Packages"
+msgstr "Zweryfikuj pakiety podstawowe"
+
+#. helptext
+#: src/osr_module_packages.ycp:376
+msgid "<P>\nThis procedure verifies all packages that belong\nto the minimum selection. If\ndiscrepancies appear, you can\nreinstall the damaged packages.</P>\n"
+msgstr "<P>\nTa procedura weryfikuje wszystkie pakiety należące \ndo zestawu minimalnego. Jeśli\npojawiają się rozbieżności, można\nponownie zainstalować uszkodzone pakiety.</P>\n"
+
+#. module action label
+#: src/osr_module_packages.ycp:391
+msgid "Verify All Installed Packages (very time consuming)"
+msgstr "Zweryfikuj wszystkie zainstalowane pakiety (bardzo czasochłonne)"
+
+#. helptext
+#: src/osr_module_packages.ycp:400
+msgid "<P>\nThis procedure verifies all installed packages. If\ndiscrepancies appear, you can\nreinstall the damaged packages. Verifying\nall packages is very time consuming. Therefore,\nthis menu entry does not belong to the default\nselection.</P>\n"
+msgstr "<P>\nTa procedura weryfikuje wszystkie zainstalowane pakiety.\nJeśli pojawiają się rozbieżności, można\nponownie zainstalować uszkodzone pakiety. Weryfikowanie\nwszystkich pakietów jest bardzo czasochłonne. Z tego\npowodu ta pozycja menu nie jest domyślna.</P>\n"
+
+#. module headline
+#: src/osr_module_packages.ycp:416
+msgid "Packages"
+msgstr "Pakiety"
+
+#. module reset label
+#: src/osr_module_packages.ycp:422
+msgid "Reset Package Check Settings"
+msgstr "Przywróć ustawienia sprawdzania pakietów"
+
+#. module method progress label
+#: src/osr_module_packages.ycp:431
+msgid "Mounting all partitions..."
+msgstr "Montowanie wszystkich partycji..."
+
+#. module method progress label
+#: src/osr_module_packages.ycp:440
+msgid "Searching for package database..."
+msgstr "Wyszukiwanie bazy danych pakietów..."
+
+#. module method progress label
+#: src/osr_module_packages.ycp:449
+msgid "Searching for minimum required packages..."
+msgstr "Wyszukiwanie minimum wymaganych pakietów..."
+
+#. module method progress label
+#: src/osr_module_packages.ycp:458
+msgid "Verifying base packages..."
+msgstr "Weryfikowanie pakietów podstawowych..."
+
+#. module method acton label
+#: src/osr_module_packages.ycp:471
+msgid "Verify Installed Software"
+msgstr "Weryfikuj zainstalowane oprogramowanie"
+
+#. module method description
+#: src/osr_module_packages.ycp:473
+msgid "\nIf you have problems with some installed\napplications, select this to check\nall software packages.\n"
+msgstr "\nJeśli pojawiły się problemy z niektórymi\nzainstalowanymi programami, należy wybrać\ntę opcję w celu sprawdzenia wszystkich\npakietów oprogramowania.\n"
+
+#. module method progress label
+#: src/osr_module_packages.ycp:491
+msgid "Verifying all installed packages..."
+msgstr "Weryfikowanie wszystkich zainstalowanych pakietów..."
+
+#. summary text
+#: src/osr_module_partition.ycp:68
+msgid "No hard disks were detected"
+msgstr "Nie wykryto żadnego dysku"
+
+#. error popup
+#: src/osr_module_partition.ycp:70
+msgid "\nCould not detect any hard disks\nin your system. You probably need to load\nthe correct kernel modules.\n\nHalting the repair system.\n"
+msgstr "\nNie wykryto żadnego dysku w tym\nsystemie. Prawdopodobnie konieczne jest\nwczytanie odpowiednich modułów jądra.\n\nSystem naprawy zostanie zatrzymany.\n"
+
+#. summary text: %1 will be replaced with a string like "/dev/hda"
+#: src/osr_module_partition.ycp:85
+#, ycp-format
+msgid "One hard disk detected: %1"
+msgstr "Wykryto jeden dysk: %1"
+
+#. summary text: %1 is string like "/dev/hda, /dev/hdb, /dev/sda"
+#: src/osr_module_partition.ycp:91
+#, ycp-format
+msgid "Several hard disks detected: %1"
+msgstr "Wykryto kilka dysków: %1"
+
+#. summary text
+#: src/osr_module_partition.ycp:117
+#, ycp-format
+msgid "No partition table was found for hard disk %1"
+msgstr "Nie znaleziono tablicy partycji dysku %1"
+
+#. summary header
+#: src/osr_module_partition.ycp:123
+#, ycp-format
+msgid "Repairing partition table of hard disk %1"
+msgstr "Naprawa tablicy partycji dysku %1"
+
+#. summary text
+#: src/osr_module_partition.ycp:125
+msgid "Successfully repaired the partition table"
+msgstr "Naprawa tablicy partycji zakończona pomyślnie"
+
+#. summary text
+#: src/osr_module_partition.ycp:127
+msgid "Partition table was not repaired"
+msgstr "Tablica partycji nie została naprawiona"
+
+#. summary text
+#: src/osr_module_partition.ycp:146
+msgid "No hard disk was found with a valid primary partition table"
+msgstr "Nie znaleziono dysku z prawidłową podstawową tablicą partycji"
+
+#. error popup
+#: src/osr_module_partition.ycp:149
+msgid "\nNone of the hard disks detected\ncontain a valid primary partition table.\n\nHalting the repair system.\n"
+msgstr "\nNie wykryto żadnego dysku z prawidłową\npodstawową tablicą partycji.\n\nZatrzymanie systemu naprawy.\n"
+
+#. summary text (%1 is disk)
+#: src/osr_module_partition.ycp:164
+#, ycp-format
+msgid "Partition tables found for disk %1"
+msgstr "Znaleziono tablice partycji dysku %1"
+
+#. summary text
+#: src/osr_module_partition.ycp:172
+#, ycp-format
+msgid "Partition tables found for the disks %1"
+msgstr "Znaleziono tablice partycji dysku %1"
+
+#. summary text
+#: src/osr_module_partition.ycp:188 src/osr_module_partition.ycp:488
+msgid "No valid partition types were found"
+msgstr "Nie znaleziono prawidłowych typów partycji"
+
+#. summary text (%1 are partitions)
+#: src/osr_module_partition.ycp:194
+#, ycp-format
+msgid "Valid swap partitions were found:<br>%1"
+msgstr "Znaleziono prawidłowe partycje wymiany:<br>%1"
+
+#. summary text
+#: src/osr_module_partition.ycp:215
+msgid "No swap partitions were found"
+msgstr "Nie znaleziono partycji wymiany"
+
+#. summary text (%1 are partitions)
+#: src/osr_module_partition.ycp:221
+#, ycp-format
+msgid "Swap partitions were found:<br>%1"
+msgstr "Znaleziono partycje wymiany:<br>%1"
+
+#. Check if the specified swap-partition is already "swapped", if true don't swapon.
+#. summary header (%1 is partition)
+#: src/osr_module_partition.ycp:232
+#, ycp-format
+msgid "Adding partition %1 to swap"
+msgstr "Dodawanie partycji wymiany %1"
+
+#. summary text (%1 is partition)
+#: src/osr_module_partition.ycp:238
+#, ycp-format
+msgid "Partition %1 was already added to swap"
+msgstr "Partycja %1 już jest używana do wymiany"
+
+#. popup label (%1 is partition)
+#: src/osr_module_partition.ycp:243
+#, ycp-format
+msgid "Activate Swap Partition %1"
+msgstr "Aktywuj partycję wymiany %1"
+
+#. popup text
+#: src/osr_module_partition.ycp:245
+#, ycp-format
+msgid "\nThe partition %1 has the file system ID 130 and\ncontains a valid swap area. Activating this swap\npartition increases the performance of the repair tool.\nActivate the swap\npartition?\n"
+msgstr "\nPartycja %1 ma system plików z ID 130 i zawiera\nprawidłowy obszar wymiany. Aktywowanie tej partycji\nwymiany poprawi efektywność programu do naprawy.\nCzy uaktywnić partycję\nwymiany?\n"
+
+#. summary text
+#: src/osr_module_partition.ycp:261
+msgid "Swap activation was successful"
+msgstr "Aktywowanie przestrzeni wymiany zakończone pomyślnie"
+
+#. summary text
+#: src/osr_module_partition.ycp:272
+msgid "Swap activation was not successful"
+msgstr "Aktywowanie przestrzeni wymiany zakończone niepowodzeniem"
+
+#. summary header
+#: src/osr_module_partition.ycp:281
+#, ycp-format
+msgid "Adding partition %1 to swap..."
+msgstr "Dodawanie partycji %1do przestrzeni wymiany..."
+
+#. summary text
+#: src/osr_module_partition.ycp:283
+#, ycp-format
+msgid "No valid swap area was found on\npartition %1"
+msgstr "Nie znaleziono prawidłowego obszaru wymiany\nna partycji %1"
+
+#. summary header
+#: src/osr_module_partition.ycp:289
+#, ycp-format
+msgid "Creating swap area on partition %1..."
+msgstr "Tworzenie obszaru wymiany na partycji %1..."
+
+#. summary text
+#: src/osr_module_partition.ycp:291
+#, ycp-format
+msgid "mkswap %1 was successful"
+msgstr "mkswap na %1 powiodło się"
+
+#. summary text
+#: src/osr_module_partition.ycp:293
+msgid "Repair skipped"
+msgstr "Pominięto naprawę"
+
+#. summary text
+#: src/osr_module_partition.ycp:295
+#, ycp-format
+msgid "mkswap %1 was not successful"
+msgstr "mkswap na %1 nie powiodło się"
+
+#. summary text (%1 are kernel modules)
+#: src/osr_module_partition.ycp:312
+#, ycp-format
+msgid "Loading failed for kernel modules:<br> %1"
+msgstr "Nie powiodło się wczytywanie modułów jądra:<br> %1"
+
+#. summary text (%1 are kernel modules)
+#: src/osr_module_partition.ycp:319
+#, ycp-format
+msgid "Kernel modules successfully installed:<br> %1"
+msgstr "Moduły jądra zainstalowane z powodzeniem:<br> %1"
+
+#. no mounted partitions: not implicitly an error!
+#. summary text
+#: src/osr_module_partition.ycp:347
+msgid "No mounted partitions were found"
+msgstr "Nie znaleziono zamontowanych partycji"
+
+#. %1 is device, %2 mount point, %3 is fs type, %4 options
+#. example: "/dev/hda3 on /local type  rw" (=empty type)
+#: src/osr_module_partition.ycp:355
+#, ycp-format
+msgid "%1 on %2 type %3 %4"
+msgstr "%1 na %2 typ %3 %4"
+
+#. summary text
+#: src/osr_module_partition.ycp:360
+#, ycp-format
+msgid "Mounted partitions were found:<br>%1"
+msgstr "Znaleziono zamontowane partycje:<br> %1"
+
+#. summary text
+#: src/osr_module_partition.ycp:376
+msgid "No partitions found"
+msgstr "Nie znaleziono żadnej partycji"
+
+#. summary header
+#: src/osr_module_partition.ycp:403
+#, ycp-format
+msgid "Executing file system check for partition %1..."
+msgstr "Sprawdzanie systemu plików na partycji %1..."
+
+#. summary text
+#: src/osr_module_partition.ycp:408
+msgid "Partition mounted: check impossible"
+msgstr "Partycja zamontowana: sprawdzenie niemożliwe"
+
+#. summary text
+#: src/osr_module_partition.ycp:415
+msgid "Partition is encrypted: check not supported"
+msgstr "Partycja jest zaszyfrowana: sprawdzanie nie jest obsługiwane"
+
+#. summary text
+#: src/osr_module_partition.ycp:422
+msgid "Partition is used by MD RAID: check not supported"
+msgstr "Partycja używana przez MD RAID: sprawdzanie nie jest obsługiwane"
+
+#. summary text, %1 is device, %2 file system type
+#: src/osr_module_partition.ycp:434
+#, ycp-format
+msgid "%1 contains valid %2 file system"
+msgstr "%1 zawiera poprawny system plików %2"
+
+#. summary text, %1 is device, %2 file system type
+#: src/osr_module_partition.ycp:442
+#, ycp-format
+msgid "%1 contains no valid %2 file system"
+msgstr "%1 zawiera nieprawidłowy system plików %2"
+
+#. summary text, %1 is device
+#: src/osr_module_partition.ycp:446
+#, ycp-format
+msgid "%1 contains unknown file system"
+msgstr "%1 zawiera nieznany system plików"
+
+#. popup label
+#: src/osr_module_partition.ycp:490
+msgid "No Valid Linux Partitions Found"
+msgstr "Nie znaleziono żadnej prawidłowej partycji linuksowej"
+
+#. popup text
+#: src/osr_module_partition.ycp:492
+msgid "Could not detect any valid Linux partitions\nin your system. There probably is no valid\nLinux system on this computer. If you are\nsure that you installed a Linux system,\npress Retry Scanning. Otherwise\nskip scanning the system and start a new\ninstallation.\n"
+msgstr "Nie wykryto żadnej prawidłowej partycji linuksowej\nw tym systemie. Prawdopodobnie nie ma prawidłowego\nsystemu Linux na tym komputerze. W razie pewności, \nże system Linux jest zainstalowany, proszę nacisnąć \nprzycisk \"Ponów sprawdzanie\". W przeciwnym\nrazie należy pominąć sprawdzanie i rozpocząć nową\ninstalację.\n"
+
+#. summary text
+#: src/osr_module_partition.ycp:523
+#, ycp-format
+msgid "Valid Linux partitions were found:<br>%1"
+msgstr "Znaleziono prawidłowe partycje linuksowe:<br>%1"
+
+#. summary text
+#: src/osr_module_partition.ycp:544
+#, ycp-format
+msgid "Mountable partitions were found:<br>%1"
+msgstr "Znaleziono montowalne partycje:<br> %1"
+
+#. summary text
+#: src/osr_module_partition.ycp:553
+msgid "No mountable partitions were found"
+msgstr "Nie znaleziono żadnej montowalnej partycji"
+
+#. popup label
+#: src/osr_module_partition.ycp:555
+msgid "No Mountable Partitions Found"
+msgstr "Nie znaleziono żadnej montowalnej partycji"
+
+#. popup text
+#: src/osr_module_partition.ycp:557
+msgid "\nCould not detect any mountable partitions\nin your system. Probably there is no valid\nLinux system on this computer. If you are sure\nthat you installed a Linux system, press \nRetry Scanning. Otherwise skip scanning\nthe system and start a new installation.\n"
+msgstr "\nNie znaleziono żadnej montowalnej partycji\nw tym systemie. Prawdopodobnie nie ma prawidłowego\nsystemu Linux na tym komputerze. W razie pewności, \nże system Linux jest zainstalowany, proszę nacisnąć \nprzycisk \"Ponów sprawdzanie\". W przeciwnym\nrazie należy pominąć sprawdzanie i rozpocząć nową\ninstalację.\n"
+
+#. summary text
+#: src/osr_module_partition.ycp:589
+msgid "Unmountable Linux partitions"
+msgstr "Niemontowalne partycje linuksowe"
+
+#. summary text (%1 is root partition)
+#: src/osr_module_partition.ycp:616
+#, ycp-format
+msgid "One valid partition was found: %1"
+msgstr "Znaleziono jedną prawidłową partycję: %1"
+
+#. summary text (%1 are root partitions)
+#: src/osr_module_partition.ycp:628
+#, ycp-format
+msgid "Several valid root partitions were found:<br>%1"
+msgstr "Znaleziono kilka prawidłowych partycji głównych:<br> %1"
+
+#. summary text
+#: src/osr_module_partition.ycp:651
+msgid "No valid root partition was found"
+msgstr "Nie znaleziono prawidłowej partycji głównej"
+
+#. popup label
+#: src/osr_module_partition.ycp:653
+msgid "No Valid Root Partition Found"
+msgstr "Nie znaleziono prawidłowej partycji głównej"
+
+#. popup text
+#: src/osr_module_partition.ycp:655
+msgid "\nCould not detect any valid root partition\nin your system. Probably there is no valid\nLinux system on this computer. If you are\nsure that you installed a Linux system, try \nto restart scanning. Otherwise skip scanning and\nstart a new installation.\n"
+msgstr "\nNie znaleziono żadnej prawidłowej partycji głównej\nw tym systemie. Prawdopodobnie nie ma prawidłowego\nsystemu Linux na tym komputerze. W razie pewności, \nże system Linux jest zainstalowany, proszę nacisnąć \nprzycisk \"Ponów sprawdzanie\". W przeciwnym\nrazie należy pominąć sprawdzanie i rozpocząć nową\ninstalację.\n"
+
+#. summary header, %1 is root partition, %2 target
+#. summary header (%1 is partition, %2 mount point)
+#: src/osr_module_partition.ycp:699 src/osr_module_partition.ycp:758
+#, ycp-format
+msgid "Mounting root partition %1 to %2..."
+msgstr "Montowanie partycji głównej %1 na %2..."
+
+#. summary text
+#: src/osr_module_partition.ycp:720
+msgid "Root partition was successfully mounted"
+msgstr "Montowanie partycji głównej powiodło się"
+
+#. summary text, %1 is mount point
+#: src/osr_module_partition.ycp:726
+#, ycp-format
+msgid "Root partition was not successfully mounted to %1"
+msgstr "Montowanie partycji głównej na %1 nie powiodło się"
+
+#. popup label, %1 is mount point
+#: src/osr_module_partition.ycp:734
+#, ycp-format
+msgid "Could Not Mount Root Partition to %1"
+msgstr "Nie można zamontować partycji głównej na %1"
+
+#. popup text, %1 is root partition
+#: src/osr_module_partition.ycp:737
+#, ycp-format
+msgid "\nUnable to mount the root partition %1.\nRestart the scanning and choose a another\nroot partition or cancel scanning the system.\n"
+msgstr "\nNie można zamontować partycji głównej %1.\nProszę ponowić sprawdzanie i wybrać inną\npartycję główną albo anulować sprawdzanie systemu.\n"
+
+#. button label
+#: src/osr_module_partition.ycp:743 src/osr_module_partition.ycp:803
+msgid "&Restart Scanning"
+msgstr "P&onów sprawdzanie"
+
+#. summary text (%1 is mount point)
+#: src/osr_module_partition.ycp:761
+#, ycp-format
+msgid "Root partition is already mounted to %1"
+msgstr "Partycja główna jest już zamontowana na %1"
+
+#. get the fstab
+#. summary header
+#: src/osr_module_partition.ycp:786
+#, ycp-format
+msgid "Reading fstab of root partition %1..."
+msgstr "Odczytywanie fstab partycji głównej %1..."
+
+#. summary text
+#: src/osr_module_partition.ycp:791
+msgid "fstab could not be read"
+msgstr "Nie można odczytać pliku fstab"
+
+#. popup label, fstab is filename
+#: src/osr_module_partition.ycp:795
+msgid "Could Not Read fstab"
+msgstr "Nie można odczytać pliku fstab"
+
+#. popup text
+#: src/osr_module_partition.ycp:797
+msgid "\nUnable to read fstab.\nRestart the scan and choose another\nroot partition or cancel scanning the system.\n"
+msgstr "\nNie udało się odczytać pliku fstab.\nProszę ponowić sprawdzanie i wybrać inną\npartycję główną albo anulować sprawdzanie systemu.\n"
+
+#. summary text
+#: src/osr_module_partition.ycp:817
+msgid "fstab read"
+msgstr "Przeczytano fstab"
+
+#. summary text
+#: src/osr_module_partition.ycp:836
+msgid "The root entry of fstab is valid"
+msgstr "Wpis partycji głównej w pliku fstab jest prawidłowy"
+
+#. summary text
+#: src/osr_module_partition.ycp:841
+msgid "The root entry of fstab is not valid"
+msgstr "Wpis partycji głównej w pliku fstab jest nieprawidłowy"
+
+#. summary text
+#: src/osr_module_partition.ycp:846
+msgid "Repairing the root entry was successful"
+msgstr "Pomyślnie naprawiono wpis partycji głównej"
+
+#. summary text
+#: src/osr_module_partition.ycp:870
+msgid "fstab entries valid"
+msgstr "Wpisy w pliku fstab są prawidłowe"
+
+#. summary text
+#: src/osr_module_partition.ycp:875
+msgid "At least one fstab entry is not valid"
+msgstr "Co najmniej jeden wpis w pliku fstab jest nieprawidłowy"
+
+#. summary text
+#: src/osr_module_partition.ycp:880
+msgid "The fstab entry was successfully repaired"
+msgstr "Naprawa wpisów w pliku fstab powiodła się"
+
+#. RadioButtonGroup label
+#: src/osr_module_partition.ycp:1017
+msgid "Hard Disk"
+msgstr "Dysk twardy"
+
+#. RadioButtonGroup text
+#: src/osr_module_partition.ycp:1019
+msgid "\nThere are several hard disk in your system.\nSelect the hard disk for which YaST\nshould try to recover lost partitions.\n"
+msgstr "\nW systemie znajduje się kilka dysków twardych.\nProszę wskazać dysk, dla którego YaST ma\nma spróbować odzyskać utracone partycje.\n"
+
+#. RadioButtonGroup label
+#: src/osr_module_partition.ycp:1084
+msgid "Partition"
+msgstr "Partycja"
+
+#. RadioButtonGroup text
+#: src/osr_module_partition.ycp:1086
+msgid "\nSelect the partition on which to execute a file system check.\n"
+msgstr "\nSprawdź system plików na partycji\n"
+
+#. error popup. %1 is partition, %2 is mount point
+#: src/osr_module_partition.ycp:1105
+#, ycp-format
+msgid "\nThe selected partition %1 is\ncurrently mounted on the system mount point %2.\nThis partition cannot be unmounted here.\nStart the YaST rescue tool from CD-ROM and\ntry executing the file system check again.\n"
+msgstr "\nWybrana partycja %1 jest aktualnie \nzamontowana w punkcie montowania %2.\nNie można stąd odmontować tej partycji. Należy uruchomić \nprogram naprawy YaST z płyty CD-ROM i spróbować \nuruchomić ponownie sprawdzanie systemu plików.\n"
+
+#. popup label
+#: src/osr_module_partition.ycp:1118
+msgid "Partition Mounted"
+msgstr "Partycja zamontowana"
+
+#. popup text
+#: src/osr_module_partition.ycp:1120
+#, ycp-format
+msgid "\nThe selected partition %1 is \ncurrently mounted. \nUnmount the partition then execute\na file system check?\n"
+msgstr "\nWybrana partycja %1 jest aktualnie \nzamontowana. Czy\nodmontować tę partycję i uruchomić \nsprawdzanie systemu plików?\n"
+
+#. error popup
+#: src/osr_module_partition.ycp:1135
+#, ycp-format
+msgid "\nUnmounting the partition %1 is\nnot possible. A file system check\ncannot be executed.\n"
+msgstr "\nOdmontowanie partycji %1 nie\njest możliwe. Nie można uruchomić\nsprawdzania systemu plików.\n"
+
+#: src/osr_module_partition.ycp:1150
+msgid "Progress"
+msgstr "Postęp"
+
+#. label
+#: src/osr_module_partition.ycp:1157
+msgid "Checking file system..."
+msgstr "Sprawdzanie systemu plików..."
+
+#. partition is appended
+#: src/osr_module_partition.ycp:1161
+msgid "Partition: "
+msgstr "Partycja: "
+
+#. error popup
+#: src/osr_module_partition.ycp:1179
+#, ycp-format
+msgid "\nCannot detect the file system type\nof the partition %1. Executing a file\nsystem check is not possible.\n"
+msgstr "\nNie można wykryć typu systemu plików\nna partycji %1. Uruchomienie sprawdzenia\nsystemu plików nie jest możliwe.\n"
+
+#. message popup %1 is partition, %2 filesystem type name
+#: src/osr_module_partition.ycp:1193
+#, ycp-format
+msgid "\nThe partition %1 contains\nthe non-Linux file system %2.\nNo partitions checks were done.\n"
+msgstr "\nPartycja %1 zawiera nielinuksowy\nsystem plików %2. Nie wykonano\nżadnej weryfikacji partycji.\n"
+
+#. message popup %1 is partition, %2 filesystem type name
+#: src/osr_module_partition.ycp:1200
+#, ycp-format
+msgid "\nThe partition %1 contains\na valid %2 file system.\n"
+msgstr "\nPartycja %1 zawiera\nprawidłowy system plików %2.\n"
+
+#. message popup (no floppy drive was detected)
+#: src/osr_module_partition.ycp:1232
+msgid "\nNo floppy drive detected in your\nsystem. Saving system information is not\npossible.\n"
+msgstr "\nNie można wykryć napędu dyskietek w tym\nsystemie. Zapisanie informacji systemowych\nnie jest możliwe.\n"
+
+#. popup text
+#: src/osr_module_partition.ycp:1240
+msgid "\nInsert a formatted disk\nin your floppy drive and press\nContinue.\n"
+msgstr "\nProszę włożyć sformatowaną dyskietkę \ndo napędu i nacisnąć przycisk Dalej.\n"
+
+#. progress label
+#: src/osr_module_partition.ycp:1259
+#, ycp-format
+msgid "Saving partition table of disk %1..."
+msgstr "Zapisywanie tablicy partycji dysku %1..."
+
+#. eroro popup
+#: src/osr_module_partition.ycp:1264
+#, ycp-format
+msgid "\nThe primary partition table of disk %1\nwas not written correctly to floppy disk.\n"
+msgstr "\nGłówna tablica partycji dysku %1\nnie została prawidłowo zapisana na dyskietkę.\n"
+
+#. eroro popup
+#: src/osr_module_partition.ycp:1277
+msgid "\nWriting the system information was\nnot successful. Try again.\n"
+msgstr "\nZapisywanie informacji systemowych nie\npowiodło się. Proszę spróbować ponownie.\n"
+
+#. message popup
+#: src/osr_module_partition.ycp:1285
+msgid "Writing the system information was successful.\n"
+msgstr "Zapisywanie informacji systemowych zakończone pomyślnie.\n"
+
+#. module headline
+#: src/osr_module_partition.ycp:1310
+msgid "Partitions and File Systems"
+msgstr "Partycje i systemy plików"
+
+#. module action label
+#: src/osr_module_partition.ycp:1314
+msgid "Check Partition Tables"
+msgstr "Sprawdź tablice partycji"
+
+#. helptext
+#: src/osr_module_partition.ycp:1316
+msgid "\n<P>\nThe partition table is the part of\na hard disk where the information about\nthe size and the position of the\npartitions of a hard disk are stored.\nEvery hard disk has its own partition\ntable.</P>\n"
+msgstr "\n<P>\nTablica partycji jest częścią dysku twardego,\nw której są przechowywane informacje \no rozmiarze i położeniu partycji.\nKażdy dysk twardy ma własną tablicę \npartycji.</P>\n"
+
+#: src/osr_module_partition.ycp:1325
+msgid "<P>Without such a partition table,\nLinux cannot find a partition on a hard\ndisk.</P>\n"
+msgstr "<P>Bez tablicy partycji Linux nie\nmoże znaleźć partycji na dysku\ntwardym.</P>\n"
+
+#: src/osr_module_partition.ycp:1330
+msgid "<P>\nIf you delete a partition by mistake,\nit is sometimes possible to recover the\nlost partition. This tool can analyze\nthe hard disk and try to find such a\npartition.\nThe partition table can also be lost \nor damaged due to a system crash or a virus.\nEven in these cases, it can sometimes\nrecover a partition table.</P>\n"
+msgstr "<P>\nCzasem jest możliwe odtworzenie przypadkowo\nusuniętej partycji. To narzędzie może przeanalizować\ndysk twardy i spróbować znaleźć taką\npartycję.\nTablica partycji może zostać utracona lub\nuszkodzona w wyniku awarii systemu albo działań wirusa.\nNawet w takich przypadkach czasami jest możliwe\nodzyskanie tablicy partycji.</P>\n"
+
+#. module action label
+#: src/osr_module_partition.ycp:1345
+msgid "Check Swap Areas"
+msgstr "Sprawdź obszary wymiany"
+
+#. helptext
+#: src/osr_module_partition.ycp:1347
+msgid "\n<P>\nThe swap area is the virtual memory of a\nLinux system. Linux swap areas can be a\nspecial partition or a file.</P>\n"
+msgstr "\n<P>\nObszar wymiany to wirtualna pamięć \nsystemu Linux. Obszary wymiany Linuksa mogą\nbyć specjalnymi partycjami lub plikami.</P>\n"
+
+#: src/osr_module_partition.ycp:1354
+msgid "<P>\nThis procedure checks all swap areas found.\nIf a swap area is damaged, the system can create\na new swap area.\n</P>\n"
+msgstr "<P>\nProcedura ta sprawdza wszystkie znalezione obszary\nwymiany. Jeśli obszar wymiany jest uszkodzony,\nsystem naprawy może utworzyć nowy obszar wymiany.\n</P>\n"
+
+#. module action label
+#: src/osr_module_partition.ycp:1364
+msgid "Check File Systems"
+msgstr "Sprawdź system plików"
+
+#. helptext
+#: src/osr_module_partition.ycp:1366
+msgid "\n<P>\nFormatting a partition means a\nfile system will be created in a partition.\nAfter that, you can mount the partition and\nsave files and other data to the partition.\nLinux can normally only use partitions with\na valid file system for saving data and\nprograms. </p>\n"
+msgstr "\n<P>\nW wyniku formatowania partycji powstaje \nna niej system plików. Następnie można \nzamontować tę partycję i zapisywać na niej\npliki i inne dane. W normalnym przypadku Linux\nmoże używać do zapisywania danych i programów\nwyłącznie partycji z prawidłowym systemem plików. </p>\n"
+
+#: src/osr_module_partition.ycp:1377
+msgid "<P>\nAn inconsistent file system occurs when\na partition is not correctly unmounted.\nFor example, this happens when the system\ncrashes.</p>\n"
+msgstr "<P>\nNiespójność systemu plików jest efektem\nnieprawidłowego odmontowania tego systemu plików.\nMoże się to zdarzyć podczas awarii systemu.</p>\n"
+
+#: src/osr_module_partition.ycp:1384
+msgid "<p>There is a repair method for each file\nsystem. For example, if the file system\nof the damaged partition is ext2 or\next3, use fsck.ext2 (e2fsck) with the\ncorresponding options to repair the\nfile system.</P>\n"
+msgstr "<p>Dla każdego systemu plików istnieje\nmetoda naprawy. Na przykład, jeśli na uszkodzonej\npartycji znajduje się system ext2 lub ext3,\nw celu naprawienia systemu plików należy\nużyć fsck.ext2 (e2fsck) z odpowiednimi\nopcjami.</p>\n"
+
+#: src/osr_module_partition.ycp:1391
+msgid "<P>This procedure checks the file system of all\npartitions found and suggests \nrepairing it if an error was found.</P>\n"
+msgstr "<P>Procedura ta sprawdza systemy plików wszystkich\nznalezionych partycji i w przypadku znalezienia błędu\nproponuje naprawę.</P>\n"
+
+#. module action label
+#: src/osr_module_partition.ycp:1400
+msgid "Check fstab Entries"
+msgstr "Sprawdź wpisy fstab"
+
+#. helptext
+#: src/osr_module_partition.ycp:1402
+msgid "\n<P>\nfstab is a configuration file that\ncontains entries for all devices that should\nbe mounted during the boot process. \nIf you have deleted a partiton without\nremoving the corresponding fstab entry, you\nget a warning during the boot process.</P>\n"
+msgstr "\n<P>\nfstab jest plikiem konfiguracyjnym\nzawierającym wpisy dla wszystkich\nurządzeń, które mają być zamontowane\npodczas uruchamiania systemu.\nUsunięcie partycji bez usuwania odpowiedniego\nwpisu w fstab powoduje pojawianie się\nostrzeżeń w czasie uruchamiania systemu.</P>\n"
+
+#: src/osr_module_partition.ycp:1412
+msgid "<P>\nThis procedure checks all entries listed in \nfstab and reports missing, obsolete, and\nerroneous entries.</P>\n"
+msgstr "<P>\nProcedura ta sprawdza wszystkie wpisy znajdujące \nsię w pliku fstab i informuje o wpisach brakujących,\nnieaktualnych i błędnych.</P>\n"
+
+#. module reset label
+#: src/osr_module_partition.ycp:1427
+msgid "Reset Module Settings"
+msgstr "Przywróć ustawienia modułów"
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1435
+msgid "Searching for hard disks..."
+msgstr "Wyszukiwanie dysków..."
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1444
+msgid "Checking partition tables..."
+msgstr "Sprawdzanie tablic partycji..."
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1453
+msgid "Searching for valid swap partitions..."
+msgstr "Wyszukiwanie prawidłowych partycji wymiany..."
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1462
+msgid "Searching for swap partitions..."
+msgstr "Wyszukiwanie partycji wymiany..."
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1471
+msgid "Installing kernel modules for file system support..."
+msgstr "Instalowanie modułów jądra do obsługi systemu plików..."
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1480
+msgid "Searching for currently mounted partitions..."
+msgstr "Wyszukiwanie aktualnie zamontowanych partycji..."
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1489
+msgid "Found partitions for file system check"
+msgstr "Znalezione partycje do sprawdzenia systemu plików"
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1506
+msgid "Searching for valid Linux partitions..."
+msgstr "Wyszukiwanie prawidłowych partycji linuksowych..."
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1515
+msgid "Searching for mountable partitions..."
+msgstr "Wyszukiwanie partycji montowalnych..."
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1524
+msgid "Searching for valid root partitions..."
+msgstr "Wyszukiwanie prawidłowych partycji głównych..."
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1549
+msgid "Checking root file system entry of fstab..."
+msgstr "Sprawdzanie wpisu fstab dla głównego systemu plików..."
+
+#. module method progress label
+#: src/osr_module_partition.ycp:1558
+msgid "Checking fstab entries..."
+msgstr "Sprawdzanie wpisów fstab..."
+
+#. module method action label
+#: src/osr_module_partition.ycp:1571
+msgid "Start Partitioning Tool"
+msgstr "Uruchom narzędzie do partycjonowania"
+
+#. module method description
+#: src/osr_module_partition.ycp:1573
+msgid "\nTo resize, delete, or create a partition,\npress this button\nto start the YaST partitioning tool.\n"
+msgstr "\nAby zmienić rozmiar, usunąć lub utworzyć partycję, \nproszę nacisnąć ten przycisk. Uruchomi się narzędzie\npartycjonujące programu YaST.\n"
+
+#. module method description
+#: src/osr_module_partition.ycp:1588
+msgid "\nIf you have deleted or lost one or all\npartitions of a hard disk accidentally,\npress this button to attempt\nrecovery.\n"
+msgstr "\nJeśli przypadkowo usunięto lub utracono jedną\nlub wszystkie partycje z dysku twardego,\nproszę nacisnąć ten przycisk, aby spróbować je\nodzyskać.\n"
+
+#. module method action label
+#: src/osr_module_partition.ycp:1602
+msgid "Repair File System"
+msgstr "Napraw system plików"
+
+#. module method description
+#: src/osr_module_partition.ycp:1604
+msgid "\nIf the system crashed and you have a\ncorrupted file system, press\nthis button to scan and repair the file\nsystem.\n"
+msgstr "\nJeśli miała miejsce awaria systemu i system\nplików jest uszkodzony, należy nacisnąć ten\nprzycisk w celu przejrzenia i naprawienia\nsystemu plików.\n"
+
+#. module method action label
+#: src/osr_module_partition.ycp:1617
+msgid "Save System Settings to Floppy"
+msgstr "Zapisz ustawienia systemu na dyskietkę"
+
+#. module method description
+#: src/osr_module_partition.ycp:1619
+msgid "This can be helpful for later system checks. For example, it is possible to recover a lost partition\ntable with the stored system information.\n"
+msgstr "Może być to przydatne w przyszłym sprawdzaniu systemu.\nNa przykład na podstawie zachowanych informacji\no systemie można odtworzyć zniszczoną tablicę partycji.\n"
+
+#. translators: command line help text for repair module
+#: src/repair.ycp:70
+msgid "System repair module"
+msgstr "Moduł naprawy systemu"
+
+#. help text
+#: src/repair.ycp:72
+msgid "Command line interface for the system repair module is not available"
+msgstr "Interfejs tekstowy dla modułu naprawy systemu nie jest dostępny"
+
+#: src/view_anymsg.ycp:154
+#, ycp-format
+msgid "System Log (%1)"
+msgstr "Dziennik systemowy (%1)"
+
