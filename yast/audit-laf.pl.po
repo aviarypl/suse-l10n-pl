@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-23 14:06+0200\n"
+"POT-Creation-Date: 2008-10-30 14:34+0100\n"
 "PO-Revision-Date: 2008-11-01 17:11+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team: Polish <i18n@suse.de>\n"
@@ -20,14 +20,12 @@ msgid "The rules for auditctl are locked"
 msgstr "Reguły dla auditctl są zablokowane"
 
 #. combo box item
-#: src/AuditLaf.ycp:206
-#: src/dialogs.ycp:257
+#: src/AuditLaf.ycp:206 src/dialogs.ycp:261
 msgid "Auditing enabled"
 msgstr "Rejestrowanie w dzienniku włączone"
 
 #. combo box item
-#: src/AuditLaf.ycp:208
-#: src/dialogs.ycp:259
+#: src/AuditLaf.ycp:208 src/dialogs.ycp:263
 msgid "Auditing disabled"
 msgstr "Rejestrowanie w dzienniku wyłączone"
 
@@ -153,31 +151,32 @@ msgstr ""
 "Jeśli tak, nowe reguły będą zapisane do /etc/audit/audit.rules.\n"
 "Następnie należy ponownie uruchomić system."
 
+#. Error message
 #: src/AuditLaf.ycp:567
 msgid "Restart of the audit daemon failed"
 msgstr "Ponowne uruchamianie usługi audit nie powiodło się"
 
-#: src/AuditLaf.ycp:573
+#. Error message
+#: src/AuditLaf.ycp:574
 msgid "Cannot write settings to auditd.conf."
 msgstr "Nie można zapisać ustawień do auditd.conf."
 
-#: src/AuditLaf.ycp:596
+#. Error message, rules cannot be set
+#: src/AuditLaf.ycp:598
 msgid "Please start yast2-audit-laf again and check the rules"
 msgstr "Proszę ponownie uruchomić yast2-audit-laf oraz sprawdzić reguły"
 
-#: src/AuditLaf.ycp:601
+#: src/AuditLaf.ycp:603
 msgid "Cannot write settings to auditd.rules."
 msgstr "Nie można zapisać ustawień do auditd.rules."
 
-#: src/AuditLaf.ycp:649
+#: src/AuditLaf.ycp:651
 msgid "Log file"
 msgstr "Pliki dziennika"
 
 #. Command line help text for the Xaudit-laf module
 #. Initialization dialog caption
-#: src/audit-laf.ycp:54
-#: src/wizards.ycp:130
-#: src/wizards.ycp:196
+#: src/audit-laf.ycp:54 src/wizards.ycp:131 src/wizards.ycp:197
 msgid "Configuration of Linux Audit Framework (LAF)"
 msgstr "Konfiguracja Linux Audit Framework (LAF)"
 
@@ -200,17 +199,16 @@ msgstr ""
 "Czy naprawdę wyjść?\n"
 "Wszystkie zmiany zostaną utracone."
 
-#: src/complex.ycp:122
+#: src/complex.ycp:121
 msgid "Select the log file"
 msgstr "Proszę wybrać plik logowania"
 
-#: src/complex.ycp:178
+#: src/complex.ycp:176
 msgid "Select the dispatcher program"
 msgstr "Wybierz program dyspozytora"
 
-#. FIXME - does it make sense to call SCR::Execute( .target.bash, "auditctl -D" ) ???
 #. Warning - the audit configuration is locked, reset impossible
-#: src/complex.ycp:292
+#: src/complex.ycp:350
 msgid ""
 "The rules are already locked, a reset is impossible.\n"
 "\n"
@@ -223,16 +221,16 @@ msgstr ""
 "zakończ konfigurację. Następnie wymagane jest ponowne uruchomienie systemu."
 
 #. Report success
-#: src/complex.ycp:306
+#: src/complex.ycp:364
 msgid "Rules successfully restored"
 msgstr "Reguły przywrócone pomyślnie"
 
 #. Report error - error during reset
-#: src/complex.ycp:311
+#: src/complex.ycp:369
 msgid "Cannot reset rules. Please check /etc/audit/audit.rules."
 msgstr "Nie można zresetować reguł. Proszę sprawdzić /etc/audit/audit.rules."
 
-#: src/complex.ycp:392
+#: src/complex.ycp:450
 msgid ""
 "The rules are already locked.\n"
 "\n"
@@ -244,7 +242,7 @@ msgstr ""
 "Test nie jest możliwy, ponieważ wysłanie nowych reguł\n"
 "spowoduje błąd."
 
-#: src/complex.ycp:403
+#: src/complex.ycp:461
 msgid ""
 "Lock is set in audit.rules (-e 2).\n"
 "\n"
@@ -256,19 +254,19 @@ msgstr ""
 "Nie ma sensu kontnuować, ponieważ reguły pozostaną zablokowane\n"
 "do następnego uruchomienia systemu."
 
-#: src/complex.ycp:432
+#: src/complex.ycp:490
 msgid "Cannot create tmp file for rules"
 msgstr "Nie można utworzyć tymczasowego pliku dla reguł"
 
-#: src/complex.ycp:438
+#: src/complex.ycp:496
 msgid "Select an example"
 msgstr "Proszę wybrać przykład"
 
-#: src/complex.ycp:489
+#: src/complex.ycp:547
 msgid "Lock set"
 msgstr "Zablokuj zestaw"
 
-#: src/complex.ycp:489
+#: src/complex.ycp:547
 msgid ""
 "The audit configuration is locked (option -e 2).\n"
 "This means the rules are locked until next boot!\n"
@@ -289,14 +287,12 @@ msgstr "Ustawienia ogólne"
 
 #. InputField label
 #. Header of tab in tab widget
-#: src/dialogs.ycp:54
-#: src/wizards.ycp:84
+#: src/dialogs.ycp:54 src/wizards.ycp:85
 msgid "&Log File"
 msgstr "P&liki dziennika"
 
 #. PushButton label
-#: src/dialogs.ycp:59
-#: src/dialogs.ycp:152
+#: src/dialogs.ycp:59 src/dialogs.ycp:151
 msgid "Select Fi&le"
 msgstr "Wybierz p&lik"
 
@@ -305,148 +301,154 @@ msgstr "Wybierz p&lik"
 msgid "&Format"
 msgstr "&Formatuj"
 
-#. InputField label
-#: src/dialogs.ycp:73
-msgid "&Number of Log Files"
-msgstr "Liczba plików dzie&nnika"
-
 #. ComboBox label - select how to flush data on disk
-#: src/dialogs.ycp:77
+#: src/dialogs.ycp:76
 msgid "Fl&ush"
 msgstr "Wyslij b&ufor"
 
 #. InputField label - enter how many records to write before flush data to disk
-#: src/dialogs.ycp:86
+#: src/dialogs.ycp:85
 msgid "Fre&quency (Number of Records)"
 msgstr "Cz&ęstotliwość (liczba rekordów)"
 
 #. Frame label - data regarding size of log file and action to perform
-#: src/dialogs.ycp:94
+#: src/dialogs.ycp:93
 msgid "Size and Action"
 msgstr "Rozmiar i akcja"
 
 #. InputField label
-#: src/dialogs.ycp:97
+#: src/dialogs.ycp:96
 msgid "Ma&x File Size (MB)"
 msgstr "Ma&ksymalna wielkość pliku (MB)"
 
 #. ComboBox label
-#: src/dialogs.ycp:100
+#: src/dialogs.ycp:99
 msgid "M&aximum File Size Action"
 msgstr "Akcja dla m&aksymalnego rozmiaru pliku"
 
 #. InputField label
-#: src/dialogs.ycp:110
-msgid "Action Mail Account"
-msgstr "Konto e-mail dla akcji"
+#: src/dialogs.ycp:109
+msgid "&Number of Log Files"
+msgstr "Liczba plików dzie&nnika"
 
 #. Frame label - data regarding how to write computer names to the log file
-#: src/dialogs.ycp:116
+#: src/dialogs.ycp:115
 msgid "Computer Names"
 msgstr "Nazwy komputera"
 
 #. ComboBox label
-#: src/dialogs.ycp:119
+#: src/dialogs.ycp:118
 msgid "&Computer Name Format"
 msgstr "Format nazwy &komputera"
 
 #. InputField label
-#: src/dialogs.ycp:128
+#: src/dialogs.ycp:127
 msgid "User Defined Name"
 msgstr "Nazwa określona przez użytkownika"
 
 #. Frame label - settings of the dispatcher program
-#: src/dialogs.ycp:142
+#: src/dialogs.ycp:141
 msgid "Dispatcher Settings"
 msgstr "Ustawienia dyspozytora"
 
 #. InputField label
-#: src/dialogs.ycp:147
+#: src/dialogs.ycp:146
 msgid "Dispatcher Program"
 msgstr "Program dyspozytor"
 
 #. ComboBox label - communication between the audit daemon and the dispatcher program
-#: src/dialogs.ycp:157
+#: src/dialogs.ycp:156
 msgid "C&ommunication"
 msgstr "K&omunikcja"
 
-#. Frame label - keep it short!
-#: src/dialogs.ycp:175
+#. Frame label - keep it short! 
+#: src/dialogs.ycp:191
 msgid "Value and Action for Space is Starting to Run Low"
 msgstr "Wartość i akcja dla miejsca zaczynającego się wyczerpywać"
 
 #. InputField label - space on disk is starting to run low if the entered value is reached
-#: src/dialogs.ycp:178
+#: src/dialogs.ycp:194
 msgid "&Space Left on Disk (MB)"
 msgstr "Wolna prze&strzeń dyskowa (MB)"
 
-#. ComboBox label - select an action which is performed if space on disk is low
-#: src/dialogs.ycp:182
+#. ComboBox label - select an action which is performed if space on disk is low	 
+#: src/dialogs.ycp:198
 msgid "&Action"
 msgstr "&Akcja"
 
-#. Frame label - keep it short!
-#: src/dialogs.ycp:197
+#. InputField label - enter the path to a script (which will be executed)
+#: src/dialogs.ycp:202 src/dialogs.ycp:219 src/dialogs.ycp:235
+#: src/dialogs.ycp:243
+msgid "Path to Script"
+msgstr ""
+
+#. Frame label - keep it short!  
+#: src/dialogs.ycp:208
 msgid "Value and Action for Space is Running Low"
 msgstr "Wartość i akcja dla wyczerpującego się miejsca"
 
 #. InputField label - space on disk is running low if the entered value is reached
-#: src/dialogs.ycp:200
-msgid "&Admin Space Left on Disk (MB) "
+#: src/dialogs.ycp:211
+#, fuzzy
+msgid "&Admin Space Left (MB) "
 msgstr "Wolna przestrzeń dyskowa &administratora (MB)"
 
-#. ComboBox label - select an action which is performed if space on disk is running low
-#: src/dialogs.ycp:204
+#. ComboBox label - select an action which is performed if space on disk is running low	  
+#: src/dialogs.ycp:215
 msgid "Ac&tion"
 msgstr "Akc&ja"
 
-#. Frame label - keep it short!
-#: src/dialogs.ycp:219
+#: src/dialogs.ycp:223
+msgid "Action Mail Account"
+msgstr "Konto e-mail dla akcji"
+
+#. Frame label - keep it short!   
+#: src/dialogs.ycp:227
 msgid "Action on Error or Disk Full"
 msgstr "Akcja na wypadek błędu lub pełnego dysku"
 
-#. ComboBox label - select an action which is performed if disk is full
-#: src/dialogs.ycp:223
+#. ComboBox label - select an action which is performed if disk is full	   
+#: src/dialogs.ycp:232
 msgid "Disk &Full Action"
 msgstr "Akcja pełnego dysku"
 
-#. ComboBox label - select an action which is performed on error
-#: src/dialogs.ycp:233
+#. ComboBox label - select an action which is performed on error 
+#: src/dialogs.ycp:240
 msgid "Disk &Error Action"
 msgstr "Akcja błędu dysku"
 
-#. label of a combo box with the possibilitiy to enable/disable auditing or lock the rules
-#: src/dialogs.ycp:255
+#. label of a combo box with the possibilitiy to enable/disable auditing or lock the rules 
+#: src/dialogs.ycp:259
 msgid "&Set Enabled Flag"
 msgstr "U&staw flagę Aktywna"
 
 #. combo box item
-#: src/dialogs.ycp:261
+#: src/dialogs.ycp:265
 msgid "Rules are locked (until next boot)"
 msgstr "Reguły są zablokowane (do następnego uruchomienia systemu)"
 
 #. Label - describes what can be done in the editor
-#: src/dialogs.ycp:269
+#: src/dialogs.ycp:273
 msgid "Edit the rules for the audit subsystem here:"
 msgstr "Edytuj reguły dla podsysemu audit tutaj:"
 
-#. label of a push button (please keep it short)
-#: src/dialogs.ycp:275
+#. label of a push button (please keep it short) 
+#: src/dialogs.ycp:279
 msgid "&Check Syntax"
 msgstr "S&prawdź składnię"
 
 #. label of push button  (please keep it short)
-#: src/dialogs.ycp:278
+#: src/dialogs.ycp:282
 msgid "&Restore 'audit.rules'"
 msgstr "Przyw&róć 'audit.rules'"
 
 #. label of push button  (please keep it short)
-#: src/dialogs.ycp:281
+#: src/dialogs.ycp:285
 msgid "R&estore and Reset"
 msgstr "Przywróc i zr&esetuj"
 
 #. label of a push button
-#: src/dialogs.ycp:284
+#: src/dialogs.ycp:288
 msgid "&Load "
 msgstr "&Wczytaj"
 
@@ -588,7 +590,7 @@ msgstr ""
 "<p><b>Komunikacja</b>: Kontroluje komunikację\n"
 "pomiędzy usługą, a programem dyspozytora.</p>"
 
-#. disk space dialog help 1/4
+#. disk space dialog help 1/5
 #: src/helps.ycp:97
 msgid ""
 "<p><b><big>Auditd Disk Space Configuration</big></b><br>\n"
@@ -599,7 +601,7 @@ msgstr ""
 "Ustawienia te odnoszą się do przestrzeni dyskowej na partycji logów.\n"
 "Szczegółowe informacje można uzyskać wykonując komendę 'man auditd.conf'</p>\n"
 
-#. disk space dialog help 2/4
+#. disk space dialog help 2/5
 #: src/helps.ycp:102
 msgid ""
 "<p><b>Space Left</b> and <b>Action</b> describe how much disk space (in megabytes)\n"
@@ -608,7 +610,7 @@ msgstr ""
 "<p><b>Pozostałą przestrzeń</b> oraz <b>Akcja</b> opisują ile przestrzeni dyskowej (w megabajtach)\n"
 "pozostawić oraz jaką czynność wykonać, jeśli przestrzeń w systemie zaczyna się wyczerpywać.</p>"
 
-#. disk space dialog help 3/4
+#. disk space dialog help 3/5
 #: src/helps.ycp:106
 msgid ""
 "<p><b>Admin Space Left</b> and <b>Action</b> describe how much disk space (in megabytes)\n"
@@ -617,8 +619,15 @@ msgstr ""
 "<p><b>Pozostała przestrzeń administratora</b> oraz <b>Akcja</b> opisują ile przestrzeni dyskowej (w megabajtach)\n"
 "pozostawić oraz jaką akcje podjąć, gdy przestrzeń ta <b>zacznie się wyczerpywać</b> w systemie.</p>"
 
-#. disk space dialog help 3/4
+#. disk space dialog help 4/5
 #: src/helps.ycp:110
+msgid ""
+"<p>If the action is set to <i>EMAIL</i> a warning mail will be send to the account specified in\n"
+"<b>Action Mail Account</b></p>"
+msgstr ""
+
+#. disk space dialog help 5/5
+#: src/helps.ycp:114
 msgid ""
 "<p>You can also specify a <b>Disk Full Action</b> (disk has become full already) and\n"
 "a <b>Disk Error Action</b> (performed whenever an error is detected while writing to disk).</p>"
@@ -627,7 +636,7 @@ msgstr ""
 "<b>Akcja błędu dysku</b> (wykonywaną w przypadku wykrycia błędu zapisu na dysk).</p>"
 
 #. rules dialog help 1/6
-#: src/helps.ycp:114
+#: src/helps.ycp:118
 msgid ""
 "<p><b><big>Rules for auditctl</big></b><br>\n"
 "This dialog offers the possibiltiy to enable or to disable the syscall\n"
@@ -640,12 +649,12 @@ msgstr ""
 "Wybrana flaga z <b>Ustaw aktywną flagę</b> zostanie dodana do reguł.</p>"
 
 #. rules dialog help 2/6
-#: src/helps.ycp:119
+#: src/helps.ycp:123
 msgid "<p><b>Please note:</b><br>Locking the rules means they cannot be changed until next reboot! </p>"
 msgstr "<p><b>Proszę zwrócić uwagę:</b><br>Blokowanie reguł oznacza, że nie mogą one być zmienione przed następnym uruchomieniem! </p>"
 
 #. rules dialog help 3/6
-#: src/helps.ycp:121
+#: src/helps.ycp:125
 msgid ""
 "<p>Enabling auditing whithout additional rules will cause the\n"
 " applications which use <i>libaudit</i>, e.g. PAM to log to /var/log/audit/audit.log (default).</p> "
@@ -654,7 +663,7 @@ msgstr ""
 "korzystające z <i>libaudit</i>, np. PAM, będą zapisywały logi w pliku /var/log/audit/audit.log (domyślnie).</p> "
 
 #. rules dialog help 4/6
-#: src/helps.ycp:124
+#: src/helps.ycp:128
 msgid ""
 "<p>This module also allows you to edit the rules manually. <br>\n"
 "Detailed information about all options gives 'man auditctl'.</p>"
@@ -663,7 +672,7 @@ msgstr ""
 "Szczegółowe informacje dotyczące wszystkich opcji można uzyskać wykonując polecenie 'man auditctl'.</p>"
 
 #. rules dialog help 5/6
-#: src/helps.ycp:127
+#: src/helps.ycp:131
 msgid ""
 "<p><b>Check Syntax</b> sends the rules via <i>auditctl</i> to the audit subsystem and tells whether the syntax is correct.<br>\n"
 "<b>Restore</b> restores the settings from /etc/audit/audit.rules.</p>"
@@ -672,7 +681,7 @@ msgstr ""
 "<b>Przywróć</b> przywraca ustawienia z /etc/audit/audit.rules.</p>"
 
 #. rules dialog help 6/6
-#: src/helps.ycp:130
+#: src/helps.ycp:134
 msgid ""
 "<p>Use the <b>Restore and Reset</b> button to restore the rules and reset\n"
 "the changes (from previous syntax checks) by calling <i>auditctl</i> with it.<br>\n"
@@ -684,33 +693,33 @@ msgstr ""
 "Przycisk <b>Wczytaj</b> otwiera okno wyboru pliku, gdzie można wczytać\n"
 "przykłądowy plik reguł.</p>"
 
-#. Header of tab in tab widget
-#: src/wizards.ycp:90
+#. Header of tab in tab widget		 
+#: src/wizards.ycp:91
 msgid "&Dispatcher"
 msgstr "Dyspozytor"
 
-#. Header of tab in tab widget
-#: src/wizards.ycp:96
+#. Header of tab in tab widget		 
+#: src/wizards.ycp:97
 msgid "Disk &Space"
 msgstr "Prze&strzeń dyskowa"
 
 #. Header of tab in tab widget
 #. (auditctl is a program which sends the rules to the audit subsystem)
-#: src/wizards.ycp:103
+#: src/wizards.ycp:104
 msgid "&Rules for 'auditctl'"
 msgstr "&Reguły dla 'auditctl'"
 
 #. Initialization dialog contents
-#: src/wizards.ycp:198
+#: src/wizards.ycp:199
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
 
 #~ msgid "Configuration summary..."
 #~ msgstr "Podsumowanie konfiguracji..."
+
 #~ msgid "Configuration of audit-laf"
 #~ msgstr "Konfiguracja audit-laf"
 
 #, fuzzy
 #~ msgid "Disk &Space on Log Partion"
 #~ msgstr "Ostrzeżenie -- miejsce na dysku"
-
