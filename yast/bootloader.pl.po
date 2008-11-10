@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bootloader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-30 14:29+0100\n"
+"POT-Creation-Date: 2008-11-06 15:30+0100\n"
 "PO-Revision-Date: 2008-10-03 00:38+0100\n"
 "Last-Translator: Przemysław Bojczuk <pbojczuk@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -914,7 +914,8 @@ msgid "<p><b>PCR Index of Kernel</b> is Platform Configuration Register for kern
 msgstr "<p><b>Indeks PCR jądra</b> to Platform Configuration Register (rejestr konfiguracji platformy) dla jądra</p>"
 
 #: src/grub/helps.ycp:146
-msgid "<p><b>PCR Index of Inird</b> is Platform Configuration Register for initrd</p>"
+#, fuzzy
+msgid "<p><b>PCR Index of Initrd</b> is Platform Configuration Register for initrd</p>"
 msgstr "<p><b>Indeks PCR initrd</b> to Platform Configuration Register (rejestr konfiguracji platformy) dla initrd</p>"
 
 #: src/grub/helps.ycp:148
@@ -1234,40 +1235,40 @@ msgstr ""
 "programu rozruchowego."
 
 #. summary part, %1 is a list of device names
-#: src/modules/BootCommon.ycp:920
+#: src/modules/BootCommon.ycp:909
 #, ycp-format
 msgid "Master boot records of disks %1"
 msgstr "Główne sektory startowe (MBR) dysków %1"
 
 #. summary text, %1 is bootloader name (eg. LILO)
-#: src/modules/BootCommon.ycp:932 src/modules/BootGRUB.ycp:659
+#: src/modules/BootCommon.ycp:921 src/modules/BootGRUB.ycp:659
 #, ycp-format
 msgid "Boot Loader Type: %1"
 msgstr "Typ programu rozruchowego: %1"
 
 #. summary text, location is location description (eg. /dev/hda)
 #. FIXME: should we translate all devices to names and add MBR suffixes?
-#: src/modules/BootCommon.ycp:935 src/modules/BootGRUB.ycp:677
+#: src/modules/BootCommon.ycp:924 src/modules/BootGRUB.ycp:677
 #: src/modules/BootPOWERLILO.ycp:945
 #, ycp-format
 msgid "Location: %1"
 msgstr "Lokalizacja: %1"
 
 #. section name "suffix" for default section
-#: src/modules/BootCommon.ycp:940 src/modules/BootELILO.ycp:393
+#: src/modules/BootCommon.ycp:929 src/modules/BootELILO.ycp:393
 #: src/modules/BootGRUB.ycp:687 src/modules/BootPOWERLILO.ycp:952
 msgid " (default)"
 msgstr " (domyślnie)"
 
 #. summary text. %1 is list of bootloader sections
-#: src/modules/BootCommon.ycp:944 src/modules/BootELILO.ycp:398
+#: src/modules/BootCommon.ycp:933 src/modules/BootELILO.ycp:398
 #: src/modules/BootGRUB.ycp:691 src/modules/BootPOWERLILO.ycp:957
 #, ycp-format
 msgid "Sections:<br>%1"
 msgstr "Sekcje:<br>%1"
 
 #. summary text
-#: src/modules/BootCommon.ycp:948
+#: src/modules/BootCommon.ycp:937
 msgid ""
 "Do not install boot loader; just create \n"
 "configuration files"
@@ -1325,25 +1326,32 @@ msgstr ""
 msgid "Propose and &Merge with Existing GRUB Menus"
 msgstr "Wyszukaj i p&ołącz z istniejącym menu GRUB"
 
-#: src/modules/BootSupportCheck.ycp:77
+#: src/modules/BootSupportCheck.ycp:80
 #, ycp-format
 msgid "Unknown bootloader: %1"
 msgstr "Nieznany program rozruchowy: %1"
 
-#: src/modules/BootSupportCheck.ycp:107
+#: src/modules/BootSupportCheck.ycp:83
+#, fuzzy
+msgid "LILO bootloader is not supported"
+msgstr "LILO nie jest aktualnie wspierane."
+
+#: src/modules/BootSupportCheck.ycp:129
 #, ycp-format
 msgid "Unsupported combination of hardware platform %1 and bootloader %2"
 msgstr "Nie wspierana kombinacja platformy sprzętowej %1 i programu rozruchowego %2"
 
-#: src/modules/BootSupportCheck.ycp:131
-msgid "Partitin number > 3 is being used for booting with GPT partition table"
+#: src/modules/BootSupportCheck.ycp:153
+#, fuzzy
+msgid "Partition number > 3 is being used for booting with GPT partition table"
 msgstr "Partycje o numerach > 3 są używane do ładowania systemu z tablicą partycji GPT."
 
-#: src/modules/BootSupportCheck.ycp:173
-msgid "The boot device is on raid0."
+#: src/modules/BootSupportCheck.ycp:195
+#, ycp-format
+msgid "The boot device is on raid type: %1."
 msgstr ""
 
-#: src/modules/BootSupportCheck.ycp:184
+#: src/modules/BootSupportCheck.ycp:207
 msgid "The /boot directory is on an XFS filesystem"
 msgstr ""
 

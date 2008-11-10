@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: security\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-10-30 14:29+0100\n"
+"POT-Creation-Date: 2008-11-06 15:30+0100\n"
 "PO-Revision-Date: 2008-10-31 16:59+0100\n"
 "Last-Translator: Piotr Gołofit <p.golofit@tmtsystems.eu>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -241,15 +241,15 @@ msgid "Enable extra services in runlevel 5"
 msgstr "Odblokuj dodatkowe usługi w poziomie 5"
 
 #. table header
-#: src/dialogs.ycp:104 src/dialogs.ycp:325
+#: src/dialogs.ycp:104 src/dialogs.ycp:338
 msgid "Security Setting"
 msgstr "Ustawienia bezpieczeństwa"
 
-#: src/dialogs.ycp:104 src/dialogs.ycp:325
+#: src/dialogs.ycp:104 src/dialogs.ycp:338
 msgid "Status"
 msgstr "Status"
 
-#: src/dialogs.ycp:104 src/dialogs.ycp:325
+#: src/dialogs.ycp:104 src/dialogs.ycp:338
 msgid "Security Status"
 msgstr "Status bezpieczeństwa"
 
@@ -257,80 +257,87 @@ msgstr "Status bezpieczeństwa"
 msgid "Help"
 msgstr "Pomoc"
 
-#: src/dialogs.ycp:287
-#, ycp-format
-msgid "<P>These basic system services are not running:<BR><B>%1</B></P>"
+#. this is a separator between service names
+#. e.g.: "postfix" + " or " + "sendmail"
+#: src/dialogs.ycp:293
+msgid " or "
+msgstr ""
+
+#. richtext message: %1 = runlevel ("3" or "5"), %2 = list of services
+#: src/dialogs.ycp:300
+#, fuzzy, ycp-format
+msgid "<P>These basic system services are not enabled in runlevel %1:<BR><B>%2</B></P>"
 msgstr "<P>Podane podstawowe usługi systemu nie są uruchomione:<BR><B>%1</B></P>"
 
-#: src/dialogs.ycp:291
+#: src/dialogs.ycp:304
 msgid "<P>All basic services are enabled.</P>"
 msgstr "<P>Wszystkie podstawowe usługi są odblokowane.</P>"
 
-#: src/dialogs.ycp:302
-#, ycp-format
-msgid "<P>These extra services are running:<BR><B>%1</B></P>"
+#: src/dialogs.ycp:315
+#, fuzzy, ycp-format
+msgid "<P>These extra services are enabled in runlevel %1:<BR><B>%2</B></P>"
 msgstr "<P>Podane dodatkowe usługi nie są uruchomione:<BR><B>%1</B></P>"
 
-#: src/dialogs.ycp:303
+#: src/dialogs.ycp:316
 msgid "<P>Check the list of services and disable all unused services.</P>"
 msgstr "<P>Sprawdź listę usług i zablokuj wszystkie nieużywane usługi.</P>"
 
-#: src/dialogs.ycp:307
+#: src/dialogs.ycp:320
 msgid "<P>Only basic system services are enabled.</P>"
 msgstr "<P>Tylko podstawowe usługi systemowe są odblokowane.</P>"
 
-#: src/dialogs.ycp:313
+#: src/dialogs.ycp:326
 msgid "Description"
 msgstr "Opis"
 
 #. Overview dialog caption
 #. params: input tree, parent, label, id
-#: src/dialogs.ycp:320 src/wizards.ycp:28
+#: src/dialogs.ycp:333 src/wizards.ycp:28
 msgid "Security Overview"
 msgstr "Przegląd bezpieczeństwa"
 
 #. push button label
-#: src/dialogs.ycp:338
+#: src/dialogs.ycp:351
 msgid "Change &Status"
 msgstr "Zmiana &Statusu"
 
 #. push button label
-#: src/dialogs.ycp:341
+#: src/dialogs.ycp:354
 msgid "&Description"
 msgstr "&Opis"
 
 #. Boot dialog caption
-#: src/dialogs.ycp:497 src/wizards.ycp:31
+#: src/dialogs.ycp:510 src/wizards.ycp:31
 msgid "Boot Settings"
 msgstr "Ustawienia uruchamiania systemu"
 
 #. Frame label
-#: src/dialogs.ycp:506
+#: src/dialogs.ycp:519
 msgid "Boot Permissions"
 msgstr "Uprawnienia uruchamiania systemu"
 
 #. Misc dialog caption
-#: src/dialogs.ycp:576 src/wizards.ycp:34
+#: src/dialogs.ycp:589 src/wizards.ycp:34
 msgid "Miscellaneous Settings"
 msgstr "Ustawienia różne"
 
 #. Password dialog caption
-#: src/dialogs.ycp:656 src/wizards.ycp:30
+#: src/dialogs.ycp:669 src/wizards.ycp:30
 msgid "Password Settings"
 msgstr "Ustawienia haseł"
 
 #. Frame label
-#: src/dialogs.ycp:662
+#: src/dialogs.ycp:675
 msgid "Checks"
 msgstr "Sprawdzanie"
 
 #. Frame label
-#: src/dialogs.ycp:676
+#: src/dialogs.ycp:689
 msgid "Password Age"
 msgstr "Wiek hasła"
 
 #. Popup text
-#: src/dialogs.ycp:726
+#: src/dialogs.ycp:739
 msgid ""
 "The minimum number of days cannot be larger\n"
 "than the maximum."
@@ -339,7 +346,7 @@ msgstr ""
 "większa niż maksymalna."
 
 #. Popup text, %1 is number
-#: src/dialogs.ycp:736
+#: src/dialogs.ycp:749
 #, ycp-format
 msgid ""
 "The minimum password length cannot be larger than the maximum.\n"
@@ -349,12 +356,12 @@ msgstr ""
 "Maksymalna długość hasła dla wybranego szyfrowania wynosi %1."
 
 #. Login dialog caption
-#: src/dialogs.ycp:770 src/wizards.ycp:32
+#: src/dialogs.ycp:783 src/wizards.ycp:32
 msgid "Login Settings"
 msgstr "Ustawienia logowania"
 
 #. Frame label
-#: src/dialogs.ycp:776
+#: src/dialogs.ycp:789
 msgid "Login"
 msgstr "Login"
 
