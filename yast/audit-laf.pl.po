@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-11-06 15:35+0100\n"
-"PO-Revision-Date: 2008-11-01 17:11+0100\n"
+"PO-Revision-Date: 2008-11-27 23:47+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team: Polish <i18n@suse.de>\n"
 "MIME-Version: 1.0\n"
@@ -20,12 +20,14 @@ msgid "The rules for auditctl are locked"
 msgstr "Reguły dla auditctl są zablokowane"
 
 #. combo box item
-#: src/AuditLaf.ycp:206 src/dialogs.ycp:262
+#: src/AuditLaf.ycp:206
+#: src/dialogs.ycp:262
 msgid "Auditing enabled"
 msgstr "Rejestrowanie w dzienniku włączone"
 
 #. combo box item
-#: src/AuditLaf.ycp:208 src/dialogs.ycp:264
+#: src/AuditLaf.ycp:208
+#: src/dialogs.ycp:264
 msgid "Auditing disabled"
 msgstr "Rejestrowanie w dzienniku wyłączone"
 
@@ -36,6 +38,10 @@ msgid ""
 "You can use the module 'System Log' from group\n"
 "'Miscellaneous' in YaST2 Control Center."
 msgstr ""
+"Nie można uruchomić usługi audit.\n"
+"Proszę sprawdzić /var/log/messages w poszukiwaniu błędów auditd.\n"
+"Można do tego użyć modułu 'Dziennik systemowy' z grupy\n"
+"'Różne' w panelu zarządzania YaST2."
 
 #. AuditLaf read dialog caption
 #: src/AuditLaf.ycp:380
@@ -184,7 +190,9 @@ msgstr "Pliki dziennika"
 
 #. Command line help text for the Xaudit-laf module
 #. Initialization dialog caption
-#: src/audit-laf.ycp:54 src/wizards.ycp:131 src/wizards.ycp:197
+#: src/audit-laf.ycp:54
+#: src/wizards.ycp:131
+#: src/wizards.ycp:197
 msgid "Configuration of Linux Audit Framework (LAF)"
 msgstr "Konfiguracja Linux Audit Framework (LAF)"
 
@@ -217,6 +225,9 @@ msgid ""
 "the 'Computer Name Format' is set to 'USER'.\n"
 "Setting the format to 'NONE' (default)."
 msgstr ""
+"'Nazwa zdefiniowana przez użytkownika' NIE jest ustawiona, jednak\n"
+"'Format nazwy komputera' jest ustawiony na 'UŻYTKOWNIK'.\n"
+"Format został ustawiony na 'BRAK' (domyślny)."
 
 #: src/complex.ycp:211
 msgid "Select the dispatcher program"
@@ -226,7 +237,7 @@ msgstr "Wybierz program dyspozytora"
 #: src/complex.ycp:309
 #, ycp-format
 msgid "Value of '%1' remains unchanged."
-msgstr ""
+msgstr "Wartość '%1' pozostaje niezmieniona."
 
 #. Warning - the audit configuration is locked, reset impossible
 #: src/complex.ycp:424
@@ -308,12 +319,14 @@ msgstr "Ustawienia ogólne"
 
 #. InputField label
 #. Header of tab in tab widget
-#: src/dialogs.ycp:54 src/wizards.ycp:85
+#: src/dialogs.ycp:54
+#: src/wizards.ycp:85
 msgid "&Log File"
 msgstr "P&liki dziennika"
 
 #. PushButton label
-#: src/dialogs.ycp:59 src/dialogs.ycp:152
+#: src/dialogs.ycp:59
+#: src/dialogs.ycp:152
 msgid "Select Fi&le"
 msgstr "Wybierz p&lik"
 
@@ -381,7 +394,7 @@ msgstr "Program dyspozytor"
 msgid "C&ommunication"
 msgstr "K&omunikcja"
 
-#. Frame label - keep it short! 
+#. Frame label - keep it short!
 #: src/dialogs.ycp:192
 msgid "Value and Action for Space is Starting to Run Low"
 msgstr "Wartość i akcja dla miejsca zaczynającego się wyczerpywać"
@@ -391,29 +404,30 @@ msgstr "Wartość i akcja dla miejsca zaczynającego się wyczerpywać"
 msgid "&Space Left on Disk (MB)"
 msgstr "Wolna prze&strzeń dyskowa (MB)"
 
-#. ComboBox label - select an action which is performed if space on disk is low	 
+#. ComboBox label - select an action which is performed if space on disk is low
 #: src/dialogs.ycp:199
 msgid "&Action"
 msgstr "&Akcja"
 
 #. InputField label - enter the path to a script (which will be executed)
-#: src/dialogs.ycp:203 src/dialogs.ycp:220 src/dialogs.ycp:236
+#: src/dialogs.ycp:203
+#: src/dialogs.ycp:220
+#: src/dialogs.ycp:236
 #: src/dialogs.ycp:244
 msgid "Path to Script"
-msgstr ""
+msgstr "Ścieżka do skryptu"
 
-#. Frame label - keep it short!  
+#. Frame label - keep it short!
 #: src/dialogs.ycp:209
 msgid "Value and Action for Space is Running Low"
 msgstr "Wartość i akcja dla wyczerpującego się miejsca"
 
 #. InputField label - space on disk is running low if the entered value is reached
 #: src/dialogs.ycp:212
-#, fuzzy
 msgid "&Admin Space Left (MB) "
-msgstr "Wolna przestrzeń dyskowa &administratora (MB)"
+msgstr "Pozostała przestrzeń dyskowa &administratora (MB)"
 
-#. ComboBox label - select an action which is performed if space on disk is running low	  
+#. ComboBox label - select an action which is performed if space on disk is running low
 #: src/dialogs.ycp:216
 msgid "Ac&tion"
 msgstr "Akc&ja"
@@ -422,22 +436,22 @@ msgstr "Akc&ja"
 msgid "Action Mail Account"
 msgstr "Konto e-mail dla akcji"
 
-#. Frame label - keep it short!   
+#. Frame label - keep it short!
 #: src/dialogs.ycp:228
 msgid "Action on Error or Disk Full"
 msgstr "Akcja na wypadek błędu lub pełnego dysku"
 
-#. ComboBox label - select an action which is performed if disk is full	   
+#. ComboBox label - select an action which is performed if disk is full
 #: src/dialogs.ycp:233
 msgid "Disk &Full Action"
 msgstr "Akcja pełnego dysku"
 
-#. ComboBox label - select an action which is performed on error 
+#. ComboBox label - select an action which is performed on error
 #: src/dialogs.ycp:241
 msgid "Disk &Error Action"
 msgstr "Akcja błędu dysku"
 
-#. label of a combo box with the possibilitiy to enable/disable auditing or lock the rules 
+#. label of a combo box with the possibilitiy to enable/disable auditing or lock the rules
 #: src/dialogs.ycp:260
 msgid "&Set Enabled Flag"
 msgstr "U&staw flagę Aktywna"
@@ -452,7 +466,7 @@ msgstr "Reguły są zablokowane (do następnego uruchomienia systemu)"
 msgid "Edit the rules for the audit subsystem here:"
 msgstr "Edytuj reguły dla podsysemu audit tutaj:"
 
-#. label of a push button (please keep it short) 
+#. label of a push button (please keep it short)
 #: src/dialogs.ycp:280
 msgid "&Check Syntax"
 msgstr "S&prawdź składnię"
@@ -616,16 +630,17 @@ msgid ""
 "<p>The dispatcher 'audispd' is an audit event multiplexor\n"
 "(for more information see 'man audispd' and 'man audispd.conf'.</p>"
 msgstr ""
+"<p>Dyspozytor 'audispd' jest multiplexerem zdarzeń auditu\n"
+"(aby uzyskać więcej informacji, zobacz 'man audispd' oraz 'man audispd.conf'.</p>"
 
 #. dispatcher dialog help 5/5
 #: src/helps.ycp:101
-#, fuzzy
 msgid ""
 "<p><b>Please note:</b> The dispatcher program must be owned by 'root', have '0750'\n"
 " file permissions and the full path name has to be entered.</p>"
 msgstr ""
-"<p><b>Dyspozytor</b>: Program dyspozytora jest uruchamiany przez usługę audit i\n"
-"przyjmuje wszystkie wydarzenia usługi na strumieniu stdin.</p>"
+"<p><b>Proszę zwrócić uwagę:</b>: Program dyspozytora musi być własnością 'root', posiadać uprawnienia\n"
+" '0750' oraz musi zostać podana pełna ścieżka.</p>"
 
 #. disk space dialog help 1/6
 #: src/helps.ycp:105
@@ -662,6 +677,8 @@ msgid ""
 "<p>If an action is set to <i>EMAIL</i> a warning mail will be send to the account specified in\n"
 "<b>Action Mail Account</b></p>"
 msgstr ""
+"<p>Jeśli akcja jest ustawiona na <i>EMAIL</i>, ostrzeżenie zostanie wysłane na adres określony w \n"
+"<b>Koncie e-mail dla akcji</b></p>"
 
 #. disk space dialog help 5/6
 #: src/helps.ycp:122
@@ -678,6 +695,8 @@ msgid ""
 "<p><b>Please note:</b> All scripts specified for <b>Action</b> <i>EXEC</i> must be owned\n"
 "by 'root', have '0750' file permissions and the full path name has to be entered.</p>"
 msgstr ""
+"<p><b>Proszę zwrócić uwagę:</b> Wszystkie skrypty zdefiniowane dla <b>Akcji</b> <i>EXEC</i> muszą być własnością\n"
+"'root', posiadać prawa '0750' oraz musi zostać podana pełna ścieżka.</p>"
 
 #. rules dialog help 1/6
 #: src/helps.ycp:130
@@ -737,12 +756,12 @@ msgstr ""
 "Przycisk <b>Wczytaj</b> otwiera okno wyboru pliku, gdzie można wczytać\n"
 "przykłądowy plik reguł.</p>"
 
-#. Header of tab in tab widget		 
+#. Header of tab in tab widget
 #: src/wizards.ycp:91
 msgid "&Dispatcher"
 msgstr "Dyspozytor"
 
-#. Header of tab in tab widget		 
+#. Header of tab in tab widget
 #: src/wizards.ycp:97
 msgid "Disk &Space"
 msgstr "Prze&strzeń dyskowa"
@@ -760,10 +779,10 @@ msgstr "Inicjalizacja..."
 
 #~ msgid "Configuration summary..."
 #~ msgstr "Podsumowanie konfiguracji..."
-
 #~ msgid "Configuration of audit-laf"
 #~ msgstr "Konfiguracja audit-laf"
 
 #, fuzzy
 #~ msgid "Disk &Space on Log Partion"
 #~ msgstr "Ostrzeżenie -- miejsce na dysku"
+
