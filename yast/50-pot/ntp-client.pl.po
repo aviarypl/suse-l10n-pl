@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: ntp-client\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-16 13:07+0200\n"
-"PO-Revision-Date: 2008-10-28 17:20\n"
+"PO-Revision-Date: 2008-12-07 18:58\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -73,7 +73,7 @@ msgstr "Ponowne uruchamianie usługi NTP..."
 #. error message
 #: src/NtpClient.ycp:740
 msgid "Cannot update the dynamic configuration policy."
-msgstr "Nie można uaktualnić polityki konfiguracji dynamicznej."
+msgstr "Nie można zaktualizować dynamicznych założeń konfiguracji."
 
 #. error report
 #: src/NtpClient.ycp:749
@@ -128,7 +128,7 @@ msgstr "Akceptowanie rozgłoszeń o czasie od: %1"
 #. summary string, FIXME
 #: src/NtpClient.ycp:877
 msgid "Combine static and DHCP configuration."
-msgstr "Połącz konfiguracje statyczną oraz DHCP."
+msgstr "Połączenie konfiguracji statycznej z DHCP."
 
 #. summary string, FIXME
 #: src/NtpClient.ycp:880
@@ -138,7 +138,7 @@ msgstr "Tylko statyczna konfiguracja."
 #. summary string, FIXME
 #: src/NtpClient.ycp:884
 msgid "Custom configuration policy."
-msgstr "Własna polityka konfiguracji."
+msgstr "Własne założenia konfiguracji."
 
 #. An informative popup label diring the NTP server testings
 #: src/NtpClient.ycp:915
@@ -159,7 +159,7 @@ msgstr "Serwer jest nieosiągalny albo nie odpowiada prawidłowo."
 #: src/NtpClient.ycp:970
 #, ycp-format
 msgid "Cannot search for NTP server in local network\nwithout having package %1 installed."
-msgstr "Nie można szukać serwera NTP w lokalnej sieci\nbez zainstalowanego pakieru %1."
+msgstr "Nie można wyszukiwać serwera NTP w lokalnej sieci\nbez zainstalowanego pakieru %1."
 
 #. local clock type name
 #: src/clocktypes.ycp:17
@@ -513,7 +513,7 @@ msgstr "Ustawienia ogólne"
 
 #: src/dialogs.ycp:191
 msgid "Security Settings"
-msgstr "Ustawienia bezpieczeństwa"
+msgstr "Ustawienia zabezpieczeń"
 
 #. dialog caption
 #: src/dialogs.ycp:211
@@ -634,7 +634,7 @@ msgstr "<p><b><big>Przerwanie zapisu</big></b><br>\nMożna przerwać procedurę 
 #. help text 1/5
 #: src/helps.ycp:37
 msgid "<p><b><big>Start NTP Daemon</big></b><br>\nSelect whether to start the NTP daemon now and on every system boot. \nThe NTP daemon resolves host names when initializing. Your\nnetwork connection must be started before the NTP daemon starts.</p>\n"
-msgstr "<p><b><big>Uruchomienie demona NTP</big></b><br>\nProszę wybrać, czy uruchomić demona NTP teraz i podczas uruchamiania systemu.\nDemon NTP wyszukuje nazwy komputerów w czasie inicjalizacji. Dlatego\npołączenie sieciowe musi być uruchomione przed uruchomieniem demona NTP.</p>\n"
+msgstr "<p><b><big>Uruchomienie demona NTP</big></b><br>\nProszę wybrać, czy uruchomić demona NTP teraz i podczas każdego uruchamiania systemu.\nDemon NTP rozstrzyga nazwy hostów w czasie inicjalizacji, dlatego\npołączenie sieciowe musi być uruchomione przed uruchomieniem demona NTP.</p>\n"
 
 #. help text 2/5
 #: src/helps.ycp:44
@@ -643,7 +643,7 @@ msgstr "<p><b><big>Środowisko chroot</big></b><br>\nAby uruchomić demona NTP w
 
 #: src/helps.ycp:49
 msgid "<p><b><big>Secure NTP Configuration</big></b><br>\nBy selecting <b>Restrict NTP Service to Configured Servers Only</b>, remote hosts will not be able to view and modify NTP settings on your \ncomputer. The NTP service is restricted to servers in the <tt>/etc/ntp.conf</tt> file and to localhost.<br> \nAccess control flags can be fine-tunded in the servers overview table. This option is not available if NTP is configured via DHCP.</p>\n"
-msgstr "<p><b><big>Konfiguracja zabezpieczonego NTP</big></b><br>\nPoprzez zaznaczenie opcji <b>Ogranicz usługę NTP do skonfigurowanych serwerów</b>\n można zabronić wszystkim zdalnym hostom przeglądania i zmieniania ustawień NTP na\ntym komputerze. W takim przypadku usługa NTP jest ograniczona do serwerów wymienionych w  <tt>/etc/ntp.conf</tt> i localhost.<br> \nSzczegóły ustawień dostępu można dopasować edytując dany wpis w tabeli serwerów. \nOpcja ta jest niedostępna jeśli NTP konfigurowane jest poprzez DHCP.</p>\n"
+msgstr "<p><b><big>Konfiguracja bezpiecznego NTP</big></b><br>\nPoprzez zaznaczenie opcji <b>Ogranicz usługę NTP do skonfigurowanych serwerów</b> hosty zdalne nie będą mogły przeglądać i i modyfikować ustawień NTP na tym komuterze. W takim przypadku usługa NTP jest ograniczona do serwerów wymienionych w pliku <tt>/etc/ntp.conf</tt> i hosta localhost.<br> \nFlagi kontroli dostępu można dostroić, edytując dany wpis w tabeli serwerów. \nOpcja ta jest niedostępna jeśli usługa NTP jest skonfigurowana poprzez DHCP.</p>\n"
 
 #. help text 3/5
 #: src/helps.ycp:56
@@ -658,7 +658,7 @@ msgstr "<p><b><big>Skonfigurowane serwery</big></b><br>\nAby skonfigurować serw
 #. help text 5/5
 #: src/helps.ycp:70
 msgid "<p><b><big>Display Log</big></b></p>\n<p>To view the logs of the NTP daemon, click <b>Display Log</b>.</p>\n"
-msgstr "<p><b><big>Pokaż dziennik </big></b><br>\n<p>Aby wyświetlić dziennik demona NTP w nowym oknie, należy nacisnąć przycisk <b>Pokaż dziennik</b>.</p>\n"
+msgstr "<p><b><big>Wyświetl dziennik </big></b><br>\n<p>Aby wyświetlić dziennik demona NTP w nowym oknie, należy nacisnąć przycisk <b>Wyświetl dziennik</b>.</p>\n"
 
 #. help text to a button
 #: src/helps.ycp:75
@@ -719,11 +719,11 @@ msgstr "<p><b><big>Adres</big></b><br>\nAby podać adres, z którego będzie akc
 #. help text 3/4, optional
 #: src/helps.ycp:136
 msgid "<p><b><big>Options</big></b><br>\nTo fine tune the synchronization source, write the options to the\n<b>Options</b> text field. For details, see\n<i>/usr/share/doc/packages/ntp-doc/confopt.htm</i>.</p>"
-msgstr "<p><b><big>Opcje</big></b><br>\nAby dopasować ustawienia źródła synchronizacji, należy wpisać\nopcje w pole <b>Opcje</b>. Szczegóły znajdują się w pliku\n<i>/usr/share/doc/packages/ntp-doc/confopt.htm</i>.</p>"
+msgstr "<p><b><big>Opcje</big></b><br>\nAby dostroić źródło synchronizacji, należy wpisać\nopcje w pole <b>Opcje</b>. Szczegółowe informacje można znaleźć w pliku\n<i>/usr/share/doc/packages/ntp-doc/confopt.htm</i>.</p>"
 
 #: src/helps.ycp:141
 msgid "<p><b><big>Access Control Options</big></b><br>\nDefine the access control flags (<b><tt>restrict</tt></b> directive in\n<i>/etc/ntp.conf</i>) for this server, indicating which types of actions the remote\nhost can perform on your NTP daemon. By default, it is set to <i>notrap\nnomodify noquery</i>. This option is only available if you have checked the\n<b>Restrict NTP Service to Configured Servers Only</b> option in\n<b>Security Settings</b>.</p>\n"
-msgstr "<p><b><big>Opcje kontroli dostępu</big></b><br>\nW tym miejscu można zdefiniować flagi dostępu (<b>dyrektywa <tt>restrict</tt></b> w\n<i>/etc/ntp.conf</i>) dla tego serwera włącznie z czynnościami jakie zdalne hosty\nmogą wykonać na demonie NTP. Wartości domyślne to <i>notrap\nnomodify noquery</i> Opcja ta jest dostępna tylko gdy zaznaczono opcję\n<b>Ogranicz usługę NTP do skonfigurowanych serwerów</b> w\n<b>Ustawieniach bezpieczeństwa</b>.</p>\n"
+msgstr "<p><b><big>Opcje kontroli dostępu</big></b><br>\nW tym miejscu można zdefiniować flagi kontroli dostępu (<b>dyrektywa <tt>restrict</tt></b> w pliku \n<i>/etc/ntp.conf</i>) dla tego serwera. Flagi te wskazują typy czynności, jakie zdalne hosty\nmogą wykonać na demonie NTP. Wartości domyślne to <i>notrap\nnomodify noquery</i> Opcja ta jest dostępna tylko po zaznaczeniu opcji\n<b>Ogranicz usługę NTP do skonfigurowanych serwerów</b> w\n<b>Ustawieniach bezpieczeństwa</b>.</p>\n"
 
 #. help text 1/6
 #: src/helps.ycp:150
@@ -794,7 +794,7 @@ msgstr "<p><big><b>Kalibracja sterownika zegara</b></big><br>\nSterownik zegara 
 #. help text 2/2
 #: src/helps.ycp:222
 msgid "For information about the meaning of the options, install package\n<i>ntp-doc</i> and see\n<i>/usr/share/doc/packages/ntp-doc/html/refclock.htm</i></p>"
-msgstr "W celu uzyskania dodatkowych informacji o znaczeniu tych opcji,\nnależy zainstalować pakiet <i>ntp-doc</i> i zajrzeć do pliku\n<i>/usr/share/doc/packages/ntp-doc/html/refclock.htm</i></p>"
+msgstr "W celu uzyskania informacji o znaczeniu tych opcji,\nnależy zainstalować pakiet <i>ntp-doc</i> i zajrzeć do pliku\n<i>/usr/share/doc/packages/ntp-doc/html/refclock.htm</i></p>"
 
 #. yes-no popup
 #: src/misc.ycp:29
@@ -830,7 +830,7 @@ msgstr "Skonfiguruj..."
 #: src/ntp-client_proposal.ycp:207
 #, ycp-format
 msgid "Synchronization with NTP server is not possible\nwithout having package %1 installed"
-msgstr "Nie można zsynchronizować z serwerem NTP\nbez zainstalowanego pakieru %1."
+msgstr "Synchronizacja z serwerem NTP jest niemożliwa\nbez zainstalowanego pakietu %1."
 
 #: src/ntp-client_proposal.ycp:212
 msgid "Synchronizing with NTP server..."
@@ -937,12 +937,12 @@ msgstr "Uruchamianie demona NTP"
 #. radio button
 #: src/widgets.ycp:1227
 msgid "Only &Manually"
-msgstr "Tylko ręczne"
+msgstr "Tylko &ręczne"
 
 #. radio button
 #: src/widgets.ycp:1229
 msgid "Now and On &Boot"
-msgstr "Teraz i w czasie uruchamiania systemu"
+msgstr "Teraz i w czasie r&ozruchu"
 
 #. check box
 #: src/widgets.ycp:1241
@@ -957,7 +957,7 @@ msgstr "&Ogranicz usługę NTP do skonfigurowanych serwerów"
 #. combo box item FIXME usability
 #: src/widgets.ycp:1260
 msgid "Manual"
-msgstr "Wybrana ręcznie"
+msgstr "Ręczna"
 
 #. combo box item
 #: src/widgets.ycp:1262
@@ -967,7 +967,7 @@ msgstr "Autmatyczna"
 #. combo box item
 #: src/widgets.ycp:1264
 msgid "Custom"
-msgstr "Własny widok"
+msgstr "Własna"
 
 #. check box
 #: src/widgets.ycp:1282
@@ -999,7 +999,7 @@ msgstr "Typ synchronizacji"
 #. push button
 #: src/widgets.ycp:1334
 msgid "Display &Log..."
-msgstr "P&okaż dziennik..."
+msgstr "&Wyświetl dziennik..."
 
 #. combo box label
 #: src/widgets.ycp:1358

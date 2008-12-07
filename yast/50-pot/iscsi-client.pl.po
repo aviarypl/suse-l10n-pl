@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: iscsi-client\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-10-16 13:06+0200\n"
-"PO-Revision-Date: 2008-10-28 17:20\n"
+"PO-Revision-Date: 2008-12-07 18:58\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
@@ -70,12 +70,12 @@ msgstr "Zapisywanie konfiguracji modułu inicjującego iSCSI"
 #. Progress stage 1/2
 #: src/IscsiClient.ycp:228
 msgid "Write the autoYaST settings"
-msgstr "Zapisz ustawienia autoYAST"
+msgstr "Zapis ustawień autoYAST"
 
 #. Progress stage 2/2
 #: src/IscsiClient.ycp:230
 msgid "Set up service status"
-msgstr "Ustaw status usługi"
+msgstr "Ustawienie statusu usługi"
 
 #. TODO FIXME: your code here...
 #. Configuration summary text for autoyast
@@ -85,7 +85,7 @@ msgstr "Podsumowanie konfiguracji..."
 
 #: src/IscsiClientLib.ycp:292
 msgid "InitiatorName from iBFT and from <tt>/etc/iscsi/initiatorname.iscsi</tt> differ.\nThe old initiatorname will be replaced by the value of iBFT and create a backup.\nIf you want to use a different initiatorname, change it in the BIOS."
-msgstr "Nazwa modułu inicjującego z iBFT oraz z <tt>/etc/iscsi/initiatorname.iscsi</tt> różnią się.\nStara nazwa modułu inicjującego zostanie zastąpiona wartością z iBFT, oraz utworzona zostanie kopia zapasowa.\nJeśli istnieje potrzeba stosowania innej nazwy modułu inicjującego, należy ją zmienić w BIOS."
+msgstr "Nazwa modułu inicjującego z iBFT i pobrana z <tt>/etc/iscsi/initiatorname.iscsi</tt> różnią się.\nStara nazwa modułu inicjującego zostanie zastąpiona wartością z iBFT oraz utworzona zostanie kopia zapasowa.\nJeśli istnieje potrzeba użycia innej nazwy modułu inicjującego, należy ją zmienić w BIOS."
 
 #. radio button (starting SLP service - option 1)
 #: src/dialogs.ycp:34
@@ -277,7 +277,7 @@ msgstr "<p><b><big>Edytowanie lub usuwanie:</big></b><br>\nAby zmienić lub usun
 #. table of connected targets
 #: src/helps.ycp:77
 msgid "List of current sessions. To add a new target, select it and press <b>Add</b>.\nTo remove it, press <b>Log Out</b>.\nTo change the start-up status, press <b>Toggle</b>.\n"
-msgstr "Lista bieżących sesji. Aby dodać nowy element docelowy, należy go wybrać oraz nacisnąć przycisk <b>Dodaj</b>.\nAby go usunąć, należy nacisnąć przycisk <b>Wyloguj</b>.\nAby zmienić status uruchamiania, należy nacisnąć <b>Przełącz</b>.\n"
+msgstr "Lista bieżących sesji. Aby dodać nowy element docelowy, należy go wybrać oraz nacisnąć przycisk <b>Dodaj</b>.\nAby go usunąć, proszę nacisnąć przycisk <b>Wyloguj</b>.\nW celu zmiany statusu uruchamiania należy nacisnąć <b>Przełącz</b>.\n"
 
 #. Warning
 #: src/helps.ycp:83 src/helps.ycp:98
@@ -290,11 +290,11 @@ msgstr "<p>Podczas korzystania z urządzenia iSCSI w trybie <b>READ</b>/<b>WRITE
 
 #: src/helps.ycp:86
 msgid "<p><b>InitiatorName</b> is value a from <tt>/etc/initiatorname.iscsi</tt>. \nIn case you have iBFT, this value will be added from there and you are only able to change it in the BIOS setup.</p>"
-msgstr "<p><b>InitiatorName</b> (nazwa modułu inicjującego) to wartość z <tt>/etc/initiatorname.iscsi</tt>. \nW przypadku obecności iBFT, nazwa ta zostanie z niego dodana, zmiana możliwa jest tylko w ustawieniach BIOS.</p>"
+msgstr "<p><b>InitiatorName</b> (nazwa modułu inicjującego) to wartość pobrana z <tt>/etc/initiatorname.iscsi</tt>. \nW przypadku obecności iBFT nazwa ta zostanie z niego pobrana; zmiana możliwa jest tylko w ustawieniach BIOS.</p>"
 
 #: src/helps.ycp:88
 msgid "If you want to use <b>iSNS</b> (Internet  Storage  Name Service) for discovering targets instead of the default SendTargets method,\nfill in the IP address of the iSNS server and port. The default port should be 3205.\n"
-msgstr "Jeśli zamiast domyślnej metody SendTargets do wykrywania celów ma być użyty <b>iSNS</b> (Internet  Storage  Name Service),\nnależy uzupełnić adres IP oraz serwer i port iSNS. Domyślny numer portu to 3205.\n"
+msgstr "Jeśli zamiast domyślnej metody SendTargets do wykrywania celów ma być użyty <b>iSNS</b> (Internet  Storage  Name Service),\nnależy wpisać adres IP oraz serwer i port iSNS. Domyślny numer portu to 3205.\n"
 
 #: src/helps.ycp:93
 msgid "Enter the <b>IP Address</b> of the discovered server.\nOnly change <b>Port</b> if needed. For authentication, use <b>Username</b> and <b>Password</b>. If you do not need authentication,\nselect <b>No Authentication</b>.\n"
@@ -367,15 +367,15 @@ msgstr "Nie znaleziono rekordów."
 
 #: src/widgets.ycp:189
 msgid "No valid IP address"
-msgstr "Brak poprawnego adresu IP"
+msgstr "Brak prawidłowego adresu IP"
 
 #: src/widgets.ycp:194
 msgid "Port field cannot be empty"
-msgstr "Pole port nie może być puste"
+msgstr "Pole portu nie może być puste"
 
 #: src/widgets.ycp:263
 msgid "Incorrect InitiatorName.\nThe correct syntax is\niqn.yyyy-mm.reversed.domain.name[:identifier]\nor eui.yyyy-mm.reversed.domain.name[:identifier]\n\nExample:\niqn.2007-04.cz.server:storage.disk.sdb\n"
-msgstr "Niepoprawna nazwa modułu inicjującego.\nPoprawna składnia to\niqn.yyyy-mm.odwrócona nazwa domeny[:identyfikator]\nlub eui.yyyy-mm.odwrócona nazwa domeny[:identyfikator]\n\nPrzykład:\niqn.2007-04.cz.server:storage.disk.sdb\n"
+msgstr "Nieprawidłowa nazwa modułu inicjującego.\nWłaściwa składnia to\niqn.yyyy-mm.odwrócona.nazwa.domeny[:identyfikator]\nlub eui.yyyy-mm.odwrócona.nazwa.domeny[:identyfikator]\n\nPrzykład:\niqn.2007-04.pl.serwer:storage.disk.sdb\n"
 
 #: src/widgets.ycp:395
 msgid "Insert the port."
