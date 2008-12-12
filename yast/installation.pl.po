@@ -10,13 +10,14 @@
 # Wojciech Kapusta <w.kapusta@aviary.pl>, 2007.
 # Karol Sikora <elektrrrus@gmail.com>, 2007, 2008.
 # Wadim Dziedzic <wdziedzic@aviary.pl>, 2008.
+# Karol Sikora <karol@elektrrrus.pl>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: installation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-11-20 16:40+0100\n"
-"PO-Revision-Date: 2008-10-02 17:45+0100\n"
-"Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
+"PO-Revision-Date: 2008-12-12 12:54+0100\n"
+"Last-Translator: Karol Sikora <karol@elektrrrus.pl>\n"
 "Language-Team:  <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -485,13 +486,12 @@ msgid "Deploying image %1..."
 msgstr "Wgrywanie obrazu %1..."
 
 #: src/clients/inst_deploy_image.ycp:285
-#, fuzzy
 msgid ""
 "Deploying from images has failed.\n"
 "Aborting the installation..."
 msgstr ""
-"Inicjalizacja repozytoriów oprogramowania nie powiodła się.\n"
-"Instalacja przerwana."
+"Instalowanie z obrazów nie powiodło się.\n"
+"Przerywanie instalacji..."
 
 #. TRANSLATORS: pop-up message
 #: src/clients/inst_deploy_image.ycp:309
@@ -499,6 +499,8 @@ msgid ""
 "Debugging has been turned on.\n"
 "YaST will open a package manager for you to check the current status of packages."
 msgstr ""
+"Tryb odpluskwiania został włączony.\n"
+"YaST otworzy teraz menadżer pakietów aby sprawdzić aktualny status pakietów."
 
 #. popup label
 #: src/clients/inst_disks_activate.ycp:53
@@ -549,6 +551,9 @@ msgid ""
 "We are using a fall-back one. This should not happen\n"
 "and it is worth reporting a bug."
 msgstr ""
+"YaST nie mógł znaleźć odpowiedniego pliku kontrolnego.\n"
+"Użyto plik domyślny. To nie powinno się zdarzyć,\n"
+"prosimy o raport o błędzie."
 
 #. help text
 #: src/clients/inst_fallback_controlfile.ycp:44
@@ -556,6 +561,8 @@ msgid ""
 "<p>A fallback control file contains installation and update\n"
 "workflows unified for all products.</p>"
 msgstr ""
+"<p>Domyślny plik kontrolny zawiera opisy procesów instalacji\n"
+"i aktualizacji dla wszystkich produktów.</p>"
 
 #. Help text for last dialog of base installation
 #: src/clients/inst_finish.ycp:52
@@ -2076,7 +2083,6 @@ msgstr "Wczytywanie poprzednio używanych repozytoriów..."
 
 #. TRANSLATORS: dialog help
 #: src/clients/inst_upgrade_urls.ycp:877
-#, fuzzy
 msgid "<p>Reading repositories. Please wait...</p>"
 msgstr "<p>Wczytywanie repozytoriów. Proszę czekać...</p>"
 
@@ -2392,29 +2398,25 @@ msgstr "<p>Wszystkie informacje wymagane do instalacji podstawowej zostały zebr
 
 #. Text for confirmation popup before the installation really starts 2/3
 #: src/include/misc.ycp:146
-#, fuzzy
 msgid ""
 "<p>If you continue now, <b>existing\n"
 "partitions</b> on your hard disk will be <b>deleted</b> or <b>formatted</b>\n"
 "(<b>erasing any existing data</b> in those partitions) according to the\n"
 "installation settings in the previous dialogs.</p>"
 msgstr ""
-"\n"
 "<p>W przypadku kontynuacji wybrane partycje twardego dysku zostaną \n"
 "<b>sformatowane</b> (oznacza to usunięcie wszelkich danych z tych \n"
-"partycji), zgodnie z ustawieniami instalacji z poprzednich kroków.</p>"
+"partycji) lub <b>usunięte</b>, zgodnie z ustawieniami instalacji z\n poprzednich kroków.</p>"
 
 #. Text for confirmation popup before the installation really starts 2/3
 #: src/include/misc.ycp:154
-#, fuzzy
 msgid ""
 "<p>If you continue now, partitions on your\n"
 "hard disk will be modified according to the installation settings in the\n"
 "previous dialogs.</p>"
 msgstr ""
-"\n"
 "<p>W przypadku kontynuacji dane na dysku twardym zostaną \n"
-"nadpisane, zgodnie z ustawieniami z poprzednich okien.</p>"
+"zmodyfikowane, zgodnie z ustawieniami z poprzednich okien.</p>"
 
 #. Text for confirmation popup before the installation really starts 3/3
 #. Text for confirmation popup before the update really starts 3/3
@@ -2434,7 +2436,6 @@ msgstr "<p>Wszystkie informacje wymagane do aktualizacji zostały zebrane.</p>"
 
 #. Text for confirmation popup before the update really starts 2/3
 #: src/include/misc.ycp:173
-#, fuzzy
 msgid ""
 "\n"
 "<p>If you continue now, data on your hard disk will be overwritten\n"
@@ -2465,7 +2466,7 @@ msgstr "Przełączenie do zainstalowanego systemu nie powiodło się"
 #. %3 - directory where YaST logs are stored
 #. %4 - link to the Yast Bug Reporting HOWTO Web page
 #: src/include/scr_switch_debugger.ycp:107
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "Switching to the installed system has failed\n"
 "More information can be found near the end of the '%1' file.\n"
@@ -2474,17 +2475,18 @@ msgid ""
 "Please, attach also all YaST logs stored in the '%3' directory.\n"
 "See %4 for more information about YaST logs."
 msgstr ""
-"Dostęp do mudułu %1 programu YaST nie powiódł się.\n"
-"Więcej informacji można znaleźć w pliku '%2'.\n"
-"Proszę wypełnić raport o błędzie na %3 i załączyć do niego pliki dzienników\n"
-"YaST znajdujące się w katalogu '%4'."
+"Przejście do zainstalowanego systemu nie powiodło się.\n"
+"Więcej informacji można znaleźć w pliku '%1'.\n"
+"Proszę wypełnić raport o błędzie na %2 i załączyć do niego pliki dzienników\n"
+"YaST znajdujące się w katalogu '%3'.\n"
+"Proszę zobaczyć %4 aby uzyskać więcej informacji nt. dzienników YaST."
 
 #. link to the Yast Bug Reporting HOWT
 #. for translators: use the localized page for your language if it exists,
 #. check the combo box "In other laguages" on top of the page
 #: src/include/scr_switch_debugger.ycp:119
 msgid "http://en.opensuse.org/Bugs/YaST"
-msgstr ""
+msgstr "http://en.opensuse.org/Bugs/YaST"
 
 #. log-view label
 #: src/include/scr_switch_debugger.ycp:130
@@ -2562,28 +2564,26 @@ msgid "Running complex check on package %1..."
 msgstr "Kompleksowe sprawdzanie pakietu %1..."
 
 #: src/include/scr_switch_debugger.ycp:454
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "Checking YaST log file %1..."
-msgstr "Sprawdzanie pliku wykonywalnego %1..."
+msgstr "Sprawdzanie pliku dziennika YaST %1..."
 
 #: src/include/scr_switch_debugger.ycp:463
-#, fuzzy
 msgid "Opening file..."
-msgstr "Wgrywanie obrazu..."
+msgstr "Otwieranie pliku..."
 
 #: src/include/scr_switch_debugger.ycp:473
 msgid "SCR process has died, printing the last log lines..."
-msgstr ""
+msgstr "Proces SCR został zabity, pokazane zostaną ostatnie linijki dzienników..."
 
 #. Print just the last line
 #: src/include/scr_switch_debugger.ycp:482
 msgid "YaST process got killed"
-msgstr ""
+msgstr "Proces YaST został zabity"
 
 #: src/include/scr_switch_debugger.ycp:491
-#, fuzzy
 msgid "Checking YaST log..."
-msgstr "Sprawdzanie pliku wykonywalnego %1..."
+msgstr "Sprawdzanie dzienników YaST..."
 
 #. Test progress
 #: src/include/scr_switch_debugger.ycp:500
@@ -2628,47 +2628,3 @@ msgstr "<p>Aby system X11 był dostępny, należy zainstalować pakiet <b>%1</b>
 msgid "<p>Do you want to install it now?</p>"
 msgstr "<p>Czy zainstalować go teraz?</p>"
 
-#~ msgid "Failed"
-#~ msgstr "Błąd"
-
-#~ msgid "Running the debugger..."
-#~ msgstr "Praca debuggera..."
-
-#~ msgid ""
-#~ "<p>At Linux <b>choice</b> is a top priority. <i>openSUSE</i> offers a number\n"
-#~ "of different desktop environments. Below you see a list of the 2 major ones\n"
-#~ "<b>GNOME</b> and <b>KDE</b>. Both provide an easy to use desktop with a large number\n"
-#~ "of desktop applications such as email, file browser, games and many others.</p>"
-#~ msgstr ""
-#~ "<p><i>openSUSE</i> pozwala wybrać kilka różnych środowisk graficznych. Poniżej zostały wymienione 2,\n"
-#~ "które są najczęściej wybierane przez użytkowników systemu Linux: <b>GNOME</b> i <b>KDE</b>.\n"
-#~ "Obydwa te środowiska oferują dużą liczbę aplikacji, takich jak klient poczty, przeglądarka plików, gry i wiele więcej.</p>"
-
-#~ msgid ""
-#~ "<p>As desktop selection is a matter of taste a clear <i>recommendation can't be\n"
-#~ "given</i>.</p>"
-#~ msgstr ""
-#~ "<p>Ponieważ wybór środowiska graficznego jest bardzo ważną i indywidualną kwestią,\n"
-#~ "<i>nie można podać jasnej rekomendacji</i>.</p>"
-
-#~ msgid ""
-#~ "Additionally, not only desktop but you can also chose a minimalistic\n"
-#~ "installation that could fit your needs better."
-#~ msgstr ""
-#~ "Dodatkowo można wybrać minimalną instalację, która może lepiej\n"
-#~ "spełnić Państwa potrzeby."
-
-#~ msgid "Select a system to get its description."
-#~ msgstr "Proszę zaznaczyć system, aby zobaczyć jego opis."
-
-#~ msgid "No description available..."
-#~ msgstr "Opis nie jest dostępny..."
-
-#~ msgid "Select a System Type"
-#~ msgstr "Proszę wybrać typ systemu"
-
-#~ msgid "Description"
-#~ msgstr "Opis"
-
-#~ msgid "System Type"
-#~ msgstr "Typ systemu"
