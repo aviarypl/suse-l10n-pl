@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ldap-server.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-20 16:36+0100\n"
+"POT-Creation-Date: 2008-12-12 14:18+0100\n"
 "PO-Revision-Date: 2008-11-05 13:26+0100\n"
 "Last-Translator: Mirosław Rogoziński <miroslaw.rogozinski@gmail.com>\n"
 "Language-Team: Polski <pl@li.org>\n"
@@ -338,6 +338,26 @@ msgstr ""
 msgid "Password Policy settings"
 msgstr "Ustawienia reguł haseł"
 
+#: src/LdapServer.pm:201
+#, fuzzy
+msgid "Reading Startup Configuration"
+msgstr "Zapisywanie konfiguracji początkowej"
+
+#: src/LdapServer.pm:202
+#, fuzzy
+msgid "Reading Configuration Backend"
+msgstr "Tworzenie konfiguracji"
+
+#: src/LdapServer.pm:203
+#, fuzzy
+msgid "Reading Configuration Data"
+msgstr "Tworzenie konfiguracji"
+
+#: src/LdapServer.pm:204
+#, fuzzy
+msgid "Initializing LDAP Server Configuration"
+msgstr "Konfiguracja serwera LDAP"
+
 #: src/LdapServer.pm:240
 msgid ""
 "Error while initializing the configuration.\n"
@@ -384,7 +404,7 @@ msgstr "Uruchamianie serwera OpenLDAP"
 msgid "Creating Base Objects"
 msgstr "Tworzenie obiektów podstawowych"
 
-#: src/LdapServer.pm:552 src/LdapServer.pm:1317
+#: src/LdapServer.pm:552 src/LdapServer.pm:1340
 msgid "Switch from slapd.conf to config backend failed."
 msgstr "Zmiana z slapd.conf na mechanizm wspomagający konfiguracji nie udała się."
 
@@ -392,180 +412,200 @@ msgstr "Zmiana z slapd.conf na mechanizm wspomagający konfiguracji nie udała s
 msgid "Enabling the LDAPI Protocol listener failed."
 msgstr "Włączenie nasłuchiwania protokołu LDAPI nie powiodło się."
 
-#: src/LdapServer.pm:582
+#: src/LdapServer.pm:584
 msgid "Config Directory cleanup failed."
 msgstr "Czyszczenie katalogu konfiguracyjnego nie powiodło się."
 
-#: src/LdapServer.pm:603
+#: src/LdapServer.pm:605
 msgid "Error while populating the configurations database with \"slapadd\"."
 msgstr "Błąd podczas wypełniania konfiguracji bazy danych przy użyciu \"slapadd\"."
 
-#: src/LdapServer.pm:623
+#: src/LdapServer.pm:625
 msgid "Enabling the LDAP Service failed."
 msgstr "Włączanie usługi LDAP nie powiodło się."
 
-#: src/LdapServer.pm:639 src/LdapServer.pm:1348
+#: src/LdapServer.pm:641 src/LdapServer.pm:1371
 msgid "Starting the LDAP service failed."
 msgstr "Uruchamianie usługi LDAP nie powiodło się."
 
 #. service was disabled during this session, just disable the service
 #. in the system, stop it and ignore any configuration changes.
-#: src/LdapServer.pm:681
+#: src/LdapServer.pm:688
 msgid "Stopping LDAP Server"
 msgstr "Zatrzymywanie serwera LDAP."
 
-#: src/LdapServer.pm:682
+#: src/LdapServer.pm:689
 msgid "Disabling LDAP Server"
 msgstr "Wyłączanie serwera LDAP."
 
-#: src/LdapServer.pm:697
+#: src/LdapServer.pm:704
 msgid "Writing Sysconfig files"
 msgstr "Zapisywanie plików Sysconfig"
 
-#: src/LdapServer.pm:698
+#: src/LdapServer.pm:705
 msgid "Applying changes to Configuration Database"
 msgstr "Zastosowanie zmian w konfiguracji bazy danych"
 
-#: src/LdapServer.pm:699
+#: src/LdapServer.pm:706
 msgid "Applying changes to /etc/openldap/ldap.conf"
 msgstr "Zastosowanie zmian w /etc/openldap/ldap.conf"
 
-#: src/LdapServer.pm:700
+#: src/LdapServer.pm:707
 msgid "Creating Base Objects for newly created databases"
 msgstr "Tworzenie obiektów podstawowych dla nowo stworzonych baz danych."
 
-#: src/LdapServer.pm:701
+#: src/LdapServer.pm:708
 msgid "Updating Default Password Policy Objects"
 msgstr "Aktualizowanie domyślnych obiektów polityki haseł"
 
-#: src/LdapServer.pm:800
+#: src/LdapServer.pm:709
+msgid "Waiting for OpenLDAP background indexing tasks to complete (this might take some minutes)"
+msgstr ""
+
+#: src/LdapServer.pm:710
+#, fuzzy
+msgid "Restarting OpenLDAP Server if required"
+msgstr "Restartowanie serwera OpenLDAP"
+
+#: src/LdapServer.pm:811
 msgid "Creating base objects failed."
 msgstr "Tworzenie obiektów podstawowych nie powiodło się."
 
-#: src/LdapServer.pm:808
+#: src/LdapServer.pm:819
 msgid "Creating Password Policy objects failed."
 msgstr "Tworzenie obiektów reguł haseł nie powiodło się."
 
-#: src/LdapServer.pm:1021 src/LdapServer.pm:1035 src/tree_structure.ycp:893
+#: src/LdapServer.pm:1044 src/LdapServer.pm:1058 src/tree_structure.ycp:893
 msgid "Startup Configuration"
 msgstr "Początkowa konfiguracja"
 
-#: src/LdapServer.pm:1022 src/LdapServer.pm:1036
+#: src/LdapServer.pm:1045 src/LdapServer.pm:1059
 #: src/ldap-server_proposal.ycp:133 src/ldap-server_proposal.ycp:138
 msgid "Start LDAP Server: "
 msgstr "Uruchomienie serwera LDAP:"
 
-#: src/LdapServer.pm:1022 src/LdapServer.pm:1023 src/LdapServer.pm:1036
-#: src/LdapServer.pm:1037 src/tree_structure.ycp:739
+#: src/LdapServer.pm:1045 src/LdapServer.pm:1046 src/LdapServer.pm:1059
+#: src/LdapServer.pm:1060 src/tree_structure.ycp:739
 #: src/tree_structure.ycp:743 src/tree_structure.ycp:747
 msgid "Yes"
 msgstr "Tak"
 
-#: src/LdapServer.pm:1022 src/LdapServer.pm:1023 src/LdapServer.pm:1036
-#: src/LdapServer.pm:1037 src/tree_structure.ycp:732
+#: src/LdapServer.pm:1045 src/LdapServer.pm:1046 src/LdapServer.pm:1059
+#: src/LdapServer.pm:1060 src/tree_structure.ycp:732
 #: src/tree_structure.ycp:733 src/tree_structure.ycp:734
 #: src/tree_structure.ycp:735
 msgid "No"
 msgstr "Nie"
 
-#: src/LdapServer.pm:1023 src/LdapServer.pm:1037
+#: src/LdapServer.pm:1046 src/LdapServer.pm:1060
 msgid "Register at SLP Service: "
 msgstr "Rejestracja usługi SLP:"
 
-#: src/LdapServer.pm:1027
+#: src/LdapServer.pm:1050
 msgid "Create initial Database with the following Parameters"
 msgstr "Tworzenie początkowej bazy danych z następującymi parametrami"
 
-#: src/LdapServer.pm:1028 src/LdapServer.pm:1043
+#: src/LdapServer.pm:1051 src/LdapServer.pm:1066
 msgid "Database Suffix: "
 msgstr "Suffix bazy danych:"
 
-#: src/LdapServer.pm:1029
+#: src/LdapServer.pm:1052
 msgid "Administrator DN: "
 msgstr "&Administrator DN:"
 
-#: src/LdapServer.pm:1038
+#: src/LdapServer.pm:1061
 msgid "Create the following databases:"
 msgstr "Tworzenie podanych baz danych:"
 
-#: src/LdapServer.pm:1044
+#: src/LdapServer.pm:1067
 msgid "Database Type: "
 msgstr "Typ bazy danych"
 
-#: src/LdapServer.pm:1050
+#: src/LdapServer.pm:1073
 msgid "Not configured yet."
 msgstr "Nie zostały jeszcze skonfigurowane."
 
-#: src/LdapServer.pm:1229
+#: src/LdapServer.pm:1252
 msgid "CA Certificate File does not exist"
 msgstr "Plik certyfikatu CA nie istnieje."
 
-#: src/LdapServer.pm:1234
+#: src/LdapServer.pm:1257
 msgid "Certificate File does not exist"
 msgstr "Plik certyfikatu nie istnieje."
 
-#: src/LdapServer.pm:1239
+#: src/LdapServer.pm:1262
 msgid "Certificate Key File does not exist"
 msgstr "Plik klucza certyfikatu nie istnieje."
 
-#: src/LdapServer.pm:1246 src/LdapServer.pm:1271
+#: src/LdapServer.pm:1269 src/LdapServer.pm:1294
 msgid "Can not set a filesystem acl on the private key"
 msgstr "Nie można ustawić praw dostępu systemu plików w kluczu prywatnym"
 
-#: src/LdapServer.pm:1293
+#: src/LdapServer.pm:1316
 msgid "Cleaning up directory for config database"
 msgstr "Czyszczenie katalogu konfiguracyjnego bazy danych."
 
-#: src/LdapServer.pm:1294
+#: src/LdapServer.pm:1317
 msgid "Converting slapd.conf to config database"
 msgstr "Konwertowanie slapd.conf do bazy danych konfiguracji"
 
-#: src/LdapServer.pm:1295
+#: src/LdapServer.pm:1318
 msgid "Switching startup configuration to use config database"
 msgstr "Przełączanie wstępnej konfiguracji do bazy danych konfiguracji"
 
-#: src/LdapServer.pm:1296
+#: src/LdapServer.pm:1319
 msgid "Restarting LDAP Server"
 msgstr "Ponowne uruchamianie serwera LDAP"
 
-#: src/LdapServer.pm:1307
+#: src/LdapServer.pm:1330
 msgid "Output of \"slaptest\":\n"
 msgstr "Wyjście z \"slaptest\":\n"
 
-#: src/LdapServer.pm:1308
+#: src/LdapServer.pm:1331
 msgid "Migration of existing configuration failed."
 msgstr "Przenoszenie istniejącej konfiguracji nie powiodło się."
 
-#: src/LdapServer.pm:1327 src/LdapServer.pm:1335
+#: src/LdapServer.pm:1350 src/LdapServer.pm:1358
 msgid "Enabling LDAPI listener failed."
 msgstr "Włączenie obserwatora LDAPI nie powiodło się."
 
-#: src/LdapServer.pm:1445
+#: src/LdapServer.pm:1468
 msgid "Common server certificate not available. StartTLS is disabled."
 msgstr "Brak certyfikatów serwera. StartTLS zostało wyłączone."
 
-#: src/LdapServer.pm:1839 src/LdapServer.pm:1844 src/LdapServer.pm:1849
-#: src/LdapServer.pm:1854
-msgid "\""
-msgstr "\""
+#: src/LdapServer.pm:1865 src/LdapServer.pm:1875 src/LdapServer.pm:1903
+#: src/LdapServer.pm:1917
+#, fuzzy
+msgid "is not a valid LDAP DN."
+msgstr "nie jest poprawnym LDAP DN"
 
-#: src/LdapServer.pm:1877 src/LdapServer.pm:1882
-msgid "Base DN \""
-msgstr "Bazowy DN \""
+#: src/LdapServer.pm:1870 src/LdapServer.pm:1880
+msgid "has mulitvalued RDNs."
+msgstr ""
 
-#: src/LdapServer.pm:1891 src/LdapServer.pm:1896
-msgid "Root DN \""
+#: src/LdapServer.pm:1903 src/LdapServer.pm:1908
+#, fuzzy
+msgid "Base DN"
+msgstr "&Bazowy DN"
+
+#: src/LdapServer.pm:1908 src/LdapServer.pm:1923
+msgid "has multivalued RDNs. This is not supported in this YaST Module."
+msgstr ""
+
+#: src/LdapServer.pm:1917 src/LdapServer.pm:1922
+#, fuzzy
+msgid "Root DN"
 msgstr "Główny DN \""
 
-#: src/LdapServer.pm:1903
+#: src/LdapServer.pm:1930
 msgid "The Root DN must be a child object of the Base DN."
 msgstr "Główny DN musi być obiektem podrzędnym DN bazowego."
 
-#: src/LdapServer.pm:1923 src/YaPI/LdapServer.pm:484
+#: src/LdapServer.pm:1950 src/YaPI/LdapServer.pm:484
 msgid "Could not create directory."
 msgstr "Nie można utworzyć katalogu."
 
-#: src/LdapServer.pm:1930 src/YaPI/LdapServer.pm:498
+#: src/LdapServer.pm:1957 src/YaPI/LdapServer.pm:498
 msgid "Could adjust ownership of database directory."
 msgstr "Nie można zmienić właściciela katalogu bazy danych."
 
@@ -1950,6 +1990,12 @@ msgstr "Dodaj indeks."
 #: src/wizards.ycp:266
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
+#~ msgid "\""
+#~ msgstr "\""
+
+#~ msgid "Base DN \""
+#~ msgstr "Bazowy DN \""
 
 #~ msgid ""
 #~ "In order to access the server configration after the migration you need\n"

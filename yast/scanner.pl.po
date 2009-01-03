@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scanner.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-20 16:46+0100\n"
+"POT-Creation-Date: 2008-12-12 14:07+0100\n"
 "PO-Revision-Date: 2008-12-03 10:02+0100\n"
 "Last-Translator: Mirosław Rogoziński <miroslaw.rogozinski@gmail.com>\n"
 "Language-Team:  <en@li.org>\n"
@@ -149,7 +149,7 @@ msgstr "Wykrywanie aktywnych skanerów nie powiodło się."
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #: src/Scanner.ycp:532 src/Scanner.ycp:580 src/Scanner.ycp:629
-#: src/Scanner.ycp:2451
+#: src/Scanner.ycp:2452
 #, ycp-format
 msgid "File %1 does not exist."
 msgstr "Plik %1 nie istnieje."
@@ -158,7 +158,7 @@ msgstr "Plik %1 nie istnieje."
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #: src/Scanner.ycp:544 src/Scanner.ycp:592 src/Scanner.ycp:641
-#: src/Scanner.ycp:2463
+#: src/Scanner.ycp:2464
 #, ycp-format
 msgid "Failed to read %1."
 msgstr "Odczyt %1 nie powiódł się."
@@ -768,7 +768,7 @@ msgstr ""
 #. Message of a Popup::Error where %1 will be replaced by the driver (backend) name.
 #. Only a simple message because before the function Scanner::DeactivateBackend
 #. was called and this function would have shown more specific messages.
-#: src/Scanner.ycp:2180 src/dialogs.ycp:376 src/dialogs.ycp:830
+#: src/Scanner.ycp:2180 src/dialogs.ycp:394 src/dialogs.ycp:833
 #, ycp-format
 msgid "Failed to deactivate %1."
 msgstr "Deaktywacja %1 nie powiodła się."
@@ -927,7 +927,7 @@ msgstr ""
 
 #. Popup::ErrorDetails details where
 #. %1 will be replaced by the SANE device identifier:
-#: src/Scanner.ycp:2414
+#: src/Scanner.ycp:2415
 #, ycp-format
 msgid "The following SANE device is not know to HAL: '%1'"
 msgstr "Podane urządzenie SANE nie zostało rozpoznane przez HAL: '%1'"
@@ -937,7 +937,7 @@ msgstr "Podane urządzenie SANE nie zostało rozpoznane przez HAL: '%1'"
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no scanning via network was configured.
 #. The latter results no error.
-#: src/Scanner.ycp:2441
+#: src/Scanner.ycp:2442
 msgid "Failed to determine the configuration for scanning via network."
 msgstr "Ustalanie konfiguracji do skanowania przez sieć nie powiodło się."
 
@@ -946,7 +946,7 @@ msgstr "Ustalanie konfiguracji do skanowania przez sieć nie powiodło się."
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no scanning via network is to be set up.
 #. The latter results no error.
-#: src/Scanner.ycp:2571
+#: src/Scanner.ycp:2572
 msgid "Failed to set up scanning via network."
 msgstr "Konfiguracja skanowania przez sieć nie powiodła się."
 
@@ -955,7 +955,7 @@ msgstr "Konfiguracja skanowania przez sieć nie powiodła się."
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no firewall stuff is to be set up.
 #. The latter results no error.
-#: src/Scanner.ycp:2613
+#: src/Scanner.ycp:2614
 msgid "Failed to deny saned access from external zone in firewall."
 msgstr "Nie udało się zabronić dostępu do saned ze strefy zewnętrznej w zaporze sieciowej."
 
@@ -964,7 +964,7 @@ msgstr "Nie udało się zabronić dostępu do saned ze strefy zewnętrznej w zap
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no firewall stuff is to be set up.
 #. The latter results no error.
-#: src/Scanner.ycp:2630
+#: src/Scanner.ycp:2631
 msgid "Failed to write firewall settings regarding scanning via network."
 msgstr "Zapisanie ustawień zapory dotyczących skanowania poprzez sieć nie powiodło się."
 
@@ -1014,15 +1014,15 @@ msgstr "Ska&nowanie przez sieć..."
 
 #. Header of a Popup::AnyMessage when nothing was selected:
 #. Header of a Popup::AnyMessage when no model was selected:
-#: src/dialogs.ycp:181 src/dialogs.ycp:284 src/dialogs.ycp:357
-#: src/dialogs.ycp:393 src/dialogs.ycp:462 src/dialogs.ycp:670
+#: src/dialogs.ycp:201 src/dialogs.ycp:304 src/dialogs.ycp:377
+#: src/dialogs.ycp:409 src/dialogs.ycp:478 src/dialogs.ycp:680
 msgid "Nothing Selected"
 msgstr "Nic nie wybrano"
 
 #. Body of a Popup::AnyMessage when nothing was selected:
 #. Body of a Popup::AnyMessage when no model was selected:
-#: src/dialogs.ycp:183 src/dialogs.ycp:286 src/dialogs.ycp:359
-#: src/dialogs.ycp:395 src/dialogs.ycp:464 src/dialogs.ycp:672
+#: src/dialogs.ycp:203 src/dialogs.ycp:306 src/dialogs.ycp:379
+#: src/dialogs.ycp:411 src/dialogs.ycp:480 src/dialogs.ycp:682
 msgid "Select an entry."
 msgstr "Proszę wybrać pozycję."
 
@@ -1036,7 +1036,7 @@ msgstr "Proszę wybrać pozycję."
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Edit] button.
 #. Translate 'Edit' to the exact label of the [Edit] button.
-#: src/dialogs.ycp:240 src/dialogs.ycp:254
+#: src/dialogs.ycp:260 src/dialogs.ycp:274
 msgid "Edit Not Possible"
 msgstr "Edycja nie jest możliwa"
 
@@ -1048,7 +1048,7 @@ msgstr "Edycja nie jest możliwa"
 #. without a matching active scanner was selected
 #. and then the user clicked the [Test] button:
 #. Translate 'delete' to the exact label of the [Delete] button.
-#: src/dialogs.ycp:245 src/dialogs.ycp:436
+#: src/dialogs.ycp:265 src/dialogs.ycp:452
 msgid "It is only possible to delete a driver without a matching scanner."
 msgstr "Możliwe jest usunięcie tylko tych sterowników, do których nie jest przypisany żaden skaner."
 
@@ -1064,7 +1064,7 @@ msgstr "Możliwe jest usunięcie tylko tych sterowników, do których nie jest p
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Test] button.
 #. Translate 'add' to the exact label of the [Add] button.
-#: src/dialogs.ycp:259 src/dialogs.ycp:325 src/dialogs.ycp:450
+#: src/dialogs.ycp:279 src/dialogs.ycp:345 src/dialogs.ycp:466
 msgid "It is only possible to add a scanner."
 msgstr "Możliwe jest tylko dodanie skanera."
 
@@ -1078,7 +1078,7 @@ msgstr "Możliwe jest tylko dodanie skanera."
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Delete] button.
 #. Translate 'Delete' to the exact label of the [Delete] button.
-#: src/dialogs.ycp:306 src/dialogs.ycp:320
+#: src/dialogs.ycp:326 src/dialogs.ycp:340
 msgid "Delete Not Possible"
 msgstr "Usunięcie nie jest możliwe"
 
@@ -1090,13 +1090,13 @@ msgstr "Usunięcie nie jest możliwe"
 #. which is not yet configured was selected
 #. and then the user clicked the [Test] button:
 #. Translate 'edit' to the exact label of the [Edit] button.
-#: src/dialogs.ycp:311 src/dialogs.ycp:420
+#: src/dialogs.ycp:331 src/dialogs.ycp:436
 msgid "It is only possible to edit a detected scanner."
 msgstr "Możliwa jest wyłącznie edycja wykrytego skanera."
 
 #. Question of a Popup::YesNo
 #. where %1 will be replaced by the driver name:
-#: src/dialogs.ycp:365
+#: src/dialogs.ycp:385
 #, ycp-format
 msgid "Deactivate %1?"
 msgstr "Deaktywować %1?"
@@ -1117,14 +1117,14 @@ msgstr "Deaktywować %1?"
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Test] button.
 #. Translate 'Test' to the exact label of the [Test] button.
-#: src/dialogs.ycp:415 src/dialogs.ycp:431 src/dialogs.ycp:445
+#: src/dialogs.ycp:431 src/dialogs.ycp:447 src/dialogs.ycp:461
 msgid "Test Not Possible"
 msgstr "Test nie jest możliwy"
 
 #. Message of a Popup::Error where %1 will be replaced by the driver (backend) name.
 #. Only a simple message because before the function Scanner::TestBackend
 #. was called and this function would have shown more specific messages.
-#: src/dialogs.ycp:472
+#: src/dialogs.ycp:488
 #, ycp-format
 msgid "Failed to test %1."
 msgstr "Testowanie %1 nie powiodło się."
@@ -1133,47 +1133,47 @@ msgstr "Testowanie %1 nie powiodło się."
 #. Only a simple message because before the function Scanner::RunHpsetup
 #. was called and this function would have shown more specific messages.
 #. Do not change or translate "hp-setup", it is a program name:
-#: src/dialogs.ycp:519
+#: src/dialogs.ycp:535
 msgid "Failed to run hp-setup."
 msgstr "Uruchomienie hp-setup nie powiodło się."
 
 #. Caption of the SelectModelDialog:
-#: src/dialogs.ycp:548
+#: src/dialogs.ycp:558
 msgid "Scanner Model and Driver Selection"
 msgstr "Wybór modelu i sterownika skanera"
 
 #. Header of a TextEntry user input field to enter a search string:
-#: src/dialogs.ycp:591
+#: src/dialogs.ycp:601
 msgid "S&earch String"
 msgstr "Szu&kaj tekstu"
 
 #. Label of a PushButton to search a list for a search string:
-#: src/dialogs.ycp:603
+#: src/dialogs.ycp:613
 msgid "&Search"
 msgstr "Szuka&j"
 
 #. Label of a PushButton to show all entries of a list:
-#: src/dialogs.ycp:607
+#: src/dialogs.ycp:617
 msgid "Show Complete &List"
 msgstr "&Pokaż pełną listę"
 
 #. Header of a SelectionBox with a list of models:
-#: src/dialogs.ycp:614 src/dialogs.ycp:647
+#: src/dialogs.ycp:624 src/dialogs.ycp:657
 msgid "Scanner &Models"
 msgstr "&Modele skanerów"
 
 #. Header of a SelectionBox with the complete list of models:
-#: src/dialogs.ycp:659
+#: src/dialogs.ycp:669
 msgid "All Scanner &Models"
 msgstr "&Wszystkie modele skanerów"
 
 #. Header of a Popup::AnyMessage when an unsupported model was selected:
-#: src/dialogs.ycp:681
+#: src/dialogs.ycp:691
 msgid "Unsupported Model"
 msgstr "Model nieobsługiwany"
 
 #. Body of a Popup::AnyMessage when an unsupported model was selected:
-#: src/dialogs.ycp:683
+#: src/dialogs.ycp:693
 msgid ""
 "This model is not supported.\n"
 "Ask the manufacturer for a Linux driver."
@@ -1184,14 +1184,14 @@ msgstr ""
 #. Header of a Popup::AnyMessage when a model was selected
 #. which is listed as "unsupported" for a particular driver:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/dialogs.ycp:690
+#: src/dialogs.ycp:700
 #, ycp-format
 msgid "Model Not Supported by the Driver %1"
 msgstr "Model nie jest obsługiwany przez sterownik %1"
 
 #. Body of a Popup::AnyMessage when a model was selected
 #. which is listed as "unsupported" for a particular driver:
-#: src/dialogs.ycp:695
+#: src/dialogs.ycp:705
 msgid ""
 "Check if another driver supports it,\n"
 "select a compatible model,\n"
@@ -1203,7 +1203,7 @@ msgstr ""
 
 #. Header of a Popup::AnyMessage when the epkowa driver was selected
 #. on a non-i386-compatible architecture (i.e. neither i386 nor x86_64).
-#: src/dialogs.ycp:720
+#: src/dialogs.ycp:730
 msgid "Unsupported Driver"
 msgstr "Nieobsługiwany sterownik"
 
@@ -1212,20 +1212,20 @@ msgstr "Nieobsługiwany sterownik"
 #. Do not change or translate "epkowa", it is a driver name.
 #. Do not change or translate "iscan", it is a package name.
 #. Do not change or translate "i386", it is an architecture name.
-#: src/dialogs.ycp:726
+#: src/dialogs.ycp:736
 msgid "The epkowa driver (package iscan) is only available for i386-compatible architectures."
 msgstr "Sterownik epkowa (z pakietu iscan) jest dostępny tylko dla architektur zgodnych z i386."
 
 #. Header of a Popup::ContinueCancelHeadline
 #. when the epkowa driver was selected on x86_64:
-#: src/dialogs.ycp:732
+#: src/dialogs.ycp:742
 msgid "Possibly Problematic Driver"
 msgstr "Ten sterownik może powodować problemy."
 
 #. Body of a Popup::ContinueCancelHeadline
 #. when the epkowa driver was selected on x86_64.
 #. Do not change or translate "epkowa", it is a driver name.
-#: src/dialogs.ycp:736
+#: src/dialogs.ycp:746
 msgid ""
 "The epkowa driver may cause problems on 64-bit architectures.\n"
 "See our support database for details."
@@ -1235,7 +1235,7 @@ msgstr ""
 
 #. Header of a Popup::ContinueCancelHeadline
 #. when the outdated hpoj driver was selected:
-#: src/dialogs.ycp:747
+#: src/dialogs.ycp:757
 msgid "Outdated Driver"
 msgstr "Przestarzały sterownik"
 
@@ -1243,7 +1243,7 @@ msgstr "Przestarzały sterownik"
 #. when the outdated hpoj driver was selected.
 #. Do not change or translate "hpoj", it is a driver name.
 #. Do not change or translate "hpaio", it is a driver name.
-#: src/dialogs.ycp:752
+#: src/dialogs.ycp:762
 msgid ""
 "The hpoj driver should work but it is no longer maintained.\n"
 "Try to use the up-to-date driver hpaio."
@@ -1252,14 +1252,14 @@ msgstr ""
 "Proszę spróbować skorzystać z aktualnego sterownika hpaio."
 
 #. Caption of the ConfigureBackendDialog:
-#: src/dialogs.ycp:778
+#: src/dialogs.ycp:784
 msgid "Scanner and Driver Setup"
 msgstr "Konfiguracja skanera i sterownika"
 
 #. Message of a Popup::Error where %1 will be replaced by the driver (backend) name.
 #. Only a simple message because before the function Scanner::ActivateBackend
 #. was called and this function would have shown more specific messages.
-#: src/dialogs.ycp:814
+#: src/dialogs.ycp:819
 #, ycp-format
 msgid "Failed to activate %1."
 msgstr "Aktywacja %1 nie powiodła się."

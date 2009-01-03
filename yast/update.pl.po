@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: update.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-20 16:33+0100\n"
+"POT-Creation-Date: 2008-12-12 13:56+0100\n"
 "PO-Revision-Date: 2008-09-15 19:22+0100\n"
 "Last-Translator: Dawid Roszkiewicz <rogu666@gmail.com>\n"
 "Language-Team: Polish <en@li.org>\n"
@@ -173,7 +173,7 @@ msgstr ""
 #: src/clients/inst_update.ycp:72 src/clients/inst_update.ycp:73
 #: src/include/rootpart.ycp:68 src/include/rootpart.ycp:74
 #: src/include/rootpart.ycp:91 src/modules/RootPart.ycp:123
-#: src/modules/RootPart.ycp:1509
+#: src/modules/RootPart.ycp:1511
 msgid "Unknown"
 msgstr "Nieznany"
 
@@ -436,28 +436,28 @@ msgstr ""
 msgid "&Update Options"
 msgstr "&Opcje aktualizacji"
 
-#: src/config/update.glade:15 src/config/update.glade:38
+#: src/config/update.glade:18 src/config/update.glade:41
 msgid "Update Settings"
 msgstr "Ustawienia aktualizacji"
 
-#: src/config/update.glade:30
+#: src/config/update.glade:33
 msgid "Update"
 msgstr "Aktualizacja"
 
-#: src/config/update.glade:44 src/config/update.glade:48
+#: src/config/update.glade:47 src/config/update.glade:51
 msgid "Perform Update"
 msgstr "Wykonanie aktualizacji"
 
-#: src/config/update.glade:59
+#: src/config/update.glade:62
 msgid "Clean Up"
 msgstr "Porządkowanie"
 
-#: src/config/update.glade:63
+#: src/config/update.glade:66
 msgid "Update System Configuration"
 msgstr "Aktualizacja konfiguracji systemu"
 
 #. TRANSLATORS: dialog caption
-#: src/config/update.glade:71 src/modules/RootPart.ycp:1675
+#: src/config/update.glade:74 src/modules/RootPart.ycp:1677
 msgid "Update Configuration"
 msgstr "Aktualizuj konfigurację"
 
@@ -665,26 +665,17 @@ msgstr ""
 msgid "&Skip Mounting"
 msgstr "&Pomiń montowanie"
 
-#: src/modules/RootPart.ycp:816
-#, ycp-format
-msgid ""
-"Some partitions in the system on %1 are mounted by kernel-device name. This is\n"
-"not reliable for the update since kernel-device names are unfortunately not\n"
-"persistent. It is strongly recommended to start the old system and change the\n"
-"mount-by method to any other method for all partitions."
-msgstr ""
-
 #. yes-no popup
-#: src/modules/RootPart.ycp:887
+#: src/modules/RootPart.ycp:879
 msgid "Incorrect password. Try again?"
 msgstr "Nieprawidłowe hasło. Spróbować ponownie?"
 
 #. TRANSLATORS: a popup headline
-#: src/modules/RootPart.ycp:974
+#: src/modules/RootPart.ycp:966
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
-#: src/modules/RootPart.ycp:979
+#: src/modules/RootPart.ycp:971
 #, ycp-format
 msgid ""
 "Your /boot partition is too small (%1 MB).\n"
@@ -702,7 +693,7 @@ msgstr ""
 "Kontynuować aktualizację systemu?"
 
 #. label in a popup, %1 is device (eg. /dev/hda1), %2 is output of the 'mount' command
-#: src/modules/RootPart.ycp:1051
+#: src/modules/RootPart.ycp:1043
 #, ycp-format
 msgid ""
 "The partition %1 could not be mounted.\n"
@@ -726,27 +717,27 @@ msgstr ""
 "trzeba nacisnąć \"Anuluj\"."
 
 #. push button
-#: src/modules/RootPart.ycp:1065
+#: src/modules/RootPart.ycp:1057
 msgid "&Specify Mount Options"
 msgstr "&Określ opcje montowania"
 
 #. popup heading
-#: src/modules/RootPart.ycp:1084
+#: src/modules/RootPart.ycp:1076
 msgid "Mount Options"
 msgstr "Opcje montowania"
 
 #. text entry label
-#: src/modules/RootPart.ycp:1087
+#: src/modules/RootPart.ycp:1079
 msgid "&Mount Point"
 msgstr "Punkt &montowania"
 
 #. tex entry label
-#: src/modules/RootPart.ycp:1090
+#: src/modules/RootPart.ycp:1082
 msgid "&Device"
 msgstr "Urzą&dzenie"
 
 #. text entry label
-#: src/modules/RootPart.ycp:1093
+#: src/modules/RootPart.ycp:1085
 msgid ""
 "&File System\n"
 "(empty for autodetection)"
@@ -755,18 +746,18 @@ msgstr ""
 "(proszę pozostawić pusty w celu autodetekcji)"
 
 #. error message
-#: src/modules/RootPart.ycp:1171
+#: src/modules/RootPart.ycp:1163
 #, ycp-format
 msgid "The /var partition %1 could not be mounted.\n"
 msgstr "Nie można zamontować partycji /var %1.\n"
 
 #. error message
-#: src/modules/RootPart.ycp:1222
+#: src/modules/RootPart.ycp:1215
 msgid "Unable to mount /var partition with this disk configuration.\n"
 msgstr "Nie można zamontować partycji /var przy tej konfiguracji dysków.\n"
 
 #. popup message, %1 will be replace with the name of the logfile
-#: src/modules/RootPart.ycp:1247
+#: src/modules/RootPart.ycp:1240
 #, ycp-format
 msgid ""
 "Partitions could not be mounted.\n"
@@ -777,28 +768,37 @@ msgstr ""
 "\n"
 "Szczegóły w pliku dziennika %1."
 
+#: src/modules/RootPart.ycp:1269
+#, ycp-format
+msgid ""
+"Some partitions in the system on %1 are mounted by kernel-device name. This is\n"
+"not reliable for the update since kernel-device names are unfortunately not\n"
+"persistent. It is strongly recommended to start the old system and change the\n"
+"mount-by method to any other method for all partitions."
+msgstr ""
+
 #. error message
-#: src/modules/RootPart.ycp:1277
+#: src/modules/RootPart.ycp:1279
 msgid "No fstab found."
 msgstr "Nie znaleziono pliku fstab."
 
 #. message part 1
-#: src/modules/RootPart.ycp:1297
+#: src/modules/RootPart.ycp:1299
 msgid "The root partition in /etc/fstab has an invalid root device.\n"
 msgstr "Dla partycji głównej określono w pliku /etc/fstab nieprawidłowe urządzenie główne.\n"
 
 #. message part 2
-#: src/modules/RootPart.ycp:1299
+#: src/modules/RootPart.ycp:1301
 #, ycp-format
 msgid "It is currently mounted as %1 but listed as %2.\n"
 msgstr "Jest aktualnie zamontowana jako %1, ale wymieniona jako %2.\n"
 
-#: src/modules/RootPart.ycp:1601
+#: src/modules/RootPart.ycp:1603
 msgid "Evaluating root partition. One moment please..."
 msgstr "Sprawdzane partycji głównej (root). Proszę czekać..."
 
 #. intermediate popup while mounting partitions
-#: src/modules/RootPart.ycp:1660
+#: src/modules/RootPart.ycp:1662
 msgid "Mounting partitions. One moment please..."
 msgstr "Montowanie partycji. Proszę czekać..."
 

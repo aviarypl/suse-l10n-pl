@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bootloader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-11-20 16:31+0100\n"
+"POT-Creation-Date: 2008-12-12 13:54+0100\n"
 "PO-Revision-Date: 2008-12-02 20:06+0100\n"
 "Last-Translator: Paulina Budzoń <paulina.bu@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -499,7 +499,7 @@ msgstr "Mapa urządzeń programu rozruchowego"
 #. textentry header
 #. combo box
 #: src/generic/device_map_edit_widget.ycp:103 src/grub/widgets.ycp:500
-#: src/routines/dialogs_i386.ycp:126 src/routines/section_widgets.ycp:468
+#: src/routines/dialogs_i386.ycp:126 src/routines/section_widgets.ycp:432
 msgid "&Device"
 msgstr "Urzą&dzenie"
 
@@ -597,7 +597,7 @@ msgid "Section Type"
 msgstr "Typ sekcji"
 
 #. text entry
-#: src/generic/section_widgets.ycp:81 src/routines/section_widgets.ycp:387
+#: src/generic/section_widgets.ycp:81 src/routines/section_widgets.ycp:351
 msgid "Section &Name"
 msgstr "&Nazwa sekcji"
 
@@ -655,7 +655,7 @@ msgid "Section Settings"
 msgstr "Ustawienia sekcji"
 
 #. dialog caption
-#: src/generic/wizards.ycp:91 src/routines/dialogs.ycp:187
+#: src/generic/wizards.ycp:90 src/routines/dialogs.ycp:187
 #: src/routines/dialogs.ycp:232 src/routines/dialogs.ycp:262
 msgid "Boot Loader Settings: Section Management"
 msgstr "Ustawienia programu rozruchowego: zarządzanie sekcjami"
@@ -1069,75 +1069,6 @@ msgstr "Partycja z plikiem menu"
 msgid "Menu Description File"
 msgstr "Plik opisu menu"
 
-#: src/grub/trusted_grub_edit.ycp:49
-msgid "Edit Measure"
-msgstr "Edytuj pomiar"
-
-#: src/grub/trusted_grub_edit.ycp:49
-msgid "Add New Measure"
-msgstr "Dodaj nowy pomiar"
-
-#: src/grub/trusted_grub_edit.ycp:52
-msgid "Measure File"
-msgstr "Plik pomiaru"
-
-#: src/grub/trusted_grub_edit.ycp:57
-msgid "PCR Index of File"
-msgstr "Indeks PCR pliku"
-
-#: src/grub/trusted_grub_edit.ycp:68
-msgid "Please Select File"
-msgstr "Proszę wybrać plik"
-
-#: src/grub/trusted_grub_edit.ycp:124
-#, ycp-format
-msgid "Really delete measured file: %1 with PCR: %2 ?"
-msgstr "Usunąć plik pomiaru: %1 z PCR: %2 ?"
-
-#. TRANSLATORS: RadioButtonGroup Label
-#: src/grub/trusted_grub_edit.ycp:254
-msgid "Measurement of Grub"
-msgstr "Pomiar GRUBa"
-
-#: src/grub/trusted_grub_edit.ycp:256
-msgid "Measures"
-msgstr "Pomiary"
-
-#. table header, Measure
-#: src/grub/trusted_grub_edit.ycp:263
-msgid "Measure"
-msgstr "Pomiar"
-
-#. table header, PCR
-#: src/grub/trusted_grub_edit.ycp:265
-msgid "PCR"
-msgstr "PCR"
-
-#. TRANSLATORS: IntField Label
-#: src/grub/trusted_grub_edit.ycp:290
-msgid "PCR Index of &Kernel"
-msgstr "Indeks PCR &jądra"
-
-#. TRANSLATORS: IntField Label
-#: src/grub/trusted_grub_edit.ycp:304
-msgid "PCR Index of &Initrd"
-msgstr "Indeks PCR &initrd"
-
-#. TRANSLATORS: IntField Label
-#: src/grub/trusted_grub_edit.ycp:316
-msgid "PCR Index of &XEN"
-msgstr "Indeks PCR &XEN"
-
-#. TRANSLATORS: IntField Label
-#: src/grub/trusted_grub_edit.ycp:328
-msgid "PCR &Index of Chainloader"
-msgstr "&Indeks PCR łańcucha ładowania"
-
-#. dialog caption
-#: src/grub/trusted_grub_edit.ycp:362
-msgid "Trusted GRUB Options"
-msgstr "Zaufane opcje GRUBa"
-
 #. yes-no popup
 #: src/grub/widgets.ycp:46
 msgid ""
@@ -1234,40 +1165,40 @@ msgstr ""
 "programu rozruchowego."
 
 #. summary part, %1 is a list of device names
-#: src/modules/BootCommon.ycp:910
+#: src/modules/BootCommon.ycp:933
 #, ycp-format
 msgid "Master boot records of disks %1"
 msgstr "Główne sektory startowe (MBR) dysków %1"
 
 #. summary text, %1 is bootloader name (eg. LILO)
-#: src/modules/BootCommon.ycp:922 src/modules/BootGRUB.ycp:659
+#: src/modules/BootCommon.ycp:945 src/modules/BootGRUB.ycp:666
 #, ycp-format
 msgid "Boot Loader Type: %1"
 msgstr "Typ programu rozruchowego: %1"
 
 #. summary text, location is location description (eg. /dev/hda)
 #. FIXME: should we translate all devices to names and add MBR suffixes?
-#: src/modules/BootCommon.ycp:925 src/modules/BootGRUB.ycp:677
-#: src/modules/BootPOWERLILO.ycp:958
+#: src/modules/BootCommon.ycp:948 src/modules/BootGRUB.ycp:684
+#: src/modules/BootPOWERLILO.ycp:1005
 #, ycp-format
 msgid "Location: %1"
 msgstr "Lokalizacja: %1"
 
 #. section name "suffix" for default section
-#: src/modules/BootCommon.ycp:930 src/modules/BootELILO.ycp:393
-#: src/modules/BootGRUB.ycp:687 src/modules/BootPOWERLILO.ycp:965
+#: src/modules/BootCommon.ycp:953 src/modules/BootELILO.ycp:396
+#: src/modules/BootGRUB.ycp:694 src/modules/BootPOWERLILO.ycp:1012
 msgid " (default)"
 msgstr " (domyślnie)"
 
 #. summary text. %1 is list of bootloader sections
-#: src/modules/BootCommon.ycp:934 src/modules/BootELILO.ycp:398
-#: src/modules/BootGRUB.ycp:691 src/modules/BootPOWERLILO.ycp:970
+#: src/modules/BootCommon.ycp:957 src/modules/BootELILO.ycp:401
+#: src/modules/BootGRUB.ycp:698 src/modules/BootPOWERLILO.ycp:1017
 #, ycp-format
 msgid "Sections:<br>%1"
 msgstr "Sekcje:<br>%1"
 
 #. summary text
-#: src/modules/BootCommon.ycp:938
+#: src/modules/BootCommon.ycp:961
 msgid ""
 "Do not install boot loader; just create \n"
 "configuration files"
@@ -1276,18 +1207,18 @@ msgstr ""
 "utwórz tylko pliki konfiguracyjne"
 
 #. summary text, %1 is bootloader name (eg. LILO)
-#: src/modules/BootELILO.ycp:372 src/modules/BootPOWERLILO.ycp:941
+#: src/modules/BootELILO.ycp:375 src/modules/BootPOWERLILO.ycp:988
 #, ycp-format
 msgid "Boot loader type: %1"
 msgstr "Typ programu rozruchowego: %1"
 
 #. summary text
-#: src/modules/BootELILO.ycp:379
+#: src/modules/BootELILO.ycp:382
 msgid "Do Not Create EFI Boot Manager Entry"
 msgstr "Nie twórz pozycji EFI w programie rozruchowym"
 
 #. summary text, %1 is label of the entry of EFI boot manager
-#: src/modules/BootELILO.ycp:385
+#: src/modules/BootELILO.ycp:388
 #, ycp-format
 msgid "Create EFI Boot Manager Entry %1"
 msgstr "Utwórz pozycję EFI %1 w programie rozruchowym"
@@ -1295,17 +1226,17 @@ msgstr "Utwórz pozycję EFI %1 w programie rozruchowym"
 #. means: process received signal SIGSEGV
 #. please, use some usual translation
 #. proofreaders: don't change this text
-#: src/modules/BootELILO.ycp:443
+#: src/modules/BootELILO.ycp:446
 msgid "Segmentation fault"
 msgstr "Segmentacja nie powiodła się"
 
 #. error popup - label, %1 is bootloader name
-#: src/modules/BootELILO.ycp:448
+#: src/modules/BootELILO.ycp:451
 #, ycp-format
 msgid "Error Occurred while Installing %1"
 msgstr "Wystąpił błąd podczas instalacji %1"
 
-#: src/modules/BootELILO.ycp:468
+#: src/modules/BootELILO.ycp:495
 msgid ""
 "System was not booted via EFI firmware. To boot your\n"
 "computer, you need to load ELILO via the EFI shell."
@@ -1314,14 +1245,14 @@ msgstr ""
 "komputer, musisz załadować ELILO przez powłokę EFI."
 
 #. summary text
-#: src/modules/BootGRUB.ycp:696
+#: src/modules/BootGRUB.ycp:703
 msgid "Do not install boot loader; just create configuration files"
 msgstr ""
 "Nie instaluj programu rozruchowego;\n"
 "utwórz tylko pliki konfiguracyjne"
 
 #. menubutton item, keep as short as possible
-#: src/modules/BootGRUB.ycp:823
+#: src/modules/BootGRUB.ycp:829
 msgid "Propose and &Merge with Existing GRUB Menus"
 msgstr "Wyszukaj i p&ołącz z istniejącym menu GRUB"
 
@@ -1353,6 +1284,10 @@ msgstr "Urządzenie rozruchowe znajduje się na macierzy raid typu: %1."
 msgid "The /boot directory is on an XFS filesystem. System will not boot."
 msgstr "Katalog /boot znajduje się w systemie plików XFS"
 
+#: src/modules/BootSupportCheck.ycp:238
+msgid "It was not possible to determine the exact order of disks for device map. The order of disks can be changed in \"Boot Loader Installation Details\""
+msgstr ""
+
 #. error report
 #: src/modules/BootZIPL.ycp:141
 msgid "Copying hardware configuration template failed."
@@ -1364,82 +1299,82 @@ msgid "Install S390 Boot Loader"
 msgstr "Instalacja programu rozruchowego S390"
 
 #. progress stage, text in dialog (short, infinitiv)
-#: src/modules/Bootloader.ycp:214
+#: src/modules/Bootloader.ycp:213
 msgid "Check boot loader"
 msgstr "Sprawdzenie program rozruchowego"
 
 #. progress stage, text in dialog (short, infinitiv)
-#: src/modules/Bootloader.ycp:216
+#: src/modules/Bootloader.ycp:215
 msgid "Read partitioning"
 msgstr "Odczytanie partycji"
 
 #. progress stage, text in dialog (short, infinitiv)
-#: src/modules/Bootloader.ycp:218
+#: src/modules/Bootloader.ycp:217
 msgid "Load boot loader settings"
 msgstr "Odczytanie ustawień programu rozruchowego"
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:222
+#: src/modules/Bootloader.ycp:221
 msgid "Checking boot loader..."
 msgstr "Sprawdzanie programu rozruchowego..."
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:224
+#: src/modules/Bootloader.ycp:223
 msgid "Reading partitioning..."
 msgstr "Odczytywanie partycji..."
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:226
+#: src/modules/Bootloader.ycp:225
 msgid "Loading boot loader settings..."
 msgstr "Odczytywanie ustawień programu rozruchowego..."
 
 #. dialog header
-#: src/modules/Bootloader.ycp:229
+#: src/modules/Bootloader.ycp:228
 msgid "Initializing Boot Loader Configuration"
 msgstr "Inicjalizacja konfiguracji programu rozruchowego"
 
-#: src/modules/Bootloader.ycp:316 src/routines/dialogs.ycp:96
+#: src/modules/Bootloader.ycp:315 src/routines/dialogs.ycp:96
 msgid "The boot partition is of type NFS. Bootloader cannot be installed."
 msgstr "Partycja rozruchowa jest typu NFS. Nie prawidłowo zainstalować programu rozruchowego."
 
 #. part of summary, %1 is a part of kernel command line
-#: src/modules/Bootloader.ycp:348
+#: src/modules/Bootloader.ycp:347
 #, ycp-format
 msgid "Added Kernel Parameters: %1"
 msgstr "Dodatkowe parametry jądra: %1"
 
 #. progress stage, text in dialog (short)
-#: src/modules/Bootloader.ycp:438
+#: src/modules/Bootloader.ycp:437
 msgid "Create initrd"
 msgstr "Tworzenie initrd"
 
 #. progress stage, text in dialog (short)
-#: src/modules/Bootloader.ycp:440
+#: src/modules/Bootloader.ycp:439
 msgid "Save boot loader configuration files"
 msgstr "Zapis plików konfiguracyjnych programu rozruchowego"
 
 #. progress stage, text in dialog (short)
-#: src/modules/Bootloader.ycp:442
+#: src/modules/Bootloader.ycp:441
 msgid "Install boot loader"
 msgstr "Instalacja programu rozruchowego"
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:446
+#: src/modules/Bootloader.ycp:445
 msgid "Creating initrd..."
 msgstr "Tworzenie initrd..."
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:448
+#: src/modules/Bootloader.ycp:447
 msgid "Saving boot loader configuration files..."
 msgstr "Zapisywanie plików konfiguracyjnych programu rozruchowego..."
 
 #. progress step, text in dialog (short)
-#: src/modules/Bootloader.ycp:450
+#: src/modules/Bootloader.ycp:449
 msgid "Installing boot loader..."
 msgstr "Instalowanie programu rozruchowego..."
 
 #. progress line
-#: src/modules/Bootloader.ycp:456
+#: src/modules/Bootloader.ycp:455
 msgid "Saving Boot Loader Configuration"
 msgstr "Zapisywanie konfiguracji programu rozruchowego"
 
@@ -2372,57 +2307,57 @@ msgstr ""
 "i powtórzyć w polu <b>Powtórz hasło</b>.</p>\n"
 
 #. error popup - label, %1 is bootloader name
-#: src/routines/lib_iface.ycp:283
+#: src/routines/lib_iface.ycp:312
 #, ycp-format
 msgid "Error occurred while installing %1."
 msgstr "Wystąpił błąd podczas instalacji %1."
 
 #. part of summary, %1 is a list of hard disks device names
-#: src/routines/lilolike.ycp:1448
+#: src/routines/lilolike.ycp:1454
 #, ycp-format
 msgid "Order of Hard Disks: %1"
 msgstr "Kolejność dysków twardych: %1"
 
 #. summary string
-#: src/routines/misc.ycp:57
+#: src/routines/misc.ycp:58
 msgid "Do not install any boot loader"
 msgstr "Nie instaluj żadnego programu rozruchowego"
 
 #. combo box item
-#: src/routines/misc.ycp:59
+#: src/routines/misc.ycp:60
 msgid "Do Not Install Any Boot Loader"
 msgstr "Nie instaluj żadnego programu rozruchowego"
 
 #. summary string
-#: src/routines/misc.ycp:65
+#: src/routines/misc.ycp:66
 msgid "Install the default boot loader"
 msgstr "Instaluj domyślny program rozruchowy"
 
 #. combo box item
-#: src/routines/misc.ycp:67
+#: src/routines/misc.ycp:68
 msgid "Install Default Boot Loader"
 msgstr "Instaluj domyślny program rozruchowy"
 
 #. summary string
-#: src/routines/misc.ycp:71
+#: src/routines/misc.ycp:72
 msgid "Boot loader"
 msgstr "Program rozruchowy"
 
 #. combo box item
-#: src/routines/misc.ycp:73
+#: src/routines/misc.ycp:74
 msgid "Boot Loader"
 msgstr "Program rozruchowy"
 
 #. popup, %1 is bootloader name
 #. data saved to floppy disk
 #. popup, %1 is bootloader name
-#: src/routines/misc.ycp:113 src/routines/popups.ycp:332
+#: src/routines/misc.ycp:114 src/routines/popups.ycp:332
 #, ycp-format
 msgid "The %1 boot sector has been written to the floppy disk."
 msgstr "Sektor startowy %1 został zapisany na dyskietce."
 
 #. popup - continuing
-#: src/routines/misc.ycp:123
+#: src/routines/misc.ycp:124
 msgid "Leave the floppy disk in the drive."
 msgstr "Proszę pozostawić dyskietkę w napędzie."
 
@@ -2688,35 +2623,30 @@ msgstr "Inny system (uruchamianie łańcuchowe)"
 
 #. text entry
 #. combo box
-#: src/routines/section_widgets.ycp:399 src/routines/section_widgets.ycp:403
+#: src/routines/section_widgets.ycp:363 src/routines/section_widgets.ycp:367
 msgid "&Kernel"
 msgstr "&Jądro"
 
 #. text entry
 #. combo box
-#: src/routines/section_widgets.ycp:421 src/routines/section_widgets.ycp:425
+#: src/routines/section_widgets.ycp:385 src/routines/section_widgets.ycp:389
 msgid "&Initial RAM Disk"
 msgstr "RAM-d&ysk początkowy"
 
 #. combo box
-#: src/routines/section_widgets.ycp:441
+#: src/routines/section_widgets.ycp:405
 msgid "Root &Device"
 msgstr "Urzą&dzenie główne"
 
 #. combo box
-#: src/routines/section_widgets.ycp:451
+#: src/routines/section_widgets.ycp:415
 msgid "&VGA Mode"
 msgstr "Tryb &VGA"
 
 #. text entry
-#: src/routines/section_widgets.ycp:458
+#: src/routines/section_widgets.ycp:422
 msgid "Other Kernel &Parameters"
 msgstr "Inne &parametry jądra"
-
-#. push button
-#: src/routines/section_widgets.ycp:496
-msgid "&Trusted GRUB Details"
-msgstr "&Zaufane szczegóły GRUBa"
 
 #. check box
 #: src/routines/widgets_i386.ycp:79
@@ -2821,3 +2751,51 @@ msgstr "Czas oczekiwania w sekundach"
 #: src/zipl/helps.ycp:53
 msgid "Show boot menu"
 msgstr "Pokaż menu rozruchowe"
+
+#~ msgid "Edit Measure"
+#~ msgstr "Edytuj pomiar"
+
+#~ msgid "Add New Measure"
+#~ msgstr "Dodaj nowy pomiar"
+
+#~ msgid "Measure File"
+#~ msgstr "Plik pomiaru"
+
+#~ msgid "PCR Index of File"
+#~ msgstr "Indeks PCR pliku"
+
+#~ msgid "Please Select File"
+#~ msgstr "Proszę wybrać plik"
+
+#~ msgid "Really delete measured file: %1 with PCR: %2 ?"
+#~ msgstr "Usunąć plik pomiaru: %1 z PCR: %2 ?"
+
+#~ msgid "Measurement of Grub"
+#~ msgstr "Pomiar GRUBa"
+
+#~ msgid "Measures"
+#~ msgstr "Pomiary"
+
+#~ msgid "Measure"
+#~ msgstr "Pomiar"
+
+#~ msgid "PCR"
+#~ msgstr "PCR"
+
+#~ msgid "PCR Index of &Kernel"
+#~ msgstr "Indeks PCR &jądra"
+
+#~ msgid "PCR Index of &Initrd"
+#~ msgstr "Indeks PCR &initrd"
+
+#~ msgid "PCR Index of &XEN"
+#~ msgstr "Indeks PCR &XEN"
+
+#~ msgid "PCR &Index of Chainloader"
+#~ msgstr "&Indeks PCR łańcucha ładowania"
+
+#~ msgid "Trusted GRUB Options"
+#~ msgstr "Zaufane opcje GRUBa"
+
+#~ msgid "&Trusted GRUB Details"
+#~ msgstr "&Zaufane szczegóły GRUBa"
