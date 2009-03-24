@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bootloader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-12 13:54+0100\n"
+"POT-Creation-Date: 2009-03-06 08:36+0100\n"
 "PO-Revision-Date: 2009-02-15 10:26+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -186,7 +186,16 @@ msgstr "Z powodu wybranego podziału na partycje nie można prawidłowo zainstal
 msgid "The selected boot path will not be activated for your installation. Your system may not be bootable."
 msgstr "Wybrana ścieżka do programu rozruchowego nie zostanie uaktywniona. System może się nie uruchomić."
 
-#: src/clients/bootloader_proposal.ycp:198
+#: src/clients/bootloader_proposal.ycp:193
+#, fuzzy
+msgid ""
+"Configure a valid boot loader location before continuing.<br>\n"
+"In case that no selection can be made it may be necessary to create a small primary Apple HFS partition."
+msgstr ""
+"Proszę skonfigurować poprawne położenie programu rozruchowego.<br>\n"
+"Jeśli nie ma możliwości wyboru, prawdopodobnie trzeba będzie utworzyć partycję PReP-boot."
+
+#: src/clients/bootloader_proposal.ycp:214
 msgid ""
 "Configure a valid boot loader location before continuing.<br>\n"
 "In case that no selection can be made it may be necessary to create a PReP Boot partition."
@@ -195,12 +204,12 @@ msgstr ""
 "Jeśli nie ma możliwości wyboru, prawdopodobnie trzeba będzie utworzyć partycję PReP-boot."
 
 #. proposal part - bootloader label
-#: src/clients/bootloader_proposal.ycp:254
+#: src/clients/bootloader_proposal.ycp:270
 msgid "Booting"
 msgstr "Uruchamianie systemu"
 
 #. menubutton entry
-#: src/clients/bootloader_proposal.ycp:256
+#: src/clients/bootloader_proposal.ycp:272
 msgid "&Booting"
 msgstr "&Uruchamianie systemu"
 
@@ -509,7 +518,7 @@ msgid "Boot Loader Options"
 msgstr "Opcje programu rozruchowego"
 
 #. frame
-#: src/generic/global_options_widget.ycp:119 src/routines/widgets_i386.ycp:75
+#: src/generic/global_options_widget.ycp:124 src/routines/widgets_i386.ycp:75
 msgid "Boot Menu"
 msgstr "Menu rozruchowe"
 
@@ -592,7 +601,7 @@ msgid "Clone Selected Section"
 msgstr "Sklonuj wybraną sekcję"
 
 #. frame
-#: src/generic/section_type_widget.ycp:86 src/routines/section_widgets.ycp:289
+#: src/generic/section_type_widget.ycp:87 src/routines/section_widgets.ycp:289
 msgid "Section Type"
 msgstr "Typ sekcji"
 
@@ -600,6 +609,18 @@ msgstr "Typ sekcji"
 #: src/generic/section_widgets.ycp:81 src/routines/section_widgets.ycp:351
 msgid "Section &Name"
 msgstr "&Nazwa sekcji"
+
+#. table header
+#: src/generic/sections_widget.ycp:89 src/routines/global_widgets.ycp:124
+msgid "Image"
+msgstr "Obraz"
+
+#. table header
+#. menu button
+#: src/generic/sections_widget.ycp:90 src/routines/global_widgets.ycp:122
+#: src/routines/global_widgets.ycp:811
+msgid "Other"
+msgstr "Inne"
 
 #. table header, Def stands for default
 #: src/generic/sections_widget.ycp:214 src/routines/global_widgets.ycp:249
@@ -1164,40 +1185,40 @@ msgstr ""
 "programu rozruchowego."
 
 #. summary part, %1 is a list of device names
-#: src/modules/BootCommon.ycp:933
+#: src/modules/BootCommon.ycp:990
 #, ycp-format
 msgid "Master boot records of disks %1"
 msgstr "Główne sektory startowe (MBR) dysków %1"
 
 #. summary text, %1 is bootloader name (eg. LILO)
-#: src/modules/BootCommon.ycp:945 src/modules/BootGRUB.ycp:666
+#: src/modules/BootCommon.ycp:1002 src/modules/BootGRUB.ycp:666
 #, ycp-format
 msgid "Boot Loader Type: %1"
 msgstr "Typ programu rozruchowego: %1"
 
 #. summary text, location is location description (eg. /dev/hda)
 #. FIXME: should we translate all devices to names and add MBR suffixes?
-#: src/modules/BootCommon.ycp:948 src/modules/BootGRUB.ycp:684
-#: src/modules/BootPOWERLILO.ycp:1005
+#: src/modules/BootCommon.ycp:1005 src/modules/BootGRUB.ycp:684
+#: src/modules/BootPOWERLILO.ycp:1031
 #, ycp-format
 msgid "Location: %1"
 msgstr "Lokalizacja: %1"
 
 #. section name "suffix" for default section
-#: src/modules/BootCommon.ycp:953 src/modules/BootELILO.ycp:396
-#: src/modules/BootGRUB.ycp:694 src/modules/BootPOWERLILO.ycp:1012
+#: src/modules/BootCommon.ycp:1010 src/modules/BootELILO.ycp:403
+#: src/modules/BootGRUB.ycp:694 src/modules/BootPOWERLILO.ycp:1038
 msgid " (default)"
 msgstr " (domyślnie)"
 
 #. summary text. %1 is list of bootloader sections
-#: src/modules/BootCommon.ycp:957 src/modules/BootELILO.ycp:401
-#: src/modules/BootGRUB.ycp:698 src/modules/BootPOWERLILO.ycp:1017
+#: src/modules/BootCommon.ycp:1014 src/modules/BootELILO.ycp:408
+#: src/modules/BootGRUB.ycp:698 src/modules/BootPOWERLILO.ycp:1043
 #, ycp-format
 msgid "Sections:<br>%1"
 msgstr "Sekcje:<br>%1"
 
 #. summary text
-#: src/modules/BootCommon.ycp:961
+#: src/modules/BootCommon.ycp:1018
 msgid ""
 "Do not install boot loader; just create \n"
 "configuration files"
@@ -1206,18 +1227,18 @@ msgstr ""
 "utwórz tylko pliki konfiguracyjne"
 
 #. summary text, %1 is bootloader name (eg. LILO)
-#: src/modules/BootELILO.ycp:375 src/modules/BootPOWERLILO.ycp:988
+#: src/modules/BootELILO.ycp:382 src/modules/BootPOWERLILO.ycp:1014
 #, ycp-format
 msgid "Boot loader type: %1"
 msgstr "Typ programu rozruchowego: %1"
 
 #. summary text
-#: src/modules/BootELILO.ycp:382
+#: src/modules/BootELILO.ycp:389
 msgid "Do Not Create EFI Boot Manager Entry"
 msgstr "Nie twórz pozycji EFI w programie rozruchowym"
 
 #. summary text, %1 is label of the entry of EFI boot manager
-#: src/modules/BootELILO.ycp:388
+#: src/modules/BootELILO.ycp:395
 #, ycp-format
 msgid "Create EFI Boot Manager Entry %1"
 msgstr "Utwórz pozycję EFI %1 w programie rozruchowym"
@@ -1225,17 +1246,17 @@ msgstr "Utwórz pozycję EFI %1 w programie rozruchowym"
 #. means: process received signal SIGSEGV
 #. please, use some usual translation
 #. proofreaders: don't change this text
-#: src/modules/BootELILO.ycp:446
+#: src/modules/BootELILO.ycp:453
 msgid "Segmentation fault"
 msgstr "Segmentacja nie powiodła się"
 
 #. error popup - label, %1 is bootloader name
-#: src/modules/BootELILO.ycp:451
+#: src/modules/BootELILO.ycp:458
 #, ycp-format
 msgid "Error Occurred while Installing %1"
 msgstr "Wystąpił błąd podczas instalacji %1"
 
-#: src/modules/BootELILO.ycp:495
+#: src/modules/BootELILO.ycp:632
 msgid ""
 "System was not booted via EFI firmware. To boot your\n"
 "computer, you need to load ELILO via the EFI shell."
@@ -1251,7 +1272,7 @@ msgstr ""
 "utwórz tylko pliki konfiguracyjne"
 
 #. menubutton item, keep as short as possible
-#: src/modules/BootGRUB.ycp:829
+#: src/modules/BootGRUB.ycp:832
 msgid "Propose and &Merge with Existing GRUB Menus"
 msgstr "Wyszukaj i p&ołącz z istniejącym menu GRUB"
 
@@ -1269,20 +1290,21 @@ msgstr "Program rozruchowy LILO nie jest aktualnie wspierany."
 msgid "Unsupported combination of hardware platform %1 and bootloader %2"
 msgstr "Nie wspierana kombinacja platformy sprzętowej %1 i programu rozruchowego %2"
 
-#: src/modules/BootSupportCheck.ycp:153
+#: src/modules/BootSupportCheck.ycp:154
 msgid "Partition number > 3 is being used for booting with GPT partition table"
 msgstr "Partycje o numerach > 3 są używane do ładowania systemu z tablicą partycji GPT."
 
-#: src/modules/BootSupportCheck.ycp:195
+#: src/modules/BootSupportCheck.ycp:196
 #, ycp-format
 msgid "The boot device is on raid type: %1. System will not boot."
 msgstr "Urządzenie rozruchowe znajduje się na macierzy raid typu: %1. System nie uruchomi się."
 
-#: src/modules/BootSupportCheck.ycp:207
-msgid "The /boot directory is on an XFS filesystem. System will not boot."
+#: src/modules/BootSupportCheck.ycp:208
+#, fuzzy
+msgid "The /boot directory is on an XFS filesystem. System may not boot."
 msgstr "Katalog /boot znajduje się w systemie plików XFS. System nie uruchomi się."
 
-#: src/modules/BootSupportCheck.ycp:238
+#: src/modules/BootSupportCheck.ycp:239
 msgid "It was not possible to determine the exact order of disks for device map. The order of disks can be changed in \"Boot Loader Installation Details\""
 msgstr "Nie można okreśić dokładnej kolejności dysków dla mapy urządzeń. Kolejność dysków można zmienić w sekcji \"Szczegóły instalacji programu rozruchowego\""
 
@@ -1645,17 +1667,6 @@ msgstr "Użyj d&edykowanej przestrzeni programu rozruchowego"
 #: src/routines/dialogs_i386.ycp:92
 msgid "Boot Loader Installation Details"
 msgstr "Szczegóły instalacji programu rozruchowego"
-
-#. table header
-#. menu button
-#: src/routines/global_widgets.ycp:122 src/routines/global_widgets.ycp:811
-msgid "Other"
-msgstr "Inne"
-
-#. table header
-#: src/routines/global_widgets.ycp:124
-msgid "Image"
-msgstr "Obraz"
 
 #. table header; header for section details, either
 #. the specification of the kernel image to load,
@@ -2305,13 +2316,13 @@ msgstr ""
 "i powtórzyć w polu <b>Powtórz hasło</b>.</p>\n"
 
 #. error popup - label, %1 is bootloader name
-#: src/routines/lib_iface.ycp:312
+#: src/routines/lib_iface.ycp:356
 #, ycp-format
 msgid "Error occurred while installing %1."
 msgstr "Wystąpił błąd podczas instalacji %1."
 
 #. part of summary, %1 is a list of hard disks device names
-#: src/routines/lilolike.ycp:1454
+#: src/routines/lilolike.ycp:1461
 #, ycp-format
 msgid "Order of Hard Disks: %1"
 msgstr "Kolejność dysków twardych: %1"

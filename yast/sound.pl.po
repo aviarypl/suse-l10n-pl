@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sound\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-12 13:56+0100\n"
+"POT-Creation-Date: 2009-03-06 09:00+0100\n"
 "PO-Revision-Date: 2008-12-03 09:54+0100\n"
 "Last-Translator: Mirosław Rogoziński <miroslaw.rogozinski@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -110,69 +110,14 @@ msgstr " ,"
 msgid "Initializing Sound Configuration"
 msgstr "Inicjalizacja konfiguracji dźwięku"
 
-#. progress stage
-#: sound/src/Sound.ycp:714
-msgid "Read card database"
-msgstr "Wczytywanie bazy kart"
-
-#. progress stage
-#: sound/src/Sound.ycp:716
-msgid "Read previously saved configuration"
-msgstr "Wczytywanie poprzednio zapisanej konfiguracji"
-
-#. progress stage
-#: sound/src/Sound.ycp:718
-msgid "Detect sound cards"
-msgstr "Wykrywanie kart dźwiękowych"
-
-#. progress stage
-#: sound/src/Sound.ycp:720
-msgid "Read sysconfig values"
-msgstr "Wczytywanie wartości sysconfig"
-
-#. progress stage
-#: sound/src/Sound.ycp:722
-msgid "Read volume settings"
-msgstr "Wczytywanie ustawień głośności"
-
-#. progress step label
-#: sound/src/Sound.ycp:725
-msgid "Reading card database..."
-msgstr "Wczytywanie bazy kart..."
-
-#. progress step label
-#: sound/src/Sound.ycp:727
-msgid "Reading previously saved configuration..."
-msgstr "Wczytywanie poprzednio zapisanej konfiguracji..."
-
-#. progress step label
-#: sound/src/Sound.ycp:729 sound/src/sound_proposal.ycp:43
-msgid "Detecting sound cards..."
-msgstr "Wykrywanie kart dźwiękowych..."
-
-#. progress step label
-#: sound/src/Sound.ycp:731
-msgid "Reading sysconfig values..."
-msgstr "Wczytywanie wartości sysconfig..."
-
-#. progress step label
-#: sound/src/Sound.ycp:733
-msgid "Reading volume settings..."
-msgstr "Wczytywanie ustawień głośności..."
-
-#. progress step label
-#: sound/src/Sound.ycp:735
-msgid "Finished"
-msgstr "Zakończono"
-
 #. summary text: '(sound card is) Configured as snd-card-1'
-#: sound/src/Sound.ycp:1003
+#: sound/src/Sound.ycp:955
 #, ycp-format
 msgid "Configured as %1."
 msgstr "Skonfigurowano jako: %1."
 
 #. table header (card name)
-#: sound/src/Sound.ycp:1272 sound/src/joystick.ycp:149
+#: sound/src/Sound.ycp:1224 sound/src/joystick.ycp:149
 msgid "Sound card"
 msgstr "Karta dźwiękowa"
 
@@ -386,13 +331,13 @@ msgstr "Joy&stick:"
 #. button label
 #. push button label
 #. Test - button label
-#: sound/src/joy_dialog.ycp:495 sound/src/mixer.ycp:158
+#: sound/src/joy_dialog.ycp:495 sound/src/mixer.ycp:176
 #: sound/src/volume.ycp:78
 msgid "&Test"
 msgstr "&Testuj"
 
 #. warning message - user did not select any joystick type
-#: sound/src/joy_dialog.ycp:523
+#: sound/src/joy_dialog.ycp:524
 msgid ""
 "Select the joystick type from the list\n"
 "before pressing Next.\n"
@@ -400,7 +345,7 @@ msgid ""
 msgstr "Przed naciśnięciem Dalej proszę wybrać typ joysticka z listy.\n"
 
 #. error message (no joystick selected)
-#: sound/src/joy_dialog.ycp:536
+#: sound/src/joy_dialog.ycp:537
 msgid "Select the joystick to test."
 msgstr "Proszę wybrać joystick do testu."
 
@@ -446,7 +391,7 @@ msgstr "Joystick"
 
 #. button label
 #. push button label
-#: sound/src/joystick.ycp:154 sound/src/ui.ycp:59 sound/src/ui.ycp:194
+#: sound/src/joystick.ycp:154 sound/src/ui.ycp:68 sound/src/ui.ycp:203
 msgid "&Configure joystick"
 msgstr "Skonfiguruj joysti&ck"
 
@@ -612,17 +557,22 @@ msgid "iSpeaker"
 msgstr "Głośnik mobilny"
 
 #. frame label
-#: sound/src/mixer.ycp:152
+#: sound/src/mixer.ycp:170
 msgid "&Master volume"
 msgstr "&Główna regulacja głośności"
 
 #. frame label
-#: sound/src/mixer.ycp:198
+#: sound/src/mixer.ycp:216
 msgid "&Other channels"
 msgstr "&Inne kanały"
 
+#. card name
+#: sound/src/mixer.ycp:232 sound/src/read_routines.ycp:413
+msgid "Unknown"
+msgstr "Nieznane"
+
 #. help text - mixer setting
-#: sound/src/mixer.ycp:282
+#: sound/src/mixer.ycp:302
 msgid ""
 "<P>With this dialog you can set volume for each channel of the selected sound card. \n"
 "Press <B>Next</B> to save your volume settings, press <B>Back</B> to restore the original settings.</P>"
@@ -631,31 +581,31 @@ msgstr ""
 "Aby zapisać ustawienia głośności, należy nacisnąć przycisk <B>Dalej</B>. Aby przywrócić\n"
 "pierwotne ustawienia, trzeba nacisnąć przycisk <B>Wstecz</B>.</P>"
 
-#. dialog header
-#: sound/src/mixer.ycp:288
-#, ycp-format
-msgid "Volume Settings for Card %1"
+#. dialog header, %1 = card id (number), %2 = name 
+#: sound/src/mixer.ycp:308
+#, fuzzy, ycp-format
+msgid "Volume Settings for Card %1 - %2"
 msgstr "Ustawienia głośności dla karty %1"
 
 #. To translators: popup message, wrong value
-#: sound/src/options.ycp:54 sound/src/options.ycp:67
+#: sound/src/options.ycp:56 sound/src/options.ycp:69
 #, ycp-format
 msgid "The value: %1 must be a number"
 msgstr "Wartość \"%1\" musi być liczbą"
 
 #. To translators: "space" means blank character
-#: sound/src/options.ycp:81
+#: sound/src/options.ycp:83
 msgid "(space)"
 msgstr "(odstęp)"
 
 #. To translators: popup message, wrong value
-#: sound/src/options.ycp:84
+#: sound/src/options.ycp:86
 #, ycp-format
 msgid "String cannot contain: %1"
 msgstr "Łańcuch nie może zawierać: %1"
 
 #. popup message: wrong value; %1 is list of right values
-#: sound/src/options.ycp:101
+#: sound/src/options.ycp:103
 #, ycp-format
 msgid ""
 "The value must be one of\n"
@@ -665,7 +615,7 @@ msgstr ""
 "%1"
 
 #. label text
-#: sound/src/options.ycp:274
+#: sound/src/options.ycp:276
 msgid ""
 "Possible value:\n"
 "not known"
@@ -673,61 +623,79 @@ msgstr ""
 "Możliwa wartość:\n"
 "nieznana"
 
-#: sound/src/options.ycp:329
+#: sound/src/options.ycp:325
 msgid "Name of the &Option"
 msgstr "Nazwa &opcji"
 
-#: sound/src/options.ycp:334 sound/src/options.ycp:335
+#: sound/src/options.ycp:330 sound/src/options.ycp:331
 msgid "&Value"
 msgstr "War&tość"
 
-#: sound/src/options.ycp:334 sound/src/options.ycp:335
+#: sound/src/options.ycp:330 sound/src/options.ycp:331
 msgid "&Option: "
 msgstr "&Opcja: "
 
-#: sound/src/options.ycp:353
+#: sound/src/options.ycp:361
+#, ycp-format
+msgid ""
+"Value of the option contains invalid\n"
+"characters '%1'.\n"
+"\n"
+"Enter a valid value."
+msgstr ""
+
+#: sound/src/options.ycp:374
+#, ycp-format
+msgid ""
+"Name of the option contains invalid\n"
+"characters '%1'.\n"
+"\n"
+"Enter a valid name."
+msgstr ""
+
+#: sound/src/options.ycp:390
 msgid "Change the Option"
 msgstr "Zmień opcję"
 
-#: sound/src/options.ycp:358
+#: sound/src/options.ycp:395
 msgid "Add a New Option"
 msgstr "Dodaj nową opcję"
 
-#: sound/src/options.ycp:376
+#: sound/src/options.ycp:413
 msgid "No description available"
 msgstr "Opis nie jest dostępny"
 
 #. Table header -- option description
-#: sound/src/options.ycp:400
+#: sound/src/options.ycp:437
 msgid "Description"
 msgstr "Opis"
 
 #. Table header -- option name
-#: sound/src/options.ycp:402
+#: sound/src/options.ycp:439
 msgid "Option"
 msgstr "Opcja"
 
 #. Table header -- value of an option
-#: sound/src/options.ycp:404
+#: sound/src/options.ycp:441
 msgid "Value"
 msgstr "Wartość"
 
 #. restore original option values
-#: sound/src/options.ycp:412
+#: sound/src/options.ycp:449
 msgid "R&eset all"
 msgstr "Przywróć wszystki&e ustawienia"
 
 #. dialog title
-#: sound/src/options.ycp:477
+#: sound/src/options.ycp:514
 msgid "Sound Card Advanced Options"
 msgstr "Zaawansowane opcje karty dźwiękowej"
 
-#: sound/src/options.ycp:487
+#: sound/src/options.ycp:524
 msgid "There are no options for this module"
 msgstr "Nie ma żadnych ustawień dla tego modułu"
 
 #. popup question
-#: sound/src/options.ycp:598
+#: sound/src/options.ycp:635
 msgid "Do you really want to reset all values?"
 msgstr "Czy na pewno przywrócić wszystkie ustawienia?"
 
@@ -735,10 +703,6 @@ msgstr "Czy na pewno przywrócić wszystkie ustawienia?"
 #: sound/src/read_routines.ycp:178
 msgid "Sound Cards"
 msgstr "Karty dźwiękowe"
-
-#: sound/src/read_routines.ycp:413
-msgid "Unknown"
-msgstr "Nieznane"
 
 #: sound/src/routines.ycp:45
 msgid "Unknown CD-ROM device"
@@ -930,6 +894,10 @@ msgstr "Odtworzy testowy dźwięk, kiedy karta zostanie skonfigurowana"
 #: sound/src/sound.ycp:568
 msgid "Volume value for the sound card (0-100)"
 msgstr "Wartość głośności karty dźwiękowej (0-100)"
+
+#: sound/src/sound_proposal.ycp:43
+msgid "Detecting sound cards..."
+msgstr "Wykrywanie kart dźwiękowych..."
 
 #. section name in proposal dialog
 #: sound/src/sound_proposal.ycp:82
@@ -1536,32 +1504,32 @@ msgstr "<p>Można spróbować przekazać do modułu odpowiednie <b>opcje</b>.</p
 
 #. this is the first part of message "The sound card 'cardname'
 #. will be configured as the first snd card"
-#: sound/src/ui.ycp:65 sound/src/ui.ycp:200
+#: sound/src/ui.ycp:74 sound/src/ui.ycp:209
 msgid "The sound card\n"
 msgstr "Karta dźwiękowa\n"
 
 #. radio button label - type of setup
-#: sound/src/ui.ycp:73 sound/src/ui.ycp:208
+#: sound/src/ui.ycp:82 sound/src/ui.ycp:217
 msgid "&Quick automatic setup"
 msgstr "Szy&bka konfiguracja automatyczna"
 
 #. radio button label - type of setup
-#: sound/src/ui.ycp:77 sound/src/ui.ycp:212
+#: sound/src/ui.ycp:86 sound/src/ui.ycp:221
 msgid "Normal &setup"
 msgstr "Zwykła konfigura&cja"
 
 #. radio button label - type of setup
-#: sound/src/ui.ycp:81
+#: sound/src/ui.ycp:90
 msgid "Advanced setup with possibility to change &options"
 msgstr "Konfiguracja zaawansowana z możliwością zmiany &opcji"
 
 #. dialog header
-#: sound/src/ui.ycp:107 sound/src/ui.ycp:241
+#: sound/src/ui.ycp:116 sound/src/ui.ycp:250
 msgid "Sound Card Configuration"
 msgstr "konfiguracja karty dźwiękowej"
 
 #. radio button label - type of setup
-#: sound/src/ui.ycp:216
+#: sound/src/ui.ycp:225
 msgid "&More detailed installation of sound cards"
 msgstr "&Bardziej szczegółowa instalacja karty dźwiękowej"
 
@@ -1625,6 +1593,36 @@ msgstr ""
 #: sound/src/wizards.ycp:64
 msgid "Do you really want to delete this entry?"
 msgstr "Czy na pewno usunąć tę pozycję?"
+
+#~ msgid "Read card database"
+#~ msgstr "Wczytywanie bazy kart"
+
+#~ msgid "Read previously saved configuration"
+#~ msgstr "Wczytywanie poprzednio zapisanej konfiguracji"
+
+#~ msgid "Detect sound cards"
+#~ msgstr "Wykrywanie kart dźwiękowych"
+
+#~ msgid "Read sysconfig values"
+#~ msgstr "Wczytywanie wartości sysconfig"
+
+#~ msgid "Read volume settings"
+#~ msgstr "Wczytywanie ustawień głośności"
+
+#~ msgid "Reading card database..."
+#~ msgstr "Wczytywanie bazy kart..."
+
+#~ msgid "Reading previously saved configuration..."
+#~ msgstr "Wczytywanie poprzednio zapisanej konfiguracji..."
+
+#~ msgid "Reading sysconfig values..."
+#~ msgstr "Wczytywanie wartości sysconfig..."
+
+#~ msgid "Reading volume settings..."
+#~ msgstr "Wczytywanie ustawień głośności..."
+
+#~ msgid "Finished"
+#~ msgstr "Zakończono"
 
 #~ msgid "PulseAudio is %1"
 #~ msgstr "PulseAudio jest %1"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: installation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-12 14:18+0100\n"
+"POT-Creation-Date: 2009-03-06 08:43+0100\n"
 "PO-Revision-Date: 2008-12-12 12:54+0100\n"
 "Last-Translator: Karol Sikora <karol@elektrrrus.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -34,21 +34,6 @@ msgstr "Pusty"
 #: doc/proposal/dummy_proposal.ycp:71
 msgid "&Dummy"
 msgstr "&Pusty"
-
-#. progress step title
-#: src/clients/copy_files_finish.ycp:119
-msgid "Copying files to installed system..."
-msgstr "Kopiowanie plików do instalowanego systemu..."
-
-#. progress step title
-#: src/clients/copy_logs_finish.ycp:42
-msgid "Copying log files to installed system..."
-msgstr "Kopiowanie plików dziennika do instalowanego systemu..."
-
-#. progress step title
-#: src/clients/copy_systemfiles_finish.ycp:39
-msgid "Copying system files to the installed system..."
-msgstr "Kopiowanie plików do instalowanego systemu..."
 
 #: src/clients/deploy_image_auto.ycp:57
 msgid "Installation from images is: <b>enabled</b>"
@@ -144,16 +129,6 @@ msgstr ""
 #: src/clients/deploying_proposal.ycp:132
 msgid "Installation from &Images"
 msgstr "Instalacja z o&brazów"
-
-#. progress step title
-#: src/clients/desktop_finish.ycp:46
-msgid "Initializing default window manager..."
-msgstr "Inicjalizacja domyślnego menedżera okien..."
-
-#. progress step title
-#: src/clients/fonts_finish.ycp:41
-msgid "Initializing fonts..."
-msgstr "Inicjalizacja czcionek..."
 
 #. feedback heading
 #: src/clients/inst_addon_update_sources.ycp:54
@@ -564,53 +539,65 @@ msgstr ""
 "<p>Domyślny plik kontrolny zawiera opisy procesów instalacji\n"
 "i aktualizacji dla wszystkich produktów.</p>"
 
-#. Help text for last dialog of base installation
-#: src/clients/inst_finish.ycp:52
-msgid ""
-"<p>\n"
-"Please wait while the base system is being installed.\n"
-"</p>"
-msgstr ""
-"<p>\n"
-"Proszę czekać, trwa instalowanie systemu podstawowego.\n"
-"</p>"
+#: src/clients/inst_finish.ycp:47
+#, fuzzy
+msgid "Installation Error"
+msgstr "Tryb instalacji"
 
-#. Headline for last dialog of base installation: Install LILO etc.
-#: src/clients/inst_finish.ycp:57 src/clients/inst_finish.ycp:277
+#: src/clients/inst_finish.ycp:74 src/clients/inst_prepareprogress.ycp:61
 msgid "Finishing Basic Installation"
 msgstr "Kończenie instalacji podstawowej"
 
-#: src/clients/inst_finish.ycp:58
-msgid "Preparing installation finish-scripts..."
+#: src/clients/inst_finish.ycp:98
+#, fuzzy
+msgid "Creating list of finish scripts to call..."
 msgstr "Dopasowywanie systemu instalacyjnego..."
 
 #. progress stage
-#: src/clients/inst_finish.ycp:71
+#: src/clients/inst_finish.ycp:114
 msgid "Copy files to installed system"
 msgstr "Kopiowanie plików do instalowanego systemu"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:86
+#: src/clients/inst_finish.ycp:129
 msgid "Save configuration"
 msgstr "Zapis konfiguracji"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:110
+#: src/clients/inst_finish.ycp:153
 msgid "Install boot manager"
 msgstr "Instalacja programu rozruchowego"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:120
+#: src/clients/inst_finish.ycp:163
 msgid "Save installation settings"
 msgstr "Zapis ustawień instalacji"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:136
+#: src/clients/inst_finish.ycp:179
 msgid "Prepare system for initial boot"
 msgstr "Przygotowywanie systemu do pierwszego uruchomienia"
 
-#: src/clients/inst_finish.ycp:337
-msgid "Finished."
+#: src/clients/inst_finish.ycp:264
+#, fuzzy, ycp-format
+msgid "Checking stage: %1..."
+msgstr "Sprawdzanie pliku dziennika YaST %1..."
+
+#. a fallback busy message
+#: src/clients/inst_finish.ycp:353
+#, fuzzy, ycp-format
+msgid "Calling step %1..."
+msgstr "Uruchamianie usługi %1..."
+
+#. use as ' * %1' -> ' * One of the finish steps...' in the SlideShow log
+#: src/clients/inst_finish.ycp:358
+#, ycp-format
+msgid " * %1"
+msgstr ""
+
+#: src/clients/inst_finish.ycp:391
+#, fuzzy
+msgid "Finished"
 msgstr "Zakończono."
 
 #. Button to accept a license agreement
@@ -658,7 +645,7 @@ msgstr "Tryb"
 msgid "New &Installation"
 msgstr "Nowa &instalacja"
 
-#: src/clients/inst_mode.ycp:142 src/clients/inst_proposal.ycp:1139
+#: src/clients/inst_mode.ycp:142 src/clients/inst_proposal.ycp:1148
 msgid "&Update"
 msgstr "Akt&ualizacja"
 
@@ -1366,9 +1353,10 @@ msgstr ""
 
 #. TRANSLATORS: help text, part 3
 #: src/clients/inst_new_desktop.ycp:40
+#, fuzzy
 msgid ""
-"Additionally, not only desktop but you can also chose a minimalistic \n"
-"installation that could fit your needs better."
+"<p>Selecting <b>Other</b>, you can chose a minimal installation that\n"
+"could fit your needs better.</p>"
 msgstr ""
 "Dodatkowo można wybrać minimalną instalację, która może lepiej\n"
 "spełnić Państwa potrzeby."
@@ -1399,25 +1387,31 @@ msgid "Installing Packages..."
 msgstr "Instalowanie pakietów..."
 
 #. heading in proposal, in case the module doesn't create one
-#: src/clients/inst_proposal.ycp:269 src/clients/inst_proposal.ycp:270
-#: src/clients/inst_proposal.ycp:277 src/clients/inst_proposal.ycp:305
-#: src/clients/inst_proposal.ycp:306 src/clients/inst_proposal.ycp:312
+#: src/clients/inst_proposal.ycp:263 src/clients/inst_proposal.ycp:264
+#: src/clients/inst_proposal.ycp:271 src/clients/inst_proposal.ycp:314
+#: src/clients/inst_proposal.ycp:315 src/clients/inst_proposal.ycp:321
 msgid "ERROR: Missing Title"
 msgstr "BŁĄD: Brak tytułu"
 
+#. busy message
+#: src/clients/inst_proposal.ycp:281
+msgid "Adapting the proposal to the current settings..."
+msgstr ""
+
+#. busy message;
 #. Initial contents of proposal subwindow while proposals are calculated
-#: src/clients/inst_proposal.ycp:280 src/clients/inst_proposal.ycp:754
+#: src/clients/inst_proposal.ycp:285 src/clients/inst_proposal.ycp:763
 msgid "Analyzing your system..."
 msgstr "Trwa analiza systemu..."
 
 #. fallback proposal, means usually an internal error
-#: src/clients/inst_proposal.ycp:459
+#: src/clients/inst_proposal.ycp:468
 msgid "ERROR: No proposal"
 msgstr "BŁĄD: Brak propozycji"
 
 #. Submodules handle their own error reporting
 #. text for a message box
-#: src/clients/inst_proposal.ycp:509
+#: src/clients/inst_proposal.ycp:518
 msgid ""
 "Configuration saved.\n"
 "There were errors."
@@ -1426,7 +1420,7 @@ msgstr ""
 "Wystąpiły błędy."
 
 #. dialog headline
-#: src/clients/inst_proposal.ycp:697
+#: src/clients/inst_proposal.ycp:706
 msgid "Installation Overview"
 msgstr "Przegląd instalacji"
 
@@ -1435,42 +1429,42 @@ msgstr "Przegląd instalacji"
 #. Translators: About 40 characters max,
 #. use newlines for longer translations.
 #. radio button
-#: src/clients/inst_proposal.ycp:719
+#: src/clients/inst_proposal.ycp:728
 msgid "&Skip Configuration"
 msgstr "&Pomiń konfigurację"
 
 #. radio button
-#: src/clients/inst_proposal.ycp:722
+#: src/clients/inst_proposal.ycp:731
 msgid "&Use Following Configuration"
 msgstr "&Użyj poniższej konfiguracji"
 
 #. menu button
 #. TRANSLATORS: Push button
-#: src/clients/inst_proposal.ycp:733 src/clients/inst_proposal.ycp:910
+#: src/clients/inst_proposal.ycp:742 src/clients/inst_proposal.ycp:919
 #: src/clients/inst_upgrade_urls.ycp:161
 msgid "&Change..."
 msgstr "&Zmień..."
 
 #. Help message between headline and installation proposal / settings summary.
 #. May contain newlines, but don't make it very much longer than the original.
-#: src/clients/inst_proposal.ycp:796
+#: src/clients/inst_proposal.ycp:805
 msgid "Click any headline to make changes or use the \"Change...\" menu below."
 msgstr ""
 "Aby wprowadzić zmiany, należy kliknąć dowolny nagłówek, \n"
 "albo nacisnąć przycisk \"Zmień...\" poniżej."
 
 #. push button
-#: src/clients/inst_proposal.ycp:827
+#: src/clients/inst_proposal.ycp:836
 msgid "&Show Release Notes"
 msgstr "Informacje o &wydaniu"
 
 #. menu button item
-#: src/clients/inst_proposal.ycp:908
+#: src/clients/inst_proposal.ycp:917
 msgid "&Reset to defaults"
 msgstr "P&rzywróć domyślne"
 
 #. General part of the help text for all types of proposals
-#: src/clients/inst_proposal.ycp:952
+#: src/clients/inst_proposal.ycp:961
 msgid ""
 "<p>\n"
 "Change the values by clicking on the respective headline\n"
@@ -1484,7 +1478,7 @@ msgstr ""
 
 #. Help text for installation proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:962
+#: src/clients/inst_proposal.ycp:971
 msgid ""
 "<p>\n"
 "Select <b>Install</b> to perform a new installation with the values displayed.\n"
@@ -1511,7 +1505,7 @@ msgstr ""
 #. * - sh@suse.de 2002-02-26
 #. *
 #. Help text for installation proposal, continued
-#: src/clients/inst_proposal.ycp:984 src/clients/inst_proposal.ycp:1006
+#: src/clients/inst_proposal.ycp:993 src/clients/inst_proposal.ycp:1015
 msgid ""
 "<p>\n"
 "Your hard disk has not been modified in any way, so you can still safely abort.\n"
@@ -1523,7 +1517,7 @@ msgstr ""
 
 #. Help text for update proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:993
+#: src/clients/inst_proposal.ycp:1002
 msgid ""
 "<p>\n"
 "Select <b>Update</b> to perform an update with the values displayed.\n"
@@ -1536,7 +1530,7 @@ msgstr ""
 
 #. Help text for network configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1015
+#: src/clients/inst_proposal.ycp:1024
 msgid ""
 "<p>\n"
 "Put the network settings into effect by pressing <b>Next</b>.\n"
@@ -1548,7 +1542,7 @@ msgstr ""
 
 #. Help text for service configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1024
+#: src/clients/inst_proposal.ycp:1033
 msgid ""
 "<p>\n"
 "Put the service settings into effect by pressing <b>Next</b>.\n"
@@ -1560,7 +1554,7 @@ msgstr ""
 
 #. Help text for hardware configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1033
+#: src/clients/inst_proposal.ycp:1042
 msgid ""
 "<p>\n"
 "Put the hardware settings into effect by pressing <b>Next</b>.\n"
@@ -1571,12 +1565,12 @@ msgstr ""
 "</p>\n"
 
 #. Proposal in uml module
-#: src/clients/inst_proposal.ycp:1041
+#: src/clients/inst_proposal.ycp:1050
 msgid "<P><B>UML Installation Proposal</B></P>"
 msgstr "<P><B>Propozycja instalacji UML</B></P>"
 
 #. help text
-#: src/clients/inst_proposal.ycp:1043
+#: src/clients/inst_proposal.ycp:1052
 msgid ""
 "<P>UML (User Mode Linux) installation allows you to start independent\n"
 "Linux virtual machines in the host system.</P>"
@@ -1587,7 +1581,7 @@ msgstr ""
 #. Generic help text for other proposals (not basic installation or
 #. hardhware configuration.
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1058
+#: src/clients/inst_proposal.ycp:1067
 msgid ""
 "<p>\n"
 "To use the settings as displayed, press <b>Next</b>.\n"
@@ -1598,7 +1592,7 @@ msgstr ""
 "</p>\n"
 
 #. help text
-#: src/clients/inst_proposal.ycp:1067
+#: src/clients/inst_proposal.ycp:1076
 msgid ""
 "<p>Some proposals might be\n"
 "locked by the system administrator, so cannot be changed. To change\n"
@@ -1609,27 +1603,27 @@ msgstr ""
 "Aby zmienić propozycje zastrzeżone, proszę skontaktować się\n"
 "z administratorem.</p>"
 
-#: src/clients/inst_proposal.ycp:1141
+#: src/clients/inst_proposal.ycp:1150
 msgid "&Install"
 msgstr "&Instaluj"
 
 #. question in a popup box
-#: src/clients/inst_proposal.ycp:1238
+#: src/clients/inst_proposal.ycp:1247
 msgid "Really reset everything to default values?"
 msgstr "Czy na pewno przywrócić wszystkie wartości domyślne?"
 
 #. explain consequences of a decision
-#: src/clients/inst_proposal.ycp:1240
+#: src/clients/inst_proposal.ycp:1249
 msgid "You will lose all changes."
 msgstr "Wszystkie wprowadzone zmiany zostaną utracone."
 
 #. message show when user has disabled the configuration
-#: src/clients/inst_proposal.ycp:1252
+#: src/clients/inst_proposal.ycp:1261
 msgid "Skipping configuration upon user request"
 msgstr "Konfiguracja pominięta na żądanie użytkownika"
 
 #. error message is a popup
-#: src/clients/inst_proposal.ycp:1270
+#: src/clients/inst_proposal.ycp:1279
 msgid ""
 "The proposal contains an error that must be\n"
 "resolved before continuing.\n"
@@ -1732,7 +1726,7 @@ msgstr "Zapisywanie konfiguracji systemu"
 #. prior to calling any SuSEconfig module.
 #.
 #. progress step title
-#: src/clients/inst_suseconfig.ycp:166 src/clients/ldconfig_finish.ycp:39
+#: src/clients/inst_suseconfig.ycp:166 src/inst_finish/ldconfig_finish.ycp:39
 msgid "Setting up linker cache"
 msgstr "Konfiguracja bufora konsolidatora"
 
@@ -1894,13 +1888,13 @@ msgstr "Ocenianie możliwości aktualizacji..."
 
 #. TRANSLATORS: progress step
 #: src/clients/inst_system_analysis.ycp:288
-#: src/clients/inst_upgrade_urls.ycp:869
+#: src/clients/inst_upgrade_urls.ycp:900
 msgid "Initialize package manager"
 msgstr "Inicjalizacja menedżera pakietów"
 
 #. TRANSLATORS: progress step
 #: src/clients/inst_system_analysis.ycp:290
-#: src/clients/inst_upgrade_urls.ycp:874
+#: src/clients/inst_upgrade_urls.ycp:905
 msgid "Initializing package manager..."
 msgstr "Inicjalizacja menedżera pakietów..."
 
@@ -1916,7 +1910,7 @@ msgstr "Proszę czekać, sprzęt i zainstalowane oprogramowanie jest testowane..
 
 #. TRANSLATORS: dialog caption
 #: src/clients/inst_upgrade_urls.ycp:140 src/clients/inst_upgrade_urls.ycp:514
-#: src/clients/inst_upgrade_urls.ycp:556
+#: src/clients/inst_upgrade_urls.ycp:559
 msgid "Previously Used Repositories"
 msgstr "Używane wcześniej repozytoria"
 
@@ -2009,42 +2003,42 @@ msgstr ""
 "Skonfigurować teraz połączenie?"
 
 #. TRANSLATORS: Progress text
-#: src/clients/inst_upgrade_urls.ycp:517 src/clients/inst_upgrade_urls.ycp:557
+#: src/clients/inst_upgrade_urls.ycp:517 src/clients/inst_upgrade_urls.ycp:560
 msgid "Adding and removing repositories..."
 msgstr "Dodawanie i usuwanie repozytoriów..."
 
 #. TRANSLATORS: help text
-#: src/clients/inst_upgrade_urls.ycp:520 src/clients/inst_upgrade_urls.ycp:562
+#: src/clients/inst_upgrade_urls.ycp:520 src/clients/inst_upgrade_urls.ycp:565
 msgid "<p>Please wait while repositories are being added and removed.</p>"
 msgstr "<p>Proszę czekać, repozytoria są dodawane i usuwane.</p>"
 
-#: src/clients/inst_upgrade_urls.ycp:537
+#: src/clients/inst_upgrade_urls.ycp:538
 msgid "Remove unused repositories"
 msgstr "Usuwanie nieużywanych repozytoriów."
 
-#: src/clients/inst_upgrade_urls.ycp:538 src/clients/inst_upgrade_urls.ycp:630
+#: src/clients/inst_upgrade_urls.ycp:539 src/clients/inst_upgrade_urls.ycp:633
 msgid "Removing unused repositories..."
 msgstr "Usuwanie nieużywanych repozytoriów..."
 
-#: src/clients/inst_upgrade_urls.ycp:543
+#: src/clients/inst_upgrade_urls.ycp:545
 msgid "Add enabled repositories"
 msgstr "Dodawanie aktywnych repozytoriów"
 
-#: src/clients/inst_upgrade_urls.ycp:544 src/clients/inst_upgrade_urls.ycp:652
+#: src/clients/inst_upgrade_urls.ycp:546 src/clients/inst_upgrade_urls.ycp:655
 msgid "Adding enabled repositories..."
 msgstr "Dodawanie aktywnych repozytoriów..."
 
-#: src/clients/inst_upgrade_urls.ycp:549
+#: src/clients/inst_upgrade_urls.ycp:552
 msgid "Add disabled repositories"
 msgstr "Dodawanie wyłączonych repozytoriów."
 
-#: src/clients/inst_upgrade_urls.ycp:550 src/clients/inst_upgrade_urls.ycp:743
+#: src/clients/inst_upgrade_urls.ycp:553 src/clients/inst_upgrade_urls.ycp:746
 msgid "Adding disabled repositories..."
 msgstr "Dodawanie wyłączonych repozytoriów..."
 
 #. TRANSLATORS: error report
 #. %1 is replaced with repo-name, %2 with repo-URL
-#: src/clients/inst_upgrade_urls.ycp:697
+#: src/clients/inst_upgrade_urls.ycp:700
 #, ycp-format
 msgid ""
 "An error occurred while refreshing repository\n"
@@ -2057,7 +2051,7 @@ msgstr ""
 
 #. TRANSLATORS: error report
 #. %1 is replaced with repo-name, %2 with repo-URL
-#: src/clients/inst_upgrade_urls.ycp:713
+#: src/clients/inst_upgrade_urls.ycp:716
 #, ycp-format
 msgid ""
 "An error occurred when enabling repository\n"
@@ -2069,22 +2063,22 @@ msgstr ""
 "Adres URL: %2"
 
 #. TRANSLATORS: dialog caption
-#: src/clients/inst_upgrade_urls.ycp:863
+#: src/clients/inst_upgrade_urls.ycp:894
 msgid "Reading Repositories Used on the System"
 msgstr "Wczytywanie repozytoriów używanych w systemie"
 
 #. TRANSLATORS: progress step
-#: src/clients/inst_upgrade_urls.ycp:868
+#: src/clients/inst_upgrade_urls.ycp:899
 msgid "Read previously used repositories"
 msgstr "Wczytanie poprzednio używanych repozytoriów"
 
 #. TRANSLATORS: progress step
-#: src/clients/inst_upgrade_urls.ycp:873
+#: src/clients/inst_upgrade_urls.ycp:904
 msgid "Reading previously used repositories..."
 msgstr "Wczytywanie poprzednio używanych repozytoriów..."
 
 #. TRANSLATORS: dialog help
-#: src/clients/inst_upgrade_urls.ycp:877
+#: src/clients/inst_upgrade_urls.ycp:908
 msgid "<p>Reading repositories. Please wait...</p>"
 msgstr "<p>Wczytywanie repozytoriów. Proszę czekać...</p>"
 
@@ -2120,56 +2114,6 @@ msgstr ""
 msgid "No workflow defined for this kind of installation."
 msgstr "Nie zdefiniowano przebiegu dla tego trybu instalacji."
 
-#. progress step title
-#: src/clients/installation_settings_finish.ycp:81
-msgid "Writing automatic configuration..."
-msgstr "Zapisywanie konfiguracji automatycznej..."
-
-#. progress step title
-#: src/clients/kernel_finish.ycp:42
-msgid "Updating kernel module dependencies..."
-msgstr "Aktualizacja zależności modułów jądra..."
-
-#. Proposal for installation mode
-#: src/clients/mode_proposal.ycp:39
-msgid "New installation"
-msgstr "Nowa instalacja"
-
-#. Proposal for installation mode
-#: src/clients/mode_proposal.ycp:46
-msgid "Update"
-msgstr "Aktualizacja"
-
-#. this is a heading
-#: src/clients/mode_proposal.ycp:93
-msgid "Mode"
-msgstr "Tryb"
-
-#. this is a menu entry
-#: src/clients/mode_proposal.ycp:95
-msgid "M&ode"
-msgstr "&Tryb"
-
-#. progress step title
-#: src/clients/mouse_finish.ycp:79
-msgid "Saving mouse configuration..."
-msgstr "Zapisywanie konfiguracji myszy..."
-
-#. progress step title
-#: src/clients/network_finish.ycp:46
-msgid "Saving network configuration..."
-msgstr "Zapisywanie konfiguracji sieci..."
-
-#. progress step title
-#: src/clients/pre_umount_finish.ycp:42
-msgid "Checking the installed system..."
-msgstr "Sprawdzanie zainstalowanego systemu..."
-
-#. progress step title
-#: src/clients/proxy_finish.ycp:41
-msgid "Saving proxy configuration..."
-msgstr "Zapisywanie konfiguracji serwerów pośredniczących..."
-
 #. error report
 #: src/clients/release_notes_popup.ycp:109
 msgid "Cannot load release notes."
@@ -2188,97 +2132,6 @@ msgstr ""
 "zaktualizowane informacje o wydaniu z serwera internetowego SUSE Linux, jeśli\n"
 "będzie dostępne połączenie z Internetem.</b></p>"
 
-#. progress step title
-#: src/clients/save_config_finish.ycp:94
-msgid "Saving time zone..."
-msgstr "Zapisywanie strefy czasowej..."
-
-#. progress step title
-#: src/clients/save_config_finish.ycp:100
-msgid "Saving language..."
-msgstr "Zapisywanie języka..."
-
-#. progress step title
-#: src/clients/save_config_finish.ycp:113
-msgid "Saving keyboard configuration..."
-msgstr "Zapisywanie konfiguracji klawiatury..."
-
-#. progress step title
-#: src/clients/save_config_finish.ycp:117
-msgid "Saving product information..."
-msgstr "Zapisywanie informacji o produkcie..."
-
-#. progress step title
-#: src/clients/save_config_finish.ycp:123
-msgid "Saving automatical installation settings..."
-msgstr "Zapisywanie ustawień instalacji automatycznej..."
-
-#. progress step title
-#: src/clients/save_config_finish.ycp:128
-msgid "Saving console configuration..."
-msgstr "Zapisywanie konfiguracji konsoli..."
-
-#. progress step title
-#: src/clients/save_config_finish.ycp:133
-msgid "Configuring the superuser's environment..."
-msgstr "Konfigurowanie środowiska administratora..."
-
-#. progress step title
-#: src/clients/save_hw_status_finish.ycp:44
-msgid "Saving hardware configuration..."
-msgstr "Zapisywanie konfiguracji sprzętu..."
-
-#. progress step title
-#: src/clients/ssh_settings_finish.ycp:43
-msgid "Copying SSH settings to installed system..."
-msgstr "Kopiowanie ustawień SSH do zainstalowanego systemu..."
-
-#. progress step title
-#: src/clients/switch_scr_finish.ycp:103
-msgid "Moving to installed system..."
-msgstr "Przechodzenie do zainstalowanego systemu..."
-
-#. progress step title
-#: src/clients/umount_finish.ycp:46
-msgid "Unmounting all mounted devices..."
-msgstr "Odmontowywanie wszystkich zamontowanych urządzeń..."
-
-#. progress step title
-#: src/clients/x11_finish.ycp:46
-msgid "Copying X Window System configuration into system..."
-msgstr "Kopiowanie konfiguracji systemu X Window do systemu..."
-
-#. progress step title
-#. TRANSLATORS: busy message
-#: src/clients/yast_inf_finish.ycp:151 src/include/inst_inc_all.ycp:68
-msgid "Writing YaST Configuration..."
-msgstr "Zapisywanie konfiguracji programu YaST..."
-
-#: src/clients/yast_inf_finish.ycp:196
-msgid ""
-"\n"
-"**************************************************************\n"
-"\n"
-"Loading installed kernel using kexec.\n"
-"\n"
-"Trying to load installed kernel via kexec instead of rebooting\n"
-"Please, wait.\n"
-"\n"
-"**************************************************************\n"
-"\t\t"
-msgstr ""
-"\n"
-"***********************************************************\n"
-"\n"
-"Wczytywanie modułów jądra z użyciem kexec.\n"
-"\n"
-"Próba wczytania modułów jądra poprzez kexec zamiast\n"
-"ponownego uruchomienia systemu\n"
-"Proszę czekać.\n"
-"\n"
-"***********************************************************\n"
-"\t\t"
-
 #. dialog content - busy message
 #: src/include/inst_inc_all.ycp:26
 msgid "Initializing the installation environment..."
@@ -2293,6 +2146,12 @@ msgstr "<p>Inicjalizacja instalacji...</p>"
 #: src/include/inst_inc_all.ycp:33
 msgid "Preparing the 1st system configuration..."
 msgstr "Przygotowywanie pierwszej konfiguracji systemu..."
+
+#. TRANSLATORS: busy message
+#. progress step title
+#: src/include/inst_inc_all.ycp:68 src/inst_finish/yast_inf_finish.ycp:150
+msgid "Writing YaST Configuration..."
+msgstr "Zapisywanie konfiguracji programu YaST..."
 
 #. Somehow the graphical frontend failed and we're running in
 #. text mode. Inform the user about this fact.
@@ -2399,7 +2258,7 @@ msgid "<p>All information required for the base installation is now complete.</p
 msgstr "<p>Wszystkie informacje wymagane do instalacji podstawowej zostały zebrane.</p>"
 
 #. Text for confirmation popup before the installation really starts 2/3
-#: src/include/misc.ycp:146
+#: src/include/misc.ycp:149
 msgid ""
 "<p>If you continue now, <b>existing\n"
 "partitions</b> on your hard disk will be <b>deleted</b> or <b>formatted</b>\n"
@@ -2412,7 +2271,7 @@ msgstr ""
 " poprzednich kroków.</p>"
 
 #. Text for confirmation popup before the installation really starts 2/3
-#: src/include/misc.ycp:154
+#: src/include/misc.ycp:157
 msgid ""
 "<p>If you continue now, partitions on your\n"
 "hard disk will be modified according to the installation settings in the\n"
@@ -2423,22 +2282,22 @@ msgstr ""
 
 #. Text for confirmation popup before the installation really starts 3/3
 #. Text for confirmation popup before the update really starts 3/3
-#: src/include/misc.ycp:160 src/include/misc.ycp:177
+#: src/include/misc.ycp:163 src/include/misc.ycp:180
 msgid "<p>Go back and check the settings if you are unsure.</p>"
 msgstr "<p>W razie wątpliwości proszę wrócić do poprzednich okien i sprawdzić ustawienia.</p>"
 
 #. Heading for confirmation popup before the update really starts
-#: src/include/misc.ycp:167
+#: src/include/misc.ycp:170
 msgid "Confirm Update"
 msgstr "Zatwierdzenie aktualizacji"
 
 #. Text for confirmation popup before the update really starts 1/3
-#: src/include/misc.ycp:171
+#: src/include/misc.ycp:174
 msgid "<p>All information required to perform an update is now complete.</p>"
 msgstr "<p>Wszystkie informacje wymagane do aktualizacji zostały zebrane.</p>"
 
 #. Text for confirmation popup before the update really starts 2/3
-#: src/include/misc.ycp:173
+#: src/include/misc.ycp:176
 msgid ""
 "\n"
 "<p>If you continue now, data on your hard disk will be overwritten\n"
@@ -2449,17 +2308,17 @@ msgstr ""
 "nadpisane, zgodnie z ustawieniami z poprzednich okien.</p>"
 
 #. Label for the button that confirms startint the installation
-#: src/include/misc.ycp:181
+#: src/include/misc.ycp:184
 msgid "Start &Update"
 msgstr "&Uruchom aktualizację"
 
 #. test result (Checking for xyz... Passed)
-#: src/include/scr_switch_debugger.ycp:33
+#: src/include/scr_switch_debugger.ycp:34
 msgid "Passed"
 msgstr "OK"
 
 #. heading
-#: src/include/scr_switch_debugger.ycp:95
+#: src/include/scr_switch_debugger.ycp:96
 msgid "Switching to the Installed System Failed"
 msgstr "Przełączenie do zainstalowanego systemu nie powiodło się"
 
@@ -2468,7 +2327,7 @@ msgstr "Przełączenie do zainstalowanego systemu nie powiodło się"
 #. %2 - link to our bugzilla
 #. %3 - directory where YaST logs are stored
 #. %4 - link to the Yast Bug Reporting HOWTO Web page
-#: src/include/scr_switch_debugger.ycp:107
+#: src/include/scr_switch_debugger.ycp:108
 #, ycp-format
 msgid ""
 "Switching to the installed system has failed\n"
@@ -2484,22 +2343,22 @@ msgstr ""
 "YaST znajdujące się w katalogu '%3'.\n"
 "Proszę zobaczyć %4 aby uzyskać więcej informacji nt. dzienników YaST."
 
-#. link to the Yast Bug Reporting HOWT
+#. link to the Yast Bug Reporting HOWTO
 #. for translators: use the localized page for your language if it exists,
 #. check the combo box "In other laguages" on top of the page
-#: src/include/scr_switch_debugger.ycp:119
+#: src/include/scr_switch_debugger.ycp:120
 msgid "http://en.opensuse.org/Bugs/YaST"
 msgstr "http://en.opensuse.org/Bugs/YaST"
 
 #. log-view label
-#: src/include/scr_switch_debugger.ycp:130
+#: src/include/scr_switch_debugger.ycp:131
 msgid "&Checking the Installed System..."
 msgstr "&Sprawdzanie zainstalowanego systemu..."
 
 #. TRANSLATORS: an error message
 #. %1 - link to our bugzilla
 #. %2 - directory where YaST logs are stored
-#: src/include/scr_switch_debugger.ycp:164
+#: src/include/scr_switch_debugger.ycp:165
 #, ycp-format
 msgid ""
 "This is worth reporting a bug at %1.\n"
@@ -2509,114 +2368,265 @@ msgstr ""
 "Proszę dołączyć logi YaST zapisane w '%2'."
 
 #. Test progress
-#: src/include/scr_switch_debugger.ycp:199
+#: src/include/scr_switch_debugger.ycp:200
 #, ycp-format
 msgid "Checking for %1 binary..."
 msgstr "Sprawdzanie pliku wykonywalnego %1..."
 
 #. Test progress
-#: src/include/scr_switch_debugger.ycp:212
+#: src/include/scr_switch_debugger.ycp:213
 #, ycp-format
 msgid "Checking for chroot directory %1..."
 msgstr "Sprawdzenie katalogu chroot %1..."
 
 #. Test progress
-#: src/include/scr_switch_debugger.ycp:224
+#: src/include/scr_switch_debugger.ycp:225
 #, ycp-format
 msgid "Checking for chroot directory content (%1)..."
 msgstr "Sprawdzenie katalogu chroot (%1)..."
 
 #. Test progress
-#: src/include/scr_switch_debugger.ycp:238
+#: src/include/scr_switch_debugger.ycp:239
 #, ycp-format
 msgid "Checking for binary %1..."
 msgstr "Sprawdzanie pliku wykonywalnego %1..."
 
 #. Test progress
-#: src/include/scr_switch_debugger.ycp:258
+#: src/include/scr_switch_debugger.ycp:259
 msgid "Trying to chroot..."
 msgstr "Próba chroot..."
 
 #. Test progress
-#: src/include/scr_switch_debugger.ycp:275
+#: src/include/scr_switch_debugger.ycp:276
 #, ycp-format
 msgid "Checking for %1 in %2..."
 msgstr "Sprawdzanie %1 w %2..."
 
+#: src/include/scr_switch_debugger.ycp:284
+msgid "Checking free space"
+msgstr ""
+
+#. test result, %1 is replaced with the directory, e.g., /var
+#. %2 is replaced with the free space in that partition, e.g., 2.8 GB
+#: src/include/scr_switch_debugger.ycp:331
+#, fuzzy, ycp-format
+msgid "Checking for free space in the %1 directory: %2"
+msgstr "Sprawdzenie katalogu chroot %1..."
+
+#. linked to the text above (sometimes replaces the '%2')
+#: src/include/scr_switch_debugger.ycp:334
+msgid "Unable to find out"
+msgstr ""
+
 #. Test progress
-#: src/include/scr_switch_debugger.ycp:295
+#: src/include/scr_switch_debugger.ycp:356
 msgid "Checking for installed RPM packages..."
 msgstr "Sprawdzanie zainstalowanych pakietów RPM..."
 
 #. Test progress
-#: src/include/scr_switch_debugger.ycp:323
+#: src/include/scr_switch_debugger.ycp:384
 #, ycp-format
 msgid "Checking whether RPM package %1 is installed..."
 msgstr "Sprawdzanie, czy pakiet RPM %1 jest zainstalowany..."
 
 #. Test progress
-#: src/include/scr_switch_debugger.ycp:348
+#: src/include/scr_switch_debugger.ycp:409
 #, ycp-format
 msgid "Checking what requires RPM package %1..."
 msgstr "Sprawdzanie wymagań pakietu RPM %1..."
 
 #. Test progress
-#: src/include/scr_switch_debugger.ycp:416
+#: src/include/scr_switch_debugger.ycp:477
 #, ycp-format
 msgid "Running complex check on package %1..."
 msgstr "Kompleksowe sprawdzanie pakietu %1..."
 
-#: src/include/scr_switch_debugger.ycp:454
+#: src/include/scr_switch_debugger.ycp:515
 #, ycp-format
 msgid "Checking YaST log file %1..."
 msgstr "Sprawdzanie pliku dziennika YaST %1..."
 
-#: src/include/scr_switch_debugger.ycp:463
+#: src/include/scr_switch_debugger.ycp:524
 msgid "Opening file..."
 msgstr "Otwieranie pliku..."
 
-#: src/include/scr_switch_debugger.ycp:473
+#: src/include/scr_switch_debugger.ycp:534
 msgid "SCR process has died, printing the last log lines..."
 msgstr "Proces SCR został zabity, pokazane zostaną ostatnie linijki dzienników..."
 
 #. Print just the last line
-#: src/include/scr_switch_debugger.ycp:482
+#: src/include/scr_switch_debugger.ycp:543
 msgid "YaST process got killed"
 msgstr "Proces YaST został zabity"
 
-#: src/include/scr_switch_debugger.ycp:491
+#: src/include/scr_switch_debugger.ycp:552
 msgid "Checking YaST log..."
 msgstr "Sprawdzanie dzienników YaST..."
 
 #. Test progress
-#: src/include/scr_switch_debugger.ycp:500
+#: src/include/scr_switch_debugger.ycp:561
 msgid "System Checking"
 msgstr "Sprawdzanie systemu"
 
 #. popup error
-#: src/include/scr_switch_debugger.ycp:600
+#: src/include/scr_switch_debugger.ycp:662
 msgid "Unknown chroot path. The debugger cannot continue."
 msgstr "Nieznana ścieżka chroot. Debugger nie może kontynuować."
 
-#: src/include/scr_switch_debugger.ycp:611
+#: src/include/scr_switch_debugger.ycp:673
 msgid "Connecting to the inst-sys failed, debugger cannot continue."
 msgstr ""
 "Połączenie z inst-sys nie powiodło się.\n"
 "Nie można kontynuować."
 
-#: src/modules/ImageInstallation.ycp:713
+#. progress step title
+#: src/inst_finish/copy_files_finish.ycp:122
+msgid "Copying files to installed system..."
+msgstr "Kopiowanie plików do instalowanego systemu..."
+
+#. progress step title
+#: src/inst_finish/copy_logs_finish.ycp:42
+msgid "Copying log files to installed system..."
+msgstr "Kopiowanie plików dziennika do instalowanego systemu..."
+
+#. progress step title
+#: src/inst_finish/copy_systemfiles_finish.ycp:39
+msgid "Copying system files to the installed system..."
+msgstr "Kopiowanie plików do instalowanego systemu..."
+
+#. progress step title
+#: src/inst_finish/desktop_finish.ycp:46
+msgid "Initializing default window manager..."
+msgstr "Inicjalizacja domyślnego menedżera okien..."
+
+#. progress step title
+#: src/inst_finish/fonts_finish.ycp:41
+msgid "Initializing fonts..."
+msgstr "Inicjalizacja czcionek..."
+
+#. progress step title
+#: src/inst_finish/installation_settings_finish.ycp:81
+msgid "Writing automatic configuration..."
+msgstr "Zapisywanie konfiguracji automatycznej..."
+
+#. progress step title
+#: src/inst_finish/kernel_finish.ycp:42
+msgid "Updating kernel module dependencies..."
+msgstr "Aktualizacja zależności modułów jądra..."
+
+#. progress step title
+#: src/inst_finish/network_finish.ycp:46
+msgid "Saving network configuration..."
+msgstr "Zapisywanie konfiguracji sieci..."
+
+#. progress step title
+#: src/inst_finish/pre_umount_finish.ycp:42
+msgid "Checking the installed system..."
+msgstr "Sprawdzanie zainstalowanego systemu..."
+
+#. progress step title
+#: src/inst_finish/proxy_finish.ycp:41
+msgid "Saving proxy configuration..."
+msgstr "Zapisywanie konfiguracji serwerów pośredniczących..."
+
+#. progress step title
+#: src/inst_finish/save_config_finish.ycp:94
+msgid "Saving time zone..."
+msgstr "Zapisywanie strefy czasowej..."
+
+#. progress step title
+#: src/inst_finish/save_config_finish.ycp:100
+msgid "Saving language..."
+msgstr "Zapisywanie języka..."
+
+#. progress step title
+#: src/inst_finish/save_config_finish.ycp:113
+msgid "Saving keyboard configuration..."
+msgstr "Zapisywanie konfiguracji klawiatury..."
+
+#. progress step title
+#: src/inst_finish/save_config_finish.ycp:117
+msgid "Saving product information..."
+msgstr "Zapisywanie informacji o produkcie..."
+
+#. progress step title
+#: src/inst_finish/save_config_finish.ycp:123
+msgid "Saving automatical installation settings..."
+msgstr "Zapisywanie ustawień instalacji automatycznej..."
+
+#. progress step title
+#: src/inst_finish/save_config_finish.ycp:128
+msgid "Saving console configuration..."
+msgstr "Zapisywanie konfiguracji konsoli..."
+
+#. progress step title
+#: src/inst_finish/save_config_finish.ycp:133
+msgid "Configuring the superuser's environment..."
+msgstr "Konfigurowanie środowiska administratora..."
+
+#. progress step title
+#: src/inst_finish/save_hw_status_finish.ycp:44
+msgid "Saving hardware configuration..."
+msgstr "Zapisywanie konfiguracji sprzętu..."
+
+#. progress step title
+#: src/inst_finish/ssh_settings_finish.ycp:43
+msgid "Copying SSH settings to installed system..."
+msgstr "Kopiowanie ustawień SSH do zainstalowanego systemu..."
+
+#. progress step title
+#: src/inst_finish/switch_scr_finish.ycp:116
+msgid "Moving to installed system..."
+msgstr "Przechodzenie do zainstalowanego systemu..."
+
+#. progress step title
+#: src/inst_finish/umount_finish.ycp:46
+msgid "Unmounting all mounted devices..."
+msgstr "Odmontowywanie wszystkich zamontowanych urządzeń..."
+
+#. progress step title
+#: src/inst_finish/x11_finish.ycp:46
+msgid "Copying X Window System configuration into system..."
+msgstr "Kopiowanie konfiguracji systemu X Window do systemu..."
+
+#: src/inst_finish/yast_inf_finish.ycp:195
+msgid ""
+"\n"
+"**************************************************************\n"
+"\n"
+"Loading installed kernel using kexec.\n"
+"\n"
+"Trying to load installed kernel via kexec instead of rebooting\n"
+"Please, wait.\n"
+"\n"
+"**************************************************************\n"
+"\t\t"
+msgstr ""
+"\n"
+"***********************************************************\n"
+"\n"
+"Wczytywanie modułów jądra z użyciem kexec.\n"
+"\n"
+"Próba wczytania modułów jądra poprzez kexec zamiast\n"
+"ponownego uruchomienia systemu\n"
+"Proszę czekać.\n"
+"\n"
+"***********************************************************\n"
+"\t\t"
+
+#: src/modules/ImageInstallation.ycp:720
 msgid "Failed to read information about installation images"
 msgstr "Nie można odczytać informacji o obrazie instalacyjnym."
 
-#: src/modules/ImageInstallation.ycp:985
+#: src/modules/ImageInstallation.ycp:992
 msgid "Deploying..."
 msgstr "Instalowanie..."
 
-#: src/modules/ImageInstallation.ycp:1008
+#: src/modules/ImageInstallation.ycp:1015
 msgid "Storing user preferences..."
 msgstr "Zapisywanie preferencji użytkownika..."
 
-#: src/modules/ImageInstallation.ycp:1118
+#: src/modules/ImageInstallation.ycp:1125
 msgid "Restoring user preferences..."
 msgstr "Przywracanie preferencji użytkownika..."
 
@@ -2630,3 +2640,27 @@ msgstr "<p>Aby system X11 był dostępny, należy zainstalować pakiet <b>%1</b>
 #: src/modules/X11Version.ycp:142
 msgid "<p>Do you want to install it now?</p>"
 msgstr "<p>Czy zainstalować go teraz?</p>"
+
+#~ msgid ""
+#~ "<p>\n"
+#~ "Please wait while the base system is being installed.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<p>\n"
+#~ "Proszę czekać, trwa instalowanie systemu podstawowego.\n"
+#~ "</p>"
+
+#~ msgid "New installation"
+#~ msgstr "Nowa instalacja"
+
+#~ msgid "Update"
+#~ msgstr "Aktualizacja"
+
+#~ msgid "Mode"
+#~ msgstr "Tryb"
+
+#~ msgid "M&ode"
+#~ msgstr "&Tryb"
+
+#~ msgid "Saving mouse configuration..."
+#~ msgstr "Zapisywanie konfiguracji myszy..."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: update.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-12 13:56+0100\n"
+"POT-Creation-Date: 2009-03-06 08:37+0100\n"
 "PO-Revision-Date: 2009-02-15 11:51+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
 "Language-Team: Polish <en@li.org>\n"
@@ -172,8 +172,9 @@ msgstr ""
 #. label for an unknown installed system
 #: src/clients/inst_update.ycp:72 src/clients/inst_update.ycp:73
 #: src/include/rootpart.ycp:68 src/include/rootpart.ycp:74
-#: src/include/rootpart.ycp:91 src/modules/RootPart.ycp:123
-#: src/modules/RootPart.ycp:1511
+#: src/include/rootpart.ycp:91 src/modules/RootPart.ycp:124
+#: src/modules/RootPart.ycp:1198 src/modules/RootPart.ycp:1202
+#: src/modules/RootPart.ycp:1636
 msgid "Unknown"
 msgstr "Nieznany"
 
@@ -457,7 +458,7 @@ msgid "Update System Configuration"
 msgstr "Aktualizacja konfiguracji systemu"
 
 #. TRANSLATORS: dialog caption
-#: src/config/update.glade:74 src/modules/RootPart.ycp:1677
+#: src/config/update.glade:74 src/modules/RootPart.ycp:1802
 msgid "Update Configuration"
 msgstr "Aktualizuj konfigurację"
 
@@ -590,10 +591,22 @@ msgstr ""
 msgid "&Yes, Use It"
 msgstr "&Tak, użyj jej"
 
+#: src/include/rootpart.ycp:382 src/include/rootpart.ycp:403
+msgid ""
+"Initializing the system for upgrade has failed for unknown reason.\n"
+"It is highly recommended not to continue the upgrade process.\n"
+"\n"
+"Are you sure you want to continue?"
+msgstr ""
+
+#: src/include/rootpart.ycp:386 src/include/rootpart.ycp:407
+msgid "&Yes, Continue"
+msgstr ""
+
 #. *
 #. *  Link to SDB article concerning renaming of devices.
 #.
-#: src/modules/RootPart.ycp:94
+#: src/modules/RootPart.ycp:95
 #, ycp-format
 msgid ""
 "See the SDB article at %1 for details\n"
@@ -604,17 +617,17 @@ msgstr ""
 "w %1 ."
 
 #. label - name of sustem to update
-#: src/modules/RootPart.ycp:114
+#: src/modules/RootPart.ycp:115
 msgid "Unknown Linux System"
 msgstr "Nieznany system Linux"
 
 #. label - name of sustem to update
-#: src/modules/RootPart.ycp:119
+#: src/modules/RootPart.ycp:120
 msgid "Non-Linux System"
 msgstr "System nielinuksowy"
 
 #. error report, %1 is device (eg. /dev/hda1)
-#: src/modules/RootPart.ycp:216
+#: src/modules/RootPart.ycp:217
 #, ycp-format
 msgid ""
 "Cannot unmount partition %1.\n"
@@ -630,28 +643,28 @@ msgstr ""
 " ręcznie albo uruchomić komputer ponownie.\n"
 
 #. label, %1 is partition
-#: src/modules/RootPart.ycp:281
+#: src/modules/RootPart.ycp:282
 #, ycp-format
 msgid "Checking partition %1"
 msgstr "Sprawdzanie partycji %1"
 
-#: src/modules/RootPart.ycp:321
+#: src/modules/RootPart.ycp:322
 msgid "Show &Details"
 msgstr "Pokaż szcz&egóły"
 
-#: src/modules/RootPart.ycp:408
+#: src/modules/RootPart.ycp:409
 #, ycp-format
 msgid "Checking file system on %1..."
 msgstr "Sprawdzanie systemu plików na %1..."
 
 #. popup headline
-#: src/modules/RootPart.ycp:432
+#: src/modules/RootPart.ycp:433
 msgid "File System Check Failed"
 msgstr "Kontrola systemu plików zakończona niepowodzeniem"
 
 #. popup question (continue/cancel dialog)
 #. %1 is a device name such as /dev/hda5
-#: src/modules/RootPart.ycp:436
+#: src/modules/RootPart.ycp:437
 #, ycp-format
 msgid ""
 "The file system check of device %1 has failed.\n"
@@ -663,21 +676,21 @@ msgstr ""
 "Czy kontynuować montowanie urządzenia?"
 
 #. button
-#: src/modules/RootPart.ycp:442
+#: src/modules/RootPart.ycp:443
 msgid "&Skip Mounting"
 msgstr "&Pomiń montowanie"
 
 #. yes-no popup
-#: src/modules/RootPart.ycp:879
+#: src/modules/RootPart.ycp:880
 msgid "Incorrect password. Try again?"
 msgstr "Nieprawidłowe hasło. Spróbować ponownie?"
 
 #. TRANSLATORS: a popup headline
-#: src/modules/RootPart.ycp:966
+#: src/modules/RootPart.ycp:967
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
-#: src/modules/RootPart.ycp:971
+#: src/modules/RootPart.ycp:972
 #, ycp-format
 msgid ""
 "Your /boot partition is too small (%1 MB).\n"
@@ -695,7 +708,7 @@ msgstr ""
 "Kontynuować aktualizację systemu?"
 
 #. label in a popup, %1 is device (eg. /dev/hda1), %2 is output of the 'mount' command
-#: src/modules/RootPart.ycp:1043
+#: src/modules/RootPart.ycp:1044
 #, ycp-format
 msgid ""
 "The partition %1 could not be mounted.\n"
@@ -719,27 +732,27 @@ msgstr ""
 "trzeba nacisnąć \"Anuluj\"."
 
 #. push button
-#: src/modules/RootPart.ycp:1057
+#: src/modules/RootPart.ycp:1058
 msgid "&Specify Mount Options"
 msgstr "&Określ opcje montowania"
 
 #. popup heading
-#: src/modules/RootPart.ycp:1076
+#: src/modules/RootPart.ycp:1077
 msgid "Mount Options"
 msgstr "Opcje montowania"
 
 #. text entry label
-#: src/modules/RootPart.ycp:1079
+#: src/modules/RootPart.ycp:1080
 msgid "&Mount Point"
 msgstr "Punkt &montowania"
 
 #. tex entry label
-#: src/modules/RootPart.ycp:1082
+#: src/modules/RootPart.ycp:1083
 msgid "&Device"
 msgstr "Urzą&dzenie"
 
 #. text entry label
-#: src/modules/RootPart.ycp:1085
+#: src/modules/RootPart.ycp:1086
 msgid ""
 "&File System\n"
 "(empty for autodetection)"
@@ -748,18 +761,57 @@ msgstr ""
 "(proszę pozostawić pusty w celu autodetekcji)"
 
 #. error message
-#: src/modules/RootPart.ycp:1163
+#: src/modules/RootPart.ycp:1164
 #, ycp-format
 msgid "The /var partition %1 could not be mounted.\n"
 msgstr "Nie można zamontować partycji /var %1.\n"
 
+#. Informational text about selected partition, %x are replaced with values later
+#: src/modules/RootPart.ycp:1192
+#, ycp-format
+msgid ""
+"<b>File system:</b> %1, <b>Type:</b> %2,<br>\n"
+"<b>Label:</b> %3, <b>Size:</b> %4,<br>\n"
+"<b>udev IDs:</b> %5,<br>\n"
+"<b>udev path:</b> %6"
+msgstr ""
+
+#: src/modules/RootPart.ycp:1199
+msgid "None"
+msgstr ""
+
+#. a popup caption
+#: src/modules/RootPart.ycp:1216
+#, fuzzy
+msgid "Unable to find the /var partition automatically"
+msgstr "Nie można zamontować partycji /var przy tej konfiguracji dysków.\n"
+
+#. a popup message
+#: src/modules/RootPart.ycp:1218
+msgid ""
+"Your system uses a separate /var partition which is required for the upgrade\n"
+"process to detect the disk-naming changes. Select the /var partition manually\n"
+"to continue the upgrade process."
+msgstr ""
+
+#. a combo-box label
+#: src/modules/RootPart.ycp:1226
+msgid "&Select /var Partition Device"
+msgstr ""
+
+#. an informational rich-text widget label
+#: src/modules/RootPart.ycp:1231
+#, fuzzy
+msgid "Device Info"
+msgstr "Urzą&dzenie"
+
 #. error message
-#: src/modules/RootPart.ycp:1215
+#: src/modules/RootPart.ycp:1340
 msgid "Unable to mount /var partition with this disk configuration.\n"
 msgstr "Nie można zamontować partycji /var przy tej konfiguracji dysków.\n"
 
 #. popup message, %1 will be replace with the name of the logfile
-#: src/modules/RootPart.ycp:1240
+#: src/modules/RootPart.ycp:1365
 #, ycp-format
 msgid ""
 "Partitions could not be mounted.\n"
@@ -770,7 +822,7 @@ msgstr ""
 "\n"
 "Szczegóły w pliku dziennika %1."
 
-#: src/modules/RootPart.ycp:1269
+#: src/modules/RootPart.ycp:1394
 #, ycp-format
 msgid ""
 "Some partitions in the system on %1 are mounted by kernel-device name. This is\n"
@@ -784,27 +836,27 @@ msgstr ""
 "montowania na inną, dla wszystkich partycji."
 
 #. error message
-#: src/modules/RootPart.ycp:1279
+#: src/modules/RootPart.ycp:1404
 msgid "No fstab found."
 msgstr "Nie znaleziono pliku fstab."
 
 #. message part 1
-#: src/modules/RootPart.ycp:1299
+#: src/modules/RootPart.ycp:1424
 msgid "The root partition in /etc/fstab has an invalid root device.\n"
 msgstr "Dla partycji głównej określono w pliku /etc/fstab nieprawidłowe urządzenie główne.\n"
 
 #. message part 2
-#: src/modules/RootPart.ycp:1301
+#: src/modules/RootPart.ycp:1426
 #, ycp-format
 msgid "It is currently mounted as %1 but listed as %2.\n"
 msgstr "Jest aktualnie zamontowana jako %1, ale wymieniona jako %2.\n"
 
-#: src/modules/RootPart.ycp:1603
+#: src/modules/RootPart.ycp:1728
 msgid "Evaluating root partition. One moment please..."
 msgstr "Sprawdzane partycji głównej (root). Proszę czekać..."
 
 #. intermediate popup while mounting partitions
-#: src/modules/RootPart.ycp:1662
+#: src/modules/RootPart.ycp:1787
 msgid "Mounting partitions. One moment please..."
 msgstr "Montowanie partycji. Proszę czekać..."
 

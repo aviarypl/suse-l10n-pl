@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nfs_server\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-12 14:04+0100\n"
+"POT-Creation-Date: 2009-03-06 08:45+0100\n"
 "PO-Revision-Date: 2009-02-15 10:41+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@suse.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -466,56 +466,67 @@ msgstr "<p>Proszę pozostawić to pole puste, na oznaczenie wszystkich komputer�
 msgid "<p>The NFSv4 option is enabled in the previous page. Make sure that only one exported filesystem is marked with the fsid=0 option for a particular client.</p>"
 msgstr "<p>Opcja NFSv4 jest włączona na poprzedniej stronie. Proszę się upewnić, że tylko jeden eksportowany system plików jest oznaczony opcją fsid=0 dla poszczególnego klienta.</p>"
 
-#: src/ui.ycp:514
-msgid "<p>In case of multiple exports to a NFSv4 client, you need to bind the exported paths with no fsid=0 to the one with fsid=0. To do this, add another export option (bind=/target/path), where /target/path amounts to some directory existing below the fsid=0 exported tree.</p>"
+#. bnc#471874, NFS4 is complex and so is our UI :-/
+#. but let's fix the help at least
+#. Watch out, the space is necessary between br and slash.
+#: src/ui.ycp:517
+#, fuzzy
+msgid ""
+"<p>In case of multiple exports to a NFSv4 client,\n"
+"you need to bind the exported paths with no fsid=0 to the one with fsid=0.\n"
+"To export the server paths <tt>/Eve</tt> and <tt>/Adam</tt> as\n"
+"<tt>/</tt> and <tt>/husband</tt>, respectively, use<br />\n"
+"<pre>/Eve         10.0.0.1(fsid=0,crossmnt,ro,...)\n"
+"/Eve/husband 10.0.0.1(bind=/Adam,ro,...)</pre>\n"
+"</p>"
 msgstr "<p>W wypadku wielokrotnych eksportów do klienta NFSv4 należy powiązać wyeksportowane ścieżki bez fsid=0 z jedną z fsid=0. W tym celu proszę dodać opcje eksportu (bind=/ścieżka/docelowa), gdzie /ścieżka/docelowa wskazuje na katalog istniejący poniżej wyeksportowanego drzewa z fsid=0"
 
 #. Help, part 5 of 5
-#: src/ui.ycp:518
+#: src/ui.ycp:527
 msgid "<P>Refer to <tt>man exports</tt> for more information.</P>\n"
 msgstr "<P>Więcej informacji znajduje się w podręczniku <tt>man exports</tt>.</P>\n"
 
 #. push button label
-#: src/ui.ycp:528
+#: src/ui.ycp:537
 msgid "Add &Directory"
 msgstr "&Dodaj katalog"
 
 #. push button label
-#: src/ui.ycp:530
+#: src/ui.ycp:539
 msgid "&Edit"
 msgstr "&Edytuj"
 
 #. push button label
-#: src/ui.ycp:532
+#: src/ui.ycp:541
 msgid "De&lete"
 msgstr "&Usuń"
 
 #. table header
-#: src/ui.ycp:538
+#: src/ui.ycp:547
 msgid "Host Wild Card"
 msgstr "Wzorzec nazwy komputera"
 
 #. table header
-#: src/ui.ycp:540
+#: src/ui.ycp:549
 msgid "Options"
 msgstr "Opcje"
 
 #. push button label
-#: src/ui.ycp:545
+#: src/ui.ycp:554
 msgid "Add &Host"
 msgstr "Dodaj komp&uter"
 
 #. push button label
-#: src/ui.ycp:547
+#: src/ui.ycp:556
 msgid "Ed&it"
 msgstr "Ed&ytuj"
 
 #. push button label
-#: src/ui.ycp:549
+#: src/ui.ycp:558
 msgid "Dele&te"
 msgstr "U&suń"
 
 #. dialog title
-#: src/ui.ycp:555
+#: src/ui.ycp:564
 msgid "Directories to Export"
 msgstr "Katalogi do wyeksportowania"
