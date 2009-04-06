@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: storage\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-06 08:35+0100\n"
-"PO-Revision-Date: 2009-04-06 00:12+0100\n"
+"PO-Revision-Date: 2009-04-06 11:47+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
@@ -209,7 +209,6 @@ msgstr ""
 
 #. popup text
 #: libstorage/src/Disk.cc:843
-#, fuzzy
 msgid ""
 "You have the following options:\n"
 "  - Repartition your system so that only the maximal allowed number\n"
@@ -219,16 +218,11 @@ msgid ""
 "    number of block devices partitions. This needs a repartition\n"
 "    as well."
 msgstr ""
-"openSUSE używa obecnie nowego sterownika IDE opartego na module\n"
-"libata. Wspiera on maksymalnie 15 partycji. Dostępne są następujące\n"
-"opcje:\n"
-"  - Uzycie starego sterownika IDE: Należy zrestartować system ponownie i dodać\n"
-"    'hwprobe=-modules.pata' jako opcję jądra\n"
-"  - Zmiana rozkładu dysku dla uzyskania maksymalnie 15 partycji\n"
-"    Do zmiany można użyć istniejącego systemu operacyjnego.\n"
-"  - Użycie LVM/EVMS od kiedy systemy te dostarczają arbitralną i spójną\n"
-"    liczbę bloków na partycjach dyskowych. Ta opcja także wymaga zmiany rozkładu\n"
-"    partycji."
+"Dostępne są następujące opcje:\n"
+"  - Naprawa systemu w taki sposób, że tylko maksymalna dozwolona liczba partycji\n"
+"    zostanie użyta. Do repartycjonowania użyty zostanie istneijący system operacyjny.\n"
+"  - Użycie LVM jako że zapewnia on wiele elastycznych\n"
+"    partycji bloku urządzeń. W tym wypadku także konieczne jest repartycjonowanie.\n"
 
 #. displayed text during action, %1$s is replaced by disk name (e.g. /dev/hda),
 #. %2$s is replaced by label name (e.g. msdos)
@@ -1745,7 +1739,7 @@ msgstr ""
 
 #. popup text %1 is a number
 #: storage/src/include/custom_part_check_generated.ycp:240
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "Warning:\n"
 "Your boot partition ends above cylinder %1.\n"
@@ -1757,14 +1751,13 @@ msgid ""
 "Really use this setup?\n"
 msgstr ""
 "Uwaga:\n"
-"Partycja startowa kończy się powyżej cylindra %1.\n"
-"BIOS prawdopodobnie nie może uruchomić systemu \n"
-"z partycji powyżej cylindra %1.\n"
-"Przy obecnych ustawieniach istnieje niebezpieczeństwo, \n"
-"że po włączeniu komputera system %2 nie będzie mógł \n"
-"bezpośrednio się uruchomić.\n"
+"Partycja rozruchowa kończy się powyżej cylindra %1.\n"
+"Wygląda na to, że BIOS nie jest w stanie uruchomić systemu z\n"
+"partycji powyżej cylindra %1.\n"
+"Przy obecnych ustawieniach, instalacja %2\n"
+"może nie być bezpośrednio bootowalna.\n"
 "\n"
-"Czy zmienić ustawienia?\n"
+"Czy na pewno użyć tej konfiguracji?\n"
 
 #. popup text
 #: storage/src/include/custom_part_check_generated.ycp:257
@@ -1785,7 +1778,6 @@ msgstr ""
 #. If the user chooses 'no' here, the system will not be able to
 #. boot from the hard drive!
 #: storage/src/include/custom_part_check_generated.ycp:280
-#, fuzzy
 msgid ""
 "Warning: There is no partition mounted as /boot.\n"
 "To boot from your hard disk, a small /boot partition\n"
@@ -1797,15 +1789,15 @@ msgid ""
 msgstr ""
 "Ostrzeżenie: Nie ma partycji zamontowanej jako /boot.\n"
 "Aby uruchomić system z twardego dysku, wymagana jest \n"
-"mała partycja /boot (ok. 4 MB). Proszę rozważyć jej utworzenie \n"
-"(typ partycji przyporządkowanych do /boot zostanie automatycznie \n"
+"mała partycja /boot (ok. 4 MB). Proszę rozważyć jej utworzenie.\n"
+"(Typ partycji przyporządkowanych do /boot zostanie automatycznie \n"
 "zmieniony na 0x41 PReP/CHRP).\n"
 "\n"
-"Czy zmienić ustawienia?\n"
+"Czy na pewno użyć tych ustawień bez partycji /boot?\n"
 
 #. popup text
 #: storage/src/include/custom_part_check_generated.ycp:298
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "Warning: According to your setup, you intend to\n"
 "boot your machine from the root partition (/), which, unfortunately,\n"
@@ -1824,10 +1816,10 @@ msgstr ""
 "cylindra %1, co oznacza, że system %2 może nie \n"
 "uruchamiać się bezpośrednio.\n"
 "\n"
-"Czy zmienić ustawienia?\n"
+"Czy na pewonu użyć tych ustawień?\n"
 
 #: storage/src/include/custom_part_check_generated.ycp:321
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "Warning: With your current setup, your %1\n"
 "installation might not be directly bootable, because\n"
@@ -1841,11 +1833,11 @@ msgstr ""
 "gdyż pliki w \"/boot\" są na programowym urządzeniu RAID. \n"
 "Program rozruchowy czasami zawodzi w takiej konfiguracji.\n"
 "\n"
-"Czy zmienić ustawienia?\n"
+"Czy na pewonu użyć tych ustawień?\n"
 
 #. popup text
 #: storage/src/include/custom_part_check_generated.ycp:339
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "Warning: With your current setup, your %1 installation\n"
 "will encounter problems when booting, because you have no \"boot\"\n"
@@ -1866,11 +1858,11 @@ msgstr ""
 "Jeśli nie wiadomo dokładnie, co zrobić, należy użyć\n"
 "zwykłej partycji dla plików poniżej /boot.\n"
 "\n"
-"Czy zmienić ustawienia?\n"
+"Czy na pewonu użyć tych ustawień?\n"
 
 #. popup text
 #: storage/src/include/custom_part_check_generated.ycp:359
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "Warning: With your current setup, your %2 installation\n"
 "will encounter problems when booting, because you have no\n"
@@ -1893,11 +1885,11 @@ msgstr ""
 "Jeśli nie wiadomo dokładnie, co zrobić, należy użyć \n"
 "zwykłej partycji FAT dla plików poniżej %1.\n"
 "\n"
-"Czy zmienić ustawienia?\n"
+"Czy na pewonu użyć tych ustawień?\n"
 
 #. popup text
 #: storage/src/include/custom_part_check_generated.ycp:377
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "Warning: With your current setup, your %2 installation will \n"
 "encounter problems when booting, because you have no \n"
@@ -1917,7 +1909,7 @@ msgstr ""
 "\n"
 "Jeśli nie wiadomo dokładnie, co zrobić, należy użyć zwykłej partycji FAT dla plików poniżej %1.\n"
 "\n"
-"Czy zmienić ustawienia?\n"
+"Czy na pewonu użyć tych ustawień?\n"
 
 #: storage/src/include/custom_part_check_generated.ycp:397
 msgid "Really use this setup ?"
@@ -1925,7 +1917,6 @@ msgstr "Czy na pewno użyć tej konfiguracji?"
 
 #. popup text
 #: storage/src/include/custom_part_check_generated.ycp:404
-#, fuzzy
 msgid ""
 "\n"
 "You have not assigned a swap partition. There is nothing wrong with that, but\n"
@@ -1945,7 +1936,7 @@ msgstr ""
 "W razie potrzeby można przydzielić więcej niż jedną partycję wymiany.\n"
 "\n"
 "\n"
-"Czy zmienić ustawienia?\n"
+"Czy na pewonu użyć tych ustawień bez partycji swap?\n"
 
 #. popup text
 #: storage/src/include/custom_part_check_generated.ycp:422
@@ -2978,7 +2969,7 @@ msgstr "Wykrywanie rodzaju szyfrowania..."
 
 #. warning message, %1 is replaced by fs name (e.g. Ext3)
 #: storage/src/include/custom_part_lib.ycp:664
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "\n"
 "WARNING:\n"
@@ -2994,10 +2985,10 @@ msgstr ""
 "OSTRZEŻENIE:\n"
 "\n"
 "Ten system plików nie jest obsługiwany w %1;.\n"
-"Funkcja te jest nieprzetestowana i niezintegrowana\n"
-"z systemem. Prosimy nie zgłaszać błędów w przypadku\n"
-"problemów.\n"
-"Cofnąć zmianę systemu plików?\n"
+"Jest on nieprzetestowany i nie do końca zintegrowany\n"
+"z systemem. Prosimy nie zgłaszać błędów systemu plików, jeśli\n"
+"wystąpią problemy lub system ten nie zadziała wogóle.\n"
+"Czy na pewno użyć tego systemu plików?\n"
 
 #. push button text
 #: storage/src/include/ep-all.ycp:28
