@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-03-06 08:48+0100\n"
-"PO-Revision-Date: 2009-01-04 14:12+0100\n"
-"Last-Translator: Paulina Budzoń <paulina.bu@gmail.com>\n"
+"PO-Revision-Date: 2009-04-29 09:13+0100\n"
+"Last-Translator: Mirosław Rogoziński <miroslaw.rogozinski@gmail.com>\n"
 "Language-Team: Polish <i18n@suse.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,7 +33,7 @@ msgstr "Odczytanie bieżącego statusu SSHD"
 #. Progress stage 3
 #: src/Sshd.ycp:236
 msgid "Read firewall settings"
-msgstr ""
+msgstr "Wczytaj ustawienia zapory sieciowej"
 
 #. Progress step 1
 #: src/Sshd.ycp:239
@@ -47,9 +47,8 @@ msgstr "Odczytywanie bieżącego stanu SSHD..."
 
 #. Progress step 3
 #: src/Sshd.ycp:243
-#, fuzzy
 msgid "Reading firewall settings..."
-msgstr "Zapisywanie ustawień SSHD..."
+msgstr "Wczytywanie ustawień zapory sieciowej..."
 
 #. Error message
 #: src/Sshd.ycp:261
@@ -58,9 +57,8 @@ msgstr "Nie można odczytać bieżącego stanu SSHD."
 
 #. Error message
 #: src/Sshd.ycp:268
-#, fuzzy
 msgid "Cannot read firewall settings."
-msgstr "Nie można zapisać ustawień SSHD."
+msgstr "Nie można wczytać ustawień zapory sieciowej."
 
 #. SSHD read dialog caption
 #: src/Sshd.ycp:287
@@ -79,9 +77,8 @@ msgstr "Dostosowywanie usługi SSHD"
 
 #. Progress stage 3
 #: src/Sshd.ycp:297
-#, fuzzy
 msgid "Write firewall settings"
-msgstr "Zapisanie ustawień SSHD"
+msgstr "Zapisz ustawienia zapory sieciowej"
 
 #. Progress step 1
 #: src/Sshd.ycp:300
@@ -95,9 +92,8 @@ msgstr "Dostosowywanie usługi SSHD..."
 
 #. Progress step 3
 #: src/Sshd.ycp:304
-#, fuzzy
 msgid "Writing firewall settings..."
-msgstr "Zapisywanie ustawień SSHD..."
+msgstr "Zapisywanie ustawień zapory sieciowej..."
 
 #. Error message
 #: src/Sshd.ycp:315
@@ -106,9 +102,8 @@ msgstr "Nie można zapisać ustawień SSHD."
 
 #. Error message
 #: src/Sshd.ycp:328
-#, fuzzy
 msgid "Cannot write firewall settings."
-msgstr "Nie można zapisać ustawień SSHD."
+msgstr "Nie można zapisać ustawień zapory sieciowej."
 
 #. TRANSLATORS: summary item
 #: src/Sshd.ycp:346
@@ -132,7 +127,8 @@ msgid "SSHD Server Ports:"
 msgstr "Porty serwera SSH:"
 
 #. A table header
-#: src/SshdCommandLine.ycp:27 src/dialogs.ycp:38
+#: src/SshdCommandLine.ycp:27
+#: src/dialogs.ycp:38
 msgid "Port"
 msgstr "Port"
 
@@ -231,15 +227,13 @@ msgstr "&Maksymalna liczba prób uwierzytelnienia"
 #. `Left(`CheckBox (`id("PasswordAuthentication"), _("Pa&ssword Authentication"))),
 #. A check box
 #: src/dialogs.ycp:92
-#, fuzzy
 msgid "RSA Authenti&cation (Protocol V. 1 Only)"
-msgstr "Uwierzytelnianie &RSA"
+msgstr "Uwierzytelnianie &RSA (tylko protokół V. 1)"
 
 #. A check box
 #: src/dialogs.ycp:94
-#, fuzzy
 msgid "Public &Key Authentication (Protocol V. 2 Only)"
-msgstr "Uwierzytelnianie &kluczem publicznym"
+msgstr "Uwierzytelnianie &kluczem publicznym (tylko protokół V. 2)"
 
 #: src/dialogs.ycp:104
 msgid "Supported SSH protocol versions"
@@ -294,22 +288,26 @@ msgstr ""
 
 #. Login Settings dialog help 1
 #: src/helps.ycp:30
-#, fuzzy
 msgid ""
 "<p><b><big>Login Settings</big></b><br>\n"
 "Here you can configure the SSHD login and authentication settings.\n"
 "Some apply to a particular protocol version only.</p>"
 msgstr ""
 "<p><b><big>Konfiguracja logowania</big></b><br>\n"
-"W tym miejscu można skonfigurować ustawienia dotyczące logowania się użytkowników.<br></p>"
+"W tym miejscu można skonfigurować ustawienia dotyczące logowania i uwierzytelniania.\n"
+"Niektóre ustawienia mogą dotyczyć konkretnej wersji protokołu.</p>"
 
 #. Login Settings dialog help 2, text taken from sshd_config manpage
 #: src/helps.ycp:35
+#, fuzzy
 msgid ""
 "<p><b>Print Message of the Day After Login</b>\n"
 "Specifies whether sshd should print /etc/motd when\n"
 "a user logs in interactively.</p>"
 msgstr ""
+"<p><b>Wyświetl wiadomość dnia po zalogowaniu</b>\n"
+"Określa czy sshd powinno wyświetlić /etc/motd po\n"
+"zalogowaniu.</p>"
 
 #. Login Settings dialog help 3, text taken from sshd_config manpage
 #: src/helps.ycp:40
@@ -317,6 +315,8 @@ msgid ""
 "<p><b>Permit Root Login</b><br>\n"
 "Specifies whether root can log in using ssh.</p>"
 msgstr ""
+"<p><b>Zazwól logowanie na konto root</b><br>\n"
+"Określa, czy użytkownik root może logować się poprzez ssh.</p>"
 
 #. Login Settings dialog help 4, text taken from sshd_config manpage
 #: src/helps.ycp:44
@@ -325,6 +325,9 @@ msgid ""
 "Specifies the maximum number of authentication attempts permitted per connection.\n"
 "Once the number of failures reaches half this value, additional failures are logged.</p>"
 msgstr ""
+"<p><b>Limit prób uwierzytelniania</b><br>\n"
+"Określa maksymalną liczbę prób uwierzytelniania, dozwoloną w czasie jednego połączenia.\n"
+"Po przekroczeniu połowy, następne błędne logowania zostaną zapisane do dziennika.</p>"
 
 #. Login Settings dialog help 5, text taken from sshd_config manpage
 #: src/helps.ycp:49
@@ -333,6 +336,9 @@ msgid ""
 "Specifies whether pure RSA authentication is allowed.\n"
 "This option applies to protocol version 1 only.</p>"
 msgstr ""
+"<p><b>Uwierzytelnianie RSA</b><br>\n"
+"Określa czy uwierzytelnianie RSA jest dozwolone.\n"
+"Ta opcja dotyczy tylko wersji 1 protokołu.</p>"
 
 #. Login Settings dialog help 6, text taken from sshd_config manpage
 #: src/helps.ycp:54
@@ -341,6 +347,9 @@ msgid ""
 "Specifies whether public key authentication is allowed.\n"
 "This option applies to protocol version 2 only.</p>"
 msgstr ""
+"<p><b>Uwierzytelnianie kluczem publicznym</b><br>\n"
+"Określa czy uwierzytelnianie kluczem publicznym jest dozwolone.\n"
+"Ta opcja dotyczy tylko wersji 2 protokołu.</p>"
 
 #. Protocol and Cipher Settings dialog help
 #: src/helps.ycp:59
@@ -394,6 +403,6 @@ msgstr "Konfiguracja serwera SSHD"
 
 #~ msgid "Pa&ssword Authentication"
 #~ msgstr "&Uwierzytelnianie hasłem"
-
 #~ msgid "SSHD Server Login Settings"
 #~ msgstr "Ustawienia logowania serwera SSHD"
+
