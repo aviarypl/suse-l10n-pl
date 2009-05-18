@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: printer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-03-06 08:45+0100\n"
+"POT-Creation-Date: 2009-05-13 14:14+0200\n"
 "PO-Revision-Date: 2009-05-17 18:15+0200\n"
 "Last-Translator: Karol Kozioł <7c0.000@gmail.com>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -243,7 +243,7 @@ msgstr "Przetwarzanie wielu sterowników. Proszę czekać..."
 #. the currently used driver is then the very first entry in the SelectionBox.
 #. Body of a Popup::AnyMessage when no driver was selected:
 #: src/Printer.ycp:1653 src/Printer.ycp:1677 src/basicadd.ycp:175
-#: src/basicadd.ycp:260 src/basicadd.ycp:471 src/basicmodify.ycp:830
+#: src/basicadd.ycp:260 src/basicadd.ycp:471 src/basicmodify.ycp:920
 msgid "Select a driver."
 msgstr "Wybierz sterownik"
 
@@ -272,7 +272,7 @@ msgstr "Nie udało się określić opcji sterownika."
 
 #. Return at least a list with only a fallback string so that the user is informed:
 #. Header of a Popup::AnyMessage when "Driver Options" was selected:
-#: src/Printer.ycp:1808 src/Printer.ycp:1923 src/basicmodify.ycp:631
+#: src/Printer.ycp:1808 src/Printer.ycp:1923 src/basicmodify.ycp:630
 msgid "No driver options available"
 msgstr "Nie są dostępne żadne opcje sterownika"
 
@@ -517,8 +517,8 @@ msgstr "&Włącz automatyczną konfigurację"
 #. so that the client-only config is to be disabled in any case:
 #. PopupYesNoHeadline headline
 #. where %1 will be replaced by the server name:
-#: src/autoconfig.ycp:132 src/overview.ycp:598 src/policies.ycp:123
-#: src/printingvianetwork.ycp:471 src/sharing.ycp:509
+#: src/autoconfig.ycp:132 src/overview.ycp:626 src/policies.ycp:123
+#: src/printingvianetwork.ycp:463 src/sharing.ycp:509
 #, ycp-format
 msgid "Disable remote CUPS server '%1'"
 msgstr "Zablokuj zdalny serwer CUPS '%1'"
@@ -533,9 +533,9 @@ msgstr "Ustawienia zdalnego serwera CUPS są w konflikcie z automatyczną konfig
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Popup::ErrorDetails message:
-#: src/autoconfig.ycp:148 src/overview.ycp:610 src/policies.ycp:139
-#: src/printingvianetwork.ycp:426 src/printingvianetwork.ycp:481
-#: src/printingvianetwork.ycp:589 src/sharing.ycp:525
+#: src/autoconfig.ycp:148 src/overview.ycp:638 src/policies.ycp:139
+#: src/printingvianetwork.ycp:418 src/printingvianetwork.ycp:473
+#: src/printingvianetwork.ycp:581 src/sharing.ycp:525
 msgid "Failed to remove the 'ServerName' entry in /etc/cups/client.conf"
 msgstr "Nie można usunąć wpis 'ServerName' z /etc/cups/client.conf"
 
@@ -583,7 +583,7 @@ msgid "Automatic configuration failed."
 msgstr "Automatyczna konfiguracja nie powiodła się."
 
 #. Popup::Error message:
-#: src/autoconfig.ycp:418 src/policies.ycp:323 src/printingvianetwork.ycp:850
+#: src/autoconfig.ycp:418 src/policies.ycp:323 src/printingvianetwork.ycp:837
 #: src/sharing.ycp:820
 msgid "Failed to apply the settings to the system."
 msgstr "Nie udało się zastosować ustawień dla systemu"
@@ -606,7 +606,7 @@ msgstr "&Więcej połączeń"
 
 #. Label of a PushButton to go to the "Connection Wizard"
 #. to specify the printer connection individually:
-#: src/basicadd.ycp:92 src/basicmodify.ycp:298 src/printingvianetwork.ycp:169
+#: src/basicadd.ycp:92 src/basicmodify.ycp:298 src/printingvianetwork.ycp:161
 msgid "Connection &Wizard"
 msgstr "&Kreator połączeń"
 
@@ -616,7 +616,7 @@ msgstr "&Kreator połączeń"
 #. Header of a Table column with a list of printer connections.
 #. Printer model name:
 #: src/basicadd.ycp:109 src/basicadd.ycp:338 src/basicmodify.ycp:315
-#: src/basicmodify.ycp:668 src/connectionwizard.ycp:130
+#: src/basicmodify.ycp:667 src/connectionwizard.ycp:130
 msgid "Model"
 msgstr "Model"
 
@@ -626,7 +626,7 @@ msgstr "Model"
 #. Header of a Table column with a list of printer connections.
 #. Connection of the printer (e.g. via USB or via parallel port):
 #: src/basicadd.ycp:112 src/basicadd.ycp:341 src/basicmodify.ycp:285
-#: src/basicmodify.ycp:318 src/basicmodify.ycp:671
+#: src/basicmodify.ycp:318 src/basicmodify.ycp:670
 #: src/connectionwizard.ycp:133
 msgid "Connection"
 msgstr "Połączenie"
@@ -636,7 +636,7 @@ msgstr "Połączenie"
 #. Header of a Table column with a list of print queues.
 #. Print queue description (e.g. model or driver):
 #: src/basicadd.ycp:115 src/basicadd.ycp:344 src/basicmodify.ycp:321
-#: src/basicmodify.ycp:674 src/connectionwizard.ycp:136 src/overview.ycp:89
+#: src/basicmodify.ycp:673 src/connectionwizard.ycp:136 src/overview.ycp:89
 msgid "Description"
 msgstr "Opis"
 
@@ -652,13 +652,13 @@ msgid "&Search"
 msgstr "Szukaj"
 
 #. Label of a PushButton to show more available printer drivers:
-#: src/basicadd.ycp:156 src/basicmodify.ycp:370
+#: src/basicadd.ycp:156 src/basicmodify.ycp:369
 msgid "More &Drivers"
 msgstr "Więcej sterowników"
 
 #. Label of a PushButton to go to the "Add Driver" dialog
 #. to install a new driver (and perhaps download it before):
-#: src/basicadd.ycp:162 src/basicmodify.ycp:376
+#: src/basicadd.ycp:162 src/basicmodify.ycp:375
 msgid "&Add Driver"
 msgstr "&Dodaj sterownik"
 
@@ -676,7 +676,7 @@ msgstr "Ustaw &nazwę"
 #. nor a driver was selected:
 #. Header of a Popup::AnyMessage when no queue was selected from the list:
 #: src/basicadd.ycp:241 src/overview.ycp:362 src/overview.ycp:406
-#: src/overview.ycp:638
+#: src/overview.ycp:666
 msgid "Nothing Selected"
 msgstr "Nie wybrano nic"
 
@@ -687,19 +687,19 @@ msgid "Select a connection and then assign a driver."
 msgstr "Wybierz połączenie, a następnie przypisz sterownik."
 
 #. Header of a Popup::AnyMessage when no connection was selected:
-#: src/basicadd.ycp:250 src/basicadd.ycp:356 src/basicmodify.ycp:688
-#: src/connectionwizard.ycp:636
+#: src/basicadd.ycp:250 src/basicadd.ycp:356 src/basicmodify.ycp:687
+#: src/connectionwizard.ycp:990
 msgid "No Connection Selected"
 msgstr "Nie wybrano połączenia"
 
 #. Body of a Popup::AnyMessage when no connection was selected:
-#: src/basicadd.ycp:252 src/basicadd.ycp:358 src/basicmodify.ycp:690
-#: src/connectionwizard.ycp:638
+#: src/basicadd.ycp:252 src/basicadd.ycp:358 src/basicmodify.ycp:689
+#: src/connectionwizard.ycp:992
 msgid "Select a connection."
 msgstr "Wybierz połączenie."
 
 #. Header of a Popup::AnyMessage when no driver was selected:
-#: src/basicadd.ycp:258 src/basicadd.ycp:469 src/basicmodify.ycp:828
+#: src/basicadd.ycp:258 src/basicadd.ycp:469 src/basicmodify.ycp:918
 msgid "No Driver Selected"
 msgstr "Nie wybrano sterownika"
 
@@ -741,12 +741,12 @@ msgstr "'%1' nie jest poprawne lub już istnieje. Użyć '%2' zamiast tego?"
 #. Set a fallback driver_filter_string which does not match to anything
 #. to avoid that the full list of thousands of PPDs is shown automatically
 #. because it can take a very long time until the user can proceed:
-#: src/basicadd.ycp:433 src/basicmodify.ycp:756
+#: src/basicadd.ycp:433 src/basicmodify.ycp:846
 msgid "Enter your printer model here."
 msgstr "Wpisz model drukarki."
 
-#: src/basicadd.ycp:511 src/basicadd.ycp:673 src/basicmodify.ycp:892
-#: src/basicmodify.ycp:1047
+#: src/basicadd.ycp:511 src/basicadd.ycp:673 src/basicmodify.ycp:1006
+#: src/basicmodify.ycp:1171
 msgid "any model"
 msgstr "każdy model"
 
@@ -788,27 +788,27 @@ msgid "Adjust Options of the Current Driver or Assign a Different Driver"
 msgstr "Dostosuj opcje dla bieżącego sterownika lub przypisz inny sterownik."
 
 #. Label of a TextEntry for a short printer driver description (only one line):
-#: src/basicmodify.ycp:400
+#: src/basicmodify.ycp:399
 msgid "Descri&ption"
 msgstr "Opis"
 
 #. Label of a TextEntry for printer location string:
-#: src/basicmodify.ycp:408
+#: src/basicmodify.ycp:407
 msgid "&Location"
 msgstr "Lokalizacja"
 
 #. CheckBox to set a local print queue to be the default queue:
-#: src/basicmodify.ycp:417
+#: src/basicmodify.ycp:416
 msgid "&Default Printer"
 msgstr "Drukarka domyślna"
 
 #. CheckBox to set a local print queue to accept print jobs:
-#: src/basicmodify.ycp:424
+#: src/basicmodify.ycp:423
 msgid "Accept Print &Jobs"
 msgstr "Akceptuj zadania drukowania"
 
 #. CheckBox to enable printing for a local print queue:
-#: src/basicmodify.ycp:431
+#: src/basicmodify.ycp:430
 msgid "&Enable Printing"
 msgstr "&Odblokowanie drukowania"
 
@@ -816,13 +816,13 @@ msgstr "&Odblokowanie drukowania"
 #. where %1 will be replaced by the queue name.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/basicmodify.ycp:566
+#: src/basicmodify.ycp:565
 #, ycp-format
 msgid "Failed to modify %1."
 msgstr "Nie udało się zmienić %1."
 
 #. Body of a Popup::AnyMessage when "Driver Options" was selected:
-#: src/basicmodify.ycp:633
+#: src/basicmodify.ycp:632
 msgid "Possible reasons: Nothing selected or it is a remote configuration."
 msgstr "Prawdopodbne przyczyny: nie wybrano nic lub to jest zdalna konfiguracja."
 
@@ -842,18 +842,18 @@ msgid "&IP Address or Host Name"
 msgstr "Adres &IP lub nazwa hosta"
 
 #. TRANSLATORS: Label for menu to search for remote servers
-#: src/connectionwizard.ycp:160 src/connectionwizard.ycp:356
+#: src/connectionwizard.ycp:160 src/connectionwizard.ycp:664
 msgid "Look Up"
 msgstr "Wyszukaj"
 
 #. TRANSLATORS: Button to search for remote servers
-#: src/connectionwizard.ycp:163 src/connectionwizard.ycp:359
+#: src/connectionwizard.ycp:163 src/connectionwizard.ycp:667
 msgid "Look Up for All Hosts"
 msgstr "Szukaj wszystkich hostów"
 
 #. TRANSLATORS: Button to test remote printer machine
-#: src/connectionwizard.ycp:173 src/connectionwizard.ycp:327
-#: src/connectionwizard.ycp:371 src/connectionwizard.ycp:415
+#: src/connectionwizard.ycp:173 src/connectionwizard.ycp:635
+#: src/connectionwizard.ycp:679 src/connectionwizard.ycp:740
 msgid "&Test Connection"
 msgstr "&Test połączenia"
 
@@ -864,225 +864,383 @@ msgstr "&Test połączenia"
 msgid "You may select a printer &manufacturer if no 'raw queue' should be set up"
 msgstr "Można wybrać &producenta drukarki, jeśli nie ma być ustawiona opcja \"raw queue\""
 
+#. Only a notification but no installation of HPLIP in the Connection Wizard.
+#. Installing the package hplip can pull in tons of required packages
+#. because the hplip package does not only provide the 'hp' backend but is a
+#. full featured multifunction solution with GUI for HP printers and all-in-one devices.
+#. HPLIP supports printing, scanning, faxing, photo card access, and device management.
+#. Additionally installing hplip can become very complicated (see driveradd.ycp).
+#. Therefore the Connection Wizard is not bloated with installing HPLIP.
+#. Popup::Message when the user had selected "HP Devices (HPLIP)"
+#. in the Connection Wizard but the RPM package hplip is not installed:
+#: src/connectionwizard.ycp:222
+msgid ""
+"To access a HP device via the 'hp' backend,\n"
+"the RPM package hplip must be installed."
+msgstr ""
+
+#: src/connectionwizard.ycp:227
+msgid "The RPM package hplip is not installed."
+msgstr ""
+
+#. Label for an editable ComboBox where
+#. a serial device node (e.g. /dev/ttyS0 or /dev/ttyS1)
+#. can be selected or entered:
+#: src/connectionwizard.ycp:245
+msgid "&Serial device"
+msgstr ""
+
+#. Label for an editable ComboBox where
+#. the baud rate for a serial device
+#. can be selected or entered:
+#: src/connectionwizard.ycp:271
+msgid "&Baud rate"
+msgstr ""
+
+#. Label for an editable ComboBox where
+#. the number of data bits for a serial device
+#. can be selected or entered:
+#: src/connectionwizard.ycp:301
+msgid "&Data bits"
+msgstr ""
+
+#. Label for an editable ComboBox where
+#. the parity checking for a serial device
+#. can be selected or entered:
+#: src/connectionwizard.ycp:320
+msgid "&Parity checking"
+msgstr ""
+
+#. Label for an editable ComboBox where
+#. the flow control for a serial device
+#. can be selected or entered:
+#: src/connectionwizard.ycp:344
+msgid "&Flow control"
+msgstr ""
+
+#. Label for an editable ComboBox where
+#. the number of stop bits for a serial device
+#. can be selected or entered:
+#: src/connectionwizard.ycp:365
+msgid "S&top bits"
+msgstr ""
+
+#: src/connectionwizard.ycp:379
+msgid "To access a bluetooth printer, the RPM package bluez-cups must be installed."
+msgstr ""
+
+#: src/connectionwizard.ycp:389
+msgid "The RPM package bluez-cups is not installed."
+msgstr ""
+
+#. Fallback message what the user may run manually when it fails
+#. to generate a valid list of bluetooth device IDs:
+#: src/connectionwizard.ycp:397
+msgid ""
+"It seems there are no bluetooth device IDs.\n"
+"Run 'hcitool scan' to get the bluetooth device IDs.\n"
+"Enter the ID without colons like '1A2B3C4D5E6F'."
+msgstr ""
+
+#. Busy message:
+#. Body of a Popup::ShowFeedback:
+#: src/connectionwizard.ycp:402
+msgid "Retrieving bluetooth device IDs..."
+msgstr ""
+
+#. Will probably never fail because the final "rm -f ..." should exit successfully in any case:
+#. Popup::ErrorDetails message:
+#: src/connectionwizard.ycp:413
+msgid "Failed to get a list of bluetooth device IDs."
+msgstr ""
+
+#. Label for an editable ComboBox where
+#. a bluetooth device ID
+#. can be selected or entered:
+#: src/connectionwizard.ycp:448
+#, fuzzy
+msgid "&Bluetooth device ID"
+msgstr "Bluetooth"
+
+#. TRANSLATORS: Frame label for a list of bluetooth device IDs:
+#: src/connectionwizard.ycp:455
+msgid "Currently available bluetooth device IDs"
+msgstr ""
+
+#. Fallback message what the user may run manually when it fails
+#. to generate the current list of SCSI generic device nodes:
+#: src/connectionwizard.ycp:467
+msgid ""
+"It seems there are no SCSI generic devices (/dev/sg...).\n"
+"Run 'lsscsi -g' to get a list of SCSI generic devices."
+msgstr ""
+
+#. Will probably never fail because the final "echo" should exit successfully in any case:
+#. Popup::ErrorDetails message:
+#: src/connectionwizard.ycp:471
+msgid "Failed to get a list of SCSI generic devices."
+msgstr ""
+
+#. Label for an editable ComboBox where
+#. a SCSI generic device node (e.g. /dev/sg0 or /dev/sg1)
+#. can be selected or entered:
+#: src/connectionwizard.ycp:489
+msgid "&SCSI generic device"
+msgstr ""
+
+#. TRANSLATORS: Frame label for a list of SCSI generic devices:
+#: src/connectionwizard.ycp:508
+msgid "Currently available SCSI generic devices"
+msgstr ""
+
 #. TRANSLATORS: List of input field labels,
 #. first for network scan button,
 #. second for the TCP port number:
-#: src/connectionwizard.ycp:231
+#: src/connectionwizard.ycp:522
 msgid "Scan for Direct Socket Servers"
 msgstr "Szukaj serwerów Direct Socket"
 
-#: src/connectionwizard.ycp:232
+#: src/connectionwizard.ycp:523
 msgid "TCP Port Number"
 msgstr "Numer portu TCP"
 
 #. TRANSLATORS: List of input field labels,
 #. first for network scan button,
 #. second for name of printer queue
-#: src/connectionwizard.ycp:242 src/connectionwizard.ycp:337
+#: src/connectionwizard.ycp:533 src/connectionwizard.ycp:645
 msgid "Scan for LPD Servers"
 msgstr "Szukaj serwerów LPD"
 
-#: src/connectionwizard.ycp:243
+#: src/connectionwizard.ycp:534
 msgid "Queue Name (see the printer's manual)"
 msgstr "Nazwa kolejki (zobacz manual drukarki)"
 
 #. TRANSLATORS: Input field label
-#: src/connectionwizard.ycp:255
+#: src/connectionwizard.ycp:546
 msgid "URI (see the printer's manual)"
 msgstr "URI (zobacz manual drukarki)"
 
+#: src/connectionwizard.ycp:556
+msgid "To access a SMB printer share, the RPM package samba-client must be installed."
+msgstr ""
+
+#: src/connectionwizard.ycp:566
+#, fuzzy
+msgid "The RPM package samba-client is not installed."
+msgstr "Nie można skonfigurować drukowania (wymagany pakiet cups-client nie jest zainstalowany)."
+
 #. TRANSLATORS: Text entry for remote server name
-#: src/connectionwizard.ycp:271
+#: src/connectionwizard.ycp:579
 msgid "Server (NetBIOS Host Name)"
 msgstr "Serwer (nazwa NetBIOS hosta)"
 
 #. TRANSLATORS: Text entry for printer name
-#: src/connectionwizard.ycp:287
+#: src/connectionwizard.ycp:595
 msgid "Printer (Share Name)"
 msgstr "Drukarka (nazwa udziału)"
 
 #. TRANSLATORS: Text entry for samba domain
-#: src/connectionwizard.ycp:296
+#: src/connectionwizard.ycp:604
 msgid "Workgroup (Domain Name)"
 msgstr "Grupa robocza (nazwa domeny)"
 
 #. TRANSLATORS: Frame label for authentication
-#: src/connectionwizard.ycp:308 src/connectionwizard.ycp:396
+#: src/connectionwizard.ycp:616 src/connectionwizard.ycp:721
 msgid "Authenticate As"
 msgstr "Uwierzytelnij jako"
 
 #. TRANSLATORS: Text entry for username (authentication)
-#: src/connectionwizard.ycp:313 src/connectionwizard.ycp:401
+#: src/connectionwizard.ycp:621 src/connectionwizard.ycp:726
 msgid "User"
 msgstr "Użytkownik"
 
 #. TRANSLATORS: Text entry for password (authentication)
-#: src/connectionwizard.ycp:318 src/connectionwizard.ycp:406
+#: src/connectionwizard.ycp:626 src/connectionwizard.ycp:731
 msgid "&Password"
 msgstr "&Hasło"
 
 #. TRANSLATORS: Text entry for name of remote printer queue
-#: src/connectionwizard.ycp:338 src/connectionwizard.ycp:365
-#: src/connectionwizard.ycp:390
+#: src/connectionwizard.ycp:646 src/connectionwizard.ycp:673
+#: src/connectionwizard.ycp:715
 msgid "Queue Name"
 msgstr "Nazwa kolejki"
 
 #. TRANSLATORS: Text entry for IP or hostname of remote server
-#: src/connectionwizard.ycp:352 src/connectionwizard.ycp:383
+#: src/connectionwizard.ycp:660 src/connectionwizard.ycp:708
 msgid "IP Address or Host Name"
 msgstr "Adres IP lub nazwa hosta"
 
-#: src/connectionwizard.ycp:357
+#: src/connectionwizard.ycp:665
 msgid "Scan for IPP Servers"
 msgstr "Szukaj serwerów IPP"
 
-#: src/connectionwizard.ycp:358
+#: src/connectionwizard.ycp:666
 msgid "Scan for IPP Broadcasts"
 msgstr "Nasłuchuj rozgłaszania IPP"
 
+#: src/connectionwizard.ycp:687
+msgid "To access an IPX print queue, the RPM package ncpfs must be installed."
+msgstr ""
+
+#: src/connectionwizard.ycp:697
+msgid "The RPM package ncpfs is not installed."
+msgstr ""
+
 #. TRANSLATORS: Text entry for URI (Uniform Resource Identifier)
-#: src/connectionwizard.ycp:429
+#: src/connectionwizard.ycp:754
 msgid "URI (Uniform Resource Identifier)"
 msgstr "URI (Uniform Resource Identifier)"
 
+#: src/connectionwizard.ycp:763
+msgid "To print via 'pipe', the RPM package cups-backends must be installed."
+msgstr ""
+
+#: src/connectionwizard.ycp:773 src/connectionwizard.ycp:802
+#, fuzzy
+msgid "The RPM package cups-backends is not installed."
+msgstr "Nie można skonfigurować drukowania (wymagany pakiet cups-client nie jest zainstalowany)."
+
 #. TRANSLATORS: Text entry for program name that will be called via pipe
-#: src/connectionwizard.ycp:442
+#: src/connectionwizard.ycp:784
 msgid "Program Name"
 msgstr "Nazwa programu"
 
+#: src/connectionwizard.ycp:792
+msgid "To use 'beh', the RPM package cups-backends must be installed."
+msgstr ""
+
 #. TRANSLATORS: Text entry for device URI (Uniform Resource Identifier)
-#: src/connectionwizard.ycp:455
+#: src/connectionwizard.ycp:814
 msgid "Device URI (for which 'beh' should be applied)"
 msgstr "URI urządzenia (dla którego 'beh' powinno być zastosowane)"
 
 #. TRANSLATORS: Check box
-#: src/connectionwizard.ycp:463
+#: src/connectionwizard.ycp:822
 msgid "Never Disable the Queue"
 msgstr "Nigdy nie blokuj kolejki"
 
 #. TRANSLATORS: Text entry
-#: src/connectionwizard.ycp:471
+#: src/connectionwizard.ycp:830
 msgid "Number of Retries ('0' means infinite retries)"
 msgstr "Liczba powtórzeń ('0' oznacza nieskończenie wiele powtórzeń)"
 
 #. TRANSLATORS: Text entry
-#: src/connectionwizard.ycp:479
+#: src/connectionwizard.ycp:838
 msgid "Delay in Seconds Between Two Retries"
 msgstr "Opóźnienie w sekundach pomiędzy powtórzeniami"
 
-#: src/connectionwizard.ycp:493 src/connectionwizard.ycp:589
+#: src/connectionwizard.ycp:852 src/connectionwizard.ycp:947
 msgid "Select a specific connection type."
 msgstr "Wybór określonego typu połączenia."
 
 #. TRANSLATORS: Label for tree widget description
-#: src/connectionwizard.ycp:512
+#: src/connectionwizard.ycp:871
 msgid "&Connection Type"
 msgstr "Typ &połączenia"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:516
+#: src/connectionwizard.ycp:875
 msgid "Directly Connected Device"
 msgstr "Drukarki podłączone bezpośrednio"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:519
+#: src/connectionwizard.ycp:878
 msgid "Parallel Port"
 msgstr "Port równoległy"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:521
+#: src/connectionwizard.ycp:880
 msgid "USB Port"
 msgstr "Port USB"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:523
-msgid "Serial Port"
-msgstr "Port szeregowy"
-
-#. `item( `id(`infra), _("Infrared Port (IrDA)") ),
-#. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:526
-msgid "Bluetooth"
-msgstr "Bluetooth"
-
-#. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:528
-msgid "SCSI"
-msgstr "SCSI"
-
-#. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:530
+#: src/connectionwizard.ycp:882
 msgid "HP Devices (HPLIP)"
 msgstr "Urządzenie HP (HPLIP)"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:536
+#: src/connectionwizard.ycp:884
+msgid "Serial Port"
+msgstr "Port szeregowy"
+
+#. TRANSLATORS: Tree widget item
+#: src/connectionwizard.ycp:886
+msgid "Bluetooth"
+msgstr "Bluetooth"
+
+#. TRANSLATORS: Tree widget item
+#: src/connectionwizard.ycp:888
+msgid "SCSI"
+msgstr "SCSI"
+
+#. TRANSLATORS: Tree widget item
+#: src/connectionwizard.ycp:894
 msgid "Access Network Printer or Printserver Box via"
 msgstr "Dostęp do drukarki sieciowej albo serwera z usługą wydruku poprzez"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:539
+#: src/connectionwizard.ycp:897
 msgid "TCP Port (AppSocket/JetDirect)"
 msgstr "Port TCP (AppSocket/JetDirect)"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:541
+#: src/connectionwizard.ycp:899
 msgid "Line Printer Daemon (LPD) Protocol"
 msgstr "Protokół Line Printer Daemon (LPD) "
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:543
+#: src/connectionwizard.ycp:901
 msgid "Internet Printing Protocol (IPP)"
 msgstr "Internet Printing Protocol (IPP)"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:549
+#: src/connectionwizard.ycp:907
 msgid "Print Via Print Server Machine"
 msgstr "Drukuj poprzez serwer drukujący"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:552
+#: src/connectionwizard.ycp:910
 msgid "Microsoft Windows/SAMBA (SMB/CIFS)"
 msgstr "Microsoft Windows/SAMBA (SMB/CIFS)"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:554
+#: src/connectionwizard.ycp:912
 msgid "Traditional UNIX Server (LPR)"
 msgstr "Tradycyjny serwer UNIX (LPR)"
 
 #. `item( `id(`iprint), _("iPrint (Novell OES)") ),
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:557
+#: src/connectionwizard.ycp:915
 msgid "CUPS Server"
 msgstr "Serwer CUPS"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:559
+#: src/connectionwizard.ycp:917
 msgid "Novell Netware Print Server (IPX)"
 msgstr "Serwer drukujący Novell Netware (IPX)"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:565
+#: src/connectionwizard.ycp:923
 msgid "Special"
 msgstr "Specjalne"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:568
+#: src/connectionwizard.ycp:926
 msgid "Specify Arbitrary Device URI"
 msgstr "Określ URI urządzenia"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:570
+#: src/connectionwizard.ycp:928
 msgid "Send Print Data to Other Program (pipe)"
 msgstr "Wyślij dane do druku do innego programu (kolejki)"
 
 #. TRANSLATORS: Tree widget item
-#: src/connectionwizard.ycp:572
+#: src/connectionwizard.ycp:930
 msgid "Daisy-chain Backend Error Handler (beh)"
 msgstr "Daisy-chain beh - handler kontroli błędów"
 
 #. TRANSLATORS: Connection details widget
-#: src/connectionwizard.ycp:584
+#: src/connectionwizard.ycp:942
 msgid "Connection Settings"
 msgstr "Ustawienia połączenia"
 
@@ -1098,51 +1256,83 @@ msgstr "Ustawienia połączenia"
 #. According to http://en.opensuse.org/YaST/Style_Guide#Single_Configuration.2FOverview.2FEdit_Dialog
 #. the "finish" button in a single (step) configuration dialog must now be named "OK".
 #. TRANSLATORS: Connection wizard header
-#: src/connectionwizard.ycp:611
+#: src/connectionwizard.ycp:969
 msgid "Connection Wizard"
 msgstr "Kreator połączeń"
 
-#: src/connectionwizard.ycp:654 src/connectionwizard.ycp:670
-msgid "URI couldn't be empty!"
-msgstr "Adres URI nie może być pusty!"
-
-#: src/connectionwizard.ycp:660 src/connectionwizard.ycp:676
-#: src/connectionwizard.ycp:727 src/connectionwizard.ycp:748
-#: src/connectionwizard.ycp:769 src/connectionwizard.ycp:790
-#: src/connectionwizard.ycp:811 src/connectionwizard.ycp:841
-#: src/connectionwizard.ycp:871 src/connectionwizard.ycp:888
-msgid "Select a manufacturer!"
-msgstr "Proszę wybrać producenta!"
-
-#: src/connectionwizard.ycp:690
-msgid "Servername and printer couldn't be empty!"
-msgstr "Nazwa serwera i drukarka nie mogą być puste!"
-
-#: src/connectionwizard.ycp:696
-msgid "Both user and password must be specified!"
-msgstr "Należy określić użytkownika i hasło!"
-
-#: src/connectionwizard.ycp:742
-msgid "Servername and port couldn't be empty!"
+#: src/connectionwizard.ycp:1012
+#, fuzzy
+msgid "Serial device and baud rate could not be empty."
 msgstr "Nazwa serwera i port nie mogą być puste!"
 
-#: src/connectionwizard.ycp:763 src/connectionwizard.ycp:784
-#: src/connectionwizard.ycp:805 src/connectionwizard.ycp:825
-msgid "Servername and queue name couldn't be empty!"
+#: src/connectionwizard.ycp:1016
+msgid "The 'space' parity checking is only supported with 7 data bits."
+msgstr ""
+
+#: src/connectionwizard.ycp:1020
+msgid "The 'mark' parity checking is only supported with 7 data bits and 1 stop bit."
+msgstr ""
+
+#: src/connectionwizard.ycp:1044 src/connectionwizard.ycp:1061
+#: src/connectionwizard.ycp:1078 src/connectionwizard.ycp:1094
+#: src/connectionwizard.ycp:1110 src/connectionwizard.ycp:1161
+#: src/connectionwizard.ycp:1182 src/connectionwizard.ycp:1203
+#: src/connectionwizard.ycp:1224 src/connectionwizard.ycp:1245
+#: src/connectionwizard.ycp:1275 src/connectionwizard.ycp:1305
+#: src/connectionwizard.ycp:1322
+#, fuzzy
+msgid "Select a manufacturer."
+msgstr "Proszę wybrać producenta!"
+
+#: src/connectionwizard.ycp:1051
+msgid "Bluetooth device ID could not be empty."
+msgstr ""
+
+#: src/connectionwizard.ycp:1068
+#, fuzzy
+msgid "SCSI generic device could not be empty."
+msgstr "Nazwa serwera i drukarka nie mogą być puste!"
+
+#: src/connectionwizard.ycp:1088 src/connectionwizard.ycp:1104
+#, fuzzy
+msgid "URI could not be empty."
+msgstr "Adres URI nie może być pusty!"
+
+#: src/connectionwizard.ycp:1124
+#, fuzzy
+msgid "Servername and printer could not be empty."
+msgstr "Nazwa serwera i drukarka nie mogą być puste!"
+
+#: src/connectionwizard.ycp:1130
+#, fuzzy
+msgid "Both user and password must be specified."
+msgstr "Należy określić użytkownika i hasło!"
+
+#: src/connectionwizard.ycp:1176
+#, fuzzy
+msgid "Servername and port could not be empty."
+msgstr "Nazwa serwera i port nie mogą być puste!"
+
+#: src/connectionwizard.ycp:1197 src/connectionwizard.ycp:1218
+#: src/connectionwizard.ycp:1239 src/connectionwizard.ycp:1259
+#, fuzzy
+msgid "Servername and queue name could not be empty."
 msgstr "Nazwa serwera i kolejki nie mogą być puste!"
 
-#: src/connectionwizard.ycp:856
-msgid "Device URI, number of retries, and delay couldn't be empty!"
+#: src/connectionwizard.ycp:1290
+#, fuzzy
+msgid "Device URI, number of retries, and delay could not be empty."
 msgstr "Adres URI urządzenia, liczba prób oraz opóźnienie nie moga być puste!"
 
-#: src/connectionwizard.ycp:882
-msgid "Couldn't be empty!"
+#: src/connectionwizard.ycp:1316
+#, fuzzy
+msgid "Could not be empty."
 msgstr "Nie może być puste!"
 
 #. Message of a Popup::ErrorDetails
 #. where %1 will be replaced by the port number
 #. and %2 will be replaced by the host name:
-#: src/connectionwizard.ycp:962
+#: src/connectionwizard.ycp:1396
 #, ycp-format
 msgid "Access test failed for port '%1' on host '%2'."
 msgstr "Test dostępu do portu \"%1\" na hoście \"%2\" nie powiódł się."
@@ -1150,8 +1340,8 @@ msgstr "Test dostępu do portu \"%1\" na hoście \"%2\" nie powiódł się."
 #. Message of a Popup::ErrorDetails
 #. where %1 will be replaced by the queue name
 #. and %2 will be replaced by the host name:
-#: src/connectionwizard.ycp:986 src/connectionwizard.ycp:1008
-#: src/connectionwizard.ycp:1062
+#: src/connectionwizard.ycp:1420 src/connectionwizard.ycp:1442
+#: src/connectionwizard.ycp:1496
 #, ycp-format
 msgid "Access test failed for queue '%1' on host '%2'."
 msgstr "Test dostępu do kolejki \"%1\" na hoście \"%2\" nie powiódł się."
@@ -1159,12 +1349,12 @@ msgstr "Test dostępu do kolejki \"%1\" na hoście \"%2\" nie powiódł się."
 #. Message of a Popup::ErrorDetails
 #. where %1 will be replaced by the SMB share name
 #. and %2 will be replaced by the host name:
-#: src/connectionwizard.ycp:1036
+#: src/connectionwizard.ycp:1470
 #, ycp-format
 msgid "Access test failed for share '%1' on host '%2'."
 msgstr "Test dostępu do udziału \"%1\" na hoście \"%2\" nie powiódł się."
 
-#: src/connectionwizard.ycp:1072
+#: src/connectionwizard.ycp:1506
 msgid "Test OK"
 msgstr "Test zakończony powodzeniem"
 
@@ -1240,65 +1430,56 @@ msgstr "Pliki opisu drukarek dla drukarek PostScript"
 msgid "The Omni Printer Driver (Unmaintained)"
 msgstr "Sterownik drukarki Omni(nie wspierany)"
 
-#. CheckBox to select or un-select the printer driver package filters
-#. which provides some makeshift drivers only for a few of the
-#. non-standard printers (the so called "GDI printers").
-#. There is no need to have the package name "filters" in this text
-#. because it is shown in a separated column to the left of this text.
-#: src/driveradd.ycp:129
-msgid "Makeshift Drivers for a Few Non-Standard (GDI) Printers"
-msgstr "Sterownik Makeshift dla kilku nie standardowych drukarek(GDI)"
-
 #. Header for a dialog section where the user can
 #. make a printer description file (PPD file) available
 #. so that it can be used to set up a print queue with it:
-#: src/driveradd.ycp:142
+#: src/driveradd.ycp:130
 msgid "Make a Printer Description File Available"
 msgstr "Uczyń plik opisu drukarki dostępnym"
 
 #. TextEntry to specify the full path of a PPD file:
-#: src/driveradd.ycp:152
+#: src/driveradd.ycp:140
 msgid "&Printer description file name with full path where it is located"
 msgstr "Nazwa pliku opisu drukarki z pełną ścieżką gdzie się znajduje"
 
 #. Label of a PushButton to open a file selection box
 #. to browse the file system to select a PPD file:
-#: src/driveradd.ycp:160
+#: src/driveradd.ycp:148
 msgid "&Browse"
 msgstr "Przeglądaj"
 
 #. Header for a AskForExistingFile popup dialog
 #. to browse the file system to select a PPD file:
-#: src/driveradd.ycp:197
+#: src/driveradd.ycp:185
 msgid "Select a printer description file"
 msgstr "Proszę wybrać plik opisu drukarki"
 
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the file name:
-#: src/driveradd.ycp:415
+#: src/driveradd.ycp:389
 #, ycp-format
 msgid "Cannot access '%1'"
 msgstr "Brak dostępu do '%1'"
 
 #. Popup::ErrorDetails message:
-#: src/driveradd.ycp:426
+#: src/driveradd.ycp:400
 msgid "The printer description file is not in compliance to the specification."
 msgstr "Plik opisu drukarki nie jest zgodny ze specyfikacją."
 
 #. Header of a Popup::ContinueCancelHeadline
 #. when a PPD file is not in compliance:
-#: src/driveradd.ycp:433
+#: src/driveradd.ycp:407
 msgid "Use the printer description file regardless of its errors?"
 msgstr "Użyć tego pliku pomimo błędów które zawiera?"
 
 #. Body of a Popup::ContinueCancelHeadline
 #. when PPD file is not in compliance:
-#: src/driveradd.ycp:436
+#: src/driveradd.ycp:410
 msgid "A non-compliant printer description file can lead to arbitrary failures."
 msgstr "Nie prawidłowy plik opisu drukarki może spowodować poważne błędy."
 
 #. Popup::ErrorDetails message:
-#: src/driveradd.ycp:445
+#: src/driveradd.ycp:419
 msgid "Failed make the printer description file available"
 msgstr "Nie udało się uczynić pliku opisu drukarki dostępnym."
 
@@ -2082,24 +2263,28 @@ msgid ""
 "hp:/usb/HP_LaserJet?serial=1234<br>\n"
 "Usually only the autogenerated device URIs work.\n"
 "When the device is not autodetected, there is usually no communication\n"
-"with the device possible and no data can be sent to the device.\n"
+"with the device possible and no data can be sent to the device.<br>\n"
+"To access a HP printer or all-in-one device via the backend 'hp',\n"
+"the RPM package hplip must be installed.\n"
+"The package provides HP's printing and scanning software HPLIP.<br>\n"
+"In contrast devices which are connected via serial port, bluetooth,\n"
+"or SCSI are usually not autodetected so that the device URI must be\n"
+"manually specified.\n"
+"The serial device URI parameters must comply with\n"
+"what the serial port in the printer requires,\n"
+"see the manual of your serial printer.\n"
+"Example device URIs:<br>\n"
+"serial:/dev/ttyS9?baud=9600+bits=8+parity=none+flow=soft+stop=1<br>\n"
+"bluetooth://1A2B3C4D5E6F<br>\n"
+"scsi:/dev/sg9<br>\n"
+"To access a device via bluetooth, the RPM package bluez-cups must be installed.\n"
+"The package provides the CUPS backend 'bluetooth' which actually sends the data\n"
+"to a bluetooth printer.\n"
 "</p>"
 msgstr ""
-"<p>\n"
-"<b><big>URI dla urządzeń podłączonych bezpośrednio</big></b><br>\n"
-"Urządzenie podłączone poprzez port szeregowy lub USB\n"
-"zostaje automatycznie wykryte i otrzymuje prawidłowy adres URI.\n"
-"Na przykład:<br>\n"
-"parallel:/dev/lp0<br>\n"
-"usb://ACME/FunPrinter<br>\n"
-"hp:/usb/HP_LaserJet?serial=1234<br>\n"
-"Zazwyczaj działanie urządzenia gwarantuje URI przydzielone automatycznie.W przypadku,\n"
-"kiedy urządzenie nie zostanie wykryte nie jest możliwa z urządzeniem\n"
-"komunikacja oraz żadne dane nie mogą zostać przesłane do urządzenia.\n"
-"</p>"
 
 #. ConnectionWizardDialog help 4/6:
-#: src/helps.ycp:416
+#: src/helps.ycp:432
 msgid ""
 "<p>\n"
 "<b><big>Device URIs to Access a Network Printer or a Printserver Box</big></b><br>\n"
@@ -2173,7 +2358,8 @@ msgstr ""
 "</p>"
 
 #. ConnectionWizardDialog help 5/6:
-#: src/helps.ycp:453
+#: src/helps.ycp:469
+#, fuzzy
 msgid ""
 "<p>\n"
 "<b><big>Device URIs to Print Via a Print Server Machine</big></b><br>\n"
@@ -2183,6 +2369,10 @@ msgid ""
 "Ask your network administrator what which print server machine\n"
 "provides in your particular network:<br>\n"
 "<b>Microsoft Windows/SAMBA (SMB/CIFS)</b><br>\n"
+"To access a SMB printer share, the RPM package samba-client must be installed.\n"
+"The package provides the CUPS backend 'smb' which is a link to\n"
+"the <tt>/usr/bin/smbspool</tt> program which actually sends the data\n"
+"to a SMB printer share.\n"
 "A server name and a printer share name and optionally a workgroup name\n"
 "is needed to access it.\n"
 "Furthermore a user name and a password may be required to get access.\n"
@@ -2266,7 +2456,7 @@ msgstr ""
 "</p>"
 
 #. ConnectionWizardDialog help 6/6:
-#: src/helps.ycp:498
+#: src/helps.ycp:518
 msgid ""
 "<p>\n"
 "<b><big>Special Device URIs</big></b><br>\n"
@@ -2345,7 +2535,7 @@ msgstr ""
 "</p>"
 
 #. PrintingViaNetworkDialog help 1/3:
-#: src/helps.ycp:538
+#: src/helps.ycp:558
 msgid ""
 "<p>\n"
 "<b><big>Printing Via Network</big></b><br>\n"
@@ -2403,7 +2593,7 @@ msgstr ""
 "</p>"
 
 #. PrintingViaNetworkDialog help 2/3:
-#: src/helps.ycp:564
+#: src/helps.ycp:584
 msgid ""
 "<p>\n"
 "If you print only via network and if you use only one single CUPS server,\n"
@@ -2419,7 +2609,7 @@ msgstr ""
 "</p>"
 
 #. PrintingViaNetworkDialog help 3/3:
-#: src/helps.ycp:570
+#: src/helps.ycp:590
 msgid ""
 "<p>\n"
 "If there is no CUPS server in your network or if you must additionally use\n"
@@ -2438,7 +2628,7 @@ msgstr ""
 "</p>"
 
 #. SharingDialog help 1/3:
-#: src/helps.ycp:580
+#: src/helps.ycp:600
 msgid ""
 "<p>\n"
 "<b><big>Sharing Print Queues and Publish Them Via Network</big></b><br>\n"
@@ -2461,7 +2651,7 @@ msgstr ""
 "</p>"
 
 #. SharingDialog help 2/3:
-#: src/helps.ycp:590
+#: src/helps.ycp:610
 msgid ""
 "<p>\n"
 "First of all CUPS client systems must be allowed to access the CUPS server.\n"
@@ -2484,7 +2674,7 @@ msgstr ""
 "</p>"
 
 #. SharingDialog help 3/3:
-#: src/helps.ycp:599
+#: src/helps.ycp:619
 msgid ""
 "<p>\n"
 "Regarding firewall:<br>\n"
@@ -2524,7 +2714,7 @@ msgstr ""
 "</p>"
 
 #. Policies help 1/2:
-#: src/helps.ycp:619
+#: src/helps.ycp:639
 msgid ""
 "<p>\n"
 "<b><big>CUPS Operation Policy</big></b><br>\n"
@@ -2543,7 +2733,7 @@ msgstr ""
 "</p>"
 
 #. Policies help 2/2:
-#: src/helps.ycp:627
+#: src/helps.ycp:647
 msgid ""
 "<p>\n"
 "<b><big>CUPS Error Policy</big></b><br>\n"
@@ -2587,7 +2777,7 @@ msgstr ""
 "</p>"
 
 #. Autoconfig help 1/1:
-#: src/helps.ycp:651
+#: src/helps.ycp:671
 msgid ""
 "<p>\n"
 "<b><big>CUPS Autoconfiguration for USB Printers</big></b><br>\n"
@@ -2718,7 +2908,7 @@ msgid "CUPS Server %1"
 msgstr "Usługa CUPS %1"
 
 #. Body of a Popup::AnyMessage when no queue was selected from the list:
-#: src/overview.ycp:364 src/overview.ycp:408 src/overview.ycp:640
+#: src/overview.ycp:364 src/overview.ycp:408 src/overview.ycp:668
 msgid "Select an entry."
 msgstr "Wybierz wpis."
 
@@ -2773,33 +2963,35 @@ msgstr "Wyjście drukarki zablokowane"
 msgid "The testpage cannot be printed because printout is disabled."
 msgstr "Strona testowa nie może zostać wydrukowana ponieważ wyjście drukarki jest zablokowane."
 
-#. Header of a confirmation popup before all pending jobs in a queue will be deleted:
-#: src/overview.ycp:446 src/overview.ycp:531
-msgid "Delete Pending Print Jobs"
-msgstr "Odrzucanie zadań drukowania"
-
-#. Body of a confirmation popup before a queue will be deleted:
-#: src/overview.ycp:448
+#. Fallback body of a confirmation popup before pending print jobs will be deleted:
+#: src/overview.ycp:446
 msgid "There are pending print jobs which might be deleted before the testpage is printed."
 msgstr "Istnieją zadania drukowania które zostaną usunięte przed wydrukowaniem strony testowej."
 
+#. Header of a confirmation popup before pending print jobs will be deleted
+#. where %1 will be replaced by the queue name.
+#: src/overview.ycp:458 src/overview.ycp:556
+#, fuzzy, ycp-format
+msgid "Delete Pending Print Jobs For %1"
+msgstr "Odrzucanie zadań drukowania"
+
 #. 'Yes' button label of a confirmation popup
 #. before all pending jobs in a queue will be deleted:
-#: src/overview.ycp:451 src/overview.ycp:536
-#, ycp-format
-msgid "Delete all pending jobs for %1"
-msgstr "Usuwanie wszystkich zadań drukowania dla %1"
+#: src/overview.ycp:464
+msgid "Delete them before printing testpage"
+msgstr ""
 
 #. 'No' button label of a confirmation popup
 #. before all pending jobs in a queue will be deleted:
-#: src/overview.ycp:454
-msgid "Print the testpage after the other jobs"
+#: src/overview.ycp:467
+#, fuzzy
+msgid "Print testpage after the other jobs"
 msgstr "Proszę wydrukować stronę testową po innych zadaniach drukowania."
 
 #. Message of a Popup::ErrorDetails
 #. where %1 will be replaced by the queue name.
 #. Only a simple message because this error does not happen on a normal system.
-#: src/overview.ycp:462 src/overview.ycp:547
+#: src/overview.ycp:475 src/overview.ycp:573
 #, ycp-format
 msgid "Failed to delete all pending jobs for %1."
 msgstr "Nie udało się usunąć wszystkich zadań dla %1."
@@ -2807,46 +2999,53 @@ msgstr "Nie udało się usunąć wszystkich zadań dla %1."
 #. Message of a Popup::ErrorDetails
 #. where %1 will be replaced by the queue name.
 #. Only a simple message because this error does not happen on a normal system.
-#: src/overview.ycp:486
+#: src/overview.ycp:499
 #, ycp-format
 msgid "Failed to print testpage for %1."
 msgstr "Nie udało się wydrukować strony testowej dla %1."
 
 #. Popup::TimedAnyQuestion header:
-#: src/overview.ycp:494
+#: src/overview.ycp:507
 msgid "Wait Until Testprint Finished"
 msgstr "Oczekiwanie na ukończenie testu drukowania..."
 
 #. Popup::TimedAnyQuestion message
 #. where %1 will be replaced by the queue name.
-#: src/overview.ycp:497
+#: src/overview.ycp:510
 #, ycp-format
 msgid "Sent testpage to %1. It should start to print soon."
 msgstr "Wyślij stronę testową do %1. Za chwilę powinno rozpocząć się drukowanie."
 
-#. Body of a confirmation popup before a queue will be deleted:
-#: src/overview.ycp:533
+#. Fallback body of a confirmation popup before pending print jobs will be deleted:
+#: src/overview.ycp:544
 msgid "There are pending print jobs which might be deleted now."
 msgstr "Istnieją zadania drukowania które zostaną teraz usunięte."
 
+#. 'Yes' button label of a confirmation popup
+#. before all pending jobs in a queue will be deleted:
+#: src/overview.ycp:562
+#, fuzzy
+msgid "Delete all pending jobs"
+msgstr "Usuwanie wszystkich zadań drukowania dla %1"
+
 #. 'No' button label of a confirmation popup
 #. before all pending jobs in a queue will be deleted:
-#: src/overview.ycp:539
+#: src/overview.ycp:565
 msgid "Do not delete them"
 msgstr "Nie usuwaj ich"
 
 #. PopupYesNoHeadline body:
-#: src/overview.ycp:600
+#: src/overview.ycp:628
 msgid "A remote CUPS server setting conflicts with adding a configuration."
 msgstr "Zdalny serwer CUPS stwarza problemy przy dodawaniu konfiguracji"
 
 #. Header of a Popup::AnyMessage when a remote queue was selected to be modified:
-#: src/overview.ycp:646
+#: src/overview.ycp:674
 msgid "Cannot Modify"
 msgstr "Nie można zmienić"
 
 #. Body of a Popup::AnyMessage when a remote queue was selected to be modified:
-#: src/overview.ycp:648
+#: src/overview.ycp:676
 msgid "This is a remote configuration. Only local configurations can be modified."
 msgstr "To jest konfiguracja zdalna. Tylko lokalna konfiguracja może być zmieniona."
 
@@ -2972,14 +3171,15 @@ msgstr "&Drukarka"
 #. that printer information is accepted from
 #. all remote CUPS servers:
 #: src/printingvianetwork.ycp:48
-msgid "all hosts"
-msgstr "wszystkie hosty"
+msgid "accept from anywhere"
+msgstr ""
 
 #. An entry for a ComboBox from which the user can select
 #. that printer information is accepted from
 #. remote CUPS servers in the local network:
 #: src/printingvianetwork.ycp:52
-msgid "hosts in the local network"
+#, fuzzy
+msgid "accept from all hosts in the local network"
 msgstr "hosty w sieci lokalnej"
 
 #. An entry for a ComboBox from which the user can select
@@ -2987,7 +3187,8 @@ msgstr "hosty w sieci lokalnej"
 #. remote CUPS servers with specific addresses
 #. where the specific addresses are specified in a TextEntry below:
 #: src/printingvianetwork.ycp:57
-msgid "only specific addresses"
+#, fuzzy
+msgid "accept only from the specific addresses below"
 msgstr "jedynie specyficzne adresy"
 
 #. A caption for a Frame to set up to use CUPS to print via network:
@@ -2997,103 +3198,100 @@ msgstr "Użyj CUPS do drukowania przez sieć"
 
 #. A RadioButton to not receive printer information from remote CUPS servers:
 #: src/printingvianetwork.ycp:72
-msgid "&Do not Receive Printer Information from Remote CUPS servers"
+#, fuzzy
+msgid "&Do Not Accept Printer Information from Remote CUPS Servers"
 msgstr "&Nie odbieraj informacji drukarki ze zdalnego serwera CUPS"
 
 #. A RadioButton to receive printer information from remote CUPS servers:
 #: src/printingvianetwork.ycp:80
-msgid "Receive Printer &Information from Remote CUPS servers"
-msgstr "Odbierz informacje drukarki z zdalnego serwera CUPS"
-
-#. A header for a section to set up from which remote CUPS servers
-#. printer information is accepted:
-#: src/printingvianetwork.ycp:91
-msgid "Accept Information from the Following Servers"
+#, fuzzy
+msgid "Accept Printer &Information from the Following Servers"
 msgstr "Zatwierdź informacje z podanego serwera"
 
 #. A header for a ComboBox from which the user can select
 #. a usual general setting from which remote CUPS servers
 #. printer information is accepted:
-#: src/printingvianetwork.ycp:101
-msgid "Usual &General Setting"
+#: src/printingvianetwork.ycp:93
+#, fuzzy
+msgid "&General Setting"
 msgstr "Zwyczajne ustawienia główne"
 
 #. A header for a TextEntry where the user can optionally
 #. enter specific IP addresses and/or network/netmask
 #. from where remote printer information is accepted:
-#: src/printingvianetwork.ycp:114
+#: src/printingvianetwork.ycp:106
 msgid "Optional Specific IP Addresses or &Network/Netmask (separated by space)"
 msgstr "Opcjonalne adresy IP lub &sieć/maska(oddzielone spacją)"
 
 #. A notification to make the user aware of possible Firewall restrictions
 #. regarding allow incomming printer information from remote CUPS servers:
-#: src/printingvianetwork.ycp:122
+#: src/printingvianetwork.ycp:114
 msgid "If a firewall is used, check that incomming packages on UDP port 631 are allowed."
 msgstr "W przypadku uruchomien zapory sieciowej należy sprawdzić czy jest dozwolony ruch przychodzący pakietów UDP na porcie 631."
 
 #. A RadioButton to do all printing tasks directly
 #. only via one single remote CUPS server:
-#: src/printingvianetwork.ycp:133
+#: src/printingvianetwork.ycp:125
 msgid "Do All Your Printing Directly via &One Remote CUPS Server"
 msgstr "Czy wszystkie wydruki mają być bezpośrednio przez &jeden zdalny serwer CUPS"
 
 #. A header for a TextEntry where the user can enter
 #. the one single remote CUPS server which is used
 #. to do all his printing tasks:
-#: src/printingvianetwork.ycp:143
+#: src/printingvianetwork.ycp:135
 msgid "&CUPS server name / IP Address"
 msgstr "Nazwa serwera CUPS / Adres IP"
 
 #. A PushButton to test whether or not the one single remote CUPS server
 #. which is used to do all printing tasks is accessible:
-#: src/printingvianetwork.ycp:151
+#: src/printingvianetwork.ycp:143
 msgid "&Test Server"
 msgstr "&Testuj serwer"
 
 #. A caption for a Frame to set up to use another (i.e. non-CUPS) print server
 #. or to set up to use a network printer directly:
-#: src/printingvianetwork.ycp:163
+#: src/printingvianetwork.ycp:155
 msgid "Use Another Print Server or Use a Network Printer Directly"
 msgstr "Użyj innego serwera wydruku lub użyj drukarki sieciowej bezpośrednio"
 
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:179
+#: src/printingvianetwork.ycp:171
 #, ycp-format
 msgid "The server '%1' is accessible via port 631 (IPP/CUPS)."
 msgstr "Serwer '%1' jest dostępny przez por 631 (IPP/CUPS)"
 
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:184
+#: src/printingvianetwork.ycp:176
 #, ycp-format
 msgid "The server '%1' is not accessible via port 631 (IPP/CUPS)."
 msgstr "Serwer '%1' jest nie dostępny przez port 631 (IPP/CUPS)"
 
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:189
+#: src/printingvianetwork.ycp:181
 #, ycp-format
 msgid "The server '%1' responds to a 'ping' in the network."
 msgstr "Serwer '%1' odpowiada na 'ping' w sieci."
 
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:194
+#: src/printingvianetwork.ycp:186
 #, ycp-format
 msgid "The server '%1' does not respond to a 'ping' in the network."
 msgstr "Serwer '%1' nie odpowiada na 'ping' w sieci."
 
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:199
+#: src/printingvianetwork.ycp:191
 #, ycp-format
 msgid "The server name '%1' is known in the network."
 msgstr "Nazwa serwera '%1' nie jest znana w sieci."
 
 #. Popup message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:204
+#: src/printingvianetwork.ycp:196
 #, ycp-format
 msgid "The server name '%1' is not known in the network."
 msgstr "Serwer '%1' nie jest znany w sieci."
@@ -3101,24 +3299,24 @@ msgstr "Serwer '%1' nie jest znany w sieci."
 #. netcat is required for a meaningful test.
 #. Show negative feedback:
 #. Popup::ErrorDetails message:
-#: src/printingvianetwork.ycp:220
+#: src/printingvianetwork.ycp:212
 msgid "Cannot execute the program 'netcat'"
 msgstr "Nie można uruchomić program 'netcat'"
 
 #. Popup::ErrorDetails details:
-#: src/printingvianetwork.ycp:222
+#: src/printingvianetwork.ycp:214
 msgid "The RPM package 'netcat' is required for a meaningful test."
 msgstr "Pakiet rpm 'netcat' jest wymagany do testów."
 
 #. ping is required for the less meaningful test.
 #. Show negative feedback:
 #. Popup::ErrorDetails message
-#: src/printingvianetwork.ycp:256
+#: src/printingvianetwork.ycp:248
 msgid "Cannot execute the program 'ping'"
 msgstr "Nie można uruchomić programu 'ping'"
 
 #. Popup::ErrorDetails details:
-#: src/printingvianetwork.ycp:258
+#: src/printingvianetwork.ycp:250
 msgid "The RPM package 'iputils' is required for a meaningful test."
 msgstr "Pakiet rpm 'iputils' jest wymagany do testów."
 
@@ -3126,7 +3324,7 @@ msgstr "Pakiet rpm 'iputils' jest wymagany do testów."
 #. Show negative feedback:
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:271
+#: src/printingvianetwork.ycp:263
 #, ycp-format
 msgid "The server '%1' is not accessible"
 msgstr "Sewer %1 jest niedostępny."
@@ -3134,12 +3332,12 @@ msgstr "Sewer %1 jest niedostępny."
 #. host is required for the last test.
 #. Show negative feedback:
 #. Popup::ErrorDetails message
-#: src/printingvianetwork.ycp:293
+#: src/printingvianetwork.ycp:285
 msgid "Cannot execute the program 'host'"
 msgstr "Nie można wykonać programu 'host'"
 
 #. Popup::ErrorDetails details:
-#: src/printingvianetwork.ycp:295
+#: src/printingvianetwork.ycp:287
 msgid "The RPM package 'bind-utils' is required for a meaningful test."
 msgstr "Pakiet rpm 'bind-utils' jest wymagany do testów"
 
@@ -3147,7 +3345,7 @@ msgstr "Pakiet rpm 'bind-utils' jest wymagany do testów"
 #. Show negative feedback:
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:308
+#: src/printingvianetwork.ycp:300
 #, ycp-format
 msgid "The server '%1' does not respond in the network"
 msgstr "Serwer '%1' nie odpowiada w sieci"
@@ -3156,13 +3354,13 @@ msgstr "Serwer '%1' nie odpowiada w sieci"
 #. Show negative feedback:
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:324
+#: src/printingvianetwork.ycp:316
 #, ycp-format
 msgid "The server '%1' is unknown"
 msgstr "Nieznany serwer '%1'"
 
 #. Popup::ErrorDetails message:
-#: src/printingvianetwork.ycp:361
+#: src/printingvianetwork.ycp:353
 msgid "Failed to set 'BrowseAllow none' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić 'BrowseAllow none' w /etc/cups/cupsd.conf"
 
@@ -3178,7 +3376,7 @@ msgstr "Nie udało się ustawić 'BrowseAllow none' w /etc/cups/cupsd.conf"
 #. because they can just click the [OK] button to continue but then
 #. they are at least informend why there may be still remote queues:
 #. Popup message:
-#: src/printingvianetwork.ycp:383
+#: src/printingvianetwork.ycp:375
 msgid ""
 "When switching from 'receive information' to 'do not receive information'\n"
 "it takes usually 5 minutes until already received information faded away..."
@@ -3188,24 +3386,24 @@ msgstr ""
 
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:414 src/printingvianetwork.ycp:676
+#: src/printingvianetwork.ycp:406 src/printingvianetwork.ycp:668
 #, ycp-format
 msgid "Failed to set 'ServerName %1' in /etc/cups/client.conf"
 msgstr "Nie udało się ustawić 'ServerName %1' w /etc/cups/client.conf"
 
 #. PopupYesNoHeadline body:
-#: src/printingvianetwork.ycp:473
+#: src/printingvianetwork.ycp:465
 msgid "A remote CUPS server setting conflicts with receiving printer information."
 msgstr "Zdalny serwer CUPS ma problemy z otrzymywanymi informacjami o drukarce"
 
 #. Popup::ErrorDetails message:
-#: src/printingvianetwork.ycp:534 src/sharing.ycp:451
+#: src/printingvianetwork.ycp:526 src/sharing.ycp:451
 msgid "Failed to set 'Browsing On' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić 'Przeglądania w' w /etc/cups/cupsd.conf"
 
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the values for BrowseAllow.
-#: src/printingvianetwork.ycp:548
+#: src/printingvianetwork.ycp:540
 #, ycp-format
 msgid "Failed to set BrowseAllow value(s) '%1' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić wartości BrowseAllow '%1' w /etc/cups/cupsd.conf"
@@ -3213,14 +3411,14 @@ msgstr "Nie udało się ustawić wartości BrowseAllow '%1' w /etc/cups/cupsd.co
 #. Header of a Popup::ContinueCancelHeadline
 #. when a client-only server is not accessible
 #. where %1 will be replaced by the server name:
-#: src/printingvianetwork.ycp:611
+#: src/printingvianetwork.ycp:603
 #, ycp-format
 msgid "Continue regardless that '%1' is not accessible?"
 msgstr "Czy kontynuować mimo, że '%1' jest niedostępny?"
 
 #. Body of a Popup::ContinueCancelHeadline
 #. when a client-only server is not accessible:
-#: src/printingvianetwork.ycp:616
+#: src/printingvianetwork.ycp:608
 msgid "A non-accessible server leads to an endless sequence of further failures."
 msgstr "Niedostępny serwer spowodował nieskończoną sekwencję następujących błedów."
 
@@ -3230,7 +3428,7 @@ msgstr "Niedostępny serwer spowodował nieskończoną sekwencję następującyc
 #. Therefore a Popup::MessageDetails is shown to inform about the actual result:
 #. Popup::MessageDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:668
+#: src/printingvianetwork.ycp:660
 #, ycp-format
 msgid "Tried to set 'ServerName %1' in /etc/cups/client.conf"
 msgstr "Została podjęta próba ustawienia 'ServerName %1' w /etc/cups/client.conf"
@@ -3382,3 +3580,38 @@ msgstr "Konfiguracja drukarki"
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
 
+#~ msgid "Makeshift Drivers for a Few Non-Standard (GDI) Printers"
+#~ msgstr "Sterownik Makeshift dla kilku nie standardowych drukarek(GDI)"
+
+#~ msgid ""
+#~ "<p>\n"
+#~ "<b><big>Device URIs for Directly Connected Devices</big></b><br>\n"
+#~ "Devices which are connected via the parallel port or via USB\n"
+#~ "are autodetected and the appropriate device URI is autogenerated.\n"
+#~ "For example:<br>\n"
+#~ "parallel:/dev/lp0<br>\n"
+#~ "usb://ACME/FunPrinter<br>\n"
+#~ "hp:/usb/HP_LaserJet?serial=1234<br>\n"
+#~ "Usually only the autogenerated device URIs work.\n"
+#~ "When the device is not autodetected, there is usually no communication\n"
+#~ "with the device possible and no data can be sent to the device.\n"
+#~ "</p>"
+#~ msgstr ""
+#~ "<p>\n"
+#~ "<b><big>URI dla urządzeń podłączonych bezpośrednio</big></b><br>\n"
+#~ "Urządzenie podłączone poprzez port szeregowy lub USB\n"
+#~ "zostaje automatycznie wykryte i otrzymuje prawidłowy adres URI.\n"
+#~ "Na przykład:<br>\n"
+#~ "parallel:/dev/lp0<br>\n"
+#~ "usb://ACME/FunPrinter<br>\n"
+#~ "hp:/usb/HP_LaserJet?serial=1234<br>\n"
+#~ "Zazwyczaj działanie urządzenia gwarantuje URI przydzielone automatycznie.W przypadku,\n"
+#~ "kiedy urządzenie nie zostanie wykryte nie jest możliwa z urządzeniem\n"
+#~ "komunikacja oraz żadne dane nie mogą zostać przesłane do urządzenia.\n"
+#~ "</p>"
+
+#~ msgid "all hosts"
+#~ msgstr "wszystkie hosty"
+
+#~ msgid "Receive Printer &Information from Remote CUPS servers"
+#~ msgstr "Odbierz informacje drukarki z zdalnego serwera CUPS"
