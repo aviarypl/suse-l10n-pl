@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bootloader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-13 14:04+0200\n"
+"POT-Creation-Date: 2009-06-05 10:33+0200\n"
 "PO-Revision-Date: 2009-05-27 14:24+0200\n"
 "Last-Translator: Mariusz Fik <fisiu@opensuse.org>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -174,24 +174,24 @@ msgstr ""
 "Mapa urządzeń zawiera więcej niż 8 urządzeń, a wśród nich nie ma urządzenia rozruchowego.\n"
 "Zakres urządzeń jest ograniczony przez BIOS do 8 urządzeń."
 
-#: src/clients/bootloader_proposal.ycp:148
+#: src/clients/bootloader_proposal.ycp:146
 msgid "No boot loader is selected for installation. Your system might not be bootable."
 msgstr "Nie wybrano do zainstalowania żadnego programu rozruchowego. System może się nie uruchomić."
 
-#: src/clients/bootloader_proposal.ycp:157 src/routines/global_widgets.ycp:297
+#: src/clients/bootloader_proposal.ycp:155 src/routines/global_widgets.ycp:297
 msgid "The LILO is not supported now."
 msgstr "LILO nie jest aktualnie wspierane."
 
 #. error in the proposal
-#: src/clients/bootloader_proposal.ycp:166
+#: src/clients/bootloader_proposal.ycp:164
 msgid "Because of the partitioning, the bootloader cannot be installed properly"
 msgstr "Z powodu wybranego podziału na partycje nie można prawidłowo zainstalować programu rozruchowego."
 
-#: src/clients/bootloader_proposal.ycp:180
+#: src/clients/bootloader_proposal.ycp:178
 msgid "The selected boot path will not be activated for your installation. Your system may not be bootable."
 msgstr "Wybrana ścieżka do programu rozruchowego nie zostanie uaktywniona. System może się nie uruchomić."
 
-#: src/clients/bootloader_proposal.ycp:192
+#: src/clients/bootloader_proposal.ycp:190
 msgid ""
 "Configure a valid boot loader location before continuing.<br>\n"
 "In case that no selection can be made it may be necessary to create a small primary Apple HFS partition."
@@ -199,7 +199,7 @@ msgstr ""
 "Proszę skonfigurować poprawne położenie programu rozruchowego przed kontynuowaniem.<br>\n"
 "Jeśli nie ma możliwości wyboru, prawdopodobnie trzeba będzie utworzyć małą partycję główną typu Apple HFS."
 
-#: src/clients/bootloader_proposal.ycp:213
+#: src/clients/bootloader_proposal.ycp:211
 msgid ""
 "Configure a valid boot loader location before continuing.<br>\n"
 "In case that no selection can be made it may be necessary to create a PReP Boot partition."
@@ -208,12 +208,12 @@ msgstr ""
 "Jeśli nie ma możliwości wyboru, prawdopodobnie trzeba będzie utworzyć partycję PReP-boot."
 
 #. proposal part - bootloader label
-#: src/clients/bootloader_proposal.ycp:269
+#: src/clients/bootloader_proposal.ycp:267
 msgid "Booting"
 msgstr "Uruchamianie systemu"
 
 #. menubutton entry
-#: src/clients/bootloader_proposal.ycp:271
+#: src/clients/bootloader_proposal.ycp:269
 msgid "&Booting"
 msgstr "&Uruchamianie systemu"
 
@@ -981,40 +981,40 @@ msgstr ""
 "programu rozruchowego."
 
 #. summary part, %1 is a list of device names
-#: src/modules/BootCommon.ycp:809
+#: src/modules/BootCommon.ycp:871
 #, ycp-format
 msgid "Master boot records of disks %1"
 msgstr "Główne sektory startowe (MBR) dysków %1"
 
 #. summary text, %1 is bootloader name (eg. LILO)
-#: src/modules/BootCommon.ycp:821 src/modules/BootGRUB.ycp:645
+#: src/modules/BootCommon.ycp:883 src/modules/BootGRUB.ycp:645
 #, ycp-format
 msgid "Boot Loader Type: %1"
 msgstr "Typ programu rozruchowego: %1"
 
 #. summary text, location is location description (eg. /dev/hda)
 #. FIXME: should we translate all devices to names and add MBR suffixes?
-#: src/modules/BootCommon.ycp:824 src/modules/BootGRUB.ycp:663
+#: src/modules/BootCommon.ycp:886 src/modules/BootGRUB.ycp:663
 #: src/modules/BootPOWERLILO.ycp:972
 #, ycp-format
 msgid "Location: %1"
 msgstr "Lokalizacja: %1"
 
 #. section name "suffix" for default section
-#: src/modules/BootCommon.ycp:829 src/modules/BootELILO.ycp:399
+#: src/modules/BootCommon.ycp:891 src/modules/BootELILO.ycp:399
 #: src/modules/BootGRUB.ycp:673 src/modules/BootPOWERLILO.ycp:979
 msgid " (default)"
 msgstr " (domyślnie)"
 
 #. summary text. %1 is list of bootloader sections
-#: src/modules/BootCommon.ycp:833 src/modules/BootELILO.ycp:404
+#: src/modules/BootCommon.ycp:895 src/modules/BootELILO.ycp:404
 #: src/modules/BootGRUB.ycp:677 src/modules/BootPOWERLILO.ycp:984
 #, ycp-format
 msgid "Sections:<br>%1"
 msgstr "Sekcje:<br>%1"
 
 #. summary text
-#: src/modules/BootCommon.ycp:837
+#: src/modules/BootCommon.ycp:899
 msgid ""
 "Do not install boot loader; just create \n"
 "configuration files"
@@ -1090,16 +1090,25 @@ msgstr "Nie wspierana kombinacja platformy sprzętowej %1 i programu rozruchoweg
 msgid "Partition number > 3 is being used for booting with GPT partition table"
 msgstr "Partycje o numerach > 3 są używane do ładowania systemu z tablicą partycji GPT."
 
-#: src/modules/BootSupportCheck.ycp:197
+#: src/modules/BootSupportCheck.ycp:196
 #, ycp-format
 msgid "The boot device is on raid type: %1. System will not boot."
 msgstr "Urządzenie rozruchowe znajduje się na macierzy raid typu: %1. System nie uruchomi się."
 
-#: src/modules/BootSupportCheck.ycp:209
+#: src/modules/BootSupportCheck.ycp:208
+msgid "The boot device is on software RAID1. Select other bootloader location, e.g. Master Boot Record"
+msgstr ""
+
+#: src/modules/BootSupportCheck.ycp:228
+#, fuzzy
+msgid "The /boot directory is on an ext4 filesystem. Create separate /boot partition with ext2 filesytem"
+msgstr "Katalog /boot znajduje się w systemie plików XFS. System może się nie uruchomić."
+
+#: src/modules/BootSupportCheck.ycp:235
 msgid "The /boot directory is on an XFS filesystem. System may not boot."
 msgstr "Katalog /boot znajduje się w systemie plików XFS. System może się nie uruchomić."
 
-#: src/modules/BootSupportCheck.ycp:240
+#: src/modules/BootSupportCheck.ycp:266
 msgid "It was not possible to determine the exact order of disks for device map. The order of disks can be changed in \"Boot Loader Installation Details\""
 msgstr "Nie można określić dokładnej kolejności dysków dla mapy urządzeń. Kolejność dysków można zmienić w sekcji \"Szczegóły instalacji programu rozruchowego\""
 
@@ -2167,7 +2176,7 @@ msgid "Error occurred while installing %1."
 msgstr "Wystąpił błąd podczas instalacji %1."
 
 #. part of summary, %1 is a list of hard disks device names
-#: src/routines/lilolike.ycp:1087
+#: src/routines/lilolike.ycp:1128
 #, ycp-format
 msgid "Order of Hard Disks: %1"
 msgstr "Kolejność dysków twardych: %1"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: yast2-apparmor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-05-13 14:09+0200\n"
+"POT-Creation-Date: 2009-06-05 10:37+0200\n"
 "PO-Revision-Date: 2008-11-01 13:58+0100\n"
 "Last-Translator: Michał Kurzeja <m.kurzeja@tmtsystems.eu>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -1008,64 +1008,82 @@ msgid "<ul><li> Allow taking of leases on files </li></ul>"
 msgstr "<ul><li> Zezwala na przejmowanie dzierżawienia plików </li></ul>"
 
 #: src/include/subdomain/config_complain.ycp:16
-msgid "<p><b>Profile Mode Configuration</b><br>This tool allows you to set AppArmor profiles to either complain or enforce mode.</p><p>Complain mode is a profile training state that logs application activity, but does not restrict the application's behavior.</p><p>Profiles in enforce mode are protected by AppArmor.</p>"
-msgstr "<p><b>Konfiguracja trybu profilu</b><br>Narzędzie to zezwala na ustawienie profili programu AppArmor w tryb treningu lub ochrony.</p><p>W trybie <i>complain</i> (tryb  treningu) działanie aplikacji jest monitorowane i zapisywane w dzienniku, jednak w żaden sposób nie ograniczane, co pozwala przetestować profil.</p><p>Profile w trybie <i>enforce</i> (tryb ochrony) są chronione przez AppArmor.</p>"
+msgid ""
+"<p><b>Profile Mode Configuration</b><br>This tool allows \n"
+"you to set AppArmor profiles to either complain or enforce mode.</p>"
+msgstr ""
 
-#: src/include/subdomain/config_complain.ycp:30
+#: src/include/subdomain/config_complain.ycp:19
+msgid ""
+"<p><b>Complain mode</b> is a profile training state that logs application \n"
+"activity. All the violations of the AppArmor profile rules are logged \n"
+"(into <i>/var/log/audit/audit.log</i> file), but still permitted, so \n"
+"that application's behavior is not restricted.</p>"
+msgstr ""
+
+#: src/include/subdomain/config_complain.ycp:24
+msgid ""
+"<p>With the profile in <b>enforce mode</b>, application is protected by \n"
+"AppArmor. The profile rules are enforced and their violation is logged,\n"
+"but not permitted (e.g. an application cannot access files, unless it is\n"
+"permitted to do so by the profile).</p>"
+msgstr ""
+
+#: src/include/subdomain/config_complain.ycp:41
 msgid "Couldn't recognize profile name: "
 msgstr "Nie można rozpoznać nazwy profilu: "
 
-#: src/include/subdomain/config_complain.ycp:42
+#: src/include/subdomain/config_complain.ycp:53
 msgid "Couldn't recognize mode: "
 msgstr "Nie można rozpoznać trybu: "
 
-#: src/include/subdomain/config_complain.ycp:89
+#: src/include/subdomain/config_complain.ycp:100
 msgid "Show All Profiles"
 msgstr "Pokaż wszystkie profile"
 
-#: src/include/subdomain/config_complain.ycp:90
+#: src/include/subdomain/config_complain.ycp:101
 msgid "Configure Mode for Active Profiles"
 msgstr "Konfiguruj tryb dla aktywnych profili"
 
-#: src/include/subdomain/config_complain.ycp:93
+#: src/include/subdomain/config_complain.ycp:104
 msgid "Show Active Profiles"
 msgstr "Pokaż aktywne profile"
 
-#: src/include/subdomain/config_complain.ycp:94
+#: src/include/subdomain/config_complain.ycp:105
 msgid "Configure Mode for All Profiles"
 msgstr "Konfiguruj tryb dla wszystkich profili"
 
-#: src/include/subdomain/config_complain.ycp:105
+#: src/include/subdomain/config_complain.ycp:116
 #: src/include/subdomain/profile_dialogs.ycp:1101
 msgid "Profile Name"
 msgstr "Nazwa profilu"
 
-#: src/include/subdomain/config_complain.ycp:105
+#: src/include/subdomain/config_complain.ycp:116
 #: src/include/subdomain/reporting_utils.ycp:272
 msgid "Mode"
 msgstr "Tryb"
 
-#: src/include/subdomain/config_complain.ycp:110
+#: src/include/subdomain/config_complain.ycp:121
 msgid "Toggle Mode"
 msgstr "Przełącz tryb"
 
-#: src/include/subdomain/config_complain.ycp:111
+#: src/include/subdomain/config_complain.ycp:122
 msgid "Set All to Enforce"
 msgstr "Wszystkie: enforce"
 
-#: src/include/subdomain/config_complain.ycp:112
+#: src/include/subdomain/config_complain.ycp:123
 msgid "Set All to Complain"
 msgstr "Wszystkie: complain"
 
-#: src/include/subdomain/config_complain.ycp:133
+#: src/include/subdomain/config_complain.ycp:144
 msgid "Profile Mode Configuration"
 msgstr "Konfiguracja trybu profilu"
 
-#: src/include/subdomain/config_complain.ycp:133
-#: src/include/subdomain/config_complain.ycp:167
-#: src/include/subdomain/config_complain.ycp:173
-#: src/include/subdomain/config_complain.ycp:183
-#: src/include/subdomain/config_complain.ycp:198
+#: src/include/subdomain/config_complain.ycp:144
+#: src/include/subdomain/config_complain.ycp:178
+#: src/include/subdomain/config_complain.ycp:184
+#: src/include/subdomain/config_complain.ycp:194
+#: src/include/subdomain/config_complain.ycp:209
 #: src/include/subdomain/profile_dialogs.ycp:858
 #: src/include/subdomain/reporting_dialogues.ycp:728
 #: src/include/subdomain/reporting_dialogues.ycp:1184
@@ -1097,14 +1115,14 @@ msgstr "Konfiguracja trybu profilu"
 msgid "&Done"
 msgstr "Za&kończ"
 
-#: src/include/subdomain/config_complain.ycp:167
-#: src/include/subdomain/config_complain.ycp:173
-#: src/include/subdomain/config_complain.ycp:183
-#: src/include/subdomain/config_complain.ycp:198
+#: src/include/subdomain/config_complain.ycp:178
+#: src/include/subdomain/config_complain.ycp:184
+#: src/include/subdomain/config_complain.ycp:194
+#: src/include/subdomain/config_complain.ycp:209
 msgid "Configure Profile Mode"
 msgstr "Konfiguruj tryb profilu"
 
-#: src/include/subdomain/config_complain.ycp:203
+#: src/include/subdomain/config_complain.ycp:214
 msgid "Please select an action to perform from the buttons below."
 msgstr "Proszę wybrać działanie do wykonania spośród przycisków poniżej."
 
@@ -1166,10 +1184,14 @@ msgstr ""
 #: src/include/subdomain/helps.ycp:56
 msgid ""
 "<li> Enter the email address of those who should receive \n"
-"the Terse, Summary, or Verbose notifications. </li>"
+"the Terse, Summary, or Verbose notifications.If there is no local \n"
+"SMTP server configured to distribute e-mails from this host to the \n"
+"domain you entered, enter for example <i><user>@localhost</i> \n"
+"and enable <i><user></i> to receive system mail, if it is not \n"
+"a root user. </li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:59
+#: src/include/subdomain/helps.ycp:63
 msgid ""
 "<li>Select the lowest <b>severity level</b> for which a notification \n"
 "should be sent. Security events will be logged and the notifications \n"
@@ -1179,7 +1201,7 @@ msgid ""
 "occur."
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:66
+#: src/include/subdomain/helps.ycp:70
 msgid ""
 "<b>Severity Levels:</b> These are numbered 1 through 10, \n"
 "10 being the most severe security incident. The <b>severity.db</b> \n"
@@ -1189,25 +1211,25 @@ msgid ""
 "or services denied.</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:73
+#: src/include/subdomain/helps.ycp:77
 msgid ""
 "<li>Select <b>Include unknown security events</b> if \n"
 "you would like to include events that are not rated with a severity number.</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:78
+#: src/include/subdomain/helps.ycp:82
 #, fuzzy
 msgid "<b>AppArmor Profiling Wizard</b><br>"
 msgstr "Kreator profili AppArmor"
 
-#: src/include/subdomain/helps.ycp:79
+#: src/include/subdomain/helps.ycp:83
 msgid ""
 "This wizard presents entries generated by the AppArmor access control module. \n"
 "You can generate highly optimized and robust security profiles \n"
 "by using the suggestions made by AppArmor."
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:83
+#: src/include/subdomain/helps.ycp:87
 msgid ""
 "AppArmor suggests that you allow or deny access to specific resources \n"
 "or define execute permission for entries. These questions \n"
@@ -1215,7 +1237,7 @@ msgid ""
 "execution test previously performed. <br>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:88
+#: src/include/subdomain/helps.ycp:92
 msgid ""
 "The following help text describes the detail of the security profile \n"
 "syntax used by AppArmor. <br><br>At any stage, you may \n"
@@ -1225,51 +1247,51 @@ msgid ""
 "instructions. <br><br>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:95
+#: src/include/subdomain/helps.ycp:99
 msgid "<b>Access Modes</b><br>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:96
+#: src/include/subdomain/helps.ycp:100
 msgid "File permission access modes consists of combinations of the following six modes:"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:99
+#: src/include/subdomain/helps.ycp:103
 msgid "<li>r    - read</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:100
+#: src/include/subdomain/helps.ycp:104
 msgid "<li>w    - write</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:101
+#: src/include/subdomain/helps.ycp:105
 msgid "<li>m    - mmap PROT_EXEC</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:102
+#: src/include/subdomain/helps.ycp:106
 msgid "<li>px   - discrete profile execute</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:103
+#: src/include/subdomain/helps.ycp:107
 msgid "<li>ux   - unconfined execute</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:104
+#: src/include/subdomain/helps.ycp:108
 msgid "<li>ix   - inherit execute</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:105
+#: src/include/subdomain/helps.ycp:109
 msgid "<li>l    - link</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:107
+#: src/include/subdomain/helps.ycp:111
 msgid "<b>Details for Access Modes</b>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:110
+#: src/include/subdomain/helps.ycp:114
 msgid "<b>Read mode</b><br>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:111
+#: src/include/subdomain/helps.ycp:115
 msgid ""
 "Allows the program to have read access to the\n"
 "resource. Read access is required for shell scripts\n"
@@ -1279,32 +1301,32 @@ msgid ""
 "strace(1), ltrace(1), and gdb(1).)"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:119
+#: src/include/subdomain/helps.ycp:123
 msgid "<b>Write mode</b><br>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:120
+#: src/include/subdomain/helps.ycp:124
 msgid ""
 "Allows the program to have write access to the\n"
 "resource. Files must have this permission if they are\n"
 "to be unlinked (removed.)"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:125
+#: src/include/subdomain/helps.ycp:129
 msgid "<b>Mmap PROT_EXEC mode</b><br>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:126
+#: src/include/subdomain/helps.ycp:130
 msgid ""
 "Allows the program to call mmap with PROT_EXEC on the\n"
 "resource."
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:130
+#: src/include/subdomain/helps.ycp:134
 msgid "<b>Unconfined execute mode</b><br>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:131
+#: src/include/subdomain/helps.ycp:135
 msgid ""
 "Allows the program to execute the resource without any\n"
 "AppArmor profile being applied to the executed\n"
@@ -1313,7 +1335,7 @@ msgid ""
 "entries."
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:138
+#: src/include/subdomain/helps.ycp:142
 msgid ""
 "This mode is useful when a confined program needs to\n"
 "be able to perform a privileged operation, such as\n"
@@ -1325,11 +1347,11 @@ msgid ""
 "subdomain(7) man page."
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:148
+#: src/include/subdomain/helps.ycp:152
 msgid "<b>Discrete Profile execute mode</b><br>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:149
+#: src/include/subdomain/helps.ycp:153
 msgid ""
 "This mode requires that a discrete security profile is\n"
 "defined for a resource executed at a AppArmor domain\n"
@@ -1338,11 +1360,11 @@ msgid ""
 "Unconstrained execute entries."
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:156
+#: src/include/subdomain/helps.ycp:160
 msgid "<b>Link mode</b><br>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:157
+#: src/include/subdomain/helps.ycp:161
 msgid ""
 "Allows the program to be able to create and remove a\n"
 "link with this name (including symlinks). When a link\n"
@@ -1353,46 +1375,46 @@ msgid ""
 "unlinking a file."
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:166
+#: src/include/subdomain/helps.ycp:170
 msgid "<b>Globbing</b>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:168
+#: src/include/subdomain/helps.ycp:172
 msgid ""
 "File resources may be specified with a globbing syntax\n"
 "similar to that used by popular shells, such as csh(1),\n"
 "bash(1), zsh(1)."
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:174
+#: src/include/subdomain/helps.ycp:178
 msgid "<li><b>*</b>   can substitute for any number of characters, except '/'<li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:175
+#: src/include/subdomain/helps.ycp:179
 msgid "<li><b>**</b>  can substitute for any number of characters, including '/'</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:176
+#: src/include/subdomain/helps.ycp:180
 msgid "<li><b>?</b>   can substitute for any single character except '/'</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:177
+#: src/include/subdomain/helps.ycp:181
 msgid "<li><b>[abc]</b> will substitute for the single character a, b, or c</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:178
+#: src/include/subdomain/helps.ycp:182
 msgid "<li><b>[a-c]</b> will substitute for the single character a, b, or c</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:179
+#: src/include/subdomain/helps.ycp:183
 msgid "<li><b>{ab,cd}</b> will expand to one rule to match ab, one rule to match cd</li>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:182
+#: src/include/subdomain/helps.ycp:186
 msgid "<b>Clean Exec - for sanitized execution</b>"
 msgstr ""
 
-#: src/include/subdomain/helps.ycp:184
+#: src/include/subdomain/helps.ycp:188
 #, fuzzy
 msgid ""
 "The Clean Exec option for the discrete profile and unconstrained \n"
@@ -2985,6 +3007,9 @@ msgstr "Sko&nfiguruj"
 #, perl-format
 msgid "Failed copying %s."
 msgstr "Kopiowanie %s nie powiodło się."
+
+#~ msgid "<p><b>Profile Mode Configuration</b><br>This tool allows you to set AppArmor profiles to either complain or enforce mode.</p><p>Complain mode is a profile training state that logs application activity, but does not restrict the application's behavior.</p><p>Profiles in enforce mode are protected by AppArmor.</p>"
+#~ msgstr "<p><b>Konfiguracja trybu profilu</b><br>Narzędzie to zezwala na ustawienie profili programu AppArmor w tryb treningu lub ochrony.</p><p>W trybie <i>complain</i> (tryb  treningu) działanie aplikacji jest monitorowane i zapisywane w dzienniku, jednak w żaden sposób nie ograniczane, co pozwala przetestować profil.</p><p>Profile w trybie <i>enforce</i> (tryb ochrony) są chronione przez AppArmor.</p>"
 
 #~ msgid ""
 #~ "     <b>AppArmor Profiling Wizard</b><br>\n"
