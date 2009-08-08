@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-09 12:15+0200\n"
+"POT-Creation-Date: 2009-08-06 09:20+0200\n"
 "PO-Revision-Date: 2009-07-23 00:30+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -97,10 +97,11 @@ msgstr ""
 "Czy chcesz uruchomić ją teraz?"
 
 #: src/AuditLaf.ycp:471
+#, fuzzy
 msgid ""
-" The 'apparmor' kernel module is loaded\n"
-"which uses a running audit daemon to log events to\n"
-"/var/log/audit/audit.log (default). \n"
+" The 'apparmor' kernel module is loaded.\n"
+"The kernel uses a running audit daemon to log audit\n"
+"events to /var/log/audit/audit.log (default). \n"
 "Do you want to start the daemon now?"
 msgstr ""
 " Moduł kernela 'apparmor' jest załadowany\n"
@@ -168,25 +169,25 @@ msgstr ""
 "Następnie należy ponownie uruchomić system."
 
 #. Error message
-#: src/AuditLaf.ycp:602
+#: src/AuditLaf.ycp:603
 msgid "Restart of the audit daemon failed"
 msgstr "Ponowne uruchamianie usługi audit nie powiodło się"
 
 #. Error message
-#: src/AuditLaf.ycp:609
+#: src/AuditLaf.ycp:612
 msgid "Cannot write settings to auditd.conf."
 msgstr "Nie można zapisać ustawień do auditd.conf."
 
 #. Error message, rules cannot be set
-#: src/AuditLaf.ycp:633
+#: src/AuditLaf.ycp:637
 msgid "Please start yast2-audit-laf again and check the rules"
 msgstr "Proszę ponownie uruchomić yast2-audit-laf oraz sprawdzić reguły"
 
-#: src/AuditLaf.ycp:638
+#: src/AuditLaf.ycp:643
 msgid "Cannot write settings to auditd.rules."
 msgstr "Nie można zapisać ustawień do auditd.rules."
 
-#: src/AuditLaf.ycp:689
+#: src/AuditLaf.ycp:697
 msgid "Log file"
 msgstr "Pliki dziennika"
 
@@ -206,102 +207,139 @@ msgstr "Pokazuj informacje o ustawieniach audit"
 msgid "Set the specified option"
 msgstr "Ustaw specyficzną opcję"
 
-#. translators: command line help text for show logfile option
-#: src/audit-laf.ycp:79
+#. translators: command line help text for 'show logfile'
+#: src/audit-laf.ycp:78
 msgid "Show log file settings"
 msgstr "Pokaż ustawienia pliku logowania"
 
-#. translators: command line help text for show disk space option
-#: src/audit-laf.ycp:83
+#. translators: command line help text for 'show diskspace'
+#: src/audit-laf.ycp:82
 msgid "Show disk space settings"
 msgstr "Pokaż ustawienia przestrzeni dyskowej"
 
+#. translators: command line help text for 'show dispatcher'
+#: src/audit-laf.ycp:86
+#, fuzzy
+msgid "Show dispatcher settings"
+msgstr "Pokaż ustawienia przestrzeni dyskowej"
+
 #. translators: command line help text for log_file option
-#: src/audit-laf.ycp:87
+#: src/audit-laf.ycp:91
 msgid "Name of the log file (full path name)"
 msgstr "Nazwa pliku logowania (pełna ścieżka)"
 
 #. translators: command line help text for log_format option
-#. (do NOT translate: RAW, NOLOG)
-#: src/audit-laf.ycp:93
-msgid "Log format (RAW, NOLOG)"
+#: src/audit-laf.ycp:96
+#, fuzzy
+msgid "Log format"
 msgstr "Format logowania (RAW, NOLOG)"
 
 #. translators: command line help text for flush option
-#. (do NOT translate: INCREMENTAL, NONE, DATA, SYNC)
-#: src/audit-laf.ycp:99
-msgid "How to write data to disk (INCREMENTAL, NONE, DATA, SYNC)"
+#: src/audit-laf.ycp:102
+#, fuzzy
+msgid "How to write data to disk"
 msgstr "Jak zapisywać dane na dysk (INCREMENTAL, NONE, DATA, SYNC)"
 
 #. translators: command line help text for frequency option
-#. (do NOT translate: INCREMENTAL, NONE, DATA, SYNC)
-#: src/audit-laf.ycp:105
+#: src/audit-laf.ycp:108
 msgid "How many records to write before a flush to disk is issued"
 msgstr "Ile rekordów zapisać przed wykonaniem zrzutu na dysk"
 
 #. translators: command line help text for max_log_file option
-#: src/audit-laf.ycp:110
+#: src/audit-laf.ycp:113
 msgid "Maximal size (in MByte) of the log file"
 msgstr "Maksymalny rozmiar pliku logów (w MB)"
 
 #. translators: command line help text for max_log_file_action option
-#. (do NOT translate: IGNORE, SYSLOG, SUSPEND, ROTATE, KEEP_LOGS)
-#: src/audit-laf.ycp:116
-msgid "Action if max_log_file is reached (IGNORE, SYSLOG, SUSPEND, ROTATE, KEEP_LOGS)"
-msgstr "Akcja wykonywana, gdy max_log_file został osiągnięty (IGNORE, SYSLOG, SUSPEND, ROTATE, KEEP_LOGS)"
+#: src/audit-laf.ycp:118
+msgid "Action if max_log_file is reached"
+msgstr ""
 
 #. translators: command line help text for num_logs option
-#: src/audit-laf.ycp:121
+#: src/audit-laf.ycp:124
 msgid "Number of log files to keep"
 msgstr "Liczba plików logów do zachowania"
 
 #. translators: command line help text for name_format option
-#. (do NOT translate: NONE, HOSTNAME, FQD, USER)
-#: src/audit-laf.ycp:127
-msgid "Computer name format (NONE, HOSTNAME, FQD, USER)"
-msgstr "Format nazwy komputera (NONE, HOSTNAME, FQD, USER)"
+#: src/audit-laf.ycp:129
+#, fuzzy
+msgid "Computer name format"
+msgstr "Format nazwy &komputera"
 
 #. translators: command line help text for name_format option
-#: src/audit-laf.ycp:132
+#: src/audit-laf.ycp:135
 msgid "Computer name (used if format is set to USER)"
 msgstr "Nazwa komputera (używany, jeśli format jest ustawiony na USER)"
 
 #. translators: command line help text for space_left option
-#: src/audit-laf.ycp:138
-msgid "Space left on log partition (in MByte) starts to run low"
+#: src/audit-laf.ycp:141
+#, fuzzy
+msgid "Space left on log partition (in MByte) when system starts to run low"
 msgstr "Pozostała przestrzeń na partycji logów (w MB) zaczyna się wyczerpywać"
 
 #. translators: command line help text for space_left_action option
-#. (do NOT translate: IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC, EMAIL)
-#: src/audit-laf.ycp:144
-msgid "Action if space_left is reached (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <full path to script>, EMAIL)"
-msgstr "Akcja podejmowana jeśli space_left zostaje osiągnięte (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <pełna ścieżka skryptu>, EMAIL)"
+#: src/audit-laf.ycp:146
+msgid "Action if space_left is reached"
+msgstr ""
+
+#. translators: command line help text for space_left_script option
+#: src/audit-laf.ycp:152
+msgid "Script to execute (full path name) if space_left is reached"
+msgstr ""
 
 #. translators: command line help text for admin_space_left
-#: src/audit-laf.ycp:149
-msgid "Disk space to on log partition (in MByte) is running low"
-msgstr "Przestrzeń dyskowa na partycji logów (w MB) zaczyna się wyczerpywać"
+#: src/audit-laf.ycp:157
+#, fuzzy
+msgid "Space left on log partition (in MByte) when system is running low"
+msgstr "Pozostała przestrzeń na partycji logów (w MB) zaczyna się wyczerpywać"
 
 #. command line help text for admin_space_left_action option
-#. (do NOT translate: IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC, EMAIL)
-#: src/audit-laf.ycp:155
-msgid "Action if admin_space_left is reached (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <full path to script>, EMAIL)"
-msgstr "Akcja podejmowana jeśli admin_space_left zostaje osiągnięte (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <pełna ścieżka skryptu>, EMAIL)"
+#: src/audit-laf.ycp:162
+msgid "Action if admin_space_left is reached"
+msgstr ""
+
+#. translators: command line help text for admin_space_left_script option
+#: src/audit-laf.ycp:169
+msgid "Script to execute (full path name) if admin_space_left is reached"
+msgstr ""
 
 #. command line help text for action_mail_acct option
-#: src/audit-laf.ycp:160
+#: src/audit-laf.ycp:174
 msgid "Mail sent to this account (if space_left_action set to EMAIL)"
 msgstr "Wiadomość e-mail wysyłana na to konto (jeśli space_left_action jest ustawione na EMAIL)"
 
 #. command line help text for disk_full_action option
-#: src/audit-laf.ycp:165
-msgid "Action to perform if disk is full (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <full path to script>)"
-msgstr "Akcja podejmowana jeśli dysk jest pełny (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <pełna ścieżka skryptu>)"
+#: src/audit-laf.ycp:179
+#, fuzzy
+msgid "Action to perform if disk is full"
+msgstr "Akcja na wypadek błędu lub pełnego dysku"
+
+#. translators: command line help text for admin_space_left_script option
+#: src/audit-laf.ycp:185
+msgid "Script to execute (full path name) if disk is full"
+msgstr ""
 
 #. command line help text for disk_error_action option
-#: src/audit-laf.ycp:170
-msgid "Action to perform on disk error (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <full path to script>)"
-msgstr "Akcja podejmowana w przypadku błędu dysku (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <pełna ścieżka skryptu>)"
+#: src/audit-laf.ycp:190
+#, fuzzy
+msgid "Action to perform on disk error"
+msgstr "Akcja na wypadek błędu lub pełnego dysku"
+
+#. translators: command line help text for script on disk error option
+#: src/audit-laf.ycp:196
+msgid "Script to execute (full path name) on disk error"
+msgstr ""
+
+#. command line help text for communication control option
+#: src/audit-laf.ycp:201
+msgid "How to communicate between dispatcher and the audit daemon"
+msgstr ""
+
+#. command line help text for dispatcher option
+#: src/audit-laf.ycp:207
+#, fuzzy
+msgid "Dispatcher program (full path name)"
+msgstr "Nazwa pliku logowania (pełna ścieżka)"
 
 #. Rich text title for AuditLaf in proposals
 #: src/audit-laf_proposal.ycp:84
@@ -312,10 +350,6 @@ msgstr "AuditLaf"
 #: src/audit-laf_proposal.ycp:86
 msgid "&AuditLaf"
 msgstr "&AuditLaf"
-
-#: src/cmdline.ycp:65
-msgid "Unknown option"
-msgstr "Nieznana opcja"
 
 #: src/complex.ycp:124
 msgid "Select the log file"
@@ -712,8 +746,9 @@ msgstr ""
 
 #. logfile_settings dialog help 7/8
 #: src/helps.ycp:83
+#, fuzzy
 msgid ""
-"If the action is set to <i>ROTATE</i> the <b>Number of Log Files</b> specifies the number\n"
+"<p>If the action is set to <i>ROTATE</i> the <b>Number of Log Files</b> specifies the number\n"
 "of files to keep. <i>SYSLOG</i> means: the audit daemon will write a warning to /var/log/messages,\n"
 "<i>SUSPEND</i>: stop writing records to disk, <i>IGNORE</i>: do nothing, <i>KEEP_LOGS</i>: similiar\n"
 "to ROTATE, but log files aren't overwritten.</p>"
@@ -725,10 +760,11 @@ msgstr ""
 
 #. logfile_settings dialog help 8/8
 #: src/helps.ycp:88
+#, fuzzy
 msgid ""
 "<p><b>Computer Name Format</b> describes how to write the computer name to the log file.\n"
 "If <i>USER</i> is set the <b>User Defined Name</b> is used. <i>NONE</i> means: no computer name\n"
-"is inserted, <b>HOSTNAME</b>: name returned by the'gethostname' syscall,\n"
+"is inserted, <b>HOSTNAME</b>: name returned by the 'gethostname' syscall,\n"
 "<b>FQD</b>: fully qualified domain name</p>"
 msgstr ""
 "<p><b>Format nazwy komputera</b> opisuje sposób, w jaki zapisać nazwę komputera do pliku logów.\n"
@@ -758,10 +794,11 @@ msgstr ""
 
 #. dispatcher dialog help 3/5
 #: src/helps.ycp:101
+#, fuzzy
 msgid ""
 "<p><b>Communication</b>: Controls the communication between the daemon and the dispatcher\n"
-"program. Option <i>lossy</i> (default) means that events going to the dispatcher are discarded\n"
-"when this queue (128k buffer) is full. Choose <i>lossless</i> if you want a blocking/lossless\n"
+"program. A <i>lossy</i> communication means that events going to the dispatcher are discarded\n"
+"when the queue (a 128kB buffer) is full. Choose <i>lossless</i> if you want a blocking/lossless\n"
 "communication.</p>"
 msgstr ""
 "<p><b>Komunikacja</b>: Kontroluje komunikacje pomiędzy demonem i programem dyspozytora.\n"
@@ -835,10 +872,11 @@ msgstr ""
 
 #. disk space dialog help 5/6
 #: src/helps.ycp:136
+#, fuzzy
 msgid ""
 "<p>You can also specify a <b>Disk Full Action</b> (disk has become full already) and\n"
 "a <b>Disk Error Action</b> (performed whenever an error is detected while writing to disk).\n"
-"Available actions are same as above (except for <i>EMAIL</i>).</p>"
+"Available actions are the same as above (except for <i>EMAIL</i>).</p>"
 msgstr ""
 "<p>Można także wprowadzić <b>Akcje pełnego dysku</b> (dysk został już zapełniony) oraz\n"
 "<b>Akcja błędu dysku</b> (wykonywaną w przypadku wykrycia błędu zapisu na dysk).\n"
@@ -882,8 +920,9 @@ msgstr ""
 
 #. rules dialog help 4/6
 #: src/helps.ycp:155
+#, fuzzy
 msgid ""
-"<p>The dialog also allows you to edit the rules manually, which is only recommended for advanced users.<br>\n"
+"<p>The dialog also allows you to edit the rules manually, which is recommended for advanced users only.<br>\n"
 "Detailed information about all options gives 'man auditctl'.</p>"
 msgstr ""
 "<p>To okno umożliwia także ręczną edycję reguł, co jest zalecane tylko dla zaawansowanych użytkowników.<br>\n"
@@ -931,6 +970,30 @@ msgstr "&Reguły dla 'auditctl'"
 #: src/wizards.ycp:199
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
+#~ msgid "Action if max_log_file is reached (IGNORE, SYSLOG, SUSPEND, ROTATE, KEEP_LOGS)"
+#~ msgstr "Akcja wykonywana, gdy max_log_file został osiągnięty (IGNORE, SYSLOG, SUSPEND, ROTATE, KEEP_LOGS)"
+
+#~ msgid "Computer name format (NONE, HOSTNAME, FQD, USER)"
+#~ msgstr "Format nazwy komputera (NONE, HOSTNAME, FQD, USER)"
+
+#~ msgid "Action if space_left is reached (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <full path to script>, EMAIL)"
+#~ msgstr "Akcja podejmowana jeśli space_left zostaje osiągnięte (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <pełna ścieżka skryptu>, EMAIL)"
+
+#~ msgid "Disk space to on log partition (in MByte) is running low"
+#~ msgstr "Przestrzeń dyskowa na partycji logów (w MB) zaczyna się wyczerpywać"
+
+#~ msgid "Action if admin_space_left is reached (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <full path to script>, EMAIL)"
+#~ msgstr "Akcja podejmowana jeśli admin_space_left zostaje osiągnięte (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <pełna ścieżka skryptu>, EMAIL)"
+
+#~ msgid "Action to perform if disk is full (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <full path to script>)"
+#~ msgstr "Akcja podejmowana jeśli dysk jest pełny (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <pełna ścieżka skryptu>)"
+
+#~ msgid "Action to perform on disk error (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <full path to script>)"
+#~ msgstr "Akcja podejmowana w przypadku błędu dysku (IGNORE, SYSLOG, SUSPEND, SINGLE, HALT, EXEC <pełna ścieżka skryptu>)"
+
+#~ msgid "Unknown option"
+#~ msgstr "Nieznana opcja"
 
 #~ msgid ""
 #~ "<p><b>Communication</b>: Controls the communication\n"

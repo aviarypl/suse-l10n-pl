@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firstboot\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-09 12:17+0200\n"
+"POT-Creation-Date: 2009-08-06 09:22+0200\n"
 "PO-Revision-Date: 2009-06-11 20:33+0200\n"
 "Last-Translator: Tomasz Sot <zigrin@opensuse.us>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
@@ -35,84 +35,88 @@ msgstr "Konfiguracja pierwszego uruchomienia niedostępna"
 msgid "Firstboot configuration enabled"
 msgstr "Konfiguracja pierwszego uruchomienia dostępna"
 
-#: src/control/firstboot.glade:48
+#: src/control/firstboot.glade:60
 msgid "Hardware Configuration"
 msgstr "Konfiguracja sprzętu"
 
-#: src/control/firstboot.glade:57
+#: src/control/firstboot.glade:69
 msgid "Network Configuration II"
 msgstr "Konfiguracja sieci II"
 
-#: src/control/firstboot.glade:71
+#: src/control/firstboot.glade:83
 msgid "Configuration"
 msgstr "Konfiguracja"
 
-#: src/control/firstboot.glade:75
+#: src/control/firstboot.glade:87
+msgid "Language and Keyboard"
+msgstr ""
+
+#: src/control/firstboot.glade:93
 msgid "Language"
 msgstr "Język"
 
-#: src/control/firstboot.glade:80
+#: src/control/firstboot.glade:98
 msgid "Keyboard Layout"
 msgstr "Układ klawiatury"
 
-#: src/control/firstboot.glade:85
+#: src/control/firstboot.glade:103
 msgid "Welcome"
 msgstr "Witamy"
 
-#: src/control/firstboot.glade:89 src/control/firstboot.glade:94
+#: src/control/firstboot.glade:107 src/control/firstboot.glade:112
 msgid "License Agreement"
 msgstr "Umowa licencyjna"
 
-#: src/control/firstboot.glade:99
+#: src/control/firstboot.glade:117
 msgid "Host Name"
 msgstr "Nazwa komputera"
 
-#: src/control/firstboot.glade:108 src/control/firstboot.glade:134
+#: src/control/firstboot.glade:126 src/control/firstboot.glade:152
 msgid "Network"
 msgstr "Sieć"
 
-#: src/control/firstboot.glade:114
+#: src/control/firstboot.glade:132
 msgid "Automatic Configuration"
 msgstr "Konfiguracja automatyczna"
 
-#: src/control/firstboot.glade:119
+#: src/control/firstboot.glade:137
 msgid "Time and Date"
 msgstr "Czas i data"
 
-#: src/control/firstboot.glade:124
+#: src/control/firstboot.glade:142
 msgid "NTP Client"
 msgstr "Klient NTP"
 
-#: src/control/firstboot.glade:129
+#: src/control/firstboot.glade:147
 msgid "Desktop"
 msgstr "Środowisko graficzne"
 
-#: src/control/firstboot.glade:140
+#: src/control/firstboot.glade:158
 msgid "Root Password"
 msgstr "Hasło użytkownika root"
 
-#: src/control/firstboot.glade:145 src/control/firstboot.glade:150
+#: src/control/firstboot.glade:163 src/control/firstboot.glade:168
 msgid "Users"
 msgstr "Użytkownicy"
 
-#: src/control/firstboot.glade:155
+#: src/control/firstboot.glade:173
 msgid "Customer Center"
 msgstr "Centrum obsługi klienta"
 
-#: src/control/firstboot.glade:160
+#: src/control/firstboot.glade:178
 msgid "Hardware"
 msgstr "Sprzęt"
 
-#: src/control/firstboot.glade:166 src/control/firstboot.glade:172
-#: src/control/firstboot.glade:178
+#: src/control/firstboot.glade:184 src/control/firstboot.glade:190
+#: src/control/firstboot.glade:196
 msgid "Finish Setup"
 msgstr "Zakończ konfigurację"
 
-#: src/control/firstboot.glade:189
+#: src/control/firstboot.glade:207
 msgid "Configuring network..."
 msgstr "Konfiguracja sieci..."
 
-#: src/control/firstboot.glade:190
+#: src/control/firstboot.glade:208
 msgid "Configuring hardware..."
 msgstr "Konfiguracja sprzętu..."
 
@@ -309,6 +313,65 @@ msgstr ""
 "Jeśli to konieczne, można dostosować ustawienia klawiatury do nowego\n"
 "języka. Można to zrobić w Centrum sterowania YaST2 albo \n"
 "przez wykonanie polecenia \"yast2 keyboard\"."
+
+#. ----------------------------------------------------------------------
+#. * Build dialog
+#. * ----------------------------------------------------------------------
+#. heading text
+#: src/firstboot_language_keyboard.ycp:48
+#, fuzzy
+msgid "Language and Keyboard Layout"
+msgstr "Układ klawiatury"
+
+#. combo box label
+#: src/firstboot_language_keyboard.ycp:54
+#, fuzzy
+msgid "&Language"
+msgstr "Język"
+
+#. combo box label
+#: src/firstboot_language_keyboard.ycp:61
+#, fuzzy
+msgid "&Keyboard Layout"
+msgstr "Układ klawiatury"
+
+#. help text for firstboot language + keyboard screen
+#: src/firstboot_language_keyboard.ycp:86
+msgid ""
+"<p>\n"
+"Choose the <b>Language</b> and the <b>Keyboard layout</b> to be used during\n"
+"configuration and for the installed system.\n"
+"</p>\n"
+msgstr ""
+
+#. help text, continued
+#: src/firstboot_language_keyboard.ycp:92
+msgid ""
+"<p>\n"
+"Click <b>Next</b> to proceed to the next dialog.\n"
+"</p>\n"
+msgstr ""
+
+#. help text, continued
+#: src/firstboot_language_keyboard.ycp:97
+msgid ""
+"<p>\n"
+"Select <b>Abort</b> to abort the\n"
+"installation process at any time.\n"
+"</p>\n"
+msgstr ""
+
+#. popup message (user selected CJK language in text mode)
+#: src/firstboot_language_keyboard.ycp:144
+msgid ""
+"The selected language cannot be used in text mode. English is used for\n"
+"installation, but the selected language will be used for the new system."
+msgstr ""
+
+#. error message
+#: src/firstboot_language_keyboard.ycp:194
+msgid "There is not enough space to install all additional packages."
+msgstr ""
 
 #. progress stages
 #: src/firstboot_write.ycp:23

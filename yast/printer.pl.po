@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: printer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-07-09 12:20+0200\n"
+"POT-Creation-Date: 2009-08-06 09:26+0200\n"
 "PO-Revision-Date: 2009-07-27 23:04+0100\n"
 "Last-Translator: Karol Sikora <karol@elektrrrus.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -243,7 +243,7 @@ msgstr "Przetwarzanie wielu sterowników. Proszę czekać..."
 #. the currently used driver is then the very first entry in the SelectionBox.
 #. Body of a Popup::AnyMessage when no driver was selected:
 #: src/Printer.ycp:1653 src/Printer.ycp:1677 src/basicadd.ycp:175
-#: src/basicadd.ycp:260 src/basicadd.ycp:471 src/basicmodify.ycp:920
+#: src/basicadd.ycp:260 src/basicadd.ycp:482 src/basicmodify.ycp:931
 msgid "Select a driver."
 msgstr "Wybierz sterownik"
 
@@ -258,7 +258,7 @@ msgstr "Nie udało się dodać kolejki %1."
 #. Popup::ErrorDetails message where %1 will be replaced by the queue name.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Printer.ycp:1779
+#: src/Printer.ycp:1786
 #, ycp-format
 msgid "Failed to delete configuration %1."
 msgstr "Nie udało się usunąć %1."
@@ -266,23 +266,23 @@ msgstr "Nie udało się usunąć %1."
 #. Message of a Popup::Error.
 #. Only a simple message because this is only a fallback case
 #. which should not happen at all:
-#: src/Printer.ycp:1805
+#: src/Printer.ycp:1812
 msgid "Failed to determine the driver options."
 msgstr "Nie udało się określić opcji sterownika."
 
 #. Return at least a list with only a fallback string so that the user is informed:
 #. Header of a Popup::AnyMessage when "Driver Options" was selected:
-#: src/Printer.ycp:1808 src/Printer.ycp:1923 src/basicmodify.ycp:630
+#: src/Printer.ycp:1815 src/Printer.ycp:1930 src/basicmodify.ycp:641
 msgid "No driver options available"
 msgstr "Nie są dostępne żadne opcje sterownika"
 
 #. Dummy info for a currently selected item:
-#: src/Printer.ycp:1861
+#: src/Printer.ycp:1868
 msgid "currently selected"
 msgstr "aktualnie wybrany"
 
 #. Info when a currently selected item is already set:
-#: src/Printer.ycp:1864
+#: src/Printer.ycp:1871
 msgid "current setting of the print queue"
 msgstr "bieżące ustawienia kolejki drukowania"
 
@@ -350,17 +350,17 @@ msgstr "Nie udało się usunąć pakietu %1."
 #. Enforce user confirmation before a new service is started
 #. to be on the safe side that the user knows about it:
 #. PopupYesNoHeadline headline:
-#: src/Printerlib.ycp:256
+#: src/Printerlib.ycp:258
 msgid "Start local running CUPS daemon"
 msgstr "Uruchom lokalny demon CUPS"
 
 #. PopupYesNoHeadline body:
-#: src/Printerlib.ycp:258
+#: src/Printerlib.ycp:260
 msgid "A local running CUPS daemon is needed."
 msgstr "Lokalny demon CUPS jest wymagany."
 
 #. Popup::ErrorDetails message:
-#: src/Printerlib.ycp:265
+#: src/Printerlib.ycp:267
 msgid "Failed to start the CUPS daemon"
 msgstr "Uruchomienie demona CUPS zakończyło się niepowodzeniem."
 
@@ -371,7 +371,7 @@ msgstr "Uruchomienie demona CUPS zakończyło się niepowodzeniem."
 #. before e.g. the Overview dialog can be shown with the right current queues.
 #. After waiting 10 seconds without user notification, become verbose now.
 #. Wait half a minute for a new started cupsd:
-#: src/Printerlib.ycp:277 src/printer_proposal.ycp:143
+#: src/Printerlib.ycp:279 src/printer_proposal.ycp:143
 msgid ""
 "Started the CUPS daemon.\n"
 "Waiting half a minute so that it is ready to operate..."
@@ -385,7 +385,7 @@ msgstr ""
 #. E.g. because parsing of thousands of PPDs may need much time.
 #. Therefore enforce waiting one minute now.
 #. (Plain busy message without title.)
-#: src/Printerlib.ycp:288 src/printer_proposal.ycp:154
+#: src/Printerlib.ycp:290 src/printer_proposal.ycp:154
 msgid ""
 "The CUPS daemon is not yet accessible.\n"
 "Waiting one minute so that it is ready to operate..."
@@ -394,12 +394,12 @@ msgstr ""
 "W ciagu minuty CUPS będzie gotów do pracy..."
 
 #. Popup::Error message:
-#: src/Printerlib.ycp:295 src/Printerlib.ycp:343
+#: src/Printerlib.ycp:297 src/Printerlib.ycp:345
 msgid "No local running CUPS daemon is accessible."
 msgstr "Lokalny demon CUPS nie jest dostępny."
 
 #. Popup::ErrorDetails message:
-#: src/Printerlib.ycp:301 src/Printerlib.ycp:358
+#: src/Printerlib.ycp:303 src/Printerlib.ycp:360
 msgid "Failed to enable starting of the CUPS daemon during system boot"
 msgstr "Nie udało się odblokować uruchamiania demona CUPS w czasie uruchamiania systemu"
 
@@ -407,17 +407,17 @@ msgstr "Nie udało się odblokować uruchamiania demona CUPS w czasie uruchamian
 #. to be on the safe side regarding complaints in an enterprise environment
 #. because a restart disrupts all currently actively printing jobs:
 #. PopupYesNoHeadline headline:
-#: src/Printerlib.ycp:314
+#: src/Printerlib.ycp:316
 msgid "Restart local running CUPS daemon"
 msgstr "Uruchom ponownie lokalny demon CUPS"
 
 #. PopupYesNoHeadline body:
-#: src/Printerlib.ycp:316
+#: src/Printerlib.ycp:318
 msgid "A restart disrupts all currently actively printing jobs."
 msgstr "Ponowne uruchomienie zakłóci wszystkie aktywne zadania drukowania."
 
 #. Popup::ErrorDetails message:
-#: src/Printerlib.ycp:323
+#: src/Printerlib.ycp:325
 msgid "Failed to restart the CUPS daemon"
 msgstr "Ponowne uruchomienie demona CUPS zakończyło się niepowodzeniem"
 
@@ -426,7 +426,7 @@ msgstr "Ponowne uruchomienie demona CUPS zakończyło się niepowodzeniem"
 #. the BrowseInterval in cupsd.conf on remote CUPS servers is by default 30 seconds
 #. so that the local cupsd should listen at least 31 seconds to get Browsing info
 #. before e.g. the Overview dialog can be shown with the right current queues.
-#: src/Printerlib.ycp:337
+#: src/Printerlib.ycp:339
 msgid ""
 "Restarted the CUPS daemon.\n"
 "Waiting half a minute so that it is ready to operate..."
@@ -435,12 +435,12 @@ msgstr ""
 "W ciagu 30 sekund CUPS będzie gotów do pracy..."
 
 #. PopupYesNoHeadline headline:
-#: src/Printerlib.ycp:351
+#: src/Printerlib.ycp:353
 msgid "Enable starting of the CUPS daemon during system boot"
 msgstr "Odblokuj uruchamianie demona CUPS w czasie uruchamiania systemu"
 
 #. PopupYesNoHeadline body:
-#: src/Printerlib.ycp:353
+#: src/Printerlib.ycp:355
 msgid "Currently the CUPS daemon is not started during system boot."
 msgstr "Bieżący demon CUPS nie jest uruchamiany w czasie uruchamiania systemu."
 
@@ -448,17 +448,17 @@ msgstr "Bieżący demon CUPS nie jest uruchamiany w czasie uruchamiania systemu.
 #. to be on the safe side regarding complaints in an enterprise environment
 #. because a stop disrupts all currently actively printing jobs:
 #. PopupYesNoHeadline headline:
-#: src/Printerlib.ycp:373
+#: src/Printerlib.ycp:375
 msgid "Stop local running CUPS daemon"
 msgstr "Zatrzymaj lokalny demon CUPS"
 
 #. PopupYesNoHeadline body:
-#: src/Printerlib.ycp:375
+#: src/Printerlib.ycp:377
 msgid "A stop disrupts all currently actively printing jobs."
 msgstr "Zatrzymanie zakłóci wszystkie aktywne zadania drukowania."
 
 #. Popup::Error message:
-#: src/Printerlib.ycp:391
+#: src/Printerlib.ycp:393
 msgid "A local running CUPS daemon is still accessible."
 msgstr "Lokalny demon CUPS wciąż jest dostępny."
 
@@ -466,46 +466,92 @@ msgstr "Lokalny demon CUPS wciąż jest dostępny."
 #. cups_client_only fails when the client-only server is not accessible:
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the server name.
-#: src/Printerlib.ycp:437
+#: src/Printerlib.ycp:439
 #, ycp-format
 msgid "The CUPS server '%1' is not accessible"
 msgstr "Usługa CUPS '%1' jest niedostępny."
 
+#. Message of a Popup::ShowFeedback where %1 will be replaced
+#. by the number of seconds how long it takes.
+#. The number of seconds is always greater or equal than 2
+#. so that it is always the plural "seconds" here:
+#: src/Printerlib.ycp:559
+#, ycp-format
+msgid "It takes %1 seconds until the config files are updated..."
+msgstr ""
+
+#. Message of a Popup::ShowFeedback.
+#: src/Printerlib.ycp:573
+msgid "It takes half a minute until the config files are updated..."
+msgstr ""
+
+#. Message of a Popup::TimedMessage:
+#: src/Printerlib.ycp:591
+msgid "Waiting until the config files are updated..."
+msgstr ""
+
 #. Header for a dialog section where the user can
 #. specify in which way USB printers are configured automatically:
-#: src/autoconfig.ycp:53
-msgid "Specify in which way USB printers are configured automatically"
+#: src/autoconfig.ycp:55
+#, fuzzy
+msgid "Specify how USB printers are configured automatically"
 msgstr "Określ w jaki sposób drukarka USB zostanie skonfigurowana automatycznie"
 
 #. CheckBox to have no automatic configuration of USB printers at all
-#. by removing the cups-autoconfig RPM package.
+#. by removing the RPM packages cups-autoconfig and udev-configure-printer.
 #. Do not change or translate "cups-autoconfig", it is a RPM package name.
-#: src/autoconfig.ycp:73
-msgid "No Automatic Configuration at all: &Remove the cups-autoconfig package."
+#. Do not change or translate "udev-configure-printer", it is a RPM package name.
+#: src/autoconfig.ycp:76
+#, fuzzy
+msgid ""
+"No Automatic Configuration\n"
+"&Remove the packages cups-autoconfig and udev-configure-printer."
+msgstr "Bez automatycznej konfiguracji: Usuń pakiet cups-autoconfig."
+
+#. A caption for a Frame when udev-configure-printer is used
+#. to configure USB printers automatically.
+#. Do not change or translate "udev-configure-printer", it is a RPM package name.
+#: src/autoconfig.ycp:88
+msgid "udev-configure-printer is used for automatic configuration"
+msgstr ""
+
+#. Label when udev-configure-printer is used to configure USB printers automatically.
+#. Do not change or translate "udev-configure-printer", it is a RPM package name.
+#: src/autoconfig.ycp:93
+msgid "There are no settings when udev-configure-printer is used."
+msgstr ""
+
+#. A caption for a Frame with settings only for cups-autoconfig
+#. when cups-autoconfig is used to configure USB printers automatically.
+#. Do not change or translate "cups-autoconfig", it is a RPM package name.
+#: src/autoconfig.ycp:105
+#, fuzzy
+msgid "Settings for automatic configuration with cups-autoconfig"
 msgstr "Bez automatycznej konfiguracji: Usuń pakiet cups-autoconfig."
 
 #. CheckBox to enable that a print queue is automatically created
 #. when a USB printer is connected for the first time to the USB:
-#: src/autoconfig.ycp:85
+#: src/autoconfig.ycp:113
 msgid "Enable &Automatic Configuration of New Attachend USB Printers"
 msgstr "Odblokuj automatyczną konfigurację nowych drukarek USB"
-
-#. CheckBox to disable the print queue
-#. when a USB printer is disconnected from the USB:
-#: src/autoconfig.ycp:93
-msgid "&Disable Printout when Disconnecting an USB Printer"
-msgstr "Zablokuj wyjście drukarki w czasie odłączania drukarki USB"
 
 #. Header for a ComboBox to specify the CUPS operation policy
 #. for print queues which are automatically created
 #. when a USB printer is connected for the first time to the USB:
-#: src/autoconfig.ycp:102
+#: src/autoconfig.ycp:124
 msgid "Operation &Policy for Automatically Configured USB Printers"
 msgstr "Polityka operacji dla automatycznie skonfigurowanych drukarek USB"
 
+#. CheckBox to disable the print queue
+#. when a USB printer is disconnected from the USB:
+#: src/autoconfig.ycp:134
+msgid "&Disable Printout when Disconnecting an USB Printer"
+msgstr "Zablokuj wyjście drukarki w czasie odłączania drukarki USB"
+
 #. CheckBox to trigger that print queues are automatically created right now:
-#: src/autoconfig.ycp:114
-msgid "&Trigger Automatic Configuration"
+#: src/autoconfig.ycp:145
+#, fuzzy
+msgid "&Trigger Automatic Configuration to Run Now"
 msgstr "&Włącz automatyczną konfigurację"
 
 #. PopupYesNoHeadline headline
@@ -517,14 +563,14 @@ msgstr "&Włącz automatyczną konfigurację"
 #. so that the client-only config is to be disabled in any case:
 #. PopupYesNoHeadline headline
 #. where %1 will be replaced by the server name:
-#: src/autoconfig.ycp:132 src/overview.ycp:626 src/policies.ycp:123
+#: src/autoconfig.ycp:166 src/overview.ycp:641 src/policies.ycp:123
 #: src/printingvianetwork.ycp:463 src/sharing.ycp:509
 #, ycp-format
 msgid "Disable remote CUPS server '%1'"
 msgstr "Zablokuj zdalny serwer CUPS '%1'"
 
 #. PopupYesNoHeadline body:
-#: src/autoconfig.ycp:136
+#: src/autoconfig.ycp:170
 msgid "A remote CUPS server setting conflicts with automatic configuration of printers for the local system."
 msgstr "Ustawienia zdalnego serwera CUPS są w konflikcie z automatyczną konfiguracją drukarek na lokalnym systemie."
 
@@ -533,57 +579,57 @@ msgstr "Ustawienia zdalnego serwera CUPS są w konflikcie z automatyczną konfig
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Popup::ErrorDetails message:
-#: src/autoconfig.ycp:148 src/overview.ycp:638 src/policies.ycp:139
+#: src/autoconfig.ycp:182 src/overview.ycp:653 src/policies.ycp:139
 #: src/printingvianetwork.ycp:418 src/printingvianetwork.ycp:473
 #: src/printingvianetwork.ycp:581 src/sharing.ycp:525
 msgid "Failed to remove the 'ServerName' entry in /etc/cups/client.conf"
 msgstr "Nie można usunąć wpis 'ServerName' z /etc/cups/client.conf"
 
 #. Add the special case "not set" (see above) to the available operation_policy_names:
-#: src/autoconfig.ycp:214 src/autoconfig.ycp:232 src/autoconfig.ycp:243
-#: src/autoconfig.ycp:341
+#: src/autoconfig.ycp:280 src/autoconfig.ycp:298 src/autoconfig.ycp:309
+#: src/autoconfig.ycp:416
 msgid "not set"
 msgstr "nie ustawione"
 
 #. Popup::ErrorDetails message
 #. Do not change or translate "ConfigureNewPrinters=yes", it is a system settings name.
-#: src/autoconfig.ycp:301
+#: src/autoconfig.ycp:376
 msgid "Failed to set 'ConfigureNewPrinters=yes' in /etc/cups-autoconfig.conf"
 msgstr "Nie udało się ustawić 'ConfigureNewPrinters=yes' w /etc/cups-autoconfig.conf"
 
 #. Popup::ErrorDetails message
 #. Do not change or translate "ConfigureNewPrinters=no", it is a system settings name.
-#: src/autoconfig.ycp:311
+#: src/autoconfig.ycp:386
 msgid "Failed to set 'ConfigureNewPrinters=no' in /etc/cups-autoconfig.conf"
 msgstr "Nie udało się ustawić 'ConfigureNewPrintes=no' w /etc/cups-autoconfig.conf"
 
 #. Popup::ErrorDetails message
 #. Do not change or translate "DisablePrintersOnRemoval=yes", it is a system settings name.
-#: src/autoconfig.ycp:323
+#: src/autoconfig.ycp:398
 msgid "Failed to set 'DisablePrintersOnRemoval=yes' in /etc/cups-autoconfig.conf"
 msgstr "Nie udało się ustawić 'DisablePrintersOnRemoval= yes' w /etc/cups-autoconfig.conf"
 
 #. Popup::ErrorDetails message
 #. Do not change or translate "DisablePrintersOnRemoval=no", it is a system settings name.
-#: src/autoconfig.ycp:333
+#: src/autoconfig.ycp:408
 msgid "Failed to set 'DisablePrintersOnRemoval=no' in /etc/cups-autoconfig.conf"
 msgstr "Nie udało się ustawić 'DisablePrintersOnRemoval=no' w /etc/cups-autoconfig.conf"
 
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the cups-autoconfig error policy value.
 #. Do not change or translate "DefaultCUPSPolicy", it is a system settings name.
-#: src/autoconfig.ycp:351
+#: src/autoconfig.ycp:426
 #, ycp-format
 msgid "Failed to set 'DefaultCUPSPolicy=%1' in /etc/cups-autoconfig.conf"
 msgstr "Nie udało się ustawić 'DefaultCUPSPolicy=%1' w /etc/cups-autoconfig.conf"
 
 #. Popup::ErrorDetails message.
-#: src/autoconfig.ycp:371
+#: src/autoconfig.ycp:446
 msgid "Automatic configuration failed."
 msgstr "Automatyczna konfiguracja nie powiodła się."
 
 #. Popup::Error message:
-#: src/autoconfig.ycp:418 src/policies.ycp:323 src/printingvianetwork.ycp:837
+#: src/autoconfig.ycp:493 src/policies.ycp:323 src/printingvianetwork.ycp:837
 #: src/sharing.ycp:820
 msgid "Failed to apply the settings to the system."
 msgstr "Nie udało się zastosować ustawień dla systemu"
@@ -615,8 +661,8 @@ msgstr "&Kreator połączeń"
 #. Headers of a Table with a list of printer connections:
 #. Header of a Table column with a list of printer connections.
 #. Printer model name:
-#: src/basicadd.ycp:109 src/basicadd.ycp:338 src/basicmodify.ycp:315
-#: src/basicmodify.ycp:667 src/connectionwizard.ycp:130
+#: src/basicadd.ycp:109 src/basicadd.ycp:349 src/basicmodify.ycp:315
+#: src/basicmodify.ycp:678 src/connectionwizard.ycp:130
 msgid "Model"
 msgstr "Model"
 
@@ -625,8 +671,8 @@ msgstr "Model"
 #. Caption for a Table with a list of printer connections:
 #. Header of a Table column with a list of printer connections.
 #. Connection of the printer (e.g. via USB or via parallel port):
-#: src/basicadd.ycp:112 src/basicadd.ycp:341 src/basicmodify.ycp:285
-#: src/basicmodify.ycp:318 src/basicmodify.ycp:670
+#: src/basicadd.ycp:112 src/basicadd.ycp:352 src/basicmodify.ycp:285
+#: src/basicmodify.ycp:318 src/basicmodify.ycp:681
 #: src/connectionwizard.ycp:133
 msgid "Connection"
 msgstr "Połączenie"
@@ -635,8 +681,8 @@ msgstr "Połączenie"
 #. Additional description of the printer or its particular connection:
 #. Header of a Table column with a list of print queues.
 #. Print queue description (e.g. model or driver):
-#: src/basicadd.ycp:115 src/basicadd.ycp:344 src/basicmodify.ycp:321
-#: src/basicmodify.ycp:673 src/connectionwizard.ycp:136 src/overview.ycp:89
+#: src/basicadd.ycp:115 src/basicadd.ycp:355 src/basicmodify.ycp:321
+#: src/basicmodify.ycp:684 src/connectionwizard.ycp:136 src/overview.ycp:89
 msgid "Description"
 msgstr "Opis"
 
@@ -668,7 +714,7 @@ msgid "Default paper size (if printer and driver supports it)"
 msgstr "Domyślny rozmiar popieru (jeśli wspierany przez drukarkę i sterownik)"
 
 #. Header of a TextEntry to enter the queue name:
-#: src/basicadd.ycp:206 src/basicadd.ycp:459
+#: src/basicadd.ycp:206 src/basicadd.ycp:470
 msgid "Set &Name"
 msgstr "Ustaw &nazwę"
 
@@ -676,7 +722,7 @@ msgstr "Ustaw &nazwę"
 #. nor a driver was selected:
 #. Header of a Popup::AnyMessage when no queue was selected from the list:
 #: src/basicadd.ycp:241 src/overview.ycp:362 src/overview.ycp:406
-#: src/overview.ycp:666
+#: src/overview.ycp:681
 msgid "Nothing Selected"
 msgstr "Nie wybrano nic"
 
@@ -687,19 +733,19 @@ msgid "Select a connection and then assign a driver."
 msgstr "Wybierz połączenie, a następnie przypisz sterownik."
 
 #. Header of a Popup::AnyMessage when no connection was selected:
-#: src/basicadd.ycp:250 src/basicadd.ycp:356 src/basicmodify.ycp:687
+#: src/basicadd.ycp:250 src/basicadd.ycp:367 src/basicmodify.ycp:698
 #: src/connectionwizard.ycp:973
 msgid "No Connection Selected"
 msgstr "Nie wybrano połączenia"
 
 #. Body of a Popup::AnyMessage when no connection was selected:
-#: src/basicadd.ycp:252 src/basicadd.ycp:358 src/basicmodify.ycp:689
+#: src/basicadd.ycp:252 src/basicadd.ycp:369 src/basicmodify.ycp:700
 #: src/connectionwizard.ycp:975
 msgid "Select a connection."
 msgstr "Wybierz połączenie."
 
 #. Header of a Popup::AnyMessage when no driver was selected:
-#: src/basicadd.ycp:258 src/basicadd.ycp:469 src/basicmodify.ycp:918
+#: src/basicadd.ycp:258 src/basicadd.ycp:480 src/basicmodify.ycp:929
 msgid "No Driver Selected"
 msgstr "Nie wybrano sterownika"
 
@@ -738,15 +784,34 @@ msgstr "Potwierdź poprawną nazwę kolejki"
 msgid "'%1' is invalid or it exists already. Use '%2' instead?"
 msgstr "'%1' nie jest poprawne lub już istnieje. Użyć '%2' zamiast tego?"
 
+#. Since CUPS 1.4 the new DirtyCleanInterval directive controls the delay when cupsd updates config files:
+#: src/basicadd.ycp:314
+msgid "Created New Printer Setup"
+msgstr ""
+
+#. It returns false if the user had interrupted the waiting for updated config files:
+#. Message of a Popup::ErrorDetails:
+#: src/basicadd.ycp:317
+#, fuzzy
+msgid "New Printer Configuration not yet Stored in the System"
+msgstr "Dodaj konfigurację nowej drukarki"
+
+#. Explanation details of a Popup::ErrorDetails.
+#. The 'next dialog' is the overview dialog where the printer configurations are shown
+#. which has a 'Refresh List' button to update the shown printer configurations:
+#: src/basicadd.ycp:321
+msgid "If the next dialog does not show the new printer configuration as expected, wait some time and use the 'Refresh List' button."
+msgstr ""
+
 #. Set a fallback driver_filter_string which does not match to anything
 #. to avoid that the full list of thousands of PPDs is shown automatically
 #. because it can take a very long time until the user can proceed:
-#: src/basicadd.ycp:433 src/basicmodify.ycp:846
+#: src/basicadd.ycp:444 src/basicmodify.ycp:857
 msgid "Enter your printer model here."
 msgstr "Wpisz model drukarki."
 
-#: src/basicadd.ycp:511 src/basicadd.ycp:673 src/basicmodify.ycp:1006
-#: src/basicmodify.ycp:1171
+#: src/basicadd.ycp:522 src/basicadd.ycp:684 src/basicmodify.ycp:1017
+#: src/basicmodify.ycp:1182
 msgid "any model"
 msgstr "każdy model"
 
@@ -821,8 +886,26 @@ msgstr "&Odblokowanie drukowania"
 msgid "Failed to modify %1."
 msgstr "Nie udało się zmienić %1."
 
+#. Since CUPS 1.4 the new DirtyCleanInterval directive controls the delay when cupsd updates config files:
+#: src/basicmodify.ycp:608
+msgid "Modified Printer Setup"
+msgstr ""
+
+#. It returns false if the user had interrupted the waiting for updated config files:
+#. Message of a Popup::WarningDetails.
+#: src/basicmodify.ycp:611
+msgid "Modified Printer Configuration not yet Stored in the System"
+msgstr ""
+
+#. Explanation details of a Popup::WarningDetails.
+#. The 'next dialog' is the overview dialog where the printer configurations are shown
+#. which has a 'Refresh List' button to update the shown printer configurations:
+#: src/basicmodify.ycp:615
+msgid "If the next dialog does not show the expected modifications, wait some time and use the 'Refresh List' button."
+msgstr ""
+
 #. Body of a Popup::AnyMessage when "Driver Options" was selected:
-#: src/basicmodify.ycp:632
+#: src/basicmodify.ycp:643
 msgid "Possible reasons: Nothing selected or it is a remote configuration."
 msgstr "Prawdopodbne przyczyny: nie wybrano nic lub to jest zdalna konfiguracja."
 
@@ -2787,18 +2870,60 @@ msgstr ""
 "Przerwanie i usunięcie zadania oraz przejście do następnego zadania drukowania.\n"
 "</p>"
 
-#. Autoconfig help 1/1:
+#. Autoconfig help 1/3:
 #: src/helps.ycp:671
 msgid ""
 "<p>\n"
 "<b><big>CUPS Autoconfiguration for USB Printers</big></b><br>\n"
-"When a USB printer is connected to the system\n"
-"cups-autoconfig determines if the printer is already configured.\n"
-"If it is already configured, printing is enabled.\n"
+"Autoconfiguration is provided by two RPM packages:<br>\n"
+"The new 'udev-configure-printer' since openSUSE 11.2 and\n"
+"the meanwhile deprecated 'cups-autoconfig' because the latter\n"
+"uses HAL which is deprecated.<br>\n"
+"When the autoconfiguration dialog is launched, it checks\n"
+"if udev-configure-printer or cups-autoconfig is installed.\n"
+"If none of them is installed, it tries to install one of them\n"
+"where udev-configure-printer is preferred\n"
+"but if it fails to install udev-configure-printer,\n"
+"it tries to install cups-autoconfig.<br>\n"
+"If none of them is finally installed, the dialog is useless\n"
+"and all its elements become disabled.\n"
+"</p>"
+msgstr ""
+
+#. Autoconfig help 2/3:
+#: src/helps.ycp:687
+msgid ""
+"<p>\n"
+"When udev-configure-printer is used,\n"
+"automatic USB printer setup happens via the entries\n"
+"in its udev config file /etc/udev/rules.d/70-printers.rules\n"
+"which triggers to run 'udev-configure-printer add'\n"
+"when a USB printer is plugged in\n"
+"and 'udev-configure-printer remove' when it is unplugged.\n"
+"There are no settings when udev-configure-printer is used\n"
+"except one changes the 70-printers.rules file manually.\n"
+"</p>"
+msgstr ""
+
+#. Autoconfig help 3/3:
+#: src/helps.ycp:698
+#, fuzzy
+msgid ""
+"<p>\n"
+"When cups-autoconfig is used,\n"
+"automatic USB printer setup happens via the entries\n"
+"in its HAL config file 10-cups-autoconfig.fdi\n"
+"which triggers to run 'hal-cups-autoconfig --add'\n"
+"when a USB printer is plugged in.\n"
+"It determines if the printer is already configured.\n"
+"If it is already configured, printing will be enabled.\n"
 "If the printer is not configured, cups-autoconfig attempts\n"
 "to select an appropriate driver for it and, if successful,\n"
 "cups-autoconfig configures it.\n"
-"When a USB printer is removed, cups-autoconfig can disable printing.\n"
+"When a USB printer is unplugged, 'hal-cups-autoconfig --disable'\n"
+"is run which can disable printing depending on the\n"
+"settings for cups-autoconfig which are stored in its\n"
+"/etc/cups-autoconfig.conf file.\n"
 "</p>"
 msgstr ""
 "<p>\n"
@@ -2919,7 +3044,7 @@ msgid "CUPS Server %1"
 msgstr "Usługa CUPS %1"
 
 #. Body of a Popup::AnyMessage when no queue was selected from the list:
-#: src/overview.ycp:364 src/overview.ycp:408 src/overview.ycp:668
+#: src/overview.ycp:364 src/overview.ycp:408 src/overview.ycp:683
 msgid "Select an entry."
 msgstr "Wybierz wpis."
 
@@ -2981,7 +3106,7 @@ msgstr "Istnieją zadania drukowania które zostaną usunięte przed wydrukowani
 
 #. Header of a confirmation popup before pending print jobs will be deleted
 #. where %1 will be replaced by the queue name.
-#: src/overview.ycp:458 src/overview.ycp:556
+#: src/overview.ycp:458 src/overview.ycp:571
 #, ycp-format
 msgid "Delete Pending Print Jobs For %1"
 msgstr "Odrzucanie zadań drukowania dla %1"
@@ -3001,7 +3126,7 @@ msgstr "Drukuj stronę testową po innych zadaniach drukowania."
 #. Message of a Popup::ErrorDetails
 #. where %1 will be replaced by the queue name.
 #. Only a simple message because this error does not happen on a normal system.
-#: src/overview.ycp:475 src/overview.ycp:573
+#: src/overview.ycp:475 src/overview.ycp:588
 #, ycp-format
 msgid "Failed to delete all pending jobs for %1."
 msgstr "Nie udało się usunąć wszystkich zadań dla %1."
@@ -3009,52 +3134,52 @@ msgstr "Nie udało się usunąć wszystkich zadań dla %1."
 #. Message of a Popup::ErrorDetails
 #. where %1 will be replaced by the queue name.
 #. Only a simple message because this error does not happen on a normal system.
-#: src/overview.ycp:499
+#: src/overview.ycp:514
 #, ycp-format
 msgid "Failed to print testpage for %1."
 msgstr "Nie udało się wydrukować strony testowej dla %1."
 
 #. Popup::TimedAnyQuestion header:
-#: src/overview.ycp:507
+#: src/overview.ycp:522
 msgid "Wait Until Testprint Finished"
 msgstr "Oczekiwanie na ukończenie testu drukowania..."
 
 #. Popup::TimedAnyQuestion message
 #. where %1 will be replaced by the queue name.
-#: src/overview.ycp:510
+#: src/overview.ycp:525
 #, ycp-format
 msgid "Sent testpage to %1. It should start to print soon."
 msgstr "Wyślij stronę testową do %1. Za chwilę powinno rozpocząć się drukowanie."
 
 #. Fallback body of a confirmation popup before pending print jobs will be deleted:
-#: src/overview.ycp:544
+#: src/overview.ycp:559
 msgid "There are pending print jobs which might be deleted now."
 msgstr "Istnieją zadania drukowania które zostaną teraz usunięte."
 
 #. 'Yes' button label of a confirmation popup
 #. before all pending jobs in a queue will be deleted:
-#: src/overview.ycp:562
+#: src/overview.ycp:577
 msgid "Delete all pending jobs"
 msgstr "Usuń wszystkie zadania"
 
 #. 'No' button label of a confirmation popup
 #. before all pending jobs in a queue will be deleted:
-#: src/overview.ycp:565
+#: src/overview.ycp:580
 msgid "Do not delete them"
 msgstr "Nie usuwaj ich"
 
 #. PopupYesNoHeadline body:
-#: src/overview.ycp:628
+#: src/overview.ycp:643
 msgid "A remote CUPS server setting conflicts with adding a configuration."
 msgstr "Zdalny serwer CUPS stwarza problemy przy dodawaniu konfiguracji"
 
 #. Header of a Popup::AnyMessage when a remote queue was selected to be modified:
-#: src/overview.ycp:674
+#: src/overview.ycp:689
 msgid "Cannot Modify"
 msgstr "Nie można zmienić"
 
 #. Body of a Popup::AnyMessage when a remote queue was selected to be modified:
-#: src/overview.ycp:676
+#: src/overview.ycp:691
 msgid "This is a remote configuration. Only local configurations can be modified."
 msgstr "To jest konfiguracja zdalna. Tylko lokalna konfiguracja może być zmieniona."
 
