@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-06 09:13+0200\n"
+"POT-Creation-Date: 2009-09-21 09:33+0200\n"
 "PO-Revision-Date: 2009-08-31 19:36+0100\n"
 "Last-Translator: Przemyslaw Bojczuk <pbojczuk@gmail.com>\n"
 "Language-Team: Polski <pl@li.org>\n"
@@ -29,17 +29,17 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 
 #. Command line output Headline
-#: src/clients/dns.ycp:76
+#: src/clients/dns.ycp:75
 msgid "DNS Configuration Summary:"
 msgstr "Podsumowanie konfiguracji DNS:"
 
 #. Commandline help title
-#: src/clients/dns.ycp:89
+#: src/clients/dns.ycp:88
 msgid "DNS Configuration"
 msgstr "Konfiguracja DNS"
 
 #. Commandline command help
-#: src/clients/dns.ycp:97 src/clients/host.ycp:93 src/clients/lan.ycp:48
+#: src/clients/dns.ycp:96 src/clients/host.ycp:93 src/clients/lan.ycp:48
 #: src/clients/lan.ycp:54 src/clients/remote.ycp:95
 msgid "Display configuration summary"
 msgstr "Wyświetl zestawienie konfiguracji"
@@ -65,29 +65,39 @@ msgstr "Połączenia DSL"
 msgid "&DSL Connections"
 msgstr "Połączenia &DSL"
 
-#: src/clients/firewall_stage1_proposal.ycp:43
-msgid "Firewall is enabled (<a href=\"firewall--disable_firewall_in_proposal\">disable</a>)"
+#. progress step title
+#: src/clients/firewall_stage1_finish.ycp:35
+#, fuzzy
+msgid "Writing Firewall Configuration..."
+msgstr "Wczytywanie konfiguracji zapory sieciowej..."
+
+#: src/clients/firewall_stage1_proposal.ycp:63
+#, fuzzy
+msgid "Firewall will be enabled (<a href=\"firewall--disable_firewall_in_proposal\">disable</a>)"
 msgstr "Zapora sieciowa jest włączona (<a href=\"firewall--disable_firewall_in_proposal\">wyłącz</a>)"
 
-#: src/clients/firewall_stage1_proposal.ycp:45
-msgid "Firewall is disabled (<a href=\"firewall--enable_firewall_in_proposal\">enable</a>)"
+#: src/clients/firewall_stage1_proposal.ycp:65
+#, fuzzy
+msgid "Firewall will be disabled (<a href=\"firewall--enable_firewall_in_proposal\">enable</a>)"
 msgstr "Zapora sieciowa jest wyłączona (<a href=\"firewall--enable_firewall_in_proposal\">włącz</a>)"
 
-#: src/clients/firewall_stage1_proposal.ycp:51
-msgid "SSH port is open (<a href=\"firewall--disable_ssh_in_proposal\">close</a>)"
+#: src/clients/firewall_stage1_proposal.ycp:71
+#, fuzzy
+msgid "SSH port will be open (<a href=\"firewall--disable_ssh_in_proposal\">close</a>)"
 msgstr "Port SSH jest otwarty (<a href=\"firewall--disable_ssh_in_proposal\">zamknij</a>)"
 
-#: src/clients/firewall_stage1_proposal.ycp:53
-msgid "SSH port is blocked (<a href=\"firewall--enable_ssh_in_proposal\">open</a>)"
+#: src/clients/firewall_stage1_proposal.ycp:73
+#, fuzzy
+msgid "SSH port will be blocked (<a href=\"firewall--enable_ssh_in_proposal\">open</a>)"
 msgstr "Port SSH jest zamknięty (<a href=\"firewall--enable_ssh_in_proposal\">otwórz</a>)"
 
 #. Proposal title 
-#: src/clients/firewall_stage1_proposal.ycp:78
+#: src/clients/firewall_stage1_proposal.ycp:132
 msgid "Firewall"
 msgstr "Zapora sieciowa"
 
 #. Menu entry label
-#: src/clients/firewall_stage1_proposal.ycp:80
+#: src/clients/firewall_stage1_proposal.ycp:134
 msgid "&Firewall"
 msgstr "Zapora sieciowa"
 
@@ -2357,7 +2367,7 @@ msgstr "&Bezprzewodowe"
 msgid "Network Card Setup"
 msgstr "Ustawienia karty sieciowej"
 
-#: src/lan/bridge.ycp:65
+#: src/lan/bridge.ycp:77
 msgid ""
 "At least one selected device is already configured.\n"
 "Remove the configuration?\n"
@@ -3393,26 +3403,13 @@ msgid ""
 "Only devices with the device activation set to <b>Never</b> and with <b>No Address Setup</b> are available.</p>"
 msgstr "<p>Proszę wybrać napędy podrzędne dla urządzenia łączonego (bonding). Dostępne są tylko napędy, których aktywacja jest ustawiona na <b>Nigdy</b> i <b>Bez konfiguracji adresu</b>.</p>"
 
-#. DHCP dialog help 1/8
+#. DHCP dialog help 1/7
 #: src/lan/help.ycp:208
 msgid "<p><b><big>DHCP Client Options</big></b></p>"
 msgstr "<p><b><big>Opcje klienta DHCP</big></b><br>"
 
-#. DHCP dialog help 2/8
+#. DHCP dialog help 2/7
 #: src/lan/help.ycp:211
-msgid ""
-"<p><b>Request Broadcast Response</b> causes the DHCP client\n"
-"to ask the server always to broadcast its responses. You may need this,\n"
-"for example, if your machine is a mobile client moving between different\n"
-"networks.</p>"
-msgstr ""
-"<p><b>Żądanie odpowiedzi z rozgłoszeniem</b> sprawia, że klient DHCP\n"
-"żąda aby serwer zawsze rozgłaszał swoje odpowiedzi. Można tego\n"
-"wymagać, np. jeśli komputer jest klientem mobilnym przemieszczającym\n"
-"się między różnymi sieciami.</p>"
-
-#. DHCP dialog help 3/8
-#: src/lan/help.ycp:217
 msgid ""
 "<p>The <b>DHCP Client Identifier</b>, if left empty, defaults to\n"
 "the hardware address of the network interface. It must be different for each\n"
@@ -3427,8 +3424,8 @@ msgstr ""
 "komputerów używających tego samego interfejsu sieciowego, czyli także \n"
 "tego samego adresu sprzętowego.</p>"
 
-#. DHCP dialog help 4/8
-#: src/lan/help.ycp:224
+#. DHCP dialog help 3/7
+#: src/lan/help.ycp:218
 msgid ""
 "<p>The <b>Hostname to Send</b> specifies a string used for the\n"
 "hostname option field, when dhcpcd sends messages to the DHCP server. Some \n"
@@ -3450,7 +3447,7 @@ msgstr ""
 "hosta, należy pozostawić puste pole.</p>\n"
 
 #. Aliases dialog help 1/4
-#: src/lan/help.ycp:236
+#: src/lan/help.ycp:230
 msgid ""
 "<p><b><big>Additional Addresses</big></b></p>\n"
 "<p>Configure additional addresses of an interface (its aliases) in this table.</p>\n"
@@ -3459,7 +3456,7 @@ msgstr ""
 "<p>W tym oknie można skonfigurować dodatkowe adresy interfejsów (lub ich aliasów).</p>\n"
 
 #. Aliases dialog help 2/4
-#: src/lan/help.ycp:241
+#: src/lan/help.ycp:235
 msgid ""
 "<p>Enter an <b>Alias Name</b>, an <b>IP Address</b>, and\n"
 "the <b>Netmask</b>.</p>"
@@ -3468,7 +3465,7 @@ msgstr ""
 "<b>Maskę sieci</b>.</p>"
 
 #. Aliases dialog help 3/4
-#: src/lan/help.ycp:245
+#: src/lan/help.ycp:239
 msgid ""
 "<p><b>Alias Name</b> is optional and legacy.The total\n"
 "              length of interface name (inclusive of the colon and  label)  is\n"
@@ -3479,11 +3476,11 @@ msgstr ""
 "              ograniczona do 15 znaków, a przestarzały ifconfig obcina nazwę do 9 znaków.</p>"
 
 #. Aliases dialog help 3/4, #83766
-#: src/lan/help.ycp:250
+#: src/lan/help.ycp:244
 msgid "<p>Do not include the interface name in the alias name. For example, enter <b>foo</b> instead of <b>eth0:foo</b>.</p>"
 msgstr "<p>Proszę nie włączać nazwy interfejsu do aliasu nazwy. Na przykład proszę wpisać <b>foo</b> zamiast <b>eth0:foo</b>.</p>"
 
-#: src/lan/help.ycp:257
+#: src/lan/help.ycp:251
 msgid ""
 "<p>Choose between three <b>Key Input Types</b> for your key.\n"
 "<br><b>Passphrase</b>: The key is generated from the phrase entered.\n"
@@ -3510,7 +3507,7 @@ msgstr ""
 "można używać kresek <tt>-</tt> np. <tt>0a5f-41e6-48</tt>.\n"
 "</p>\n"
 
-#: src/lan/help.ycp:273
+#: src/lan/help.ycp:267
 msgid ""
 "<p>Here, set the most important settings\n"
 "for wireless networking.</p>"
@@ -3519,7 +3516,7 @@ msgstr ""
 "dla sieci bezprzewodowych.</p>"
 
 #. Wireless dialog help
-#: src/lan/help.ycp:277
+#: src/lan/help.ycp:271
 msgid ""
 "<p>The <b>Operating Mode</b> depends on the network topology. The mode\n"
 "can be <b>Ad-Hoc</b> (peer-to-peer network without an access point),\n"
@@ -3535,7 +3532,7 @@ msgstr ""
 "albo działa jako punkt dostępowy).</p>\n"
 
 #. Wireless dialog help
-#: src/lan/help.ycp:285
+#: src/lan/help.ycp:279
 msgid ""
 "<p>Set the <b>Network Name (ESSID)</b> used to identify\n"
 "cells that are part of the same virtual network. All stations in a\n"
@@ -3553,7 +3550,7 @@ msgstr ""
 "z najwyższym natężeniem sygnału.</p>\n"
 
 #. Wireless dialog help
-#: src/lan/help.ycp:295
+#: src/lan/help.ycp:289
 msgid ""
 "<p>In some networks, you need to set an <b>Authentication Mode</b>.\n"
 "It depends on the protection technology used, WEP or WPA. <b>WEP</b>\n"
@@ -3590,7 +3587,7 @@ msgstr ""
 "Jest to możliwe tylko w trybie pracy <b>Managed</b>.</p>\n"
 
 #. Wireless dialog help
-#: src/lan/help.ycp:314
+#: src/lan/help.ycp:308
 msgid ""
 "<p>To use WEP, enter the\n"
 "WEP encryption key to use. It can have a key\n"
@@ -3603,7 +3600,7 @@ msgstr ""
 "rozmiary są wspierane przez wszystkie urządzenia. Dla tych kluczy 24 bity\n"
 "są generowane dynamicznie, tak więc trzeba podać od 40 do 232 bitów.</p>\n"
 
-#: src/lan/help.ycp:324
+#: src/lan/help.ycp:318
 msgid ""
 "<p>To use WPA-PSK (sometimes referred to as WPA Home),\n"
 "enter the preshared key. This\n"
@@ -3619,7 +3616,7 @@ msgstr ""
 "należy używać jako hasła słów, które mogą być łatwo odgadnięte.</p>\n"
 
 #. Wireless dialog help
-#: src/lan/help.ycp:333
+#: src/lan/help.ycp:327
 msgid ""
 "<p>To use WPA-EAP (sometimes referred to as WPA Enterprise),\n"
 "enter some additional parameters in the next dialog.</p>\n"
@@ -3628,7 +3625,7 @@ msgstr ""
 "należy podać dodatkowe parametry w następnym oknie dialogowym</p>\n"
 
 #. Wireless dialog help
-#: src/lan/help.ycp:338
+#: src/lan/help.ycp:332
 msgid ""
 "<p>These values will be written to the interface configuration file\n"
 "'ifcfg-*' in '/etc/sysconfig/network'. If you need additional settings,\n"
@@ -5417,17 +5414,17 @@ msgid "IP Forwarding: off"
 msgstr "Przekazywanie IP: wyłączone"
 
 #. item in combo box Firewall Zone
-#: src/modules/SuSEFirewall4Network.ycp:64
+#: src/modules/SuSEFirewall4Network.ycp:67
 msgid "Automatically Assigned Zone"
 msgstr "Automatycznie przypisana strefa"
 
 #. item in combo box Firewall Zone
-#: src/modules/SuSEFirewall4Network.ycp:66
+#: src/modules/SuSEFirewall4Network.ycp:69
 msgid "Firewall Disabled"
 msgstr "Zapora sieciowa wyłączona"
 
 #. TRANSLATORS: Part of combo box item -> "Internal Zone (Unprotected)"
-#: src/modules/SuSEFirewall4Network.ycp:76
+#: src/modules/SuSEFirewall4Network.ycp:79
 msgid "(Unprotected)"
 msgstr "(niechroniony)"
 
@@ -6649,9 +6646,10 @@ msgstr ""
 
 #. help text for Device Activation
 #: src/routines/widgets.ycp:119
+#, fuzzy
 msgid ""
 "<p><b>Manually</b>: You control the interface manually\n"
-"via 'ifup' or 'kinternet' (see 'User Controlled' below)</p>.\n"
+"via 'ifup' or 'kinternet' (see 'User Controlled' below).</p>\n"
 msgstr ""
 "<p>Proszę nacisnąć przycisk <b>ręcznie</b>aby  kontrolować interfejs\n"
 "przy pomocy programów ifup lub KInternet \n"
@@ -6725,10 +6723,10 @@ msgstr "U&aktywnij urządzenie"
 #. Device activation main help. The individual parts will be
 #. substituted as %1
 #: src/routines/widgets.ycp:172
-#, ycp-format
+#, fuzzy, ycp-format
 msgid ""
 "<p><b><big>Device Activation</big></b></p> \n"
-"<p>Choose when to bring up the network interface.<b>At Boot Time</b> activates it during system boot, \n"
+"<p>Choose when to bring up the network interface. <b>At Boot Time</b> activates it during system boot, \n"
 "<b>Never</b> does not start the device.\n"
 "%1</p>\n"
 msgstr ""
@@ -7243,6 +7241,17 @@ msgstr "Włącz przekazywanie &IP"
 #: src/services/routing.ycp:372
 msgid "Routing"
 msgstr "Routing"
+
+#~ msgid ""
+#~ "<p><b>Request Broadcast Response</b> causes the DHCP client\n"
+#~ "to ask the server always to broadcast its responses. You may need this,\n"
+#~ "for example, if your machine is a mobile client moving between different\n"
+#~ "networks.</p>"
+#~ msgstr ""
+#~ "<p><b>Żądanie odpowiedzi z rozgłoszeniem</b> sprawia, że klient DHCP\n"
+#~ "żąda aby serwer zawsze rozgłaszał swoje odpowiedzi. Można tego\n"
+#~ "wymagać, np. jeśli komputer jest klientem mobilnym przemieszczającym\n"
+#~ "się między różnymi sieciami.</p>"
 
 #~ msgid "Request Broad&cast Response"
 #~ msgstr "Żądaj odpowiedzi z roz&głaszaniem"

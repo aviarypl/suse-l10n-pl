@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: storage\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-06 09:14+0200\n"
+"POT-Creation-Date: 2009-09-21 09:34+0200\n"
 "PO-Revision-Date: 2009-08-11 15:02+0100\n"
 "Last-Translator: Przemysław Bojczuk <pbojczuk@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -801,7 +801,7 @@ msgstr ""
 
 #. popup text
 #: storage/src/include/custom_part_dialogs.ycp:314
-#: storage/src/modules/Storage.ycp:5402
+#: storage/src/modules/Storage.ycp:5347
 msgid ""
 "You did not enter a password.\n"
 "Try again.\n"
@@ -811,7 +811,7 @@ msgstr ""
 
 #. popup text
 #: storage/src/include/custom_part_dialogs.ycp:325
-#: storage/src/modules/Storage.ycp:5413
+#: storage/src/modules/Storage.ycp:5358
 #, ycp-format
 msgid ""
 "The password must have at least %1 characters.\n"
@@ -1535,12 +1535,12 @@ msgstr ""
 "Nie jest możliwe określenie punktu montowania\n"
 "na nieistniejącym lub nieznanym systemie plików."
 
-#: storage/src/include/custom_part_lib.ycp:582
+#: storage/src/include/custom_part_lib.ycp:581
 msgid "Detecting encryption type..."
 msgstr "Wykrywanie rodzaju szyfrowania..."
 
 #. warning message, %1 is replaced by fs name (e.g. Ext3)
-#: storage/src/include/custom_part_lib.ycp:665
+#: storage/src/include/custom_part_lib.ycp:664
 #, ycp-format
 msgid ""
 "\n"
@@ -1945,13 +1945,19 @@ msgstr ""
 "The DM %1 is in use. It cannot be\n"
 "edited. To edit %1, make sure it is not used."
 
+#: storage/src/include/ep-dm.ycp:18 storage/src/include/ep-hd.ycp:36
+#: storage/src/include/ep-loop.ycp:18 storage/src/include/ep-lvm.ycp:41
+#: storage/src/include/ep-raid.ycp:18
+msgid "Edit"
+msgstr "Edytuj"
+
 #. heading
-#: storage/src/include/ep-dm.ycp:37
+#: storage/src/include/ep-dm.ycp:50
 msgid "Device Mapper (DM)"
 msgstr "Device Mapper (DM"
 
 #. helptext
-#: storage/src/include/ep-dm.ycp:45
+#: storage/src/include/ep-dm.ycp:58
 msgid ""
 "<p>This view shows all Device Mapper devices\n"
 "except for those already included in some other view. Thus Multipath Disks,\n"
@@ -1962,14 +1968,14 @@ msgstr ""
 "Dyski multipath, BIOS RAID oraz urządzenia LVM nie są tu wyświetlone.</p>"
 
 #. push button text
-#: storage/src/include/ep-dm.ycp:69 storage/src/include/ep-hd.ycp:60
-#: storage/src/include/ep-loop.ycp:37 storage/src/include/ep-lvm.ycp:65
+#: storage/src/include/ep-dm.ycp:97 storage/src/include/ep-hd.ycp:60
+#: storage/src/include/ep-loop.ycp:38 storage/src/include/ep-lvm.ycp:66
 #: storage/src/include/ep-raid.ycp:42
 msgid "Edit..."
 msgstr "Edytuj"
 
 #. helptext
-#: storage/src/include/ep-dm.ycp:77
+#: storage/src/include/ep-dm.ycp:105
 msgid ""
 "<p>This view shows detailed information about the\n"
 "selected Device Mapper device.</p>"
@@ -1978,7 +1984,7 @@ msgstr ""
 "urządzeniu obsługiwanym przez Device Mapper.</p>"
 
 #. helptext
-#: storage/src/include/ep-dm.ycp:122
+#: storage/src/include/ep-dm.ycp:150
 msgid ""
 "<p>This view shows all devices used by the\n"
 "selected Device Mapper device.</p>"
@@ -1988,7 +1994,7 @@ msgstr ""
 "Device Mapper.</p>"
 
 #. heading
-#: storage/src/include/ep-dm.ycp:140
+#: storage/src/include/ep-dm.ycp:168
 #, ycp-format
 msgid "DM Device: %1"
 msgstr "Urządzenie DM: %1"
@@ -1996,7 +2002,7 @@ msgstr "Urządzenie DM: %1"
 #. push button text
 #. tab heading
 #. push button text
-#: storage/src/include/ep-dm.ycp:143 storage/src/include/ep-hd.ycp:382
+#: storage/src/include/ep-dm.ycp:171 storage/src/include/ep-hd.ycp:382
 #: storage/src/include/ep-lvm.ycp:331 storage/src/include/ep-raid.ycp:214
 msgid "&Overview"
 msgstr "&Widok ogólny"
@@ -2004,7 +2010,7 @@ msgstr "&Widok ogólny"
 #. push button text
 #. tab heading
 #. push button text
-#: storage/src/include/ep-dm.ycp:145 storage/src/include/ep-hd.ycp:386
+#: storage/src/include/ep-dm.ycp:173 storage/src/include/ep-hd.ycp:386
 #: storage/src/include/ep-raid.ycp:216
 msgid "&Used Devices"
 msgstr "Wykorzystane &urządzenia"
@@ -2243,25 +2249,20 @@ msgstr "Dodaj partycję"
 msgid "Delete"
 msgstr "Usuń"
 
-#: storage/src/include/ep-hd.ycp:36 storage/src/include/ep-loop.ycp:18
-#: storage/src/include/ep-lvm.ycp:41 storage/src/include/ep-raid.ycp:18
-msgid "Edit"
-msgstr "Edytuj"
-
 #: storage/src/include/ep-hd.ycp:37 storage/src/include/ep-lvm.ycp:19
 #: storage/src/include/ep-lvm.ycp:42 storage/src/include/ep-raid.ycp:19
 msgid "Resize"
 msgstr "Zmień rozmiar"
 
 #. push button text
-#: storage/src/include/ep-hd.ycp:62 storage/src/include/ep-lvm.ycp:67
+#: storage/src/include/ep-hd.ycp:62 storage/src/include/ep-lvm.ycp:68
 #: storage/src/include/ep-raid.ycp:44
 msgid "Resize..."
 msgstr "Zmień &rozmiar"
 
 #. push button text
-#: storage/src/include/ep-hd.ycp:64 storage/src/include/ep-loop.ycp:39
-#: storage/src/include/ep-lvm.ycp:69 storage/src/include/ep-raid.ycp:46
+#: storage/src/include/ep-hd.ycp:64 storage/src/include/ep-loop.ycp:40
+#: storage/src/include/ep-lvm.ycp:70 storage/src/include/ep-raid.ycp:46
 msgid "Delete..."
 msgstr "&Usuń"
 
@@ -2331,7 +2332,7 @@ msgid "Execute dasd&fmt on the DASD Device"
 msgstr "Wywołaj dasd&fmt na urządzeniu DASD"
 
 #. push button text
-#: storage/src/include/ep-hd.ycp:281 storage/src/include/ep-lvm.ycp:160
+#: storage/src/include/ep-hd.ycp:281 storage/src/include/ep-lvm.ycp:161
 #: storage/src/include/ep-lvm.ycp:251
 msgid "Add..."
 msgstr "&Dodaj"
@@ -2625,28 +2626,28 @@ msgstr ""
 
 #. heading
 #. tree node label
-#: storage/src/include/ep-loop.ycp:80 storage/src/include/ep-main.ycp:195
+#: storage/src/include/ep-loop.ycp:83 storage/src/include/ep-main.ycp:195
 msgid "Crypt Files"
 msgstr "Pliki zaszyfrowane"
 
 #. push button text
-#: storage/src/include/ep-loop.ycp:85
+#: storage/src/include/ep-loop.ycp:88
 msgid "Add Crypt File..."
 msgstr "Dodaj plik zaszyfrowany..."
 
 #. helptext
-#: storage/src/include/ep-loop.ycp:94
+#: storage/src/include/ep-loop.ycp:97
 msgid "<p>This view shows all crypt files.</p>"
 msgstr "<p>Ten widok prezentuje wszystkie zaszyfrowane pliki.</p>"
 
 #. heading
-#: storage/src/include/ep-loop.ycp:130
+#: storage/src/include/ep-loop.ycp:133
 #, ycp-format
 msgid "Crypt File: %1"
 msgstr "Plik zaszyfrowany: %1"
 
 #. helptext
-#: storage/src/include/ep-loop.ycp:141
+#: storage/src/include/ep-loop.ycp:144
 msgid ""
 "<p>This view shows detailed information of the\n"
 "selected crypt file.</p>"
@@ -2793,8 +2794,9 @@ msgstr "Wybrane woluminy fizyczne:"
 
 #. helptext
 #: storage/src/include/ep-lvm-dialogs.ycp:367
+#, fuzzy
 msgid ""
-"<p>Enter the size aswell as the number and size\n"
+"<p>Enter the size as well as the number and size\n"
 "of stripes for the new logical volume. The number of stripes cannot be higher\n"
 "than the number of physical volumes of the volume group.</p>"
 msgstr ""
@@ -2896,22 +2898,22 @@ msgstr "Brak wolnego miejsca w bieżącej grupie woluminów \"%1\"."
 msgid "Add Logical Volume"
 msgstr "Dodaj wolumin logiczny"
 
-#: storage/src/include/ep-lvm.ycp:146
+#: storage/src/include/ep-lvm.ycp:147
 msgid "Volume Group"
 msgstr "Grupa woluminów"
 
-#: storage/src/include/ep-lvm.ycp:149
+#: storage/src/include/ep-lvm.ycp:150
 msgid "Logical Volume"
 msgstr "Wolumin logiczny"
 
 #. heading
 #. tree node label
-#: storage/src/include/ep-lvm.ycp:155 storage/src/include/ep-main.ycp:193
+#: storage/src/include/ep-lvm.ycp:156 storage/src/include/ep-main.ycp:193
 msgid "Volume Management"
 msgstr "Zarządzanie woluminami"
 
 #. helptext
-#: storage/src/include/ep-lvm.ycp:169
+#: storage/src/include/ep-lvm.ycp:170
 msgid ""
 "<p>This view shows all LVM volume groups and\n"
 "their logical volumes.</p>"
@@ -3012,7 +3014,7 @@ msgid "Settings"
 msgstr "Ustawienia"
 
 #. popup text, %1 will be replaces with button text
-#: storage/src/include/ep-main.ycp:286
+#: storage/src/include/ep-main.ycp:291
 #, ycp-format
 msgid ""
 "You have changed the partitioning or storage settings. These changes\n"
@@ -3024,16 +3026,16 @@ msgstr ""
 "Kontynuować?"
 
 #. helptext
-#: storage/src/include/ep-main.ycp:297
+#: storage/src/include/ep-main.ycp:302
 msgid "<p>Here you can see the partitioning summary.</p>"
 msgstr "<p>Tutaj można przejrzeć podsumowanie partycjonowania.</p>"
 
-#: storage/src/include/ep-main.ycp:311
+#: storage/src/include/ep-main.ycp:316
 msgid ": Summary"
 msgstr ": Podsumowanie ."
 
 #. tree node label
-#: storage/src/include/ep-main.ycp:385
+#: storage/src/include/ep-main.ycp:390
 msgid "System View"
 msgstr "Widok systemu"
 
@@ -3471,7 +3473,7 @@ msgstr ""
 "logicznych.</p>"
 
 #. popup message
-#: storage/src/include/ep-unused.ycp:82
+#: storage/src/include/ep-unused.ycp:91
 msgid ""
 "Rescaning unused devices cancels\n"
 "all current changes. Really rescan unused devices?"
@@ -4215,12 +4217,12 @@ msgid "Remove All"
 msgstr "Usuń wszystkie"
 
 #. button text
-#: storage/src/modules/FileSystems.ycp:172
+#: storage/src/modules/FileSystems.ycp:178
 msgid "Mount &read-only"
 msgstr "Zamontuj tylko do &odczytu"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:175
+#: storage/src/modules/FileSystems.ycp:181
 msgid ""
 "<p><b>Mount Read-Only:</b>\n"
 "No writing to the file system is possible. Default is false.</p>\n"
@@ -4229,12 +4231,12 @@ msgstr ""
 "Dostęp z zapisem do systemu plików nie jest możliwy. Domyślnie wyłączone.</p>\n"
 
 #. button text
-#: storage/src/modules/FileSystems.ycp:184
+#: storage/src/modules/FileSystems.ycp:190
 msgid "No &access time"
 msgstr "Bez cz&asu dostępu"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:187
+#: storage/src/modules/FileSystems.ycp:193
 msgid ""
 "<p><b>No access time:</b>\n"
 "Access times are not updated when a file is read. Default is false.</p>"
@@ -4243,12 +4245,12 @@ msgstr ""
 "Czasy dostępu nie będą aktualizowane podczas odczytu z pliku. Domyślnie wyłączone.</p>"
 
 #. button text
-#: storage/src/modules/FileSystems.ycp:195
+#: storage/src/modules/FileSystems.ycp:201
 msgid "Mountable by &user"
 msgstr "Montowalne przez &użytkownika"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:198
+#: storage/src/modules/FileSystems.ycp:204
 msgid ""
 "<p><b>Mountable by User:</b>\n"
 "The file system may be mounted by an ordinary user. Default is false.</p>\n"
@@ -4257,12 +4259,12 @@ msgstr ""
 "System plików może być zamontowany przez zwykłego użytkownika. \n"
 
 #. button text
-#: storage/src/modules/FileSystems.ycp:207
+#: storage/src/modules/FileSystems.ycp:213
 msgid "Do Not Mount at System &Start-up"
 msgstr "Nie montuj przy &starcie systemu"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:210
+#: storage/src/modules/FileSystems.ycp:216
 msgid ""
 "<p><b>Do Not Mount at System Start-up:</b>\n"
 "The file system is not automatically mounted when the system starts.\n"
@@ -4279,12 +4281,12 @@ msgstr ""
 "Domyślnie wyłączone.</p>\n"
 
 #. button text
-#: storage/src/modules/FileSystems.ycp:223
+#: storage/src/modules/FileSystems.ycp:229
 msgid "Enable &Quota Support"
 msgstr "Włącz obsługę &Quoty"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:226
+#: storage/src/modules/FileSystems.ycp:232
 msgid ""
 "<p><b>Enable Quota Support:</b>\n"
 "The file system is mounted with user quotas enabled.\n"
@@ -4295,12 +4297,12 @@ msgstr ""
 "Domyślnie jest wyłączone</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:242
+#: storage/src/modules/FileSystems.ycp:248
 msgid "Data &Journaling Mode"
 msgstr "Tryb księ&gowania danych"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:249
+#: storage/src/modules/FileSystems.ycp:255
 msgid ""
 "<p><b>Data Journaling Mode:</b>\n"
 "Specifies the journaling mode for file data.\n"
@@ -4321,12 +4323,12 @@ msgstr ""
 "<tt>writeback</tt> -- kolejność danych nie jest zachowywana.Wydajność nie spada</p>\n"
 
 #. button text
-#: storage/src/modules/FileSystems.ycp:269
+#: storage/src/modules/FileSystems.ycp:275
 msgid "&Access Control Lists (ACL)"
 msgstr "Listy &kontroli dostępu (ACL)"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:272
+#: storage/src/modules/FileSystems.ycp:278
 msgid ""
 "<p><b>Access Control Lists (ACL):</b>\n"
 "Enable access control lists on the file system.</p>\n"
@@ -4335,12 +4337,12 @@ msgstr ""
 "Opcja ta włącza listy kontroli dostępu na systemie plików.</p>\n"
 
 #. button text
-#: storage/src/modules/FileSystems.ycp:282
+#: storage/src/modules/FileSystems.ycp:288
 msgid "&Extended User Attributes"
 msgstr "Rozsz&erzone atrybuty użytkownika"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:285
+#: storage/src/modules/FileSystems.ycp:291
 msgid ""
 "<p><b>Extended User Attributes:</b>\n"
 "Allow extended user attributes on the file system.</p>\n"
@@ -4349,12 +4351,12 @@ msgstr ""
 "Opcja zezwala na rozszerzone atrybuty użytkownika w systemie plików.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:300
+#: storage/src/modules/FileSystems.ycp:306
 msgid "Arbitrary option &value"
 msgstr "Bezwzględna &wartość opcji"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:303
+#: storage/src/modules/FileSystems.ycp:309
 msgid ""
 "<p><b>Arbitrary Option Value:</b>\n"
 "In this field, type any legal mount option allowed in the fourth field of /etc/fstab.\n"
@@ -4365,12 +4367,12 @@ msgstr ""
 "Wielokrotne opcje są rozdzielane przecinkami.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:318
+#: storage/src/modules/FileSystems.ycp:324
 msgid "Char&set for file names"
 msgstr "Ze&staw znaków dla nazw plików"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:325
+#: storage/src/modules/FileSystems.ycp:331
 msgid ""
 "<p><b>Charset for File Names:</b>\n"
 "Set the charset used for display of file names in Windows partitions.</p>\n"
@@ -4379,12 +4381,12 @@ msgstr ""
 "Opcja służąca do określania zestawów znaków dla nazw plików na partycji Windows.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:333
+#: storage/src/modules/FileSystems.ycp:339
 msgid "Code&page for short FAT names"
 msgstr "Strona ko&dowa dla krótkich nazw FAT"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:338
+#: storage/src/modules/FileSystems.ycp:344
 msgid ""
 "<p><b>Codepage for Short FAT Names:</b>\n"
 "This codepage is used for converting to shortname characters on FAT file systems.</p>\n"
@@ -4393,12 +4395,12 @@ msgstr ""
 "Ta strona kodowa jest używana do konwersji krótkich nazw plików w systemach plików FAT.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:350
+#: storage/src/modules/FileSystems.ycp:356
 msgid "Number of &FATs"
 msgstr "Liczba &FAT"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:354
+#: storage/src/modules/FileSystems.ycp:360
 msgid ""
 "<p><b>Number of FATs:</b>\n"
 "Specify the number of file allocation tables in the file system. The default is 2.</p>"
@@ -4407,12 +4409,12 @@ msgstr ""
 "Opcja służąca do określenia liczby tablic alokacji plików w systemie plików. Domyślnie są dwie.</p>"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:359
+#: storage/src/modules/FileSystems.ycp:365
 msgid "FAT &size"
 msgstr "Ro&zmiar FAT"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:366
+#: storage/src/modules/FileSystems.ycp:372
 msgid ""
 "<p><b>FAT size:</b>\n"
 "Specifies the type of file allocation tables used (12, 16, or 32-bit). If auto is specified, YaST2 will automatically select the value most suitable for the file system size.</p>\n"
@@ -4421,17 +4423,17 @@ msgstr ""
 "Określa typ używanych tablic alokacji plików (12, 16 lub 32-bitowe). Jeśli wybrano \"auto\", program YaST2 automatycznie wybierze wartość najlepiej odpowiadającą rozmiarowi systemu plików.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:372
+#: storage/src/modules/FileSystems.ycp:378
 msgid "Root &dir entries"
 msgstr "Wpisy w katalo&gu root"
 
 #. popup text
-#: storage/src/modules/FileSystems.ycp:378
+#: storage/src/modules/FileSystems.ycp:384
 msgid "The minimum size for \"Root dir entries\" is 112. Please try again."
 msgstr "Minimalny rozmiar dla \"pozycji w katalogu root\" wynosi 112. Proszę spróbować ponownie."
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:380
+#: storage/src/modules/FileSystems.ycp:386
 msgid ""
 "<p><b>Root dir entries:</b>\n"
 "Select the number of entries available in the root directory.</p>"
@@ -4440,12 +4442,12 @@ msgstr ""
 "Proszę wybrać liczbę pozycji dostępnych w katalogu głównym (root).</p>"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:389
+#: storage/src/modules/FileSystems.ycp:395
 msgid "Hash &function"
 msgstr "&Funkcja mieszająca"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:394
+#: storage/src/modules/FileSystems.ycp:400
 msgid ""
 "<p><b>Hash function:</b>\n"
 "This specifies the name of the hash function to use to sort the file names in directories.</p>"
@@ -4454,12 +4456,12 @@ msgstr ""
 "Opcja określa nazwę funkcji mieszającej, używanej do sortowania nazw plików w katalogach.</p>"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:399
+#: storage/src/modules/FileSystems.ycp:405
 msgid "FS &revision"
 msgstr "&Rewizja FS"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:404
+#: storage/src/modules/FileSystems.ycp:410
 msgid ""
 "<p><b>FS revision:</b>\n"
 "This option defines the reiserfs format revision to use. '3.5' is for backwards compatibility with kernels of the 2.2.x series. '3.6' is more recent, but can only be used with kernel versions greater than or equal to 2.4.</p>\n"
@@ -4468,13 +4470,13 @@ msgstr ""
 "Ta opcja definiuje format używanej rewizji reiserFS. '3.5' jest kompatybilny wstecznie z jądrami systemu serii 2.2.x. '3.6' jest nowszy, ale może być używany tylko z jądrami systemu w wersji 2.4 i nowszymi.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:414
-#: storage/src/modules/FileSystems.ycp:519
+#: storage/src/modules/FileSystems.ycp:420
+#: storage/src/modules/FileSystems.ycp:525
 msgid "Block &size in bytes"
 msgstr "Rozmiar &bloku w bajtach"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:418
+#: storage/src/modules/FileSystems.ycp:424
 msgid ""
 "<p><b>Block size:</b>\n"
 "Specify the size of blocks in bytes. Valid block size values are 512, 1024, 2048, and 4096 bytes per block. If auto is selected, the standard block size of 4096 is used.</p>\n"
@@ -4483,14 +4485,14 @@ msgstr ""
 "Opcja ta służy do określania rozmiar bloku w bajtach. Dopuszczalne rozmiary bloków to 512, 1024, 2048 i 4096 bajtów na blok. Jeśli wybrano \"auto\", zostanie użyty standardowy rozmiar bloku 4096.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:424
-#: storage/src/modules/FileSystems.ycp:570
+#: storage/src/modules/FileSystems.ycp:430
+#: storage/src/modules/FileSystems.ycp:576
 msgid "&Inode Size"
 msgstr "Rozmiar &inode"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:428
-#: storage/src/modules/FileSystems.ycp:574
+#: storage/src/modules/FileSystems.ycp:434
+#: storage/src/modules/FileSystems.ycp:580
 msgid ""
 "<p><b>Inode Size:</b>\n"
 "This option specifies the inode size of the file system.</p>\n"
@@ -4499,12 +4501,12 @@ msgstr ""
 "Ta opcja określa rozmiar węzłów inode w systemie plików.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:433
+#: storage/src/modules/FileSystems.ycp:439
 msgid "&Percentage of inode space"
 msgstr "Udział &przestrzeni inode"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:440
+#: storage/src/modules/FileSystems.ycp:446
 msgid ""
 "<p><b>Percentage of inode space:</b>\n"
 "The option \"Percentage of inode space\" specifies the maximum percentage of space in the file system that can be allocated to inodes.</p>\n"
@@ -4513,12 +4515,12 @@ msgstr ""
 "Opcja \"Udział przestrzeni inode\" określa maksymalny udział przestrzeni systemu plików, który może zostać zaalokowany na węzły inode.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:446
+#: storage/src/modules/FileSystems.ycp:452
 msgid "Inode &aligned"
 msgstr "Uporządkow&ane inode"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:451
+#: storage/src/modules/FileSystems.ycp:457
 msgid ""
 "<p><b>Inode Aligned:</b>\n"
 "The option \"Inode Aligned\" is used to specify whether inode allocation is or\n"
@@ -4529,12 +4531,12 @@ msgstr ""
 "Opcja \"Uporządkowane inode\" używana jest do określenia, czy alokacja węzłów inode jest uporządkowana. Domyślnie węzły inode są uporządkowane. Dostęp do uporządkowanych węzłów inode jest zwykle bardziej wydajny niż do nieuporządkowanych.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:479
+#: storage/src/modules/FileSystems.ycp:485
 msgid "&Log size in megabytes"
 msgstr "Rozmiar &logu w megabajtach"
 
 #. popup text
-#: storage/src/modules/FileSystems.ycp:486
+#: storage/src/modules/FileSystems.ycp:492
 msgid ""
 "The \"Log size\" value is incorrect.\n"
 "Please enter a value greater than zero."
@@ -4543,7 +4545,7 @@ msgstr ""
 "Proszę podać wartość większą od zera."
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:489
+#: storage/src/modules/FileSystems.ycp:495
 #, no-c-format
 msgid ""
 "<p><b>Log size</b>\n"
@@ -4553,17 +4555,17 @@ msgstr ""
 "Opcja do określenia rozmiar logu (w megabajtach). Jeśli ustawiono \"auto\", domyślnie ustawione zostanie 40% zagregowanej przestrzeni.</p>"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:494
+#: storage/src/modules/FileSystems.ycp:500
 msgid "Invoke Bad Blocks List &Utility"
 msgstr "Wywołaj narzędzie do wyświetlania &uszkodzonych bloków"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:503
+#: storage/src/modules/FileSystems.ycp:509
 msgid "Stride &length in blocks"
 msgstr "Krok długości w b&lokach"
 
 #. popup text
-#: storage/src/modules/FileSystems.ycp:509
+#: storage/src/modules/FileSystems.ycp:515
 msgid ""
 "The \"Stride length in blocks\" value is not possible.\n"
 "Please select a value greater than 1."
@@ -4572,7 +4574,7 @@ msgstr ""
 "Proszę wybrać wartość większą od 1."
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:511
+#: storage/src/modules/FileSystems.ycp:517
 msgid ""
 "<p><b>Stride Length in Blocks:</b>\n"
 "Set RAID-related options for the file system. Currently, the only supported\n"
@@ -4583,7 +4585,7 @@ msgstr ""
 "Opcja do ustawienia wartości związanych z RAID dla systemu plików. Obecnie jedynym obsługiwanym parametrem jest 'stride' (krok), który pobiera numer bloków w pasie RAID jako parametr.</p>\n"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:523
+#: storage/src/modules/FileSystems.ycp:529
 msgid ""
 "<p><b>Block size:</b>\n"
 "Specify the size of blocks in bytes. Valid block size values are 1024, 2048, and 4096 bytes per block. If auto is selected, the block size is determined by the file system size and the expected use of the file system.</p>\n"
@@ -4592,12 +4594,12 @@ msgstr ""
 "Opcja do określenia rozmiaru bloku w bajtach. Dopuszczalne wartości rozmiaru to 1024, 2048 i 4096 bajtów na blok. Jeśli wybrano \"auto\", rozmiar bloku determinowany jest przez rozmiar systemu plików i jego przewidywane wykorzystanie.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:528
+#: storage/src/modules/FileSystems.ycp:534
 msgid "Bytes per &inode"
 msgstr "Bajtów na &inode"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:532
+#: storage/src/modules/FileSystems.ycp:538
 msgid ""
 "<p><b>Bytes per inode:</b>\n"
 "Specify the bytes to inode ratio. YaST2 creates an inode for every &lt;bytes-per-inode&gt; bytes of space on the disk. The larger the bytes-per-inode ratio, the fewer inodes will be created.\n"
@@ -4610,12 +4612,12 @@ msgstr ""
 "w systemie plików po jego utworzeniu, więc należy upewnić się, że wprowadzono rozsądną wartość tego parametru.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:540
+#: storage/src/modules/FileSystems.ycp:546
 msgid "Percentage of blocks &reserved for root"
 msgstr "Udział bloków za&rezerwowanych dla użytkownika root"
 
 #. popup text
-#: storage/src/modules/FileSystems.ycp:548
+#: storage/src/modules/FileSystems.ycp:554
 msgid ""
 "The \"Percentage of blocks reserved for root\" value is incorrect.\n"
 "Please use a value between 0 and 99."
@@ -4624,18 +4626,18 @@ msgstr ""
 "Proszę podać wartość pomiędzy 0 a 99."
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:551
+#: storage/src/modules/FileSystems.ycp:557
 #, no-c-format
 msgid "<p><b>Percentage of blocks reserved for root:</b> Specify the percentage of blocks reserved for the super user. This value defaults to 5%.</p>"
 msgstr "<p><b>Udział bloków zarezerwowanych dla użytkownika root:</b> Opcja określająca udział bloków zarezerwowanych dla administratora. Ta wartość domyślnie ustawiona jest na 5%.</p>"
 
 #. checkbox text
-#: storage/src/modules/FileSystems.ycp:555
+#: storage/src/modules/FileSystems.ycp:561
 msgid "Disable regular checks"
 msgstr "Wyłącz regularne sprawdzanie"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:562
+#: storage/src/modules/FileSystems.ycp:568
 msgid ""
 "<p><b>Disable regular checks:</b>\n"
 "Disable regular file system check at booting.</p>\n"
@@ -4644,12 +4646,12 @@ msgstr ""
 "Wyłącz regularne sprawdzanie systemu plików podczas uruchamiania.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:579
+#: storage/src/modules/FileSystems.ycp:585
 msgid "&Directory Index Feature"
 msgstr "&Narzędzie indeksowania katalogów"
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:585
+#: storage/src/modules/FileSystems.ycp:591
 msgid ""
 "<p><b>Directory Index:</b>\n"
 "Enables use of hashed b-trees to speed up lookups in large directories.</p>\n"
@@ -4658,17 +4660,17 @@ msgstr ""
 "Włącza użycie hashed b-trees w celu przyspieszenia wyszukiwania w dużych katalogach.</p>\n"
 
 #. label text
-#: storage/src/modules/FileSystems.ycp:775
+#: storage/src/modules/FileSystems.ycp:781
 msgid "Swap &Priority"
 msgstr "&Priorytet swap"
 
 #. popup text
-#: storage/src/modules/FileSystems.ycp:781
+#: storage/src/modules/FileSystems.ycp:787
 msgid "Value must be between 0 and 32767. Try again."
 msgstr "Wartość musi być pomiędzy 0 a 32767. Proszę spróbować ponownie."
 
 #. help text, richtext format
-#: storage/src/modules/FileSystems.ycp:786
+#: storage/src/modules/FileSystems.ycp:792
 msgid ""
 "<p><b>Swap Priority:</b>\n"
 "Enter the swap priority. Higher numbers mean higher priority.</p>\n"
@@ -4748,11 +4750,11 @@ msgstr ""
 "Aplikacja  \"%1\" (%2) blokuje dostęp do urządzeń przechowywania danych.\n"
 "Należy ją zamknąć by kontynuować."
 
-#: storage/src/modules/Storage.ycp:870
+#: storage/src/modules/Storage.ycp:830
 msgid "Resize Not Possible:"
 msgstr "Zmiana rozmiaru nie jest możliwa:"
 
-#: storage/src/modules/Storage.ycp:2269
+#: storage/src/modules/Storage.ycp:2228
 #, ycp-format
 msgid ""
 "Could not set encryption.\n"
@@ -4765,7 +4767,7 @@ msgstr ""
 "\n"
 "Podane hasło szyfrujące może być nieprawidłowe.\n"
 
-#: storage/src/modules/Storage.ycp:3642
+#: storage/src/modules/Storage.ycp:3601
 #, ycp-format
 msgid ""
 "\n"
@@ -4776,7 +4778,7 @@ msgstr ""
 "Urządzenie %1 nie może zostać zmodyfikowane ponieważ zawiera aktywną\n"
 "przestrzeń wymiany która jest wymagana przez instalator.\n"
 
-#: storage/src/modules/Storage.ycp:3655
+#: storage/src/modules/Storage.ycp:3614
 #, ycp-format
 msgid ""
 "\n"
@@ -4787,7 +4789,7 @@ msgstr ""
 "Urządzenie %1 nie może być zmodyfikowane ponieważ zawiera dane\n"
 "konieczne do ukończenia instalacji.\n"
 
-#: storage/src/modules/Storage.ycp:3676
+#: storage/src/modules/Storage.ycp:3635
 #, ycp-format
 msgid ""
 "\n"
@@ -4798,7 +4800,7 @@ msgstr ""
 "Urządzenie %1 nie może być usunięte ponieważ zawiera aktywną\n"
 "przestrzeń wymiany która jest wymagana przez instalator.\n"
 
-#: storage/src/modules/Storage.ycp:3683
+#: storage/src/modules/Storage.ycp:3642
 #, ycp-format
 msgid ""
 "\n"
@@ -4809,7 +4811,7 @@ msgstr ""
 "Urządzenie %1 nie może być usunięte ponieważ zawiera dane\n"
 "konieczne do ukończenia procesu instalacji.\n"
 
-#: storage/src/modules/Storage.ycp:3709
+#: storage/src/modules/Storage.ycp:3668
 #, ycp-format
 msgid ""
 "\n"
@@ -4822,7 +4824,7 @@ msgstr ""
 "urządzenia %2, które zawiera aktywną przestrzeń wymiany\n"
 "wymaganą przez instalator.\n"
 
-#: storage/src/modules/Storage.ycp:3717
+#: storage/src/modules/Storage.ycp:3676
 #, ycp-format
 msgid ""
 "\n"
@@ -4834,13 +4836,13 @@ msgstr ""
 "to zmianę urządzenia %2 które zawiera dane potrzebne do ukończenia procesu\n"
 "instalacji.\n"
 
-#: storage/src/modules/Storage.ycp:4325
+#: storage/src/modules/Storage.ycp:4284
 #, ycp-format
 msgid "Add the following resolvables failed: %1"
 msgstr "Nie udało się spełnić: %1"
 
 #. popup text
-#: storage/src/modules/Storage.ycp:5391
+#: storage/src/modules/Storage.ycp:5336
 msgid ""
 "The first and the second version\n"
 "of the password do not match.\n"
@@ -4851,7 +4853,7 @@ msgstr ""
 "Proszę spróbować ponownie."
 
 #. popup text
-#: storage/src/modules/Storage.ycp:5423
+#: storage/src/modules/Storage.ycp:5368
 msgid ""
 "The password may only contain the following characters:\n"
 "0..9, a..z, A..Z, and any of \"@#* ,.;:._-+!$%&/|?{[()]}^\\<>\".\n"
@@ -5512,8 +5514,8 @@ msgstr "RAID:"
 msgid "<p>The overview contains:</p>"
 msgstr "<p>Przegląd zawiera:</p>"
 
-#: storage/src/modules/StorageProposal.ycp:2918
-#: storage/src/modules/StorageProposal.ycp:3670
+#: storage/src/modules/StorageProposal.ycp:2954
+#: storage/src/modules/StorageProposal.ycp:3706
 msgid "Resize impossible due to inconsistent fs. Try checking fs under Windows."
 msgstr ""
 "Zmiana rozmiaru jest niemożliwa z powodu niespójności systemu plików. \n"
