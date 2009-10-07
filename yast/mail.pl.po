@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mail\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-21 09:44+0200\n"
+"POT-Creation-Date: 2009-10-07 07:56+0200\n"
 "PO-Revision-Date: 2009-08-09 12:26+0100\n"
 "Last-Translator: Jakub Derda <kontakt@thenewone.pl>\n"
 "Language-Team:  <pl@li.org>\n"
@@ -87,11 +87,11 @@ msgstr "Wczytywanie ustawień uwierzytelniania"
 #. Translators: error message,
 #. %1 is a file name,
 #. %2 is a long file name - leave it on a separate line
-#: src/Mail.ycp:556 yast2-mail-2.15.10/src/Mail.ycp:550
-#, ycp-format
+#: src/Mail.ycp:556
+#, fuzzy, ycp-format
 msgid ""
 "Error reading file %1. The file must have\n"
-"a fixed format to be readable by YaST2.  For details, see\n"
+"a fixed format to be readable by YaST.  For details, see\n"
 "%2"
 msgstr ""
 "Błąd odczytu pliku %1. Plik musi mieć ustalony\n"
@@ -1660,10 +1660,10 @@ msgstr "Konfiguracja lokalnej domeny serwera pocztowego"
 
 #. AuthorizingDialog dialog help 1/2
 #: src/mail-server_helps.ycp:20
-#: yast2-mail-2.15.10/src/mail-server_helps.ycp:20
+#, fuzzy
 msgid ""
 "<p><b><big>Administrator Authorization</big></b><br>\n"
-"To use the YaST2 mail server component, your system must use LDAP\n"
+"To use the YaST mail server component, your system must use LDAP\n"
 "as a repository for the user and group accounts and for the DNS services.<br>\n"
 "Some of the mail server settings will be stored in the LDAP repository, too.<br></p>\n"
 msgstr ""
@@ -1935,9 +1935,9 @@ msgstr ""
 
 #. MailLocalDomains dialog help 2/3
 #: src/mail-server_helps.ycp:148
-#: yast2-mail-2.15.10/src/mail-server_helps.ycp:137
+#, fuzzy
 msgid ""
-"<p>Note: You can create and set up the domains with the YaST2 \n"
+"<p>Note: You can create and set up the domains with the YaST \n"
 "DNS server module. In this module, you only can set the properties\n"
 "concerning the mail server.\n"
 "</p>\n"
@@ -1949,13 +1949,13 @@ msgstr ""
 
 #. MailLocalDomains dialog help 3/3
 #: src/mail-server_helps.ycp:154
-#: yast2-mail-2.15.10/src/mail-server_helps.ycp:143
+#, fuzzy
 msgid ""
 "<p><b><big>Type:</big></b><br>\n"
 "You can define virtual and local domains. In virtual domains, only users\n"
 "assigned a mail address in the domain can receive mail.\n"
 "In local domains, all user can get mails. Assign virtual mail \n"
-"addresses in the YaST2 user module.\n"
+"addresses in the YaST user module.\n"
 "</p>\n"
 msgstr ""
 "<p><b><big>Typ:</big></b><br>\n"
@@ -2098,9 +2098,10 @@ msgstr ""
 #. bb) read English
 #. TODO: look at exim and mention it in the popup
 #. Translators: error popup
-#: src/ui.ycp:94 yast2-mail-2.15.10/src/ui.ycp:94
+#: src/ui.ycp:94
+#, fuzzy
 msgid ""
-"YaST2 can only configure Postfix and Sendmail,\n"
+"YaST can only configure Postfix and Sendmail,\n"
 "but neither of them is installed."
 msgstr ""
 "YaST2 jest tylko w stanie skonfigurować programy postfix i sendmail,\n"
@@ -2747,6 +2748,20 @@ msgstr "Włącz folder współdzielony"
 msgid "Mail Settings for the group:"
 msgstr "Ustawienia poczty dla grupy:"
 
+#. Translators: error message,
+#. %1 is a file name,
+#. %2 is a long file name - leave it on a separate line
+#: yast2-mail-2.15.10/src/Mail.ycp:550
+#, ycp-format
+msgid ""
+"Error reading file %1. The file must have\n"
+"a fixed format to be readable by YaST2.  For details, see\n"
+"%2"
+msgstr ""
+"Błąd odczytu pliku %1. Plik musi mieć ustalony\n"
+"format, aby mógł być czytany przez YaST2.  Szczegóły - patrz\n"
+"%2"
+
 #. Progress stage 2/3
 #: yast2-mail-2.15.10/src/mail-server_complex.ycp:55
 msgid "Choose LDAP/CA settings"
@@ -2766,6 +2781,19 @@ msgstr "Wybieranie ustawień LDAP/CA..."
 #: yast2-mail-2.15.10/src/mail-server_complex.ycp:66
 msgid "Setting up /Configuring LDAP server and CA management..."
 msgstr "Ustawianie / konfigurowanie serwera LDAP i zarządzania CA..."
+
+#. AuthorizingDialog dialog help 1/2
+#: yast2-mail-2.15.10/src/mail-server_helps.ycp:20
+msgid ""
+"<p><b><big>Administrator Authorization</big></b><br>\n"
+"To use the YaST2 mail server component, your system must use LDAP\n"
+"as a repository for the user and group accounts and for the DNS services.<br>\n"
+"Some of the mail server settings will be stored in the LDAP repository, too.<br></p>\n"
+msgstr ""
+"<p><b><big>Autoryzacja administratora</big></b><br>\n"
+"Aby używać komponentu serwera poczty YaST2, system musi używać \n"
+"LDAP-u jako repozytorium dla kont użytkowników i grup i dla usług DNS.<br>\n"
+"W repozytorium LDAP będą także przechowywane niektóre ustawienia serwera pocztowego.<br></p>\n"
 
 #. MailPrevention dialog help 2/2
 #: yast2-mail-2.15.10/src/mail-server_helps.ycp:87
@@ -2790,6 +2818,37 @@ msgstr ""
 "Klienci z tych sieci mogą używać serwera pocztowego do przesyłania poczty.\n"
 "(Wysyłanie nielokalnej poczty)\n"
 "<br></p>\n"
+
+#. MailLocalDomains dialog help 2/3
+#: yast2-mail-2.15.10/src/mail-server_helps.ycp:137
+msgid ""
+"<p>Note: You can create and set up the domains with the YaST2 \n"
+"DNS server module. In this module, you only can set the properties\n"
+"concerning the mail server.\n"
+"</p>\n"
+msgstr ""
+"<p>Uwaga: Domeny można tworzyć i konfigurować w module serwera\n"
+"DNS YaST2. W tym module można tylko zdefiniować ustawienia związane\n"
+"z serwerem pocztowym.\n"
+"</p>\n"
+
+#. MailLocalDomains dialog help 3/3
+#: yast2-mail-2.15.10/src/mail-server_helps.ycp:143
+msgid ""
+"<p><b><big>Type:</big></b><br>\n"
+"You can define virtual and local domains. In virtual domains, only users\n"
+"assigned a mail address in the domain can receive mail.\n"
+"In local domains, all user can get mails. Assign virtual mail \n"
+"addresses in the YaST2 user module.\n"
+"</p>\n"
+msgstr ""
+"<p><b><big>Typ:</big></b><br>\n"
+"Możliwe jest definiowanie domen wirtualnych i lokalnych. W domenach\n"
+"wirtualnych pocztę mogą otrzymywać tylko użytkownicy mający przypisany\n"
+"adres pocztowy w tej domenie. W domenach lokalnych wszyscy użytkownicy mogą\n"
+"otrzymywać pocztę. Wirtualne adresy pocztowe przypisuje się w module\n"
+"zarządzania użytkownikami YaST2.\n"
+"</p>\n"
 
 #. Translators: start dialog help, part 3 of 4
 #: yast2-mail-2.15.10/src/mail.ycp:54
@@ -2819,6 +2878,21 @@ msgstr "Konfiguracja działającego serwera poczty jest oparta na typie <b>Zaawa
 #: yast2-mail-2.15.10/src/mail.ycp:87
 msgid "It is possible to change to <b>Standard</b> settings. This will overwrite all existing settings."
 msgstr "Możliwa jest zmiana na typ <b>Standardowy</b>. Nadpisze to wszystkie dotychczasowe ustawienia."
+
+#. After text freeze, but
+#. a) either something is very broken -> user must know
+#. b) user installed a different MTA -> knowledgeable enough to
+#. ba) never see this message anyway
+#. bb) read English
+#. TODO: look at exim and mention it in the popup
+#. Translators: error popup
+#: yast2-mail-2.15.10/src/ui.ycp:94
+msgid ""
+"YaST2 can only configure Postfix and Sendmail,\n"
+"but neither of them is installed."
+msgstr ""
+"YaST2 jest tylko w stanie skonfigurować programy postfix i sendmail,\n"
+"ale żaden z nich nie jest zainstalowany."
 
 #. help text
 #: yast2-mail-2.15.10/src/widgets.ycp:791
