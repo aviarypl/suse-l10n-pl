@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-23 15:23+0100\n"
+"POT-Creation-Date: 2009-10-09 09:14+0200\n"
 "PO-Revision-Date: 2009-03-25 20:28+0100\n"
 "Last-Translator: Przemyslaw Bojczuk <pbojczuk@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -64,42 +64,140 @@ msgid "General: Information that everybody should read."
 msgstr "Ogólne: Informacje, które każdy powinien przeczytać."
 
 #: RELEASE-NOTES-openSUSE.xml:76(para)
-msgid "Update: Changes that are not mentioned in the Reference Guide, Chapter 5."
-msgstr "Aktualizacja: Zmiany które nie zostały opisane w Instrukcji obsługi, rozdział 5"
+msgid "Update: Issues related to the process if you run an update from the previous release to this openSUSE version."
+msgstr ""
 
 #: RELEASE-NOTES-openSUSE.xml:80(para)
 msgid "Technical: This section contains a number of technical changes and enhancements for the experienced user."
 msgstr "Techniczne: Rozdział ten zawiera szereg informacji o zmianach technicznych i usprawnieniach dla zaawansowanych użytkowników."
 
-#: RELEASE-NOTES-openSUSE.xml:86(para)
-msgid "In the Start-Up Manual, find information about installation and basic system configuration. In the Reference Guide, the system configuration is explained in detail. Find basic information on GNOME and KDE in the QuickStart Guides. Detailed information on using AppArmor is provided by the AppArmor Administration Guide."
-msgstr "Informacje o instalacji i podstawowej konfiguracji systemu można znaleźć w Podręczniku Instalacji (Start-Up Manual). W Przewodniku użytkownika (Reference Guide) konfigurację systemu opisano szczegółowo. Prócz tego, najważniejsze aplikacje omówione zostały  w Podręcznikach użytkownika GNOME i KDE. Dokładne informacje na temat użycia AppArmor można znaleźć w instrukcji administracji AppArmor."
-
-#: RELEASE-NOTES-openSUSE.xml:97(title)
+#: RELEASE-NOTES-openSUSE.xml:87(title)
 msgid "Prerelease Notes"
 msgstr "Informacje o bieżącej wersji"
 
-#: RELEASE-NOTES-openSUSE.xml:100(title)
+#: RELEASE-NOTES-openSUSE.xml:90(title)
 msgid "N/A&mdash;Codename openSUSE 11.2"
 msgstr "(nie dostępna)&mdash;nazwa kodowa openSUSE 11.2"
 
-#: RELEASE-NOTES-openSUSE.xml:102(para)
+#: RELEASE-NOTES-openSUSE.xml:92(para)
 msgid "The code name for openSUSE 11.2 is N/A. The boot picture was taken by N/A"
 msgstr "Nazwa kodowa openSUSE 11.2 to (nie dostępna).Obraz startowy został wykonany przez (nie dostępna)."
 
-#: RELEASE-NOTES-openSUSE.xml:111(title)
+#: RELEASE-NOTES-openSUSE.xml:101(title)
 msgid "General"
 msgstr "Informacje ogólne"
 
-#: RELEASE-NOTES-openSUSE.xml:120(title)
+#: RELEASE-NOTES-openSUSE.xml:105(title)
+msgid "openSUSE Documentation"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:107(para)
+#, fuzzy
+msgid "In the Start-Up Manual, find information about installation and basic system configuration. There is also an Installation QuickSart Guide now. In the Reference Guide, the system configuration is explained in detail. Find basic information on GNOME and KDE in the QuickStart Guides. Additionally, the most important applications are described in the Applications, GNOME, and KDE User Guide. Detailed information on security issues is provided by the Security Manual."
+msgstr "Informacje o instalacji i podstawowej konfiguracji systemu można znaleźć w Podręczniku Instalacji (Start-Up Manual). W Przewodniku użytkownika (Reference Guide) konfigurację systemu opisano szczegółowo. Prócz tego, najważniejsze aplikacje omówione zostały  w Podręcznikach użytkownika GNOME i KDE. Dokładne informacje na temat użycia AppArmor można znaleźć w instrukcji administracji AppArmor."
+
+#: RELEASE-NOTES-openSUSE.xml:121(title)
+msgid "openSUSE Documentation as E-Books (EPUB)"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:123(para)
+msgid "In addition to the traditional output formats PDF and HTML, the openSUSE system Documentation is now available as e-books in the EPUB format. EPUB (electronic publication) is a free and open e-book standard. For more information about EPUB, see <ulink url=\"http://en.wikipedia.org/wiki/EPUB\"/>."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:129(para)
+msgid "Download the EPUB files from <ulink url=\"http://en.opensuse.org/Documentation\"/>."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:137(title)
 msgid "Update"
 msgstr "Aktualizacja"
 
-#: RELEASE-NOTES-openSUSE.xml:129(title)
+#: RELEASE-NOTES-openSUSE.xml:141(title)
+msgid "New Samba Password Configuration Back-End: <command>tdbsam</command>"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:143(para)
+msgid "The new Samba password configuration back-end is <literal>tdbsam</literal>. Previous Samba packages shipped with openSUSE 11.1 and earlier were using <command>smbpasswd</command> as the default <literal>passdb backend</literal>. It was not explicitly set in the shipped <filename>/etc/samba/smb.conf</filename> configuration file. With this openSUSE release two changes are introduced:"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:154(para)
+msgid "The new default inherited from source code and if not set otherwise is <command>tdbsam</command>."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:158(para)
+msgid "The new default is also explicitly set in <filename>smb.conf</filename>."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:163(para)
+msgid "If you have modified <filename>smb.conf</filename> on openSUSE 11.1 or earlier, the update process will install <filename>smb.conf.rpmnew</filename> and keep your old configuration."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:168(para)
+msgid "Check in the old configuration file whether <literal>passdb backend</literal> was set. If not, there are two possibilities to get Samba running again:"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:175(para)
+msgid "Convert smbpasswd to tdbsam (recommended!); enter as <systemitem>root</systemitem> on the command line:"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:179(screen)
+#, no-wrap
+msgid "pdbedit -i smbpasswd:/etc/samba/smbpasswd -e tdbsam:/etc/samba/passdb.tdb\n"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:181(para)
+msgid "And ensure the global section of <filename>smb.conf</filename> has such an entry:"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:184(screen)
+#, no-wrap
+msgid "passdb backend = tdbsam"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:188(para)
+msgid "Set <literal>passdb backend = smbpasswd</literal>"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:192(para)
+msgid "We strongly recommend using the new default <command>tdbsam</command>. Only keep the old back-end if you have an absolute need. In this case, consider filing a bug report as suggested at <ulink url=\"http://en.openSUSE.org/Samba\"/> in the \"Samba bug reporting and advanced debugging information\" section."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:199(para)
+msgid "Setting <literal>passdb backend = smbpasswd</literal> allows you to stay with the old configuration."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:202(para)
+msgid "Keep in mind, the old tool provides a smaller feature set than the new default password configuration back-end <command>tdbsam</command>."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:210(title)
+msgid "MySQL 5.1"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:212(para)
+msgid "MySQL version 5.1 is available. Some changes are not backward compatible. For more information, see <ulink url=\"http://en.opensuse.org/MySQL-5.1\"/> and <filename>README.SuSE</filename> shipped with the MySQL package."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:222(title)
 msgid "Technical"
 msgstr "Techniczne"
 
-#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2.
+#: RELEASE-NOTES-openSUSE.xml:226(title)
+msgid "New Default Mount Option: relatime"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:228(para)
+msgid "The kernel by default mounts file systems now with the <literal>relatime</literal> option and thus updates inode access times relative to modify or change time. This is especially advantageous on desktop system."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:233(para)
+msgid "If you want to keep the old behavior, set the <literal>strictatime</literal> option with the YaST partitioner or directly in <filename>/etc/fstab</filename>."
+msgstr ""
+
+#. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: RELEASE-NOTES-openSUSE.xml:0(None)
 msgid "translator-credits"
 msgstr "Aviary.pl <team@aviary.pl>, 2005, 2006, 2007"
+
+#~ msgid "Update: Changes that are not mentioned in the Reference Guide, Chapter 5."
+#~ msgstr "Aktualizacja: Zmiany które nie zostały opisane w Instrukcji obsługi, rozdział 5"
