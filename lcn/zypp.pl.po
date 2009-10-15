@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: zypp\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-01 18:11+0200\n"
+"POT-Creation-Date: 2009-10-14 15:02+0200\n"
 "PO-Revision-Date: 2009-10-06 12:11+0200\n"
 "Last-Translator: Michał Mroczek <mrokal@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: zypp/solver/detail/SATResolver.cc:1016
+#: zypp/solver/detail/SATResolver.cc:1042
 msgid ""
 "\n"
 "uninstallable providers: "
@@ -45,36 +45,36 @@ msgstr "wykonano"
 msgid " execution failed"
 msgstr "wykonanie nie powiodło się"
 
-#: zypp/target/TargetImpl.cc:241
+#: zypp/target/TargetImpl.cc:243
 msgid " execution skipped while aborting"
 msgstr "nie wykonano w wyniku przerwania"
 
-#: zypp/solver/detail/SATResolver.cc:963
+#: zypp/solver/detail/SATResolver.cc:989
 #, c-format
 msgid "%s conflicts with %s provided by %s"
 msgstr "%s jest w konflikcie z %s dostarczonym przez %s"
 
-#: zypp/solver/detail/SATResolver.cc:926
+#: zypp/solver/detail/SATResolver.cc:952
 #, c-format
 msgid "%s does not belong to a distupgrade repository"
 msgstr "%s nie należy do repozytorium distupgrade"
 
-#: zypp/solver/detail/SATResolver.cc:930
+#: zypp/solver/detail/SATResolver.cc:956
 #, c-format
 msgid "%s has inferior architecture"
 msgstr "%s oparto o niższą architekturę"
 
-#: zypp/solver/detail/SATResolver.cc:948
+#: zypp/solver/detail/SATResolver.cc:974
 #, c-format
 msgid "%s is not installable"
 msgstr "Nie da się zainstalować %s"
 
-#: zypp/solver/detail/SATResolver.cc:968
+#: zypp/solver/detail/SATResolver.cc:994
 #, c-format
 msgid "%s obsoletes %s provided by %s"
 msgstr "%s dezaktualizuje %s dostarczony przez %s"
 
-#: zypp/solver/detail/SATResolver.cc:1004
+#: zypp/solver/detail/SATResolver.cc:1030
 #, c-format
 msgid "%s requires %s, but this requirement cannot be provided"
 msgstr "%s wymaga %s, lecz to wymaganie nie może zostać spełnione"
@@ -334,7 +334,7 @@ msgid "Austronesian (Other)"
 msgstr "języki malajo-polinezyjskie"
 
 #. !\todo add comma to the message for the next release
-#: zypp/media/MediaCurl.cc:1506 zypp/media/MediaSMB.cc:426
+#: zypp/media/MediaCurl.cc:1500 zypp/media/MediaSMB.cc:426
 #, c-format
 msgid "Authentication required for '%s'"
 msgstr "Wymagane uwierzytelnienie dla \"%s\""
@@ -1164,6 +1164,13 @@ msgstr ""
 "Kod błędu: %s\n"
 "Komunikat błędu: %s\n"
 
+#. Ask for retry on partial downloads, when it makes sense to retry with --continue!
+#. Other errors are handled by the layers above.
+#: zypp/media/MediaAria2c.cc:448
+#, c-format
+msgid "Download interrupted at %d%%"
+msgstr ""
+
 #. language code: dra
 #: zypp/LanguageCode.cc:470
 msgid "Dravidian (Other)"
@@ -1293,9 +1300,9 @@ msgstr "Wystąpił błąd podczas ustawiania opcji pobierania (curl) dla \"%s\":
 msgid "Error occurred while setting download (metalink curl) options for '%s':"
 msgstr "Napotkano błąd podczas ustawiania opcji pobierania (curl) dla '%s':"
 
-#: zypp/target/TargetImpl.cc:287 zypp/target/TargetImpl.cc:307
-#: zypp/target/TargetImpl.cc:336 zypp/target/TargetImpl.cc:370
-#: zypp/target/TargetImpl.cc:378
+#: zypp/target/TargetImpl.cc:298 zypp/target/TargetImpl.cc:318
+#: zypp/target/TargetImpl.cc:346 zypp/target/TargetImpl.cc:383
+#: zypp/target/TargetImpl.cc:391
 msgid "Error sending update message notification."
 msgstr "Błąd podczas wysyłania powiadomienia o aktualizacji."
 
@@ -1356,7 +1363,7 @@ msgid "Failed to delete key."
 msgstr "Usunięcie klucza nie powiodło się."
 
 #. TranslatorExplanation: Failed to download <FILENAME> from <SERVERURL>.
-#: zypp/media/MediaAria2c.cc:441
+#: zypp/media/MediaAria2c.cc:461
 #, c-format
 msgid "Failed to download %s from %s"
 msgstr "Nie udało się pobrać %s z %s"
@@ -1744,7 +1751,7 @@ msgstr "HalVolume:  niezainicjowany."
 msgid "Hausa"
 msgstr "hausański"
 
-#: zypp/solver/detail/SATResolver.cc:944
+#: zypp/solver/detail/SATResolver.cc:970
 msgid "Have you enabled all requested repositories?"
 msgstr "Czy udostępniono wszystkie wymagane repozytoria."
 
@@ -1903,8 +1910,8 @@ msgstr "indonezyjski"
 msgid "Ingush"
 msgstr "inguski"
 
-#: zypp/target/TargetImpl.cc:1026 zypp/target/TargetImpl.cc:1078
-#: zypp/target/TargetImpl.cc:1371
+#: zypp/target/TargetImpl.cc:1041 zypp/target/TargetImpl.cc:1093
+#: zypp/target/TargetImpl.cc:1389
 msgid "Installation has been aborted as directed."
 msgstr "Instalacja przerwana zgodnie z życzeniem."
 
@@ -2869,8 +2876,7 @@ msgstr "Nowa Kaledonia"
 msgid "New Zealand"
 msgstr "Nowa Zelandia"
 
-#. without root prefix
-#: zypp/target/TargetImpl.cc:422
+#: zypp/target/TargetImpl.cc:437
 msgid "New update message"
 msgstr "Nowy komunikat o aktualizacji"
 
@@ -3865,8 +3871,8 @@ msgstr "Producent nie zapewnia wsparcia."
 msgid "This action is being run by another program already."
 msgstr "Inny program wykonuje tę czynność."
 
-#: zypp/solver/detail/SATResolver.cc:1151
-#: zypp/solver/detail/SATResolver.cc:1172
+#: zypp/solver/detail/SATResolver.cc:1177
+#: zypp/solver/detail/SATResolver.cc:1198
 msgid "This request will break your system!"
 msgstr "Żądanie uszkodzi ten system."
 
@@ -4393,7 +4399,7 @@ msgstr "Sprawdzenie applydeltarpm zakończone niepowodzeniem."
 msgid "applydeltarpm failed."
 msgstr "applydeltarpm zakończone niepowodzeniem."
 
-#: zypp/solver/detail/SATResolver.cc:1273
+#: zypp/solver/detail/SATResolver.cc:1299
 #, c-format
 msgid "architecture change of %s to %s"
 msgstr "zmiana architektury %s na %s"
@@ -4404,12 +4410,12 @@ msgstr "zmiana architektury %s na %s"
 msgid "break %s by ignoring some of its dependencies"
 msgstr "przerwano %s ignorując niektóre z zależności"
 
-#: zypp/solver/detail/SATResolver.cc:958
+#: zypp/solver/detail/SATResolver.cc:984
 #, c-format
 msgid "cannot install both %s and %s"
 msgstr "nie można jednocześnie zainstalować %s i %s"
 
-#: zypp/solver/detail/SATResolver.cc:937
+#: zypp/solver/detail/SATResolver.cc:963
 msgid "conflicting requests"
 msgstr "sprzeczne żądania"
 
@@ -4418,47 +4424,47 @@ msgstr "sprzeczne żądania"
 msgid "created backup %s"
 msgstr "utworzono zapasowy %s"
 
-#: zypp/solver/detail/SATResolver.cc:1303
+#: zypp/solver/detail/SATResolver.cc:1329
 #, c-format
 msgid "deinstallation of %s"
 msgstr "usunięcie %s"
 
-#: zypp/solver/detail/SATResolver.cc:1006
+#: zypp/solver/detail/SATResolver.cc:1032
 msgid "deleted providers: "
 msgstr "usunięci dostawcy:"
 
-#: zypp/solver/detail/SATResolver.cc:1179
+#: zypp/solver/detail/SATResolver.cc:1205
 #, c-format
 msgid "do not ask to delete all solvables providing %s"
 msgstr "nie pyta o usunięcie wszystkich elementów rozwiązywalnych dostarczających %s"
 
-#: zypp/solver/detail/SATResolver.cc:1157
+#: zypp/solver/detail/SATResolver.cc:1183
 #, c-format
 msgid "do not ask to install a solvable providing %s"
 msgstr "nie pyta o instalację wszystkich elementów rozwiązywalnych dostarczających %s"
 
-#: zypp/solver/detail/SATResolver.cc:1100
+#: zypp/solver/detail/SATResolver.cc:1126
 #, c-format
 msgid "do not forbid installation of %s"
 msgstr "nie zakazuje instalacji %s"
 
-#: zypp/solver/detail/SATResolver.cc:1080
-#: zypp/solver/detail/SATResolver.cc:1116
+#: zypp/solver/detail/SATResolver.cc:1106
+#: zypp/solver/detail/SATResolver.cc:1142
 #, c-format
 msgid "do not install %s"
 msgstr "nie instaluje %s"
 
-#: zypp/solver/detail/SATResolver.cc:1192
+#: zypp/solver/detail/SATResolver.cc:1218
 #, c-format
 msgid "do not install most recent version of %s"
 msgstr "nie instaluje najnowszej wersji %s"
 
-#: zypp/solver/detail/SATResolver.cc:1075
+#: zypp/solver/detail/SATResolver.cc:1101
 #, c-format
 msgid "do not keep %s installed"
 msgstr "nie utrzymuje %s zainstalowanego"
 
-#: zypp/solver/detail/SATResolver.cc:1265
+#: zypp/solver/detail/SATResolver.cc:1291
 #, c-format
 msgid "downgrade of %s to %s"
 msgstr "przywraca %s do %s"
@@ -4467,12 +4473,12 @@ msgstr "przywraca %s do %s"
 msgid "generally ignore of some dependecies"
 msgstr "Ogólne ignorowanie niektórych zależności"
 
-#: zypp/solver/detail/SATResolver.cc:1152
-#: zypp/solver/detail/SATResolver.cc:1173
+#: zypp/solver/detail/SATResolver.cc:1178
+#: zypp/solver/detail/SATResolver.cc:1199
 msgid "ignore the warning of a broken system"
 msgstr "ignoruje ostrzeżenie o uszkodzeniu systemu"
 
-#: zypp/solver/detail/SATResolver.cc:1283
+#: zypp/solver/detail/SATResolver.cc:1309
 #, c-format
 msgid ""
 "install %s (with vendor change)\n"
@@ -4481,12 +4487,12 @@ msgstr ""
 "zainstaluje %s (ze zmianą dostawcy)\n"
 "  %s  -->  %s"
 
-#: zypp/solver/detail/SATResolver.cc:1218
+#: zypp/solver/detail/SATResolver.cc:1244
 #, c-format
 msgid "install %s despite the inferior architecture"
 msgstr "Zainstaluje %s mimo niższej architektury"
 
-#: zypp/solver/detail/SATResolver.cc:1232
+#: zypp/solver/detail/SATResolver.cc:1258
 #, c-format
 msgid "install %s from excluded repository"
 msgstr "zainstaluje %s z wyłączonego repozytorium"
@@ -4496,19 +4502,19 @@ msgid "invalid"
 msgstr "niepoprawny"
 
 #. for solver reason: NOT weak lock.
-#: zypp/solver/detail/SATResolver.cc:1095
-#: zypp/solver/detail/SATResolver.cc:1137
-#: zypp/solver/detail/SATResolver.cc:1248
+#: zypp/solver/detail/SATResolver.cc:1121
+#: zypp/solver/detail/SATResolver.cc:1163
+#: zypp/solver/detail/SATResolver.cc:1274
 #, c-format
 msgid "keep %s"
 msgstr "zachowuje %s"
 
-#: zypp/solver/detail/SATResolver.cc:1213
+#: zypp/solver/detail/SATResolver.cc:1239
 #, c-format
 msgid "keep %s despite the inferior architecture"
 msgstr "zachowa %s mimo niższej architektury"
 
-#: zypp/solver/detail/SATResolver.cc:1227
+#: zypp/solver/detail/SATResolver.cc:1253
 #, c-format
 msgid "keep obsolete %s"
 msgstr "zachowujestarszą wersję %s"
@@ -4521,22 +4527,22 @@ msgstr "libhal_ctx_new: nie można utworzyć kontekstu libhal"
 msgid "libhal_set_dbus_connection: Can't set dbus connection"
 msgstr "libhal_set_dbus_connection: nie można ustanowić połączenia dbus"
 
-#: zypp/solver/detail/SATResolver.cc:953
+#: zypp/solver/detail/SATResolver.cc:979
 #, c-format
 msgid "nothing provides %s needed by %s"
 msgstr "żaden pakiet nie dostarcza %s wymaganego przez %s"
 
-#: zypp/solver/detail/SATResolver.cc:943
+#: zypp/solver/detail/SATResolver.cc:969
 #, c-format
 msgid "nothing provides requested %s"
 msgstr "żaden pakiet nie dostarcza żądanego %s"
 
-#: zypp/solver/detail/SATResolver.cc:934
+#: zypp/solver/detail/SATResolver.cc:960
 #, c-format
 msgid "problem with installed package %s"
 msgstr "problem z zainstalowanym pakietem %s"
 
-#: zypp/solver/detail/SATResolver.cc:1292
+#: zypp/solver/detail/SATResolver.cc:1318
 #, c-format
 msgid "replacement of %s with %s"
 msgstr "zamiana %s na %s"
@@ -4573,16 +4579,16 @@ msgstr ""
 "rpm zapisał %s jako %s.\n"
 "Oto pierwszych 25 linii zawierających różnicę:\n"
 
-#: zypp/solver/detail/SATResolver.cc:972
+#: zypp/solver/detail/SATResolver.cc:998
 #, c-format
 msgid "solvable %s conflicts with %s provided by itself"
 msgstr "rozwiązywalny %s jest w konflikcie z %s dostarczonym przez siebie"
 
-#: zypp/solver/detail/SATResolver.cc:940
+#: zypp/solver/detail/SATResolver.cc:966
 msgid "some dependency problem"
 msgstr "problem z zależnościami"
 
-#: zypp/solver/detail/SATResolver.cc:1018
+#: zypp/solver/detail/SATResolver.cc:1044
 msgid "uninstallable providers: "
 msgstr "nie da się zainstalować dostawców:"
 
