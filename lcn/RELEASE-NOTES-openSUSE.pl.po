@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-29 08:04+0100\n"
+"POT-Creation-Date: 2009-11-11 10:21+0100\n"
 "PO-Revision-Date: 2009-10-31 10:30+0100\n"
 "Last-Translator: Przemysław Bojczuk <pbojczuk@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -196,151 +196,170 @@ msgstr "Strigi/Nepomuk"
 msgid "The Strigi indexing service and Nepomuk semantic desktop service are not enabled by default in KDE in openSUSE 11.2. To explicitly enable them go to KDE configuration (applications menu, 'Configure desktop'), the 'Advanced' tab, and in the 'Desktop Search' configuration module enable the services you wish to run."
 msgstr "Usługa indeksowania Strigi i Nepomuk nie są domyślnie uruchamiane w KDE w openSUSE 11.2. By włączyć je należy przejść do Konfiguracji KDE (menu aplikacji, 'Konfiguruj pulpit'), zakładka 'Zaawansowane', w module 'Przeszukiwanie Pulpitu' właczyć te usługi, które mają być aktywne."
 
-#: RELEASE-NOTES-openSUSE.xml:262(title)
+#: RELEASE-NOTES-openSUSE.xml:258(emphasis)
+msgid "PulseAudio and Sound in GNOME Applications"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:260(para)
+msgid "KDE installations do not install PulseAudio by default. PulseAudio will be installed automatically if an application, which requires it is installed, but it must still be enabled in YaST to hear sound in these applications. To enable PulseAudio in YaST, open YaST &gt; Sound Module and click 'Other'. Select 'PulseAudio Configuration', then check 'Enable PulseAudio Support'."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:272(title)
 msgid "Thunderbird"
 msgstr "Thunderbird"
 
-#: RELEASE-NOTES-openSUSE.xml:264(para)
+#: RELEASE-NOTES-openSUSE.xml:274(para)
 msgid "With openSUSE 11.2 we ship Thunderbird 3.0 beta4, which will go final shortly after the 11.2 release."
 msgstr "Wraz z openSUSE 11.2 dostarczany jest Thunderbird w wersji 3.0 beta4. W wersji finalnej będzie dostępny tuż po ukazaniu się tej wersji openSUSE."
 
-#: RELEASE-NOTES-openSUSE.xml:267(para)
-msgid "If you still depend on add-ons, which are only available for Thunderbird 2.0, you can install this version from the mozilla buildservice repostitory at <ulink url=\"http://download.opensuse.org\"/>. But note, Thunderbird 2.0 will be only supported for very short period of time, once version 3.0 is available."
+#: RELEASE-NOTES-openSUSE.xml:277(para)
+#, fuzzy
+msgid "If you still depend on add-ons, which are only available for Thunderbird 2.0, you can install this version from the mozilla buildservice repostitory at <ulink url=\"http://software.opensuse.org/ymp/mozilla:legacy/openSUSE_11.2/MozillaThunderbird.ymp\"/>. But note, Thunderbird 2.0 will be only supported for very short period of time, once version 3.0 is available."
 msgstr "Jeżeli korzystasz z dodatków (add-ons), które są dostępne wyłącznie dla Thunderbird 2.0 "
 
-#: RELEASE-NOTES-openSUSE.xml:278(title)
+#: RELEASE-NOTES-openSUSE.xml:289(title)
 msgid "Update"
 msgstr "Aktualizacja"
 
-#: RELEASE-NOTES-openSUSE.xml:282(title)
+#: RELEASE-NOTES-openSUSE.xml:293(title)
 msgid "System Upgrade with zypper"
 msgstr "AKtualizacja systemu z wykorzystaniem zyppera"
 
-#: RELEASE-NOTES-openSUSE.xml:284(para)
+#: RELEASE-NOTES-openSUSE.xml:295(para)
 msgid "If you update with <command>zypper dup</command>, packages might get restarted during the update process. It can happen that the restart does not succeed before you adjust the config files. This is especially critical if your system relies on services needed for downloading the update packages, e.g. a local proxy (squid) on the machine you update."
 msgstr "Jeżeli system ma zostać zaktualizowany poleceniem <command>zypper dup</command>, programy mogą zostać zrestartowane podczas tego procesu. Może się zdarzyć, że ponowne uruchomienie programu może nastąpić przed modyfikacją pliku konfiguracyjnego. Jest to szczególnie ważne jeżeli ten system jest oparty na usługach wymaganych do popbrania zaktualizowanych pakietów."
 
-#: RELEASE-NOTES-openSUSE.xml:290(para)
+#: RELEASE-NOTES-openSUSE.xml:301(para)
 msgid "Set <literal>commit.downloadMode = DownloadInAdvance</literal> in <filename>/etc/zypp/zypp.conf</filename> so that everything is downloaded first, before the packages get installed. The download transaction needs a huge amount of space on the <filename>/var</filename> partition to store all the software packages."
 msgstr "Ustawia <literal>commit.downloadMode = DownloadInAdvance</literal> w pliku <filename>/etc/zypp/zypp.conf</filename> aby wszystko najpierw zostało pobrane zanim pakiety zostaną zainstalowane. Pobieranie wymaga ogromnej ilości miejsca na partycji, by zmieścić w <filename>/var</filename> wszystkie pakiety z oprogramowaniem."
 
-#: RELEASE-NOTES-openSUSE.xml:302(title)
+#: RELEASE-NOTES-openSUSE.xml:313(title)
 msgid "Starting the OpenSSH SSH Daemon (sshd)"
 msgstr "Uruchamianie usługi OpenSSH (sshd)"
 
-#: RELEASE-NOTES-openSUSE.xml:304(para)
+#: RELEASE-NOTES-openSUSE.xml:315(para)
 msgid "The OpenSSH SSH daemon (<command>sshd</command>) is the daemon program for ssh. It is no longer started by default at system boot. If you want to access your computer with <command>ssh</command>, you must enable it as follows:"
 msgstr "(<command>sshd</command>) to usługa OpenSSH SSH. Nie jest ona już domyślnie włączana podczas uruchomienia systemu. Jeżeli ten system ma być dostępny za pomocą  <command>ssh</command>, należy kolejno:"
 
-#: RELEASE-NOTES-openSUSE.xml:311(para)
+#: RELEASE-NOTES-openSUSE.xml:322(para)
 msgid "Start YaST and open the runlevel editor (<guimenu>System</guimenu> &gt; <guimenu>System Services (Runlevel)</guimenu>)."
 msgstr "Uruchomia YaST i otwiera edytor poziomów pracy  (<guimenu>System</guimenu> &gt; <guimenu>Usługi systemowe (Runlevel)</guimenu>)."
 
-#: RELEASE-NOTES-openSUSE.xml:316(para)
+#: RELEASE-NOTES-openSUSE.xml:327(para)
 msgid "In the YaST runlevel editor enable <guimenu>Expert Mode</guimenu> and select <guimenu>sshd</guimenu>."
 msgstr "W edytorze poziomów pracy YaST należy włączyć tryb eksperta <guimenu>Expert Mode</guimenu> i wybrać <guimenu>sshd</guimenu>."
 
-#: RELEASE-NOTES-openSUSE.xml:321(para)
+#: RELEASE-NOTES-openSUSE.xml:332(para)
 msgid "For example, enable it for runlevel 3 and 5. Then press <guimenu>Start</guimenu> and <guimenu>OK</guimenu>."
 msgstr "Na przykład można włączyć go dla poziomu pracy (runlevel) 3 lub 5. Następnie należy nacisnąć <guimenu>Start</guimenu> i <guimenu>OK</guimenu>."
 
-#: RELEASE-NOTES-openSUSE.xml:331(title)
+#: RELEASE-NOTES-openSUSE.xml:342(title)
 msgid "New Samba Password Configuration Back-End: <command>tdbsam</command>"
 msgstr "Nowe narzędzie (back-end) do konfiguracji haseł Samby: <command>tdbsam</command>"
 
-#: RELEASE-NOTES-openSUSE.xml:333(para)
+#: RELEASE-NOTES-openSUSE.xml:344(para)
 msgid "The new Samba password configuration back-end is <literal>tdbsam</literal>. Previous Samba packages shipped with openSUSE 11.1 and earlier were using <command>smbpasswd</command> as the default <literal>passdb backend</literal>. It was not explicitly set in the shipped <filename>/etc/samba/smb.conf</filename> configuration file. With this openSUSE release two changes are introduced:"
 msgstr "<literal>tdbsam</literal> to nowe narzędzie do konfiguracji haseł Samby. Poprzednie pakiety Samby dołączone do openSUSE 11.1 i poprzednich wydań korzystały z <command>smbpasswd</command> jako domyślnego <literal>backendu passdb</literal>. Nie był on wyraźnie umiejscowiony w pliku konfiguracyjnym <filename>/etc/samba/smb.conf</filename>. Wraz z tym wydaniem openSUSE wprowadzono dwie zmiany:"
 
-#: RELEASE-NOTES-openSUSE.xml:344(para)
+#: RELEASE-NOTES-openSUSE.xml:355(para)
 msgid "The new default inherited from source code and if not set otherwise is <command>tdbsam</command>."
 msgstr "Nowa domyślna wartość jest dziedziczona z kodu źródłowego i jeśli nie została ustalona inaczej jest nią <command>tdbsam</command>."
 
-#: RELEASE-NOTES-openSUSE.xml:348(para)
+#: RELEASE-NOTES-openSUSE.xml:359(para)
 msgid "The new default is also explicitly set in <filename>smb.conf</filename>."
 msgstr "Nowa domyślna wartość została wyraźnie umiejscowiona w pliku <filename>smb.conf</filename>."
 
-#: RELEASE-NOTES-openSUSE.xml:353(para)
+#: RELEASE-NOTES-openSUSE.xml:364(para)
 msgid "If you have modified <filename>smb.conf</filename> on openSUSE 11.1 or earlier, the update process will install <filename>smb.conf.rpmnew</filename> and keep your old configuration."
 msgstr "Jeżeli plik <filename>smb.conf</filename> w openSUSE 11.1 lub wcześniejszych wydaniach został zmodyfikowany, w procesie aktualizacji zostanie utworzony <filename>smb.conf.rpmnew</filename> a poprzednia konfiguracja zachowana."
 
-#: RELEASE-NOTES-openSUSE.xml:358(para)
+#: RELEASE-NOTES-openSUSE.xml:369(para)
 msgid "Check in the old configuration file whether <literal>passdb backend</literal> was set. If not, there are two possibilities to get Samba running again:"
 msgstr "Należy sprawdzić w poprzednim pliku konfiguracyjnym, czy <literal>passdb backend</literal> został ustawiony. Jeżeli nie, to są dwie możliwości by uruchomić ponownie Sambę:"
 
-#: RELEASE-NOTES-openSUSE.xml:365(para)
+#: RELEASE-NOTES-openSUSE.xml:376(para)
 msgid "Convert smbpasswd to tdbsam (recommended!); enter as <systemitem>root</systemitem> on the command line:"
 msgstr "By zamienić smbpasswd na tdbsam (zalecana opcja!), należy wpisać jako <systemitem>root</systemitem> w linii poleceń:"
 
-#: RELEASE-NOTES-openSUSE.xml:369(screen)
+#: RELEASE-NOTES-openSUSE.xml:380(screen)
 #, no-wrap
 msgid "pdbedit -i smbpasswd:/etc/samba/smbpasswd -e tdbsam:/etc/samba/passdb.tdb\n"
 msgstr "pdbedit -i smbpasswd:/etc/samba/smbpasswd -e tdbsam:/etc/samba/passdb.tdb\n"
 
-#: RELEASE-NOTES-openSUSE.xml:371(para)
+#: RELEASE-NOTES-openSUSE.xml:382(para)
 msgid "And ensure the global section of <filename>smb.conf</filename> has such an entry:"
 msgstr "I sprawdzić, czy sekcja globalna pliku <filename>smb.conf</filename> zawiera następujący wpis:"
 
-#: RELEASE-NOTES-openSUSE.xml:374(screen)
+#: RELEASE-NOTES-openSUSE.xml:385(screen)
 #, no-wrap
 msgid "passdb backend = tdbsam"
 msgstr "passdb backend = tdbsam"
 
-#: RELEASE-NOTES-openSUSE.xml:378(para)
+#: RELEASE-NOTES-openSUSE.xml:389(para)
 msgid "Set <literal>passdb backend = smbpasswd</literal>"
 msgstr "Ustawić <literal>passdb backend = smbpasswd</literal>"
 
-#: RELEASE-NOTES-openSUSE.xml:382(para)
+#: RELEASE-NOTES-openSUSE.xml:393(para)
 msgid "We strongly recommend using the new default <command>tdbsam</command>. Only keep the old back-end if you have an absolute need. In this case, consider filing a bug report as suggested at <ulink url=\"http://en.openSUSE.org/Samba\"/> in the \"Samba bug reporting and advanced debugging information\" section."
 msgstr "Zaleca się użycie nowej wartości domyślnej  <command>tdbsam</command>. Stary back-end należy zachować wyłącznie jeżeli istnieje bezwzględna konieczność. W takim wypadku należy rozważyć zgłoszenie błędu tak, jak zostało to zaproponowane na  <ulink url=\"http://en.openSUSE.org/Samba\"/> w sekcji  \"Samba bug reporting and advanced debugging information\"."
 
-#: RELEASE-NOTES-openSUSE.xml:389(para)
+#: RELEASE-NOTES-openSUSE.xml:400(para)
 msgid "Setting <literal>passdb backend = smbpasswd</literal> allows you to stay with the old configuration."
 msgstr "Ustawienie <literal>passdb backend = smbpasswd</literal> pozwala zachować poprzednią konfigurację. "
 
-#: RELEASE-NOTES-openSUSE.xml:392(para)
+#: RELEASE-NOTES-openSUSE.xml:403(para)
 msgid "Keep in mind, the old tool provides a smaller feature set than the new default password configuration back-end <command>tdbsam</command>."
 msgstr "Należy pamiętać, że poprzednie narzędzie posiada mniejszą funkcjonalność niż nowe domyślne narzędzie konfigurujące hasła <command>tdbsam</command>."
 
-#: RELEASE-NOTES-openSUSE.xml:400(title)
+#: RELEASE-NOTES-openSUSE.xml:411(title)
 msgid "MySQL 5.1"
 msgstr "MySQL 5.1"
 
-#: RELEASE-NOTES-openSUSE.xml:402(para)
+#: RELEASE-NOTES-openSUSE.xml:413(para)
 msgid "MySQL version 5.1 is available. Some changes are not backward compatible. The most important are:"
 msgstr "MySQL dostępny jest w wersji 5.1. Niektóre zmiany nie będą kompatybilne wstecznie. Najważniejsze zmiany to:"
 
-#: RELEASE-NOTES-openSUSE.xml:407(para)
+#: RELEASE-NOTES-openSUSE.xml:418(para)
 msgid "The MySQL socket is moved to <filename>/var/run/mysql</filename>."
 msgstr "Gniazdo (socket) MySQl zostało przeniesione do <filename>/var/run/mysql</filename>."
 
-#: RELEASE-NOTES-openSUSE.xml:410(para)
-msgid "The Berkley DB storage engine is no longer available."
+#: RELEASE-NOTES-openSUSE.xml:421(para)
+#, fuzzy
+msgid "The Berkeley DB storage engine is no longer available."
 msgstr "Silnik baz danych Berkeley DB nie jest już dostępny. "
 
-#: RELEASE-NOTES-openSUSE.xml:413(para)
-msgid "Some storage engines are now shipped as modules. You must remove the <literal>skip-federated</literal> option in <filename>/etc/my.cnf</filename>, if you upgrade from a previous openSUSE versions."
+#: RELEASE-NOTES-openSUSE.xml:424(para)
+#, fuzzy
+msgid "Some storage engines are now shipped as modules. You must remove the <literal>skip-federated</literal> option in <filename>/etc/my.cnf</filename>, if you upgrade from a previous openSUSE version."
 msgstr "Niektóre bazy danych są obecnie dostarczne w postaci modułów. należu usnuąć opcję <literal>skip-federated</literal> w pliku <filename>/etc/my.cnf</filename>, jeśli ma zostać wykonana aktualizacja z którejś z poprzednich wersji openSUSE."
 
-#: RELEASE-NOTES-openSUSE.xml:420(para)
+#: RELEASE-NOTES-openSUSE.xml:431(para)
 msgid "For more information, see <ulink url=\"http://en.opensuse.org/MySQL-5.1\"/> and <filename>README.SuSE</filename> shipped with the MySQL package."
 msgstr "Więcej informacji na <ulink url=\"http://en.opensuse.org/MySQL-5.1\"/> oraz <filename>README.SuSE</filename> załączonym do pakietu MySQL."
 
-#: RELEASE-NOTES-openSUSE.xml:429(title)
+#: RELEASE-NOTES-openSUSE.xml:440(title)
 msgid "Technical"
 msgstr "Techniczne"
 
-#: RELEASE-NOTES-openSUSE.xml:433(title)
+#: RELEASE-NOTES-openSUSE.xml:444(title)
 msgid "New Default Mount Option: relatime"
 msgstr "Nowa domyślna opcja montowania: realtime"
 
-#: RELEASE-NOTES-openSUSE.xml:435(para)
+#: RELEASE-NOTES-openSUSE.xml:446(para)
 msgid "The kernel by default mounts file systems now with the <literal>relatime</literal> option and thus updates inode access times relative to modify or change time. This is especially advantageous on desktop system."
 msgstr "Od teraz jądro będzie montować systemy plików wraz z opcją <literal>relatime</literal> dlatego czasy dostępów inode będą aktualizowane. Może to być korzystne w przypadku komputerów biurkowych."
 
-#: RELEASE-NOTES-openSUSE.xml:440(para)
+#: RELEASE-NOTES-openSUSE.xml:451(para)
 msgid "If you want to keep the old behavior, set the <literal>strictatime</literal> option with the YaST partitioner or directly in <filename>/etc/fstab</filename>."
 msgstr "Jeżeli ma zostać zachowane poprzednie ustawienie, należy wybrać opcję <literal>strictatime</literal> w narzędziu do tworzenia partycji YaST lub bezpośrednio w pliku <filename>/etc/fstab</filename>."
+
+#: RELEASE-NOTES-openSUSE.xml:459(title)
+msgid "X.Org Keycode Changes"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:461(para)
+msgid "Some X.Org keycodes have changed. Adjust your <filename>~/.Xmodmap</filename>, if needed. Use <command>xev</command> to find out the new keycodes."
+msgstr ""
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: RELEASE-NOTES-openSUSE.xml:0(None)
