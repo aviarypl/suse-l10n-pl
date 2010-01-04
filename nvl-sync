@@ -40,13 +40,14 @@ TS=`date +%s`
         # Pobierz najnowsze poty z repozytorium Novella
         echo "Pobieranie plików pot z repozytorium Novella"
         svn export https://svn.berlios.de/svnroot/repos/opensuse-i18n/trunk/lcn/50-pot/ ${TS}-lcn-pot/
-        svn export https://svn.berlios.de/svnroot/repos/opensuse-i18n/trunk/yast/50-pot/
-        
+        svn export https://svn.berlios.de/svnroot/repos/opensuse-i18n/trunk/yast/50-pot/ ${TS}-yast-pot/
+        svn export https://svn.berlios.de/svnroot/repos/opensuse-i18n/trunk/webyast/00-pot/ ${TS}-webyast-pot/
         # Pobierz najnowsze po z repozytorium Aviary.pl
         echo ""
         echo "Pobieranie plików po z repozytorium Aviary.pl"
         svn export http://svn.aviary.pl/suse/trunk/lcn ${TS}-lcn-po/
         svn export http://svn.aviary.pl/suse/trunk/yast ${TS}-yast-po/
+        svn export http://svn.aviary.pl/suse/trunk/webyast ${TS}-webyast-po/
         rm ${TS}-yast-po/Makefile
         
         # Zmień rozszerzenia potów, by nazwy pasowały do plików po
@@ -66,6 +67,11 @@ TS=`date +%s`
           msgmerge -o ${DIR}/yast/${k}.pl.po --no-wrap ${TS}-yast-po/${k}.pl.po ${TS}-yast-pot/${k}.pot
         done
         
+        for i in `find ${TS}-webyast-pot/ -name '*.pot'`
+        do 
+          k=`basename $i .pot`
+          msgmerge -o ${DIR}/webyast/${k}.pl.po --no-wrap ${TS}-webyast-po/${k}.pl.po ${TS}-webyast-pot/${k}.pot
+        done
         # Skopiuj html-help-*, które nie mają swoich potów.
         
         cp ${TS}-lcn-po/html-help-* lcn/
@@ -83,6 +89,9 @@ TS=`date +%s`
         echo "Zmiany w katalogu yast:"
         svn status ./yast/
         echo ""
+        echo "Zmiany w katalogu webyast:"
+        svn status ./webyast/
+        echo ""
      fi
 
  elif [ "$1" = "aviary-nomerge" ]
@@ -90,15 +99,19 @@ TS=`date +%s`
      if [ "$TRUNK" = "trunk" ]
      then
      
-     	rm yast/*.po lcn/*.po
+     	rm yast/*.po lcn/*.po webyast/*.po
      	
         echo ""
         echo "Pobieranie najnowszych plików z katalogu lcn z repozytorium Novella:"
-        svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/lcn/pl/po ./lcn/ --force
+        svn export https://svn.berlios.de/svnroot/repos/opensuse-i18n/trunk/lcn/pl/po/ ./lcn/ --force
         echo ""
         
         echo "Pobieranie najnowszych plików z katalogu yast z repozytorium Novella:"
-        svn export https://forgesvn1.novell.com/svn/suse-i18n/trunk/yast/pl/po ./yast/ --force
+        svn export https://svn.berlios.de/svnroot/repos/opensuse-i18n/trunk/yast/pl/po/ ./yast/ --force
+        echo ""
+        
+        echo "Pobieranie najnowszych plików z katalogu yast z repozytorium Novella:"
+        svn export https://svn.berlios.de/svnroot/repos/opensuse-i18n/trunk/webyast/pl/po/ ./webyast/ --force
         echo ""
         
         echo "Zmiany w katalogu lcn:"
@@ -106,6 +119,9 @@ TS=`date +%s`
         echo ""
         echo "Zmiany w katalogu yast:"
         svn status ./yast/
+        echo ""
+        echo "Zmiany w katalogu webyast:"
+        svn status ./webyast/
         echo ""
       else 
         echo "Skrypt należy wykonać w katalogu trunk kopii lokalnej repozytorium Aviary.pl"
@@ -137,11 +153,17 @@ TS=`date +%s`
       svn export http://svn.aviary.pl/suse/trunk/yast/ ./yast/ --force
       rm ./yast/Makefile
       echo ""
+      echo "Pobieranie najnowszych plików z katalogu webyast z repozytorium Aviary.pl:"
+      svn export http://svn.aviary.pl/suse/trunk/webyast/ ./webyast/ --force
+      echo ""
       echo "Zmiany w katalogu lcn:"
       svn status ./lcn/
       echo ""
       echo "Zmiany w katalogu yast:"
       svn status ./yast/
+      echo ""
+      echo "Zmiany w katalogu webyast:"
+      svn status ./webyast/
       echo ""
     else 
       echo "Skrypt należy wykonać w katalogu forge kopii lokalnej repozytorium Novell Forge"
