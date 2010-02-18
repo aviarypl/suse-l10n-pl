@@ -17,7 +17,7 @@ mergeDir ()
     rm -Rf $DIRTMP
 }
 
-mergeDir po1
+mergeDir po
 #mergeDir po-idmua
 
 svn st | grep -v ?

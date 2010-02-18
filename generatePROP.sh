@@ -16,6 +16,9 @@ PO_DIR=$2
 
 PO2PROPERTY="./po2property.pl"
 
+echo "Dorobić zamianę < > \\u003c \\u003e"
+exit 1
+
 # spr parametrów
 if [ "$DEST_DIR" =  "" ] 
 then
