@@ -1,25 +1,17 @@
-# translation of online-update.po to
-# translation of online-update.pl.po.mine.po to
-# Polish message file for YaST2 (@memory@).
-# Copyright (C) 2003 SuSE Linux AG.
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
 #
-# Wojciech Kapusta <wojciech@aviary.pl>, 2006.
-# Karol Sikora <elektrrrus@gmail.com>, 2007, 2008.
-# Karol Kozioł <7c0.000@gmail.com>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: online-update\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-08 13:02+0100\n"
-"PO-Revision-Date: 2009-09-25 10:11+0100\n"
-"Last-Translator: Jakub Derda <j.derda@tmtsystems.eu>\n"
-"Language-Team:  <pl@li.org>\n"
+"PO-Revision-Date: 2010-03-09 15:19\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Poedit-Bookmarks: 107,-1,-1,-1,-1,-1,-1,-1,-1,-1\n"
-"X-Generator: KBabel 1.11.4\n"
 
 #. popup message
 #: src/OnlineUpdate.ycp:28
@@ -27,8 +19,9 @@ msgid ""
 "At least one of the updates installed requires restart of the session.\n"
 "Relogin into your system as soon as possible."
 msgstr ""
-"Co najmniej jedno z zainstalowanych uaktualnień wymaga do poprawnego\n"
-"działania ponownego uruchomienia systemu. Proszę uruchomić system ponownie."
+"Co najmniej jedna z zainstalowanych aktualizacji wymaga \n"
+"ponownego uruchomienia sesji. Proszę jak najprędzej zalogować się do systemu "
+"ponownie."
 
 #. popup message
 #: src/OnlineUpdate.ycp:32
@@ -41,17 +34,17 @@ msgstr ""
 
 #. popup message
 #: src/OnlineUpdate.ycp:42
-#, fuzzy
 msgid ""
 "At least one of the updates installed requires a system reboot to function\n"
 "properly. Reboot the system as soon as possible."
 msgstr ""
 "Co najmniej jedno z zainstalowanych uaktualnień wymaga do poprawnego\n"
-"działania ponownego uruchomienia systemu. Proszę uruchomić system ponownie."
+"działania ponownego uruchomienia systemu.\n"
+"Proszę uruchomić ponownie system najszybciej, jak będzie to możliwe."
 
 #. popup message
 #: src/OnlineUpdate.ycp:46
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "These updates require a system reboot to function properly:\n"
 "\n"
@@ -59,26 +52,32 @@ msgid ""
 "\n"
 "Reboot the system as soon as possible."
 msgstr ""
-"Co najmniej jedno z zainstalowanych uaktualnień wymaga do poprawnego\n"
-"działania ponownego uruchomienia systemu. Proszę uruchomić system ponownie."
+"Następujące aktualizacje wymagają do poprawnego działania\n"
+"ponownego uruchomienia systemu:\n"
+"\n"
+"%1.\n"
+"\n"
+"Proszę uruchomić ponownie system najszybciej, jak będzie to możliwe."
 
 #. continue/cancel popup text
 #: src/OnlineUpdate.ycp:53
 msgid ""
-"There are patches for package management available that require a restart of YaST.\n"
+"There are patches for package management available that require a restart of "
+"YaST.\n"
 "They should be installed first and all other patches after the restart.\n"
 "\n"
 "You selected some other patches to be installed now.\n"
 "\n"
 "Continue with installing your selection?"
 msgstr ""
-"Wybrano do instalacji poprawki, które wymagają restartu YaST.\n"
-"Powinny one zostać zainstalowane przed wszystkimi innymi poprawkami,\n"
-"natomiast wszystkie inne po restarcie programu YaST.\n"
+"Dostępne są poprawki menedżera pakietów, które wymagają ponownego "
+"uruchomienia programu YaST.\n"
+"Powinny one zostać zainstalowane w pierwszej kolejności, natomiast wszystkie "
+"inne pakiety po ponownym uruchomieniu programu.\n"
 "\n"
-"Wybrano inne poprawki do instalacji teraz.\n"
+"W tym momencie do instalacji zaznaczone są inne poprawki.\n"
 "\n"
-"Kontynuować instalowanie?"
+"Kontynuować instalację zaznaczonych poprawek?"
 
 #. progress log item (%1 is name of package)
 #: src/OnlineUpdateCallbacks.ycp:94
@@ -114,7 +113,7 @@ msgstr "OK"
 #: src/OnlineUpdateCallbacks.ycp:222
 #, ycp-format
 msgid "Downloading delta RPM %1 "
-msgstr "Pobieranie pakietów przyrostowych %1"
+msgstr "Pobieranie pakietów przyrostowych: %1 "
 
 #. progress bar label
 #: src/OnlineUpdateCallbacks.ycp:227
@@ -132,12 +131,12 @@ msgstr "Ściąganie pakietu przyrostowego %1 nie powiodło się."
 #: src/OnlineUpdateCallbacks.ycp:265
 #, ycp-format
 msgid "Applying delta RPM: %1 "
-msgstr "Instalacja pakietu przyrostowego: %1"
+msgstr "Aktualizacja pakietu: %1 "
 
 #. progress bar label
 #: src/OnlineUpdateCallbacks.ycp:270
 msgid "Delta RPM Application Progress"
-msgstr "Postęp aktualizacji "
+msgstr "Postęp aktualizacji"
 
 #. progress log item (previous action failed(%1 is reason)
 #: src/OnlineUpdateCallbacks.ycp:296
@@ -149,7 +148,7 @@ msgstr "Zastosowanie pliku przyrostowego %1 nie powiodło się."
 #: src/OnlineUpdateCallbacks.ycp:311
 #, ycp-format
 msgid "Downloading patch RPM %1 "
-msgstr "Pobieranie poprawki %1"
+msgstr "Pobieranie poprawki: %1 "
 
 #. progress bar label
 #: src/OnlineUpdateCallbacks.ycp:316
@@ -160,7 +159,7 @@ msgstr "Postęp w pobieraniu poprawki"
 #: src/OnlineUpdateCallbacks.ycp:342
 #, ycp-format
 msgid "Failed to download patch RPM: %1"
-msgstr "Nie powiodło się pobieranie poprawki %1."
+msgstr "Nie powiodło sie pobieranie poprawki %1."
 
 #. progress bar label
 #: src/OnlineUpdateCallbacks.ycp:368
@@ -186,7 +185,7 @@ msgstr ""
 #. error popoup (detailed info follows)
 #: src/OnlineUpdateCallbacks.ycp:519
 msgid "There was an error in the repository initialization."
-msgstr "Napotkano błąd podczas inicjalizacji repozytorium."
+msgstr "Wystąpił błąd podczas inicjalizacji repozytorium."
 
 #: src/OnlineUpdateDialogs.ycp:22
 msgid "No details available."
@@ -276,7 +275,7 @@ msgstr ""
 #. Confirm user request to abort installation
 #: src/OnlineUpdateDialogs.ycp:173
 msgid "Really abort YaST Online Update?"
-msgstr "Naprawdę przerwać pracę YaST Online Update?"
+msgstr "Naprawdę przerwać prac·ę YaST Online Update?"
 
 #. Button that will really abort the installation
 #: src/OnlineUpdateDialogs.ycp:180
@@ -329,13 +328,19 @@ msgid ""
 "Some application requiring restart has been updated. The system will\n"
 "reboot now then continue the installation.\n"
 msgstr ""
-"Niektóre programy wymagają zrestartowania systemu podczas uaktualniania. System zostanie teraz\n"
+"Niektóre programy wymagają zrestartowania systemu podczas uaktualniania. "
+"System zostanie teraz\n"
 "uruchomiony ponownie, po czym instalacja będzie kontynuowana.\n"
 
 #. help text for online-update initialization
 #: src/online_update.ycp:36
-msgid "<p>The system is initializing the installation and update repositories. Software repositories can be altered in the <b>Installation Source</b> module.</p>"
-msgstr "<p>System inicjalizuje źródła instalacji i aktualizacji. Ustawienia tych źródeł można zmienić w module <b>Źródła instalacji</b></p>"
+msgid ""
+"<p>The system is initializing the installation and update repositories. "
+"Software repositories can be altered in the <b>Installation Source</b> "
+"module.</p>"
+msgstr ""
+"<p>System inicjalizuje repozytoria instalacji i aktualizacji. Repozytoria "
+"można zmienić w module <b>Źródła instalacji</b>.</p>"
 
 #. progress stage label
 #: src/online_update.ycp:40
@@ -345,12 +350,12 @@ msgstr "Inicjalizacja systemu docelowego"
 #. progress stage label
 #: src/online_update.ycp:42
 msgid "Refresh software repositories"
-msgstr "Odświeżanie źródeł oprogramowania"
+msgstr "Odświeżenie repozytoriów oprogramowania"
 
 #. progress stage label
 #: src/online_update.ycp:44
 msgid "Check for available updates"
-msgstr "Sprawdź dostępne aktualizacje"
+msgstr "Sprawdzenie dostępnych aktualizacji"
 
 #. progress step label
 #: src/online_update.ycp:48
@@ -360,7 +365,7 @@ msgstr "Uruchamianie systemu docelowego..."
 #. progress step label
 #: src/online_update.ycp:50
 msgid "Refreshing software repositories..."
-msgstr "Odświeżanie źródeł oprogramowania..."
+msgstr "Odświeżanie repozytoriów oprogramowania..."
 
 #. progress step label
 #: src/online_update.ycp:52
@@ -375,7 +380,7 @@ msgstr "Zakończono"
 #. dialog caption
 #: src/online_update.ycp:59
 msgid "Initializing CD Update"
-msgstr "Uruchamianie aktualizacji CD"
+msgstr "Inicjalizacja aktualizacji CD"
 
 #. dialog caption
 #: src/online_update.ycp:61
@@ -389,8 +394,7 @@ msgid ""
 "configured yet. Run configuration workflow now?"
 msgstr ""
 "Brak skonfigurowanego\n"
-"repozytorium aktualizacji. Uruchomić\n"
-"konfigurację teraz?"
+"repozytorium aktualizacji. Uruchomić teraz przepływ pracy konfiguracji?"
 
 #. command line help text
 #: src/online_update.ycp:281
@@ -400,7 +404,7 @@ msgstr "Moduł aktualizacji online"
 #. command line help text for cd_update action
 #: src/online_update.ycp:287
 msgid "Start Patch CD Update"
-msgstr "Uruchamia aktualizacje z płyty z poprawkami"
+msgstr "Uruchamia aktualizacje z płyty CD z poprawkami"
 
 #. command line help text for simple_mode action
 #: src/online_update.ycp:292
@@ -411,13 +415,13 @@ msgstr "Używa prostego wyboru pakietów"
 #: src/online_update.ycp:298
 #, ycp-format
 msgid "URL for Patch CD (default value is '%1')"
-msgstr "Adres płyty z poprawkami (domyślnie '%1')"
+msgstr "Adres URL płyty CD z poprawkami (domyślna wartość to \"%1\")"
 
 #. command line help text for cd_directory option
 #: src/online_update.ycp:304
 #, ycp-format
 msgid "Directory for patch data on Patch CD (default value is '%1')"
-msgstr "Katalog z poprawkami na płycie z poprawkami (domyślnie '%1')"
+msgstr "Katalog z poprawkami na płycie CD z poprawkami (domyślnie \"%1\")"
 
 #. progress window label
 #: src/online_update_install.ycp:27
@@ -443,14 +447,17 @@ msgid ""
 msgstr ""
 "<p>Po połączeniu z serwerem aktualizacji, \n"
 "YaST2 pobierze wszystkie wybrane poprawki.\n"
-"Może to zająć trochę czasu. Szczegóły pobierania widoczne są w oknie dziennika.</p>"
+"Może to zająć trochę czasu. Szczegóły pobierania widoczne są w oknie "
+"dziennika.</p>"
 
 #. help text for online update
 #: src/online_update_install.ycp:47
-msgid "<p>If special messages associated with patches are available, they will be shown in an extra dialog when the patch is installed.</p>\n"
+msgid ""
+"<p>If special messages associated with patches are available, they will be "
+"shown in an extra dialog when the patch is installed.</p>\n"
 msgstr ""
-"<p>Jeśli z jakimiś poprawkami związane są specjalne komunikaty, będą one \n"
-"wyświetlone w dodatkowym oknie podczas instalacji poprawki.</p>\n"
+"<p>Jeśli będą dostępne specjalne komunikaty związane z poprawkami, zostaną "
+"one wyświetlone w dodatkowym oknie podczas instalacji poprawki.</p>\n"
 
 #. using SetContents (define in online_update.ycp)
 #: src/online_update_install.ycp:53
@@ -465,7 +472,7 @@ msgstr "Instalacja zakończona.\n"
 #. label
 #: src/online_update_install.ycp:83
 msgid "Patch installation finished."
-msgstr "Instalacja poprawek zakończona."
+msgstr "Instalacja poprawek ukończona."
 
 #. error message
 #: src/online_update_install.ycp:92
@@ -486,14 +493,39 @@ msgstr ""
 "Proszę sprawdzić, czy w napędzie\n"
 "znajduje się właściwa płyta CD.\n"
 
+#~ msgid ""
+#~ "YaST2\n"
+#~ "Initializing ..."
+#~ msgstr ""
+#~ "YaST2\n"
+#~ "inicjalizacja..."
+
+#~ msgid ""
+#~ "The kernel has been updated. The system will\n"
+#~ "reboot now then continue the installation.\n"
+#~ msgstr ""
+#~ "Zaktualizowane zostało jądro systemu. System zostanie teraz\n"
+#~ "uruchomiony ponownie, po czym instalacja będzie kontynuowana.\n"
+
+#~ msgid ""
+#~ "<p>After connecting to the update server,\n"
+#~ "YaST2 will download all selected patches.\n"
+#~ "This could take some time. Download details are shown in the log window.</"
+#~ "p>"
+#~ msgstr ""
+#~ "<p>Po połączeniu z serwerem aktualizacji, \n"
+#~ "YaST2 pobierze wszystkie wybrane poprawki.\n"
+#~ "Może to zająć trochę czasu. Szczegóły związane z pobieraniem \n"
+#~ "widoczne są w oknie dziennika.</p>"
+
 #~ msgid "The value of 'day' must be between 0 and 7."
-#~ msgstr "Wartość 'dzień' musi zawierać się między 0 a 7."
+#~ msgstr "Wartość pola \"dzień\" musi zawierać się między 0 a 7."
 
 #~ msgid "The value of 'hour' must be between 0 and 23."
-#~ msgstr "Wartość 'godzina' musi zawierać się między 0 a 23."
+#~ msgstr "Wartość pola \"godzina\" musi zawierać się między 0 a 23."
 
 #~ msgid "The value of 'minute' must be between 0 and 59."
-#~ msgstr "Wartość 'minuta' musi zawierać się między 0 a 59."
+#~ msgstr "Wartość pola \"minuta\" musi zawierać się między 0 a 59."
 
 #~ msgid "Automatic online update is enabled."
 #~ msgstr "Automatyczna aktualizacja online jest włączona."
@@ -505,40 +537,40 @@ msgstr ""
 #~ msgstr "Interaktywne poprawki będą pomijane."
 
 #~ msgid "at %1.%2"
-#~ msgstr "Codziennie o %1:%2"
+#~ msgstr "o %1:%2"
 
 #~ msgid "At random time"
 #~ msgstr "O losowej porze"
 
 #~ msgid "Update is scheduled on %1, %2."
-#~ msgstr "Aktualizacja jest zaplanowana na %1, o %2."
+#~ msgstr "Aktualizacja jest zaplanowana na %2 w %1."
 
 #~ msgid "Update is scheduled daily %1."
 #~ msgstr "Aktualizacja jest zaplanowana codziennie o %1."
 
 #~ msgid "Set up automatic online update"
-#~ msgstr "Konfiguracja automatycznej aktualizacji online"
+#~ msgstr "Konfiguracja automatycznych aktualizacji online"
 
 #~ msgid "Enable automatic online update"
-#~ msgstr "Włącz aktualizacje automatyczne"
+#~ msgstr "Włącza automatyczne aktualizacje online"
 
 #~ msgid "Disable automatic online update"
-#~ msgstr "Wyłącz aktualizacje automatyczne"
+#~ msgstr "Wyłącza automatyczne aktualizacje online"
 
 #~ msgid "Configuration Summary"
 #~ msgstr "Podsumowanie konfiguracji"
 
 #~ msgid "Modify current configuration"
-#~ msgstr "Zmiana bieżącej konfiguracji"
+#~ msgstr "Zmienia bieżącą konfigurację"
 
 #~ msgid "Skip interactive patches"
-#~ msgstr "Pomiń poprawki interaktywne"
+#~ msgstr "Pomija poprawki interaktywne"
 
 #~ msgid "Set update to be done daily"
-#~ msgstr "Ustawia aktualizacje codziennie"
+#~ msgstr "Ustawia codzienne wykonywanie aktualizacji"
 
 #~ msgid "Set update to be done weekly"
-#~ msgstr "Ustawia aktualizacje co tydzień"
+#~ msgstr "Ustawia wykonywanie aktualizacji co tydzień"
 
 #~ msgid "Day in a week to do the weekly update (0-7)"
 #~ msgstr "Dzień wykonywania cotygodniowych aktualizacji (0-7)"

@@ -1,26 +1,17 @@
-# translation of nis.po to Polish
-# translation of nis.po to
-# translation of nis.po to
-# Polish message file for YaST2 (@memory@).
-# Copyright (C) 2003 SuSE Linux AG.
+# Copyright (C) 2006 SuSE Linux Products GmbH, Nuernberg
+# This file is distributed under the same license as the package.
 #
-# Stanisław Małolepszy <smalolepszy@aviary.pl>, 2006.
-# Wojciech Kapusta <wojciech@aviary.pl>, 2006.
-# Mariusz Fik <fisiu82@gmail.com>, 2008.
-# Tomasz Sot <zigrin@opensuse.us>, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: nis\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-03-08 13:04+0100\n"
-"PO-Revision-Date: 2009-06-12 09:13+0200\n"
-"Last-Translator: Tomasz Sot <zigrin@opensuse.us>\n"
-"Language-Team: Polish <opensuse-pl@opensuse.org>\n"
+"PO-Revision-Date: 2010-03-09 15:19\n"
+"Last-Translator: Novell Language <language@novell.com>\n"
+"Language-Team: Novell Language <language@novell.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: KBabel 1.11.4\n"
 
 #. Translators: do not translate (none)!
 #: src/Nis.ycp:500
@@ -41,7 +32,7 @@ msgid ""
 "\n"
 msgstr ""
 "Dozwolone jest używanie jedynie adresów IP,\n"
-"ponieważ nazwy hostów są tłumaczone za pomocą NIS.\n"
+"ponieważ nazwy hostów są rozwiązywane za pomocą NIS.\n"
 "\n"
 
 #. Translators: popup message part, ends with a newline
@@ -97,7 +88,7 @@ msgstr "Odpowiadaj tylko hostom lokalnym"
 #. summary header
 #: src/Nis.ycp:809
 msgid "Broken server"
-msgstr "Uszkodzony serwer"
+msgstr "Broken server"
 
 #. summary header
 #: src/Nis.ycp:813
@@ -138,12 +129,12 @@ msgstr "Zapisywanie konfiguracji NIS..."
 #. progress stage label
 #: src/Nis.ycp:1186
 msgid "Stop services"
-msgstr "Zatrzymanie usług"
+msgstr "Zatrzymywanie usług"
 
 #. progress stage label
 #: src/Nis.ycp:1188
 msgid "Start services"
-msgstr "Uruchomienie usług"
+msgstr "Uruchamianie usług"
 
 #. progress step label
 #: src/Nis.ycp:1191
@@ -163,7 +154,7 @@ msgstr "Zakończono"
 #. help text
 #: src/Nis.ycp:1199
 msgid "Writing NIS client settings"
-msgstr "Zapisanie ustawień klienta NIS"
+msgstr "Zapisywanie ustawień klienta NIS"
 
 #. error popup message
 #: src/Nis.ycp:1235
@@ -233,8 +224,8 @@ msgid ""
 "in the local network to find a server after the specified servers\n"
 "fail to respond. It is a security risk.</p>\n"
 msgstr ""
-"<p>Opcja <b>Rozgłaszanie</b> włącza przeszukiwanie sieci lokalnej\n"
-"w celu znalezienia serwera w przypadku, gdy podane serwery nie\n"
+"<p>Opcja <b>Rozgłaszanie</b> włącza przeszukiwanie sieci\n"
+"lokalnej w celu znalezienia serwera w przypadku, gdy podane serwery nie\n"
 "odpowiedziały. Włączenie tej opcji obniża bezpieczeństwo systemu.</p>\n"
 
 #. const
@@ -278,13 +269,16 @@ msgid ""
 "<p><b>Firewall Settings</b><br>\n"
 "To open the firewall to allow accessing the 'ypbind' service\n"
 "from remote computers, set <b>Open Port in Firewall</b>.\n"
-"To select interfaces on which to open the port, click <b>Firewall Details</b>.\n"
+"To select interfaces on which to open the port, click <b>Firewall Details</"
+"b>.\n"
 "This option is only available if the firewall is enabled.</p>\n"
 msgstr ""
 "<p><b>Ustawienia zapory sieciowej</b><br>\n"
-"Aby otworzyć w zaporze sieciowej dostęp do usługi 'ypbind'\n"
-"z komputerów zdalnych, należy wybrać <b>Otwórz port w zaporze sieciowej</b>.\n"
-"Aby wybrać interfejsy, na których port ma być otwarty, należy nacisnąć przycisk\n"
+"Aby otworzyć w zaporze sieciowej dostęp do usługi \"ypbind\"\n"
+"z komputerów zdalnych, należy wybrać opcję <b>Otwórz port w zaporze "
+"sieciowej</b>.\n"
+"Aby wybrać interfejsy, na których port ma być otwarty, należy nacisnąć "
+"przycisk\n"
 "<b>Szczegóły zapory sieciowej</b>. Opcja ta jest dostępna tylko wtedy,\n"
 "gdy zapora sieciowa jest włączona.</p>\n"
 
@@ -300,11 +294,30 @@ msgstr ""
 #. help text for netconfig part
 #: src/ui.ycp:203
 msgid ""
-"<p>Select the way how NIS configuration  will be modified. Normally, it is handled by netconfig script which merges the data statically defined here with those obtained dynamically (e.g. from DHCP client, NetworkManager etc.). This is the default, Default Policy option and it is sufficient for most of the configurations.\n"
-"By choosing Only Manual Changes option, netconfig will no longer be allowed to modify configuration. You can however edit the file manually. By choosing Custom Policy option, you may specify a custom policy string, which consists of space-separated list of interface names, including wildcards, with STATIC/STATIC_FALLBACK as predefined special values. For more information, see netconfig manual page.</p>"
+"<p>Select the way how NIS configuration  will be modified. Normally, it is "
+"handled by netconfig script which merges the data statically defined here "
+"with those obtained dynamically (e.g. from DHCP client, NetworkManager "
+"etc.). This is the default, Default Policy option and it is sufficient for "
+"most of the configurations.\n"
+"By choosing Only Manual Changes option, netconfig will no longer be allowed "
+"to modify configuration. You can however edit the file manually. By choosing "
+"Custom Policy option, you may specify a custom policy string, which consists "
+"of space-separated list of interface names, including wildcards, with STATIC/"
+"STATIC_FALLBACK as predefined special values. For more information, see "
+"netconfig manual page.</p>"
 msgstr ""
-"<p>Wybierz sposób w jaki konfiguracja NIS zostanie zmodyfikowana. Normalnie, jest to robione przez skrypt netconfig, który łączy dane zdefiniowane statycznie tutaj z otrzymanymi dynamicznie (np. z klienta DHCP, NetworkManager itd.). 'Domyślna polityka' jest opcją domyślną i w większości przypadków jest wystarczająca dla większości konfiguracji.\n"
-"Wybierając 'Tylko zmiany ręczne', netconfig nie będzie dłużej mógł modyfikować konfigurację. Jakkolwiek możesz edytować plik ręcznie. Wybierając 'Zwyczajna polityka', możesz zdefiniować łańcuch, który będzie zawierał oddzieloną spacjami listę nazw interfejsów, wliczając symbole wieloznaczne, ze STATIC/STATIC_FALLBACK jako predefiniowane wartości specjalne. Więcej informacji można znaleźć na stronie podręcznika netconfig (man netconfig).</p>"
+"<p>Proszę wybrać sposób zmiany konfiguracji usługi NIS. Standardowo dzieje "
+"się to za pomocą skryptu netconfig, który scala dane zdefiniowane statycznie "
+"tutaj z otrzymanymi dynamicznie (np. z klienta DHCP, apletu NetworkManager "
+"itd.). Domyślna założenia są opcją domyślną i w większości przypadków są "
+"wystarczające.\n"
+"Wybierając \"Tylko zmiany ręczne\", konfiguracja nie będzie mogła być dłużej "
+"modyfikowana przez skrypt netconfig. Można jednak edytować plik ręcznie. "
+"Wybierając \"Własne założenia\", można zdefiniowac własny łańcuch założeń, "
+"który składał się z rozdzielonej spacjami listy nazw interfejsów włącznie z "
+"wielozacznikami i predefiniowanymi wartościami specjalnymi STATIC/"
+"STATIC_FALLBACK. Więcej informacji można znaleźć na stronie podręcznika "
+"netconfig (man netconfig).</p>"
 
 #. help text
 #: src/ui.ycp:207
@@ -346,7 +359,7 @@ msgstr "Klient NIS"
 #. combo box label
 #: src/ui.ycp:276
 msgid "Netconfig NIS &Policy"
-msgstr "&Polityka NIS"
+msgstr "Z&ałożenia NIS netconfig"
 
 #. combo box item
 #: src/ui.ycp:278
@@ -356,17 +369,17 @@ msgstr "Tylko zmiany ręczne"
 #. combo box item
 #: src/ui.ycp:280
 msgid "Default Policy"
-msgstr "Domyślna polityka"
+msgstr "Domyślne założenia"
 
 #. combo box item
 #: src/ui.ycp:282
 msgid "Custom Policy"
-msgstr "Własna polityka"
+msgstr "Własne założenia"
 
 #. text entry label
 #: src/ui.ycp:287
 msgid "C&ustom Policy"
-msgstr "N&iestandardowe Polityki"
+msgstr "&Własne założenia"
 
 #. text entry label
 #: src/ui.ycp:291 src/ui.ycp:298
@@ -443,19 +456,34 @@ msgstr ""
 
 #. help text 1/4
 #: src/ui.ycp:548
-msgid "<p>Normally, it is possible for any host to query which server a client is using. Disabling <b>Answer Remote Hosts</b> restricts this only to the local host.</p>"
-msgstr "<p>Zazwyczaj każdy host może zapytać, którego serwera używa dany klient. Wyłączenie opcji <b>Odpowiadaj komputerom zdalnym</b> ogranicza to prawo jedynie do hosta lokalnego.</p>"
+msgid ""
+"<p>Normally, it is possible for any host to query which server a client is "
+"using. Disabling <b>Answer Remote Hosts</b> restricts this only to the local "
+"host.</p>"
+msgstr ""
+"<p>Zazwyczaj każdy host może zapytać, którego serwera używa dany klient. "
+"Wyłączenie opcji <b>Odpowiadaj zdalnym komputerom</b> ogranicza to prawo "
+"jedynie do hosta lokalnego.</p>"
 
 #. help text 2/4
 #. Check, ie. turn on a check box
 #: src/ui.ycp:552
-msgid "<p>Check <b>Broken server</b> if answers from servers running on an unprivileged port should be accepted. It is a security risk and it is better to replace such a server.</p>"
-msgstr "<p>Aby akceptować odpowiedzi z serwerów pracujących na nieuprzywilejowanych portach, należy wybrać <b>Uszkodzony serwer</b>. Zaznaczenie tej opcji obniża bezpieczeństwo systemu i dlatego zaleca się nieużywanie takich serwerów.</p>"
+msgid ""
+"<p>Check <b>Broken server</b> if answers from servers running on an "
+"unprivileged port should be accepted. It is a security risk and it is better "
+"to replace such a server.</p>"
+msgstr ""
+"<p>Aby akceptować odpowiedzi z serwerów pracujących na nieuprzywilejowanych "
+"portach, należy wybrać opcję <b>Uszkodzony serwer</b>. Zaznaczenie tej opcji "
+"obniża bezpieczeństwo systemu i dlatego nie zaleca się używania takich "
+"serwerów.</p>"
 
 #. help text 3/4
 #: src/ui.ycp:555
 msgid "<p>See <b>man ypbind</b> for details on other options.</p>"
-msgstr "<p>Szczegóły dotyczące innych opcji znajdują się w podręczniku <b>man ypbind</b>.</p>"
+msgstr ""
+"<p>Szczegóły dotyczące innych opcji znajdują w podręczniku <b>man ypbind</b>."
+"</p>"
 
 #. frame label
 #. dialog title
@@ -466,7 +494,7 @@ msgstr "Ustawienia zaawansowane"
 #. check box label
 #: src/ui.ycp:569
 msgid "Ans&wer Remote Hosts"
-msgstr "Odpo&wiadaj hostom zdalnym"
+msgstr "Odpo&wiadaj zdalnym komputerom"
 
 #. check box label
 #: src/ui.ycp:571
@@ -497,7 +525,7 @@ msgstr "&SLP"
 #. Translators: popup dialog heading
 #: src/ui.ycp:724
 msgid "Domain Settings"
-msgstr "Ustawienia domeny"
+msgstr "Ustawienia domen"
 
 #. Add a domain, Adding a domain? Edit...
 #. Translators: text entry label
@@ -532,8 +560,12 @@ msgstr "<p>Należy podać serwery dla dodatkowych domen.</p>"
 
 #. help text
 #: src/ui.ycp:844
-msgid "<p>The Service Location Protocol (<b>SLP</b>) can be used to find NIS server.</p>"
-msgstr "<p>Do znalezienia serwera NIS może zostać wykorzystany protokół odnajdywania usług (<b>SLP</b>).</p>"
+msgid ""
+"<p>The Service Location Protocol (<b>SLP</b>) can be used to find NIS server."
+"</p>"
+msgstr ""
+"<p>Do znalezienia serwera NIS może zostać wykorzystany Service Location "
+"Protocol (<b>SLP</b>).</p>"
 
 #. dialog label
 #. dialog subtitle
@@ -561,8 +593,14 @@ msgstr "Czy na pewno usunąć tę domenę?"
 msgid "NIS is now enabled."
 msgstr "NIS jest teraz aktywny."
 
-#~ msgid "<p>If you are using <b>DHCP</b> and the server provides the NIS domain name or servers, you can enable their use here. DHCP itself can be set up in the network module.</p>"
-#~ msgstr "<p>Możliwe jest wykorzystanie nazwy domeny i serwera NIS dostarczanych przez serwer DHCP (o ile sieć korzysta z DHCP). Samo DHCP można skonfigurować w module konfiguracji sieci.</p>"
+#~ msgid ""
+#~ "<p>If you are using <b>DHCP</b> and the server provides the NIS domain "
+#~ "name or servers, you can enable their use here. DHCP itself can be set up "
+#~ "in the network module.</p>"
+#~ msgstr ""
+#~ "<p>Możliwe jest wykorzystanie nazwy domeny i serwera NIS dostarczanych "
+#~ "przez serwer DHCP (o ile sieć korzysta z DHCP). Samo DHCP można "
+#~ "skonfigurować w module konfiguracji sieci.</p>"
 
 #~ msgid "Error while running portmapper."
 #~ msgstr "Błąd przy uruchamianiu programu portmapper."
