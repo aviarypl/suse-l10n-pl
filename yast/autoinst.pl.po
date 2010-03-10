@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: autoinst.pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-07 07:52+0200\n"
+"POT-Creation-Date: 2010-03-08 13:06+0100\n"
 "PO-Revision-Date: 2009-10-07 19:45+0100\n"
 "Last-Translator: Paulina Budzoń <paulina.budzon@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -35,9 +35,9 @@ msgstr "Wykonanie skryptów do automatycznej instalacji w środowisku instalacyj
 msgid "Error while reading configuration data."
 msgstr "Błąd podczas odczytywania danych konfiguracyjnych."
 
-#: src/clients/autoyast.ycp:45 src/clients/ayast_setup.ycp:80
+#: src/clients/autoyast.ycp:45 src/clients/ayast_setup.ycp:88
 #: src/clients/inst_autoinit.ycp:92 src/clients/inst_autosetup.ycp:46
-#: src/modules/AutoInstallRules.ycp:766
+#: src/modules/AutoInstallRules.ycp:883
 msgid ""
 "Error while parsing the control file.\n"
 "Check the log files for more details or fix the\n"
@@ -62,37 +62,51 @@ msgstr "To może chwilę potrwać"
 msgid "autoyast"
 msgstr "autoyast"
 
-#: src/clients/ayast_setup.ycp:44
+#: src/clients/ayast_setup.ycp:46 src/clients/clone_system.ycp:26
 msgid "Empty parameter list"
 msgstr "Pusta lista parametrów"
 
-#: src/clients/ayast_setup.ycp:73
+#: src/clients/ayast_setup.ycp:81
 msgid "Path to autoyast profile must be set"
 msgstr "Ścieżka do profilu AutoYaST musi być ustawiona"
 
-#: src/clients/ayast_setup.ycp:94
+#: src/clients/ayast_setup.ycp:102
 msgid "Client for autoyast configuration on the running system"
 msgstr "Klient dla konfiguracji autoyast na uruchomionym systemie"
 
-#: src/clients/ayast_setup.ycp:99
+#: src/clients/ayast_setup.ycp:107
 msgid "Configure the system using given autoyast profile"
 msgstr "Konfiguruj system używając danego profilu autoyast"
 
-#: src/clients/ayast_setup.ycp:105
+#: src/clients/ayast_setup.ycp:113
 msgid "Path to autoyast profile"
 msgstr "Ścieżka do profilu autoyast"
 
-#: src/clients/ayast_setup.ycp:110
+#: src/clients/ayast_setup.ycp:118
 msgid "enable/disable all package handling"
 msgstr "włącz/wyłacz obsługę wszystkich pakietów"
 
-#: src/clients/clone_system.ycp:22
+#: src/clients/clone_system.ycp:31
 msgid "Cloning the system..."
 msgstr "Klonowanie systemu plików..."
 
-#: src/clients/clone_system.ycp:22
+#: src/clients/clone_system.ycp:31
 msgid "The resulting autoyast profile can be found in /root/autoinst.xml."
 msgstr "Utworzony profil AutoYaST znajduje się w /root/autoinst.xml."
+
+#: src/clients/clone_system.ycp:55
+#, fuzzy
+msgid "Client for creating an AutoYaST profile based on the currently running system"
+msgstr "Klient dla konfiguracji autoyast na uruchomionym systemie"
+
+#: src/clients/clone_system.ycp:60
+#, ycp-format
+msgid "known modules: %1"
+msgstr ""
+
+#: src/clients/clone_system.ycp:66
+msgid "comma separated list of modules to clone"
+msgstr ""
 
 #. help 1/2
 #: src/clients/files_auto.ycp:103
@@ -236,7 +250,7 @@ msgstr "Wykonywanie skryptów poinstalacyjnych"
 msgid "Finishing Configuration"
 msgstr "Zakończenie konfiguracji"
 
-#: src/clients/inst_autoimage.ycp:28
+#: src/clients/inst_autoimage.ycp:31
 msgid ""
 "<p>\n"
 "Please wait while the image is retrieved.</p>\n"
@@ -244,25 +258,39 @@ msgstr ""
 "<p>\n"
 "Proszę poczekać na odzyskanie obrazu.</p>\n"
 
-#: src/clients/inst_autoimage.ycp:33
+#: src/clients/inst_autoimage.ycp:36
 msgid "Retrieve Image File"
 msgstr "Odzyskaj plik obrazu"
 
-#: src/clients/inst_autoimage.ycp:34
+#: src/clients/inst_autoimage.ycp:37
 msgid "Install image file"
 msgstr "Zainstaluj plik obrazu"
 
-#: src/clients/inst_autoimage.ycp:39
+#: src/clients/inst_autoimage.ycp:42
 msgid "Retrieving image file..."
 msgstr "Odzyskiwanie pliku obrazu..."
 
-#: src/clients/inst_autoimage.ycp:40
+#: src/clients/inst_autoimage.ycp:43
 msgid "Installing image file..."
 msgstr "Instalowanie pliku obrazu..."
 
-#: src/clients/inst_autoimage.ycp:44
+#: src/clients/inst_autoimage.ycp:47
 msgid "Installing image into system..."
 msgstr "Instalowanie obrazu w systemie..."
+
+#: src/clients/inst_autoimage.ycp:63
+#, ycp-format
+msgid ""
+"fetching image-script failed:\n"
+"%1"
+msgstr ""
+
+#: src/clients/inst_autoimage.ycp:68
+#, ycp-format
+msgid ""
+"running image-script failed:\n"
+"%1"
+msgstr ""
 
 #: src/clients/inst_autoinit.ycp:37
 msgid "Processing Profiles and Rules"
@@ -397,7 +425,7 @@ msgstr "Przygotowywanie systemu do automatycznej instalacji"
 msgid "Configuring language..."
 msgstr "Konfiguracja języka..."
 
-#: src/clients/inst_autosetup.ycp:237
+#: src/clients/inst_autosetup.ycp:236
 msgid ""
 "Error while configuring partitions.\n"
 "Try again.\n"
@@ -405,7 +433,7 @@ msgstr ""
 "Błąd podczas konfigurowania partycji.\n"
 "Proszę spróbować ponownie.\n"
 
-#: src/clients/inst_autosetup.ycp:265
+#: src/clients/inst_autosetup.ycp:264
 msgid ""
 "Error while configuring software selections.\n"
 "Try again.\n"
@@ -480,11 +508,11 @@ msgstr ""
 msgid "Messages and Logging"
 msgstr "Komunikaty i rejestracja w dzienniku"
 
-#: src/clients/software_auto.ycp:48
+#: src/clients/software_auto.ycp:49
 msgid "Software Selection"
 msgstr "Wybór oprogramowania"
 
-#: src/clients/software_auto.ycp:49
+#: src/clients/software_auto.ycp:50
 msgid ""
 "<p>\n"
 "Select one of the following <b>base</b> selections and click <i>Detailed<i> to add\n"
@@ -497,7 +525,19 @@ msgstr ""
 "i pakietów.\n"
 "</p>\n"
 
-#: src/clients/software_auto.ycp:67
+#: src/clients/software_auto.ycp:68
+msgid "Location of the installation source (like http://myhost/11.3/DVD1/)"
+msgstr ""
+
+#: src/clients/software_auto.ycp:69
+msgid "The inst-source of this system (you can't create images if you choose this)"
+msgstr ""
+
+#: src/clients/software_auto.ycp:98
+msgid "using that installation source failed"
+msgstr ""
+
+#: src/clients/software_auto.ycp:120
 msgid "Reading package database..."
 msgstr "Odczytywanie bazy pakietów..."
 
@@ -579,6 +619,11 @@ msgstr "Ścieżka urządzenia"
 msgid "UUID"
 msgstr "UUID"
 
+#: src/dialogs/DriveDialog.ycp:40
+#, fuzzy
+msgid "Edit Drive"
+msgstr "D&odaj dysk"
+
 #: src/dialogs/DriveDialog.ycp:129
 msgid "D&evice"
 msgstr "U&rządzenie"
@@ -586,6 +631,11 @@ msgstr "U&rządzenie"
 #: src/dialogs/DriveDialog.ycp:133
 msgid "&Intialize drive"
 msgstr "&Inicjalizuj twardy dysk"
+
+#. initially selected
+#: src/dialogs/DriveDialog.ycp:135
+msgid "Re&use"
+msgstr ""
 
 #: src/dialogs/DriveDialog.ycp:136 src/dialogs/script_dialogs.ycp:153
 msgid "&Type"
@@ -701,6 +751,11 @@ msgstr "Dodaj grupę woluminów"
 #: src/include/classes.ycp:62
 msgid "&Delete"
 msgstr "&Usuń"
+
+#: src/dialogs/VolgroupDialog.ycp:41
+#, fuzzy
+msgid "Edit Volume Group"
+msgstr "Dodaj grupę woluminów"
 
 #: src/dialogs/VolgroupDialog.ycp:88
 msgid "Store unsaved changes to volume group?"
@@ -2085,59 +2140,64 @@ msgid "Save the changes to %1?"
 msgstr "Zapisać zmiany do %1?"
 
 #. autoyast tried to read a file but had no success.
-#: src/include/io.ycp:86
+#: src/include/io.ycp:87
 #, ycp-format
 msgid "Cannot find URL '%1' via protocol HTTP(S). Server returned code %2."
 msgstr "Nie można znaleźć URL '%1' poprzez protokół HTTP(S). Serwer zwrócił odpowiedź %2."
 
 #. autoyast tried to read a file but had no success.
-#: src/include/io.ycp:102
+#: src/include/io.ycp:103
 #, ycp-format
 msgid "Cannot find URL '%1' via protocol FTP. Server returned code %2."
 msgstr "Nie można znaleźć URL '%1' poprzez protokół FTP. Serwer zwrócił odpowiedź %2."
 
-#: src/include/io.ycp:117
+#: src/include/io.ycp:118
 #, ycp-format
 msgid "Reading file on %1/%2 failed.\n"
 msgstr "Odczytanie pliku na %1/%2 nie powiodło się.\n"
 
-#: src/include/io.ycp:130
+#: src/include/io.ycp:129
 #, ycp-format
 msgid "Reading file on %1 failed.\n"
 msgstr "Odczytanie pliku na %1 nie powiodło się.\n"
 
 #. autoyast tried to mount the CD but had no success.
 #. autoyast tried to mount a NFS directory which failed
-#: src/include/io.ycp:139 src/include/io.ycp:172 src/include/io.ycp:203
+#: src/include/io.ycp:151 src/include/io.ycp:186 src/include/io.ycp:217
 #, ycp-format
 msgid "Mounting %1 failed."
 msgstr "Montowanie %1 nie powiodło się."
 
 #. autoyast tried to read a file but had no success.
-#: src/include/io.ycp:156
+#: src/include/io.ycp:170
 #, ycp-format
 msgid "Reading a file on CD failed. Path: %1/%2."
 msgstr "Oczytanie pliku na CD nie powiodło się. Ścieżka: %1/%2."
 
 #. autoyast tried to copy a file via NFS which failed
-#: src/include/io.ycp:187 src/include/io.ycp:218
+#: src/include/io.ycp:201 src/include/io.ycp:232
 #, ycp-format
 msgid "Remote file %1 cannot be retrieved"
 msgstr "Nie można odzyskać zdalnego pliku %1."
 
+#: src/include/io.ycp:319
+#, ycp-format
+msgid "%1 is not mounted and mount failed"
+msgstr ""
+
 #. autoyast tried to copy a file but that file can't be found
-#: src/include/io.ycp:334
+#: src/include/io.ycp:326
 #, ycp-format
 msgid "File %1 cannot be found"
 msgstr "Nie można znaleźć pliku %1."
 
-#: src/include/io.ycp:359
+#: src/include/io.ycp:351
 #, ycp-format
 msgid "Cannot find URL '%1' via protocol TFTP."
 msgstr "Nie można znaleźć URL '%1' poprzez protokół TFTP."
 
 #. the user wanted autoyast to fetch it's profile via an unknown protocol
-#: src/include/io.ycp:366
+#: src/include/io.ycp:358
 #, ycp-format
 msgid "Unknown protocol %1."
 msgstr "Nieznany protokół %1."
@@ -2147,16 +2207,16 @@ msgstr "Nieznany protokół %1."
 msgid "Autoinstall Configuration"
 msgstr "Konfiguracja automatycznej instalacji"
 
-#: src/modules/AutoInstallRules.ycp:431
+#: src/modules/AutoInstallRules.ycp:432
 msgid "Parsing the rules file failed. XML parser reports:\n"
 msgstr "Przetwarzanie pliku reguł nie powiodło się. Odpowiedź parsera XML:\n"
 
 #. autoyast has read the autoyast configuration file but something went wrong
-#: src/modules/AutoInstallRules.ycp:687 src/modules/Profile.ycp:586
+#: src/modules/AutoInstallRules.ycp:804 src/modules/Profile.ycp:586
 msgid "The XML parser reported an error while parsing the autoyast profile. The error message is:\n"
 msgstr "Parser XML zgłasza błąd podczas przetwarzania profilu AutoYaST. Komunikat błędu:\n"
 
-#: src/modules/AutoInstallRules.ycp:801
+#: src/modules/AutoInstallRules.ycp:918
 msgid ""
 "\n"
 "User-defined classes could not be retrieved.  Make sure all classes \n"
@@ -2170,53 +2230,53 @@ msgstr ""
 "i dostępne dla tego systemu przez sieć lub lokalnie. System nie może\n"
 "zostać zainstalowany z oryginalnym plikiem kontrolnym bez użycia klas.\n"
 
-#: src/modules/AutoinstConfig.ycp:214
+#: src/modules/AutoinstConfig.ycp:241
 msgid "Choose Profile"
 msgstr "Wybierz profil"
 
-#: src/modules/AutoinstConfig.ycp:268
+#: src/modules/AutoinstConfig.ycp:295
 msgid "Retrieving control file from floppy."
 msgstr "Odzyskiwanie pliku kontrolnego z dyskietki."
 
-#: src/modules/AutoinstConfig.ycp:272
+#: src/modules/AutoinstConfig.ycp:299
 #, ycp-format
 msgid "Retrieving control file (%1) from TFTP server: %2."
 msgstr "Odzyskiwanie pliku kontrolnego (%1) z serwera TFTP: %2."
 
-#: src/modules/AutoinstConfig.ycp:276
+#: src/modules/AutoinstConfig.ycp:303
 #, ycp-format
 msgid "Retrieving control file (%1) from NFS server: %2."
 msgstr "Odzyskiwanie pliku kontrolnego (%1) z serwera NFS: %2."
 
-#: src/modules/AutoinstConfig.ycp:280
+#: src/modules/AutoinstConfig.ycp:307
 #, ycp-format
 msgid "Retrieving control file (%1) from HTTP server: %2."
 msgstr "Odzyskiwanie pliku kontrolnego (%1) z serwera HTTP: %2."
 
-#: src/modules/AutoinstConfig.ycp:284
+#: src/modules/AutoinstConfig.ycp:311
 #, ycp-format
 msgid "Retrieving control file (%1) from FTP server: %2."
 msgstr "Odzyskiwanie pliku kontrolnego (%1) z serwera FTP: %2."
 
-#: src/modules/AutoinstConfig.ycp:288
+#: src/modules/AutoinstConfig.ycp:315
 #, ycp-format
 msgid "Copying control file from file: %1."
 msgstr "Kopiowanie pliku kontrolnego z pliku: %1."
 
-#: src/modules/AutoinstConfig.ycp:292
+#: src/modules/AutoinstConfig.ycp:319
 #, ycp-format
 msgid "Copying control file from device: /dev/%1."
 msgstr "Kopiowanie pliku kontrolnego z urządzenia: /dev/%1."
 
-#: src/modules/AutoinstConfig.ycp:296
+#: src/modules/AutoinstConfig.ycp:323
 msgid "Copying control file from default location."
 msgstr "Kopiowanie pliku kontrolnego z domyślnej lokalizacji."
 
-#: src/modules/AutoinstConfig.ycp:300
+#: src/modules/AutoinstConfig.ycp:327
 msgid "Source unknown."
 msgstr "Nieznane źródło."
 
-#: src/modules/AutoinstConfig.ycp:382
+#: src/modules/AutoinstConfig.ycp:409
 msgid ""
 "<h3>AutoYaST Configuration Management System</h3>\n"
 "<p>Almost all resources of the control file can be\n"
@@ -2226,7 +2286,7 @@ msgstr ""
 "<p>Korzystając z systemu zarządzania konfiguracją można\n"
 "konfigurować prawie wszystkie zasoby z plików sterujących.</p>\n"
 
-#: src/modules/AutoinstConfig.ycp:387
+#: src/modules/AutoinstConfig.ycp:414
 msgid ""
 "<p>Most of the modules used to create the configuration are identical to those available\n"
 "through the YaST Control Center. Instead of configuring this system, the data\n"
@@ -2241,7 +2301,7 @@ msgstr ""
 "konfiguracji tego systemu.\n"
 "</p>\n"
 
-#: src/modules/AutoinstConfig.ycp:394
+#: src/modules/AutoinstConfig.ycp:421
 msgid ""
 "<p>In addition to the existing and familiar modules,\n"
 "new interfaces were created for special and complex configurations, including\n"
@@ -2263,6 +2323,10 @@ msgstr " - Grupa woluminów"
 #: src/modules/AutoinstFile.ycp:48
 msgid "Configured Files:"
 msgstr "Skonfigurowane pliki:"
+
+#: src/modules/AutoinstGeneral.ycp:86
+msgid "probe"
+msgstr ""
 
 #: src/modules/AutoinstGeneral.ycp:90
 msgid "Mouse"
@@ -2349,11 +2413,11 @@ msgstr "Nie można użyć ponownie grupy woluminów %1. Grupa ta nie istnieje."
 msgid "Volume group '%1' must have at least one physical volume. Please provide one."
 msgstr "Grupa woluminów %1 musi mieć co najmniej jeden fizyczny wolumin. Proszę wpisać jeden."
 
-#: src/modules/AutoinstPartPlan.ycp:576 src/modules/AutoinstStorage.ycp:572
+#: src/modules/AutoinstPartPlan.ycp:576 src/modules/AutoinstStorage.ycp:586
 msgid "Drives"
 msgstr "Napędy"
 
-#: src/modules/AutoinstPartPlan.ycp:578 src/modules/AutoinstStorage.ycp:574
+#: src/modules/AutoinstPartPlan.ycp:578 src/modules/AutoinstStorage.ycp:588
 #, ycp-format
 msgid "Total of %1 drive"
 msgid_plural "Total of %1 drives"
@@ -2406,7 +2470,7 @@ msgid "Unknown"
 msgstr "Nieznane"
 
 #. warning text during the installation. %1 is a list of package names
-#: src/modules/AutoinstSoftware.ycp:137
+#: src/modules/AutoinstSoftware.ycp:152
 #, ycp-format
 msgid ""
 "These packages could not be found in the software repositories:\n"
@@ -2415,50 +2479,137 @@ msgstr ""
 "Wymienionych pakietów nie można znaleźć w repozytoriach oprogramowania:\n"
 "%1"
 
-#: src/modules/AutoinstSoftware.ycp:241
+#. 4 means "already exists"
+#: src/modules/AutoinstSoftware.ycp:224 src/modules/AutoinstSoftware.ycp:235
+#, fuzzy, ycp-format
+msgid "Adding repo %1 failed"
+msgstr "Odczytanie pliku na %1 nie powiodło się.\n"
+
+#: src/modules/AutoinstSoftware.ycp:248
+msgid "Image creation failed while pattern installation. Please check /tmp/ay_image.log"
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:253
+msgid "Creating Image - installing packages"
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:257
+msgid "Image creation failed while package installation. Please check /tmp/ay_image.log"
+msgstr ""
+
+#. Popup::Message( _("in the next file dialog you have to choose the target directory to save the image") );
+#: src/modules/AutoinstSoftware.ycp:265
+#, fuzzy
+msgid "Store image to ..."
+msgstr "Odzyskiwanie pliku obrazu..."
+
+#: src/modules/AutoinstSoftware.ycp:277
+#, ycp-format
+msgid ""
+"You can do changes to the image now in %1/\n"
+"If you press the ok-button, the image will be compressed and can't be changed anymore."
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:282
+#, ycp-format
+msgid "Image compressing failed in '%1'. Please check /tmp/ay_image.log"
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:285
+#, fuzzy
+msgid "Image created successfully"
+msgstr "Plik %1 zapisano pomyślnie."
+
+#: src/modules/AutoinstSoftware.ycp:302
+#, ycp-format
+msgid ""
+"can not get the directory.yast file at `%1`.\n"
+"You can create that file with 'ls -F > directory.yast' if it's missing."
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:314 src/modules/AutoinstSoftware.ycp:322
+#, ycp-format
+msgid "can not read '%1'. ISO creation failed"
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:343
+msgid "Preparing ISO Filestructure ..."
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:367
+msgid "boot config for the DVD"
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:369
+msgid "Ok"
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:370
+#, ycp-format
+msgid ""
+"You can do changes to the ISO now in %1, like adding a complete different AutoYaST XML file.\n"
+"If you press the ok-button, the iso will be created."
+msgstr ""
+
+#. create the actual ISO file
+#. Popup::Message( _("Please choose a place where you want to save the ISO file in the next dialog") );
+#: src/modules/AutoinstSoftware.ycp:380
+msgid "Store ISO image to ..."
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:381
+msgid "Creating ISO File ..."
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:390
+#, ycp-format
+msgid "ISO successfully created at %1"
+msgstr ""
+
+#: src/modules/AutoinstSoftware.ycp:462
 msgid "Selected Patterns"
 msgstr "Wybrane wzorce"
 
-#: src/modules/AutoinstSoftware.ycp:254
+#: src/modules/AutoinstSoftware.ycp:475
 msgid "Individually Selected Packages"
 msgstr "Indywidualnie wybrane pakiety"
 
-#: src/modules/AutoinstSoftware.ycp:258
+#: src/modules/AutoinstSoftware.ycp:479
 msgid "Packages to Remove"
 msgstr "Pakiety do usunięcia"
 
-#: src/modules/AutoinstSoftware.ycp:264
+#: src/modules/AutoinstSoftware.ycp:485
 msgid "Force Kernel Package"
 msgstr "Wymuś pakiet jądra systemu"
 
-#: src/modules/AutoinstSoftware.ycp:352
+#: src/modules/AutoinstSoftware.ycp:573
 #, ycp-format
 msgid "Could not set patterns: %1."
 msgstr "Nie można określić wzorców: %1"
 
-#: src/modules/AutoinstSoftware.ycp:401
+#: src/modules/AutoinstSoftware.ycp:622
 msgid "The package resolver run failed. Please check your software section in the autoyast profile."
 msgstr "Uruchomienie pakietu resolvera nie powiodło się. Proszę sprawdzić sekcję oprogramowania w profilu programu AutoYaST."
 
-#: src/modules/AutoinstStorage.ycp:403
+#: src/modules/AutoinstStorage.ycp:404
 #, ycp-format
 msgid "The partition plan configured in your XML profile does not fit on the hard disk. %1MB missing"
 msgstr "Układ partycji o konfiguracji z pliku XML nie mieści się na dysku. Brakuje %1MB"
 
-#: src/modules/AutoinstStorage.ycp:577
+#: src/modules/AutoinstStorage.ycp:591
 msgid "No specific device configured"
 msgstr "Nie skonfigurowano żadnego urządzenia"
 
-#: src/modules/AutoinstStorage.ycp:640
+#: src/modules/AutoinstStorage.ycp:654
 msgid "Evaluating root partition. One moment please..."
 msgstr "Wykrywanie partycji głównej (root). Proszę czekać..."
 
 #. a popup
-#: src/modules/AutoinstStorage.ycp:648
+#: src/modules/AutoinstStorage.ycp:662
 msgid "No Linux root partition found."
 msgstr "Nie znaleziono żadnej linuksowej partycji głównej."
 
-#: src/modules/AutoinstStorage.ycp:662
+#: src/modules/AutoinstStorage.ycp:676
 msgid ""
 "Multiple root partitions found, but you did not configure\n"
 "which root partition should be used.  Automatic installation not possible.\n"
@@ -2466,7 +2617,7 @@ msgstr ""
 "Znaleziono kilka partycji głównych, ale nie skonfigurowano,\n"
 "która ma zostać użyta. Automatyczna instalacja nie jest możliwa.\n"
 
-#: src/modules/AutoinstStorage.ycp:733
+#: src/modules/AutoinstStorage.ycp:747
 #, ycp-format
 msgid "device '%1' not found by storage backend"
 msgstr "urządzenie '%1' nie zostało odnalezione przez moduł zapisu"
@@ -2484,16 +2635,20 @@ msgstr "Zaszyfrowany profil AutoYaST. Proszę wprowadzić hasło dwukrotnie"
 msgid "Couldn't write section %1 to file %2"
 msgstr "Nie można wpisać sekcji %1 do pliku %2"
 
-#: src/modules/Profile.ycp:555 src/modules/ProfileLocation.ycp:104
+#: src/modules/Profile.ycp:555 src/modules/ProfileLocation.ycp:129
 msgid "Encrypted AutoYaST profile. Please enter the correct password."
 msgstr "Zaszyfrowany profil AutoYaST. Proszę wprowadzić prawidłowe hasło"
 
+#: src/modules/ProfileLocation.ycp:102
+msgid "label not found while looking for autoyast profile"
+msgstr ""
+
 #. autoyast hit an error while fetching it's config file
-#: src/modules/ProfileLocation.ycp:94
+#: src/modules/ProfileLocation.ycp:119
 msgid "An error occurred while fetching the profile:\n"
 msgstr "Wystąpił błąd podczas pobierania profilu:\n"
 
-#: src/modules/ProfileLocation.ycp:106
+#: src/modules/ProfileLocation.ycp:131
 msgid "&OK"
 msgstr "&OK"
 
