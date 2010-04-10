@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: yast_webclient_users\n"
-"POT-Creation-Date: 2010-03-18 14:33+0100\n"
+"POT-Creation-Date: 2010-03-30 15:02+0200\n"
 "PO-Revision-Date: 2010-03-09 15:19\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -13,21 +13,120 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: app/controllers/users_controller.rb:160
+#: app/controllers/groups_controller.rb:15
+msgid "Missing group name parameter"
+msgstr ""
+
+#: app/controllers/groups_controller.rb:27
+msgid "Missing group parameters"
+msgstr ""
+
+#: app/controllers/groups_controller.rb:37
+msgid "Please enter a valid group name"
+msgstr ""
+
+#: app/controllers/groups_controller.rb:47
+msgid "Please enter a valid GID"
+msgstr ""
+
+#: app/controllers/groups_controller.rb:57
+msgid "Please enter a valid group type. Only \"system\" or \"local\" are allowed."
+msgstr ""
+
+#: app/controllers/groups_controller.rb:68
+msgid "Please enter a valid list of members"
+msgstr ""
+
+#: app/controllers/groups_controller.rb:82
+msgid "Cannot read users list."
+msgstr ""
+
+#: app/controllers/groups_controller.rb:105
+msgid "Cannot read groups list."
+msgstr ""
+
+#: app/controllers/groups_controller.rb:177
+msgid "Unknown backend error"
+msgstr ""
+
+#: app/controllers/users_controller.rb:164
 msgid "User <i>%s</i> was successfully created."
 msgstr "Konto użytkownika <i>%s</i>zostało pomyślnie utworzone."
 
-#: app/controllers/users_controller.rb:202
+#: app/controllers/users_controller.rb:206
 msgid "User <i>%s</i> was successfully updated."
 msgstr "Konto użytkownika <i>%s</i>zostało pomyślnie zaktualizowane."
 
-#: app/controllers/users_controller.rb:223
+#: app/controllers/users_controller.rb:227
 msgid "User <i>%s</i> was successfully removed."
 msgstr "Konto użytkownika <i>%s</i>zostało pomyślnie usunięte."
 
-#: app/controllers/users_controller.rb:225
+#: app/controllers/users_controller.rb:229
 msgid "Error: Could not remove user <i>%s</i>."
 msgstr "Błąd: Nie można usunąć konta użytkownika <i>%s</i>."
+
+#: app/views/groups/edit.html.erb:4 app/views/groups/index.html.erb:38
+#: app/views/users/_user_form.erb:30 app/views/users/_user_form.erb:33
+msgid "Groups"
+msgstr "Grupy"
+
+#: app/views/groups/edit.html.erb:6
+#, fuzzy
+msgid "Add new group"
+msgstr "Nowy użytkownik"
+
+#: app/views/groups/edit.html.erb:8
+msgid "Modify group"
+msgstr ""
+
+#: app/views/groups/edit.html.erb:18 app/views/groups/index.html.erb:49
+#, fuzzy
+msgid "Group Name"
+msgstr "Imię i nazwisko"
+
+#: app/views/groups/edit.html.erb:22
+#, fuzzy
+msgid "Group ID"
+msgstr "Grupy"
+
+#: app/views/groups/edit.html.erb:26
+#, fuzzy
+msgid "Group Type"
+msgstr "Grupy"
+
+#: app/views/groups/edit.html.erb:30
+#, fuzzy
+msgid "Default members"
+msgstr "Grupa domyślna:"
+
+#: app/views/groups/edit.html.erb:34
+msgid "Members"
+msgstr ""
+
+#: app/views/groups/index.html.erb:26
+msgid "Type group name ..."
+msgstr ""
+
+#: app/views/groups/index.html.erb:29 app/views/users/index.html.erb:35
+msgid "Filter:"
+msgstr ""
+
+#: app/views/groups/index.html.erb:44
+#, fuzzy
+msgid "Add New Group"
+msgstr "Nowy użytkownik"
+
+#: app/views/groups/index.html.erb:50
+msgid "Type"
+msgstr ""
+
+#: app/views/groups/index.html.erb:51
+msgid "Action"
+msgstr ""
+
+#: app/views/groups/index.html.erb:61
+msgid "Are you sure to delete group '%s'?"
+msgstr ""
 
 #: app/views/users/_user_form.erb:5
 #, fuzzy
@@ -51,10 +150,6 @@ msgstr "Hasło"
 msgid "Confirm Password"
 msgstr "Hasło"
 
-#: app/views/users/_user_form.erb:30 app/views/users/_user_form.erb:33
-msgid "Groups"
-msgstr "Grupy"
-
 #: app/views/users/_user_form.erb:39
 msgid "Default Group"
 msgstr "Grupa domyślna:"
@@ -75,33 +170,33 @@ msgstr "Powłoka logowania"
 msgid "UID Number"
 msgstr "Numer UID"
 
-#: app/views/users/edit.html.erb:63 app/views/users/new.html.erb:58
+#: app/views/users/edit.html.erb:55 app/views/users/new.html.erb:58
 msgid "Weak"
 msgstr ""
 
-#: app/views/users/edit.html.erb:64 app/views/users/new.html.erb:59
+#: app/views/users/edit.html.erb:56 app/views/users/new.html.erb:59
 msgid "Normal"
 msgstr ""
 
-#: app/views/users/edit.html.erb:65 app/views/users/new.html.erb:60
+#: app/views/users/edit.html.erb:57 app/views/users/new.html.erb:60
 msgid "Medium"
 msgstr ""
 
-#: app/views/users/edit.html.erb:66 app/views/users/new.html.erb:61
+#: app/views/users/edit.html.erb:58 app/views/users/new.html.erb:61
 msgid "Strong"
 msgstr ""
 
-#: app/views/users/edit.html.erb:67 app/views/users/new.html.erb:62
+#: app/views/users/edit.html.erb:59 app/views/users/new.html.erb:62
 msgid "Very Strong"
 msgstr ""
 
-#: app/views/users/edit.html.erb:88 app/views/users/index.html.erb:46
+#: app/views/users/edit.html.erb:80 app/views/users/index.html.erb:46
 #: app/views/users/new.html.erb:86
 #, fuzzy
 msgid "Local Users"
 msgstr "Użytkownik lokalny"
 
-#: app/views/users/edit.html.erb:88
+#: app/views/users/edit.html.erb:80
 msgid "Edit user %s"
 msgstr "Edycja użytkownika %s"
 
@@ -109,14 +204,14 @@ msgstr "Edycja użytkownika %s"
 msgid "Type user name or login ..."
 msgstr ""
 
-#: app/views/users/index.html.erb:35
-msgid "Filter:"
-msgstr ""
-
-#: app/views/users/index.html.erb:78
+#: app/views/users/index.html.erb:51
 #, fuzzy
 msgid "Add New User"
 msgstr "Nowy użytkownik"
+
+#: app/views/users/index.html.erb:67
+msgid "Are you sure to delete user %s?"
+msgstr ""
 
 #: app/views/users/new.html.erb:86
 #, fuzzy
