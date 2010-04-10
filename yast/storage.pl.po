@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: storage\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-03-08 12:59+0100\n"
+"POT-Creation-Date: 2010-04-08 15:16+0200\n"
 "PO-Revision-Date: 2010-03-09 15:19\n"
 "Last-Translator: Novell Language <language@novell.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -191,7 +191,7 @@ msgstr ""
 #. first step of hd prepare, select a single disk or "expert" partitioning
 #: storage/src/include/auto_part_ui.ycp:178
 #: storage/src/include/auto_part_ui.ycp:227
-#: storage/src/inst_target_selection.ycp:162
+#: storage/src/inst_target_selection.ycp:157
 msgid "Preparing Hard Disk"
 msgstr "Przygotowywanie dysku twardego"
 
@@ -738,15 +738,21 @@ msgstr ""
 
 #. heading text
 #: storage/src/include/custom_part_dialogs.ycp:52
-msgid "Enter your password for the encrypted file system."
+#, fuzzy
+msgid "Enter your Password for the Encrypted File System."
 msgstr "Proszę podać hasło dla zaszyfrowanego systemu plików"
 
 #. label text
 #: storage/src/include/custom_part_dialogs.ycp:54
-#: storage/src/include/custom_part_dialogs.ycp:171
-#: storage/src/include/ep-dialogs.ycp:484
+#: storage/src/include/custom_part_dialogs.ycp:88
+#: storage/src/include/ep-dialogs.ycp:489
 msgid "Don't forget what you enter here!"
 msgstr "Proszę nie zapomnieć hasła!"
+
+#: storage/src/include/custom_part_dialogs.ycp:58
+#: storage/src/include/ep-dialogs.ycp:493
+msgid "Empty password allowed."
+msgstr "Dozwolone puste hasło."
 
 #. heading text, %1 is replaced by device name (e.g. /dev/hda1)
 #: storage/src/include/custom_part_dialogs.ycp:63
@@ -754,41 +760,25 @@ msgstr "Proszę nie zapomnieć hasła!"
 msgid "Password for Encrypted File System on %1"
 msgstr "Hasło dla zaszyfrowanego systemu plików na %1"
 
-#. Label: get password for user root
-#. Please use newline if label is longer than 40 characters
-#: storage/src/include/custom_part_dialogs.ycp:88
-#: storage/src/include/custom_part_dialogs.ycp:260
-#: storage/src/include/ep-dialogs.ycp:493
-msgid "&Enter a password for your file system:"
-msgstr "Proszę podać hasło dla syst&emu plików:"
-
-#. Label: get same password again for verification
-#. Please use newline if label is longer than 40 characters
-#: storage/src/include/custom_part_dialogs.ycp:97
-#: storage/src/include/custom_part_dialogs.ycp:268
-#: storage/src/include/ep-dialogs.ycp:497
-msgid "Reenter the password for &verification:"
-msgstr "Proszę podać hasło ponownie, dla &weryfikacji:"
-
-#: storage/src/include/custom_part_dialogs.ycp:159
+#: storage/src/include/custom_part_dialogs.ycp:76
 msgid "Enter your password for the proposal encryption."
 msgstr "Proszę podać hasło do zaproponowanego szyfrowania."
 
 #. Label: get password for user root
 #. Please use newline if label is longer than 40 characters
-#: storage/src/include/custom_part_dialogs.ycp:164
+#: storage/src/include/custom_part_dialogs.ycp:81
 msgid "Password:"
 msgstr "Hasło:"
 
 #. Label: get same password again for verification
 #. Please use newline if label is longer than 40 characters
-#: storage/src/include/custom_part_dialogs.ycp:170
+#: storage/src/include/custom_part_dialogs.ycp:87
 msgid "Reenter the password for verification:"
 msgstr "Proszę podać hasło ponownie dla weryfikacji:"
 
 #. translator comment: %1 is the device name, %2 is a directory
 #. example: "...password for device /dev/hda6 mounted on /var"
-#: storage/src/include/custom_part_dialogs.ycp:232
+#: storage/src/include/custom_part_dialogs.ycp:149
 #, ycp-format
 msgid ""
 "Enter your crypt password for\n"
@@ -798,17 +788,31 @@ msgstr ""
 "urządzenia %1 zamontowanego na %2.\n"
 
 #. heading text
-#: storage/src/include/custom_part_dialogs.ycp:245
+#: storage/src/include/custom_part_dialogs.ycp:162
 msgid "Enter your password for the encrypted file system"
 msgstr "Proszę podać hasło dla zaszyfrowanego systemu plików"
 
+#. Label: get password for user root
+#. Please use newline if label is longer than 40 characters
+#: storage/src/include/custom_part_dialogs.ycp:177
+#: storage/src/include/ep-dialogs.ycp:508
+msgid "&Enter a password for your file system:"
+msgstr "Proszę podać hasło dla syst&emu plików:"
+
+#. Label: get same password again for verification
+#. Please use newline if label is longer than 40 characters
+#: storage/src/include/custom_part_dialogs.ycp:185
+#: storage/src/include/ep-dialogs.ycp:500 storage/src/modules/Storage.ycp:3299
+msgid "Reenter the password for &verification:"
+msgstr "Proszę podać hasło ponownie, dla &weryfikacji:"
+
 #. Cancel button
-#: storage/src/include/custom_part_dialogs.ycp:277
+#: storage/src/include/custom_part_dialogs.ycp:194
 msgid "&Skip"
 msgstr "P&omiń"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:308
+#: storage/src/include/custom_part_dialogs.ycp:225
 msgid ""
 "The first and the second version\n"
 "of the password do not match!\n"
@@ -818,8 +822,8 @@ msgstr ""
 "Proszę spróbować ponownie."
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:313
-#: storage/src/modules/Storage.ycp:5318
+#: storage/src/include/custom_part_dialogs.ycp:230
+#: storage/src/modules/Storage.ycp:3257
 msgid ""
 "You did not enter a password.\n"
 "Try again.\n"
@@ -828,8 +832,8 @@ msgstr ""
 "Proszę spróbować ponownie.\n"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:324
-#: storage/src/modules/Storage.ycp:5329
+#: storage/src/include/custom_part_dialogs.ycp:241
+#: storage/src/modules/Storage.ycp:3268
 #, ycp-format
 msgid ""
 "The password must have at least %1 characters.\n"
@@ -839,12 +843,12 @@ msgstr ""
 "Proszę spróbować ponownie.\n"
 
 #. heading text
-#: storage/src/include/custom_part_dialogs.ycp:407
+#: storage/src/include/custom_part_dialogs.ycp:324
 msgid "File system options:"
 msgstr "Opcje systemu plików:"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:495
+#: storage/src/include/custom_part_dialogs.ycp:412
 msgid ""
 "The character '/' is no longer permitted in a volume label.\n"
 "Change your volume label so that it does not contain this character.\n"
@@ -853,7 +857,7 @@ msgstr ""
 "Proszę zmienić etykietę wolumenu, tak aby nie zawierała tego znaku.\n"
 
 #. help text, richtext format
-#: storage/src/include/custom_part_dialogs.ycp:514
+#: storage/src/include/custom_part_dialogs.ycp:431
 msgid ""
 "<p><b>Mount in /etc/fstab By:</b>\n"
 "Normally, a file system to mount is identified in /etc/fstab\n"
@@ -869,7 +873,7 @@ msgstr ""
 "możliwe.\n"
 
 #. help text, richtext format
-#: storage/src/include/custom_part_dialogs.ycp:522
+#: storage/src/include/custom_part_dialogs.ycp:439
 msgid ""
 "<p><b>Volume Label:</b>\n"
 "The name entered in this field is used as the volume label. This usually makes sense only \n"
@@ -882,42 +886,42 @@ msgstr ""
 "Etykieta wolumenu nie może zawierać znaku / ani spacji.\n"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:534
+#: storage/src/include/custom_part_dialogs.ycp:451
 msgid "Mount in /etc/fstab by"
 msgstr "Montowanie w /etc/fstab przez"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:539
+#: storage/src/include/custom_part_dialogs.ycp:456
 msgid "&Device name"
 msgstr "Nazwa urzą&dzenia"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:542
+#: storage/src/include/custom_part_dialogs.ycp:459
 msgid "Volume &label"
 msgstr "Etykieta wo&lumenu"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:550
+#: storage/src/include/custom_part_dialogs.ycp:467
 msgid "Device &ID"
 msgstr "&Identyfikator urządzenia"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:553
+#: storage/src/include/custom_part_dialogs.ycp:470
 msgid "Device &Path"
 msgstr "Ś&cieżka urządzenia"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:560
+#: storage/src/include/custom_part_dialogs.ycp:477
 msgid "Volume &Label"
 msgstr "Etykieta wo&lumenu"
 
 #. heading text
-#: storage/src/include/custom_part_dialogs.ycp:661
+#: storage/src/include/custom_part_dialogs.ycp:578
 msgid "Fstab options:"
 msgstr "Opcje fstab:"
 
 #. popup text %1 is a number
-#: storage/src/include/custom_part_dialogs.ycp:762
+#: storage/src/include/custom_part_dialogs.ycp:679
 #, ycp-format
 msgid ""
 "\n"
@@ -929,61 +933,61 @@ msgstr ""
 "wynosi %1. Etykieta woluminu została przycięta do tej długości.\n"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:782
+#: storage/src/include/custom_part_dialogs.ycp:699
 msgid "Provide a volume label to mount by label."
 msgstr "Proszę podać etykietę woluminu do montowania wg etykiety."
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:789
+#: storage/src/include/custom_part_dialogs.ycp:706
 msgid "This volume label is already in use. Select a different one."
 msgstr "Ta etykieta woluminu już jest używana. Proszę wybrać inną."
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:936
+#: storage/src/include/custom_part_dialogs.ycp:853
 msgid "File &system"
 msgstr "&System plików"
 
 #. button text
-#: storage/src/include/custom_part_dialogs.ycp:939
+#: storage/src/include/custom_part_dialogs.ycp:856
 msgid "O&ptions..."
 msgstr "O&pcje..."
 
 #. button text
-#: storage/src/include/custom_part_dialogs.ycp:954
+#: storage/src/include/custom_part_dialogs.ycp:871
 msgid "&Encrypt device"
 msgstr "Zaszyfruj urządz&enie"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:1010
+#: storage/src/include/custom_part_dialogs.ycp:927
 msgid "File system &ID:"
 msgstr "&Identyfikator systemu plików:"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:1040
+#: storage/src/include/custom_part_dialogs.ycp:957
 msgid "Format"
 msgstr "Formatuj"
 
-#: storage/src/include/custom_part_dialogs.ycp:1046
+#: storage/src/include/custom_part_dialogs.ycp:963
 msgid "Do &not format"
 msgstr "&Nie formatuj"
 
 #. button text
-#: storage/src/include/custom_part_dialogs.ycp:1050
+#: storage/src/include/custom_part_dialogs.ycp:967
 msgid "&Format"
 msgstr "&Formatuj"
 
 #. button text
-#: storage/src/include/custom_part_dialogs.ycp:1098
+#: storage/src/include/custom_part_dialogs.ycp:1015
 msgid "Fs&tab Options"
 msgstr "Opcje &fstab"
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:1102
+#: storage/src/include/custom_part_dialogs.ycp:1019
 msgid "&Mount Point"
 msgstr "Punkt &montowania"
 
 #. popup text %1 is a partition name, %2 a dirctory
-#: storage/src/include/custom_part_dialogs.ycp:1113
+#: storage/src/include/custom_part_dialogs.ycp:1030
 #, ycp-format
 msgid ""
 "\n"
@@ -1009,7 +1013,7 @@ msgstr ""
 "Kontynuować?\n"
 
 #. Popup text
-#: storage/src/include/custom_part_dialogs.ycp:1139
+#: storage/src/include/custom_part_dialogs.ycp:1056
 msgid ""
 "\n"
 "The file system on the partition cannot be shrunk by YaST2.\n"
@@ -1021,7 +1025,7 @@ msgstr ""
 "partycji."
 
 #. Popup text
-#: storage/src/include/custom_part_dialogs.ycp:1144
+#: storage/src/include/custom_part_dialogs.ycp:1061
 msgid ""
 "\n"
 "The file system on the logical volume cannot be shrunk by YaST2.\n"
@@ -1033,21 +1037,21 @@ msgstr ""
 "partycji."
 
 #. Popup text
-#: storage/src/include/custom_part_dialogs.ycp:1152
+#: storage/src/include/custom_part_dialogs.ycp:1069
 msgid "You risk losing data if you shrink this partition."
 msgstr "Zmniejszenie rozmiaru tej partycji obarczone jest ryzykiem utraty danych."
 
 #. Popup text
-#: storage/src/include/custom_part_dialogs.ycp:1155
+#: storage/src/include/custom_part_dialogs.ycp:1072
 msgid "You risk losing data if you shrink this logical volume."
 msgstr "Zmniejszenie rozmiaru tego wolumenu logicznego obarczone jest ryzykiem utraty danych."
 
-#: storage/src/include/custom_part_dialogs.ycp:1157
+#: storage/src/include/custom_part_dialogs.ycp:1074
 msgid "Continue?"
 msgstr "Kontynuować?"
 
 #. Popup text
-#: storage/src/include/custom_part_dialogs.ycp:1177
+#: storage/src/include/custom_part_dialogs.ycp:1094
 msgid ""
 "\n"
 "The file system on the selected partition cannot be extended by YaST2.\n"
@@ -1058,7 +1062,7 @@ msgstr ""
 "Tylko fat, ext2, ext3, ext4, xfs i reiser pozwalają na zwiększanie rozmiaru partycji."
 
 #. Popup text
-#: storage/src/include/custom_part_dialogs.ycp:1182
+#: storage/src/include/custom_part_dialogs.ycp:1099
 msgid ""
 "\n"
 "The file system on the selected logical volume cannot be extended by YaST2.\n"
@@ -1068,12 +1072,12 @@ msgstr ""
 "Partycja na wybranym woluminie logicznym nie może zostać zwiększona przez YaST2.\n"
 "Tylko fat, ext2, ext3, xfs i reiserFS pozwalają na zwiększanie rozmiaru."
 
-#: storage/src/include/custom_part_dialogs.ycp:1188
+#: storage/src/include/custom_part_dialogs.ycp:1105
 msgid "Continue resizing?"
 msgstr "Kontynuować zmianę rozmiaru?"
 
 #. %1 is either replaced by "logical volume" or by "partition"
-#: storage/src/include/custom_part_dialogs.ycp:1205
+#: storage/src/include/custom_part_dialogs.ycp:1122
 #, ycp-format
 msgid ""
 "\n"
@@ -1089,15 +1093,15 @@ msgstr ""
 "Proszę odmontować system plików i ponowić próbę zmiany rozmiaru.\n"
 
 #. Popup text
-#: storage/src/include/custom_part_dialogs.ycp:1221
+#: storage/src/include/custom_part_dialogs.ycp:1138
 msgid "You decreased a partition with a reiser file system on it."
 msgstr "Zmniejszono rozmiar partycji z systemem plików reiser."
 
-#: storage/src/include/custom_part_dialogs.ycp:1223
+#: storage/src/include/custom_part_dialogs.ycp:1140
 msgid "You decreased a logical volume with a reiser file system on it."
 msgstr "Zmniejszono rozmiar wolumenu logicznego z systemem plików reiser."
 
-#: storage/src/include/custom_part_dialogs.ycp:1225
+#: storage/src/include/custom_part_dialogs.ycp:1142
 msgid ""
 "\n"
 "It is possible to shrink a reiser file system, but this feature is not\n"
@@ -1112,44 +1116,44 @@ msgstr ""
 "Zmniejszyć teraz system plików?"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:1253
+#: storage/src/include/custom_part_dialogs.ycp:1170
 msgid "No previous system with mount points was detected."
 msgstr "Nie wykryto wcześniejszego systemu plików z punktami montowania."
 
 #. heading text
-#: storage/src/include/custom_part_dialogs.ycp:1258
+#: storage/src/include/custom_part_dialogs.ycp:1175
 msgid "Device      "
 msgstr "Urządzenie"
 
-#: storage/src/include/custom_part_dialogs.ycp:1258
+#: storage/src/include/custom_part_dialogs.ycp:1175
 msgid "Mount       "
 msgstr "Montuj       "
 
 #. help text, richtext format
-#: storage/src/include/custom_part_dialogs.ycp:1261
+#: storage/src/include/custom_part_dialogs.ycp:1178
 msgid ""
 "<P><B><BIG>Attention:</BIG></B><BR>YaST2 has scanned your hard disks and found an old Linux system\n"
 "with mount points. On the right, see a list with the mount points found. </P>\n"
 msgstr "<P><B><BIG>Ostrzeżenie:</BIG></B><BR>Program YaST2 przeskanował dyski twarde i wykrył stary system Linux z punktami montowania. Po prawej przedstawiono listę punktów montowania. </P>\n"
 
 #. help text, richtext format
-#: storage/src/include/custom_part_dialogs.ycp:1265
+#: storage/src/include/custom_part_dialogs.ycp:1182
 msgid "<P>To use these mount points, <BR>press <B>Yes</B>.</P>"
 msgstr "<P>Aby użyć tej listy punktów montowania, <BR>proszę nacisnąć przycisk <b>Tak</b>.</P>"
 
 #. help text, richtext format
-#: storage/src/include/custom_part_dialogs.ycp:1267
+#: storage/src/include/custom_part_dialogs.ycp:1184
 msgid "<P>To ignore these mount points, <BR> press <B>No</B>.</P>"
 msgstr "<P>Aby zignorować te punkty montowania, <BR> proszę nacisnąć przycisk <B>Nie</B>.</P>"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:1286
+#: storage/src/include/custom_part_dialogs.ycp:1203
 msgid ""
 "Would you like to use these mount points\n"
 "for your new installation?"
 msgstr "Czy użyć tych punktów montowania do nowej instalacji?"
 
-#: storage/src/include/custom_part_dialogs.ycp:1299
+#: storage/src/include/custom_part_dialogs.ycp:1216
 #, ycp-format
 msgid ""
 "A previous system with the following mount points was detected:\n"
@@ -1158,36 +1162,36 @@ msgstr ""
 "Wykryto wcześniejszy system z następującymi punktami montowania:\n"
 "/etc/fstab znaleziono na %1"
 
-#: storage/src/include/custom_part_dialogs.ycp:1315
+#: storage/src/include/custom_part_dialogs.ycp:1232
 msgid "Show &Previous"
 msgstr "Pokaż &poprzednie"
 
-#: storage/src/include/custom_part_dialogs.ycp:1320
+#: storage/src/include/custom_part_dialogs.ycp:1237
 msgid "Show &Next"
 msgstr "Pokaż &następne"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:1360
+#: storage/src/include/custom_part_dialogs.ycp:1277
 msgid "No unsaved changes exist."
 msgstr "Brak niezapisanych zmian."
 
 #. label text
-#: storage/src/include/custom_part_dialogs.ycp:1368
+#: storage/src/include/custom_part_dialogs.ycp:1285
 msgid "Changes:"
 msgstr "Zmiany:"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:1378
+#: storage/src/include/custom_part_dialogs.ycp:1295
 msgid " Do you really want to execute these changes?"
 msgstr " Czy na pewno wykonać te zmiany?"
 
 #. button text
-#: storage/src/include/custom_part_dialogs.ycp:1384
+#: storage/src/include/custom_part_dialogs.ycp:1301
 msgid "&Apply"
 msgstr "Z&astosuj"
 
 #. popup text, %1 is replaced by device name
-#: storage/src/include/custom_part_dialogs.ycp:1437
+#: storage/src/include/custom_part_dialogs.ycp:1354
 #, ycp-format
 msgid ""
 "The selected device contains partitions that are currently mounted:\n"
@@ -1201,7 +1205,7 @@ msgstr ""
 "Proszę nacisnąć przycisk \"Anuluj\", chyba że dokładnie wiadomo, co się robi.\n"
 
 #. popup text, Do not translate LVM.
-#: storage/src/include/custom_part_dialogs.ycp:1461
+#: storage/src/include/custom_part_dialogs.ycp:1378
 msgid ""
 "\n"
 "The selected device contains at least one LVM partition\n"
@@ -1215,7 +1219,7 @@ msgstr ""
 "z odpowiednich grup wolumenów przed usunięciem urządzenia.\n"
 
 #. popup text, Do not translate RAID.
-#: storage/src/include/custom_part_dialogs.ycp:1471
+#: storage/src/include/custom_part_dialogs.ycp:1388
 msgid ""
 "\n"
 "The selected device contains at least one partition\n"
@@ -1229,7 +1233,7 @@ msgstr ""
 "do odpowiednich systemów RAID przed usunięciem urządzenia.\n"
 
 #. popup text
-#: storage/src/include/custom_part_dialogs.ycp:1481
+#: storage/src/include/custom_part_dialogs.ycp:1398
 msgid ""
 "\n"
 "The selected device contains at least one partition\n"
@@ -1537,12 +1541,8 @@ msgstr ""
 " urządzeniu z nieistniejącym lub nieznanym systemem plików\n"
 " jest niedozwolone."
 
-#: storage/src/include/custom_part_lib.ycp:568
-msgid "Detecting encryption type..."
-msgstr "Wykrywanie rodzaju szyfrowania..."
-
 #. warning message, %1 is replaced by fs name (e.g. Ext3)
-#: storage/src/include/custom_part_lib.ycp:649
+#: storage/src/include/custom_part_lib.ycp:561
 #, ycp-format
 msgid ""
 "\n"
@@ -1818,16 +1818,12 @@ msgstr ""
 "dane z tego systemu plików zostaną utracone po wyłączeniu systemu.\n"
 "</p>\n"
 
-#: storage/src/include/ep-dialogs.ycp:486
-msgid "Empty password allowed."
-msgstr "Dozwolone puste hasło."
-
-#: storage/src/include/ep-dialogs.ycp:488
+#: storage/src/include/ep-dialogs.ycp:503
 msgid "Password"
 msgstr "Hasło"
 
 #. popup text
-#: storage/src/include/ep-dialogs.ycp:574
+#: storage/src/include/ep-dialogs.ycp:586
 msgid ""
 "\n"
 "You cannot resize the selected partition because the file system\n"
@@ -1838,7 +1834,7 @@ msgstr ""
 "na tej partycji nie obsługuje operacji zmiany rozmiaru.\n"
 
 #. FIXME: Really?
-#: storage/src/include/ep-dialogs.ycp:599
+#: storage/src/include/ep-dialogs.ycp:611
 #, ycp-format
 msgid ""
 "Partition %1 cannot be resized\n"
@@ -1848,23 +1844,23 @@ msgstr ""
 "ponieważ system plików wygląda na niespójny"
 
 #. Heading for dialog
-#: storage/src/include/ep-dialogs.ycp:622
+#: storage/src/include/ep-dialogs.ycp:634
 #, ycp-format
 msgid "Resize Partition %1"
 msgstr "Zmiana rozmiaru partycji %1"
 
 #. Heading for dialog
-#: storage/src/include/ep-dialogs.ycp:636
+#: storage/src/include/ep-dialogs.ycp:648
 #, ycp-format
 msgid "Resize Logical Volume %1"
 msgstr "Zmiana rozmiaru wolumenu logicznego %1"
 
-#: storage/src/include/ep-dialogs.ycp:651
+#: storage/src/include/ep-dialogs.ycp:663
 #, ycp-format
 msgid "Current size: %1"
 msgstr "Obecny rozmiar: %1"
 
-#: storage/src/include/ep-dialogs.ycp:653
+#: storage/src/include/ep-dialogs.ycp:665
 #, ycp-format
 msgid "Currently used: %1"
 msgstr "Aktualie używany: %1"
@@ -1873,8 +1869,8 @@ msgstr "Aktualie używany: %1"
 #. input field label
 #. combo box label
 #. Column header
-#: storage/src/include/ep-dialogs.ycp:658
-#: storage/src/include/ep-dialogs.ycp:671
+#: storage/src/include/ep-dialogs.ycp:670
+#: storage/src/include/ep-dialogs.ycp:683
 #: storage/src/include/ep-hd-dialogs.ycp:139
 #: storage/src/include/ep-loop-dialogs.ycp:67
 #: storage/src/include/ep-lvm-dialogs.ycp:396
@@ -1885,7 +1881,7 @@ msgid "Size"
 msgstr "Rozmiar"
 
 #. radio button text, %1 is replaced by size
-#: storage/src/include/ep-dialogs.ycp:663
+#: storage/src/include/ep-dialogs.ycp:675
 #: storage/src/include/ep-hd-dialogs.ycp:134
 #: storage/src/include/ep-lvm-dialogs.ycp:400
 #, ycp-format
@@ -1893,25 +1889,25 @@ msgid "Maximum Size (%1)"
 msgstr "Maksymalny rozmiar (%1)"
 
 #. radio button text, %1 is replaced by size
-#: storage/src/include/ep-dialogs.ycp:666
+#: storage/src/include/ep-dialogs.ycp:678
 #, ycp-format
 msgid "Minimum Size (%1)"
 msgstr "Minimalny rozmiar  (%1)"
 
 #. radio button text
-#: storage/src/include/ep-dialogs.ycp:668
+#: storage/src/include/ep-dialogs.ycp:680
 #: storage/src/include/ep-hd-dialogs.ycp:136
 #: storage/src/include/ep-lvm-dialogs.ycp:401
 msgid "Custom Size"
 msgstr "Własny rozmiar"
 
 #. help text
-#: storage/src/include/ep-dialogs.ycp:693
+#: storage/src/include/ep-dialogs.ycp:705
 msgid "<p>Choose new size.</p>"
 msgstr "<p>Proszę wybrać nowy rozmiar.</p>"
 
 #. error popup, %1 and %2 are replaced by sizes
-#: storage/src/include/ep-dialogs.ycp:751
+#: storage/src/include/ep-dialogs.ycp:763
 #: storage/src/include/ep-hd-dialogs.ycp:198
 #: storage/src/include/ep-lvm-dialogs.ycp:471
 #, ycp-format
@@ -1921,13 +1917,13 @@ msgstr ""
 "Proszę wprowadzić wartość pomiędzy %1 a %2."
 
 #. label for log view
-#: storage/src/include/ep-dialogs.ycp:814
+#: storage/src/include/ep-dialogs.ycp:826
 #, ycp-format
 msgid "Output of %1"
 msgstr "Wyjście %1"
 
 #. popup text
-#: storage/src/include/ep-dialogs.ycp:832
+#: storage/src/include/ep-dialogs.ycp:844
 msgid "Rescanning disks..."
 msgstr "Ponowne skanowanie dysków..."
 
@@ -3006,6 +3002,16 @@ msgstr "Zmiana rozmiaru grupy wolumenów %1"
 msgid "<p>Enter the name of the new logical volume.</p>"
 msgstr "<p>Proszę podać nazwę nowego wolumenu logicznego.</p>"
 
+#: storage/src/include/ep-lvm-dialogs.ycp:550
+#, fuzzy
+msgid "Name"
+msgstr "Nazwa DASD"
+
+#: storage/src/include/ep-lvm-dialogs.ycp:552
+#: storage/src/include/ep-lvm.ycp:156
+msgid "Logical Volume"
+msgstr "Wolumin logiczny"
+
 #. dialog title, %1 is a volume group
 #: storage/src/include/ep-lvm-dialogs.ycp:614
 #, ycp-format
@@ -3074,10 +3080,6 @@ msgstr "Dodaj wolumin logiczny"
 #: storage/src/include/ep-lvm.ycp:153
 msgid "Volume Group"
 msgstr "Grupa woluminów"
-
-#: storage/src/include/ep-lvm.ycp:156
-msgid "Logical Volume"
-msgstr "Wolumin logiczny"
 
 #. heading
 #. tree node label
@@ -3704,7 +3706,7 @@ msgstr "Oparty o &LVM"
 
 #. popup text
 #: storage/src/inst_disk_proposal.ycp:160
-#: storage/src/proposal/partitions_proposal.ycp:103
+#: storage/src/proposal/partitions_proposal.ycp:113
 msgid ""
 "No automatic proposal possible.\n"
 "Specify mount points manually in the 'Partitioner' dialog."
@@ -4222,7 +4224,7 @@ msgid "Available &Disks"
 msgstr "Dostępne &dyski"
 
 #. label text
-#: storage/src/inst_target_selection.ycp:110
+#: storage/src/inst_target_selection.ycp:105
 msgid "&Custom Partitioning (for experts)"
 msgstr "Własne party&cjonowanie (dla ekspertów)"
 
@@ -4230,13 +4232,13 @@ msgstr "Własne party&cjonowanie (dla ekspertów)"
 #. Below this label, all targets are listed that can be used as 
 #. installation target
 #. heading text
-#: storage/src/inst_target_selection.ycp:118
+#: storage/src/inst_target_selection.ycp:113
 msgid "Hard Disk"
 msgstr "Dysk twardy"
 
 #. normally the target is located on hard disks. Here no hard disks 
 #. can be found. YaST2 cannot install. Update CD might have newer drivers.
-#: storage/src/inst_target_selection.ycp:132
+#: storage/src/inst_target_selection.ycp:127
 msgid "No disks found. Try using the update CD, if available, for installation."
 msgstr "Nie znaleziono dysków. Do instalacji proszę użyć płyty CD z aktualizacją, jeśli jest dostępna."
 
@@ -4245,7 +4247,7 @@ msgstr "Nie znaleziono dysków. Do instalacji proszę użyć płyty CD z aktuali
 #. "Preparing Hard Disk" is the description of the dialog what to 
 #. do while the following locale is the help description
 #. help part 1 of 3
-#: storage/src/inst_target_selection.ycp:141
+#: storage/src/inst_target_selection.ycp:136
 msgid ""
 "<p>\n"
 "All hard disks automatically detected on your system\n"
@@ -4258,7 +4260,7 @@ msgstr ""
 "</p>\n"
 
 #. help part 2 of 3
-#: storage/src/inst_target_selection.ycp:147
+#: storage/src/inst_target_selection.ycp:142
 msgid ""
 "<p>\n"
 "You may select later which part of the disk is used for &product;.\n"
@@ -4269,7 +4271,7 @@ msgstr ""
 "</p>\n"
 
 #. help part 3 of 3
-#: storage/src/inst_target_selection.ycp:152
+#: storage/src/inst_target_selection.ycp:147
 msgid ""
 "\n"
 "<p>\n"
@@ -4287,7 +4289,7 @@ msgstr ""
 
 #. there is a selection from which one option must be 
 #. chosen - at the moment no option is chosen
-#: storage/src/inst_target_selection.ycp:227
+#: storage/src/inst_target_selection.ycp:222
 msgid "Select one of the options to continue."
 msgstr "Proszę wybrać jedną z opcji aby kontynuować."
 
@@ -4839,7 +4841,7 @@ msgstr ""
 "instalacji, można zignorować ten komunikat.\n"
 
 #. error popup
-#: storage/src/modules/Storage.ycp:267
+#: storage/src/modules/Storage.ycp:271
 msgid ""
 "The storage subsystem is locked by an unknown application.\n"
 "You must quit that application before you can continue."
@@ -4848,7 +4850,7 @@ msgstr ""
 "Należy go zamknąć, by kontynuować."
 
 #. error popup
-#: storage/src/modules/Storage.ycp:276
+#: storage/src/modules/Storage.ycp:280
 #, ycp-format
 msgid ""
 "The storage subsystem is locked by the application \"%1\" (%2).\n"
@@ -4857,11 +4859,11 @@ msgstr ""
 "Program  \"%1\" (%2) blokuje dostęp do podsystemu pamięci masowych.\n"
 "Należy go zamknąć, by kontynuować."
 
-#: storage/src/modules/Storage.ycp:873
+#: storage/src/modules/Storage.ycp:877
 msgid "Resize Not Possible:"
 msgstr "Zmiana rozmiaru nie jest możliwa:"
 
-#: storage/src/modules/Storage.ycp:2318 storage/src/modules/Storage.ycp:5353
+#: storage/src/modules/Storage.ycp:2351 storage/src/modules/Storage.ycp:3222
 #, ycp-format
 msgid ""
 "Could not set encryption.\n"
@@ -4874,7 +4876,113 @@ msgstr ""
 "\n"
 "Podane hasło szyfrujące może być nieprawidłowe.\n"
 
-#: storage/src/modules/Storage.ycp:3684
+#. popup text
+#: storage/src/modules/Storage.ycp:3246
+msgid ""
+"The first and the second version\n"
+"of the password do not match.\n"
+"Try again."
+msgstr ""
+"Pierwsza i druga wersja hasła nie zgadzają się!\n"
+"Proszę spróbować ponownie."
+
+#. popup text
+#: storage/src/modules/Storage.ycp:3278
+msgid ""
+"The password may only contain the following characters:\n"
+"0..9, a..z, A..Z, and any of \"@#* ,.;:._-+!$%&/|?{[()]}^\\<>\".\n"
+"Try again."
+msgstr ""
+"Hasło może zawierać wyłącznie następujące znaki:\n"
+" 0..9, a..z, A..Z i dowolne z \"@#* ,.;:._-+!$%&/|?{[()]}^\\<>\".\n"
+"Proszę spróbować ponownie."
+
+#. Label: get password for encrypted volume
+#. Please use newline if label is longer than 40 characters
+#: storage/src/modules/Storage.ycp:3324
+msgid "&Enter encryption password:"
+msgstr ""
+
+#: storage/src/modules/Storage.ycp:3381
+#, fuzzy
+msgid "Provide Password"
+msgstr "Hasło"
+
+#: storage/src/modules/Storage.ycp:3392
+msgid "The following encrypted volumes are already available."
+msgstr ""
+
+#: storage/src/modules/Storage.ycp:3407
+#, fuzzy
+msgid "Encrypted Volume Activation"
+msgstr "Szyfruj grupę wolumenów"
+
+#: storage/src/modules/Storage.ycp:3410
+msgid ""
+"The following volumes contain an encryption signature but the \n"
+"passwords are not yet known.\n"
+"The passwords need to be known if the volumes are needed either \n"
+"during an update or if they contain an encrypted LVM physical volume."
+msgstr ""
+
+#: storage/src/modules/Storage.ycp:3418
+msgid "Do you want to provide crypt passwords?"
+msgstr ""
+
+#: storage/src/modules/Storage.ycp:3462
+msgid ""
+"Enter encryption password for any of the\n"
+"devices in the locked devices list.\n"
+"Password will be tried for all devices."
+msgstr ""
+
+#. header text
+#: storage/src/modules/Storage.ycp:3466
+msgid "Enter Encryption Password"
+msgstr ""
+
+#. label text, multiple device names follow
+#: storage/src/modules/Storage.ycp:3475
+msgid "Please provide password for any of the following devices:"
+msgstr ""
+
+#. label text, one device name follows
+#: storage/src/modules/Storage.ycp:3478
+msgid "Please provide password for the following device:"
+msgstr ""
+
+#: storage/src/modules/Storage.ycp:3490
+msgid "Trying to unlock encrypted volumes..."
+msgstr ""
+
+#: storage/src/modules/Storage.ycp:3511
+msgid "Password did not unlock any volume."
+msgstr ""
+
+#: storage/src/modules/Storage.ycp:3553
+msgid "IDE Disk"
+msgstr ""
+
+#: storage/src/modules/Storage.ycp:3556
+msgid "SCSI Disk"
+msgstr ""
+
+#: storage/src/modules/Storage.ycp:3559
+#, fuzzy
+msgid "Disk"
+msgstr "Dysk twardy"
+
+#: storage/src/modules/Storage.ycp:3575
+#, fuzzy
+msgid "DM RAID"
+msgstr "RAID"
+
+#: storage/src/modules/Storage.ycp:3586
+#, fuzzy
+msgid "MD RAID"
+msgstr "RAID"
+
+#: storage/src/modules/Storage.ycp:4118
 #, ycp-format
 msgid ""
 "\n"
@@ -4885,7 +4993,7 @@ msgstr ""
 "Urządzenie %1 nie może zostać zmodyfikowane, ponieważ zawiera aktywną\n"
 "przestrzeń wymiany, która jest wymagana do uruchomienia instalacji.\n"
 
-#: storage/src/modules/Storage.ycp:3697
+#: storage/src/modules/Storage.ycp:4130
 #, ycp-format
 msgid ""
 "\n"
@@ -4896,7 +5004,7 @@ msgstr ""
 "Urządzenie %1 nie może być zmodyfikowane, ponieważ zawiera dane\n"
 "konieczne do przeprowadzenia instalacji.\n"
 
-#: storage/src/modules/Storage.ycp:3718
+#: storage/src/modules/Storage.ycp:4151
 #, ycp-format
 msgid ""
 "\n"
@@ -4907,7 +5015,7 @@ msgstr ""
 "Urządzenie %1 nie może być usunięte, ponieważ zawiera aktywną\n"
 "przestrzeń wymiany, która jest wymagana do uruchomienia instalacji.\n"
 
-#: storage/src/modules/Storage.ycp:3725
+#: storage/src/modules/Storage.ycp:4158
 #, ycp-format
 msgid ""
 "\n"
@@ -4918,7 +5026,7 @@ msgstr ""
 "Urządzenie %1 nie może być usunięte, ponieważ zawiera dane\n"
 "konieczne do przeprowadzenia instalacji.\n"
 
-#: storage/src/modules/Storage.ycp:3751
+#: storage/src/modules/Storage.ycp:4184
 #, ycp-format
 msgid ""
 "\n"
@@ -4931,7 +5039,7 @@ msgstr ""
 "zmianę urządzenia %2, które zawiera aktywną przestrzeń wymiany\n"
 "wymaganą do uruchomienia instalacji.\n"
 
-#: storage/src/modules/Storage.ycp:3759
+#: storage/src/modules/Storage.ycp:4192
 #, ycp-format
 msgid ""
 "\n"
@@ -4943,7 +5051,7 @@ msgstr ""
 "to zmianę urządzenia %2, które zawiera dane potrzebne do \n"
 "przeprowadzenia instalacji.\n"
 
-#: storage/src/modules/Storage.ycp:3774
+#: storage/src/modules/Storage.ycp:4207
 #, ycp-format
 msgid ""
 "\n"
@@ -4954,31 +5062,10 @@ msgstr ""
 "Nie można usunąć partycji %1, ponieważ inne partycje na \n"
 "dysku %2 są w użyciu."
 
-#: storage/src/modules/Storage.ycp:4376
+#: storage/src/modules/Storage.ycp:4809
 #, ycp-format
 msgid "Add the following resolvables failed: %1"
 msgstr "Nie udało się spełnić: %1"
-
-#. popup text
-#: storage/src/modules/Storage.ycp:5307
-msgid ""
-"The first and the second version\n"
-"of the password do not match.\n"
-"Try again."
-msgstr ""
-"Pierwsza i druga wersja hasła nie zgadzają się!\n"
-"Proszę spróbować ponownie."
-
-#. popup text
-#: storage/src/modules/Storage.ycp:5339
-msgid ""
-"The password may only contain the following characters:\n"
-"0..9, a..z, A..Z, and any of \"@#* ,.;:._-+!$%&/|?{[()]}^\\<>\".\n"
-"Try again."
-msgstr ""
-"Hasło może zawierać wyłącznie następujące znaki:\n"
-" 0..9, a..z, A..Z i dowolne z \"@#* ,.;:._-+!$%&/|?{[()]}^\\<>\".\n"
-"Proszę spróbować ponownie."
 
 #: storage/src/modules/StorageClients.ycp:92
 #, fuzzy
@@ -5668,21 +5755,22 @@ msgstr "Wyświetla urządzenia przechowywania danych według:"
 msgid "Visible Information on Storage Devices:"
 msgstr "Widoczne informacje na urządzeniach przechowywania danych:"
 
-#: storage/src/proposal/partitions_proposal.ycp:93
+#: storage/src/proposal/partitions_proposal.ycp:104
+#, fuzzy
 msgid ""
 "The /home partition will not be formatted. After installation,\n"
-"ensure that the permissions to home directories are set properly."
+"ensure that ownerships of home directories are set properly."
 msgstr ""
 "Partycja /home nie zostanie sformatowana. Po instalacji\n"
 "proszę upewnić się, że uprawienia do katalogów domowych są prawidłowo ustawione."
 
 #. label text
-#: storage/src/proposal/partitions_proposal.ycp:206
+#: storage/src/proposal/partitions_proposal.ycp:216
 msgid "Partitioning"
 msgstr "Partycjonowanie"
 
 #. label text
-#: storage/src/proposal/partitions_proposal.ycp:208
+#: storage/src/proposal/partitions_proposal.ycp:218
 msgid "&Partitioning"
 msgstr "&Partycjonowanie"
 
@@ -5690,6 +5778,9 @@ msgstr "&Partycjonowanie"
 #: storage/src/storage_finish.ycp:47
 msgid "Saving file system configuration..."
 msgstr "Zapisywanie konfiguracji systemu plików..."
+
+#~ msgid "Detecting encryption type..."
+#~ msgstr "Wykrywanie rodzaju szyfrowania..."
 
 #~ msgid "B"
 #~ msgstr "B"
@@ -7864,9 +7955,6 @@ msgstr "Zapisywanie konfiguracji systemu plików..."
 
 #~ msgid "&DASD Parameter"
 #~ msgstr "Parametr &DASD"
-
-#~ msgid "DASD Name"
-#~ msgstr "Nazwa DASD"
 
 #~ msgid "DASD Address"
 #~ msgstr "Adres DASD"
