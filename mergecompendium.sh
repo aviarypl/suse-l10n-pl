@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Przenosi tlumaczenia z wielkiego pliku compendium do plików .po
+# Przenosi tlumaczenia z wielkiego pliku compendium do plikow .po
 
 mergeDir () 
 {
@@ -10,7 +10,8 @@ mergeDir ()
     cd $DIRTMP
     for i in `ls *.po`
     do
-	msgmerge --compendium ../compendium.po --no-wrap -o ../$DIR/$i /dev/null $i
+	echo -n "Merging $i: "
+	msgmerge --compendium ../rbac37_compendium1.po --no-wrap -o ../$DIR/$i /dev/null $i
     done
     
     cd ..
@@ -20,4 +21,4 @@ mergeDir ()
 mergeDir po
 #mergeDir po-idmua
 
-svn st | grep -v ?
+#svn st | grep -v ?
