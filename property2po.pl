@@ -29,6 +29,10 @@ $CURRENT = $ARGV[1];
 	    #$line=~/=/;
 	    $key=substr($line, 0, $result);
 	    $value=substr($line, $result + 1);
+	    if ($value eq "") {
+		$value="_nie_tlumaczyc_"
+	    }
+	
 	    $out{$value}=$key."|||".$out{$value};
 	    $comment{$value} = $comment{$value}."#. $key\n";
     	    $en{$value}=$key;
@@ -76,6 +80,7 @@ foreach $in (sort keys %out)
 	$txt = "";
 	print $comment{$in};
 	$msgid = $in;
+	$msgid = decodePLEntities($msgid);
 	$msgid =~ s/(["\\])/\\$1/g;
 #        print "msgid \"".$in."\"\n";
 	print "msgid \"".$msgid."\"\n";
@@ -95,7 +100,7 @@ sub decodePLEntities {
     $l=~s/\\u0105/ą/g; $l=~s/\\u0107/ć/g; $l=~s/\\u0119/ę/g; $l=~s/\\u0142/ł/g; $l=~s/\\u0144/ń/g;
     $l=~s/\\u00F3/ó/g; $l=~s/\\u015B/ś/g; $l=~s/\\u017A/ź/g; $l=~s/\\u017C/ż/g; $l=~s/\\u0104/Ą/g;
     $l=~s/\\u0106/Ć/g; $l=~s/\\u0118/Ę/g; $l=~s/\\u0141/Ł/g; $l=~s/\\u0143/Ń/g; $l=~s/\\u00F2/Ó/g;
-    $l=~s/\\u015A/Ś/g; $l=~s/\\u0179/Ź/g; $l=~s/\\u017B/Ż/g;     
+    $l=~s/\\u015A/Ś/g; $l=~s/\\u0179/Ź/g; $l=~s/\\u017B/Ż/g; $l=~s/\\u003c/</g; $l=~s/\\u003e/>/g;
 
     return $l;
 }

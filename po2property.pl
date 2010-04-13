@@ -50,7 +50,7 @@ while (<INPUTF>)
 	foreach (@properties) {
 	    $prop =  $_;
 	    if ( $prop ne "" ) {
-		if ( $fuzzy == 1 || $trans eq "") {
+		if ( (!$original eq "_nie_tlumaczyc_") &&  ($fuzzy == 1 || $trans eq "")) {
 		    $value = escapeCharacters($original);
 		}
 		else {
@@ -89,8 +89,7 @@ sub escapeCharacters {
     $l=~s/ą/\\u0105/g; $l=~s/ć/\\u0107/g; $l=~s/ę/\\u0119/g; $l=~s/ł/\\u0142/g; $l=~s/ń/\\u0144/g;                                                            
     $l=~s/ó/\\u00F3/g; $l=~s/ś/\\u015B/g; $l=~s/ź/\\u017A/g; $l=~s/ż/\\u017C/g; $l=~s/Ą/\\u0104/g;                                                            
     $l=~s/Ć/\\u0106/g; $l=~s/Ę/\\u0118/g; $l=~s/Ł/\\u0141/g; $l=~s/Ń/\\u0143/g; $l=~s/Ó/\\u00F2/g;                                                            
-    $l=~s/Ś/\\u015A/g; $l=~s/Ź/\\u0179/g; $l=~s/Ż/\\u017B/g; 
-
+    $l=~s/Ś/\\u015A/g; $l=~s/Ź/\\u0179/g; $l=~s/Ż/\\u017B/g; $l=~s/</\\u003c/g; $l=~s/>/\\u003e/g;
     return $l;
 }
 
