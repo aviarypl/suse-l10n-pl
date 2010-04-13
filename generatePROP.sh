@@ -16,9 +16,6 @@ PO_DIR=$2
 
 PO2PROPERTY="./po2property.pl"
 
-echo "Dorobić zamianę < > \\u003c \\u003e"
-exit 1
-
 # spr parametrów
 if [ "$DEST_DIR" =  "" ] 
 then
@@ -49,17 +46,21 @@ do
     # szukamy pliku
     DEST_FILE=`find $DEST_DIR -name ${PROP_FILE}* -type f`
     
-    # ew. korekcja dla _pl. w nazwie
-    DX=`echo $DEST_FILE  | sed -n "s/_en\.properties/_pl\.properties/p"`
-    if [ "$DX" != "" ] 
-    then
-        # usuwamy stary (bo może być _en.properties)
-		rm -f $DEST_FILE
-		DEST_FILE=$DX
-    fi 
+    for j in $DEST_FILE
+    do
+	# ew. korekcja dla _pl. w nazwie
+	PROP_PL=$j
+	DX=`echo $j  | sed -n "s/_en\.properties/_pl\.properties/p"`
+	if [ "$DX" != "" ] 
+	then
+		# usuwamy stary (bo może być _en.properties)
+		rm -f $j
+		PROP_PL=$DX
+	fi 
     
-    # odpalamy generację .properties dla jednego pliku
-    $PO2PROPERTY $i > $DEST_FILE
+	# odpalamy generację .properties dla jednego pliku
+	$PO2PROPERTY $i > $PROP_PL
+    done
     
 done
 echo OK

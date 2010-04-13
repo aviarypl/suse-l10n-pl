@@ -43,7 +43,7 @@ fi
 ENTXT="_en"
 PLTXT="_pl"
 
-for i in `find $ORI_DIR -type f`
+for i in `find $ORI_DIR -type f -name *.properties`
 do
     # przygotowanie ścieżki i nazwy pliku docelowego (polskiego)
     TRA_FILE=`basename $i`
@@ -62,7 +62,12 @@ do
     
     # odpalamy generację .po dla jednego pliku
     #echo $PROPERTY2PO $i $TRA_FILE_FPATH
-    $PROPERTY2PO $i $TRA_FILE_FPATH > $DEST_DIR/$PO_FILE_NAME
+#    if [ -f $DEST_DIR/$PO_FILE_NAME ]
+#    then
+#	 $PROPERTY2PO $i $TRA_FILE_FPATH > $DEST_DIR/${PO_FILE_NAME}.1
+#    else
+        $PROPERTY2PO $i $TRA_FILE_FPATH > $DEST_DIR/$PO_FILE_NAME
+#    fi
     
 done
 echo OK
