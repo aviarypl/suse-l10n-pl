@@ -11,7 +11,7 @@ mergeDir ()
     for i in `ls *.po`
     do
 	echo -n "Merging $i: "
-	msgmerge --compendium ../rbac37_compendium1.po --no-wrap -o ../$DIR/$i /dev/null $i
+	msgmerge --compendium ../rbac37_compendium.po --no-wrap -o ../$DIR/$i /dev/null $i
     done
     
     cd ..
