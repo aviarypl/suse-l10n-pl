@@ -6,18 +6,17 @@
 #
 # Maciek Walkowiak <walkow@ie.tu.koszalin.pl>, 2006.
 # Karol Sikora <elektrrrus@gmail.com>, 2008.
-# Mariusz Fik <fisiu82@o2.pl>, 2009.
 # Przemysław Bojczuk <pbojczuk@gmail.com>, 2009.
 # Przemysław Bojczuk <pbojczuk@opensuse.org>, 2009.
-# Mariusz Fik <fisiu82@jabster.pl>, 2009.
+# Mariusz Fik <fisiu@opensuse.org>, 2009, 2010.
 msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-11-24 15:23+0100\n"
-"PO-Revision-Date: 2010-05-11 21:10+0100\n"
-"Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2010-05-24 02:57+0200\n"
+"Last-Translator: Mariusz Fik <fisiu@opensuse.org>\n"
+"Language-Team: Polish <opensuse-pl@opensuse.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -47,9 +46,9 @@ msgstr "Informacje o wydaniu są zmieniane w trakcie rozwoju projektu. Ich aktua
 
 #. beta statement
 #.  <para os="slprof">
-#.   This public beta test is part of the &opensuse; project.  Information 
+#.   This public beta test is part of the &opensuse; project.  Information
 #.   about the project is available at <ulink url="http://opensuse.org"/>.</para>
-#.  
+#.
 #.  <para os="slprof">Find information about known bugs for this beta in the
 #.   &opensuse; wiki at <ulink url="http://en.opensuse.org/Bugs:Most_Annoying_Bugs"/>.
 #.   Please report all bugs you encounter using this prerelease of &opensuse;
@@ -281,7 +280,7 @@ msgstr "Nowe narzędzie (back-end) do konfiguracji haseł Samby: <command>tdbsam
 
 #: RELEASE-NOTES-openSUSE.xml:373(para)
 msgid "The new Samba password configuration back-end is <literal>tdbsam</literal>. Previous Samba packages shipped with openSUSE 11.1 and earlier were using <command>smbpasswd</command> as the default <literal>passdb backend</literal>. It was not explicitly set in the shipped <filename>/etc/samba/smb.conf</filename> configuration file. With this openSUSE release two changes are introduced:"
-msgstr "<literal>tdbsam</literal> to nowe narzędzie do konfiguracji haseł Samby. Poprzednie pakiety Samby dołączone do openSUSE 11.1 i poprzednich wydań korzystały z <command>smbpasswd</command> jako domyślnego <literal>backendu passdb</literal>. Nie był on wyraźnie umiejscowiony w pliku konfiguracyjnym <filename>/etc/samba/smb.conf</filename>. Wraz z tym wydaniem openSUSE wprowadzono dwie zmiany:"
+msgstr "<literal>tdbsam</literal> to nowe narzędzie do konfiguracji haseł Samby. Poprzednie pakiety Samby dołączone do openSUSE 11.1 i poprzednich wydań korzystały z <command>smbpasswd</command> jako domyślnego <literal>mechanizmu passdb</literal>. Nie był on wyraźnie umiejscowiony w pliku konfiguracyjnym <filename>/etc/samba/smb.conf</filename>. Wraz z tym wydaniem openSUSE wprowadzono dwie zmiany:"
 
 #: RELEASE-NOTES-openSUSE.xml:384(para)
 msgid "The new default inherited from source code and if not set otherwise is <command>tdbsam</command>."
@@ -363,7 +362,7 @@ msgstr "Urządzenia szeregowe należące do grupy 'dialout'"
 
 #: RELEASE-NOTES-openSUSE.xml:469(para)
 msgid "<command>udev</command> silently changed the group of serial devices from '<systemitem>uucp</systemitem>' to '<systemitem>dialout</systemitem>'. Users created on releases prior to openSUSE 11.2 were member of the '<systemitem>dialout</systemitem>' group by default. After upgrading to 11.2 these users can directly access e.g., modems to issue dial commands. Administrators must review the '<systemitem>dialout</systemitem>' group by checking <filename>/etc/group</filename>. To remove a user from this group use the following command (replace <systemitem>$USER</systemitem> with the actual user name):"
-msgstr "<command>udev</command> zmienia w tle grupę dla urzadzeń szeregowych z '<systemitem>uucp</systemitem>' na '<systemitem>dialout</systemitem>'. Użytkownicy stworzenie na wersjach przed openSUSE 11.2 byli domyślnie członkami grupy <systemitem>dialout</systemitem>'. Po aktualizacji do 11.2 Ci uzytkownicy nie mają bezpośredniego dostępu do np. modemów.Aministrator systemu musi zmienić ustawienia grupy '<systemitem>dialout</systemitem>' poprzez sprawdzenie <filename>/etc:group</filename>. Aby usunąć użytkownika z tej grupy można użyć polecenia: "
+msgstr "<command>udev</command> zmienia w tle grupę dla urządzeń szeregowych z '<systemitem>uucp</systemitem>' na '<systemitem>dialout</systemitem>'. Użytkownicy stworzenie na wersjach przed openSUSE 11.2 byli domyślnie członkami grupy <systemitem>dialout</systemitem>'. Po aktualizacji do 11.2 Ci użytkownicy nie mają bezpośredniego dostępu do np. modemów. Administrator systemu musi zmienić ustawienia grupy '<systemitem>dialout</systemitem>' poprzez sprawdzenie <filename>/etc:group</filename>. Aby usunąć użytkownika z tej grupy można użyć polecenia: "
 
 #: RELEASE-NOTES-openSUSE.xml:480(screen)
 #, no-wrap
@@ -400,7 +399,7 @@ msgstr "VMware Server v2"
 
 #: RELEASE-NOTES-openSUSE.xml:518(para)
 msgid "VMware Server v2 up through at least 2.0.2 build 203138 released 2009-10-27 only supports Linux kernels up to 2.6.27 and <command>vmware-config.pl</command> fails on kernel 2.6.31 used by openSuSE 11.2. For additional information, see <ulink url=\"http://www.vmware.com/support/pubs/server_pubs.html\"/> and <ulink url=\"http://communities.vmware.com/message/1327112#1327112\"/>."
-msgstr "VMware Server v2 od werjsi 2.0.2 build 203138 wydanej 2009-10-27 wspiera jedynie jądra powużej 2.6.27, <command>vmware-config.pl</command> kończy się niepowodzeniem w werjsi 2.6.31 użytej w openSuSE 11.2. Aby uzyskać więcej informacji prosze zobaczyć <ulink url=\"http://www.vmware.com/support/pubs/server_pubs.html\"/> and <ulink url=\"http://communities.vmware.com/message/1327112#1327112\"/>."
+msgstr "VMware Server v2 od wersji 2.0.2 build 203138 wydanej 2009-10-27 wspiera jedynie jądra powyżej 2.6.27, <command>vmware-config.pl</command> kończy się niepowodzeniem w wersji 2.6.31 użytej w openSuSE 11.2. Aby uzyskać więcej informacji proszę zobaczyć <ulink url=\"http://www.vmware.com/support/pubs/server_pubs.html\"/> and <ulink url=\"http://communities.vmware.com/message/1327112#1327112\"/>."
 
 #. Put one translator per line, in the form of NAME <EMAIL>, YEAR1, YEAR2
 #: RELEASE-NOTES-openSUSE.xml:0(None)
