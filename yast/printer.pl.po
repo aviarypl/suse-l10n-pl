@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: printer\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-04-08 15:26+0200\n"
+"POT-Creation-Date: 2010-05-31 11:25+0200\n"
 "PO-Revision-Date: 2010-05-25 09:41+0100\n"
 "Last-Translator: Mirek Rogoziński <miroslaw.rogozinski@opensuse.biz>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
@@ -294,24 +294,123 @@ msgstr "Nie udało się określić opcji sterownika."
 
 #. Return at least a list with only a fallback string so that the user is informed:
 #. Header of a Popup::AnyMessage when "Driver Options" was selected:
-#: src/Printer.ycp:2090 src/Printer.ycp:2205 src/basicmodify.ycp:705
+#: src/Printer.ycp:2090 src/Printer.ycp:2201 src/basicmodify.ycp:705
 msgid "No driver options available"
 msgstr "Nie są dostępne żadne opcje sterownika"
 
-#. Dummy info for a currently selected item:
-#: src/Printer.ycp:2143
+#. Info for a currently selected item:
+#: src/Printer.ycp:2094
 msgid "currently selected"
 msgstr "aktualnie wybrany"
 
-#. Info when a currently selected item is already set:
-#: src/Printer.ycp:2146
+#. Info for the current setting of the print queue:
+#: src/Printer.ycp:2096
 msgid "current setting of the print queue"
 msgstr "bieżące ustawienia kolejki drukowania"
+
+#. The tests here are the same (except verbosity) as in the cups_client_only tool.
+#. First do the most meaningful test and only if this works return true.
+#. The subsequent tests are only there to provide more info for the user
+#. what might be the reason why the server is not accessible via port 631.
+#. Popup message
+#. where %1 will be replaced by the server name.
+#: src/Printer.ycp:2233
+#, ycp-format
+msgid "The server '%1' is not accessible via port 631 (IPP/CUPS)."
+msgstr "Serwer \"%1\" nie jest dostępny przez port 631 (IPP/CUPS)"
+
+#. Popup message
+#. where %1 will be replaced by the server name.
+#: src/Printer.ycp:2238
+#, ycp-format
+msgid "The server '%1' responds to a 'ping' in the network."
+msgstr "Serwer \"%1\" odpowiada na sygnał \"ping\" w sieci."
+
+#. Popup message
+#. where %1 will be replaced by the server name.
+#: src/Printer.ycp:2243
+#, ycp-format
+msgid "The server '%1' does not respond to a 'ping' in the network."
+msgstr "Serwer \"%1\" nie odpowiada na sygnał \"ping\" w sieci."
+
+#. Popup message
+#. where %1 will be replaced by the server name.
+#: src/Printer.ycp:2248
+#, ycp-format
+msgid "The server name '%1' is known in the network."
+msgstr "Nazwa serwera \"%1\" jest znana w sieci."
+
+#. Popup message
+#. where %1 will be replaced by the server name.
+#: src/Printer.ycp:2253
+#, ycp-format
+msgid "The server name '%1' is not known in the network."
+msgstr "Nazwa serwera \"%1\" nie jest znana w sieci."
+
+#. Show negative feedback:
+#. Popup::ErrorDetails message:
+#: src/Printer.ycp:2273
+msgid "Cannot execute the program 'netcat'"
+msgstr "Nie można uruchomić programu \"netcat\""
+
+#. Popup::ErrorDetails details:
+#: src/Printer.ycp:2275
+msgid "The RPM package 'netcat' is required for a meaningful test."
+msgstr "Do wykonania sensownego testu wymagany jest Pakiet RPM \"netcat\"."
+
+#. Show negative feedback:
+#. Popup::ErrorDetails message
+#: src/Printer.ycp:2304
+msgid "Cannot execute the program 'ping'"
+msgstr "Nie można uruchomić programu \"ping\""
+
+#. Popup::ErrorDetails details:
+#: src/Printer.ycp:2306
+msgid "The RPM package 'iputils' is required for a meaningful test."
+msgstr "Do wykonania sensownego testu wymagany jest pakiet RPM \"iputils\"."
+
+#. The netcat-test had failed.
+#. Show negative feedback:
+#. Popup::ErrorDetails message
+#. where %1 will be replaced by the server name.
+#: src/Printer.ycp:2324
+#, ycp-format
+msgid "The server '%1' is not accessible"
+msgstr "Sewer %1 jest niedostępny."
+
+#. Show negative feedback:
+#. Popup::ErrorDetails message
+#: src/Printer.ycp:2358
+msgid "Cannot execute the program 'host'"
+msgstr "Nie można wykonać programu \"host\""
+
+#. Popup::ErrorDetails details:
+#: src/Printer.ycp:2360
+msgid "The RPM package 'bind-utils' is required for a meaningful test."
+msgstr "Do wykonania sensownego testu wymagany jest pakiet RPM \"bind-utils\"."
+
+#. The netcat-test or the ping-test failed.
+#. Show negative feedback:
+#. Popup::ErrorDetails message
+#. where %1 will be replaced by the server name.
+#: src/Printer.ycp:2378
+#, ycp-format
+msgid "The server '%1' does not respond in the network"
+msgstr "Serwer \"%1\" nie odpowiada w sieci"
+
+#. The netcat-test or the ping-test or the host-test failed.
+#. Show negative feedback:
+#. Popup::ErrorDetails message
+#. where %1 will be replaced by the server name.
+#: src/Printer.ycp:2408
+#, ycp-format
+msgid "The server '%1' is unknown"
+msgstr "Serwer \"%1\" jest nieznany"
 
 #. Message of a Popup::Error when hp-setup should be run.
 #. Do not change or translate "hp-setup", it is a program name.
 #. Do not change or translate "DISPLAY", it is an environment variable name.
-#: src/Printer.ycp:2221
+#: src/Printer.ycp:2436
 msgid ""
 "Cannot run hp-setup because no graphical display can be opened.\n"
 "This happens in particular when YaST runs in text-only mode,\n"
@@ -327,7 +426,7 @@ msgstr ""
 
 #. Message of a Popup::Error when hp-setup should be run.
 #. Do not change or translate "hp-setup", it is a program name:
-#: src/Printer.ycp:2230
+#: src/Printer.ycp:2445
 msgid ""
 "Cannot run hp-setup because\n"
 "/usr/bin/hp-setup is not executable\n"
@@ -339,7 +438,7 @@ msgstr ""
 
 #. Body of a Popup::ShowFeedback.
 #. Do not change or translate "hp-setup", it is a program name:
-#: src/Printer.ycp:2237
+#: src/Printer.ycp:2452
 msgid ""
 "Launched hp-setup.\n"
 "You must finish hp-setup before you can proceed with the printer configuration.\n"
@@ -359,7 +458,7 @@ msgstr ""
 #. Do not change or translate "hp-setup", it is a program name.
 #. Do not change or translate "hplip", it is a package name.
 #. Translate 'Driver Packages' the same as the PushButton name to go to the "Add Driver" dialog:
-#: src/Printer.ycp:2267
+#: src/Printer.ycp:2482
 msgid ""
 "To run hp-setup, the RPM package hplip must be installed.\n"
 "Use 'Driver Packages' to install it."
@@ -554,8 +653,9 @@ msgstr "Serwer CUPS \"%1\" jest niedostępny."
 
 #. Message of a Popup::TimedMessage:
 #: src/Printerlib.ycp:596
-msgid "Waiting until the config files are updated..."
-msgstr "Oczekiwanie, aż pliki konfiguracji zostaną uaktualnione..."
+#, fuzzy
+msgid "Updating configuration files..."
+msgstr "Konfiguracja automatyczna nie powiodła się."
 
 #. Header for a dialog section where the user can
 #. specify in which way USB printers are configured automatically:
@@ -626,8 +726,8 @@ msgstr "Wywołaj automa&tyczną konfigurację aby uruchomić teraz"
 #. so that the client-only config should be disabled:
 #. PopupYesNoHeadline headline
 #. where %1 will be replaced by the server name:
-#: src/autoconfig.ycp:166 src/overview.ycp:792 src/policies.ycp:123
-#: src/printingvianetwork.ycp:532 src/sharing.ycp:524
+#: src/autoconfig.ycp:166 src/overview.ycp:894 src/policies.ycp:123
+#: src/printingvianetwork.ycp:371 src/sharing.ycp:524
 #, ycp-format
 msgid "Disable remote CUPS server '%1'"
 msgstr "Wyłączenie zdalnego serwera CUPS \"%1\""
@@ -642,8 +742,8 @@ msgstr "Zdalny serwer CUPS jest w konflikcie z automatyczną konfiguracją druka
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Popup::ErrorDetails message:
-#: src/autoconfig.ycp:182 src/overview.ycp:804 src/policies.ycp:139
-#: src/printingvianetwork.ycp:542 src/sharing.ycp:540
+#: src/autoconfig.ycp:182 src/overview.ycp:214 src/overview.ycp:906
+#: src/policies.ycp:139 src/printingvianetwork.ycp:381 src/sharing.ycp:540
 msgid "Failed to remove the 'ServerName' entry in /etc/cups/client.conf"
 msgstr "Nie można usunąć wpisu \"ServerName\" z pliku z /etc/cups/client.conf"
 
@@ -691,7 +791,7 @@ msgid "Automatic configuration failed."
 msgstr "Konfiguracja automatyczna nie powiodła się."
 
 #. Popup::Error message:
-#: src/autoconfig.ycp:493 src/policies.ycp:323 src/printingvianetwork.ycp:1055
+#: src/autoconfig.ycp:493 src/policies.ycp:323 src/printingvianetwork.ycp:894
 #: src/sharing.ycp:852
 msgid "Failed to apply the settings to the system."
 msgstr "Zastosowanie ustawień dla systemu nie powiodło się."
@@ -809,8 +909,8 @@ msgstr "Uruchom &hp-setup"
 #. Header of a Popup::AnyMessage when neither a connection
 #. nor a driver was selected:
 #. Header of a Popup::AnyMessage when no queue was selected from the list:
-#: src/basicadd.ycp:316 src/overview.ycp:422 src/overview.ycp:486
-#: src/overview.ycp:837
+#: src/basicadd.ycp:316 src/overview.ycp:520 src/overview.ycp:584
+#: src/overview.ycp:939
 msgid "Nothing Selected"
 msgstr "Nic nie wybrano"
 
@@ -871,20 +971,21 @@ msgid "'%1' is invalid or it exists already. Use '%2' instead?"
 msgstr "Kolejka \"%1\" jest nieprawidłowa lub już istnieje. Użyć \"%2\" w zamian?"
 
 #. Since CUPS 1.4 the new DirtyCleanInterval directive controls the delay when cupsd updates config files:
-#: src/basicadd.ycp:389
-msgid "Created New Printer Setup"
+#: src/basicadd.ycp:389 src/basicadd.ycp:718
+#, fuzzy
+msgid "Creating New Printer Setup"
 msgstr "Utworzono nową konfigurację drukarki"
 
 #. It returns false if the user had interrupted the waiting for updated config files:
 #. Message of a Popup::ErrorDetails:
-#: src/basicadd.ycp:392
+#: src/basicadd.ycp:392 src/basicadd.ycp:721
 msgid "New Printer Configuration not yet Stored in the System"
 msgstr "Nowa konfiguracja drukarki nie została jeszcze zachowana w systemie"
 
 #. Explanation details of a Popup::ErrorDetails.
 #. The 'next dialog' is the overview dialog where the printer configurations are shown
 #. which has a 'Refresh List' button to update the shown printer configurations:
-#: src/basicadd.ycp:396
+#: src/basicadd.ycp:396 src/basicadd.ycp:725
 msgid "If the next dialog does not show the new printer configuration as expected, wait some time and use the 'Refresh List' button."
 msgstr "Jeśli następne okno nie pokazuje konfiguracji nowej drukarki w oczekiwany sposób, należy odczekać chwilę a następnie nacisnąć przycisk 'Odśwież listę'."
 
@@ -892,7 +993,7 @@ msgstr "Jeśli następne okno nie pokazuje konfiguracji nowej drukarki w oczekiw
 #. Only a simple message because before the RunHpsetup function was called
 #. and this function would have shown more specific messages.
 #. Do not change or translate "hp-setup", it is a program name:
-#: src/basicadd.ycp:705
+#: src/basicadd.ycp:707
 msgid "Failed to run hp-setup."
 msgstr "Nie można uruchomić hp-setup."
 
@@ -969,7 +1070,8 @@ msgstr "Nie udało się zmienić %1."
 
 #. Since CUPS 1.4 the new DirtyCleanInterval directive controls the delay when cupsd updates config files:
 #: src/basicmodify.ycp:672
-msgid "Modified Printer Setup"
+#, fuzzy
+msgid "Modifying Printer Setup"
 msgstr "Ustawienia zmodyfikowanej drukarki"
 
 #. It returns false if the user had interrupted the waiting for updated config files:
@@ -3390,10 +3492,12 @@ msgstr ""
 #. If not, the user must have intentionally and manually changed
 #. the port setting for the cupsd in /etc/cups/cupsd.conf
 #: src/overview.ycp:145
+#, fuzzy
 msgid ""
 "The CUPS daemon seems not to listen on the official IANA IPP port (631).\n"
 "Check with 'netstat -nap | grep cupsd' where the cupsd actually listens.\n"
 "This happens when there is a 'Listen ...:1234' or 'Port 1234' setting\n"
+"(where 1234 means any port number which is not the official port 631)\n"
 "in /etc/cups/cupsd.conf (check also if there is 'BrowsePort 1234').\n"
 "The YaST printer module does not support a non-official port.\n"
 "A non-official port leads to an endless sequence of further failures.\n"
@@ -3411,46 +3515,83 @@ msgstr ""
 "Jeśli naprawdę konieczne jest używanie niestandardowego portu, nie można użyć\n"
 "modułu YaST do konfiguracji drukarek.\n"
 
+#. Busy message:
+#. Body of a Popup::ShowFeedback
+#: src/overview.ycp:185
+msgid ""
+"Running several tests regarding CUPS server accessibility...\n"
+"(this might take some time)"
+msgstr ""
+
+#. Popup::YesNoHeadline headline question
+#. where %1 will be replaced by the server name:
+#: src/overview.ycp:201
+#, ycp-format
+msgid "Do no longer use the inaccessible CUPS server '%1'?"
+msgstr ""
+
+#. Popup::YesNoHeadline body recommendation how to answer the headline question
+#. where %1 will be replaced by the server name:
+#: src/overview.ycp:206
+#, ycp-format
+msgid "To proceed, you should agree that '%1' will be no longer used."
+msgstr ""
+
+#. Popup::Warning message:
+#. The user decided not to remove the non-accessible 'ServerName' in /etc/cups/client.conf:
+#. Popup::Warning message:
+#: src/overview.ycp:218 src/overview.ycp:229
+#, fuzzy
+msgid "A non-accessible server leads to an endless sequence of delays and failures."
+msgstr "Niedostępny serwer spowodował nieskończoną sekwencję błędów."
+
 #. Show the CUPS server name if it is a client-only config
 #. where %1 will be replaced by the CUPS server name.
-#: src/overview.ycp:175
+#: src/overview.ycp:245
 #, ycp-format
 msgid "CUPS Server %1"
 msgstr "Serwer CUPS %1"
 
+#. Busy message:
+#. Body of a Popup::ShowFeedback:
+#: src/overview.ycp:267
+#, fuzzy
+msgid "Testing if CUPS server is accessible..."
+msgstr "Serwer CUPS \"%1\" jest niedostępny."
+
 #. Body of a Popup::AnyMessage when no queue was selected from the list:
-#: src/overview.ycp:424 src/overview.ycp:488 src/overview.ycp:839
+#: src/overview.ycp:522 src/overview.ycp:586 src/overview.ycp:941
 msgid "Select an entry."
 msgstr "Proszę wybrać pozycję."
 
 #. Header of a Popup::AnyMessage when a remote queue was selected to be deleted:
-#: src/overview.ycp:432
+#: src/overview.ycp:530
 msgid "Cannot Delete"
 msgstr "Nie można usnąć"
 
 #. Body of a Popup::AnyMessage when a remote queue was selected to be deleted:
-#: src/overview.ycp:434
+#: src/overview.ycp:532
 msgid "This is a remote configuration. Only local configurations can be deleted."
 msgstr "To jest konfiguracja zdalna. Można usuwać jedynie konfiguracje lokalne."
 
 #. Header of a confirmation popup before a queue will be deleted:
-#: src/overview.ycp:439
+#: src/overview.ycp:537
 msgid "Confirm Deletion"
 msgstr "Potwierdzenie usunięcia"
 
 #. Body of a confirmation popup before a queue will be deleted:
-#: src/overview.ycp:441
+#: src/overview.ycp:539
 msgid "The selected configuration would be deleted immediately and cannot be restored."
 msgstr "Wybrana konfiguracja zostanie natychmiast usunięta i nie będzie możliwe jej przywrócenie."
 
 #. 'Yes' button label of a confirmation popup before a queue will be deleted:
-#: src/overview.ycp:443
+#: src/overview.ycp:541
 #, ycp-format
 msgid "Delete configuration %1"
 msgstr "Usuń konfigurację %1"
 
 #. 'No' button label of a confirmation popup before a queue will be deleted:
-#: src/overview.ycp:445
+#: src/overview.ycp:543
 msgid "Do not delete it"
 msgstr "Nie usuwaj jej"
 
@@ -3463,63 +3604,63 @@ msgstr "Nie usuwaj jej"
 #. so that the user can get rid of a class which may have been created by accident
 #. with whatever other setup tool:
 #. Header of a confirmation popup before a class will be deleted:
-#: src/overview.ycp:461
+#: src/overview.ycp:559
 msgid "Confirm Deletion of a Class"
 msgstr "Proszę potwierdzić usuwanie klasy"
 
 #. Body of a confirmation popup before a class will be deleted:
-#: src/overview.ycp:463
+#: src/overview.ycp:561
 msgid "A deleted class cannot be re-created with this tool."
 msgstr "Usunięta klasa nie może zostać przywrócona."
 
 #. Header of a Popup::AnyMessage when the queue rejects print jobs:
-#: src/overview.ycp:497
+#: src/overview.ycp:592
 msgid "Rejecting Print Jobs"
 msgstr "Odrzucaenie zadań drukowania"
 
 #. Body of a Popup::AnyMessage when the queue rejects print jobs:
-#: src/overview.ycp:499
+#: src/overview.ycp:594
 msgid "The testpage cannot be printed because print jobs are rejected."
 msgstr "Strona testowa nie może zostać wydrukowana, ponieważ zadania drukowania są odrzucane."
 
 #. Header of a Popup::AnyMessage when printing is disabled for the queue:
-#: src/overview.ycp:508
+#: src/overview.ycp:603
 msgid "Printout Disabled"
 msgstr "Drukowanie wyłączone"
 
 #. Body of a Popup::AnyMessage when printing is disabled for the queue:
-#: src/overview.ycp:510
+#: src/overview.ycp:605
 msgid "The testpage cannot be printed because printout is disabled."
 msgstr "Strona testowa nie może zostać wydrukowana, ponieważ drukowanie jest wyłączone."
 
 #. Fallback body of a confirmation popup before pending print jobs will be deleted:
-#: src/overview.ycp:535
+#: src/overview.ycp:630
 msgid "There are pending print jobs which might be deleted before the testpage is printed."
 msgstr "Istnieją oczekujące zadania drukowania, które mogą zostać usunięte przed wydrukiem strony testowej."
 
 #. Header of a confirmation popup before pending print jobs will be deleted
 #. where %1 will be replaced by the queue name.
-#: src/overview.ycp:547 src/overview.ycp:668
+#: src/overview.ycp:642 src/overview.ycp:763
 #, ycp-format
 msgid "Delete Pending Print Jobs For %1"
 msgstr "Odrzucanie zadań drukowania dla %1"
 
 #. 'Yes' button label of a confirmation popup
 #. before all pending jobs in a queue will be deleted:
-#: src/overview.ycp:553
+#: src/overview.ycp:648
 msgid "Delete them before printing testpage"
 msgstr "Usuń przed drukowaniem strony testowej"
 
 #. 'No' button label of a confirmation popup
 #. before all pending jobs in a queue will be deleted:
-#: src/overview.ycp:556
+#: src/overview.ycp:651
 msgid "Print testpage after the other jobs"
 msgstr "Drukuj stronę testową po innych zadaniach drukowania."
 
 #. Message of a Popup::ErrorDetails
 #. where %1 will be replaced by the queue name.
 #. Only a simple message because this error does not happen on a normal system.
-#: src/overview.ycp:564 src/overview.ycp:685
+#: src/overview.ycp:659 src/overview.ycp:780
 #, ycp-format
 msgid "Failed to delete all pending jobs for %1."
 msgstr "Usuwanie wszystkich oczekujących zadań dla %1 nie powiodło się."
@@ -3527,81 +3668,89 @@ msgstr "Usuwanie wszystkich oczekujących zadań dla %1 nie powiodło się."
 #. Message of a Popup::ErrorDetails
 #. where %1 will be replaced by the queue name.
 #. Only a simple message because this error does not happen on a normal system.
-#: src/overview.ycp:603
+#: src/overview.ycp:698
 #, ycp-format
 msgid "Failed to print testpage for %1."
 msgstr "Nie powiodło się wydrukowanie strony testowej dla %1."
 
 #. Popup::AnyQuestion header regarding testpage printout result:
-#: src/overview.ycp:616
+#: src/overview.ycp:711
 msgid "Wait Until Testpage Printing Finished"
 msgstr "Oczekiwanie na ukończenie testu drukowania"
 
 #. Popup::AnyQuestion message regarding testpage printout result
 #. where %1 will be replaced by the queue name.
-#: src/overview.ycp:619
+#: src/overview.ycp:714
 #, ycp-format
 msgid "Sent testpage to %1. Printing should start soon."
 msgstr "Wyślij stronę testową do %1. Za chwilę powinno rozpocząć się drukowanie."
 
 #. Popup::AnyQuestion 'Yes' button label
 #. regarding a positive testpage printout result:
-#: src/overview.ycp:624
+#: src/overview.ycp:719
 msgid "Testpage printout was successful"
 msgstr "Drukowanie strony testowej zostało zakończone pomyślne"
 
 #. Popup::AnyQuestion 'No' button label
 #. regarding a negative testpage printout result:
-#: src/overview.ycp:627
+#: src/overview.ycp:722
 msgid "Testpage printing failed"
 msgstr "Drukowanie strony testowej nie powiodło się"
 
 #. Fallback body of a confirmation popup before pending print jobs will be deleted:
-#: src/overview.ycp:656
+#: src/overview.ycp:751
 msgid "There are pending print jobs which might be deleted now."
 msgstr "Istnieją oczekujące zadania drukowania, które mogą być teraz usunięte."
 
 #. 'Yes' button label of a confirmation popup
 #. before all pending jobs in a queue will be deleted:
-#: src/overview.ycp:674
+#: src/overview.ycp:769
 msgid "Delete all pending jobs"
 msgstr "Usuń wszystkie zadania"
 
 #. 'No' button label of a confirmation popup
 #. before all pending jobs in a queue will be deleted:
-#: src/overview.ycp:677
+#: src/overview.ycp:772
 msgid "Do not delete them"
 msgstr "Nie usuwaj ich"
 
 #. Whereto find the full CUPS log information when "Testpage printing failed":
-#: src/overview.ycp:755
+#: src/overview.ycp:850
 msgid "For the full log, see the /var/log/cups/error_log file."
 msgstr "Aby zobaczyć log proszę sprawdzić plik /var/log/cups/error_log"
 
 #. Header of a Popup::AnyMessage where %1 will be replaced by the queue name:
-#: src/overview.ycp:757
+#: src/overview.ycp:852
 #, ycp-format
 msgid "CUPS log information while processing the testpage for %1 (English only)"
 msgstr "Zapisy w dzienniku CUPS podczas drukowania %1 (tylko język angielski)"
 
+#. When the user had selected that "Testpage printing failed" for a local queue
+#. but the test_print_cups_error_log was effectively empty,
+#. show a very generic info to the user to show at least something:
+#: src/overview.ycp:864
+#, fuzzy
+msgid "For CUPS log information, see the /var/log/cups/error_log file."
+msgstr "Aby zobaczyć log proszę sprawdzić plik /var/log/cups/error_log"
+
 #. When the user had selected that "Testpage printing failed" for a non-local queue
 #. show a very generic info to the user to show at least something:
-#: src/overview.ycp:772
+#: src/overview.ycp:874
 msgid "When printing via a remote system fails, you may ask an admin of the remote system."
 msgstr "Jeśli drukowanie poprzez zdalny system nie powiodło się, należy zwrócić się o pomoc się administratora zdalnego systemu."
 
 #. PopupYesNoHeadline body:
-#: src/overview.ycp:794
+#: src/overview.ycp:896
 msgid "A remote CUPS server setting conflicts with adding a configuration."
 msgstr "Ustawienie zdalnego serwera CUPS jest w konflikcie z dodawaniem konfiguracji."
 
 #. Header of a Popup::AnyMessage when a remote queue was selected to be modified:
-#: src/overview.ycp:845
+#: src/overview.ycp:947
 msgid "Cannot Modify"
 msgstr "Nie można zmienić"
 
 #. Body of a Popup::AnyMessage when a remote queue was selected to be modified:
-#: src/overview.ycp:847
+#: src/overview.ycp:949
 msgid "This is a remote configuration. Only local configurations can be modified."
 msgstr "To jest konfiguracja zdalna. Można zmieniać tylko konfigurację lokalną."
 
@@ -3852,118 +4001,13 @@ msgstr "&Testuj serwer"
 msgid "Use Another Print Server or Use a Network Printer Directly"
 msgstr "Użycie innego serwera wydruku lub użycie bezpośrednio drukarki sieciowej"
 
-#. Popup message
-#. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:187
-#, ycp-format
-msgid "The server '%1' is accessible via port 631 (IPP/CUPS)."
-msgstr "Serwer \"%1\" jest dostępny przez port 631 (IPP/CUPS)"
-
-#. Popup message
-#. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:192
-#, ycp-format
-msgid "The server '%1' is not accessible via port 631 (IPP/CUPS)."
-msgstr "Serwer \"%1\" nie jest dostępny przez port 631 (IPP/CUPS)"
-
-#. Popup message
-#. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:197
-#, ycp-format
-msgid "The server '%1' responds to a 'ping' in the network."
-msgstr "Serwer \"%1\" odpowiada na sygnał \"ping\" w sieci."
-
-#. Popup message
-#. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:202
-#, ycp-format
-msgid "The server '%1' does not respond to a 'ping' in the network."
-msgstr "Serwer \"%1\" nie odpowiada na sygnał \"ping\" w sieci."
-
-#. Popup message
-#. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:207
-#, ycp-format
-msgid "The server name '%1' is known in the network."
-msgstr "Nazwa serwera \"%1\" jest znana w sieci."
-
-#. Popup message
-#. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:212
-#, ycp-format
-msgid "The server name '%1' is not known in the network."
-msgstr "Nazwa serwera \"%1\" nie jest znana w sieci."
-
-#. netcat is required for a meaningful test.
-#. Show negative feedback:
-#. Popup::ErrorDetails message:
-#: src/printingvianetwork.ycp:228
-msgid "Cannot execute the program 'netcat'"
-msgstr "Nie można uruchomić programu \"netcat\""
-
-#. Popup::ErrorDetails details:
-#: src/printingvianetwork.ycp:230
-msgid "The RPM package 'netcat' is required for a meaningful test."
-msgstr "Do wykonania sensownego testu wymagany jest Pakiet RPM \"netcat\"."
-
-#. ping is required for the less meaningful test.
-#. Show negative feedback:
-#. Popup::ErrorDetails message
-#: src/printingvianetwork.ycp:264
-msgid "Cannot execute the program 'ping'"
-msgstr "Nie można uruchomić programu \"ping\""
-
-#. Popup::ErrorDetails details:
-#: src/printingvianetwork.ycp:266
-msgid "The RPM package 'iputils' is required for a meaningful test."
-msgstr "Do wykonania sensownego testu wymagany jest pakiet RPM \"iputils\"."
-
-#. The netcat-test failed but the ping-test was successful.
-#. Show negative feedback:
-#. Popup::ErrorDetails message
-#. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:279
-#, ycp-format
-msgid "The server '%1' is not accessible"
-msgstr "Sewer %1 jest niedostępny."
-
-#. host is required for the last test.
-#. Show negative feedback:
-#. Popup::ErrorDetails message
-#: src/printingvianetwork.ycp:301
-msgid "Cannot execute the program 'host'"
-msgstr "Nie można wykonać programu \"host\""
-
-#. Popup::ErrorDetails details:
-#: src/printingvianetwork.ycp:303
-msgid "The RPM package 'bind-utils' is required for a meaningful test."
-msgstr "Do wykonania sensownego testu wymagany jest pakiet RPM \"bind-utils\"."
-
-#. The netcat-test and the ping-test failed but the host-test was successful.
-#. Show negative feedback:
-#. Popup::ErrorDetails message
-#. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:316
-#, ycp-format
-msgid "The server '%1' does not respond in the network"
-msgstr "Serwer \"%1\" nie odpowiada w sieci"
-
-#. The netcat-test and the ping-test and the host-test failed:
-#. Show negative feedback:
-#. Popup::ErrorDetails message
-#. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:332
-#, ycp-format
-msgid "The server '%1' is unknown"
-msgstr "Serwer \"%1\" jest nieznany"
-
 #. Popup::MessageDetails message:
-#: src/printingvianetwork.ycp:348
+#: src/printingvianetwork.ycp:187
 msgid "Check that your firewall allows incomming printer information on UDP port 631."
 msgstr "Proszę sprawdzić czy firewall przepuszcza przychodzące połączania przez port UDP 631."
 
 #. Popup::MessageDetails information regarding details:
-#: src/printingvianetwork.ycp:350 src/sharing.ycp:239
+#: src/printingvianetwork.ycp:189 src/sharing.ycp:239
 msgid "For details regarding firewall see the help text of this dialog."
 msgstr "Aby uzyskać więcej informacji o firewallu proszę sprawdzić tekst pomocy tego okna."
 
@@ -3971,21 +4015,21 @@ msgstr "Aby uzyskać więcej informacji o firewallu proszę sprawdzić tekst pom
 #. to a client-only config but with an effectively empty server name.
 #. Such a client-only config does not make sense:
 #. Popup::Error message:
-#: src/printingvianetwork.ycp:434
+#: src/printingvianetwork.ycp:273
 msgid "A valid CUPS server name must be entered."
 msgstr "Proszę wprowadzić prawidłowa nazwę serwera CUPS."
 
 #. Header of a Popup::ContinueCancelHeadline
 #. when a client-only server is not accessible
 #. where %1 will be replaced by the server name:
-#: src/printingvianetwork.ycp:462
+#: src/printingvianetwork.ycp:301
 #, ycp-format
 msgid "Continue regardless that '%1' is not accessible?"
 msgstr "Czy kontynuować, mimo że \"%1\" jest niedostępny?"
 
 #. Body of a Popup::ContinueCancelHeadline
 #. when a client-only server is not accessible:
-#: src/printingvianetwork.ycp:467
+#: src/printingvianetwork.ycp:306
 msgid "A non-accessible server leads to an endless sequence of failures."
 msgstr "Niedostępny serwer spowodował nieskończoną sekwencję błędów."
 
@@ -3995,38 +4039,38 @@ msgstr "Niedostępny serwer spowodował nieskończoną sekwencję błędów."
 #. Therefore a Popup::MessageDetails is shown to inform about the actual result:
 #. Popup::MessageDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:500
+#: src/printingvianetwork.ycp:339
 #, ycp-format
 msgid "Tried to set 'ServerName %1' in /etc/cups/client.conf"
 msgstr "Podjęto próbę ustawienia dyrektywy \"ServerName %1\" w pliku /etc/cups/client.conf"
 
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the server name.
-#: src/printingvianetwork.ycp:510
+#: src/printingvianetwork.ycp:349
 #, ycp-format
 msgid "Failed to set 'ServerName %1' in /etc/cups/client.conf"
 msgstr "Nie udało się ustawić dyrektywy \"ServerName %1\" pliku w /etc/cups/client.conf"
 
 #. PopupYesNoHeadline body:
-#: src/printingvianetwork.ycp:534
+#: src/printingvianetwork.ycp:373
 msgid "The checkbox to do all printing via one CUPS server was disabled."
 msgstr "Drukowanie wszystkich dokumentów przez jeden serwer CUPS zostało wyłączone."
 
 #. Popup::ErrorDetails message:
-#: src/printingvianetwork.ycp:599 src/printingvianetwork.ycp:673
+#: src/printingvianetwork.ycp:438 src/printingvianetwork.ycp:512
 #: src/sharing.ycp:466
 msgid "Failed to set 'Browsing On' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić dyrektywy \"Browsing On\" w plliku /etc/cups/cupsd.conf"
 
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the values for BrowseAllow.
-#: src/printingvianetwork.ycp:613
+#: src/printingvianetwork.ycp:452
 #, ycp-format
 msgid "Failed to set BrowseAllow value(s) '%1' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić wartości BrowseAllow \"%1\" w pliku /etc/cups/cupsd.conf"
 
 #. Popup::ErrorDetails message:
-#: src/printingvianetwork.ycp:635
+#: src/printingvianetwork.ycp:474
 msgid "Failed to set 'BrowseAllow none' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić dyrektywy \"BrowseAllow none\" w pliku /etc/cups/cupsd.conf"
 
@@ -4034,19 +4078,19 @@ msgstr "Nie udało się ustawić dyrektywy \"BrowseAllow none\" w pliku /etc/cup
 #. a BrowsePoll config but with effectively empty server names.
 #. Such a BrowsePoll config does not make sense:
 #. Popup::Error message:
-#: src/printingvianetwork.ycp:656
+#: src/printingvianetwork.ycp:495
 msgid "At least one valid CUPS server name must be entered."
 msgstr "Co najmniej jeden serwer CUPS musi być podany."
 
 #. Popup::ErrorDetails message
 #. where %1 will be replaced by the values for BrowsePoll.
-#: src/printingvianetwork.ycp:687
+#: src/printingvianetwork.ycp:526
 #, ycp-format
 msgid "Failed to set BrowsePoll value(s) '%1' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się zapisać wartości BrowsePoll '%1' w /etc/cups/cupsd.conf"
 
 #. Popup::ErrorDetails message:
-#: src/printingvianetwork.ycp:706
+#: src/printingvianetwork.ycp:545
 msgid "Failed to set 'BrowsePoll none' in /etc/cups/cupsd.conf"
 msgstr "Nie udało się ustawić 'BrowsePool none' w /etc/cups/cupsd.conf"
 
@@ -4066,7 +4110,7 @@ msgstr "Nie udało się ustawić 'BrowsePool none' w /etc/cups/cupsd.conf"
 #. because they can just click the [OK] button to continue but then
 #. they are at least informend why there may be still remote queues:
 #. Popup message:
-#: src/printingvianetwork.ycp:758
+#: src/printingvianetwork.ycp:597
 msgid ""
 "When switching from 'accept printer announcements' to 'not accept announcements'\n"
 "or after 'request printer information from CUPS servers' was disabled\n"
@@ -4075,6 +4119,14 @@ msgstr ""
 "Kiedy przełącza się z 'odbieraj informacje' na 'nie odbieraj informacji'\n"
 "lub po wyłączeniu 'pobierz informację z serwera CUPS'\n"
 "trwa to zazwyczaj 5 minut, zanim otrzymane informacje zostaną odrzucone..."
+
+#. Show positive feedback because TestClientOnlyServer doesn't do it:
+#. Popup message
+#. where %1 will be replaced by the server name.
+#: src/printingvianetwork.ycp:933
+#, ycp-format
+msgid "The server '%1' is accessible via port 631 (IPP/CUPS)."
+msgstr "Serwer \"%1\" jest dostępny przez port 631 (IPP/CUPS)"
 
 #. A RadioButton label to deny remote access to local print queues:
 #: src/sharing.ycp:63
@@ -4221,6 +4273,9 @@ msgstr "Konfiguracja drukarek"
 #: src/wizards.ycp:186 src/wizards.ycp:208
 msgid "Initializing..."
 msgstr "Inicjalizacja..."
+
+#~ msgid "Waiting until the config files are updated..."
+#~ msgstr "Oczekiwanie, aż pliki konfiguracji zostaną uaktualnione..."
 
 #~ msgid "Detected printers"
 #~ msgstr "Wykryte drukarki"
