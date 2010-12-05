@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pam-config\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-12-01 14:57+0100\n"
+"POT-Creation-Date: 2010-08-11 16:53+0200\n"
 "PO-Revision-Date: 2010-05-24 03:00+0200\n"
 "Last-Translator: Mariusz Fik <fisiu@opensuse.org>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
@@ -99,6 +99,39 @@ msgstr "BŁĄD: pam_mount.so nie jest włączony dla usługi \"%s\", ale jest wy
 msgid "ERROR: Could not add pam_cryptpass.so to service '%s'"
 msgstr "BŁĄD: Nie można dodać pam_cryptpass.so do usługi \"%s\"."
 
+#: src/mod_pam_exec.c:69
+#, fuzzy, c-format
+#| msgid "Error: Out of memory.\n"
+msgid "ERROR: Out of memory.\n"
+msgstr "Błąd: Brak pamięci.\n"
+
+#: src/mod_pam_fp.c:91 src/mod_pam_thinkfinger.c:91
+#, c-format
+msgid "ERROR: No memory left to construct path.\n"
+msgstr "OSTRZEŻENIE: Brak pamięci do utworzenia ścieżki.\n"
+
+#: src/mod_pam_fp.c:106 src/mod_pam_thinkfinger.c:106
+#, c-format
+msgid "WARNING: Found no service files in '%s'.\n"
+msgstr "OSTRZEŻENIE: Nie znaleziono plików usług w \"%s\".\n"
+
+#: src/mod_pam_fp.c:116 src/mod_pam_thinkfinger.c:116
+#, c-format
+msgid "WARNING: Found module '%s' in file '%s'.\n"
+msgstr "OSTRZEŻENIE: znaleziono moduł \"%s\" w pliku \"%s\".\n"
+
+#: src/mod_pam_fp.c:142
+#, fuzzy, c-format
+#| msgid "ERROR: pam_mount.so is enabled. In order to use pam_thinkfinger.so you need to disable it first!\n"
+msgid "ERROR: pam_mount.so is enabled. In order to use pam_fp.so you need to disable it first!\n"
+msgstr "BŁĄD: pam_mount.so jest włączony. Aby używać pam_thinkfinger.so, należy go najpierw wyłączyć.\n"
+
+#: src/mod_pam_fp.c:146
+#, fuzzy, c-format
+#| msgid "ERROR: pam_fp.so is enabled. In order to use pam_thinkfinger.so you need to disable it first!\n"
+msgid "ERROR: pam_thinkfinger.so is enabled. In order to use pam_fp.so you need to disable it first!\n"
+msgstr "BŁĄD: pam_fp.so jest włączony. Aby używać pam_thinkfinger.so, należy go najpierw wyłączyć!\n"
+
 #: src/mod_pam_mount.c:120 src/pam-config.c:459
 #, c-format
 msgid ""
@@ -117,21 +150,6 @@ msgstr "BŁĄD: Moduł pam_thinkfinger.so jest włączony. Najpierw należy go w
 #, c-format
 msgid "ERROR: Module pam_fp.so is enabled. Disable it first.\n"
 msgstr "BŁĄD: Moduł pam_fp.so jest włączony. Najpierw należy go wyłączyć.\n"
-
-#: src/mod_pam_thinkfinger.c:91
-#, c-format
-msgid "ERROR: No memory left to construct path.\n"
-msgstr "OSTRZEŻENIE: Brak pamięci do utworzenia ścieżki.\n"
-
-#: src/mod_pam_thinkfinger.c:106
-#, c-format
-msgid "WARNING: Found no service files in '%s'.\n"
-msgstr "OSTRZEŻENIE: Nie znaleziono plików usług w \"%s\".\n"
-
-#: src/mod_pam_thinkfinger.c:116
-#, c-format
-msgid "WARNING: Found module '%s' in file '%s'.\n"
-msgstr "OSTRZEŻENIE: znaleziono moduł \"%s\" w pliku \"%s\".\n"
 
 #: src/mod_pam_thinkfinger.c:142
 #, c-format
@@ -254,8 +272,9 @@ msgstr "      Te moduły mogą by dodane tylko do pojedynczych plików usług.\n
 msgid "Error activating %s (%m)\n"
 msgstr "Błąd podczas aktywacji %s (%m)\n"
 
-#: src/pam-config.c:160 src/pam-config.c:213 src/pam-config.c:983
-#: src/pam-config.c:993 src/pam-config.c:1003 src/pam-config.c:1014
+#: src/pam-config.c:160 src/pam-config.c:177 src/pam-config.c:213
+#: src/pam-config.c:983 src/pam-config.c:993 src/pam-config.c:1003
+#: src/pam-config.c:1014
 #, c-format
 msgid "New config from %s is not in use!\n"
 msgstr "Nowa konfiguracja z %s nie jest używana.\n"
@@ -264,11 +283,6 @@ msgstr "Nowa konfiguracja z %s nie jest używana.\n"
 #, c-format
 msgid "File %s is no symlink to %s.\n"
 msgstr "Plik %s nie jest dowiązaniem symbolicznym do %s.\n"
-
-#: src/pam-config.c:177
-#, c-format
-msgid "New config from %s is is not in use!\n"
-msgstr "Nowa konfiguracja z %s nie jest używana.\n"
 
 #: src/pam-config.c:195
 #, c-format
@@ -434,6 +448,9 @@ msgstr "Nie można utworzyć uchwytu pliku: %m\n"
 #, c-format
 msgid "Cannot create %s: %m\n"
 msgstr "Nie można utworzyć %s: %m\n"
+
+#~ msgid "New config from %s is is not in use!\n"
+#~ msgstr "Nowa konfiguracja z %s nie jest używana.\n"
 
 #~ msgid ""
 #~ "INFO: pam_pwcheck.so and pam_cracklib.so enabled,\n"
