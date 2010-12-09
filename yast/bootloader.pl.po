@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bootloader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-03 08:44+0200\n"
+"POT-Creation-Date: 2010-12-06 11:17+0100\n"
 "PO-Revision-Date: 2010-06-04 10:17+0100\n"
 "Last-Translator: Paulina Budzoń <paulina.budzon@gmail.com>\n"
 "Language-Team: Polish <opensuse-translation@opensuse.org>\n"
@@ -153,15 +153,16 @@ msgid "The system will reboot now..."
 msgstr "Nastąpi ponowne uruchomienie systemu..."
 
 #: src/clients/bootloader_proposal.ycp:122
-#, ycp-format
-msgid "The bootloader is installed on a partition that does not lie entirely below %1 GB. The system might not boot."
+#, fuzzy, ycp-format
+msgid "The bootloader is installed on a partition that does not lie entirely below %1 GB. The system might not boot if BIOS support only lba24 (result is error 18 during install grub MBR)."
 msgstr "Program rozruchowy jest zainstalowany na partycji, która ma więcej niż %1 GB. System może się nie uruchomić."
 
 #: src/clients/bootloader_proposal.ycp:136
+#, fuzzy
 msgid ""
 "Configure a valid boot loader location before continuing.<br/>\n"
 "The device map includes more than 8 devices and the boot device is out of range.\n"
-"The range is limited by BIOS to the first 8 devices."
+"The range is limited by BIOS to the first 8 devices. Adjust BIOS boot order ( or if it already set, then correct order in bootloader configuration)"
 msgstr ""
 "Proszę skonfigurować poprawne położenie programu rozruchowego.<br>\n"
 "Mapa urządzeń zawiera więcej niż 8 urządzeń, a urządzenie rozruchowe jest poza zakresem.\n"
@@ -1570,7 +1571,7 @@ msgstr "Ustawienia programu rozruchowego: zarządzanie sekcjami"
 #. heading
 #. radio button
 #: src/routines/dialogs.ycp:380 src/routines/section_helps.ycp:103
-#: src/routines/section_widgets.ycp:488
+#: src/routines/section_widgets.ycp:489
 msgid "Xen Section"
 msgstr "Sekcja Xen"
 
@@ -1578,13 +1579,13 @@ msgstr "Sekcja Xen"
 #. radio button
 #: src/routines/dialogs.ycp:428 src/routines/dialogs.ycp:464
 #: src/routines/section_helps.ycp:106 src/routines/section_helps.ycp:116
-#: src/routines/section_widgets.ycp:492
+#: src/routines/section_widgets.ycp:493
 msgid "Menu Section"
 msgstr "Sekcja menu"
 
 #. heading
 #. radio button
-#: src/routines/dialogs.ycp:503 src/routines/section_widgets.ycp:494
+#: src/routines/dialogs.ycp:503 src/routines/section_widgets.ycp:495
 msgid "Dump Section"
 msgstr "Sekcja zrzutu"
 
@@ -2479,8 +2480,8 @@ msgid "<p><b>Partition of Menu File</b></p>"
 msgstr "<p><b>Partycja z plikiem menu</b></p>"
 
 #: src/routines/section_helps.ycp:62
-msgid "<p><b>Menu Description File<b></p>"
-msgstr "<p><b>Plik opisu menu</b></p>"
+msgid "<p><b>Menu Description File<b> specifies path on root device from which is loaded menu file.</p>"
+msgstr ""
 
 #: src/routines/section_helps.ycp:64
 msgid "<p><b>Map Section to the First Disk from Device Map</b> Windows usually need to be on the first disk.</p>"
@@ -2537,7 +2538,7 @@ msgstr ""
 "Proszę mieć na uwadze, że ta opcja wyłączy AppArmor.</p>"
 
 #. radio button
-#: src/routines/section_helps.ycp:90 src/routines/section_widgets.ycp:486
+#: src/routines/section_helps.ycp:90 src/routines/section_widgets.ycp:487
 msgid "Image Section"
 msgstr "Sekcja obrazu"
 
@@ -2704,23 +2705,27 @@ msgstr "Standardowy 8-mio pikselowy tryb czcionki."
 msgid "Text Mode"
 msgstr "Tryb tekstowy"
 
+#: src/routines/section_widgets.ycp:455
+msgid "Unspecified"
+msgstr ""
+
 #. radio button
-#: src/routines/section_widgets.ycp:480
+#: src/routines/section_widgets.ycp:481
 msgid "Clone Selected Section"
 msgstr "Sklonuj wybraną sekcję"
 
 #. radio button (don't translate 'chainloader')
-#: src/routines/section_widgets.ycp:490
+#: src/routines/section_widgets.ycp:491
 msgid "Other System (Chainloader)"
 msgstr "Inny system (uruchamianie łańcuchowe)"
 
 #. frame
-#: src/routines/section_widgets.ycp:504
+#: src/routines/section_widgets.ycp:505
 msgid "Section Type"
 msgstr "Typ sekcji"
 
 #. text entry
-#: src/routines/section_widgets.ycp:570
+#: src/routines/section_widgets.ycp:571
 msgid "Section &Name"
 msgstr "&Nazwa sekcji"
 
@@ -2734,6 +2739,9 @@ msgstr ""
 #: src/zipl/helps.ycp:28
 msgid "Default Boot Section/Menu"
 msgstr "Domyślna sekcja/menu rozruchowe"
+
+#~ msgid "<p><b>Menu Description File<b></p>"
+#~ msgstr "<p><b>Plik opisu menu</b></p>"
 
 #~ msgid ""
 #~ "You chose to install the boot loader to the floppy.\n"

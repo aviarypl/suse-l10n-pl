@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: network\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-03 08:43+0200\n"
+"POT-Creation-Date: 2010-12-06 11:17+0100\n"
 "PO-Revision-Date: 2010-06-08 00:24+0100\n"
 "Last-Translator: Mirek Rogoziński <miroslaw.rogozinski@opensuse.biz>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -249,7 +249,7 @@ msgstr "Urządzenie Ethernet dla VLAN"
 msgid "Interfaces for Bridging"
 msgstr "Interfejsy do mostkowania"
 
-#: src/clients/lan_auto.ycp:344
+#: src/clients/lan_auto.ycp:346
 msgid "Configuration Error : uninitialized interface!"
 msgstr "Błąd konfiguracji: niezainicjowany interfejs!"
 
@@ -502,7 +502,7 @@ msgid "Gateway"
 msgstr "Brama"
 
 #. Table header label
-#: src/clients/routing.ycp:84 src/lan/address.ycp:546
+#: src/clients/routing.ycp:84 src/lan/address.ycp:636
 msgid "Netmask"
 msgstr "Maska sieci"
 
@@ -2067,17 +2067,6 @@ msgstr "Producent"
 #. multiline Popup::YesNo text
 #: src/isdn/lowlevel.ycp:739
 #, fuzzy
-#| msgid ""
-#| " WARNING\n"
-#| "\n"
-#| "You have selected a binary-only driver that is not\n"
-#| "part of our distribution. You can only use this driver\n"
-#| "after installing additional packages from AVM.\n"
-#| "Refer to the release notes and get\n"
-#| "further instructions from the following Web page:\n"
-#| "%1\n"
-#| "\n"
-#| "Continue?\n"
 msgid ""
 " WARNING\n"
 "\n"
@@ -2127,11 +2116,11 @@ msgstr "Szcz&egóły"
 msgid "ISDN Configuration"
 msgstr "Konfiguracja ISDN"
 
-#: src/lan/address.ycp:231 src/lan/address.ycp:682
+#: src/lan/address.ycp:322 src/lan/address.ycp:776
 msgid "No IP Address (for Bonding Devices)"
 msgstr "Brak adresów IP (dla wiązania urządzeń)"
 
-#: src/lan/address.ycp:404
+#: src/lan/address.ycp:494
 msgid ""
 "You have changed the interface type from the one\n"
 "that has been detected. This only makes sense\n"
@@ -2142,12 +2131,12 @@ msgstr ""
 "że wykrywanie się nie powiodło."
 
 #. Popup text
-#: src/lan/address.ycp:422
+#: src/lan/address.ycp:512
 #, ycp-format
 msgid "Configuration %1 already present."
 msgstr "Konfiguracja %1 już istnieje."
 
-#: src/lan/address.ycp:448
+#: src/lan/address.ycp:538
 msgid ""
 "The firewall is active, but this interface is not\n"
 "in any zone. All its traffic would be blocked.\n"
@@ -2157,21 +2146,20 @@ msgstr ""
 "znajduje się w żadnej strefie. Cały ruch będzie zablokowany.\n"
 "Przypisać ten interfejs do strefy?"
 
-#: src/lan/address.ycp:467
+#: src/lan/address.ycp:557
 msgid "No valid IP address."
 msgstr "Brak prawidłowego adresu IP."
 
-#: src/lan/address.ycp:474
+#: src/lan/address.ycp:564
 #, fuzzy
-#| msgid "No valid netmask or prefix lenght."
 msgid "No valid netmask or prefix length."
 msgstr "Brak prawidłowej maski sieci lub długości prefiksu."
 
-#: src/lan/address.ycp:482
+#: src/lan/address.ycp:572
 msgid "Invalid hostname."
 msgstr "Nieprawidłowa nazwa hosta."
 
-#: src/lan/address.ycp:489
+#: src/lan/address.ycp:579
 msgid ""
 "No hostname has been specified. It is recommended to associate \n"
 "some hostname with static IP, otherwise the machine name will \n"
@@ -2186,7 +2174,7 @@ msgstr ""
 "Czy na pewno pozostawić nazwę hosta pustą?"
 
 #. Popup text
-#: src/lan/address.ycp:503
+#: src/lan/address.ycp:593
 msgid ""
 "Duplicate IP address detected.\n"
 "Really continue?\n"
@@ -2195,22 +2183,22 @@ msgstr ""
 "Czy naprawdę kontynuować?\n"
 
 #. Frame label
-#: src/lan/address.ycp:536
+#: src/lan/address.ycp:626
 msgid "Additional Addresses"
 msgstr "Dodatkowe adresy"
 
 #. Table header label
-#: src/lan/address.ycp:542
+#: src/lan/address.ycp:632
 msgid "Alias Name"
 msgstr "Nazwa aliasu"
 
 #. Table header label
-#: src/lan/address.ycp:544 src/lan/complex.ycp:345 src/services/host.ycp:107
+#: src/lan/address.ycp:634 src/lan/complex.ycp:345 src/services/host.ycp:107
 msgid "IP Address"
 msgstr "Adres IP"
 
 #. PushButton label
-#: src/lan/address.ycp:550 src/services/host.ycp:115
+#: src/lan/address.ycp:640 src/services/host.ycp:115
 #: src/services/routing.ycp:346
 msgid "Ad&d"
 msgstr "Do&daj"
@@ -2218,7 +2206,7 @@ msgstr "Do&daj"
 #. PushButton label
 #. Pushbutton label
 #. PushButton label
-#: src/lan/address.ycp:552 src/routines/summary.ycp:50
+#: src/lan/address.ycp:642 src/routines/summary.ycp:50
 #: src/services/host.ycp:117 src/services/routing.ycp:348
 msgid "&Edit"
 msgstr "&Edytuj"
@@ -2226,197 +2214,226 @@ msgstr "&Edytuj"
 #. PushButton label
 #. Pushbutton label
 #. PushButton label
-#: src/lan/address.ycp:554 src/routines/summary.ycp:52
+#: src/lan/address.ycp:644 src/routines/summary.ycp:52
 #: src/services/host.ycp:119 src/services/routing.ycp:350
 msgid "De&lete"
 msgstr "&Usuń"
 
-#: src/lan/address.ycp:567
+#: src/lan/address.ycp:657
 msgid "&Name of Interface"
 msgstr "Nazwa &interfejsu"
 
-#: src/lan/address.ycp:569
+#: src/lan/address.ycp:659
 msgid "<p>TODO kind of vague!</p>"
 msgstr "<p>Typ nieokreślony!</p>"
 
 #. Combo Box label
-#: src/lan/address.ycp:574
+#: src/lan/address.ycp:664
 msgid "Assign Interface to Firewall &Zone"
 msgstr "Przypisz interfejs do strefy &zapory sieciowej"
 
 #. check box label
-#: src/lan/address.ycp:582
+#: src/lan/address.ycp:672
 msgid "&Mandatory Interface"
 msgstr "Interfejs &obowiązkowy"
 
 #. textentry label, Maximum Transfer Unit
-#: src/lan/address.ycp:589
+#: src/lan/address.ycp:679
 msgid "Set &MTU"
 msgstr "Ustaw &MTU"
 
 #. ComboBox label
-#: src/lan/address.ycp:601 src/lan/hardware.ycp:194
+#: src/lan/address.ycp:691 src/lan/hardware.ycp:194
 msgid "&Device Type"
 msgstr "Typ urzą&dzenia"
 
 #. ComboBox label
 #. TextEntry label
-#: src/lan/address.ycp:614 src/lan/hardware.ycp:184
+#: src/lan/address.ycp:704 src/lan/hardware.ycp:184
 msgid "&Configuration Name"
 msgstr "Nazwa konfigura&cji"
 
-#: src/lan/address.ycp:625
+#: src/lan/address.ycp:715
 msgid "Persistent Tunnel"
 msgstr "Stały tunel"
 
-#: src/lan/address.ycp:627
+#: src/lan/address.ycp:717
 msgid "Tunnel owner"
 msgstr "Właściciel tunelu"
 
-#: src/lan/address.ycp:628
+#: src/lan/address.ycp:718
 msgid "Tunnel group"
 msgstr "Grupa tunelu"
 
-#: src/lan/address.ycp:637 src/lan/address.ycp:1022
+#: src/lan/address.ycp:727 src/lan/address.ycp:1151
 msgid "Bridged Devices"
 msgstr "Urządzenia zmostkowane"
 
-#: src/lan/address.ycp:647
+#: src/lan/address.ycp:737
 msgid "Real Interface for &VLAN"
 msgstr "Rzeczywisty interfejs dla &VLAN"
 
-#: src/lan/address.ycp:656
+#: src/lan/address.ycp:746
+#, fuzzy
+msgid "Bond Slaves and Order"
+msgstr "Powiązane komputery podrzędne"
+
+#: src/lan/address.ycp:748
+msgid "Up"
+msgstr ""
+
+#: src/lan/address.ycp:748
+msgid "Down"
+msgstr ""
+
+#: src/lan/address.ycp:750
 msgid "Bond &Slaves"
 msgstr "&Połączone urządzenia podrzędne"
 
 #. ComboBox label
-#: src/lan/address.ycp:667
+#: src/lan/address.ycp:761
 msgid "&Bond Driver Options"
 msgstr "Opcje łączenia &sterownika"
 
-#: src/lan/address.ycp:669
+#: src/lan/address.ycp:763
 msgid "<p>Select the bond driver options, and edit it if necessary. </p>"
 msgstr "<p>Proszę wybrać opcje łączenia dla sterownika i w razie potrzeby poddać je edycji</p>"
 
-#: src/lan/address.ycp:684
+#: src/lan/address.ycp:778
 msgid "Use iBFT values"
 msgstr "Użyj wartości iBFT"
 
-#: src/lan/address.ycp:688
+#: src/lan/address.ycp:782
 msgid "Dynamic Address"
 msgstr "Adres dynamiczny"
 
-#: src/lan/address.ycp:697
+#: src/lan/address.ycp:791
 msgid "DHCP both version 4 and 6"
 msgstr "DHCP w wersjach 4 i 6"
 
-#: src/lan/address.ycp:698
+#: src/lan/address.ycp:792
 msgid "DHCP version 4 only"
 msgstr "DHCP tylko w wersji 4"
 
-#: src/lan/address.ycp:699
+#: src/lan/address.ycp:793
 msgid "DHCP version 6 only"
 msgstr "DHCP tylko w wersji 6"
 
 #. TODO : Stat ... Assigned
-#: src/lan/address.ycp:704
+#: src/lan/address.ycp:798
 msgid "Statically assigned IP Address"
 msgstr "Statycznie przypisany adres IP"
 
 #. TextEntry label
-#: src/lan/address.ycp:706 src/lan/virtual.ycp:176 src/services/host.ycp:304
+#: src/lan/address.ycp:800 src/lan/virtual.ycp:176 src/services/host.ycp:304
 msgid "&IP Address"
 msgstr "Adres &IP"
 
-#: src/lan/address.ycp:708
+#: src/lan/address.ycp:802
 msgid "&Subnet Mask"
 msgstr "Maska pod&sieci"
 
-#: src/lan/address.ycp:710
+#: src/lan/address.ycp:804
 msgid "&Hostname"
 msgstr "Nazwa &hosta"
 
 #. Text entry label
-#: src/lan/address.ycp:726
+#: src/lan/address.ycp:820
 msgid "R&emote IP Address"
 msgstr "Zdalny adr&es IP"
 
 #. validation error popup
-#: src/lan/address.ycp:731
+#: src/lan/address.ycp:825
 msgid "The remote IP address is invalid."
 msgstr "Zdalny adres IP jest nieprawidłowy."
 
 #. menu button label
-#: src/lan/address.ycp:736
+#: src/lan/address.ycp:830
 msgid "&Advanced..."
 msgstr "Z&aawansowane..."
 
 #. push button label
-#: src/lan/address.ycp:748
+#: src/lan/address.ycp:842
 msgid "&S/390"
 msgstr "&S/390"
 
-#: src/lan/address.ycp:870
+#. Combo box label - when to activate device (e.g. on boot, manually, never,..)
+#: src/lan/address.ycp:978
+msgid "Ifplugd priority"
+msgstr ""
+
+#. Device activation main help. The individual parts will be
+#. substituted as %1
+#: src/lan/address.ycp:982
+msgid ""
+"<p><b><big>IFPLUGD PRIORITY</big></b></p> \n"
+"<p> All interfaces configured with <b>On Cable Connection</b> and with IFPLUGD_PRIORITY != 0 will be\n"
+" used mutually exclusive. If more then one of these interfaces is <b>On Cable Connection</b>\n"
+" then we need a way to decide which interface to take up. Therefore we have to\n"
+" set the priority of each interface.  </p>\n"
+msgstr ""
+
+#: src/lan/address.ycp:999
 msgid "Firewall is not installed"
 msgstr "Zapora sieciowa nie jest zainstalowana"
 
-#: src/lan/address.ycp:903
+#: src/lan/address.ycp:1032
 msgid "Detailed Settings"
 msgstr "Ustawienia szczegółowe"
 
-#: src/lan/address.ycp:981
+#: src/lan/address.ycp:1110
 msgid "&General"
 msgstr "O&gólne"
 
 #. TODO:
 #. "MANDATORY",
-#: src/lan/address.ycp:989
+#: src/lan/address.ycp:1118
 msgid "Device Activation"
 msgstr "Aktywacja urządzenia"
 
-#: src/lan/address.ycp:991
+#: src/lan/address.ycp:1120
 msgid "Firewall Zone"
 msgstr "Strefa zapory sieciowej"
 
-#: src/lan/address.ycp:993
+#: src/lan/address.ycp:1122
 msgid "Device Control"
 msgstr "Kontrola urządzenia"
 
-#: src/lan/address.ycp:995
+#: src/lan/address.ycp:1124
 msgid "Maximum Transfer Unit (MTU)"
 msgstr "Maksymalna jednosta transferu (MTU)"
 
 #. FIXME we have helps per widget and for the whole
 #. tab set but not for one tab
-#: src/lan/address.ycp:1003
+#: src/lan/address.ycp:1132
 msgid "<p>Configure the detailed network card settings here.</p>"
 msgstr "<p>Tu można skonfigurować szczegółowe ustawienia karty sieciowej.</p>"
 
 #. FIXME: here it does not complain about missing
 #. shortcuts
-#: src/lan/address.ycp:1008
+#: src/lan/address.ycp:1137
 msgid "&Address"
 msgstr "&Adres"
 
 #. Address tab help
-#: src/lan/address.ycp:1011
+#: src/lan/address.ycp:1140
 msgid "<p>Configure your IP address.</p>"
 msgstr "<p>Konfiguracja adresu IP.</p>"
 
-#: src/lan/address.ycp:1014
+#: src/lan/address.ycp:1143
 msgid "&Hardware"
 msgstr "Sprzę&t"
 
-#: src/lan/address.ycp:1018
+#: src/lan/address.ycp:1147
 msgid "&Bond Slaves"
 msgstr "&Powiązane komputery podrzędne"
 
-#: src/lan/address.ycp:1026
+#: src/lan/address.ycp:1155
 msgid "&Wireless"
 msgstr "&Bezprzewodowe"
 
 #. Address dialog caption
-#: src/lan/address.ycp:1052
+#: src/lan/address.ycp:1181
 msgid "Network Card Setup"
 msgstr "Ustawienia karty sieciowej"
 
@@ -2682,7 +2699,6 @@ msgstr "Wystąpił błąd podczas instalowania oprogramowania wbudowanego."
 
 #: src/lan/complex.ycp:191
 #, fuzzy
-#| msgid "Reboot needed!"
 msgid "Applet needed"
 msgstr "Wymagane ponowne uruchomienie komputera."
 
@@ -2750,7 +2766,7 @@ msgid "IPv6 Protocol Settings"
 msgstr "Ustawienia protokołu IPv6"
 
 #. enable ipv6 support
-#: src/lan/complex.ycp:333 src/modules/Lan.ycp:708
+#: src/lan/complex.ycp:333 src/modules/Lan.ycp:713
 msgid "Enable IPv6"
 msgstr "Włącz IPv6"
 
@@ -3431,9 +3447,10 @@ msgstr ""
 "komputera, z którym nawiązano połączenie.</p>\n"
 
 #: src/lan/help.ycp:177
+#, fuzzy
 msgid ""
 "<p>For <b>Static Address Setup</b> enter the static IP address for your computer (for example: <tt>192.168.100.99</tt>) and\n"
-"the network mask (usually <tt>255.255.255.0</tt> or just lenght of prefix <tt>/24</tt>). For special case - unconfigured interface use <tt>0.0.0.0</tt> and <tt>/32</tt>.Optionally, you can enter\n"
+"the network mask (usually <tt>255.255.255.0</tt> or just lenght of prefix <tt>/24</tt>).Optionally, you can enter\n"
 "a fully qualified hostname for this IP address. The hostname will be written to <tt>/etc/hosts</tt>.</p>\n"
 msgstr ""
 "<p>W przypadku <b>adresu statycznego</b> Proszę podać adres IP (np. <tt>192.168.100.99</tt>) swojego komputera \n"
@@ -4529,7 +4546,7 @@ msgstr "Zapis nazwy hosta"
 #. stage 7/13
 #. Progress stage 10
 #. Progress stage 3+4
-#: src/modules/DNS.ycp:275 src/modules/ISDN.ycp:385 src/modules/Lan.ycp:414
+#: src/modules/DNS.ycp:275 src/modules/ISDN.ycp:385 src/modules/Lan.ycp:416
 #: src/modules/Remote.ycp:122
 msgid "Run SuSEconfig"
 msgstr "Uruchomienie SuSEconfig"
@@ -4554,7 +4571,7 @@ msgstr "Zapisywanie nazwy hosta..."
 #. Progress step 2/3
 #. step 7 in writing current ISDN setup
 #. Progress step 10
-#: src/modules/DNS.ycp:300 src/modules/ISDN.ycp:458 src/modules/Lan.ycp:538
+#: src/modules/DNS.ycp:300 src/modules/ISDN.ycp:458 src/modules/Lan.ycp:540
 #: src/modules/Remote.ycp:205
 msgid "Running SuSEconfig..."
 msgstr "Uruchamianie SuSEconfig..."
@@ -4661,8 +4678,8 @@ msgstr "Urządzenia PPPoE DSL"
 #. last step in testing current ISDN setup
 #. Final progress step
 #: src/modules/DSL.ycp:215 src/modules/DSL.ycp:310 src/modules/ISDN.ycp:319
-#: src/modules/ISDN.ycp:538 src/modules/ISDN.ycp:635 src/modules/Lan.ycp:314
-#: src/modules/Lan.ycp:574 src/modules/Modem.ycp:173 src/modules/Modem.ycp:278
+#: src/modules/ISDN.ycp:538 src/modules/ISDN.ycp:635 src/modules/Lan.ycp:316
+#: src/modules/Lan.ycp:576 src/modules/Modem.ycp:173 src/modules/Modem.ycp:278
 msgid "Finished"
 msgstr "Zakończono"
 
@@ -4685,7 +4702,7 @@ msgstr "Zapis konfiguracji karty sieciowej"
 #. Progress stage 3/7
 #. Progress stage 2/6
 #. Progress stage 1
-#: src/modules/DSL.ycp:245 src/modules/Lan.ycp:410 src/modules/Modem.ycp:201
+#: src/modules/DSL.ycp:245 src/modules/Lan.ycp:412 src/modules/Modem.ycp:201
 #: src/modules/Remote.ycp:115
 msgid "Write firewall settings"
 msgstr "Zapis konfiguracji zapory sieciowej"
@@ -4701,7 +4718,7 @@ msgstr "Zapis dostawców"
 #. stage 11/13
 #. Progress stage 7
 #. Progress stage 4/6
-#: src/modules/DSL.ycp:249 src/modules/ISDN.ycp:399 src/modules/Lan.ycp:406
+#: src/modules/DSL.ycp:249 src/modules/ISDN.ycp:399 src/modules/Lan.ycp:408
 #: src/modules/Modem.ycp:205
 msgid "Set up network services"
 msgstr "Konfiguracja usług sieciowych"
@@ -4710,13 +4727,13 @@ msgstr "Konfiguracja usług sieciowych"
 #. stage 11/13
 #. Progress stage 11
 #. Progress stage 5/5
-#: src/modules/DSL.ycp:251 src/modules/ISDN.ycp:401 src/modules/Lan.ycp:418
+#: src/modules/DSL.ycp:251 src/modules/ISDN.ycp:401 src/modules/Lan.ycp:420
 #: src/modules/Modem.ycp:207
 msgid "Set up smpppd"
 msgstr "Konfiguracja smpppd"
 
 #. Progress stage 9
-#: src/modules/DSL.ycp:253 src/modules/ISDN.ycp:405 src/modules/Lan.ycp:412
+#: src/modules/DSL.ycp:253 src/modules/ISDN.ycp:405 src/modules/Lan.ycp:414
 #: src/modules/Modem.ycp:209
 msgid "Activate network services"
 msgstr "Aktywacja usług sieciowych"
@@ -4736,7 +4753,7 @@ msgstr "Zapisywanie konfiguracji karty sieciowej..."
 #. step 5 in writing current ISDN setup
 #. Progress step 8
 #. Progress step 2/6
-#: src/modules/DSL.ycp:275 src/modules/ISDN.ycp:443 src/modules/Lan.ycp:474
+#: src/modules/DSL.ycp:275 src/modules/ISDN.ycp:443 src/modules/Lan.ycp:476
 #: src/modules/Modem.ycp:221 src/modules/Remote.ycp:131
 msgid "Writing firewall settings..."
 msgstr "Zapisywanie ustawień zapory sieciowej..."
@@ -4752,7 +4769,7 @@ msgstr "Zapisywanie dostawców..."
 #. step 10 in writing current ISDN setup
 #. Progress step 7
 #. Progress step 4/6
-#: src/modules/DSL.ycp:289 src/modules/ISDN.ycp:494 src/modules/Lan.ycp:465
+#: src/modules/DSL.ycp:289 src/modules/ISDN.ycp:494 src/modules/Lan.ycp:467
 #: src/modules/Modem.ycp:235
 msgid "Setting up network services..."
 msgstr "Konfigurowanie usług sieciowych..."
@@ -4761,13 +4778,13 @@ msgstr "Konfigurowanie usług sieciowych..."
 #. step 11 in writing current ISDN setup
 #. Progress step 11
 #. Progress step 5/6
-#: src/modules/DSL.ycp:295 src/modules/ISDN.ycp:500 src/modules/Lan.ycp:546
+#: src/modules/DSL.ycp:295 src/modules/ISDN.ycp:500 src/modules/Lan.ycp:548
 #: src/modules/Modem.ycp:263
 msgid "Setting up smpppd(8)..."
 msgstr "Konfigurowanie smpppd(8)..."
 
 #. Progress step 9
-#: src/modules/DSL.ycp:301 src/modules/ISDN.ycp:516 src/modules/Lan.ycp:484
+#: src/modules/DSL.ycp:301 src/modules/ISDN.ycp:516 src/modules/Lan.ycp:486
 #: src/modules/Modem.ycp:269
 msgid "Activating network services..."
 msgstr "Aktywowanie usług sieciowych..."
@@ -4820,7 +4837,7 @@ msgstr "Wczytanie bieżącej konfiguracji połączenia"
 #. stage 4/5
 #. Progress stage 5/9
 #. Progress stage 3/4
-#: src/modules/ISDN.ycp:273 src/modules/Lan.ycp:216 src/modules/Modem.ycp:124
+#: src/modules/ISDN.ycp:273 src/modules/Lan.ycp:218 src/modules/Modem.ycp:124
 msgid "Read firewall settings"
 msgstr "Wczytanie ustawień zapory sieciowej"
 
@@ -4837,7 +4854,7 @@ msgstr "Wczytywanie bieżącej konfiguracji połączenia..."
 #. step 4 in reading current ISDN setup
 #. Progress step 5/9
 #. Progress step 3/4
-#: src/modules/ISDN.ycp:305 src/modules/Lan.ycp:281 src/modules/Modem.ycp:151
+#: src/modules/ISDN.ycp:305 src/modules/Lan.ycp:283 src/modules/Modem.ycp:151
 msgid "Reading firewall settings..."
 msgstr "Wczytywanie ustawień zapory sieciowej..."
 
@@ -4977,56 +4994,56 @@ msgid "&Select Interface"
 msgstr "W&ybierz interfejs"
 
 #. Read dialog caption
-#: src/modules/Lan.ycp:200
+#: src/modules/Lan.ycp:202
 msgid "Initializing Network Configuration"
 msgstr "Inicjalizowanie konfiguracji sieci"
 
 #. Progress stage 1/9
-#: src/modules/Lan.ycp:208
+#: src/modules/Lan.ycp:210
 msgid "Detect network devices"
 msgstr "Wykrycie urządzeń sieciowych"
 
 #. Progress stage 2/9
-#: src/modules/Lan.ycp:210
+#: src/modules/Lan.ycp:212
 msgid "Read driver information"
 msgstr "Wczytanie informacji o sterownikach"
 
 #. Progress stage 3/9 - multiple devices may be present, really plural
-#: src/modules/Lan.ycp:212
+#: src/modules/Lan.ycp:214
 msgid "Read device configuration"
 msgstr "Wczytanie konfiguracji urządzenia"
 
 #. Progress stage 4/9
-#: src/modules/Lan.ycp:214
+#: src/modules/Lan.ycp:216
 msgid "Read network configuration"
 msgstr "Wczytanie konfiguracji sieci"
 
 #. Progress stage 6/9
-#: src/modules/Lan.ycp:218
+#: src/modules/Lan.ycp:220
 msgid "Read hostname and DNS configuration"
 msgstr "Wczytanie nazwy komputera i konfiguracji DNS"
 
 #. Progress stage 7/9
-#: src/modules/Lan.ycp:220
+#: src/modules/Lan.ycp:222
 msgid "Read installation information"
 msgstr "Wczytanie informacji instalacyjnych"
 
 #. Progress stage 8/9
-#: src/modules/Lan.ycp:222
+#: src/modules/Lan.ycp:224
 msgid "Read routing configuration"
 msgstr "Wczytanie konfiguracji routingu"
 
 #. Progress stage 9/9
-#: src/modules/Lan.ycp:224
+#: src/modules/Lan.ycp:226
 msgid "Detect current status"
 msgstr "Wykrycie stanu bieżącego"
 
 #. Progress step 1/9
-#: src/modules/Lan.ycp:234
+#: src/modules/Lan.ycp:236
 msgid "Detecting for ndiswrapper..."
 msgstr "Wyszukiwanie ndiswrapper..."
 
-#: src/modules/Lan.ycp:241
+#: src/modules/Lan.ycp:243
 msgid ""
 "There is a ndiswrapper configuration detected,\n"
 "but the Kernel module was not modprobed.\n"
@@ -5036,7 +5053,7 @@ msgstr ""
 "nie został wczytany moduł jądra. Czy wykonać\n"
 "teraz polecenie modprobe ndiswrapper?\n"
 
-#: src/modules/Lan.ycp:245
+#: src/modules/Lan.ycp:247
 msgid ""
 "ndiswrapper kernel module wasn't loaded.\n"
 "Check configuration manually."
@@ -5045,167 +5062,167 @@ msgstr ""
 "Proszę sprawdzić konfigurację ręcznie."
 
 #. Progress step 2/9
-#: src/modules/Lan.ycp:256
+#: src/modules/Lan.ycp:258
 msgid "Detecting network devices..."
 msgstr "Wykrywanie urządzeń sieciowych..."
 
 #. Progress step 3/9 - multiple devices may be present, really plural
-#: src/modules/Lan.ycp:266
+#: src/modules/Lan.ycp:268
 msgid "Reading device configuration..."
 msgstr "Wczytywanie konfiguracji urządzeń..."
 
 #. Progress step 4/9
-#: src/modules/Lan.ycp:272
+#: src/modules/Lan.ycp:274
 msgid "Reading network configuration..."
 msgstr "Wczytywanie konfiguracji sieci..."
 
 #. Progress step 6/9
-#: src/modules/Lan.ycp:289
+#: src/modules/Lan.ycp:291
 msgid "Reading hostname and DNS configuration..."
 msgstr "Wczytywanie nazwy komputera i konfiguracji DNS..."
 
 #. Progress step 7/9
-#: src/modules/Lan.ycp:296
+#: src/modules/Lan.ycp:298
 msgid "Reading installation information..."
 msgstr "Wczytywanie informacji instalacyjnych..."
 
 #. Progress step 8/9
-#: src/modules/Lan.ycp:302
+#: src/modules/Lan.ycp:304
 msgid "Reading routing configuration..."
 msgstr "Wczytywanie konfiguracji routingu..."
 
 #. Progress step 9/9
-#: src/modules/Lan.ycp:308
+#: src/modules/Lan.ycp:310
 msgid "Detecting current status..."
 msgstr "Wykrywanie stanu bieżącego..."
 
-#: src/modules/Lan.ycp:342
+#: src/modules/Lan.ycp:344
 msgid "To apply this change a reboot is needed."
 msgstr "Do wprowadzenia tej zmiany wymagane jest ponowne uruchomienie komputera."
 
 #. Write dialog caption
-#: src/modules/Lan.ycp:389
+#: src/modules/Lan.ycp:391
 msgid "Saving Network Configuration"
 msgstr "Zapis konfiguracji sieci"
 
 #. Progress stage 2
-#: src/modules/Lan.ycp:396
+#: src/modules/Lan.ycp:398
 msgid "Write drivers information"
 msgstr "Zapis informacji o sterownikach"
 
 #. Progress stage 3 - multiple devices may be present,really plural
-#: src/modules/Lan.ycp:398
+#: src/modules/Lan.ycp:400
 msgid "Write device configuration"
 msgstr "Zapis konfiguracji urządzeń"
 
 #. Progress stage 4
-#: src/modules/Lan.ycp:400
+#: src/modules/Lan.ycp:402
 msgid "Write network configuration"
 msgstr "Zapis konfiguracji sieci"
 
 #. Progress stage 5
-#: src/modules/Lan.ycp:402
+#: src/modules/Lan.ycp:404
 msgid "Write routing configuration"
 msgstr "Zapis konfiguracji routingu"
 
 #. Progress stage 6
-#: src/modules/Lan.ycp:404
+#: src/modules/Lan.ycp:406
 msgid "Write hostname and DNS configuration"
 msgstr "Zapis nazwy komputera i konfiguracji DNS"
 
 #. Progress step 2
-#: src/modules/Lan.ycp:426
+#: src/modules/Lan.ycp:428
 msgid "Writing /etc/modprobe.conf..."
 msgstr "Zapisywanie /etc/modprobe.conf..."
 
 #. Progress step 3 - multiple devices may be present, really plural
-#: src/modules/Lan.ycp:431
+#: src/modules/Lan.ycp:433
 msgid "Writing device configuration..."
 msgstr "Zapisywanie konfiguracji urządzeń..."
 
 #. Progress step 4
-#: src/modules/Lan.ycp:440
+#: src/modules/Lan.ycp:442
 msgid "Writing network configuration..."
 msgstr "Zapisywanie konfiguracji sieci..."
 
 #. Progress step 5
-#: src/modules/Lan.ycp:446
+#: src/modules/Lan.ycp:448
 msgid "Writing routing configuration..."
 msgstr "Zapisywanie konfiguracji routingu..."
 
 #. Progress step 6
-#: src/modules/Lan.ycp:453
+#: src/modules/Lan.ycp:455
 msgid "Writing hostname and DNS configuration..."
 msgstr "Zapisywanie nazwy komputera i konfiguracji DNS..."
 
 #. This is the heading of the popup box
-#: src/modules/Lan.ycp:495
+#: src/modules/Lan.ycp:497
 msgid "Confirm Network Restart"
 msgstr "Potwierdzenie ponownego uruchomienia sieci"
 
 #. This is in information message. Next come the
 #. hardware class name (network cards).
-#: src/modules/Lan.ycp:499
+#: src/modules/Lan.ycp:501
 msgid "Because of bridged network YaST2 needs to restart network to apply the settings."
 msgstr "Ze względu na mostkowanie sieci, program YaST2 wymaga jej ponownego uruchomienia w celu zastosowania ustawień."
 
-#: src/modules/Lan.ycp:569
+#: src/modules/Lan.ycp:571
 msgid "No network running"
 msgstr "Brak działającej sieci"
 
-#: src/modules/Lan.ycp:674
+#: src/modules/Lan.ycp:679
 msgid "Network Mode"
 msgstr "Tryb sieciowy"
 
 #. network mode: the interfaces are controlled by the user
-#: src/modules/Lan.ycp:680
+#: src/modules/Lan.ycp:685
 msgid "Interfaces controlled by NetworkManager"
 msgstr "Interfejsy kontrolowane za pomocą programu NetworkManager"
 
 #. disable NetworkManager applet
-#: src/modules/Lan.ycp:682
+#: src/modules/Lan.ycp:687
 msgid "Disable NetworkManager"
 msgstr "Wyłącz NetworkManager"
 
 #. network mode
-#: src/modules/Lan.ycp:688
+#: src/modules/Lan.ycp:693
 msgid "Traditional network setup with NetControl - ifup"
 msgstr "Kontrola przez ifup"
 
 #. enable NetworkManager applet
 #. for virtual network proposal (bridged) don't show hyperlink to enable networkmanager
-#: src/modules/Lan.ycp:691
+#: src/modules/Lan.ycp:696
 msgid "Enable NetworkManager"
 msgstr "Włącz NetworkManager"
 
 #. ipv6 support is enabled
-#: src/modules/Lan.ycp:698
+#: src/modules/Lan.ycp:703
 msgid "Support for IPv6 protocol is enabled"
 msgstr "Obsługa protokołu IPv6 włączona"
 
 #. disable ipv6 support
-#: src/modules/Lan.ycp:700
+#: src/modules/Lan.ycp:705
 msgid "Disable IPv6"
 msgstr "Wyłącz IPv6"
 
 #. ipv6 support is disabled
-#: src/modules/Lan.ycp:706
+#: src/modules/Lan.ycp:711
 msgid "Support for IPv6 protocol is disabled"
 msgstr "Obsługa protokołu IPv6 wyłączona"
 
-#: src/modules/Lan.ycp:715
+#: src/modules/Lan.ycp:720
 msgid "Proposed bridged configuration for virtual machine network"
 msgstr "Proponowana konfiguracja zmostkowana dla sieci wirtualnej"
 
-#: src/modules/Lan.ycp:716
+#: src/modules/Lan.ycp:721
 msgid "Use non-bridged configuration"
 msgstr "Użyj konfiguracji bezmostkowej"
 
-#: src/modules/Lan.ycp:719
+#: src/modules/Lan.ycp:724
 msgid "Proposed non-bridged network configuration"
 msgstr "Proponowana konfiguracja bezmostkowa sieci"
 
-#: src/modules/Lan.ycp:720
+#: src/modules/Lan.ycp:725
 msgid "Use bridged configuration"
 msgstr "Użyj konfiguracji zmostkowanej"
 
@@ -5213,24 +5230,24 @@ msgstr "Użyj konfiguracji zmostkowanej"
 #. summary description of STARTMODE=hotplug
 #. summary description of STARTMODE=auto
 #. summary description of STARTMODE=hotplug
-#: src/modules/LanItems.ycp:475 src/modules/LanItems.ycp:477
-#: src/modules/LanItems.ycp:479 src/routines/complex.ycp:441
+#: src/modules/LanItems.ycp:476 src/modules/LanItems.ycp:478
+#: src/modules/LanItems.ycp:480 src/routines/complex.ycp:441
 #: src/routines/complex.ycp:443
 msgid "Started automatically at boot"
 msgstr "Uruchamiane automatycznie przy starcie systemu"
 
 #. summary description of STARTMODE=ifplugd
-#: src/modules/LanItems.ycp:481 src/routines/complex.ycp:445
+#: src/modules/LanItems.ycp:482 src/routines/complex.ycp:445
 msgid "Started automatically on cable connection"
 msgstr "Uruchamiane automatycznie w razie utworzenia połączenia przewodowego"
 
 #. summary description of STARTMODE=managed
-#: src/modules/LanItems.ycp:483 src/routines/complex.ycp:447
+#: src/modules/LanItems.ycp:484 src/routines/complex.ycp:447
 msgid "Managed by NetworkManager"
 msgstr "Zarządzane przez aplet NetworkManager"
 
 #. summary description of STARTMODE=off
-#: src/modules/LanItems.ycp:485 src/routines/complex.ycp:449
+#: src/modules/LanItems.ycp:486 src/routines/complex.ycp:449
 msgid "Will not be started at all"
 msgstr "Nie zostanie uruchomiony"
 
@@ -5239,30 +5256,30 @@ msgstr "Nie zostanie uruchomiony"
 #. filter out the item for adding an unknown one
 #. list res = filter (term card, sum, ``( card[0,0]:nil != `other ));
 #. translators: this device has not been configured yet
-#: src/modules/LanItems.ycp:491 src/routines/complex.ycp:573
+#: src/modules/LanItems.ycp:492 src/routines/complex.ycp:573
 msgid "Not configured"
 msgstr "Nieskonfigurowane"
 
-#: src/modules/LanItems.ycp:506 src/routines/complex.ycp:458
+#: src/modules/LanItems.ycp:507 src/routines/complex.ycp:458
 msgid "Started manually"
 msgstr "Uruchamiane ręcznie"
 
-#: src/modules/LanItems.ycp:509 src/routines/complex.ycp:466
+#: src/modules/LanItems.ycp:510 src/routines/complex.ycp:466
 #: src/routines/complex.ycp:494
 #, ycp-format
 msgid "Device Name: %1"
 msgstr "Nazwa urządzenia: %1"
 
-#: src/modules/LanItems.ycp:518
+#: src/modules/LanItems.ycp:519
 msgid "IP address assigned using"
 msgstr "Adres IP przypisany za pomocą"
 
-#: src/modules/LanItems.ycp:520
+#: src/modules/LanItems.ycp:521
 #, ycp-format
 msgid "IP address: %1/%2"
 msgstr "Adres IP: %1/%2"
 
-#: src/modules/LanItems.ycp:521 src/routines/complex.ycp:503
+#: src/modules/LanItems.ycp:522 src/routines/complex.ycp:503
 #: src/routines/complex.ycp:511
 #, ycp-format
 msgid "IP address: %1, subnet mask %2"
@@ -5270,29 +5287,29 @@ msgstr "Adres IP: %1, maska podsieci %2"
 
 #. interface summary: WiFi without encryption
 #. Network card status
-#: src/modules/LanItems.ycp:543 src/routines/complex.ycp:89
+#: src/modules/LanItems.ycp:544 src/routines/complex.ycp:89
 #: src/routines/complex.ycp:352
 msgid "Warning: no encryption is used."
 msgstr "Ostrzeżenie: nie użyto szyfrowania."
 
 #. Hyperlink: Change the configuration of an interface
-#: src/modules/LanItems.ycp:546 src/routines/complex.ycp:92
+#: src/modules/LanItems.ycp:547 src/routines/complex.ycp:92
 msgid "Change."
 msgstr "Zmień"
 
-#: src/modules/LanItems.ycp:554
+#: src/modules/LanItems.ycp:555
 msgid "Not connected"
 msgstr "Niepołączony"
 
-#: src/modules/LanItems.ycp:556
+#: src/modules/LanItems.ycp:557
 msgid "No hwinfo"
 msgstr "Bez hwinfo"
 
-#: src/modules/LanItems.ycp:564
+#: src/modules/LanItems.ycp:565
 msgid "<p>Unable to configure the network card because the kernel device (eth0, wlan0) is not present. This is mostly caused by missing firmware (for wlan devices). See dmesg output for details.</p>"
 msgstr "<p>Nie można skonfigurować karty sieciowej, ponieważ urządzenie w jądrze systemu (eth0, wlan0) nie istnieje. W większości przypadków jest to spowodowane przez brak oprogramowania wbuowanego (dla urządzeń bezprzewodowych). Proszę zobaczyć wynik polecenia dmesg, aby uzyskać więcej informacji.</p>"
 
-#: src/modules/LanItems.ycp:567
+#: src/modules/LanItems.ycp:568
 msgid ""
 "<p>The device is not configured. Press <b>Edit</b>\n"
 "to configure.</p>\n"
@@ -5300,11 +5317,11 @@ msgstr ""
 "<p>Urządzenie nie jest skonfigurowane. Proszę nacisnąć przycisk \n"
 "<b>Edytuj</b>, aby je skonfigurować.</p>\n"
 
-#: src/modules/LanItems.ycp:575
+#: src/modules/LanItems.ycp:576
 msgid "Needed firmware"
 msgstr "Wymagane oprogramowanie wbudowane"
 
-#: src/modules/LanItems.ycp:575
+#: src/modules/LanItems.ycp:576
 msgid "unknown"
 msgstr "Nieznane"
 
@@ -5469,21 +5486,21 @@ msgid "Remote administration is disabled."
 msgstr "Zdalne zarządzanie wyłączone."
 
 #. Progress stage 1
-#: src/modules/Routing.ycp:167
+#: src/modules/Routing.ycp:171
 msgid "Write IP forwarding settings"
 msgstr "Zapis ustawień przekazywania IP"
 
 #. Progress stage 2
-#: src/modules/Routing.ycp:169
+#: src/modules/Routing.ycp:173
 msgid "Write routing settings"
 msgstr "Zapis ustawień rutowania"
 
-#: src/modules/Routing.ycp:172
+#: src/modules/Routing.ycp:176
 msgid "Saving Routing Configuration"
 msgstr "Zapisywanie konfiguracji rutowania"
 
 #. Progress stage 1/2
-#: src/modules/Routing.ycp:178
+#: src/modules/Routing.ycp:182
 msgid "Writing IP forwarding settings..."
 msgstr "Zapisywanie ustawień pzekazywania IP..."
 
@@ -5492,23 +5509,23 @@ msgstr "Zapisywanie ustawień pzekazywania IP..."
 #. sysconfig does not support restarting routes only,
 #. so we let our caller do it together with other things
 #. Progress stage 2/2
-#: src/modules/Routing.ycp:189
+#: src/modules/Routing.ycp:193
 msgid "Writing routing settings..."
 msgstr "Zapisywanie ustawień rutowania..."
 
 #. Summary text
-#: src/modules/Routing.ycp:296
+#: src/modules/Routing.ycp:302
 #, ycp-format
 msgid "Gateway: %1"
 msgstr "Bramka: %1"
 
 #. Summary text
-#: src/modules/Routing.ycp:302
+#: src/modules/Routing.ycp:308
 msgid "IP Forwarding: on"
 msgstr "Przekazywanie IP: włączone"
 
 #. Summary text
-#: src/modules/Routing.ycp:306
+#: src/modules/Routing.ycp:312
 msgid "IP Forwarding: off"
 msgstr "Przekazywanie IP: wyłączone"
 

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: yast2-gtk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-29 06:56+0100\n"
+"POT-Creation-Date: 2010-12-06 11:17+0100\n"
 "PO-Revision-Date: 2010-06-10 00:32+0100\n"
 "Last-Translator: Mirek Rogoziński <miroslaw.rogozinski@opensuse.biz>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -34,11 +34,11 @@ msgstr "GB"
 msgid "TB"
 msgstr "TB"
 
-#: src/YGProgressBar.cc:113 src/pkg/yzyppwrapper.cc:148
+#: src/YGProgressBar.cc:113 src/pkg/yzyppwrapper.cc:169
 msgid "of"
 msgstr "z"
 
-#: src/YGTable.cc:246 src/pkg/ygtkpkghistorydialog.cc:514
+#: src/YGTable.cc:246 src/pkg/ygtkpkghistorydialog.cc:493
 msgid "No entries."
 msgstr "Brak wpisów."
 
@@ -46,12 +46,11 @@ msgstr "Brak wpisów."
 msgid "Error"
 msgstr "Błąd"
 
-#: src/YGUI.cc:135
-#, c-format
+#: src/YGUI.cc:132
+#, fuzzy, c-format
 msgid ""
-"Command line options for the YaST2 UI (Gtk plugin):\n"
+"Command line options for the YaST2 UI (GTK plugin):\n"
 "\n"
-"--no-wm       assume no window manager is running\n"
 "--noborder    no window manager border for main dialogs\n"
 "--fullscreen  use full screen for main dialogs\n"
 "--nothreads   run without additional UI threads\n"
@@ -67,46 +66,53 @@ msgstr ""
 "--help     pokazuje ten tekst pomocy\n"
 "\n"
 
-#: src/YGUI.cc:293
-msgid "Select Macro File to Play"
-msgstr "Proszę wybrać plik makra do wykonania"
+#: src/YGUI.cc:308
+msgid "Open Macro file"
+msgstr ""
 
-#: src/YGUI.cc:309
+#: src/YGUI.cc:324
 msgid "Macro recording done."
 msgstr "Nagrano makro."
 
-#: src/YGUI.cc:315
-msgid "Select Macro File to Record to"
-msgstr "Proszę wybrać plik makra do nagrania"
+#: src/YGUI.cc:330
+#, fuzzy
+msgid "Save Macro"
+msgstr "&Zapisz dziennik"
 
-#: src/YGUI.cc:324
-msgid "Save y2logs to..."
+#: src/YGUI.cc:339
+#, fuzzy
+msgid "Save y2logs"
 msgstr "Zapisywanie y2logs do..."
 
-#: src/YGUI.cc:334
-#, c-format
-msgid "Error: couldn't save y2logs: \"%s\" (exit value: %d)"
+#: src/YGUI.cc:349
+#, fuzzy, c-format
+msgid "Could not run: '%s' (exit value: %d)"
 msgstr "Błąd: nie można zapisać y2logs \"%s\" (komunikat wyjścia: %d)"
 
-#: src/YGUI.cc:360
+#: src/YGUI.cc:375
 msgid "No dialog to take screenshot of."
 msgstr "Brak okna dialogowego do zrobienia zrzutu ekranu."
 
-#: src/YGUI.cc:372
-msgid "Couldn't take a screenshot."
+#: src/YGUI.cc:387
+#, fuzzy
+msgid "Could not take screenshot."
 msgstr "Nie można wykonać zrzutu ekranu."
 
-#: src/YGUI.cc:413
-msgid "Save screenshot to"
+#: src/YGUI.cc:428
+#, fuzzy
+msgid "Save screenshot"
 msgstr "Zapisz zrzut ekranu do"
 
-#: src/YGUI.cc:425
-msgid "Couldn't save screenshot to file "
-msgstr "Nie można zapisać zrzutu ekranu do pliku "
+#. Post error popup
+#: src/YGUI.cc:440 src/pkg/ygtkpkgmenubar.cc:367
+#, fuzzy
+msgid "Could not save to:"
+msgstr "Nie można zapisać listy pakietów do: "
 
-#: src/YGUI.cc:466
-msgid "Choose"
-msgstr "Wybierz"
+#: src/YGUI.cc:482
+#, fuzzy
+msgid "Select"
+msgstr "Usuń"
 
 #: src/YGUtils.cc:630
 msgid "Apply"
@@ -116,8 +122,8 @@ msgstr "Zastosuj"
 msgid "Accept"
 msgstr "Akceptuj"
 
-#: src/YGUtils.cc:632 src/pkg/ygtkpkgdetailview.cc:540
-#: src/pkg/ygtkpkgdetailview.cc:561 src/pkg/ygtkpkglistview.cc:293
+#: src/YGUtils.cc:632 src/pkg/ygtkpkgdetailview.cc:541
+#: src/pkg/ygtkpkgdetailview.cc:562 src/pkg/ygtkpkglistview.cc:293
 msgid "Install"
 msgstr "Zainstaluj"
 
@@ -173,121 +179,122 @@ msgstr "Wyłącz"
 msgid "Exit"
 msgstr "Wyjście"
 
-#: src/pkg/YGPackageSelector.cc:86 src/pkg/YGPackageSelector.cc:620
-#: src/pkg/ygtkpkgdetailview.cc:1136 src/pkg/ygtkpkgproductdialog.cc:129
-#: src/pkg/ygtkpkgundolist.cc:257
+#: src/pkg/YGPackageSelector.cc:89 src/pkg/YGPackageSelector.cc:623
+#: src/pkg/ygtkpkgdetailview.cc:1135 src/pkg/ygtkpkgproductdialog.cc:129
+#: src/pkg/ygtkpkgundolist.cc:259
 msgid "Name"
 msgstr "Nazwa"
 
-#: src/pkg/YGPackageSelector.cc:87 src/pkg/YGPackageSelector.cc:622
-#: src/pkg/ygtkpkgdetailview.cc:1137 src/pkg/ygtkpkgproductdialog.cc:137
-#: src/pkg/ygtkpkgundolist.cc:258
+#: src/pkg/YGPackageSelector.cc:90 src/pkg/YGPackageSelector.cc:625
+#: src/pkg/ygtkpkgdetailview.cc:1136 src/pkg/ygtkpkgproductdialog.cc:137
+#: src/pkg/ygtkpkgundolist.cc:260
 msgid "Version"
 msgstr "Wersja"
 
-#: src/pkg/YGPackageSelector.cc:89 src/pkg/ygtkpkgdetailview.cc:1138
+#: src/pkg/YGPackageSelector.cc:92 src/pkg/ygtkpkgdetailview.cc:1137
 msgid "Size"
 msgstr "Rozmiar"
 
-#: src/pkg/YGPackageSelector.cc:91 src/pkg/ygtkpkghistorydialog.cc:527
+#: src/pkg/YGPackageSelector.cc:94 src/pkg/ygtkpkghistorydialog.cc:506
 msgid "Action"
 msgstr "Alkcja"
 
-#: src/pkg/YGPackageSelector.cc:93 src/pkg/YGPackageSelector.cc:623
-#: src/pkg/ygtkpkgdetailview.cc:1139 src/pkg/ygtkpkghistorydialog.cc:562
+#: src/pkg/YGPackageSelector.cc:96 src/pkg/YGPackageSelector.cc:626
+#: src/pkg/ygtkpkgdetailview.cc:1138 src/pkg/ygtkpkghistorydialog.cc:541
 msgid "Repository"
 msgstr "Repozytorium"
 
-#: src/pkg/YGPackageSelector.cc:95 src/pkg/YGPackageSelector.cc:621
-#: src/pkg/ygtkpkgdetailview.cc:1140
+#: src/pkg/YGPackageSelector.cc:98 src/pkg/YGPackageSelector.cc:624
+#: src/pkg/ygtkpkgdetailview.cc:1139
 msgid "Supportability"
 msgstr "Możliwość wsparcia"
 
-#: src/pkg/YGPackageSelector.cc:100
+#: src/pkg/YGPackageSelector.cc:103
 msgid "Package _listing:"
 msgstr "_Lista pakietów:"
 
-#: src/pkg/YGPackageSelector.cc:148
+#: src/pkg/YGPackageSelector.cc:151
 msgid "Priorities"
 msgstr "Priorytety"
 
-#: src/pkg/YGPackageSelector.cc:149 src/pkg/YGPackageSelector.cc:157
+#: src/pkg/YGPackageSelector.cc:152 src/pkg/YGPackageSelector.cc:160
 msgid "Repositories"
 msgstr "Repozytoria"
 
-#: src/pkg/YGPackageSelector.cc:155
+#: src/pkg/YGPackageSelector.cc:158
 msgid "Groups"
 msgstr "Grupy"
 
-#: src/pkg/YGPackageSelector.cc:156
+#: src/pkg/YGPackageSelector.cc:159
 msgid "RPM Groups"
 msgstr "Grupy RPM"
 
-#: src/pkg/YGPackageSelector.cc:158
+#: src/pkg/YGPackageSelector.cc:161
 msgid "Support"
 msgstr "Pomoc techniczna"
 
-#: src/pkg/YGPackageSelector.cc:162
+#: src/pkg/YGPackageSelector.cc:165
 msgid "Patterns"
 msgstr "Wzorce"
 
-#: src/pkg/YGPackageSelector.cc:163
+#: src/pkg/YGPackageSelector.cc:166
 msgid "Languages"
 msgstr "Języki"
 
-#: src/pkg/YGPackageSelector.cc:271
+#: src/pkg/YGPackageSelector.cc:274
 msgid "License Agreement"
 msgstr "Umowa licencyjna"
 
-#: src/pkg/YGPackageSelector.cc:272
+#: src/pkg/YGPackageSelector.cc:275
 msgid "Do you accept the terms of this license?"
 msgstr "Czy akceptują Państwo warunki tej licencji?"
 
-#: src/pkg/YGPackageSelector.cc:276
+#: src/pkg/YGPackageSelector.cc:279
 msgid "Warning Message"
 msgstr "Komunikat ostrzegawczy"
 
-#: src/pkg/YGPackageSelector.cc:276
-msgid "Install anyway"
+#: src/pkg/YGPackageSelector.cc:279
+#, fuzzy
+msgid "Install anyway?"
 msgstr "Zainstaluj mimo wszystko"
 
-#: src/pkg/YGPackageSelector.cc:365
+#: src/pkg/YGPackageSelector.cc:368
 msgid "There are some conflicts on the transaction that must be solved manually."
 msgstr "W transakcji wystąpiły konfilkty, które muszą być rozwiązane ręcznie."
 
-#: src/pkg/YGPackageSelector.cc:582
+#: src/pkg/YGPackageSelector.cc:585
 msgid "Changes not saved!"
 msgstr "Zmiany nie zostały zapisane."
 
-#: src/pkg/YGPackageSelector.cc:584
+#: src/pkg/YGPackageSelector.cc:587
 msgid "Quit anyway?"
 msgstr "Zakończyć mimo tego?"
 
-#: src/pkg/YGPackageSelector.cc:603
+#: src/pkg/YGPackageSelector.cc:606
 msgid "Unsupported packages"
 msgstr "Nieobsługiwane pakiety"
 
-#: src/pkg/YGPackageSelector.cc:605
+#: src/pkg/YGPackageSelector.cc:608
 msgid "Please realize that the following software is either unsupported or requires an additional customer contract for support."
 msgstr "Należy mieć świadomość, że dla następującego oprogramowania nie ma pomocy technicznej lub jej uzyskanie wymaga dodatkowej umowy klienta."
 
-#: src/pkg/YGPackageSelector.cc:666
+#: src/pkg/YGPackageSelector.cc:670
 msgid "Online Update"
 msgstr "Aktualizacja online"
 
-#: src/pkg/YGPackageSelector.cc:671
+#: src/pkg/YGPackageSelector.cc:675
 msgid "Software Manager"
 msgstr "Zarządzanie oprogramowaniem"
 
-#: src/pkg/YGPackageSelector.cc:679
+#: src/pkg/YGPackageSelector.cc:683
 msgid "Please wait..."
 msgstr "Proszę czekać..."
 
-#: src/pkg/YGPackageSelector.cc:681
+#: src/pkg/YGPackageSelector.cc:685
 msgid "_Cancel"
 msgstr "_Anuluj"
 
-#: src/pkg/YGPackageSelector.cc:684
+#: src/pkg/YGPackageSelector.cc:688
 msgid "_Apply"
 msgstr "_Zastosuj"
 
@@ -354,328 +361,284 @@ msgstr "<h1>Cel</h1><p>To narzędzie pozwala przeglądać i wybierać poprawki. 
 msgid "<p>Only patches that apply to your system will be visible. You can be sure that the decision to make a patch available is not done trivially.</p><p>If you are looking for applications enhancements, you should check for <i>upgrades</i> on the <b>Software Manager</b>.</p>"
 msgstr ""
 
-#: src/pkg/ygtkpkgdetailview.cc:28
-msgid "<i>Information only available for installed packages.</i>"
+#: src/pkg/ygtkpkgdetailview.cc:29
+#, fuzzy
+msgid "Information only available for installed packages."
 msgstr "<i>Informacje dostępne tylko dla zainstalowanych pakietów.</i>"
 
-#: src/pkg/ygtkpkgdetailview.cc:88
+#: src/pkg/ygtkpkgdetailview.cc:92
 msgid "Several selected"
 msgstr "Wybrano kilka"
 
-#: src/pkg/ygtkpkgdetailview.cc:157
+#: src/pkg/ygtkpkgdetailview.cc:161
 msgid "Web site:"
 msgstr "Witryna WWW:"
 
-#: src/pkg/ygtkpkgdetailview.cc:164
+#: src/pkg/ygtkpkgdetailview.cc:168
 msgid "Patch issued:"
 msgstr "Poprawki:"
 
-#: src/pkg/ygtkpkgdetailview.cc:196
-msgid "_Open (as "
-msgstr "_Otwórz (jako"
+#: src/pkg/ygtkpkgdetailview.cc:200
+#, fuzzy
+msgid "as"
+msgstr "Mapy"
 
-#: src/pkg/ygtkpkgdetailview.cc:201
-msgid "_Open"
-msgstr "_Otwórz"
-
-#: src/pkg/ygtkpkgdetailview.cc:325
+#: src/pkg/ygtkpkgdetailview.cc:326
 msgid "Details"
 msgstr "Szczegóły"
 
-#: src/pkg/ygtkpkgdetailview.cc:344
+#: src/pkg/ygtkpkgdetailview.cc:345
 msgid "Size:"
 msgstr "Rozmiar:"
 
-#: src/pkg/ygtkpkgdetailview.cc:345
+#: src/pkg/ygtkpkgdetailview.cc:346
 msgid "License:"
 msgstr "Licencja:"
 
-#: src/pkg/ygtkpkgdetailview.cc:369
+#: src/pkg/ygtkpkgdetailview.cc:370
 msgid "Versions"
 msgstr "Wersje"
 
 #. static property (always "Undo")
-#: src/pkg/ygtkpkgdetailview.cc:382 src/pkg/ygtkpkgdetailview.cc:385
-#: src/pkg/ygtkpkgdetailview.cc:565 src/pkg/ygtkpkglistview.cc:289
+#: src/pkg/ygtkpkgdetailview.cc:383 src/pkg/ygtkpkgdetailview.cc:386
+#: src/pkg/ygtkpkgdetailview.cc:566 src/pkg/ygtkpkglistview.cc:289
 #: src/pkg/ygtkpkglistview.cc:834
 msgid "Undo"
 msgstr "Cofnij"
 
 #. Translators: this refers to the package status
-#: src/pkg/ygtkpkgdetailview.cc:434 src/pkg/ygtkpkgfilterview.cc:196
-#: src/pkg/ygtkpkgfilterview.cc:205 src/pkg/ygtkpkglistview.cc:942
+#: src/pkg/ygtkpkgdetailview.cc:435 src/pkg/ygtkpkgfilterview.cc:200
+#: src/pkg/ygtkpkgfilterview.cc:209 src/pkg/ygtkpkglistview.cc:942
 msgid "Installed"
 msgstr "Zainstalowany"
 
-#: src/pkg/ygtkpkgdetailview.cc:518 src/pkg/ygtkpkgdetailview.cc:556
+#: src/pkg/ygtkpkgdetailview.cc:519 src/pkg/ygtkpkgdetailview.cc:557
 #: src/pkg/ygtkpkglistview.cc:291
 msgid "Remove"
 msgstr "Usuń"
 
-#: src/pkg/ygtkpkgdetailview.cc:527 src/pkg/ygtkpkgdetailview.cc:552
+#: src/pkg/ygtkpkgdetailview.cc:528 src/pkg/ygtkpkgdetailview.cc:553
 msgid "Upgrade"
 msgstr "Uaktualnij"
 
-#: src/pkg/ygtkpkgdetailview.cc:531
+#: src/pkg/ygtkpkgdetailview.cc:532
 msgid "Downgrade"
 msgstr "Zainstaluj starszą wersję"
 
-#: src/pkg/ygtkpkgdetailview.cc:535
+#: src/pkg/ygtkpkgdetailview.cc:536
 msgid "Re-install"
 msgstr "Zainstaluj ponownie"
 
-#: src/pkg/ygtkpkgdetailview.cc:585
+#: src/pkg/ygtkpkgdetailview.cc:586
 msgid "Package is locked"
 msgstr "Pakiet jest zablokowany."
 
-#: src/pkg/ygtkpkgdetailview.cc:680
+#: src/pkg/ygtkpkgdetailview.cc:681
 msgid "Supportability:"
 msgstr "Możliwość wsparcia:"
 
-#: src/pkg/ygtkpkgdetailview.cc:696 src/pkg/ygtkpkgmenubar.cc:710
+#: src/pkg/ygtkpkgdetailview.cc:697
 msgid "Dependencies"
 msgstr "Zależności"
 
-#: src/pkg/ygtkpkgdetailview.cc:764
+#: src/pkg/ygtkpkgdetailview.cc:765
 #, fuzzy
 msgid "Installed Version:"
 msgstr "Wersja zainstalowana"
 
-#: src/pkg/ygtkpkgdetailview.cc:765
+#: src/pkg/ygtkpkgdetailview.cc:766
 #, fuzzy
 msgid "Available Version:"
 msgstr "Dostępne sekcje"
 
-#: src/pkg/ygtkpkgdetailview.cc:781
-msgid "idem"
-msgstr ""
-
-#: src/pkg/ygtkpkgdetailview.cc:801
-msgid "Provides:"
-msgstr "Dostarcza:"
-
-#: src/pkg/ygtkpkgdetailview.cc:802
-msgid "Pre-requires:"
-msgstr "Wymagania wstępne:"
-
-#: src/pkg/ygtkpkgdetailview.cc:803
-msgid "Requires:"
-msgstr "Wymaga:"
-
-#: src/pkg/ygtkpkgdetailview.cc:804
-msgid "Conflicts:"
-msgstr "Konflikty:"
-
-#: src/pkg/ygtkpkgdetailview.cc:805
-msgid "Obsoletes:"
-msgstr "Nieaktualne:"
-
-#: src/pkg/ygtkpkgdetailview.cc:806
-msgid "Recommends:"
-msgstr "Rekomendowane:"
-
-#: src/pkg/ygtkpkgdetailview.cc:807
-msgid "Suggests:"
-msgstr "Sugerowane:"
-
-#: src/pkg/ygtkpkgdetailview.cc:808
-#, fuzzy
-msgid "Enhances:"
-msgstr "Zmiany:"
-
-#: src/pkg/ygtkpkgdetailview.cc:809
-msgid "Supplements:"
-msgstr "Dodatki:"
-
-#: src/pkg/ygtkpkgdetailview.cc:881
+#: src/pkg/ygtkpkgdetailview.cc:880
 msgid "File list"
 msgstr "Lista plików"
 
-#: src/pkg/ygtkpkgdetailview.cc:998
+#: src/pkg/ygtkpkgdetailview.cc:997
 msgid "Changelog"
 msgstr "Dziennik zmian"
 
-#: src/pkg/ygtkpkgdetailview.cc:1022
+#: src/pkg/ygtkpkgdetailview.cc:1021
 msgid "Changelog applies only to the installed version."
 msgstr "Lista zmian odnosi się tylko do zainstalowanej wersji."
 
-#: src/pkg/ygtkpkgdetailview.cc:1048
+#: src/pkg/ygtkpkgdetailview.cc:1047
 msgid "Authors"
 msgstr "Autorzy"
 
-#: src/pkg/ygtkpkgdetailview.cc:1061
-#, fuzzy
-msgid "<i>Not specified.</i>"
-msgstr "Nie określono IP."
+#: src/pkg/ygtkpkgdetailview.cc:1060
+msgid "Attribute not-specified."
+msgstr ""
 
-#: src/pkg/ygtkpkgdetailview.cc:1113
+#: src/pkg/ygtkpkgdetailview.cc:1112
 msgid "Developed by:"
 msgstr "Rozwijany przez:"
 
-#: src/pkg/ygtkpkgdetailview.cc:1116
+#: src/pkg/ygtkpkgdetailview.cc:1115
 msgid "Packaged by:"
 msgstr "Spakowany przez:"
 
-#: src/pkg/ygtkpkgdetailview.cc:1132
+#: src/pkg/ygtkpkgdetailview.cc:1131
 msgid "Applies to"
 msgstr "Stosuje się do"
 
 #. Translators: this refers to the package status
-#: src/pkg/ygtkpkgfilterview.cc:194
+#: src/pkg/ygtkpkgfilterview.cc:198
 msgid "Available"
 msgstr "_Dostępne"
 
 #. Translators: this refers to the package status
-#: src/pkg/ygtkpkgfilterview.cc:198 src/pkg/ygtkpkgfilterview.cc:210
+#: src/pkg/ygtkpkgfilterview.cc:202 src/pkg/ygtkpkgfilterview.cc:214
 msgid "Modified"
 msgstr "Zmodyfikowane"
 
 #. Translators: "Any status" may be translated as "All statuses" (whichever's smaller)
-#: src/pkg/ygtkpkgfilterview.cc:202 src/pkg/ygtkpkgfilterview.cc:312
-#: src/pkg/ygtkpkgfilterview.cc:545 src/pkg/ygtkpkgrpmgroupsview.cc:56
+#: src/pkg/ygtkpkgfilterview.cc:206 src/pkg/ygtkpkgfilterview.cc:316
+#: src/pkg/ygtkpkgfilterview.cc:549 src/pkg/ygtkpkgrpmgroupsview.cc:56
 msgid "All packages"
 msgstr "Wszystkie pakiety"
 
 #. Translators: this refers to the package status
-#: src/pkg/ygtkpkgfilterview.cc:204 src/pkg/ygtkpkglistview.cc:949
+#: src/pkg/ygtkpkgfilterview.cc:208 src/pkg/ygtkpkglistview.cc:949
 #: src/pkg/ygtkpkgpatternview.cc:374
 msgid "Not installed"
 msgstr "Niezainstalowany"
 
 #. Translators: refers to package status: may be translated as "Upgrade"
-#: src/pkg/ygtkpkgfilterview.cc:207
+#: src/pkg/ygtkpkgfilterview.cc:211
 msgid "Upgrades"
 msgstr "Aktualizacje"
 
 #. Translators: this refers to the package status
-#: src/pkg/ygtkpkgfilterview.cc:209
+#: src/pkg/ygtkpkgfilterview.cc:213
 msgid "Locked"
 msgstr "Zablokowane"
 
-#. Translators: if you prefer, translate this as "Apply Patches"
-#: src/pkg/ygtkpkgfilterview.cc:273
+#. Translators: this is shown next to the "Upgrade All" button
+#: src/pkg/ygtkpkgfilterview.cc:277
 #, fuzzy
-msgid "Apply Patches"
-msgstr "Wszystkie poprawki"
+msgid "Only Upgrade Patches"
+msgstr "Aktualizacje"
 
-#: src/pkg/ygtkpkgfilterview.cc:279
+#: src/pkg/ygtkpkgfilterview.cc:283
 msgid "Upgrade All"
 msgstr "Aktualizacja wszystkiego"
 
 #. Translators: when "upload" isn't easy to translate, translate this as "7 days old"
-#: src/pkg/ygtkpkgfilterview.cc:329
+#: src/pkg/ygtkpkgfilterview.cc:333
 msgid "(uploaded last 7 days)"
 msgstr "(pobrano ostatnie 7 dni)"
 
-#: src/pkg/ygtkpkgfilterview.cc:364
+#: src/pkg/ygtkpkgfilterview.cc:368
 msgid "All repositories"
 msgstr "Wszystkie repozytoria"
 
-#: src/pkg/ygtkpkgfilterview.cc:387
+#: src/pkg/ygtkpkgfilterview.cc:391
 msgid "None"
 msgstr "Żaden"
 
-#: src/pkg/ygtkpkgfilterview.cc:478
+#: src/pkg/ygtkpkgfilterview.cc:482
 msgid "Repository not refreshed in a long time."
 msgstr "Repozytorium nie było odświeżane przez długi czas."
 
-#: src/pkg/ygtkpkgfilterview.cc:497
+#: src/pkg/ygtkpkgfilterview.cc:501
 #, fuzzy
 msgid "Switch installed packages to the versions in this repository"
 msgstr "Zmień wersję pakietów systemowych do wersji z tego repozytorium."
 
-#: src/pkg/ygtkpkgfilterview.cc:517 src/pkg/ygtkpkgfilterview.cc:532
+#: src/pkg/ygtkpkgfilterview.cc:521 src/pkg/ygtkpkgfilterview.cc:536
 msgid "Edit Repositories"
 msgstr "Edytuj repozytoria"
 
 #. Translators: "Any priority" may be translated as "All priorities" (whichever's smaller)
-#: src/pkg/ygtkpkgfilterview.cc:567
+#: src/pkg/ygtkpkgfilterview.cc:571
 #, fuzzy
 msgid "All patches"
 msgstr "Wszystkie poprawki"
 
-#: src/pkg/ygtkpkghistorydialog.cc:49
+#: src/pkg/ygtkpkghistorydialog.cc:28
 msgid "automatic"
 msgstr "automatyczny"
 
-#: src/pkg/ygtkpkghistorydialog.cc:51
+#: src/pkg/ygtkpkghistorydialog.cc:30
 #, fuzzy
 msgid "user:"
 msgstr "użytkownik : root"
 
-#: src/pkg/ygtkpkghistorydialog.cc:117 src/pkg/ygtkpkghistorydialog.cc:294
+#: src/pkg/ygtkpkghistorydialog.cc:96 src/pkg/ygtkpkghistorydialog.cc:273
 #: src/pkg/ygtkpkglistview.cc:910
 msgid "install"
 msgstr "Zainstaluj"
 
-#: src/pkg/ygtkpkghistorydialog.cc:119 src/pkg/ygtkpkghistorydialog.cc:140
-#: src/pkg/ygtkpkghistorydialog.cc:298 src/pkg/ygtkpkglistview.cc:915
+#: src/pkg/ygtkpkghistorydialog.cc:98 src/pkg/ygtkpkghistorydialog.cc:119
+#: src/pkg/ygtkpkghistorydialog.cc:277 src/pkg/ygtkpkglistview.cc:915
 msgid "upgrade"
 msgstr "Uaktualnij"
 
-#: src/pkg/ygtkpkghistorydialog.cc:121 src/pkg/ygtkpkghistorydialog.cc:310
+#: src/pkg/ygtkpkghistorydialog.cc:100 src/pkg/ygtkpkghistorydialog.cc:289
 #: src/pkg/ygtkpkglistview.cc:924
 msgid "remove"
 msgstr "usunięcie"
 
-#: src/pkg/ygtkpkghistorydialog.cc:123 src/pkg/ygtkpkghistorydialog.cc:300
+#: src/pkg/ygtkpkghistorydialog.cc:102 src/pkg/ygtkpkghistorydialog.cc:279
 #: src/pkg/ygtkpkglistview.cc:917
 msgid "downgrade"
 msgstr "Zainstaluj starszą wersję"
 
 #. (edition == prev_edition)
-#: src/pkg/ygtkpkghistorydialog.cc:125 src/pkg/ygtkpkghistorydialog.cc:302
+#: src/pkg/ygtkpkghistorydialog.cc:104 src/pkg/ygtkpkghistorydialog.cc:281
 #: src/pkg/ygtkpkglistview.cc:919
 msgid "re-install"
 msgstr "Zainstaluj ponownie"
 
-#: src/pkg/ygtkpkghistorydialog.cc:147 src/pkg/ygtkpkglistview.cc:209
+#: src/pkg/ygtkpkghistorydialog.cc:126 src/pkg/ygtkpkglistview.cc:209
 msgid "patch"
 msgstr "poprawka"
 
-#: src/pkg/ygtkpkghistorydialog.cc:155
+#: src/pkg/ygtkpkghistorydialog.cc:134
 msgid "auto"
 msgstr "auto"
 
-#: src/pkg/ygtkpkghistorydialog.cc:324
+#: src/pkg/ygtkpkghistorydialog.cc:303
 msgid "add repository"
 msgstr "dodaj repozytorium"
 
-#: src/pkg/ygtkpkghistorydialog.cc:332
+#: src/pkg/ygtkpkghistorydialog.cc:311
 msgid "remove repository"
 msgstr "usuń repozytorium"
 
-#: src/pkg/ygtkpkghistorydialog.cc:339
+#: src/pkg/ygtkpkghistorydialog.cc:318
 msgid "change repository alias"
 msgstr "zmień alias repozytorium"
 
-#: src/pkg/ygtkpkghistorydialog.cc:346
+#: src/pkg/ygtkpkghistorydialog.cc:325
 msgid "change repository url"
 msgstr "zmień url repozytorium"
 
-#: src/pkg/ygtkpkghistorydialog.cc:415
+#: src/pkg/ygtkpkghistorydialog.cc:394
 #, fuzzy
 msgid "Save to"
 msgstr "&Zapisz dziennik"
 
-#: src/pkg/ygtkpkghistorydialog.cc:552
+#: src/pkg/ygtkpkghistorydialog.cc:531
 msgid "Version / URL"
 msgstr "Wersja / URL"
 
-#: src/pkg/ygtkpkghistorydialog.cc:586
+#: src/pkg/ygtkpkghistorydialog.cc:565
 msgid "Requested by"
 msgstr "Żądane przez"
 
-#: src/pkg/ygtkpkghistorydialog.cc:607
+#: src/pkg/ygtkpkghistorydialog.cc:586
 msgid "Date"
 msgstr "Data"
 
-#: src/pkg/ygtkpkghistorydialog.cc:621
+#: src/pkg/ygtkpkghistorydialog.cc:600
 #, fuzzy, c-format
 msgid "History (%s)"
 msgstr "Historia"
 
-#: src/pkg/ygtkpkghistorydialog.cc:623
+#: src/pkg/ygtkpkghistorydialog.cc:602
 msgid "Save to File"
 msgstr "Zapisz do pliku"
 
@@ -729,176 +692,205 @@ msgstr "Do usunięcia"
 msgid "(upgrade available)"
 msgstr " (dostępne uaktualnienie)"
 
-#: src/pkg/ygtkpkglistview.cc:951
-msgid ""
-"\n"
-"<i>status changed by the dependency solver</i>"
+#: src/pkg/ygtkpkglistview.cc:952
+#, fuzzy
+msgid "status changed by the dependencies resolver"
 msgstr ""
 "\n"
 "<i>stan został zmieniony przez moduł rozwiązywania zależności</i>"
 
-#: src/pkg/ygtkpkglistview.cc:987 src/pkg/yzypptags.cc:30
+#: src/pkg/ygtkpkglistview.cc:990 src/pkg/yzypptags.cc:30
 msgid "System"
 msgstr "System"
 
 #: src/pkg/ygtkpkgmenubar.cc:217
-msgid "Import"
+#, fuzzy
+msgid "Import from"
 msgstr "Import"
 
 #: src/pkg/ygtkpkgmenubar.cc:296
-#, fuzzy, c-format
-msgid "Could not load package list: '%s'"
-msgstr "Nie można załadować listy pakietów z: "
+msgid "Could not open:"
+msgstr ""
 
 #: src/pkg/ygtkpkgmenubar.cc:310
-msgid "Export"
+#, fuzzy
+msgid "Export to"
 msgstr "Eksportuj"
-
-#. Post error popup
-#: src/pkg/ygtkpkgmenubar.cc:367
-#, fuzzy, c-format
-msgid "Could not export package list: '%s'"
-msgstr "Wystąpił błąd podczas eksportowania listy pakietów do '%s'"
 
 #: src/pkg/ygtkpkgmenubar.cc:381
 #, fuzzy
-msgid ""
-"Use this to generate extensive logs to help tracking down bugs in the dependency solver.\n"
-"The logs will be stored in directory: "
+msgid "Use this to generate extensive logs to help tracking down bugs in the dependencies resolver."
 msgstr ""
 "Należy użyć tej opcji, aby wygenerować szczegółowe dzienniki, które pomogą w śledzeniu\n"
 " błędów w module rozwiązywania zależności.\n"
 "Dzienniki te zostaną zapisane do katalogu: "
 
-#: src/pkg/ygtkpkgmenubar.cc:388
-#, fuzzy
-msgid "Create Dependency Solver Test Case"
-msgstr "Tworzenie testu modułu rozwiązywania zależności"
+#: src/pkg/ygtkpkgmenubar.cc:383
+msgid "The logs will be saved to the directory:"
+msgstr ""
 
-#: src/pkg/ygtkpkgmenubar.cc:402
+#. Translators: if there is no direct translation to Dependencies Resolver, then translate it to e.g. Dependencies Manager
+#: src/pkg/ygtkpkgmenubar.cc:389
+#, fuzzy
+msgid "Generate Dependencies Resolver Testcase"
+msgstr "Tworzenie testu rozwiązywania zależności"
+
+#: src/pkg/ygtkpkgmenubar.cc:403
 msgid "Success"
 msgstr "Sukces"
 
-#: src/pkg/ygtkpkgmenubar.cc:403
+#: src/pkg/ygtkpkgmenubar.cc:404
 #, fuzzy
-msgid "Dependency solver test case written to"
+msgid "Dependencies resolver test case written to:"
 msgstr "Test modułu rozwiązywania zależności został zapisany do"
 
-#: src/pkg/ygtkpkgmenubar.cc:407
+#: src/pkg/ygtkpkgmenubar.cc:408
 #, fuzzy
 msgid "Also create a <tt>y2logs.tgz</tt> tar archive to attach to bugzilla?"
 msgstr "Czy przygotować archiwum tar <tt>y2logs.tgz</tt> do załączenia do zgłoszenia w Bugzilli?"
 
-#: src/pkg/ygtkpkgmenubar.cc:416
+#: src/pkg/ygtkpkgmenubar.cc:417
 #, fuzzy
 msgid ""
-"Failed to create dependency solver test case.\n"
-"Please check disk space and permissions for"
+"Failed to create dependencies resolver testcase.\n"
+"Please check disk space and permissions for:"
 msgstr ""
 "Utworzenie testu modułu rozwiązywania zależności nie powiodło się.\n"
 "Proszę sprawdzić miejsce na dysku i prawa zapisu do"
 
-#: src/pkg/ygtkpkgmenubar.cc:689
-msgid "File"
+#: src/pkg/ygtkpkgmenubar.cc:688
+#, fuzzy
+msgid "F_ile"
 msgstr "Plik"
 
-#: src/pkg/ygtkpkgmenubar.cc:691
-msgid "Import..."
+#: src/pkg/ygtkpkgmenubar.cc:690
+#, fuzzy
+msgid "_Import..."
 msgstr "Importuj..."
 
-#: src/pkg/ygtkpkgmenubar.cc:693
-msgid "Export..."
+#: src/pkg/ygtkpkgmenubar.cc:692
+#, fuzzy
+msgid "_Export..."
 msgstr "Eksportuj..."
 
-#: src/pkg/ygtkpkgmenubar.cc:699
-msgid "Configuration"
+#: src/pkg/ygtkpkgmenubar.cc:698
+#, fuzzy
+msgid "_Configuration"
 msgstr "Konfiguracja"
 
-#: src/pkg/ygtkpkgmenubar.cc:701
-msgid "Repositories..."
+#: src/pkg/ygtkpkgmenubar.cc:700
+#, fuzzy
+msgid "_Repositories..."
 msgstr "Repozytoria..."
 
-#: src/pkg/ygtkpkgmenubar.cc:704
-msgid "Online Update..."
+#: src/pkg/ygtkpkgmenubar.cc:703
+#, fuzzy
+msgid "_Online Update..."
 msgstr "Aktualizacja online..."
 
-#: src/pkg/ygtkpkgmenubar.cc:707
-msgid "Search Packages on Web..."
+#: src/pkg/ygtkpkgmenubar.cc:706
+#, fuzzy
+msgid "Search Packages on _Web..."
 msgstr "Wyszukaj pakiety w sieci..."
 
-#: src/pkg/ygtkpkgmenubar.cc:712
-msgid "Check Now"
+#: src/pkg/ygtkpkgmenubar.cc:709
+#, fuzzy
+msgid "_Dependencies"
+msgstr "Zależności"
+
+#: src/pkg/ygtkpkgmenubar.cc:711
+#, fuzzy
+msgid "_Check Now"
 msgstr "Sprawdź teraz"
 
-#: src/pkg/ygtkpkgmenubar.cc:714
-msgid "Autocheck"
+#: src/pkg/ygtkpkgmenubar.cc:713
+#, fuzzy
+msgid "_Autocheck"
 msgstr "Autosprawdzanie"
 
-#: src/pkg/ygtkpkgmenubar.cc:717
-msgid "Options"
+#: src/pkg/ygtkpkgmenubar.cc:716
+#, fuzzy
+msgid "_Options"
 msgstr "Opcje"
 
 #. Translators: don't translate the "-devel"
-#: src/pkg/ygtkpkgmenubar.cc:720
-msgid "Show -devel packages"
+#: src/pkg/ygtkpkgmenubar.cc:719
+#, fuzzy
+msgid "Show -de_vel Packages"
 msgstr "Wyświetl pakiety devel"
 
 #. Translators: don't translate the "-debuginfo/-debugsource" part
-#: src/pkg/ygtkpkgmenubar.cc:722
-msgid "Show -debuginfo/-debugsource Packages"
+#: src/pkg/ygtkpkgmenubar.cc:721
+#, fuzzy
+msgid "Show -_debuginfo/-debugsource Packages"
 msgstr "Wyświetl pakiety debuginfo i debugsource"
 
-#: src/pkg/ygtkpkgmenubar.cc:723
-msgid "System Verification Mode"
+#: src/pkg/ygtkpkgmenubar.cc:722
+#, fuzzy
+msgid "_System Verification Mode"
 msgstr "Tryb weryfikacji systemu"
 
-#: src/pkg/ygtkpkgmenubar.cc:725
+#: src/pkg/ygtkpkgmenubar.cc:723
 #, fuzzy
 msgid "_Cleanup when deleting packages"
 msgstr "&Porządkowanie podczas usuwania pakietów"
 
-#: src/pkg/ygtkpkgmenubar.cc:726
+#: src/pkg/ygtkpkgmenubar.cc:724
 #, fuzzy
 msgid "_Allow vendor change"
 msgstr "&Pozwól na zmianę dostawcy"
 
-#: src/pkg/ygtkpkgmenubar.cc:730
-msgid "Extras"
+#: src/pkg/ygtkpkgmenubar.cc:727
+#, fuzzy
+msgid "E_xtras"
 msgstr "Dodatki"
 
-#: src/pkg/ygtkpkgmenubar.cc:732
-msgid "Show Products"
+#: src/pkg/ygtkpkgmenubar.cc:729
+#, fuzzy
+msgid "Show _Products"
 msgstr "Wyświetl produkty"
+
+#: src/pkg/ygtkpkgmenubar.cc:731
+#, fuzzy
+msgid "Show _Changes"
+msgstr "P&okaż zmiany "
 
 #: src/pkg/ygtkpkgmenubar.cc:734
 #, fuzzy
-msgid "Show Changes"
-msgstr "P&okaż zmiany "
-
-#: src/pkg/ygtkpkgmenubar.cc:737
-#, fuzzy
-msgid "Show History"
+msgid "Show _History"
 msgstr "Zobacz historię"
 
-#: src/pkg/ygtkpkgmenubar.cc:740
-msgid "Install All Matching -devel Packages"
+#: src/pkg/ygtkpkgmenubar.cc:736
+#, fuzzy
+msgid "Show _Unneeded Dependencies"
+msgstr "Zależności"
+
+#. Translators: keep "-_devel" untranslated
+#: src/pkg/ygtkpkgmenubar.cc:741
+#, fuzzy
+msgid "Install All Matching -_devel Packages"
 msgstr "Zainstaluj wszystkie pasujące pakiety devel"
 
-#: src/pkg/ygtkpkgmenubar.cc:742
-msgid "Install All Matching -debug-info Packages"
+#. Translators: keep "-debug-_info" untranslated
+#: src/pkg/ygtkpkgmenubar.cc:744
+#, fuzzy
+msgid "Install All Matching -debug-_sinfo Packages"
 msgstr "Zainstaluj wszystkie pasujące pakiety debug-info"
 
-#: src/pkg/ygtkpkgmenubar.cc:744
-msgid "Install All Matching -debug-source Packages"
-msgstr "Zainstaluj wszystkie pakiety debug-source"
-
+#. Translators: keep "-debug-_source" untranslated
 #: src/pkg/ygtkpkgmenubar.cc:747
 #, fuzzy
-msgid "Generate Dependency Solver Test Case"
-msgstr "Wygeneruj test rozwiązania zależności"
+msgid "Install All Matching -debug-_source Packages"
+msgstr "Zainstaluj wszystkie pakiety debug-source"
 
-#: src/pkg/ygtkpkgmenubar.cc:749
-msgid "Reset Ignored Dependency Conflicts"
+#: src/pkg/ygtkpkgmenubar.cc:750
+#, fuzzy
+msgid "Generate Dependencies Resolver _Testcase"
+msgstr "Tworzenie testu rozwiązywania zależności"
+
+#: src/pkg/ygtkpkgmenubar.cc:752
+#, fuzzy
+msgid "Reset _Ignored Dependencies Conflicts"
 msgstr "Zresetuj zignorowane konflikty zależności"
 
 #: src/pkg/ygtkpkgpatternview.cc:293
@@ -961,56 +953,56 @@ msgstr "Opis"
 msgid "File name"
 msgstr "Nazwa pliku"
 
-#: src/pkg/ygtkpkgsearchentry.cc:117
+#: src/pkg/ygtkpkgsearchentry.cc:118
 msgid "by"
 msgstr "przez"
 
-#: src/pkg/ygtkpkgsearchentry.cc:220
+#: src/pkg/ygtkpkgsearchentry.cc:221
 #, c-format
 msgid "%sPatterns are available%s that correspond to your search criteria."
 msgstr "%sDostępne są wzorce%s odpowiadające podanym kryteriom wyszukiwania."
 
-#: src/pkg/ygtkpkgsearchentry.cc:240
+#: src/pkg/ygtkpkgsearchentry.cc:241
 #, fuzzy
 msgid "Search by file name only reliable for installed packages."
 msgstr "Wyszukiwanie przez nazwę pliku można stosować tylko dla zainstalowanych pakietów."
 
-#: src/pkg/ygtkpkgstatusbar.cc:62
+#: src/pkg/ygtkpkgstatusbar.cc:43
 msgid "view all changes"
 msgstr "zobacz wszystkie zmian"
 
-#: src/pkg/ygtkpkgstatusbar.cc:92
+#: src/pkg/ygtkpkgstatusbar.cc:73
 #, fuzzy, c-format
 msgid "<b>%s</b> %d preselected packages"
 msgstr "pakiety powiązane."
 
-#: src/pkg/ygtkpkgstatusbar.cc:96
-#, c-format
-msgid "<b>%s</b> %s, plus %d dependencies"
-msgstr "<b>%s</b> %s, plus %d zależności"
-
-#: src/pkg/ygtkpkgstatusbar.cc:98
-#, c-format
-msgid "<b>%s</b> %s, plus 1 dependency"
+#: src/pkg/ygtkpkgstatusbar.cc:80
+#, fuzzy
+msgid "plus 1 dependency"
 msgstr "<b>%s</b> %s, plus jedna zależność"
 
-#: src/pkg/ygtkpkgstatusbar.cc:111
+#: src/pkg/ygtkpkgstatusbar.cc:82
+#, fuzzy, c-format
+msgid "plus %d dependencies"
+msgstr "<b>%s</b> %s, plus %d zależności"
+
+#: src/pkg/ygtkpkgstatusbar.cc:95
 msgid "No changes to perform"
 msgstr "Brak zmian do wykonania"
 
-#: src/pkg/ygtkpkgstatusbar.cc:167
+#: src/pkg/ygtkpkgstatusbar.cc:151
 msgid "To install:"
 msgstr "Do zainstalowania:"
 
-#: src/pkg/ygtkpkgstatusbar.cc:170
+#: src/pkg/ygtkpkgstatusbar.cc:154
 msgid "To upgrade:"
 msgstr "Do aktualizacji:"
 
-#: src/pkg/ygtkpkgstatusbar.cc:173
+#: src/pkg/ygtkpkgstatusbar.cc:157
 msgid "To remove:"
 msgstr "Do usunięcia:"
 
-#: src/pkg/ygtkpkgstatusbar.cc:250
+#: src/pkg/ygtkpkgstatusbar.cc:234
 msgid "Space available:"
 msgstr "Dostępna przestrzeń dyskowa:"
 
@@ -1022,32 +1014,51 @@ msgstr "Wymagana przestrzeń dyskowa:"
 msgid "Download size:"
 msgstr "Rozmiar do pobrania:"
 
-#. Translators: keep the first and final "%s". They will be expanded with html code.
-#: src/pkg/ygtkpkgundolist.cc:156
-#, c-format
-msgid "%sPartition %s is %s over-capacity (%s filled out of %s).%s"
+#. Translators: please keep the %s order intact. They refer to mount_point, needed_space
+#: src/pkg/ygtkpkgundolist.cc:155
+#, fuzzy, c-format
+msgid "Partition %s is %s over-capacity"
 msgstr "%sPartycja %s jest %s przepełniona (%s z %s).%s"
 
-#: src/pkg/ygtkpkgundolist.cc:237
+#. Translators: please keep the %s order intact. They refer to used_space, total_space
+#: src/pkg/ygtkpkgundolist.cc:158
+#, c-format
+msgid "%s filled out of %s"
+msgstr ""
+
+#: src/pkg/ygtkpkgundolist.cc:239
 msgid "Close software manager when done"
 msgstr "Zamknij menedżer oprogramowania po zakończeniu."
 
-#: src/pkg/ygtkpkgundolist.cc:259
+#: src/pkg/ygtkpkgundolist.cc:261
 #, fuzzy
 msgid "Revert?"
 msgstr "Waga"
 
-#: src/pkg/ygtkpkgundolist.cc:278
+#: src/pkg/ygtkpkgundolist.cc:280
 msgid "Summary of changes"
 msgstr "Podsumowanie zmian"
 
-#: src/pkg/ygtkpkgundolist.cc:280
+#: src/pkg/ygtkpkgundolist.cc:282
 msgid "Review the changes to perform."
 msgstr "Przegląd zmian do wykonania."
 
-#: src/pkg/ygtkpkgundolist.cc:288
+#: src/pkg/ygtkpkgundolist.cc:290
 msgid "See History"
 msgstr "Zobacz historię"
+
+#: src/pkg/ygtkpkgvestigialdialog.cc:128
+#, fuzzy
+msgid "Show Unneeded Dependencies"
+msgstr "Zależności"
+
+#: src/pkg/ygtkpkgvestigialdialog.cc:130
+msgid "This is not a comprehensive listing of dependencies no longer in use. It is possible we missed some."
+msgstr ""
+
+#: src/pkg/ygtkpkgvestigialdialog.cc:133
+msgid "Remove All"
+msgstr "Usuń wszystko"
 
 #: src/pkg/yzypptags.cc:24
 msgid "Education"
@@ -1107,7 +1118,7 @@ msgid "Localization"
 msgstr "Tłumaczenia"
 
 #. Translators: this refers to patch priority
-#: src/pkg/yzypptags.cc:43 src/pkg/yzyppwrapper.cc:735
+#: src/pkg/yzypptags.cc:43 src/pkg/yzyppwrapper.cc:756
 msgid "Security"
 msgstr "Bezpieczeństwo"
 
@@ -1119,7 +1130,7 @@ msgstr "Komunikacja"
 msgid "Network"
 msgstr "Sieć"
 
-#: src/pkg/yzypptags.cc:46 src/pkg/yzyppwrapper.cc:739
+#: src/pkg/yzypptags.cc:46 src/pkg/yzyppwrapper.cc:760
 msgid "Documentation"
 msgstr "Dokumentacja"
 
@@ -1136,50 +1147,53 @@ msgid "Suggested"
 msgstr "Sugerowany"
 
 #. Translators: this refers to patch priority
-#: src/pkg/yzypptags.cc:51 src/pkg/yzyppwrapper.cc:737
+#: src/pkg/yzypptags.cc:51 src/pkg/yzyppwrapper.cc:758
 msgid "Recommended"
 msgstr "Rekomendowany"
 
-#: src/pkg/yzypptags.cc:52
+#. Translators: this refers to packages no longer available in any repository.
+#: src/pkg/yzypptags.cc:53
 #, fuzzy
 msgid "Unmaintained"
 msgstr "Nieutrzymywane pakiety"
 
-#: src/pkg/yzypptags.cc:53
+#: src/pkg/yzypptags.cc:54
 msgid "Recent"
 msgstr "Ostatnie"
 
-#: src/pkg/yzypptags.cc:54
+#: src/pkg/yzypptags.cc:55
 msgid "Multiversion"
 msgstr "Wiele wersji"
 
-#: src/pkg/yzyppwrapper.cc:148
+#: src/pkg/yzyppwrapper.cc:169
 msgid "Installed:"
 msgstr "Zainstalowane:"
 
-#: src/pkg/yzyppwrapper.cc:190
-msgid "Reboot required: "
+#: src/pkg/yzyppwrapper.cc:211
+#, fuzzy
+msgid "Reboot required:"
 msgstr "Wymagane ponowne uruchomienie systemu:"
 
-#: src/pkg/yzyppwrapper.cc:191
+#: src/pkg/yzyppwrapper.cc:212
 msgid "the system will have to be restarted in order for this patch to take effect."
 msgstr "System musy zostać uruchomiony ponownie, aby ta aktualizacja wprowadziłą zmiany."
 
-#: src/pkg/yzyppwrapper.cc:195
-msgid "Relogin required: "
+#: src/pkg/yzyppwrapper.cc:216
+#, fuzzy
+msgid "Relogin required:"
 msgstr "Wymagane ponowne zalogowanie:"
 
-#: src/pkg/yzyppwrapper.cc:196
+#: src/pkg/yzyppwrapper.cc:217
 msgid "you must logout and login again for this patch to take effect."
 msgstr "należy wylogować się i zalogować ponownie by ta aktualizacja zostałą wprowadzona."
 
 #. Translators: this refers to patch priority
-#: src/pkg/yzyppwrapper.cc:741
+#: src/pkg/yzyppwrapper.cc:762
 msgid "Optional"
 msgstr "Opcjonalny"
 
 #. Translators: this refers to patch priority
-#: src/pkg/yzyppwrapper.cc:743
+#: src/pkg/yzyppwrapper.cc:764
 msgid "Other"
 msgstr "Inne"
 
@@ -1187,11 +1201,11 @@ msgstr "Inne"
 msgid "Current step"
 msgstr "Bieżący krok"
 
-#: src/ygtktreeview.c:100
+#: src/ygtktreeview.c:133
 msgid "Loading..."
 msgstr "Wczytywanie..."
 
-#: src/ygtktreeview.c:179
+#: src/ygtktreeview.c:212
 msgid "_Show column"
 msgstr "_Wyświetl kolumnę"
 
@@ -1203,14 +1217,81 @@ msgstr "Pomoc"
 msgid "more"
 msgstr "więcej"
 
+#~ msgid "Select Macro File to Play"
+#~ msgstr "Proszę wybrać plik makra do wykonania"
+
+#~ msgid "Select Macro File to Record to"
+#~ msgstr "Proszę wybrać plik makra do nagrania"
+
+#~ msgid "Couldn't save screenshot to file "
+#~ msgstr "Nie można zapisać zrzutu ekranu do pliku "
+
+#~ msgid "Choose"
+#~ msgstr "Wybierz"
+
+#~ msgid "_Open (as "
+#~ msgstr "_Otwórz (jako"
+
+#~ msgid "_Open"
+#~ msgstr "_Otwórz"
+
+#~ msgid "Provides:"
+#~ msgstr "Dostarcza:"
+
+#~ msgid "Pre-requires:"
+#~ msgstr "Wymagania wstępne:"
+
+#~ msgid "Requires:"
+#~ msgstr "Wymaga:"
+
+#~ msgid "Conflicts:"
+#~ msgstr "Konflikty:"
+
+#~ msgid "Obsoletes:"
+#~ msgstr "Nieaktualne:"
+
+#~ msgid "Recommends:"
+#~ msgstr "Rekomendowane:"
+
+#~ msgid "Suggests:"
+#~ msgstr "Sugerowane:"
+
+#, fuzzy
+#~ msgid "Enhances:"
+#~ msgstr "Zmiany:"
+
+#~ msgid "Supplements:"
+#~ msgstr "Dodatki:"
+
+#, fuzzy
+#~ msgid "<i>Not specified.</i>"
+#~ msgstr "Nie określono IP."
+
+#, fuzzy
+#~ msgid "Apply Patches"
+#~ msgstr "Wszystkie poprawki"
+
+#, fuzzy
+#~ msgid "Could not load package list: '%s'"
+#~ msgstr "Nie można załadować listy pakietów z: "
+
+#, fuzzy
+#~ msgid "Could not export package list: '%s'"
+#~ msgstr "Wystąpił błąd podczas eksportowania listy pakietów do '%s'"
+
+#, fuzzy
+#~ msgid "Create Dependency Solver Test Case"
+#~ msgstr "Tworzenie testu modułu rozwiązywania zależności"
+
+#, fuzzy
+#~ msgid "Generate Dependency Solver Test Case"
+#~ msgstr "Wygeneruj test rozwiązania zależności"
+
 #~ msgid "Any status"
 #~ msgstr "Jakikolwiek stan"
 
 #~ msgid "Upgradable"
 #~ msgstr "Możliwość aktualizacji"
-
-#~ msgid "Upgrade Patches"
-#~ msgstr "Aktualizacje"
 
 #~ msgid "Any priority"
 #~ msgstr "Dowolny priorytet"
@@ -1242,9 +1323,6 @@ msgstr "więcej"
 #~ msgid "Show History of Changes"
 #~ msgstr "Pokaż historię zmian"
 
-#~ msgid "Generate Dependency Resolver Test Case"
-#~ msgstr "Tworzenie testu rozwiązywania zależności"
-
 #~ msgid "Unknown Group"
 #~ msgstr "Nieznana grupa"
 
@@ -1271,9 +1349,6 @@ msgstr "więcej"
 
 #~ msgid "Install All"
 #~ msgstr "Instaluj wszystko"
-
-#~ msgid "Remove All"
-#~ msgstr "Usuń wszystko"
 
 #~ msgid ""
 #~ "<b>Package repositories:</b> Limits the query to one repository.\n"
@@ -1445,9 +1520,6 @@ msgstr "więcej"
 #~ msgid "Import Failed"
 #~ msgstr "Import nie powiódł się"
 
-#~ msgid "Couldn't save package list to: "
-#~ msgstr "Nie można zapisać listy pakietów do: "
-
 #~ msgid "Export Failed"
 #~ msgstr "Eksport nie powiódł się"
 
@@ -1495,9 +1567,6 @@ msgstr "więcej"
 
 #~ msgid "Power Management"
 #~ msgstr "Zarządzanie zasilaniem"
-
-#~ msgid "Maps"
-#~ msgstr "Mapy"
 
 #~ msgid "Software Sources"
 #~ msgstr "Kody źródłowe programów"

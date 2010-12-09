@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: base\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-09-03 08:40+0200\n"
+"POT-Creation-Date: 2010-12-06 11:18+0100\n"
 "PO-Revision-Date: 2010-05-03 13:13+0100\n"
 "Last-Translator: Karol Sikora <elektrrrus@gmail.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -1558,7 +1558,7 @@ msgstr "&Dziennik"
 msgid "&Save Log"
 msgstr "&Zapisz dziennik"
 
-#. popup caption
+#. popup caption, save into home directory by default (bnc#653601)
 #: library/log/src/LogView.ycp:399
 msgid "Save Log as..."
 msgstr "Zapisz dziennik jako..."
@@ -1769,7 +1769,7 @@ msgstr "U&twórz"
 #. push button label during media change popup, user can skip
 #. this media (CD) so no packages from this media will be installed
 #. PushButton label
-#: library/modules/Label.ycp:297 library/packages/src/PackageCallbacks.ycp:844
+#: library/modules/Label.ycp:297 library/packages/src/PackageCallbacks.ycp:702
 #: library/wizard/src/Confirm.ycp:84
 msgid "&Skip"
 msgstr "&Pomiń"
@@ -1797,7 +1797,7 @@ msgstr "N&azwa pliku"
 #. TextEntry Label
 #. textentry label
 #: library/modules/Label.ycp:378
-#: library/packages/src/PackageCallbacks.ycp:2491
+#: library/packages/src/PackageCallbacks.ycp:2343
 msgid "&Password"
 msgstr "Ha&sło"
 
@@ -2019,37 +2019,37 @@ msgid "Failed to install required packages."
 msgstr "Instalacja wymaganych pakietów nie powiodła się."
 
 #. Confirm user request to abort installation
-#: library/modules/Popup.ycp:782
+#: library/modules/Popup.ycp:786
 msgid "Really abort the installation?"
 msgstr "Czy na pewno przerwać instalację?"
 
 #. Button that will really abort the installation
-#: library/modules/Popup.ycp:784
+#: library/modules/Popup.ycp:788
 msgid "&Abort Installation"
 msgstr "&Przerwij instalację"
 
 #. Button that will continue with the installation
-#: library/modules/Popup.ycp:786
+#: library/modules/Popup.ycp:790
 msgid "&Continue Installation"
 msgstr "&Kontynuuj instalację"
 
 #. Confirm user request to abort System Repair
-#: library/modules/Popup.ycp:795
+#: library/modules/Popup.ycp:799
 msgid "Really abort YaST System Repair?"
 msgstr "Czy na pewno przerwać działanie modułu naprawy systemu YaST?"
 
 #. Button that will really abort the repair
-#: library/modules/Popup.ycp:797
+#: library/modules/Popup.ycp:801
 msgid "Abort System Repair"
 msgstr "Przerwij naprawę systemu"
 
 #. Button that will continue with the repair
-#: library/modules/Popup.ycp:799
+#: library/modules/Popup.ycp:803
 msgid "&Continue System Repair"
 msgstr "&Kontynuuj naprawę systemu"
 
 #. Warning text for aborting an installation before anything is installed
-#: library/modules/Popup.ycp:804
+#: library/modules/Popup.ycp:808
 msgid ""
 "If you abort the installation now,\n"
 "Linux will not be installed.\n"
@@ -2062,7 +2062,7 @@ msgstr ""
 #. Warning text for aborting an installation during the install process
 #. - After some installation steps have been performed - e.g.
 #. disks formatted / some packages already installed
-#: library/modules/Popup.ycp:815
+#: library/modules/Popup.ycp:819
 msgid ""
 "If you abort the installation now, you will\n"
 "have an incomplete Linux system\n"
@@ -2077,7 +2077,7 @@ msgstr ""
 
 #. Warning text for aborting an installation during the install process
 #. right in the middle of some critical process (e.g. formatting)
-#: library/modules/Popup.ycp:825
+#: library/modules/Popup.ycp:829
 msgid ""
 "If you abort the installation now,\n"
 "Linux will be unusable.\n"
@@ -2088,18 +2088,18 @@ msgstr ""
 "Konieczna będzie powtórna instalacja systemu."
 
 #. Confirm aborting the program
-#: library/modules/Popup.ycp:875
+#: library/modules/Popup.ycp:879
 msgid "Really abort?"
 msgstr "Czy na pewno przerwać?"
 
 #. Additional hint when trying to abort program in spite of changes
-#: library/modules/Popup.ycp:882
+#: library/modules/Popup.ycp:886
 msgid "All changes will be lost!"
 msgstr "Wszystkie zmiany zostaną utracone."
 
 #. FIXME: BNC #422612, Use `opt(`noSanityCheck) later
 #. button label
-#: library/modules/Popup.ycp:913
+#: library/modules/Popup.ycp:917
 msgid "&Details..."
 msgstr "&Szczegóły..."
 
@@ -3380,7 +3380,7 @@ msgid "Unknown service '%1'"
 msgstr "Nieznana usługa '%1'"
 
 #: library/packages/src/PackageCallbacks.ycp:154
-#: library/packages/src/PackageCallbacks.ycp:1644
+#: library/packages/src/PackageCallbacks.ycp:1502
 msgid "Package: "
 msgstr "Pakiet: "
 
@@ -3409,88 +3409,49 @@ msgstr "Pobieranie pakietu"
 msgid "Show &details"
 msgstr "Pokaż &szczegóły"
 
-#. this is for error code 1 ("NOT_FOUND"), %1 is name of a package
-#: library/packages/src/PackageCallbacks.ycp:330
-#, ycp-format
-msgid "Package %1 was not found on the medium."
-msgstr "Pakiet %1 nie został znaleziony na nośniku."
-
-#. error message, %1 is a package name
-#: library/packages/src/PackageCallbacks.ycp:336
-#, ycp-format
-msgid "Package %1 could not be downloaded (input/output error)."
-msgstr "Nie można było pobrać pakietu %1 (błąd wejścia/wyjścia)."
-
-#. error message, %1 is a package name
-#: library/packages/src/PackageCallbacks.ycp:342
-#, ycp-format
-msgid "Package %1 is broken, integrity check has failed."
-msgstr "Pakiet %1 jest uszkodzony, test integralności nie powiódł się."
-
-#. command line mode - ask user whether installation of the failed package should be retried
-#: library/packages/src/PackageCallbacks.ycp:355
-#: library/packages/src/PackageCallbacks.ycp:577
-msgid "Retry installation of the package?"
-msgstr "Ponowić próbę instalacji pakietu?"
-
-#. command line mode - ask user whether the installation should be aborted
-#: library/packages/src/PackageCallbacks.ycp:364
-#: library/packages/src/PackageCallbacks.ycp:586
-msgid "Abort the installation?"
-msgstr "Przerwać instalację?"
-
-#. error message, %1 is code of the error,
-#. detail string is appended to the end
-#: library/packages/src/PackageCallbacks.ycp:387
-#: library/packages/src/PackageCallbacks.ycp:424
-#: library/packages/src/PackageCallbacks.ycp:2419
-#, ycp-format
-msgid "Error: %1:"
-msgstr "Błąd: %1:"
-
-#. TODO: add "Don't show again" checkbox
-#. a warning popup displayed after pressing [Ignore] after a download error
-#: library/packages/src/PackageCallbacks.ycp:448
-msgid ""
-"Ignoring a download failure may result in a broken system.\n"
-"The system should be later verified by running the Software Management module."
-msgstr ""
-"Zignorowanie błędu pobierania może spodować awarię systemu.\n"
-"Należy zweryfikować system poprzez uruchomienie modułu Zarządzania oprogramowaniem."
-
-#: library/packages/src/PackageCallbacks.ycp:502
+#: library/packages/src/PackageCallbacks.ycp:360
 #, ycp-format
 msgid "Uninstalling package %1 (%2)..."
 msgstr "Odinstalowanie pakietu %1 (%2)..."
 
-#: library/packages/src/PackageCallbacks.ycp:503
+#: library/packages/src/PackageCallbacks.ycp:361
 #, ycp-format
 msgid "Installing package %1 (%2)..."
 msgstr "Instalowanie pakietu %1 (%2)..."
 
-#: library/packages/src/PackageCallbacks.ycp:508
+#: library/packages/src/PackageCallbacks.ycp:366
 msgid "Uninstalling Package"
 msgstr "Odinstalowanie pakietu"
 
-#: library/packages/src/PackageCallbacks.ycp:509
+#: library/packages/src/PackageCallbacks.ycp:367
 msgid "Installing Package"
 msgstr "Instalowanie pakietu"
 
 #. error popup during package installation, %1 is the name of the package
-#: library/packages/src/PackageCallbacks.ycp:562
+#: library/packages/src/PackageCallbacks.ycp:420
 #, ycp-format
 msgid "Removal of package %1 failed."
 msgstr "Usunięcie pakietu %1 nie powiodło się."
 
 #. error popup during package installation, %1 is the name of the package
-#: library/packages/src/PackageCallbacks.ycp:564
+#: library/packages/src/PackageCallbacks.ycp:422
 #, ycp-format
 msgid "Installation of package %1 failed."
 msgstr "Instalacja pakietu %1 nie powiodła się."
 
+#. command line mode - ask user whether installation of the failed package should be retried
+#: library/packages/src/PackageCallbacks.ycp:435
+msgid "Retry installation of the package?"
+msgstr "Ponowić próbę instalacji pakietu?"
+
+#. command line mode - ask user whether the installation should be aborted
+#: library/packages/src/PackageCallbacks.ycp:444
+msgid "Abort the installation?"
+msgstr "Przerwać instalację?"
+
 #. TODO: add "Don't show again" checkbox
 #. a warning popup displayed after pressing [Ignore] after a package installation error
-#: library/packages/src/PackageCallbacks.ycp:641
+#: library/packages/src/PackageCallbacks.ycp:499
 msgid ""
 "Ignoring a package failure may result in a broken system.\n"
 "The system should be later verified by running the Software Management module."
@@ -3499,7 +3460,7 @@ msgstr ""
 "Należy zweryfikować system poprzez uruchomienie modułu Zarządzania oprogramowaniem."
 
 #. error report
-#: library/packages/src/PackageCallbacks.ycp:765
+#: library/packages/src/PackageCallbacks.ycp:623
 msgid ""
 "<p>The repository at the specified URL now provides a different media ID.\n"
 "If the URL is correct, this indicates that the repository content has changed. To \n"
@@ -3514,29 +3475,29 @@ msgstr ""
 #. media is double sided, we want the user to insert the 'Side A' of the media
 #. the complete string will be "<product> <media> <number>, <side>"
 #. e.g. "'SuSE Linux 9.0' DVD 1, Side A"
-#: library/packages/src/PackageCallbacks.ycp:780
+#: library/packages/src/PackageCallbacks.ycp:638
 msgid "Side A"
 msgstr "Strona A"
 
 #. media is double sided, we want the user to insert the 'Side B' of the media
-#: library/packages/src/PackageCallbacks.ycp:784
+#: library/packages/src/PackageCallbacks.ycp:642
 msgid "Side B"
 msgstr "Strona B"
 
 #. label for a repository - %1 product name (e.g. openSUSE 10.2), %2 medium number (e.g. 2)
-#: library/packages/src/PackageCallbacks.ycp:799
+#: library/packages/src/PackageCallbacks.ycp:657
 #, ycp-format
 msgid "%1 (Disc %2)"
 msgstr "%1 (Dysk %2)"
 
 #. label for a repository - %1 product name (e.g. openSUSE 10.2), %2 medium number (e.g. 2)
-#: library/packages/src/PackageCallbacks.ycp:801
+#: library/packages/src/PackageCallbacks.ycp:659
 #, ycp-format
 msgid "%1 (Medium %2)"
 msgstr "%1 (Nośnik %2)"
 
 #. prompt to insert product (%1 == "SuSE Linux version 9.2 CD 2")
-#: library/packages/src/PackageCallbacks.ycp:806
+#: library/packages/src/PackageCallbacks.ycp:664
 #, ycp-format
 msgid ""
 "Insert\n"
@@ -3546,7 +3507,7 @@ msgstr ""
 "\"%1\""
 
 #. report error while accessing local directory with product (%1 = URL, %2 = "SuSE Linux ...")
-#: library/packages/src/PackageCallbacks.ycp:811
+#: library/packages/src/PackageCallbacks.ycp:669
 #, ycp-format
 msgid ""
 "Cannot access installation media\n"
@@ -3560,7 +3521,7 @@ msgstr ""
 "Proszę sprawdzić dostępność tego katalogu."
 
 #. report error while accessing network media of product (%1 = URL, %2 = "SuSE Linux ...")
-#: library/packages/src/PackageCallbacks.ycp:819
+#: library/packages/src/PackageCallbacks.ycp:677
 #, ycp-format
 msgid ""
 "Cannot access installation media \n"
@@ -3574,194 +3535,179 @@ msgstr ""
 "Proszę sprawdzić czy serwer jest dostępny."
 
 #. currently unused
-#: library/packages/src/PackageCallbacks.ycp:826
+#: library/packages/src/PackageCallbacks.ycp:684
 msgid "The correct repository medium could not be mounted."
 msgstr "Prawidłowy nośnik repozytorium nie może zostać zamontowany."
 
 #. push button label
-#: library/packages/src/PackageCallbacks.ycp:839
-#: library/packages/src/PackageCallbacks.ycp:2110
+#: library/packages/src/PackageCallbacks.ycp:697
+#: library/packages/src/PackageCallbacks.ycp:1962
 msgid "Skip Autorefresh"
 msgstr "Pomiń autoodświeżanie"
 
 #. menu button label - used for more then one device
 #. push button label - in the media change popup, user can eject the CD/DVD
-#: library/packages/src/PackageCallbacks.ycp:861
-#: library/packages/src/PackageCallbacks.ycp:866
+#: library/packages/src/PackageCallbacks.ycp:719
+#: library/packages/src/PackageCallbacks.ycp:724
 msgid "&Eject"
 msgstr "&Wysuń"
 
-#: library/packages/src/PackageCallbacks.ycp:877
+#: library/packages/src/PackageCallbacks.ycp:735
 msgid "A&utomatically Eject CD or DVD Medium"
 msgstr "A&utomatycznie wysuń nośnik CD lub DVD"
 
 #. command line mode - ask user whether installation of the failed package should be retried
-#: library/packages/src/PackageCallbacks.ycp:940
+#: library/packages/src/PackageCallbacks.ycp:798
 msgid "Retry the installation?"
 msgstr "Ponowić próbę instalacji?"
 
 #. command line mode - ask user whether the installation should be aborted
-#: library/packages/src/PackageCallbacks.ycp:949
+#: library/packages/src/PackageCallbacks.ycp:807
 msgid "Skip the medium?"
 msgstr "Pominąć nośnik?"
 
 #. otherwise ignore the medium
-#: library/packages/src/PackageCallbacks.ycp:957
+#: library/packages/src/PackageCallbacks.ycp:815
 msgid "Ignoring the bad medium..."
 msgstr "Ignorowanie uszkodzonego nośnika..."
 
 #. TextEntry label
-#: library/packages/src/PackageCallbacks.ycp:970
-#: library/packages/src/PackageCallbacks.ycp:1034
+#: library/packages/src/PackageCallbacks.ycp:828
+#: library/packages/src/PackageCallbacks.ycp:892
 msgid "&URL"
 msgstr "Adres &URL"
 
 #. popup label (%1 is repository URL)
-#: library/packages/src/PackageCallbacks.ycp:1294
+#: library/packages/src/PackageCallbacks.ycp:1152
 #, ycp-format
 msgid "Creating Repository %1"
 msgstr "Tworzenie repozytorium %1"
 
 #. error message - a label followed by a richtext with details
-#: library/packages/src/PackageCallbacks.ycp:1325
+#: library/packages/src/PackageCallbacks.ycp:1183
 msgid "Error occurred while creating the repository."
 msgstr "Wystąpił błąd podczas tworzenia repozytorium."
 
 #. error message - a label followed by a richtext with details
-#: library/packages/src/PackageCallbacks.ycp:1329
-#: library/packages/src/PackageCallbacks.ycp:1442
-#: library/packages/src/PackageCallbacks.ycp:1541
+#: library/packages/src/PackageCallbacks.ycp:1187
+#: library/packages/src/PackageCallbacks.ycp:1300
+#: library/packages/src/PackageCallbacks.ycp:1399
 msgid "Unable to retrieve the remote repository description."
 msgstr "Nie można pobrać opisu zdalnego repozytorium."
 
 #. error message - a label followed by a richtext with details
-#: library/packages/src/PackageCallbacks.ycp:1332
-#: library/packages/src/PackageCallbacks.ycp:1445
-#: library/packages/src/PackageCallbacks.ycp:1544
+#: library/packages/src/PackageCallbacks.ycp:1190
+#: library/packages/src/PackageCallbacks.ycp:1303
+#: library/packages/src/PackageCallbacks.ycp:1402
 msgid "An error occurred while retrieving the new metadata."
 msgstr "Podczas pobierania nowych metadanych wystąpił błąd."
 
 #. error message - a label followed by a richtext with details
-#: library/packages/src/PackageCallbacks.ycp:1335
-#: library/packages/src/PackageCallbacks.ycp:1448
-#: library/packages/src/PackageCallbacks.ycp:1547
+#: library/packages/src/PackageCallbacks.ycp:1193
+#: library/packages/src/PackageCallbacks.ycp:1306
+#: library/packages/src/PackageCallbacks.ycp:1405
 msgid "The repository is not valid."
 msgstr "Repozytorium jest nieprawidłowe."
 
 #. error message - a label followed by a richtext with details
-#: library/packages/src/PackageCallbacks.ycp:1338
+#: library/packages/src/PackageCallbacks.ycp:1196
 msgid "The repository metadata is invalid."
 msgstr "Metadane repozytorium są nieprawidłowe."
 
 #. command line mode - ask user whether the repository refreshment should be retried
 #. command line mode - ask user whether target initializatin can be restarted
-#: library/packages/src/PackageCallbacks.ycp:1352
-#: library/packages/src/PackageCallbacks.ycp:1468
-#: library/packages/src/PackageCallbacks.ycp:1561
-#: library/packages/src/PackageCallbacks.ycp:2370
+#: library/packages/src/PackageCallbacks.ycp:1210
+#: library/packages/src/PackageCallbacks.ycp:1326
+#: library/packages/src/PackageCallbacks.ycp:1419
+#: library/packages/src/PackageCallbacks.ycp:2222
 msgid "Retry?"
 msgstr "Ponowić?"
 
 #. popup label (%1 is repository URL)
-#: library/packages/src/PackageCallbacks.ycp:1394
-#: library/packages/src/PackageCallbacks.ycp:1403
+#: library/packages/src/PackageCallbacks.ycp:1252
+#: library/packages/src/PackageCallbacks.ycp:1261
 #, ycp-format
 msgid "Probing Repository %1"
 msgstr "Sprawdzenie repozytorium %1"
 
 #. error message - a label followed by a richtext with details
-#: library/packages/src/PackageCallbacks.ycp:1438
+#: library/packages/src/PackageCallbacks.ycp:1296
 msgid "Error occurred while probing the repository."
 msgstr "Wystąpił błąd podczas sprawdzania repozytorium."
 
 #. error message - a label followed by a richtext with details
-#: library/packages/src/PackageCallbacks.ycp:1451
+#: library/packages/src/PackageCallbacks.ycp:1309
 msgid "Repository probing details."
 msgstr "Szczegóły sprawdzania repozytorium."
 
 #. error message - a label followed by a richtext with details
-#: library/packages/src/PackageCallbacks.ycp:1454
+#: library/packages/src/PackageCallbacks.ycp:1312
 msgid "Repository metadata is invalid."
 msgstr "Metadane repozytorium są nieprawidłowe."
 
 #. error message - a label followed by a richtext with details
-#: library/packages/src/PackageCallbacks.ycp:1537
+#: library/packages/src/PackageCallbacks.ycp:1395
 #, ycp-format
 msgid "Repository %1"
 msgstr "Repozytorium %1"
 
-#: library/packages/src/PackageCallbacks.ycp:1616
+#: library/packages/src/PackageCallbacks.ycp:1474
 #, ycp-format
 msgid "Downloading delta RPM package %1 (%2)..."
 msgstr "Pobieranie różnicowego pakietu RPM %1 (%2)..."
 
 #. popup heading
-#: library/packages/src/PackageCallbacks.ycp:1622
+#: library/packages/src/PackageCallbacks.ycp:1480
 msgid "Downloading Delta RPM package"
 msgstr "Pobieranie różnicowego pakietu RPM"
 
-#: library/packages/src/PackageCallbacks.ycp:1635
+#: library/packages/src/PackageCallbacks.ycp:1493
 #, ycp-format
 msgid "Applying delta RPM package %1..."
 msgstr "Nakładanie różnicowego pakietu RPM %1..."
 
 #. popup heading
-#: library/packages/src/PackageCallbacks.ycp:1642
+#: library/packages/src/PackageCallbacks.ycp:1500
 msgid "Applying delta RPM package"
 msgstr "Nakładanie różnicowego pakietu RPM"
 
-#: library/packages/src/PackageCallbacks.ycp:1664
+#: library/packages/src/PackageCallbacks.ycp:1522
 #, ycp-format
 msgid "Downloading patch RPM package %1 (%2)..."
 msgstr "Pobieranie pakietu RPM z poprawką %1 (%2)..."
 
 #. popup heading
-#: library/packages/src/PackageCallbacks.ycp:1670
+#: library/packages/src/PackageCallbacks.ycp:1528
 msgid "Downloading Patch RPM Package"
 msgstr "Pobieranie pakietu RPM z poprawką"
 
-#. close popup
-#: library/packages/src/PackageCallbacks.ycp:1686
-msgid "Failed to download delta RPM"
-msgstr "Pobranie różnocowego pakietu RPM nie powiodło się"
-
-#. close popup
-#: library/packages/src/PackageCallbacks.ycp:1691
-msgid "Failed to apply delta RPM"
-msgstr "Nakładanie różnicowego pakietu RPM nie powiodło się"
-
-#. close popup
-#: library/packages/src/PackageCallbacks.ycp:1696
-msgid "Failed to download patch RPM"
-msgstr "Pobranie pakietu RPM z poprawką nie powiodło się"
-
-#: library/packages/src/PackageCallbacks.ycp:1729
+#: library/packages/src/PackageCallbacks.ycp:1587
 #, ycp-format
 msgid "Starting script %1 (patch %2)..."
 msgstr "Uruchamianie skryptu %1 (poprawka %2)..."
 
 #. popup heading
-#: library/packages/src/PackageCallbacks.ycp:1736
+#: library/packages/src/PackageCallbacks.ycp:1594
 msgid "Running Script"
 msgstr "Uruchamianie skryptu"
 
 #. label, patch name follows
-#: library/packages/src/PackageCallbacks.ycp:1742
+#: library/packages/src/PackageCallbacks.ycp:1600
 msgid "Patch: "
 msgstr "Poprawka: "
 
 #. label, script name follows
-#: library/packages/src/PackageCallbacks.ycp:1751
+#: library/packages/src/PackageCallbacks.ycp:1609
 msgid "Script: "
 msgstr "Skrypt: "
 
 #. label
-#: library/packages/src/PackageCallbacks.ycp:1758
+#: library/packages/src/PackageCallbacks.ycp:1616
 msgid "Output of the Script"
 msgstr "Wyjście skryptu"
 
 #. label, %1 is patch name with version and architecture
-#: library/packages/src/PackageCallbacks.ycp:1856
+#: library/packages/src/PackageCallbacks.ycp:1714
 #, ycp-format
 msgid ""
 "Patch: %1\n"
@@ -3771,7 +3717,7 @@ msgstr ""
 "\n"
 
 #. a popup question with "Continue", "Skip" and "Abort" buttons
-#: library/packages/src/PackageCallbacks.ycp:1871
+#: library/packages/src/PackageCallbacks.ycp:1729
 msgid ""
 "The repositories are being refreshed.\n"
 "Continue with refreshing?\n"
@@ -3786,54 +3732,43 @@ msgstr ""
 " może brakować niektórych pakietów a inne  pakiety mogą być nieaktualne."
 
 #. push button label
-#: library/packages/src/PackageCallbacks.ycp:1879
+#: library/packages/src/PackageCallbacks.ycp:1737
 msgid "&Skip Refresh"
 msgstr "Pomiń odświeżanie"
 
 #. heading of popup
-#: library/packages/src/PackageCallbacks.ycp:1923
-#: library/packages/src/PackageCallbacks.ycp:1963
+#: library/packages/src/PackageCallbacks.ycp:1781
+#: library/packages/src/PackageCallbacks.ycp:1821
 msgid "Downloading"
 msgstr "Pobieranie"
 
 #. message in a progress popup
 #. progress bar label, %1 is URL with optional download rate
-#: library/packages/src/PackageCallbacks.ycp:1971
-#: library/packages/src/PackageCallbacks.ycp:2025
+#: library/packages/src/PackageCallbacks.ycp:1829
+#: library/packages/src/PackageCallbacks.ycp:1883
 #, ycp-format
 msgid "Downloading: %1"
 msgstr "Pobieranie: %1"
 
-#. error message, %1 is the cause for the error
-#: library/packages/src/PackageCallbacks.ycp:2090
-#: library/packages/src/PackageCallbacks.ycp:2096
-#, ycp-format
-msgid ""
-"Download failed:\n"
-"    %1"
-msgstr ""
-"Błąd podczas pobierania:\n"
-"    %1"
-
 #. heading of popup
-#: library/packages/src/PackageCallbacks.ycp:2146
-#: library/packages/src/PackageCallbacks.ycp:2212
+#: library/packages/src/PackageCallbacks.ycp:1998
+#: library/packages/src/PackageCallbacks.ycp:2064
 msgid "Checking Package Database"
 msgstr "Sprawdzanie bazy pakietów"
 
 #. message in a progress popup
-#: library/packages/src/PackageCallbacks.ycp:2149
+#: library/packages/src/PackageCallbacks.ycp:2001
 msgid "Rebuilding package database. This process can take some time."
 msgstr "Przebudowa bazy pakietów. Proces ten może być czasochłonny."
 
 #. progress bar label
-#: library/packages/src/PackageCallbacks.ycp:2152
-#: library/packages/src/PackageCallbacks.ycp:2225
+#: library/packages/src/PackageCallbacks.ycp:2004
+#: library/packages/src/PackageCallbacks.ycp:2077
 msgid "Status"
 msgstr "Stan"
 
 #. error message, %1 is the cause for the error
-#: library/packages/src/PackageCallbacks.ycp:2185
+#: library/packages/src/PackageCallbacks.ycp:2037
 #, ycp-format
 msgid ""
 "Rebuilding of package database failed:\n"
@@ -3843,12 +3778,12 @@ msgstr ""
 "%1"
 
 #. message in a progress popup
-#: library/packages/src/PackageCallbacks.ycp:2215
+#: library/packages/src/PackageCallbacks.ycp:2067
 msgid "Converting package database. This process can take some time."
 msgstr "Konwersja bazy pakietów. Proces ten może być czasochłonny."
 
 #. error message, %1 is the cause for the error
-#: library/packages/src/PackageCallbacks.ycp:2248
+#: library/packages/src/PackageCallbacks.ycp:2100
 #, ycp-format
 msgid ""
 "Conversion of package database failed:\n"
@@ -3858,37 +3793,44 @@ msgstr ""
 "%1"
 
 #. progress message (command line mode)
-#: library/packages/src/PackageCallbacks.ycp:2281
+#: library/packages/src/PackageCallbacks.ycp:2133
 msgid "Reading RPM database..."
 msgstr "Odczytywanie bazy danych pakietów RPM..."
 
 #. popup heading
-#: library/packages/src/PackageCallbacks.ycp:2291
+#: library/packages/src/PackageCallbacks.ycp:2143
 msgid "Reading Installed Packages"
 msgstr "Odczytywanie zainstalowanych pakietów"
 
 #. progress bar label
-#: library/packages/src/PackageCallbacks.ycp:2294
-#: library/packages/src/PackageCallbacks.ycp:2311
+#: library/packages/src/PackageCallbacks.ycp:2146
+#: library/packages/src/PackageCallbacks.ycp:2163
 msgid "Scanning RPM database..."
 msgstr "Skanowanie bazy danych pakietów RPM..."
 
 #. error message, could not read RPM database
-#: library/packages/src/PackageCallbacks.ycp:2357
+#: library/packages/src/PackageCallbacks.ycp:2209
 msgid "Initialization of the target failed."
 msgstr "Inicjalizacja elementu docelowego nie powiodła się."
 
+#. error message, %1 is code of the error,
+#. detail string is appended to the end
+#: library/packages/src/PackageCallbacks.ycp:2271
+#, ycp-format
+msgid "Error: %1:"
+msgstr "Błąd: %1:"
+
 #. status message (command line mode)
-#: library/packages/src/PackageCallbacks.ycp:2453
+#: library/packages/src/PackageCallbacks.ycp:2305
 msgid "RPM database read"
 msgstr "Odczytanie bazy danych pakietów RPM"
 
 #. heading in a popup window
-#: library/packages/src/PackageCallbacks.ycp:2476
+#: library/packages/src/PackageCallbacks.ycp:2328
 msgid "User Authentication"
 msgstr "Uwierzytelnianie użytkownika"
 
-#: library/packages/src/PackageCallbacks.ycp:2480
+#: library/packages/src/PackageCallbacks.ycp:2332
 #, ycp-format
 msgid ""
 "URL: %1\n"
@@ -3900,7 +3842,7 @@ msgstr ""
 "%2"
 
 #. textentry label
-#: library/packages/src/PackageCallbacks.ycp:2488
+#: library/packages/src/PackageCallbacks.ycp:2340
 msgid "&User Name"
 msgstr "Nazwa &użytkownika"
 
@@ -5646,6 +5588,38 @@ msgstr "Wyszukiwanie komputerów w sieci lokalnej..."
 #: remote/remoteinstall.ycp:29
 msgid "Select the Serial &Interface to Use:"
 msgstr "&Interfejs szeregowy do użycia:"
+
+#~ msgid "Package %1 was not found on the medium."
+#~ msgstr "Pakiet %1 nie został znaleziony na nośniku."
+
+#~ msgid "Package %1 could not be downloaded (input/output error)."
+#~ msgstr "Nie można było pobrać pakietu %1 (błąd wejścia/wyjścia)."
+
+#~ msgid "Package %1 is broken, integrity check has failed."
+#~ msgstr "Pakiet %1 jest uszkodzony, test integralności nie powiódł się."
+
+#~ msgid ""
+#~ "Ignoring a download failure may result in a broken system.\n"
+#~ "The system should be later verified by running the Software Management module."
+#~ msgstr ""
+#~ "Zignorowanie błędu pobierania może spodować awarię systemu.\n"
+#~ "Należy zweryfikować system poprzez uruchomienie modułu Zarządzania oprogramowaniem."
+
+#~ msgid "Failed to download delta RPM"
+#~ msgstr "Pobranie różnocowego pakietu RPM nie powiodło się"
+
+#~ msgid "Failed to apply delta RPM"
+#~ msgstr "Nakładanie różnicowego pakietu RPM nie powiodło się"
+
+#~ msgid "Failed to download patch RPM"
+#~ msgstr "Pobranie pakietu RPM z poprawką nie powiodło się"
+
+#~ msgid ""
+#~ "Download failed:\n"
+#~ "    %1"
+#~ msgstr ""
+#~ "Błąd podczas pobierania:\n"
+#~ "    %1"
 
 #~ msgid "Accessing the Softwaree Management Failed"
 #~ msgstr "Błąd podczas dostępu do zarządzania pakietami"
