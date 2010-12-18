@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: storage\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2010-12-06 11:17+0100\n"
-"PO-Revision-Date: 2010-12-11 14:48+0100\n"
+"PO-Revision-Date: 2010-12-18 15:49+0100\n"
 "Last-Translator: Jakub Derda <j.derda@tmtsystems.eu>\n"
 "Language-Team: Polish <team@opensuse.biz>\n"
 "MIME-Version: 1.0\n"
@@ -2544,12 +2544,14 @@ msgstr ""
 
 #. help text, richtext format
 #: storage/src/include/ep-import.ycp:222
-#, fuzzy
 msgid ""
 "<p>YaST2 has scanned your hard disks and found\n"
 "one or several existing Linux systems with mount points. The old mount points\n"
 "are shown in the table.</p>"
-msgstr "<P><B><BIG>Ostrzeżenie:</BIG></B><BR>Program YaST2 przeskanował dyski twarde i wykrył stary system Linux z punktami montowania. Po prawej przedstawiono listę wykrytych punktów montowania. </P>\n"
+msgstr ""
+"<p>Program YaST2 przeskanował dyski twarde i wykrył\n"
+"jeden lub więcej istniejących punktów montowania systemu Linux. Stare punkty montowania\n"
+"zostały przedstawione w tabeli.</p>"
 
 #. help text, richtext format
 #: storage/src/include/ep-import.ycp:227
@@ -3417,13 +3419,12 @@ msgstr ""
 
 #. helptext
 #: storage/src/include/ep-raid-dialogs.ycp:211
-#, fuzzy
 msgid ""
 "<p><b>Parity Algorithm:</b><br>The parity algorithm to use with RAID5/6.\n"
 "Left-symmetric is the one that offers maximum performance on typical disks with rotating platters.</p>\n"
 msgstr ""
-"<p><b>Algorytm parzystości:</b><br>jest on wykorzystany w RAID5.\n"
-"Left-symmetric oferuje maksymalną wydajność w przypadku dysków z obracającymi się talerzami.</p>\n"
+"<p><b>Algorytm parzystości:</b><br>Algorytm parzystości do wykorzystania w RAID5/6.\n"
+"Lewo-symetryczny oferuje maksymalną wydajność przy typowych dyskach z obracającymi się talerzami.</p>\n"
 
 #. Column header
 #: storage/src/include/ep-raid-dialogs.ycp:240
@@ -3668,6 +3669,12 @@ msgid ""
 "persistent but unfortunately this is not always true. Finally <i>UUID</i> and\n"
 "<i>Volume Label</i> use the file systems UUID and label.</p>"
 msgstr ""
+"<p><b>Domyślnie montuj przez</b> określa metode montowania dla\n"
+"nowoutworzonych systemów plików. <i>Nazwa urządzenia</i> wykorzystuje nazwę\n"
+"urządzenia z kernale, która nie jest trwała. <i>ID urządzenia</i> oraz <i>Ścieżka urządzenia</i>\n"
+"wykorzystuje nazwy wygenerowane przez udev na podstawie informacji sprzętowych. Powinny obe być\n"
+"trwałe, jednak nie zawsze jest to prawdą. <i>UUID</i> oraz\n"
+"<i>Etykieta wolumenu</i> wykorzystują UUID systemu plików oraz etykietę.</p>"
 
 #. helptext
 #: storage/src/include/ep-settings.ycp:140
@@ -3686,6 +3693,10 @@ msgid ""
 "partitions for best performance according to hints provided by linux kernel \n"
 "or tries to be compatible with Windows Vista and Win 7.</p>"
 msgstr ""
+"<p><b>Układ nowoutworzonych partycji</b>\n"
+"określa jak utworzone partycje będą ustawione. <b>Cylinder</b> to tradycyjne ułożenie na granicy cylindrów dysku. <b>Optymalnie</b> dopasowuje partycje \n"
+"pod katem największej wydajności uwzględniając sugestie kernela linux lub \n"
+"próbuje zachować kompatybilność z systemami Windows Vista oraz Win 7.</p>"
 
 #. helptext
 #: storage/src/include/ep-settings.ycp:150
@@ -3837,7 +3848,7 @@ msgstr ""
 #. help text continued
 #. %1 is replaced by button text
 #: storage/src/inst_disk_proposal.ycp:245
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "<p>\n"
 "To import the mount points from an existing Linux\n"
@@ -3845,10 +3856,9 @@ msgid ""
 "afterwards in the expert partitioner dialog.</p>\n"
 msgstr ""
 "<p>\n"
-"Aby dokonać niewielkich zmian w stosunku\n"
-"do zaproponowanych ustawień (np. zmiana systemu plików)\n"
-"należy wybrać opcję <b>%1</b> a następnie dokonać zmian w oknie ustawień\n"
-"zaawansowanych.</p>\n"
+"Aby zaimportować punkty montowania z istniejącego systemu\n"
+"Linux, należy wybrać opcję <b>%1</b>. Po tej operacjiw dalszym ciągu można\n"
+"wykonywać modyfikacje w oknie dialogowym zaawansowanego partycjonowania.</p>\n"
 
 #. help text continued
 #: storage/src/inst_disk_proposal.ycp:252
@@ -4901,7 +4911,7 @@ msgstr ""
 #. label text
 #: storage/src/modules/FileSystems.ycp:602
 msgid "&No Journal"
-msgstr "Brak dzie&nnika"
+msgstr "Bez dzie&nnika"
 
 #. help text, richtext format
 #: storage/src/modules/FileSystems.ycp:608
@@ -4910,6 +4920,9 @@ msgid ""
 "Suppressed use of journaling on filesystem. Only activate this when you really\n"
 "know what you are doing.</p>\n"
 msgstr ""
+"<p><b>Bez dziennika:</b>\n"
+"Zmniejszone wykorzystanie dziennika systemowego. należy aktywowac tylko gdy jest się\n"
+"pewnym co się robi.</p>\n"
 
 #. label text
 #: storage/src/modules/FileSystems.ycp:800
@@ -5531,13 +5544,12 @@ msgstr ""
 
 #. helptext for table column and overview entry
 #: storage/src/modules/StorageFields.ycp:377
-#, fuzzy
 msgid ""
 "<b>Parity Algorithm</b> shows the parity\n"
 "algorithm for RAID devices with RAID type 5, 6 or 10."
 msgstr ""
 "<b>Algorytm parzystości</b> wyświetla algorytm\n"
-"parzystości dla urządzeń z macierzą RAID typu 5."
+"parzystości dla urządzeń RAID z macierzą RAID typu 5, 6 lub 10."
 
 #. helptext for table column and overview entry
 #: storage/src/modules/StorageFields.ycp:383
