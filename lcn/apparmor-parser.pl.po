@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: apparmor-parser\n"
 "Report-Msgid-Bugs-To: apparmor-general@forge.novell.com\n"
 "POT-Creation-Date: 2010-10-06 14:19-0400\n"
-"PO-Revision-Date: 2011-01-03 14:36+0100\n"
-"Last-Translator: Mariusz Fik <fisiu@opensuse.org>\n"
+"PO-Revision-Date: 2011-01-22 23:11+0100\n"
+"Last-Translator: Jakub Derda <j.derda@tjgroup.eu>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -71,9 +71,8 @@ msgid "Profile doesn't exist\n"
 msgstr "Profil nie istnieje\n"
 
 #: ../parser_interface.c:98
-#, fuzzy
 msgid "Permission denied; attempted to load a profile while confined?\n"
-msgstr "Dostęp zabroniony; próbowano załadować profil..? \n"
+msgstr "Dostęp zabroniony; próbowano załadować profil podczas uwięzienia? \n"
 
 #: ../parser_interface.c:101
 #, c-format
@@ -100,7 +99,8 @@ msgstr "%s: usunięcie \"%s\" nie powiodło się.  "
 msgid "%s: Unable to write to stdout\n"
 msgstr "%s: zapis na wyjście standardowe nie powiódł się\n"
 
-#: ../parser_interface.c:137 ../parser_interface.c:160
+#: ../parser_interface.c:137
+#: ../parser_interface.c:160
 #, c-format
 msgid "%s: ASSERT: Invalid option: %d\n"
 msgstr "%s: ASSERT: nieprawidłowa opcja: %d\n"
@@ -130,7 +130,8 @@ msgstr "Nieprawidłowy bufor przyrostowy %p na pozycji %p ext %p rozmiar %d zas�
 msgid "profile %s network rules not enforced\n"
 msgstr "zasady profilu sieciowe %s nie zostały zastosowane \n"
 
-#: ../parser_interface.c:848 ../parser_interface.c:1000
+#: ../parser_interface.c:848
+#: ../parser_interface.c:1000
 #, c-format
 msgid "Unable to open %s - %s\n"
 msgstr "Otwarcie %s  nie powiodło się - %s\n"
@@ -154,7 +155,8 @@ msgstr "Tworzenie obszaru roboczego nie powiodło się\n"
 msgid "unable to serialize profile %s\n"
 msgstr "Serializowanie profilu %s nie powiodło się\n"
 
-#: ../parser_interface.c:927 ../parser_interface.c:1014
+#: ../parser_interface.c:927
+#: ../parser_interface.c:1014
 #, c-format
 msgid "%s: Unable to write entire profile entry\n"
 msgstr "%s: zapisanie całego profilu nie powiodło się\n"
@@ -189,7 +191,10 @@ msgstr "stat się niepowodzeniem dla '%s'."
 msgid "Could not open '%s' in '%s'"
 msgstr "Nie można otworzyć %s w ''%s'"
 
-#: parser_lex.l:281 parser_lex.l:319 parser_lex.l:359 parser_lex.l:455
+#: parser_lex.l:281
+#: parser_lex.l:319
+#: parser_lex.l:359
+#: parser_lex.l:455
 #: parser_lex.l:641
 #, c-format
 msgid "Found unexpected character: '%s'"
@@ -239,28 +244,43 @@ msgstr ""
 "Każdy użytkownik tego programu będzie mógł zmieniać profile AppArmor\n"
 "\n"
 
-#: ../parser_main.c:667 ../parser_main.c:755
+#: ../parser_main.c:667
+#: ../parser_main.c:755
 #, c-format
 msgid "Error: Could not read profile %s: %s.\n"
 msgstr "Błąd: nie można odczytać profilu %s: %s.\n"
 
-#: ../parser_main.c:681 ../parser_misc.c:303 parser_yacc.y:218
-#: parser_yacc.y:245 parser_yacc.y:350 parser_yacc.y:362 parser_yacc.y:460
-#: parser_yacc.y:562 parser_yacc.y:600 parser_yacc.y:912 parser_yacc.y:921
-#: parser_yacc.y:930 parser_yacc.y:1003 parser_yacc.y:1051 parser_yacc.y:1062
-#: parser_yacc.y:1144 parser_yacc.y:1162 parser_yacc.y:1169 parser_yacc.y:1180
+#: ../parser_main.c:681
+#: ../parser_misc.c:303
+#: parser_yacc.y:218
+#: parser_yacc.y:245
+#: parser_yacc.y:350
+#: parser_yacc.y:362
+#: parser_yacc.y:460
+#: parser_yacc.y:562
+#: parser_yacc.y:600
+#: parser_yacc.y:912
+#: parser_yacc.y:921
+#: parser_yacc.y:930
+#: parser_yacc.y:1003
+#: parser_yacc.y:1051
+#: parser_yacc.y:1062
+#: parser_yacc.y:1144
+#: parser_yacc.y:1162
+#: parser_yacc.y:1169
+#: parser_yacc.y:1180
 msgid "Memory allocation error."
 msgstr "Błąd przydzielenia pamięci."
 
 #: ../parser_main.c:703
-#, fuzzy, c-format
+#, c-format
 msgid "Cached load succeeded for \"%s\".\n"
-msgstr "Usuwanie dla \"%s\" zakończone powodzeniem.\n"
+msgstr "Wczytywanie z pamięci podręcznej dla \"%s\" zakończone powodzeniem.\n"
 
 #: ../parser_main.c:707
-#, fuzzy, c-format
+#, c-format
 msgid "Cached reload succeeded for \"%s\".\n"
-msgstr "Usuwanie dla \"%s\" zakończone powodzeniem.\n"
+msgstr "Ponowne wczytywanie z pamięci podręcznej dla \"%s\" zakończone powodzeniem.\n"
 
 #: ../parser_main.c:867
 #, c-format
@@ -275,7 +295,8 @@ msgstr ""
 "Znaczniki zapisane wielkimi literami \"RWLIMX\" nie są już aktualne. Proszę używać\n"
 "małych liter. Więcej informacji można znaleźć w podręczniku systemowym apparmor.d(5).\n"
 
-#: ../parser_misc.c:500 ../parser_misc.c:507
+#: ../parser_misc.c:500
+#: ../parser_misc.c:507
 msgid "Conflict 'a' and 'w' perms are mutually exclusive."
 msgstr "Konflikt - \"a\" i \"w\" wykluczają się wzajemnie."
 
@@ -288,12 +309,14 @@ msgstr "Błędny znacznik wykonania \"i\". Wcześniej użyto sprzecznego znaczni
 msgid "Unconfined exec qualifier (%c%c) allows some dangerous environment variables to be passed to the unconfined process; 'man 5 apparmor.d' for details.\n"
 msgstr "Nieograniczony znacznik wykonania (%c%c) zezwala na przekazywanie niebezpiecznych zmiennych środowiska do procesu. Więcej informacji można znaleźć w podręczniku systemowym \"man 5 apparmor.d\".\n"
 
-#: ../parser_misc.c:543 ../parser_misc.c:584
+#: ../parser_misc.c:543
+#: ../parser_misc.c:584
 #, c-format
 msgid "Exec qualifier '%c' invalid, conflicting qualifier already specified"
 msgstr "Błędny znacznik wykonania \"%c\". Wcześniej użyto sprzecznego znacznika."
 
-#: ../parser_misc.c:570 ../parser_misc.c:578
+#: ../parser_misc.c:570
+#: ../parser_misc.c:578
 #, c-format
 msgid "Exec qualifier '%c%c' invalid, conflicting qualifier already specified"
 msgstr "Błędny znacznik wykonania \"%c%c\", wcześniej użyto sprzecznego znacznika"
@@ -308,7 +331,9 @@ msgstr "Błąd wewnętrzny: napotkano nieoczekiwany znak trybu \"%c\""
 msgid "Internal error generated invalid perm 0x%llx\n"
 msgstr "Wewnętrzny błąd spowodował utworzenie nieprawidłowego uprawnienia 0x%llx\n"
 
-#: ../parser_misc.c:902 ../parser_symtab.c:563 ../parser_regex.c:744
+#: ../parser_misc.c:902
+#: ../parser_symtab.c:563
+#: ../parser_regex.c:744
 #: ../parser_variable.c:227
 #, c-format
 msgid "AppArmor parser error: %s\n"
@@ -334,19 +359,19 @@ msgstr "Utworzenie aliasu %s nie powiodło się -> %s\n"
 
 #: parser_yacc.y:393
 msgid "Profile flag chroot_relative conflicts with namespace_relative"
-msgstr ""
+msgstr "Flaga profilu chroot_relative jest w konflikcie z flagą namespace_relative"
 
 #: parser_yacc.y:397
 msgid "Profile flag mediate_deleted conflicts with delegate_deleted"
-msgstr ""
+msgstr "Flaga profilu mediate_deleted jest w konflikcie z flagą delegate_deleted"
 
 #: parser_yacc.y:400
 msgid "Profile flag attach_disconnected conflicts with no_attach_disconnected"
-msgstr ""
+msgstr "Flaga profilu attach_disconnected jest w konflikcie z flagą no_attach_disconnected"
 
 #: parser_yacc.y:403
 msgid "Profile flag chroot_attach conflicts with chroot_no_attach"
-msgstr ""
+msgstr "Flaga profilu chroot_attach jest w konflikcie z flagą chroot_no_attach"
 
 #: parser_yacc.y:417
 msgid "Profile flag 'debug' is no longer valid."
@@ -357,11 +382,13 @@ msgstr "Flaga profilu \"debug\" nie jest już prawidłowa."
 msgid "Invalid profile flag: %s."
 msgstr "Nieprawidłowa flaga profilu: %s."
 
-#: parser_yacc.y:474 parser_yacc.y:496
+#: parser_yacc.y:474
+#: parser_yacc.y:496
 msgid "Assert: `rule' returned NULL."
 msgstr "Asercja: 'rule' zwróciło NULL."
 
-#: parser_yacc.y:477 parser_yacc.y:522
+#: parser_yacc.y:477
+#: parser_yacc.y:522
 msgid "Invalid mode, in deny rules 'x' must not be preceded by exec qualifier 'i', 'p', or 'u'"
 msgstr "Tryb nieprawidłowy, w regułach zabraniających znacznik \"x\" nie może być poprzedzony znacznikiem wykonania  \"i\", \"p\" lub \"u\""
 
@@ -373,7 +400,8 @@ msgstr "Tryb nieprawidłowy, \"x\" należy poprzedzić znacznikiem wykonania  \"
 msgid "Invalid mode, 'x' must be preceded by exec qualifier 'i', 'p', or 'u'"
 msgstr "Tryb nieprawidłowy. Przed \"x\" należy użyć znacznika wykonania  \"i\", \"p\" albo \"u\"."
 
-#: parser_yacc.y:550 parser_yacc.y:588
+#: parser_yacc.y:550
+#: parser_yacc.y:588
 msgid "Assert: `network_rule' return invalid protocol."
 msgstr "Asercja: \"network_rule\" zwróciło niepoprawny protokół."
 
@@ -402,7 +430,8 @@ msgstr "podzbiór może być użyty tylko z regułami łączy."
 msgid "link and exec perms conflict on a file rule using ->"
 msgstr "konflikt łączy i uprawnień wykonywania w regule pliku używającej ->"
 
-#: parser_yacc.y:862 parser_yacc.y:881
+#: parser_yacc.y:862
+#: parser_yacc.y:881
 msgid "link perms are not allowed on a named profile transition.\n"
 msgstr "uprawnienia odnośników nie są dozwolone w zmianie nazwanego profilu.\n"
 
@@ -415,11 +444,13 @@ msgstr "niebezpieczna reguła bez uprawnień wykonania"
 msgid "missing an end of line character? (entry: %s)"
 msgstr "brak znaku końca wiersza? (wpis: %s)"
 
-#: parser_yacc.y:1018 parser_yacc.y:1028
+#: parser_yacc.y:1018
+#: parser_yacc.y:1028
 msgid "Invalid network entry."
 msgstr "Nieprawidłowy wpis sieciowy."
 
-#: parser_yacc.y:1082 parser_yacc.y:1091
+#: parser_yacc.y:1082
+#: parser_yacc.y:1091
 #, c-format
 msgid "Invalid capability %s."
 msgstr "Nieprawidłowe uprawnienie %s."
@@ -487,7 +518,7 @@ msgstr "%s: błąd kompilacji wyrażenia regularnego \"%s\" [oryginał: \"%s\"] 
 #: ../parser_regex.c:510
 #, c-format
 msgid "%s: Invalid profile name '%s' - bad regular expression\n"
-msgstr ""
+msgstr "%s: Nieprawidłowa nazwa profilu '%s% - nieprawidłowe wyrażenie regularne\n"
 
 #: ../parser_policy.c:200
 #, c-format
@@ -530,7 +561,8 @@ msgstr "Błąd w profilu %s. Wczytanie nie powiodło się.\n"
 msgid "%s: Errors found during postprocessing.  Aborting.\n"
 msgstr "%s: Napotkano błędy podczas przetwarzania. Proces przerwano.\n"
 
-#: ../parser_policy.c:680 ../parser_policy.c:701
+#: ../parser_policy.c:680
+#: ../parser_policy.c:701
 #, c-format
 msgid "%s: Errors found during regex postprocess.  Aborting.\n"
 msgstr "%s: Błąd podczas przetwarzania końcowego wyrażenia regularnego. Proces przerwano.\n"
