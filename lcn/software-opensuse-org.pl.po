@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-11 14:39+0100\n"
+"POT-Creation-Date: 2011-02-09 12:14+0100\n"
 "PO-Revision-Date: 2011-01-25 17:40+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@opensuse.biz>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
@@ -19,17 +19,21 @@ msgstr ""
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
-#: app/controllers/search_controller.rb:32
+#: app/controllers/search_controller.rb:33
 msgid "Please use search strings of at least 2 characters"
 msgstr "Proszę używać zapytań wyszukiwania zawierających co najmniej dwa znaki"
 
-#: app/controllers/search_controller.rb:45
-#: app/controllers/search_controller.rb:53
+#: app/controllers/search_controller.rb:50
+msgid "Switched to exact match due to too many hits on substring search."
+msgstr ""
+
+#: app/controllers/search_controller.rb:52
+#: app/controllers/search_controller.rb:61
 msgid "Please be more precise in your search, search limit reached."
 msgstr "Proszę doprecyzować zapytanie, osiągnięty został limit wyszukiwania."
 
-#: app/controllers/search_controller.rb:47
-#: app/controllers/search_controller.rb:48
+#: app/controllers/search_controller.rb:55
+#: app/controllers/search_controller.rb:56
 msgid "Could not perform search: "
 msgstr "Nie można przeprowadzić wyszukiwania:"
 
@@ -122,131 +126,102 @@ msgid "Need help?"
 msgstr "Potrzebna pomoc?"
 
 #: app/views/main/release.rhtml:44
-msgid "More information on downloading openSUSE is available from the <a href=\"http://en.opensuse.org/SDB:Download_help\">Download Help.</a>"
-msgstr "Więcej informacji na temat pobierania openSUSE można uzyskać na stronie <a href=\"http://en.opensuse.org/SDB:Download_help\">Download Help</a>."
+msgid "More information on downloading openSUSE is available from the <a href=\"http://en.opensuse.org/SDB:Download_help\">Download Help</a> and <a href=\"http://en.opensuse.org/SDB:Network_installation\">Network Installation</a> pages in our <a href=\"http://en.opensuse.org/Portal:Documentation\">Documentation Wiki</a>."
+msgstr ""
 
-#: app/views/main/release.rhtml:47
+#: app/views/main/release.rhtml:45
+msgid "User manuals are available from <a href=\"doc.opensuse.org\">doc.opensuse.org</a>, for example the <a href=\"http://doc.opensuse.org/products/opensuse/openSUSE/opensuse-startup/\">Official Start-Up Guide</a>, and the <a href=\"http://doc.opensuse.org/products/opensuse/openSUSE/opensuse-installquick/\">Installation Guide</a>."
+msgstr ""
+
+#: app/views/main/release.rhtml:48
 msgid "Verify your download (optional, for experts)"
 msgstr "Sprawdzanie pobierania (opcjonalne, dla zaawansowanych użytkowników)"
 
-#: app/views/main/release.rhtml:49
+#: app/views/main/release.rhtml:50
 msgid "Many applications can verify the checksum of a download. To verify your download can be important as it verifies you really have got the ISO file you wanted to download and not some broken version."
 msgstr "Wiele programów może sprawdzić sumy kontrolne pobranych plików. Sprawdzenie pobranych plików może być istotne, ponieważ potwierdzi, że pobrano żądane obrazy ISO i nie zostały one uszkodzone."
 
-#: app/views/main/release.rhtml:50
+#: app/views/main/release.rhtml:51
 msgid "You could verify the file in the process of downloading. For example a checksum (SHA256) will be used automatically if you choose <a href='http://en.opensuse.org/SDB:Metalink'>Metalink</a> in the field above and use the add-on DownThemAll! in <a href='http://en.opensuse.org/Firefox'>Firefox</a>."
 msgstr "Można zweryfikować plik w trakcie jego pobierania. Dla przykładu suma kontrolna (SHA256) będzie użyta domyślnie, jeśli wybrana zostanie opcja <a href='http://en.opensuse.org/SDB:Metalink'>Metalink</a> w powyższym polu, a do pobierania używany będzie dodatek DownThemAll! dla przeglądarki <a href='http://en.opensuse.org/Firefox'>Firefox</a>."
 
-#: app/views/main/release.rhtml:51
+#: app/views/main/release.rhtml:52
 msgid "We offer three different checksums:"
 msgstr "Oferujemy trzy różne sumy kontrolne:"
 
-#: app/views/main/release.rhtml:55 app/views/main/release.rhtml:66
+#: app/views/main/release.rhtml:56 app/views/main/release.rhtml:67
 msgid "gpg signature"
 msgstr "podpis gpg"
 
-#: app/views/main/release.rhtml:56 app/views/main/release.rhtml:66
+#: app/views/main/release.rhtml:57 app/views/main/release.rhtml:67
 msgid "offers the most security as you can verify who signed it. It should be <tt>%s</tt>."
 msgstr "oferuje największe bezpieczeństwo poprzez możliwość sprawdzenia kto podpisał plik. Wartość powinna wynosić <tt>%s</tt>."
 
-#: app/views/main/release.rhtml:59 app/views/main/release.rhtml:67
+#: app/views/main/release.rhtml:60 app/views/main/release.rhtml:68
 msgid "md5 checksum"
 msgstr "suma kontrolna md5"
 
-#: app/views/main/release.rhtml:60 app/views/main/release.rhtml:67
+#: app/views/main/release.rhtml:61 app/views/main/release.rhtml:68
 msgid "is still the most commonly used checksum. Many ISO burners display it right before burning."
 msgstr "jest najczęściej używanym rodzajem sumy kontrolnej. Wiele programów do nagrywania płyt wyświetla jej wartość przed nagraniem płyty. "
 
-#: app/views/main/release.rhtml:61 app/views/main/release.rhtml:68
+#: app/views/main/release.rhtml:62 app/views/main/release.rhtml:69
 msgid "sha1 checksum"
 msgstr "suma kontrolna sha1"
 
-#: app/views/main/release.rhtml:62 app/views/main/release.rhtml:68
+#: app/views/main/release.rhtml:63 app/views/main/release.rhtml:69
 msgid "is the less known but more secure checksum than md5."
 msgstr "jest mniej popularna, lecz dająca większą pewność poprawności plików niż md5."
 
-#: app/views/main/release.rhtml:71
+#: app/views/main/release.rhtml:72
 msgid "Add-On Downloads (optional)"
 msgstr "Pobieranie dodatków (opcjonalne) "
 
-#: app/views/main/release.rhtml:73
+#: app/views/main/release.rhtml:74
 msgid "Extra Languages (32 Bit)"
 msgstr "Dodatkowe języki (32 Bit)"
 
-#: app/views/main/release.rhtml:74
+#: app/views/main/release.rhtml:75
 msgid "Extra Languages (64 Bit)"
 msgstr "Dodatkowe języki (64 Bit)"
 
-#: app/views/main/release.rhtml:75
+#: app/views/main/release.rhtml:76
 msgid "Extra Languages"
 msgstr "Dodatkowe języki"
 
-#: app/views/main/release.rhtml:76
+#: app/views/main/release.rhtml:77
 msgid "Live CDs contain only four languages (English, German, Russian and Italian). If you want to have support for remaining languages you need to download it from the Internet during the installation or any time after it. If you have easy access to the Internet or if you use DVD containing all languages, you do not need this CD."
 msgstr "Live CD zawiera tylko cztery języki (angielski, niemiecki, rosyjski i włoski). W celu zapewnienia wsparcia dla innych języków należy je pobrać z Internetu w czasie instalacji lub później. Jeśli posiadasz dobre łącze lub korzystasz z nośnika DVD zawierającego wszystkie języki, to ten nośnik jest Ci niepotrzebny."
 
-#: app/views/main/release.rhtml:77
+#: app/views/main/release.rhtml:78
 msgid "NonOSS CD"
 msgstr "NonOSS CD"
 
-#: app/views/main/release.rhtml:78
+#: app/views/main/release.rhtml:79
 msgid "This CD contains free software distributed under proprietary licence not allowing its inclusion to main installation media together with free open-source software. All software from this CD could be downloaded from NON-OSS repository."
 msgstr "Ten nośnik zawiera oprogramowanie objęte licencją własnościową, nie pozwalającą na umieszczenie go razem z oprogramowaniem open-source na nośniku instalacyjnym. Oprogramowanie to jest dostępne także w repozytorium NON-OSS."
 
-#: app/views/main/release.rhtml:84
+#: app/views/main/release.rhtml:85
 msgid "How to Proceed"
 msgstr "Jak postępować"
 
-#: app/views/main/release.rhtml:86
+#: app/views/main/release.rhtml:87
 msgid "After having successfully downloaded the ISO image(s), burn the image(s) with your favorite burning application to a DVD or CD. Please do <em>not</em> burn a data DVD/CD, but rather choose the option to burn an ISO image."
 msgstr "Po prawidłowym pobraniu obrazów ISO, należy wypalić je na płytach CD lub DVD preferowanym programem do nagrywania. <em>Nie wolno</em> tworzyć płyty z danymi. Należy wypalić obraz ISO."
 
-#: app/views/main/release.rhtml:88
+#: app/views/main/release.rhtml:89
 msgid "More information on burning the ISO file to CD/DVD"
 msgstr "Więcej informacji na temat nagrywania plików ISO na płyty CD/DVD"
 
-#: app/views/main/release.rhtml:89
+#: app/views/main/release.rhtml:90
 msgid "More information on creating a <a href='http://en.opensuse.org/Live_USB_stick'>bootable USB stick</a>"
 msgstr "Więcej informacji o <a href='http://en.opensuse.org/Live_USB_stick'>botowalnym pendrive</a>"
 
-#: app/views/main/release.rhtml:91
+#: app/views/main/release.rhtml:92
 msgid "Boot from the DVD or CD. In case your computer does not automatically boot from CD/DVD, open the BIOS setup to allow booting from CD or DVD."
 msgstr "Następnie należy uruchomić komputer z płyty CD lub DVD. Jeżeli komputer nie uruchamia się automatycznie z napędu CD/DVD, należy w BIOSie ustawić uruchamianie komputera z napędu CD/DVD."
 
-#: app/views/main/release.rhtml:92
-msgid "Instructions are available as follows:"
-msgstr "Dostępne instrukcje (poniżej):"
-
-#: app/views/main/release.rhtml:94
-msgid "Installation from DVD/CD:"
-msgstr "Instalacja z płyt DVD/CD:"
-
 #: app/views/main/release.rhtml:96
-msgid "Official %s Start-Up guide"
-msgstr "Oficjalny przewodnik Start-Up Guide dla %s"
-
-#: app/views/main/release.rhtml:98
-msgid "http://en.opensuse.org/SDB:Installation_help"
-msgstr "http://en.opensuse.org/SDB:Installation_help"
-
-#: app/views/main/release.rhtml:98
-msgid "Step-by-step installation guide"
-msgstr "Podręcznik instalacji krop po kroku"
-
-# dialog title for nfs installation
-#: app/views/main/release.rhtml:100
-msgid "Network Installation"
-msgstr "Instalacja sieciowa"
-
-#: app/views/main/release.rhtml:102
-msgid "http://en.opensuse.org/SDB:Network_installation"
-msgstr "http://en.opensuse.org/SDB:Network_installation"
-
-#: app/views/main/release.rhtml:102
-msgid "Internet Installation"
-msgstr "Instalacja przez Internet"
-
-#: app/views/main/release.rhtml:109
 msgid "Additional Information"
 msgstr "Dodatkowe informacje"
 
@@ -342,127 +317,145 @@ msgstr "Pobierz&nbsp;DVD"
 msgid "Download&nbsp;Network"
 msgstr "Pobierz obraz instalacji sieciowej"
 
-#: app/views/layouts/application.rhtml:40
+#: app/views/main/_options.rhtml:73
+msgid "Documentation"
+msgstr ""
+
+#: app/views/main/_options.rhtml:75
+msgid "<a href=\"http://doc.opensuse.org/products/opensuse/openSUSE/opensuse-installquick/\">Installation quickstart</a>"
+msgstr ""
+
+#: app/views/main/_options.rhtml:76
+#, fuzzy
+msgid "<a href=\"http://doc.opensuse.org/products/opensuse/openSUSE/opensuse-startup/\">openSUSE startup guide</a>"
+msgstr "<a href=\"http://en.opensuse.org/openSUSE:License\">Licencja</a>"
+
+#: app/views/layouts/application.rhtml:38
 msgid "Header Logo"
 msgstr "Logo nagłówka"
 
-#: app/views/layouts/application.rhtml:43
+#: app/views/layouts/application.rhtml:41
 msgid "Downloads"
 msgstr "Pobierz"
 
-#: app/views/layouts/application.rhtml:44
+#: app/views/layouts/application.rhtml:42
 msgid "Support"
 msgstr "Wsparcie"
 
-#: app/views/layouts/application.rhtml:45
+#: app/views/layouts/application.rhtml:43
 msgid "Community"
 msgstr "Społeczność"
 
-#: app/views/layouts/application.rhtml:46
+#: app/views/layouts/application.rhtml:44
 msgid "Development"
 msgstr "Wersja rozwojowa"
 
-#: app/views/layouts/application.rhtml:88
-#: app/views/layouts/application.rhtml:90
+#: app/views/layouts/application.rhtml:64
+#: app/views/layouts/application.rhtml:66
 msgid "switch to"
 msgstr "przełącz do"
 
-#: app/views/layouts/application.rhtml:88
+#: app/views/layouts/application.rhtml:64
 msgid "Development Version"
 msgstr "Wersja rozwojowa"
 
-#: app/views/layouts/application.rhtml:90
+#: app/views/layouts/application.rhtml:66
 msgid "Released Version"
 msgstr "Numer wersji"
 
-#: app/views/layouts/application.rhtml:104
+#: app/views/layouts/application.rhtml:80
 msgid "Popular Software"
 msgstr "Popularne oprogramowanie"
 
-#: app/views/layouts/application.rhtml:118
+#: app/views/layouts/application.rhtml:96
 msgid "Getting Help"
 msgstr "Jak uzyskać pomoc"
 
-#: app/views/layouts/application.rhtml:120
+#: app/views/layouts/application.rhtml:98
 msgid "Download Help"
 msgstr "Informacje o pobieraniu"
 
-#: app/views/layouts/application.rhtml:121
+#: app/views/layouts/application.rhtml:99
 msgid "Burn CD/DVD Image(s)"
 msgstr "Nagrywanie obrazów CD/DVD"
 
-#: app/views/layouts/application.rhtml:122
+#: app/views/layouts/application.rhtml:100
 msgid "Installation Guides"
 msgstr "Przewodniki instalacji "
 
-#: app/views/layouts/application.rhtml:123
+#: app/views/layouts/application.rhtml:101
 msgid "Official Manuals"
 msgstr "Oficjalne podręczniki"
 
-#: app/views/layouts/application.rhtml:124
+#: app/views/layouts/application.rhtml:102
 msgid "Package Repositories"
 msgstr "Repozytoria pakietów"
 
-#: app/views/layouts/application.rhtml:125
+#: app/views/layouts/application.rhtml:103
 msgid "Reporting Bugs"
 msgstr "Zgłaszanie błędów"
 
-#: app/views/layouts/application.rhtml:135
-#: app/views/layouts/application.rhtml:137
+#: app/views/layouts/application.rhtml:113
+#: app/views/layouts/application.rhtml:115
 msgid "openSUSE 11.3 Counter"
 msgstr "Licznik openSUSE 11.3"
 
-#: app/views/layouts/application.rhtml:140
+#: app/views/layouts/application.rhtml:118
 msgid "Buy openSUSE"
 msgstr "Kup openSUSE"
 
-#: app/views/layouts/application.rhtml:142
-#: app/views/layouts/application.rhtml:145
+#: app/views/layouts/application.rhtml:120
+#: app/views/layouts/application.rhtml:123
 msgid "http://en.opensuse.org/Buy_openSUSE"
 msgstr "http://en.opensuse.org/Buy_openSUSE"
 
-#: app/views/layouts/application.rhtml:142
+#: app/views/layouts/application.rhtml:120
 msgid "Buy openSUSE 11.3"
 msgstr "Kup openSUSE 11.3"
 
-#: app/views/layouts/application.rhtml:145
+#: app/views/layouts/application.rhtml:123
 msgid "Buy openSUSE 11.3!"
 msgstr "Kup openSUSE 11.3!"
 
-#: app/views/layouts/application.rhtml:150
+#: app/views/layouts/application.rhtml:128
 msgid "Sponsored by"
 msgstr "Sponsorowany przez"
 
-#: app/views/layouts/application.rhtml:151
+#: app/views/layouts/application.rhtml:129
 msgid "Platinum Sponsor"
 msgstr "Platynowy sponsor"
 
-#: app/views/layouts/application.rhtml:152
+#: app/views/layouts/application.rhtml:130
 msgid "Gold Sponsor"
 msgstr "Złoty sponsor"
 
-#: app/views/layouts/application.rhtml:154
+#: app/views/layouts/application.rhtml:132
 msgid "Sponsored by AMD"
 msgstr "Sponsorowane przez AMD"
 
-#: app/views/layouts/application.rhtml:155
+#: app/views/layouts/application.rhtml:133
 msgid "Sponsored by: IP Exchange"
 msgstr "Sponsorowane przez: IP Exchange"
 
-#: app/views/layouts/application.rhtml:157
+#: app/views/layouts/application.rhtml:135
 msgid "Silver Sponsor"
 msgstr "Srebrny sponsor"
 
-#: app/views/layouts/application.rhtml:159
+#: app/views/layouts/application.rhtml:137
 msgid "Sponsored by: B1 Systems"
 msgstr "Sponsorowany przez: B1 Systems"
 
-#: app/views/layouts/application.rhtml:161
+#: app/views/layouts/application.rhtml:139
 msgid "Bronze Sponsor"
 msgstr "Brązowy Sponsor"
 
+#: app/views/layouts/application.rhtml:143
+msgid "Language"
+msgstr "Język"
+
 #: app/views/search/_search_result.rhtml:4
-msgid "No packages found that matched your query."
+#, fuzzy
+msgid "No packages found in the openSUSE build service that matched your query."
 msgstr "Nie znaleziono pakietów pasujących do zapytania."
 
 #: app/views/search/_search_result.rhtml:9
@@ -490,6 +483,10 @@ msgstr "[Zbiór oprogramowania]"
 msgid "Search Results"
 msgstr "Wyniki wyszukiwania"
 
+#: app/views/main/redirect_with_notice.erb:1
+msgid "Browser incompatibility"
+msgstr ""
+
 #: app/views/search/_search_box.html.erb:3
 msgid "Package Search"
 msgstr "Wyszukiwanie pakietów"
@@ -513,6 +510,61 @@ msgstr "Wyklucz domowe projekty użytkownika"
 #: app/views/search/_search_box.html.erb:18
 msgid "Exclude debug packages"
 msgstr "Wyklucz pakiety do debugowania"
+
+#: app/views/statistic/index.html.erb:1
+msgid "Statistics"
+msgstr ""
+
+#: app/views/statistic/index.html.erb:3
+#, fuzzy
+msgid "Search Statistics:"
+msgstr "Wyniki wyszukiwania"
+
+#: app/views/statistic/index.html.erb:5
+msgid "Top searches:"
+msgstr ""
+
+#: app/views/statistic/index.html.erb:14
+msgid "Top searches without hits:"
+msgstr ""
+
+#: app/views/statistic/index.html.erb:24
+#, fuzzy
+msgid "Download Statistics:"
+msgstr "Pobierz %s"
+
+#: app/views/statistic/index.html.erb:26
+#, fuzzy
+msgid "Top downloads:"
+msgstr "Pobierz"
+
+#~ msgid "More information on downloading openSUSE is available from the <a href=\"http://en.opensuse.org/SDB:Download_help\">Download Help.</a>"
+#~ msgstr "Więcej informacji na temat pobierania openSUSE można uzyskać na stronie <a href=\"http://en.opensuse.org/SDB:Download_help\">Download Help</a>."
+
+#~ msgid "Instructions are available as follows:"
+#~ msgstr "Dostępne instrukcje (poniżej):"
+
+#~ msgid "Installation from DVD/CD:"
+#~ msgstr "Instalacja z płyt DVD/CD:"
+
+#~ msgid "Official %s Start-Up guide"
+#~ msgstr "Oficjalny przewodnik Start-Up Guide dla %s"
+
+#~ msgid "http://en.opensuse.org/SDB:Installation_help"
+#~ msgstr "http://en.opensuse.org/SDB:Installation_help"
+
+#~ msgid "Step-by-step installation guide"
+#~ msgstr "Podręcznik instalacji krop po kroku"
+
+# dialog title for nfs installation
+#~ msgid "Network Installation"
+#~ msgstr "Instalacja sieciowa"
+
+#~ msgid "http://en.opensuse.org/SDB:Network_installation"
+#~ msgstr "http://en.opensuse.org/SDB:Network_installation"
+
+#~ msgid "Internet Installation"
+#~ msgstr "Instalacja przez Internet"
 
 #~ msgid "More information"
 #~ msgstr "Więcej informacji"
@@ -604,9 +656,6 @@ msgstr "Wyklucz pakiety do debugowania"
 
 #~ msgid "Downloads the installation system and all packages from online repositories.  Suitable for installation or upgrade."
 #~ msgstr "Zostanie pobrany system do instalacji wraz ze wszystkimi pakietami z repozytoriów online. Zalecane w przypadku instalacji lub aktualizacji."
-
-#~ msgid "Language"
-#~ msgstr "Język"
 
 #~ msgid "Metalinks"
 #~ msgstr "Metalinki"
