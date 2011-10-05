@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ldap-server\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-23 15:54+0200\n"
+"POT-Creation-Date: 2011-10-05 10:03+0200\n"
 "PO-Revision-Date: 2011-09-24 13:57+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
@@ -722,7 +722,8 @@ msgid "is not a valid LDAP DN."
 msgstr "nie jest prawidłowym DN usługi LDAP"
 
 #: src/LdapServer.pm:2399 src/LdapServer.pm:2409
-msgid "has mulitvalued RDNs."
+#, fuzzy
+msgid "has multivalued RDNs."
 msgstr "posiada wielowartościowe wartości RDN."
 
 #: src/LdapServer.pm:2441
@@ -942,7 +943,7 @@ msgid "Cannot write CA certificate file."
 msgstr "Nie można zapisać pliku certyfikatu CA."
 
 #. translators: error popup before aborting the module
-#: src/complex.ycp:51 src/ldap-server_proposal.ycp:224
+#: src/complex.ycp:50 src/ldap-server_proposal.ycp:224
 #, ycp-format
 msgid ""
 "The package '%1' is not available.\n"
@@ -954,7 +955,7 @@ msgstr ""
 "bez zainstalowania tego pakietu."
 
 #. translators: error popup before aborting the module
-#: src/complex.ycp:58 src/ldap-server_proposal.ycp:229
+#: src/complex.ycp:57 src/ldap-server_proposal.ycp:229
 msgid ""
 "YaST2 cannot continue the configuration\n"
 "without installing the required packages."
@@ -962,11 +963,11 @@ msgstr ""
 "Program YaST2 nie może kontynuować konfiguracji \n"
 "bez zainstalowania wymaganych pakietów."
 
-#: src/complex.ycp:105
+#: src/complex.ycp:104
 msgid "Existing configuration detected."
 msgstr "Wykryto istniejącą konfigurację."
 
-#: src/complex.ycp:106
+#: src/complex.ycp:105
 msgid ""
 "You have an existing configuration, but the LDAP server is currently not running.\n"
 "Do you want to start the server now and re-read its configuration data or do you \n"
@@ -976,15 +977,15 @@ msgstr ""
 "Uruchomić serwer teraz i wczytać ponownie dane konfiguracyjne, czy\n"
 "utworzyć nową konfigurację od początku?"
 
-#: src/complex.ycp:109 src/dialogs.ycp:127
+#: src/complex.ycp:108 src/dialogs.ycp:127
 msgid "Restart"
 msgstr "Ponowne uruchomienie"
 
-#: src/complex.ycp:109 src/dialogs.ycp:128
+#: src/complex.ycp:108 src/dialogs.ycp:128
 msgid "New Configuration"
 msgstr "Nowa konfiguracja"
 
-#: src/complex.ycp:134
+#: src/complex.ycp:133
 msgid ""
 "Your system is currently configured to use the configuration \n"
 "file /etc/openldap/slapd.conf. This YaST module only supports the dynamic\n"
@@ -995,16 +996,16 @@ msgstr ""
 "w pliku /etc/openldap/slapd.conf. Ten moduł programu YaST obsługuje tylko dynamiczną\n"
 "konfigurację bazy danych OpenLDAP (back-config). Czy przenieść obecną konfigurację do bazy danych konfiguracji?\n"
 
-#: src/complex.ycp:147
+#: src/complex.ycp:146
 msgid "Migrate existing configuration"
 msgstr "Przenoszenie istniejącej konfiguracji"
 
-#: src/complex.ycp:150
+#: src/complex.ycp:149
 msgid "Create a new configuration from scratch"
 msgstr "Tworzenie nowej konfiguracji od początku"
 
 #. LdapServer summary dialog caption
-#: src/complex.ycp:400
+#: src/complex.ycp:399
 msgid "LDAP Server Configuration Summary"
 msgstr "Podsumowanie konfiguracji serwera LDAP"
 
@@ -1253,7 +1254,8 @@ msgid "<h4>Protocol Listeners</h4>"
 msgstr "<h4>Nasłuch protokołów</h4>"
 
 #: src/helps.ycp:27
-msgid "<p>Here you can enable and disable the various protocol listeneres of OpenLDAP</p>"
+#, fuzzy
+msgid "<p>Here you can enable and disable the various protocol listeners of OpenLDAP</p>"
 msgstr "<p>W tym miejscu można włączać i wyłączać nasłuch różnych protokołów OpenLDAP</p>"
 
 #: src/helps.ycp:28
@@ -1317,9 +1319,10 @@ msgid ""
 msgstr "<p>Opcja <b>Bazowy DN</b> określa nazwę głównego wpisu tworzonej bazy danych.</p>"
 
 #: src/helps.ycp:50
+#, fuzzy
 msgid ""
 "<p>The <b>Administrator DN</b> along with a <b>LDAP Administrator Password</b> \n"
-"specifieds a superuser identity for the database, surpassing all ACLs and other \n"
+"specifies a superuser identity for the database, surpassing all ACLs and other \n"
 "administrative limit restrictions. Checking <b>Append Base DN</b> appends the \n"
 "<b>Base DN</b> entered above, for example, a base DN of <tt>dc=example,dc=com</tt>\n"
 "and Administrator DN of <tt>c=Admin</tt> would combine to an effective Administrator DN\n"
@@ -1366,8 +1369,9 @@ msgstr ""
 "zmienić tutaj żadnych ustawień konfiguracyjnych."
 
 #: src/helps.ycp:70
+#, fuzzy
 msgid ""
-"<p>To enabled or disable plaintext authentication (LDAP Simple Bind)\n"
+"<p>To enable or disable plaintext authentication (LDAP Simple Bind)\n"
 "for the configuration database click the associated checkbox. Plaintext authentication\n"
 "to the configuration database will only be allowed when using sufficiently protected \n"
 "(e.g. SSL/TLS encrypted) connections.</p>"
@@ -1492,10 +1496,11 @@ msgid "<p>The table displays a list of attribute which have an index defined cur
 msgstr "<p>Ta tabela zawiera listę atrybutów, które mają aktualnie zdefiniowany indeks.</p>"
 
 #: src/helps.ycp:116
+#, fuzzy
 msgid ""
 "<p>Indexes are used by OpenLDAP to improve search performance on specific type of\n"
 "searches. Indexes should be configured corresponding to the most common searches that are used\n"
-"on a database. This YaST modul allows to setup three different types indexes.</p>"
+"on a database. This YaST module allows to setup three different types indexes.</p>"
 msgstr ""
 "<p>Indeksy są używane przez usługę OpenLDAP do przyśpieszania wyszukiwania dla konkretnych typów wyszukiwań.\n"
 "Indeksy powinny być skonfigurowane odpowiednio do najczęstszych wyszukań, które są przeprowadzane\n"
@@ -1537,10 +1542,11 @@ msgid ""
 msgstr "<p>Proszę użyć przycisku <b>Dodaj</b>, aby zdefiniować opcje indeksowania dla nowego atrybutu. Przycisk <b>Usuń</b> służy do usuwania istniejącego indeksu a przycisk <b>Edytuj</b> pozwala zmienić opcje indeksowania już zindeksowanego atrybutu.</p>"
 
 #: src/helps.ycp:130
+#, fuzzy
 msgid ""
 "<p>Note: Depending on the database size it can take a while until newly added\n"
 "indexes, will get active on a database. After the configuration has been written to the server.\n"
-"a background task will start to generated the indexing information for the database.</p>"
+"a background task will start to generate the indexing information for the database.</p>"
 msgstr ""
 "<p>Uwaga: zależnie od wielkości bazy danych może minąć trochę czasu, zanim nowo dodane\n"
 "indeksy będą aktywne w bazie danych. Po zapisaniu konfiguracji na serwerze\n"
@@ -1670,9 +1676,10 @@ msgid "<p>OpenLDAP supports different modes of replication:</p>"
 msgstr "<p>OpenLDAP obsługuje różne tryby replikacji:</p>"
 
 #: src/helps.ycp:175
+#, fuzzy
 msgid ""
 "<p><b>refreshOnly</b>: The slave server will periodically open a new connection, trigger a \n"
-"synchronization and close the connection again. The intervall how often this synchronization happens can be configured\n"
+"synchronization and close the connection again. The interval how often this synchronization happens can be configured\n"
 "through the <b>Replication Interval</b> settings.</p>"
 msgstr ""
 "<p><b>refreshOnly</b>: Serwer podrzędny będzie okresowo otwierał nowe połączenie, wyzwalał\n"
@@ -1705,9 +1712,10 @@ msgid "<h4>Update Referral</h4>"
 msgstr "<h4>Aktualizacja odwołania</h4>"
 
 #: src/helps.ycp:184
+#, fuzzy
 msgid ""
 "<p>As the slave database is readonly. The slave server will answer write operations with an LDAP referral.\n"
-"This referral by default points the client to the master server. You can configure a differen update referral here.\n"
+"This referral by default points the client to the master server. You can configure a different update referral here.\n"
 "This is e.g. useful in a cascaded replication setup i.e. when the provider for the slave server is as slave server\n"
 "itself. </p>"
 msgstr ""
@@ -1751,8 +1759,9 @@ msgid "<h3>LDAP Server Configuration Summary</h3>"
 msgstr "<h3>Podsumowanie konfiguracji serwera LDAP</h3>"
 
 #: src/helps.ycp:207
+#, fuzzy
 msgid ""
-"<p>This dialog just gives a short summary about the configartion you just\n"
+"<p>This dialog just gives a short summary about the configuration you just\n"
 "created. Click <b>Finish</b> to write that configuration and leave the LDAP\n"
 "Server module</p>"
 msgstr ""
@@ -1843,9 +1852,10 @@ msgid "<h4>Import Certificate</h4>"
 msgstr "<h4>Import certyfikatu</h4>"
 
 #: src/helps.ycp:242
+#, fuzzy
 msgid ""
 "<p>If you have no Common Server Certificate or you want OpenLDAP to use a different certificate\n"
-"you can enter the file names of the <b>CA Certifciate File</b>, <b>Certificate File</b> and \n"
+"you can enter the file names of the <b>CA Certificate File</b>, <b>Certificate File</b> and \n"
 "<b>Certificate Key File</b> into the corresponding textfields</p>"
 msgstr "<p>Jeśli nie ma wspólnego certyfikatu serwera lub jeśli usługa OpenLDAP ma korzystać z innego certyfikatu, można wprowadzić nazwy plików w polach <b>Plik certyfikatu CA</b>, <b>Plik certyfikatu</b> oraz <b>Plik klucza certyfikatu</b>.</p>"
 

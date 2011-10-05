@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: installation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-30 14:13+0200\n"
+"POT-Creation-Date: 2011-10-05 10:07+0200\n"
 "PO-Revision-Date: 2011-09-24 13:41+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -537,9 +537,10 @@ msgstr ""
 
 #. TRANSLATORS: pop-up message
 #: src/clients/inst_deploy_image.ycp:349
+#, fuzzy
 msgid ""
 "Debugging has been turned on.\n"
-"YaST will open a package manager for you to check the current status of packages."
+"YaST will open a software manager for you to check the current status of packages."
 msgstr ""
 "Włączono debugowanie.\n"
 "Program YaST otworzy menedżera pakietów, w celu sprawdzenia aktualnego stanu pakietów."
@@ -591,6 +592,21 @@ msgstr "Przygotowanie instalacji..."
 msgid "<p>Installation is just about to start!</p>"
 msgstr "<p>Za chwilę rozpocznie się instalacja.</p>"
 
+#. check box
+#: src/clients/inst_extrasources.ycp:263
+msgid "Show &package updates"
+msgstr ""
+
+#. popup message, list of repositores is appended to the text
+#: src/clients/inst_extrasources.ycp:360
+msgid "Package updates have been found in these additional repositories:"
+msgstr ""
+
+#. yes/no popup question
+#: src/clients/inst_extrasources.ycp:367
+msgid "Start the software manager to check and install the updates?"
+msgstr ""
+
 #. error description
 #: src/clients/inst_fallback_controlfile.ycp:37
 msgid ""
@@ -634,38 +650,38 @@ msgid "Save configuration"
 msgstr "Zapis konfiguracji"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:153
+#: src/clients/inst_finish.ycp:154
 msgid "Install boot manager"
 msgstr "Instalacja programu rozruchowego"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:163
+#: src/clients/inst_finish.ycp:164
 msgid "Save installation settings"
 msgstr "Zapis ustawień instalacji"
 
 #. progress stage
-#: src/clients/inst_finish.ycp:181
+#: src/clients/inst_finish.ycp:182
 msgid "Prepare system for initial boot"
 msgstr "Przygotowywanie systemu do pierwszego uruchomienia"
 
-#: src/clients/inst_finish.ycp:266
+#: src/clients/inst_finish.ycp:267
 #, ycp-format
 msgid "Checking stage: %1..."
 msgstr "Sprawdzanie poziomu: %1..."
 
 #. a fallback busy message
-#: src/clients/inst_finish.ycp:358
+#: src/clients/inst_finish.ycp:359
 #, ycp-format
 msgid "Calling step %1..."
 msgstr "Wykonywanie etapu %1..."
 
 #. use as ' * %1' -> ' * One of the finish steps...' in the SlideShow log
-#: src/clients/inst_finish.ycp:363
+#: src/clients/inst_finish.ycp:364
 #, ycp-format
 msgid " * %1"
 msgstr " * %1"
 
-#: src/clients/inst_finish.ycp:396
+#: src/clients/inst_finish.ycp:397
 msgid "Finished"
 msgstr "Zakończono."
 
@@ -719,9 +735,10 @@ msgstr "Wybór trybu"
 msgid "New &Installation"
 msgstr "Nowa &instalacja"
 
-#: src/clients/inst_mode.ycp:135 src/clients/inst_proposal.ycp:1148
-msgid "&Update"
-msgstr "Akt&ualizacja"
+#. radio button
+#: src/clients/inst_mode.ycp:135
+msgid "&Update an Existing System"
+msgstr ""
 
 #. check box
 #: src/clients/inst_mode.ycp:150
@@ -1421,31 +1438,31 @@ msgid "Installing Packages..."
 msgstr "Instalowanie pakietów..."
 
 #. heading in proposal, in case the module doesn't create one
-#: src/clients/inst_proposal.ycp:263 src/clients/inst_proposal.ycp:264
-#: src/clients/inst_proposal.ycp:271 src/clients/inst_proposal.ycp:314
-#: src/clients/inst_proposal.ycp:315 src/clients/inst_proposal.ycp:321
+#: src/clients/inst_proposal.ycp:264 src/clients/inst_proposal.ycp:265
+#: src/clients/inst_proposal.ycp:272 src/clients/inst_proposal.ycp:315
+#: src/clients/inst_proposal.ycp:316 src/clients/inst_proposal.ycp:322
 msgid "ERROR: Missing Title"
 msgstr "BŁĄD: Brak tytułu"
 
 #. busy message
-#: src/clients/inst_proposal.ycp:281
+#: src/clients/inst_proposal.ycp:282
 msgid "Adapting the proposal to the current settings..."
 msgstr "Dostosowanie projektu do aktualnych ustawień..."
 
 #. busy message;
 #. Initial contents of proposal subwindow while proposals are calculated
-#: src/clients/inst_proposal.ycp:285 src/clients/inst_proposal.ycp:763
+#: src/clients/inst_proposal.ycp:286 src/clients/inst_proposal.ycp:764
 msgid "Analyzing your system..."
 msgstr "Trwa analiza systemu..."
 
 #. fallback proposal, means usually an internal error
-#: src/clients/inst_proposal.ycp:468
+#: src/clients/inst_proposal.ycp:469
 msgid "ERROR: No proposal"
 msgstr "BŁĄD: Brak projektu"
 
 #. Submodules handle their own error reporting
 #. text for a message box
-#: src/clients/inst_proposal.ycp:518
+#: src/clients/inst_proposal.ycp:519
 msgid ""
 "Configuration saved.\n"
 "There were errors."
@@ -1454,7 +1471,7 @@ msgstr ""
 "Wystąpiły błędy."
 
 #. dialog headline
-#: src/clients/inst_proposal.ycp:706
+#: src/clients/inst_proposal.ycp:707
 msgid "Installation Overview"
 msgstr "Przegląd instalacji"
 
@@ -1463,42 +1480,42 @@ msgstr "Przegląd instalacji"
 #. Translators: About 40 characters max,
 #. use newlines for longer translations.
 #. radio button
-#: src/clients/inst_proposal.ycp:728
+#: src/clients/inst_proposal.ycp:729
 msgid "&Skip Configuration"
 msgstr "&Pomiń konfigurację"
 
 #. radio button
-#: src/clients/inst_proposal.ycp:731
+#: src/clients/inst_proposal.ycp:732
 msgid "&Use Following Configuration"
 msgstr "&Użyj poniższej konfiguracji"
 
 #. menu button
 #. TRANSLATORS: Push button
-#: src/clients/inst_proposal.ycp:742 src/clients/inst_proposal.ycp:919
+#: src/clients/inst_proposal.ycp:743 src/clients/inst_proposal.ycp:920
 #: src/clients/inst_upgrade_urls.ycp:161
 msgid "&Change..."
 msgstr "&Zmień..."
 
 #. Help message between headline and installation proposal / settings summary.
 #. May contain newlines, but don't make it very much longer than the original.
-#: src/clients/inst_proposal.ycp:805
+#: src/clients/inst_proposal.ycp:806
 msgid "Click any headline to make changes or use the \"Change...\" menu below."
 msgstr ""
 "Aby wprowadzić zmiany, proszę wybrać dowolny nagłówek po prawej \n"
 "albo nacisnąć przycisk \"Zmień...\" poniżej."
 
 #. push button
-#: src/clients/inst_proposal.ycp:836
+#: src/clients/inst_proposal.ycp:837
 msgid "&Show Release Notes"
 msgstr "Informacje o &wydaniu"
 
 #. menu button item
-#: src/clients/inst_proposal.ycp:917
+#: src/clients/inst_proposal.ycp:918
 msgid "&Reset to defaults"
 msgstr "P&rzywróć domyślne"
 
 #. General part of the help text for all types of proposals
-#: src/clients/inst_proposal.ycp:961
+#: src/clients/inst_proposal.ycp:962
 msgid ""
 "<p>\n"
 "Change the values by clicking on the respective headline\n"
@@ -1512,7 +1529,7 @@ msgstr ""
 
 #. Help text for installation proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:971
+#: src/clients/inst_proposal.ycp:972
 msgid ""
 "<p>\n"
 "Select <b>Install</b> to perform a new installation with the values displayed.\n"
@@ -1539,7 +1556,7 @@ msgstr ""
 #. * - sh@suse.de 2002-02-26
 #. *
 #. Help text for installation proposal, continued
-#: src/clients/inst_proposal.ycp:993 src/clients/inst_proposal.ycp:1015
+#: src/clients/inst_proposal.ycp:994 src/clients/inst_proposal.ycp:1016
 msgid ""
 "<p>\n"
 "Your hard disk has not been modified in any way, so you can still safely abort.\n"
@@ -1551,7 +1568,7 @@ msgstr ""
 
 #. Help text for update proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1002
+#: src/clients/inst_proposal.ycp:1003
 msgid ""
 "<p>\n"
 "Select <b>Update</b> to perform an update with the values displayed.\n"
@@ -1564,7 +1581,7 @@ msgstr ""
 
 #. Help text for network configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1024
+#: src/clients/inst_proposal.ycp:1025
 msgid ""
 "<p>\n"
 "Put the network settings into effect by pressing <b>Next</b>.\n"
@@ -1576,7 +1593,7 @@ msgstr ""
 
 #. Help text for service configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1033
+#: src/clients/inst_proposal.ycp:1034
 msgid ""
 "<p>\n"
 "Put the service settings into effect by pressing <b>Next</b>.\n"
@@ -1588,7 +1605,7 @@ msgstr ""
 
 #. Help text for hardware configuration proposal
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1042
+#: src/clients/inst_proposal.ycp:1043
 msgid ""
 "<p>\n"
 "Put the hardware settings into effect by pressing <b>Next</b>.\n"
@@ -1599,12 +1616,12 @@ msgstr ""
 "</p>\n"
 
 #. Proposal in uml module
-#: src/clients/inst_proposal.ycp:1050
+#: src/clients/inst_proposal.ycp:1051
 msgid "<P><B>UML Installation Proposal</B></P>"
 msgstr "<P><B>Propozycja instalacji UML</B></P>"
 
 #. help text
-#: src/clients/inst_proposal.ycp:1052
+#: src/clients/inst_proposal.ycp:1053
 msgid ""
 "<P>UML (User Mode Linux) installation allows you to start independent\n"
 "Linux virtual machines in the host system.</P>"
@@ -1615,7 +1632,7 @@ msgstr ""
 #. Generic help text for other proposals (not basic installation or
 #. hardhware configuration.
 #. General part ("You can change values...") is added as the next paragraph.
-#: src/clients/inst_proposal.ycp:1067
+#: src/clients/inst_proposal.ycp:1068
 msgid ""
 "<p>\n"
 "To use the settings as displayed, press <b>Next</b>.\n"
@@ -1626,7 +1643,7 @@ msgstr ""
 "</p>\n"
 
 #. help text
-#: src/clients/inst_proposal.ycp:1076
+#: src/clients/inst_proposal.ycp:1077
 msgid ""
 "<p>Some proposals might be\n"
 "locked by the system administrator, so cannot be changed. To change\n"
@@ -1637,27 +1654,31 @@ msgstr ""
 "Aby zmienić propozycje zastrzeżone, proszę skontaktować się\n"
 "z administratorem.</p>"
 
-#: src/clients/inst_proposal.ycp:1150
+#: src/clients/inst_proposal.ycp:1149
+msgid "&Update"
+msgstr "Akt&ualizacja"
+
+#: src/clients/inst_proposal.ycp:1151
 msgid "&Install"
 msgstr "&Instaluj"
 
 #. question in a popup box
-#: src/clients/inst_proposal.ycp:1251
+#: src/clients/inst_proposal.ycp:1252
 msgid "Really reset everything to default values?"
 msgstr "Czy na pewno przywrócić wszystkie wartości domyślne?"
 
 #. explain consequences of a decision
-#: src/clients/inst_proposal.ycp:1253
+#: src/clients/inst_proposal.ycp:1254
 msgid "You will lose all changes."
 msgstr "Wszystkie wprowadzone zmiany zostaną utracone."
 
 #. message show when user has disabled the configuration
-#: src/clients/inst_proposal.ycp:1265
+#: src/clients/inst_proposal.ycp:1266
 msgid "Skipping configuration upon user request"
 msgstr "Konfiguracja pominięta na żądanie użytkownika"
 
 #. error message is a popup
-#: src/clients/inst_proposal.ycp:1283
+#: src/clients/inst_proposal.ycp:1284
 msgid ""
 "The proposal contains an error that must be\n"
 "resolved before continuing.\n"
@@ -1708,12 +1729,12 @@ msgid "Starting service %1..."
 msgstr "Uruchamianie usługi %1..."
 
 #. TRANSLATORS: frame label
-#: src/clients/inst_scenarios.ycp:162
+#: src/clients/inst_scenarios.ycp:173
 msgid "Choose Scenario"
 msgstr "Proszę wybrać scenariusz"
 
 #. TRANSLATORS: help text
-#: src/clients/inst_scenarios.ycp:174
+#: src/clients/inst_scenarios.ycp:185
 msgid ""
 "<p>Select a scenario that matches your needs the best.\n"
 "Additional software can be selected later in software proposal.</p>"
@@ -1722,7 +1743,7 @@ msgstr ""
 "Dodatkowe oprogramowanie może być wybrane spośród propozycji później.</p>"
 
 #. TRANSLATORS: pop-up message
-#: src/clients/inst_scenarios.ycp:201
+#: src/clients/inst_scenarios.ycp:212
 msgid "Choose one scenario, please."
 msgstr "Proszę wybrać scenariusz."
 
@@ -1806,10 +1827,11 @@ msgstr ""
 "Proszę sprawdzić urządzenia!\n"
 
 #: src/clients/inst_system_analysis.ycp:120
+#, fuzzy
 msgid ""
 "No hard disks were found for the installation.\n"
 "During an automatic installation, they might be detected later.\n"
-"(especially on s390 or iSCSI systems)\n"
+"(especially on S/390 or iSCSI systems)\n"
 msgstr ""
 "Nie znaleziono twardego dysku dla instalacji.\n"
 "Może on być wykryty później, podczas automatycznej instalacji.\n"
@@ -1932,14 +1954,14 @@ msgstr "Ocenianie możliwości aktualizacji..."
 
 #. TRANSLATORS: progress step
 #: src/clients/inst_system_analysis.ycp:302
-#: src/clients/inst_upgrade_urls.ycp:1042
-msgid "Initialize package manager"
+#, fuzzy
+msgid "Initialize software manager"
 msgstr "Inicjalizacja menedżera pakietów"
 
 #. TRANSLATORS: progress step
 #: src/clients/inst_system_analysis.ycp:304
-#: src/clients/inst_upgrade_urls.ycp:1047
-msgid "Initializing package manager..."
+#, fuzzy
+msgid "Initializing software manager..."
 msgstr "Inicjalizacja menedżera pakietów..."
 
 #. TRANSLATORS: dialog caption
@@ -2154,26 +2176,6 @@ msgstr ""
 "Wystąpił błąd podczas dodawania wyłączonego repozytorium\n"
 "Nazwa: %1\n"
 "Adres URL: %2"
-
-#. TRANSLATORS: dialog caption
-#: src/clients/inst_upgrade_urls.ycp:1036
-msgid "Reading Repositories Used on the System"
-msgstr "Wczytywanie repozytoriów używanych w systemie"
-
-#. TRANSLATORS: progress step
-#: src/clients/inst_upgrade_urls.ycp:1041
-msgid "Read previously used repositories"
-msgstr "Wczytanie poprzednio używanych repozytoriów"
-
-#. TRANSLATORS: progress step
-#: src/clients/inst_upgrade_urls.ycp:1046
-msgid "Reading previously used repositories..."
-msgstr "Wczytywanie poprzednio używanych repozytoriów..."
-
-#. TRANSLATORS: dialog help
-#: src/clients/inst_upgrade_urls.ycp:1050
-msgid "<p>Reading repositories. Please wait...</p>"
-msgstr "<p>Wczytywanie repozytoriów. Proszę czekać...</p>"
 
 #. welcome text 1/4
 #: src/clients/inst_welcome.ycp:42
@@ -2576,7 +2578,7 @@ msgstr ""
 "Nie można kontynuować."
 
 #. progress step title
-#: src/inst_finish/copy_files_finish.ycp:123
+#: src/inst_finish/copy_files_finish.ycp:127
 msgid "Copying files to installed system..."
 msgstr "Kopiowanie plików do instalowanego systemu..."
 
@@ -2624,6 +2626,11 @@ msgstr "Sprawdzanie zainstalowanego systemu..."
 #: src/inst_finish/proxy_finish.ycp:41
 msgid "Saving proxy configuration..."
 msgstr "Zapisywanie konfiguracji proxy..."
+
+#. progress step title
+#: src/inst_finish/random_finish.ycp:50
+msgid "Enabling random number generator..."
+msgstr ""
 
 #. progress step title
 #: src/inst_finish/save_config_finish.ycp:96
@@ -2691,7 +2698,7 @@ msgid "Moving to installed system..."
 msgstr "Przechodzenie do zainstalowanego systemu..."
 
 #. progress step title
-#: src/inst_finish/umount_finish.ycp:47
+#: src/inst_finish/umount_finish.ycp:85
 msgid "Unmounting all mounted devices..."
 msgstr "Odmontowywanie wszystkich zamontowanych urządzeń..."
 
@@ -2743,9 +2750,10 @@ msgstr "Przywracanie preferencji użytkownika..."
 
 #. Error message
 #: src/modules/ImageInstallation.ycp:1236
+#, fuzzy
 msgid ""
 "Installation was unable to solve package dependencies automatically.\n"
-"Package manager will be opened for you to solve them manually."
+"Software manager will be opened for you to solve them manually."
 msgstr ""
 "Instalator nie mógł rozwiązać automatycznie zależności pakietów.\n"
 "Zostanie uruchomiony mendadżer pakietów, aby rozwiązać zależności ręcznie."
@@ -2760,6 +2768,18 @@ msgstr "<p>Aby system X11 był dostępny, należy zainstalować pakiet <b>%1</b>
 #: src/modules/X11Version.ycp:142
 msgid "<p>Do you want to install it now?</p>"
 msgstr "<p>Czy zainstalować go teraz?</p>"
+
+#~ msgid "Reading Repositories Used on the System"
+#~ msgstr "Wczytywanie repozytoriów używanych w systemie"
+
+#~ msgid "Read previously used repositories"
+#~ msgstr "Wczytanie poprzednio używanych repozytoriów"
+
+#~ msgid "Reading previously used repositories..."
+#~ msgstr "Wczytywanie poprzednio używanych repozytoriów..."
+
+#~ msgid "<p>Reading repositories. Please wait...</p>"
+#~ msgstr "<p>Wczytywanie repozytoriów. Proszę czekać...</p>"
 
 #~ msgid "Re&pair Installed System"
 #~ msgstr "&Naprawa zainstalowanego systemu"

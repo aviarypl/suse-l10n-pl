@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: wagon\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-23 15:54+0200\n"
+"POT-Creation-Date: 2011-10-05 10:04+0200\n"
 "PO-Revision-Date: 2011-09-25 14:48+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Polish <team@opensuse.biz>\n"
@@ -89,8 +89,8 @@ msgstr ""
 "Nie można usunąć produktu %1\n"
 "Proszę usunąć pakiet %2 ręcznie"
 
-#: src/clients/wagon.ycp:269 src/include/common_func.ycp:211
-#: src/include/common_func.ycp:233
+#: src/clients/wagon.ycp:269 src/include/common_func.ycp:210
+#: src/include/common_func.ycp:232
 msgid "Unknown product"
 msgstr "Nieznany produkt"
 
@@ -126,45 +126,91 @@ msgid "Finishing the migration..."
 msgstr "Kończenie migracji..."
 
 #. heading text
-#: src/clients/wagon_dup_repositories.ycp:54
+#: src/clients/wagon_dup_repositories.ycp:55
 msgid "Migration Repositories"
 msgstr "Repozytoria migracji"
 
-#: src/clients/wagon_dup_repositories.ycp:57
+#: src/clients/wagon_dup_repositories.ycp:58
 msgid "The packages will be switched to versions in the selected repositories."
 msgstr "Pakiety zostaną zamienione na ich wersje dostępne w wybranych repozytoriach."
 
-#: src/clients/wagon_dup_repositories.ycp:58
+#: src/clients/wagon_dup_repositories.ycp:59
 msgid "Selected"
 msgstr "Wybrane"
 
-#: src/clients/wagon_dup_repositories.ycp:58
+#: src/clients/wagon_dup_repositories.ycp:59
 msgid "Name"
 msgstr "Nazwa"
 
-#: src/clients/wagon_dup_repositories.ycp:58
+#: src/clients/wagon_dup_repositories.ycp:59
 msgid "URL"
 msgstr "Adres URL"
 
-#: src/clients/wagon_dup_repositories.ycp:60
+#: src/clients/wagon_dup_repositories.ycp:61
 msgid "Select"
 msgstr "Wybór"
 
-#: src/clients/wagon_dup_repositories.ycp:61
+#: src/clients/wagon_dup_repositories.ycp:62
 msgid "Deselect"
 msgstr "Odznacz"
 
 #. help text
-#: src/clients/wagon_dup_repositories.ycp:66
-#: src/clients/wagon_registration_check.ycp:189
-msgid "YaST checks whether the installed products are the installed products are registered."
-msgstr "YaST sprawdza czy zainstalowane produkty zostały zarejestrowane."
-
 #: src/clients/wagon_dup_repositories.ycp:67
-#: src/clients/wagon_registration_check.ycp:168
-#: src/clients/wagon_registration_check.ycp:190
-msgid "Migrating unregistered or partly registered system might result in broken system."
-msgstr "Migracja niezarejestrowanego lub zarejestrowanego częściowo systemu może skutować jego nieprawidlowym funkcjonowaniem."
+msgid "Here select the repositories which will be used for migration."
+msgstr ""
+
+#: src/clients/wagon_dup_repositories.ycp:68
+#, fuzzy
+msgid "The installed packages will be switched to the versions available in the selected migration repositories."
+msgstr "Pakiety zostaną zamienione na ich wersje dostępne w wybranych repozytoriach."
+
+#. heading text
+#: src/clients/wagon_dup_repositories.ycp:157
+#, fuzzy
+msgid "Migration Type"
+msgstr "Migracja ukończona"
+
+#. frame label
+#: src/clients/wagon_dup_repositories.ycp:163
+#, fuzzy
+msgid "Migration type"
+msgstr "Migracja ukończona"
+
+#. radio button
+#: src/clients/wagon_dup_repositories.ycp:169
+msgid "&Minimal - upgrade from repositories added by registration"
+msgstr ""
+
+#. radio button
+#: src/clients/wagon_dup_repositories.ycp:171
+msgid "&Full - upgrade from all repositories"
+msgstr ""
+
+#. push button
+#: src/clients/wagon_dup_repositories.ycp:181
+msgid "Advanced..."
+msgstr ""
+
+#. help text
+#: src/clients/wagon_dup_repositories.ycp:185
+msgid "Select the requested migration type."
+msgstr ""
+
+#. help text
+#: src/clients/wagon_dup_repositories.ycp:187
+msgid "Minimal migration only uses the repositories added by registration, full migration migrates all packages to the latest version available in any enabled repository. Full migration might use third party repositories."
+msgstr ""
+
+#. help text
+#: src/clients/wagon_dup_repositories.ycp:189
+msgid "Press <b>Advanced</b> button to manually select the repositories used for upgrading."
+msgstr ""
+
+#. error popup message
+#: src/clients/wagon_dup_repositories.ycp:247
+#, ycp-format
+msgid "Selected unknown migration type: %1"
+msgstr ""
 
 #: src/clients/wagon_migration_products.ycp:65
 #, ycp-format
@@ -173,7 +219,8 @@ msgstr "Nie można uaktualnić zainstalowanego produktu %1."
 
 #: src/clients/wagon_migration_products.ycp:77
 #: src/clients/wagon_migration_products.ycp:147
-msgid "Unable to initialize the package manager."
+#, fuzzy
+msgid "Unable to initialize the software manager."
 msgstr "Nie można zainicjalizować menedżera pakietów."
 
 #: src/clients/wagon_migration_products.ycp:101
@@ -276,6 +323,11 @@ msgstr "Ostrzeżenie:"
 msgid "It is strongly recommended to register the unregistered or expired products before starting migration."
 msgstr "Zalecana jest rejestracja niezarejestrowanego lub nieaktualnego produktu przed uruchomieniem migracji."
 
+#: src/clients/wagon_registration_check.ycp:168
+#: src/clients/wagon_registration_check.ycp:190
+msgid "Migrating unregistered or partly registered system might result in broken system."
+msgstr "Migracja niezarejestrowanego lub zarejestrowanego częściowo systemu może skutować jego nieprawidlowym funkcjonowaniem."
+
 #. heading text
 #: src/clients/wagon_registration_check.ycp:181
 msgid "Registration Check"
@@ -284,6 +336,12 @@ msgstr "Sprawdzanie rejestracji"
 #: src/clients/wagon_registration_check.ycp:185
 msgid "Run Registration..."
 msgstr "Uruchom rejestrację..."
+
+#. help text
+#: src/clients/wagon_registration_check.ycp:189
+#, fuzzy
+msgid "YaST checks whether the installed products are registered."
+msgstr "YaST sprawdza czy zainstalowane produkty zostały zarejestrowane."
 
 #: src/clients/wagon_registration_handler.ycp:35
 msgid "Novell Customer Center Configuration"
@@ -294,12 +352,12 @@ msgid "Checking the current repositories..."
 msgstr "Sprawdzanie aktualnych repozytoriów..."
 
 #. dialog caption
-#: src/clients/wagon_registration_handler.ycp:109
+#: src/clients/wagon_registration_handler.ycp:125
 msgid "Warning"
 msgstr "Ostrzeżenie"
 
 #. pop-up question
-#: src/clients/wagon_registration_handler.ycp:111
+#: src/clients/wagon_registration_handler.ycp:127
 msgid ""
 "No changes were made to list of the registered repositories.\n"
 "This means that you might have skipped the registration or there might\n"
@@ -315,11 +373,11 @@ msgstr ""
 "\n"
 "Czy uruchomić rejestrację ponownie?"
 
-#: src/clients/wagon_registration_handler.ycp:117
+#: src/clients/wagon_registration_handler.ycp:133
 msgid "&Yes"
 msgstr "&Tak"
 
-#: src/clients/wagon_registration_handler.ycp:118
+#: src/clients/wagon_registration_handler.ycp:134
 msgid "&No, Skip It"
 msgstr "&Nie, pomiń ją"
 
@@ -378,11 +436,11 @@ msgstr ""
 "także je zmodyfikować.</p>"
 
 #. heading text
-#: src/clients/welcome_in_wagon.ycp:28
+#: src/clients/welcome_in_wagon.ycp:29
 msgid "Welcome"
 msgstr "Witamy"
 
-#: src/clients/welcome_in_wagon.ycp:31
+#: src/clients/welcome_in_wagon.ycp:32
 msgid ""
 "This tool will help to update the\n"
 "running system to a service pack.\n"
@@ -396,14 +454,25 @@ msgstr ""
 "aby rozpocząć aktualizację."
 
 #. help text
-#: src/clients/welcome_in_wagon.ycp:38
+#: src/clients/welcome_in_wagon.ycp:39
 msgid "<p>This tool updates the running system to a service pack.</p>"
 msgstr "<p>To narzędzie aktualizuje uruchomiony system do Service Pack</p>"
 
+#. warning message, system managed by SUSE Manager cannot be migrated by wagon
+#. display this message and exit
+#: src/clients/welcome_in_wagon.ycp:52
+msgid ""
+"This system is managed by SUSE Manager,\n"
+"YaST wagon module cannot migrate systems managed by SUSE Manager.\n"
+"\n"
+"Press OK to exit."
+msgstr ""
+
 #. Report error but let user go further
 #. Might help us in the future
-#: src/clients/welcome_in_wagon.ycp:58
-msgid "Cannot initialize package manager."
+#: src/clients/welcome_in_wagon.ycp:71
+#, fuzzy
+msgid "Cannot initialize software manager."
 msgstr "Nie można zainicjalizować menedżera pakietów."
 
 #: src/include/common_func.ycp:34
@@ -429,19 +498,21 @@ msgid "Abort Upgrade"
 msgstr "Anuluj aktualizację"
 
 #: src/include/common_func.ycp:122
-msgid "Reseting Package Manager"
+#, fuzzy
+msgid "Resetting Software Manager"
 msgstr "Resetowanie menedżera pakietów"
 
 #: src/include/common_func.ycp:123
-msgid "Reseting package manager..."
+#, fuzzy
+msgid "Resetting software manager..."
 msgstr "Resetowanie menedżera pakietów..."
 
-#: src/include/common_func.ycp:211
+#: src/include/common_func.ycp:210
 #, ycp-format
 msgid "Cannot remove product %1"
 msgstr "Nie można usunąć produktu %1"
 
-#: src/include/common_func.ycp:233
+#: src/include/common_func.ycp:232
 #, ycp-format
 msgid "Cannot find out owner of product %1"
 msgstr "Nie można znaleźć właściciela produktu %1"
@@ -456,11 +527,11 @@ msgstr ""
 "Nieznana metoda migracji: %1"
 
 #. TRANSLATORS: error message
-#: src/modules/Wagon.ycp:177
+#: src/modules/Wagon.ycp:206
 msgid "No workflow defined."
 msgstr "Nie zdefiniowano żadnego przepływu."
 
-#: src/modules/Wagon.ycp:303
+#: src/modules/Wagon.ycp:332
 msgid ""
 "\n"
 "This module does not support command-line interface.\n"
@@ -470,89 +541,90 @@ msgstr ""
 "Ten moduł nie obsługuje interfejsu wiersza poleceń.\n"
 "Proszę użyć zamiast niego programu zypper.\n"
 
-#: src/modules/Wagon.ycp:309
+#: src/modules/Wagon.ycp:338
 msgid "Target file name ('xmlfile' option) is missing. Use xmlfile=<target_XML_file> command line option."
 msgstr "Brak docelowej nazwy pliku (opcja 'xmlfile'). Proszę użyć opcji polecenia: xmlfile=<docelowy_plik_XML>."
 
 #. popup heading, with rich text widget and Yes/No buttons
-#: src/modules/Wagon.ycp:354
+#: src/modules/Wagon.ycp:383
 msgid "Do you accept this license agreement?"
 msgstr "Czy akceptują Państwo tę umowę licencyjną?"
 
-#: src/modules/Wagon.ycp:461
+#: src/modules/Wagon.ycp:491
 #, ycp-format
 msgid "There is not enough free space to migrate the system using download in advance mode. Partition %1 needs at least %2MB more free disk space. (The needed size is estimated, it is recommended to add slightly more free space.) Add more disk space or disable download in advance mode."
 msgstr "Na dysku jest niewystarczająca ilość wolnego miejsca do zmigrowania systemu z wykorzystaniem pobierania w trybie zaawansowanym. Na partycji %1 musi być conajmniej %2MB wolnej przestrzeni. (Wymagana ilość miejsca jest szacunkowa, zaleca się dodać nieco więcej wolnego miejsca). Dodaj więcej powierzchni dyskowej lub wyłącz pobieranie w trybie zaawansowanym."
 
-#: src/modules/Wagon.ycp:471
+#: src/modules/Wagon.ycp:501
 #, ycp-format
 msgid "There might not be enough free space for download in advance mode migration. The estimated free space after migration is %2MB, it is recommended to increase the free space in case the estimation is inaccurate to avoid installation errors."
 msgstr "Na dysku może być niewystarczająca ilość wolnego miejsca do uruchomienia migracji w trybie zaawansowanego pobierania. Szacunkowy wymagany rozmiar wolnej przestrzeni dyskowej to %2MB, zaleca się zwiększenie ilości wolnego miejsca na wypadek gdyby obliczenia były niedokładne, pozwoli do uniknąć błedów instalacji."
 
 #. 'Product Long Name (product-libzypp-name)'
-#: src/modules/Wagon.ycp:504
+#: src/modules/Wagon.ycp:534
 #, ycp-format
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/modules/Wagon.ycp:528 src/modules/Wagon.ycp:543
-#: src/modules/Wagon.ycp:587 src/modules/Wagon.ycp:612
+#: src/modules/Wagon.ycp:558 src/modules/Wagon.ycp:573
+#: src/modules/Wagon.ycp:617 src/modules/Wagon.ycp:642
 msgid "No short name defined"
 msgstr "Nie określono krótkiej nazwy"
 
-#: src/modules/Wagon.ycp:542 src/modules/Wagon.ycp:586
-#: src/modules/Wagon.ycp:611
+#: src/modules/Wagon.ycp:572 src/modules/Wagon.ycp:616
+#: src/modules/Wagon.ycp:641
 msgid "No name defined"
 msgstr "Nie zdefiniowano nazwy"
 
-#: src/modules/Wagon.ycp:558
+#: src/modules/Wagon.ycp:588
 #, ycp-format
 msgid "Temporary migration product <b>%1</b> will be removed"
 msgstr "Tymczasowy produkt migracji <b>%1</b> zostanie usunięty"
 
-#: src/modules/Wagon.ycp:566
+#: src/modules/Wagon.ycp:596
 #, ycp-format
 msgid "<font color='red'><b>Warning:</b> Product <b>%1</b> will be removed</font>"
 msgstr "<font color='red'><b>Ostrzeżenie:</b> Produkt <b>%1</b> zostanie usunięty</font>"
 
-#: src/modules/Wagon.ycp:574
+#: src/modules/Wagon.ycp:604
 #, ycp-format
 msgid "<font color='red'><b>Error:</b> Product <b>%1</b> will be automatically removed</font>"
 msgstr "<font color='red'><b>Błąd:</b> Produkt<b>%1</b> zostanie automatycznie usunięty</font>"
 
-#: src/modules/Wagon.ycp:593
+#: src/modules/Wagon.ycp:623
 #, ycp-format
 msgid "Product <b>%1</b> will be upgraded"
 msgstr "Produkt <b>%1</b> zostanie uaktualniony"
 
-#: src/modules/Wagon.ycp:600
+#: src/modules/Wagon.ycp:630
 #, ycp-format
 msgid "New product <b>%1</b> will be installed"
 msgstr "Nowy produkt <b>%1</b> zostanie zainstalowany"
 
-#: src/modules/Wagon.ycp:616
+#: src/modules/Wagon.ycp:646
 #, ycp-format
 msgid "Product <b>%1</b> will keep installed"
 msgstr "Produkt <b>%1</b> pozostanie zainstalowany"
 
-#: src/modules/Wagon.ycp:623
+#: src/modules/Wagon.ycp:653
 msgid "Download all packages before upgrade: "
 msgstr "Pobierz wszystkie pakiety przed uaktualnieniem:"
 
-#: src/modules/Wagon.ycp:624
+#: src/modules/Wagon.ycp:654
 msgid "Enabled"
 msgstr "Włączone"
 
-#: src/modules/Wagon.ycp:624
+#: src/modules/Wagon.ycp:654
 msgid "Disabled"
 msgstr "Wyłączone"
 
-#. help text, TODO FIXME: replace the inner <p> by <b>
-#: src/modules/Wagon.ycp:631
-msgid "<p>To change the update settings, go to <p>Packages Proposal</p> section.</p>"
+#. help text
+#: src/modules/Wagon.ycp:661
+#, fuzzy
+msgid "<p>To change the update settings, go to <b>Packages Proposal</b> section.</p>"
 msgstr "<p>Aby zmienić ustawienia aktualizacji, należy przejść do sekcji <p>Propozycja pakietów</p>.</p>"
 
-#: src/modules/Wagon.ycp:639
+#: src/modules/Wagon.ycp:669
 #, ycp-format
 msgid ""
 "<li><b>%1 products are going to be removed.\n"
@@ -563,7 +635,7 @@ msgstr ""
 "Proszę przejść do propozycji pakietów i rozwiązać problem ręcznie.<br>\n"
 "Można także teraz bezpiecznie przerwać migrację.</b></li>"
 
-#: src/modules/Wagon.ycp:643
+#: src/modules/Wagon.ycp:673
 msgid ""
 "<li><b>One product is going to be removed.\n"
 "Go to packages proposal and solve the issue manually.<br>\n"
@@ -573,11 +645,11 @@ msgstr ""
 "Proszę przejść do propozycji pakietów i rozwiązać problem ręcznie.<br>\n"
 "Można także teraz bezpiecznie przerwać migrację.</b></li>"
 
-#: src/modules/Wagon.ycp:682
+#: src/modules/Wagon.ycp:712
 msgid "Error restoring the list of previously installed products."
 msgstr "Błąd podczas przywracania listy poprzednio zainstalowanych produktów."
 
-#: src/modules/Wagon.ycp:740
+#: src/modules/Wagon.ycp:770
 #, ycp-format
 msgid "Error running hook script %1."
 msgstr "Błąd podczas działania skryptu zaczepu %1."

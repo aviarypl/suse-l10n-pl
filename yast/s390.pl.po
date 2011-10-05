@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: s390\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-23 15:50+0200\n"
+"POT-Creation-Date: 2011-10-05 10:00+0200\n"
 "PO-Revision-Date: 2011-09-25 13:41+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
@@ -34,14 +34,20 @@ msgid "DASD"
 msgstr "DASD"
 
 #. section name in proposal - menu item
-#: src/clients/dasd_proposal.ycp:56
+#: src/clients/dasd_proposal.ycp:56 src/dump/ui.ycp:53
 msgid "&DASD"
 msgstr "&DASD"
 
 #. Command line help text for the Xcontroller module
-#: src/clients/dump.ycp:34
-msgid "Configuration of controller"
-msgstr "Konfiguracja sterownika"
+#: src/clients/dump.ycp:28
+msgid "Creation of s390 dump devices"
+msgstr ""
+
+#. Command line help text for the Xirda module
+#: src/clients/onpanic.ycp:32
+#, fuzzy
+msgid "Configuration of OnPanic"
+msgstr "Konfiguracja DASD"
 
 #. popup label
 #: src/clients/s390-disk-controller.ycp:34
@@ -92,15 +98,15 @@ msgstr "&zFCP"
 #. table cell
 #: src/dasd/dialogs.ycp:120 src/dasd/dialogs.ycp:125 src/dasd/dialogs.ycp:140
 #: src/dasd/dialogs.ycp:165 src/dasd/dialogs.ycp:173 src/dasd/dialogs.ycp:338
-#: src/dump/dialogs.ycp:95 src/modules/DASDController.ycp:234
-#: src/modules/DASDController.ycp:235 src/zfcp/dialogs.ycp:98
+#: src/modules/DASDController.ycp:235 src/modules/DASDController.ycp:236
+#: src/zfcp/dialogs.ycp:98
 msgid "Yes"
 msgstr "Tak"
 
 #. table cell
 #: src/dasd/dialogs.ycp:122 src/dasd/dialogs.ycp:127 src/dasd/dialogs.ycp:142
-#: src/dasd/dialogs.ycp:167 src/dump/dialogs.ycp:97
-#: src/modules/DASDController.ycp:234 src/modules/DASDController.ycp:235
+#: src/dasd/dialogs.ycp:167 src/modules/DASDController.ycp:235
+#: src/modules/DASDController.ycp:236
 msgid "No"
 msgstr "Nie"
 
@@ -120,7 +126,7 @@ msgid "Channel"
 msgstr "Kanał"
 
 #. table header
-#: src/dasd/dialogs.ycp:215 src/dump/dialogs.ycp:62
+#: src/dasd/dialogs.ycp:215
 msgid "Device"
 msgstr "Urządzenie"
 
@@ -150,31 +156,31 @@ msgid "Partition Information"
 msgstr "Informacje o partycji"
 
 #. table header
-#: src/dasd/dialogs.ycp:233 src/dump/dialogs.ycp:64
+#: src/dasd/dialogs.ycp:233
 msgid "Format"
 msgstr "Formatuj"
 
-#. menuy button id
+#. menu button id
 #: src/dasd/dialogs.ycp:241
 msgid "&Activate"
 msgstr "U&aktywnij"
 
-#. menuy button id
+#. menu button id
 #: src/dasd/dialogs.ycp:243
 msgid "&Deactivate"
 msgstr "&Dezaktywuj"
 
-#. menuy button id
+#. menu button id
 #: src/dasd/dialogs.ycp:246
 msgid "Set DIAG O&n"
 msgstr "Włącz DIA&G"
 
-#. menuy button id
+#. menu button id
 #: src/dasd/dialogs.ycp:248
 msgid "Set DIAG O&ff"
 msgstr "W&yłącz DIAG"
 
-#. menuy button id
+#. menu button id
 #: src/dasd/dialogs.ycp:251
 msgid "&Format"
 msgstr "&Formatuj"
@@ -216,34 +222,34 @@ msgstr "Wykon&aj działanie"
 
 #. error popup message
 #: src/dasd/dialogs.ycp:349 src/dasd/dialogs.ycp:374 src/dasd/dialogs.ycp:398
-#: src/dasd/dialogs.ycp:418 src/dasd/dialogs.ycp:437
+#: src/dasd/dialogs.ycp:422 src/dasd/dialogs.ycp:445
 msgid "No disk selected."
 msgstr "Nie wybrano żadnego dysku."
 
 #. error report, %1 is device identification
-#: src/dasd/dialogs.ycp:451
+#: src/dasd/dialogs.ycp:459
 #, ycp-format
 msgid "Disk %1 is not active."
 msgstr "Dysk %1 nie jest aktywny."
 
 #. error report, %1 is device identification
-#: src/dasd/dialogs.ycp:458
+#: src/dasd/dialogs.ycp:466
 #, ycp-format
 msgid "Disk %1 is not accessible for writing."
 msgstr "Dysk %1 jest niedostępny do zapisu."
 
 #. integer field (count of disks formatted at parallely)
-#: src/dasd/dialogs.ycp:475
+#: src/dasd/dialogs.ycp:483
 msgid "&Parallel Formatted Disks"
 msgstr "Dyski formatowane &równolegle"
 
 #. check box
-#: src/dasd/dialogs.ycp:478
+#: src/dasd/dialogs.ycp:486
 msgid "&Write the Volume Label"
 msgstr "Zapisz etykietę wo&luminu"
 
 #. popup question
-#: src/dasd/dialogs.ycp:504
+#: src/dasd/dialogs.ycp:512
 #, ycp-format
 msgid ""
 "Formatting these disks destroys all data on them.<br>\n"
@@ -255,30 +261,31 @@ msgstr ""
 "%1"
 
 #. Dialog caption
-#: src/dasd/dialogs.ycp:548
+#: src/dasd/dialogs.ycp:556
 msgid "Add New DASD Disk"
 msgstr "Dodawanie nowego dysku DASD"
 
 #. text entry
 #. combo box
-#: src/dasd/dialogs.ycp:555 src/zfcp/dialogs.ycp:302
+#: src/dasd/dialogs.ycp:563 src/zfcp/dialogs.ycp:302
 msgid "&Channel Number"
 msgstr "Numer &kanału"
 
 #. check box
-#: src/dasd/dialogs.ycp:559
+#: src/dasd/dialogs.ycp:567
 msgid "Format the Disk"
 msgstr "Formatuj dysk"
 
 #. check box
-#: src/dasd/dialogs.ycp:562
+#: src/dasd/dialogs.ycp:570
 msgid "Use &DIAG"
 msgstr "Używaj &DIAG"
 
 #. yes-no popup
-#: src/dasd/dialogs.ycp:580
+#: src/dasd/dialogs.ycp:588
+#, fuzzy
 msgid ""
-"Really leave the ZFCP disk configuration without saving?\n"
+"Really leave the DASD disk configuration without saving?\n"
 "All changes will be lost."
 msgstr ""
 "Czy na pewno opuścić konfigurację dysku ZFCP bez zapisu?\n"
@@ -294,7 +301,7 @@ msgstr ""
 "Proszę czekać...<br></p>"
 
 #. Read dialog help 2/2
-#: src/dasd/helps.ycp:24 src/dump/helps.ycp:26 src/zfcp/helps.ycp:24
+#: src/dasd/helps.ycp:24 src/zfcp/helps.ycp:24
 msgid ""
 "<p><b><big>Aborting Initialization:</big></b><br>\n"
 "Safely abort the configuration utility by pressing <b>Abort</b> now.</p>"
@@ -312,7 +319,7 @@ msgstr ""
 "Proszę czekać...<br></p>"
 
 #. Write dialog help 2/2
-#: src/dasd/helps.ycp:32 src/dump/helps.ycp:36 src/zfcp/helps.ycp:32
+#: src/dasd/helps.ycp:32 src/zfcp/helps.ycp:32
 msgid ""
 "<p><b><big>Aborting Saving:</big></b><br>\n"
 "Abort the save procedure by pressing <b>Abort</b>.\n"
@@ -407,110 +414,72 @@ msgstr ""
 msgid "Controller Configuration"
 msgstr "Konfiguracja sterownika"
 
-#. Dialog caption
-#: src/dump/dialogs.ycp:59
-msgid "Dump Device Management"
-msgstr "Zarządzanie urządzeniami zrzutu"
-
-#: src/dump/dialogs.ycp:63
-msgid "Loader Section Label"
-msgstr "Etykieta sekcji rozruchowej"
-
-#. Dialog caption
-#: src/dump/dialogs.ycp:155
-msgid "Add New Dump Device"
-msgstr "Dodawanie nowego urządzenia zrzutu"
-
-#. Dialog caption
-#: src/dump/dialogs.ycp:157
-msgid "Edit Dump Device"
+#: src/dump/ui.ycp:29
+#, fuzzy
+msgid "Create Dump Device"
 msgstr "Edycja urządzenia zrzutu"
 
-#. text entry
-#: src/dump/dialogs.ycp:166
-msgid "&Dump Device"
-msgstr "&Urządzenie zrzutu"
+#: src/dump/ui.ycp:30
+msgid "<p><b>Prepare one or more volumes for use as S/390 dump device.</b></p>"
+msgstr ""
 
-#. check box, try to keep short
-#: src/dump/dialogs.ycp:171
-msgid "Install Dump Record Even If Disk Already &Formatted"
-msgstr "Zainstaluj urządzenie zrzutu, nawet jeśli dysk jest już s&formatowany"
+#: src/dump/ui.ycp:31
+msgid "<p>Supported devices are ECKD DASD and ZFCP disks, while multi-volumes are limited to DASD.<br>"
+msgstr ""
 
-#. yes-no popup
-#: src/dump/dialogs.ycp:199
-msgid "Really leave the dump device configuration?"
-msgstr "Czy na pewno opuścić konfigurację urządzeń zrzutu?"
+#: src/dump/ui.ycp:32
+msgid "Only whole disks can be used, no partitions! If the device is incompatible formatted/partioned, activate the checkbox <b>Force overwrite of disk</b></p>"
+msgstr ""
 
-#: src/dump/dialogs.ycp:210
-#, ycp-format
-msgid ""
-"The disk %1 will formatted as a dump device now.\n"
-"Continue?"
+#: src/dump/ui.ycp:33
+msgid "<p>DASD and ZFCP devices have to be active to be utilized. This activation can be done in the YaST DASD respective ZFCP dialog.<br>"
+msgstr ""
+
+#: src/dump/ui.ycp:34
+msgid "Devices which are in use or have mounted partitions will not be shown.</p>"
+msgstr ""
+
+#: src/dump/ui.ycp:35
+msgid "The mentioning of <b>dumpdevice</b> after a disk indicates that it is an already usable dump device. Additionally multi-volume dump devices are indicated by the list of including DASD ids. </p>"
+msgstr ""
+
+#: src/dump/ui.ycp:36
+msgid "<p>ZFCP columns: Device, Size, ID, WWPN, LUN, Dump<br>"
+msgstr ""
+
+#: src/dump/ui.ycp:37
+msgid "DASD columns: Device, Size, ID, Dump</p>"
+msgstr ""
+
+#: src/dump/ui.ycp:47
+#, fuzzy
+msgid "&ZFCP"
+msgstr "&zFCP"
+
+#: src/dump/ui.ycp:60
+msgid "&Force overwrite of disk"
+msgstr ""
+
+#: src/dump/ui.ycp:122
+msgid "You haven't selected any device."
+msgstr ""
+
+#. warn only in case of force
+#: src/dump/ui.ycp:127
+#, fuzzy, ycp-format
+msgid "The disk[s] %1 will be formatted as a dump device. All data on this device[s] will be lost! Continue?"
 msgstr ""
 "Dysk %1 zostanie sformatowany jako urządzenie zrzutu.\n"
 "Czy kontynuować?"
 
-#. yes-no popup
-#: src/dump/dialogs.ycp:226
-msgid "Add another dump device?"
-msgstr "Czy dodać jeszcze jedno urządzenie zrzutu?"
-
-#. Read dialog help 1/2
-#: src/dump/helps.ycp:20
-msgid ""
-"<p><b><big>Initializing Dump Device Configuration</big></b>\n"
-"<br>\n"
-"Please wait...<br></p>\n"
+#. don't quit in case of failures, error messages are reported by FormatDisk()
+#: src/dump/ui.ycp:131
+msgid "Operation successful. Initialize another dump device?"
 msgstr ""
-"<p><b><big>Trwa inicjalizacja konfiguracji urządzeń zrzutu</big></b>\n"
-"<br>\n"
-"Proszę czekać...<br></p>\n"
-
-#. Write dialog help 1/2
-#: src/dump/helps.ycp:32
-msgid ""
-"<p><b><big>Saving Dump Device Configuration</big></b><br>\n"
-"Please wait...<br></p>"
-msgstr ""
-"<p><b><big>Trwa zapisywanie konfiguracji urządzeń zrzutu</big></b><br>\n"
-"Proszę czekać...<br></p>"
-
-#. Dump dialog symmart help 1/2
-#: src/dump/helps.ycp:43
-msgid ""
-"<p><b><big>Configured Dump Devices</big></b><br>\n"
-"This dialog shows configured dump devices for your system.</p>"
-msgstr ""
-"<p><b><big>Skonfigurowane urządzenia zrzutu</big></b><br>\n"
-"To okno dialogowe przedstawia urządzenia zrzutu skonfigurowane w systemie.</p>"
-
-#. Dump dialog symmart help 2/2
-#: src/dump/helps.ycp:47
-msgid ""
-"<p>To add and configure a new dump device, click <b>Add</b>. To edit an\n"
-"already configured dump device, select it and click <b>Edit</b>.\n"
-"To remove a configured dump device, select it and click <b>Delete</b>.</p>"
-msgstr ""
-"<p>Aby dodać nowe urządzenie zrzutu, proszę nacisnąć przycisk <b>Dodaj</b>. Aby zmienić\n"
-" już skonfigurowane urządzenie zrzutu, proszę je zaznaczyć, a następnie nacisnąć przycisk <b>Edytuj</b>.\n"
-"Aby usunąć skonfigurowane urządzenie zrzutu, proszę je zaznaczyć, a następnie nacisnąć przycisk <b>Usuń</b>. </p>"
-
-#. Disk add help 1/3
-#: src/dump/helps.ycp:53
-msgid ""
-"<p><b><big>Add New Dump Device</big></b><br>\n"
-"Prepare a device for use as an S/390 dump device. Supported devices are\n"
-"ECKD DASD. Set <b>Dump Device</b> to select the device\n"
-"to format. If the device is already formatted\n"
-"or configured, setting\n"
-"<b>Install Dump Record Even If Disk Already &Formatted</b> is required.</p>"
-msgstr ""
-"<p><b><big>Dodawanie nowego urządzenia zrzutu</big></b><br>\n"
-"Proszę przygotować urządzenie, które zostanie skonfigurowane jako urządzenie zrzutu S/390. Obsługiwane urządzenia to ECKD DASD. Następnie w <b>Urządzenie zrzutu</b> proszę wybrać urządzenie do sformatowania. Jeśli urządzenie jest już sformatowane lub skonfigurowane, należy zaznaczyć pole <b>Zainstaluj urządzenie zrzutu, także jeśli dysk jest już sformatowany</b>.</p>"
 
 #. summary text, %1 is channel ID (number),
 #. %2 and %3 are Yes or No
-#: src/modules/DASDController.ycp:232
+#: src/modules/DASDController.ycp:233
 #, ycp-format
 msgid "Channel ID: %1, Format: %2, Use DIAG: %3"
 msgstr "ID kanału: %1, formatowanie: %2, użycie DIAG: %3"
@@ -518,66 +487,66 @@ msgstr "ID kanału: %1, formatowanie: %2, użycie DIAG: %3"
 #. if (Mode::config ())
 #. return;
 #. popup label
-#: src/modules/DASDController.ycp:300
+#: src/modules/DASDController.ycp:301
 msgid "Reading Configured DASD Disks"
 msgstr "Odczytywanie skonfigurowanych dysków DASD"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:389 src/modules/ZFCPController.ycp:300
-#: src/modules/ZFCPController.ycp:351
+#: src/modules/DASDController.ycp:391 src/modules/ZFCPController.ycp:301
+#: src/modules/ZFCPController.ycp:352
 #, ycp-format
 msgid "%1: sysfs not mounted."
 msgstr "%1: Nie zamontowano sysfs."
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:393
+#: src/modules/DASDController.ycp:395
 #, ycp-format
 msgid "%1: Invalid status for <online>"
 msgstr "%1: Nieprawidłowy stan dla <online>"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:397
+#: src/modules/DASDController.ycp:399
 #, ycp-format
 msgid "%1: No device found for <ccwid>"
 msgstr "%1: Nie znaleziono urządzenia dla <ccwid>"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:401
+#: src/modules/DASDController.ycp:403
 #, ycp-format
 msgid "%1: Could not change state of the device"
 msgstr "%1: Nie można zmienić stanu urządzenia"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:406
+#: src/modules/DASDController.ycp:408
 #, ycp-format
 msgid "%1: device is not a DASD"
 msgstr "%1: urządzenie nie jest typu DASD"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:411
+#: src/modules/DASDController.ycp:413
 #, ycp-format
 msgid "%1: Could not load module"
 msgstr "%1: Nie można wczytać modułu"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:416
+#: src/modules/DASDController.ycp:418
 #, ycp-format
 msgid "%1: Failed to activate DASD"
 msgstr "%1: nie powiodła się aktywacja DASD"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:421
+#: src/modules/DASDController.ycp:423
 #, ycp-format
 msgid "%1: DASD is not formatted"
 msgstr "%1: urządzenie DASD nie jest sformatowane"
 
 #. error report, %1 is device identification, %2 is integer code
-#: src/modules/DASDController.ycp:425
+#: src/modules/DASDController.ycp:427
 #, ycp-format
 msgid "%1: Unknown error %2"
 msgstr "%1: Nieznany błąd %2"
 
-#: src/modules/DASDController.ycp:445
+#: src/modules/DASDController.ycp:447
 #, ycp-format
 msgid ""
 "Device %1 is unformatted. Format device now?\n"
@@ -588,7 +557,7 @@ msgstr ""
 "Aby sformatować więcej urządzeń równocześnie, należy nacisnąć przycisk Anuluj, a następnie zaznaczyć opcję \"Wykonaj działanie\", \"Formatowanie\" później!"
 
 #. error report, %1 is exit code of the command (integer)
-#: src/modules/DASDController.ycp:544 src/modules/DASDController.ycp:628
+#: src/modules/DASDController.ycp:546 src/modules/DASDController.ycp:630
 #, ycp-format
 msgid "Disks formatting failed. Exit code: %1"
 msgstr "Nie powiodło się formatowanie dysku. Kod wyjścia: %1"
@@ -596,44 +565,98 @@ msgstr "Nie powiodło się formatowanie dysku. Kod wyjścia: %1"
 #. progress bar, %1 is device name, %2 and %3
 #. integers,
 #. eg. Formatting /dev/dasda: cylinder 123 of 12334 done
-#: src/modules/DASDController.ycp:606
+#: src/modules/DASDController.ycp:608
 #, ycp-format
 msgid "Formatting %1: cylinder %2 of %3 done"
 msgstr "Formatowanie %1: ukończono: cylinder %2 z %3"
 
-#. error description
-#: src/modules/Dump.ycp:123 src/modules/Dump.ycp:168
-msgid "Disk unusable."
-msgstr "Dysk niezdatny do użycia."
+#: src/modules/Dump.ycp:47
+msgid "Checking Disks"
+msgstr ""
+
+#. Progress stage 1/2
+#: src/modules/Dump.ycp:52
+#, fuzzy
+msgid "Checking DASD disks"
+msgstr "Konfiguracja dysków &DASD"
+
+#. Progress stage 2/2
+#: src/modules/Dump.ycp:54
+#, fuzzy
+msgid "Checking ZFCP disks"
+msgstr "Konfiguracja dysków &ZFCP"
+
+#. Progress step 1/2
+#: src/modules/Dump.ycp:57
+#, fuzzy
+msgid "Checking DASD disks..."
+msgstr "Konfiguracja dysków &DASD"
+
+#. Progress step 2/2
+#: src/modules/Dump.ycp:59
+#, fuzzy
+msgid "Checking ZFCP disks..."
+msgstr "Konfiguracja dysków &ZFCP"
+
+#. Progress finished
+#: src/modules/Dump.ycp:61 src/modules/Dump.ycp:93 src/modules/OnPanic.ycp:216
+#: src/modules/OnPanic.ycp:258
+msgid "Finished"
+msgstr ""
+
+#: src/modules/Dump.ycp:83
+#, fuzzy
+msgid "Creating Dump Device[s]"
+msgstr "Edycja urządzenia zrzutu"
+
+#. Progress stage 1/1
+#: src/modules/Dump.ycp:88
+#, fuzzy
+msgid "Creating dump device[s]"
+msgstr ""
+"Nie można utworzyć urządzenia zrzutu %1:\n"
+"%2"
+
+#. Progress step 1/1
+#: src/modules/Dump.ycp:91
+msgid "Creating dump device[s]. This process might take some minutes."
+msgstr ""
 
 #. error description
-#: src/modules/Dump.ycp:126 src/modules/Dump.ycp:171
-msgid "Support program not installed."
-msgstr "Program obsługi nie jest zainstalowany."
-
-#. error description
-#: src/modules/Dump.ycp:129
+#: src/modules/Dump.ycp:127
 msgid "Invalid or unusable disk (fatal)."
 msgstr "Nieprawidłowy lub dysk niezdatny do użycia (błąd krytyczny)."
 
 #. error description
-#: src/modules/Dump.ycp:132
-msgid "Minor error, can be corrected with -f."
-msgstr "Drobny błąd, można go poprawić za pomocą opcji -f."
+#: src/modules/Dump.ycp:130
+msgid "Incompatible formatting/partitioning, can be corrected with Force."
+msgstr ""
 
 #. error description
-#: src/modules/Dump.ycp:135
+#: src/modules/Dump.ycp:133
 msgid "Missing support programs."
 msgstr "Brak programów pomocniczych."
 
+#. error description
+#: src/modules/Dump.ycp:136
+#, fuzzy
+msgid "Missing or wrong parameters."
+msgstr "Brak programów pomocniczych."
+
+#. error description
+#: src/modules/Dump.ycp:139
+#, fuzzy
+msgid "Access problem."
+msgstr "Rodzaj dostępu"
+
 #. error description, %1 is error code (integer)
-#: src/modules/Dump.ycp:138
+#: src/modules/Dump.ycp:142
 #, ycp-format
 msgid "Error code from support program: %1."
 msgstr "Numer błędu programu obsługi: %1"
 
 #. error report, %1 is device name, %2 error description
-#: src/modules/Dump.ycp:140 src/modules/Dump.ycp:176
+#: src/modules/Dump.ycp:144
 #, ycp-format
 msgid ""
 "Cannot create dump device %1:\n"
@@ -642,14 +665,61 @@ msgstr ""
 "Nie można utworzyć urządzenia zrzutu %1:\n"
 "%2"
 
-#. error description
-#: src/modules/Dump.ycp:174
-msgid "Error code from support program."
-msgstr "Numer błędu programu obsługi."
+#. Dumpconf read dialog caption
+#: src/modules/OnPanic.ycp:202
+msgid "Reading Dumpconf Configuration"
+msgstr ""
+
+#. Progress stage 1/2
+#: src/modules/OnPanic.ycp:207
+#, fuzzy
+msgid "Checking dump devices"
+msgstr "Czy dodać jeszcze jedno urządzenie zrzutu?"
+
+#. Progress stage 2/2
+#: src/modules/OnPanic.ycp:209
+msgid "Reading settings"
+msgstr ""
+
+#. Progress step 1/2
+#: src/modules/OnPanic.ycp:212
+msgid "Checking dump devices..."
+msgstr ""
+
+#. Progress step 2/2
+#: src/modules/OnPanic.ycp:214
+msgid "Reading the settings..."
+msgstr ""
+
+#. Dumpconf write dialog caption
+#: src/modules/OnPanic.ycp:244
+#, fuzzy
+msgid "Saving Dumpconf Configuration"
+msgstr "Konfiguracja sterownika"
+
+#. Progress stage 1/2
+#: src/modules/OnPanic.ycp:249
+msgid "Write the settings"
+msgstr ""
+
+#. Progress stage 2/2
+#: src/modules/OnPanic.ycp:251
+msgid "Restart the service"
+msgstr ""
+
+#. Progress step 1/2
+#: src/modules/OnPanic.ycp:254
+msgid "Writing the settings..."
+msgstr ""
+
+#. Progress step 2/2
+#: src/modules/OnPanic.ycp:256
+msgid "Restarting service..."
+msgstr ""
 
 #. summary text, %1 is channel ID, %1 is WWPN, %3 is LUN
 #. (all of them are numbers)
-#: src/modules/ZFCPController.ycp:212
+#: src/modules/ZFCPController.ycp:213
 #, ycp-format
 msgid "Channel ID: %1, WWPN: %2, ZFCP LUN: %3"
 msgstr "ID kanału: %1, WWPN: %2, ZFCP LUN: %3"
@@ -657,87 +727,179 @@ msgstr "ID kanału: %1, WWPN: %2, ZFCP LUN: %3"
 #. if (Mode::config ())
 #. return;
 #. popup label
-#: src/modules/ZFCPController.ycp:270
+#: src/modules/ZFCPController.ycp:271
 msgid "Reading Configured ZFCP Devices"
 msgstr "Odczytywanie listy skonfigurowanych urządzeń ZFCP"
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:304 src/modules/ZFCPController.ycp:355
+#: src/modules/ZFCPController.ycp:305 src/modules/ZFCPController.ycp:356
 #, ycp-format
 msgid "%1: Invalid status for <online>."
 msgstr "%1: Nieprawidłowy status dla <online>."
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:308
+#: src/modules/ZFCPController.ycp:309
 #, ycp-format
 msgid "%1: No device found for <ccwid>."
 msgstr "%1: Nie znaleziono urządzenia dla <ccwid>."
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:312
+#: src/modules/ZFCPController.ycp:313
 #, ycp-format
 msgid "%1: WWPN invalid."
 msgstr "%1: Nieprawidłowy WWPN."
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:316
+#: src/modules/ZFCPController.ycp:317
 #, ycp-format
 msgid "%1: Could not activate WWPN for adapter %1."
 msgstr "%1: Nie można aktywować WWPN dla urządzenia %1."
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:320
+#: src/modules/ZFCPController.ycp:321
 #, ycp-format
 msgid "%1: Could not activate ZFCP device."
 msgstr "%1: Nie można aktywować urządzenia ZFCP."
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:324
+#: src/modules/ZFCPController.ycp:325
 #, ycp-format
 msgid "%1: SCSI disk could not be deactivated."
 msgstr "%1: Nie można zdezaktywować dysku SCSI."
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:328
+#: src/modules/ZFCPController.ycp:329
 #, ycp-format
 msgid "%1: ZFCP LUN could not be unregistered."
 msgstr "%1: Nie można wyrejestrować ZFCP LUN."
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:332
+#: src/modules/ZFCPController.ycp:333
 #, ycp-format
 msgid "%1: ZFCP WWPN could not be unregistered."
 msgstr "%1: Nie można wyrejestrować ZFCP WWPN."
 
 #. error report, %1 is device identification, %2 is integer code
-#: src/modules/ZFCPController.ycp:336 src/modules/ZFCPController.ycp:375
+#: src/modules/ZFCPController.ycp:337 src/modules/ZFCPController.ycp:376
 #, ycp-format
 msgid "%1: Unknown error %2."
 msgstr "%1: Nieznany błąd %2."
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:359
+#: src/modules/ZFCPController.ycp:360
 #, ycp-format
 msgid "%1: Device <ccwid> does not exist."
 msgstr "%1: Urządzenie <ccwid> nie istnieje."
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:363
+#: src/modules/ZFCPController.ycp:364
 #, ycp-format
 msgid "%1: Module zfcp could not be loaded."
 msgstr "%1: Nie można wczytać modułu zfcp."
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:367
+#: src/modules/ZFCPController.ycp:368
 #, ycp-format
 msgid "%1: Adapter status could not be changed."
 msgstr "%1: Nie można zmienić stanu adaptera."
 
 #. error report, %1 is device identification
-#: src/modules/ZFCPController.ycp:371
+#: src/modules/ZFCPController.ycp:372
 #, ycp-format
 msgid "%1: WWPN ports still active."
 msgstr "%1: Porty WWPN są wciąż aktywne"
+
+#: src/onpanic/ui.ycp:47
+#, ycp-format
+msgid "Only %1 lines are allowed for VMCMD!"
+msgstr ""
+
+#. For translators: Caption of the dialog
+#: src/onpanic/ui.ycp:90
+#, fuzzy
+msgid "On Panic Configuration"
+msgstr "Konfiguracja ZFCP"
+
+#: src/onpanic/ui.ycp:91
+msgid "<p><b>Configure the action[s] to be taken if a kernel panic occurs</b></p>"
+msgstr ""
+
+#: src/onpanic/ui.ycp:92
+msgid "<p>The <b>Dumpconf</b> daemon needs to be enabled to influence the behavior during kernel panics.</p>"
+msgstr ""
+
+#: src/onpanic/ui.ycp:93
+msgid "<p>The following <b>Panic Actions</b> are possible:<br>"
+msgstr ""
+
+#: src/onpanic/ui.ycp:94
+msgid "<b>stop</b> Stop Linux (default).<br>"
+msgstr ""
+
+#: src/onpanic/ui.ycp:95
+msgid "<b>dump</b> Dump Linux and stop system.<br>"
+msgstr ""
+
+#: src/onpanic/ui.ycp:96
+msgid "<b>reipl</b> Reboot Linux.<br>"
+msgstr ""
+
+#: src/onpanic/ui.ycp:97
+msgid "<b>dump_reipl</b> Dump Linux and reboot system. It is only available on LPAR with z9(r) machines and later, and on z/VMversion 5.3 and later.<br>"
+msgstr ""
+
+#: src/onpanic/ui.ycp:98
+msgid "<b>vmcmd</b> Execute specified CP commands and stop system.</p>"
+msgstr ""
+
+#: src/onpanic/ui.ycp:99
+msgid "<p>The time defined in <b>Delay Minutes</b> defers activating the specified panic action for a newly started system to prevent loops. If the system crashes before the time has elapsed the default action (stop) is performed.</p>"
+msgstr ""
+
+#: src/onpanic/ui.ycp:100
+msgid "<p>The device for dumping the memory can be set with <b>Dump Device</b>. If no device is shown you have to create one with the <b>YaST Dump Devices</b> dialog.</p>"
+msgstr ""
+
+#: src/onpanic/ui.ycp:101
+#, ycp-format
+msgid "<p>With <b>VMCMD</b> CP commands can be specified which are executed before the Linux system is stopped. Only %1 lines and a total of %2 chars are allowed.</p>"
+msgstr ""
+
+#. radio button label
+#: src/onpanic/ui.ycp:110
+msgid "Do No&t Start Dumpconf"
+msgstr ""
+
+#. radio button label
+#: src/onpanic/ui.ycp:113
+msgid "&Start Dumpconf"
+msgstr ""
+
+#. combobox label
+#: src/onpanic/ui.ycp:118
+msgid "&Panic Action"
+msgstr ""
+
+#: src/onpanic/ui.ycp:119
+msgid "Delay &Minutes"
+msgstr ""
+
+#. combobox label
+#: src/onpanic/ui.ycp:124
+msgid "&Dump Device"
+msgstr "&Urządzenie zrzutu"
+
+#: src/onpanic/ui.ycp:126
+msgid "&VMCMD"
+msgstr ""
+
+#: src/onpanic/ui.ycp:176
+msgid "It is not possible to enable the dump process without a dump device."
+msgstr ""
+
+#: src/onpanic/ui.ycp:184
+msgid "It is not possible to use vmcmd  without defining at least one command."
+msgstr ""
 
 #. Dialog caption
 #: src/zfcp/dialogs.ycp:132
@@ -883,6 +1045,79 @@ msgstr ""
 "<tt>0x5005076300c40e5a</tt>.</p>\n"
 "<p>LUN należy wprowadzać małymi literami w formie 16-cyfrowej liczby szesnastkowej z zerami\n"
 "na pustych pozycjach na końcu, na przykład: <tt>0x52ca000000000000</tt>.</p>"
+
+#~ msgid "Configuration of controller"
+#~ msgstr "Konfiguracja sterownika"
+
+#~ msgid "Dump Device Management"
+#~ msgstr "Zarządzanie urządzeniami zrzutu"
+
+#~ msgid "Loader Section Label"
+#~ msgstr "Etykieta sekcji rozruchowej"
+
+#~ msgid "Add New Dump Device"
+#~ msgstr "Dodawanie nowego urządzenia zrzutu"
+
+#~ msgid "Install Dump Record Even If Disk Already &Formatted"
+#~ msgstr "Zainstaluj urządzenie zrzutu, nawet jeśli dysk jest już s&formatowany"
+
+#~ msgid "Really leave the dump device configuration?"
+#~ msgstr "Czy na pewno opuścić konfigurację urządzeń zrzutu?"
+
+#~ msgid ""
+#~ "<p><b><big>Initializing Dump Device Configuration</big></b>\n"
+#~ "<br>\n"
+#~ "Please wait...<br></p>\n"
+#~ msgstr ""
+#~ "<p><b><big>Trwa inicjalizacja konfiguracji urządzeń zrzutu</big></b>\n"
+#~ "<br>\n"
+#~ "Proszę czekać...<br></p>\n"
+
+#~ msgid ""
+#~ "<p><b><big>Saving Dump Device Configuration</big></b><br>\n"
+#~ "Please wait...<br></p>"
+#~ msgstr ""
+#~ "<p><b><big>Trwa zapisywanie konfiguracji urządzeń zrzutu</big></b><br>\n"
+#~ "Proszę czekać...<br></p>"
+
+#~ msgid ""
+#~ "<p><b><big>Configured Dump Devices</big></b><br>\n"
+#~ "This dialog shows configured dump devices for your system.</p>"
+#~ msgstr ""
+#~ "<p><b><big>Skonfigurowane urządzenia zrzutu</big></b><br>\n"
+#~ "To okno dialogowe przedstawia urządzenia zrzutu skonfigurowane w systemie.</p>"
+
+#~ msgid ""
+#~ "<p>To add and configure a new dump device, click <b>Add</b>. To edit an\n"
+#~ "already configured dump device, select it and click <b>Edit</b>.\n"
+#~ "To remove a configured dump device, select it and click <b>Delete</b>.</p>"
+#~ msgstr ""
+#~ "<p>Aby dodać nowe urządzenie zrzutu, proszę nacisnąć przycisk <b>Dodaj</b>. Aby zmienić\n"
+#~ " już skonfigurowane urządzenie zrzutu, proszę je zaznaczyć, a następnie nacisnąć przycisk <b>Edytuj</b>.\n"
+#~ "Aby usunąć skonfigurowane urządzenie zrzutu, proszę je zaznaczyć, a następnie nacisnąć przycisk <b>Usuń</b>. </p>"
+
+#~ msgid ""
+#~ "<p><b><big>Add New Dump Device</big></b><br>\n"
+#~ "Prepare a device for use as an S/390 dump device. Supported devices are\n"
+#~ "ECKD DASD. Set <b>Dump Device</b> to select the device\n"
+#~ "to format. If the device is already formatted\n"
+#~ "or configured, setting\n"
+#~ "<b>Install Dump Record Even If Disk Already &Formatted</b> is required.</p>"
+#~ msgstr ""
+#~ "<p><b><big>Dodawanie nowego urządzenia zrzutu</big></b><br>\n"
+#~ "Proszę przygotować urządzenie, które zostanie skonfigurowane jako urządzenie zrzutu S/390. Obsługiwane urządzenia to ECKD DASD. Następnie w <b>Urządzenie zrzutu</b> proszę wybrać urządzenie do sformatowania. Jeśli urządzenie jest już sformatowane lub skonfigurowane, należy zaznaczyć pole <b>Zainstaluj urządzenie zrzutu, także jeśli dysk jest już sformatowany</b>.</p>"
+
+#~ msgid "Disk unusable."
+#~ msgstr "Dysk niezdatny do użycia."
+
+#~ msgid "Support program not installed."
+#~ msgstr "Program obsługi nie jest zainstalowany."
+
+#~ msgid "Minor error, can be corrected with -f."
+#~ msgstr "Drobny błąd, można go poprawić za pomocą opcji -f."
+
+#~ msgid "Error code from support program."
+#~ msgstr "Numer błędu programu obsługi."
 
 #~ msgid "Device is unformatted. Format device?"
 #~ msgstr "Urządzenie jest niesformatowane. Czy chcesz je sformatować?"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: base\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-23 15:49+0200\n"
+"POT-Creation-Date: 2011-10-05 09:58+0200\n"
 "PO-Revision-Date: 2011-09-24 13:41+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -567,7 +567,7 @@ msgstr ""
 "    Opcje:"
 
 #. additional help for using command line
-#: library/commandline/src/CommandLine.ycp:522
+#: library/commandline/src/CommandLine.ycp:527
 msgid ""
 "\n"
 "    Options of the [string] type must be written in the form 'option=value'."
@@ -576,7 +576,7 @@ msgstr ""
 "    Opcje typu [ciąg] muszą być wprowadzone w formie \"opcja=wartość\"."
 
 #. translators: example title for command line
-#: library/commandline/src/CommandLine.ycp:526
+#: library/commandline/src/CommandLine.ycp:531
 msgid ""
 "\n"
 "    Example:"
@@ -585,139 +585,144 @@ msgstr ""
 "    Przykład:"
 
 #. translators: default module description if none is provided by the module itself
-#: library/commandline/src/CommandLine.ycp:562
+#: library/commandline/src/CommandLine.ycp:567
 msgid "This is a YaST2 module."
 msgstr "Jest to moduł programu YaST2."
 
 #. translators: short help title for command line
-#: library/commandline/src/CommandLine.ycp:564
+#: library/commandline/src/CommandLine.ycp:569
 msgid "Basic Syntax:"
 msgstr "Podstawowa składnia:"
 
 #. translators: module command line help, %1 is the module name
 #. translate <command> and [options] only!
-#: library/commandline/src/CommandLine.ycp:572
+#: library/commandline/src/CommandLine.ycp:577
 #, ycp-format
 msgid "    yast2 %1 <command> [verbose] [options]"
 msgstr "    yast2 %1 <polecenie> [verbose] [opcje]"
 
 #. translators: module command line help, %1 is the module name
 #. translate <command> only!
-#: library/commandline/src/CommandLine.ycp:579
+#: library/commandline/src/CommandLine.ycp:584
 #, ycp-format
 msgid "    yast2 %1 <command> help"
 msgstr "    yast2 %1 <polecenie> help"
 
 #. translators: module command line help
 #. translate <command> and [options] only!
-#: library/commandline/src/CommandLine.ycp:583
+#: library/commandline/src/CommandLine.ycp:588
 msgid "    <command> [options]"
 msgstr "    <polecenie> [opcje]"
 
 #. translators: module command line help
 #. translate <command> only!
-#: library/commandline/src/CommandLine.ycp:586
+#: library/commandline/src/CommandLine.ycp:591
 msgid "    <command> help"
 msgstr "    <polecenie> help"
 
 #. translators: command line title: list of available commands
-#: library/commandline/src/CommandLine.ycp:598
+#: library/commandline/src/CommandLine.ycp:603
 msgid "Commands:"
 msgstr "Polecenia:"
 
 #. translators: error message: module does not provide any help messages
-#: library/commandline/src/CommandLine.ycp:607
+#: library/commandline/src/CommandLine.ycp:614
 msgid "No help available."
 msgstr "Pomoc nie jest dostępna."
 
+#. fallback message - invalid help has been provided by the yast module
+#: library/commandline/src/CommandLine.ycp:638
+msgid "<Error: invalid help>"
+msgstr ""
+
 #. translators: module command line help, %1 is the module name
-#: library/commandline/src/CommandLine.ycp:612
+#: library/commandline/src/CommandLine.ycp:644
 #, ycp-format
 msgid "Run 'yast2 %1 <command> help' for a list of available options."
 msgstr "Polecenie 'yast2 %1 <polecenie> help' wyświetla listę dostępnych opcji."
 
 #. error message - command line option xmlfile is missing
-#: library/commandline/src/CommandLine.ycp:676
+#: library/commandline/src/CommandLine.ycp:708
 msgid "Target file name ('xmlfile' option) is missing. Use xmlfile=<target_XML_file> command line option."
 msgstr "Brak docelowej nazwy pliku ('xmlfile' opcja). Proszę użyć opcji polecenia:xmlfile=<docelowy_plik_XML>."
 
 #. error message - command line option xmlfile is missing
-#: library/commandline/src/CommandLine.ycp:685
+#: library/commandline/src/CommandLine.ycp:717
 msgid "Target file name ('xmlfile' option) is empty. Use xmlfile=<target_XML_file> command line option."
 msgstr "Docelowa nazwa pliku jest pusta ('xmlfile' opcja). Proszę użyć opcji polecenia: xmlfile=<docelowy_plik_XML>."
 
 #. translators: fallback name for a module at command line
-#: library/commandline/src/CommandLine.ycp:815
+#: library/commandline/src/CommandLine.ycp:847
 msgid "unknown"
 msgstr "nieznany"
 
 #. translators: the last command %1 in a list of unique commands
-#: library/commandline/src/CommandLine.ycp:1159
+#: library/commandline/src/CommandLine.ycp:1191
 #, ycp-format
 msgid "or '%1'"
 msgstr "albo '%1'"
 
 #. translators: error message - missing unique command for command line execution
-#: library/commandline/src/CommandLine.ycp:1164
+#: library/commandline/src/CommandLine.ycp:1196
 #, ycp-format
 msgid "Specify the command '%1'."
 msgstr "Proszę użyć polecenia '%1'."
 
 #. translators: error message - missing unique command for command line execution
-#: library/commandline/src/CommandLine.ycp:1167
+#: library/commandline/src/CommandLine.ycp:1199
 #, ycp-format
 msgid "Specify one of the commands: %1."
 msgstr "Proszę użyć jednego z poleceń: %1."
 
 #. size( unique_options ) == 1 here does not make sense
-#: library/commandline/src/CommandLine.ycp:1175
+#: library/commandline/src/CommandLine.ycp:1207
 #, ycp-format
 msgid "Specify only one of the commands: %1."
 msgstr "Proszę użyć tylko jednego z poleceń: %1."
 
 #. translators: error message - the module does not provide command line interface
-#: library/commandline/src/CommandLine.ycp:1251
+#: library/commandline/src/CommandLine.ycp:1283
 msgid "There is no user interface available for this module."
 msgstr "Brak dostępnego interfejsu użytkownika dla tego modułu."
 
 #. translators: progress message - command line interface ready
-#: library/commandline/src/CommandLine.ycp:1279
+#: library/commandline/src/CommandLine.ycp:1311
 msgid "Ready"
 msgstr "Gotowe"
 
 #. non-GUI handling
-#: library/commandline/src/CommandLine.ycp:1303
+#: library/commandline/src/CommandLine.ycp:1335
 msgid "Initializing"
 msgstr "Inicjalizacja"
 
 #. translators: Progress message - the command line interface is about to finish
-#: library/commandline/src/CommandLine.ycp:1342
+#: library/commandline/src/CommandLine.ycp:1374
 msgid "Finishing"
 msgstr "Kończenie"
 
 #. translators: The command line interface is finished
-#: library/commandline/src/CommandLine.ycp:1349
+#: library/commandline/src/CommandLine.ycp:1381
 msgid "Done"
 msgstr "Zakończono"
 
 #. translators: The command line interface is finished without writing the changes
-#: library/commandline/src/CommandLine.ycp:1352
+#: library/commandline/src/CommandLine.ycp:1384
 msgid "Quitting (without changes)"
 msgstr "Wychodzenie (bez zmian)"
 
 #. prompt message displayed in the commandline mode
 #. when user is asked to replay "yes" or "no" (localized)
-#: library/commandline/src/CommandLine.ycp:1367
+#: library/commandline/src/CommandLine.ycp:1399
 msgid "yes or no?"
 msgstr "tak czy nie?"
 
 #. yes - used in the command line mode as input text for yes/no confirmation
-#: library/commandline/src/CommandLine.ycp:1372
+#: library/commandline/src/CommandLine.ycp:1404
 msgid "yes"
 msgstr "tak"
 
 #. no - used in the command line mode as input text for yes/no confirmation
-#: library/commandline/src/CommandLine.ycp:1375
+#: library/commandline/src/CommandLine.ycp:1407
 msgid "no"
 msgstr "nie"
 
@@ -787,7 +792,8 @@ msgid "No workflow defined for this installation mode."
 msgstr "Nie zdefiniowano przebiegu dla tego trybu instalacji."
 
 #: library/control/src/WorkflowManager.ycp:1203
-msgid "An internal error occured when integrating additional workflow."
+#, fuzzy
+msgid "An internal error occurred when integrating additional workflow."
 msgstr "Wystąpił błąd wewnętrzny podczas integrowania dodatkowego schematu przepływu pracy."
 
 #. message popup, %1 is a label of some widget
@@ -2237,56 +2243,68 @@ msgstr "Nieskonfigurowane."
 msgid "Not detected."
 msgstr "Nie wykryto."
 
+#: library/modules/UIHelper.ycp:71
+msgid "A&dd"
+msgstr "&Dodaj"
+
+#: library/modules/UIHelper.ycp:72
+msgid "&Edit"
+msgstr "&Edytuj"
+
+#: library/modules/UIHelper.ycp:73
+msgid "De&lete"
+msgstr "&Usuń"
+
 #. translators: Tree header
 #: library/modules/ValueBrowser.ycp:147
 msgid "&Variable"
 msgstr "Zmie&nna"
 
 #. label
-#: library/network/src/CWMFirewallInterfaces.ycp:103
+#: library/network/src/CWMFirewallInterfaces.ycp:99
 msgid "Firewall cannot be adjusted during first stage installation"
 msgstr "Nie można dopasować zapory sieciowej podczas pierwszego etapu instalacji"
 
 #. label
-#: library/network/src/CWMFirewallInterfaces.ycp:106
+#: library/network/src/CWMFirewallInterfaces.ycp:102
 msgid "Firewall package is not installed"
 msgstr "Pakiet zapory sieciowej nie jest zainstalowany"
 
 #. label
-#: library/network/src/CWMFirewallInterfaces.ycp:112
+#: library/network/src/CWMFirewallInterfaces.ycp:108
 msgid "Firewall is disabled"
 msgstr "Zapora sieciowa jest wyłączona"
 
 #. label
-#: library/network/src/CWMFirewallInterfaces.ycp:117
+#: library/network/src/CWMFirewallInterfaces.ycp:113
 msgid "Firewall port is closed"
 msgstr "Port zapory sieciowej jest zamknięty"
 
 #. label
-#: library/network/src/CWMFirewallInterfaces.ycp:122
+#: library/network/src/CWMFirewallInterfaces.ycp:118
 msgid "Firewall port is open on all interfaces"
 msgstr "Port zapory sieciowej jest otwarty na wszystkich interfejsach"
 
 #. label
-#: library/network/src/CWMFirewallInterfaces.ycp:127
+#: library/network/src/CWMFirewallInterfaces.ycp:123
 msgid "Firewall port is open on selected interfaces"
 msgstr "Port zapory sieciowej jest otwarty na wybranych interfejsach"
 
 #. label
-#: library/network/src/CWMFirewallInterfaces.ycp:132
+#: library/network/src/CWMFirewallInterfaces.ycp:128
 msgid "No network interfaces are configured"
 msgstr "Nie skonfigurowano żadnego interfejsu sieciowego"
 
-#: library/network/src/CWMFirewallInterfaces.ycp:165
+#: library/network/src/CWMFirewallInterfaces.ycp:161
 msgid "Interface is not assigned to any zone"
 msgstr "Interfejs nie został przypisany do żadnej strefy."
 
 #. transaltors: selection box title
-#: library/network/src/CWMFirewallInterfaces.ycp:447
+#: library/network/src/CWMFirewallInterfaces.ycp:396
 msgid "&Network Interfaces with Open Port in Firewall"
 msgstr "&Interfejsy sieciowe z otwartym portem w zaporze sieciowej"
 
-#: library/network/src/CWMFirewallInterfaces.ycp:529
+#: library/network/src/CWMFirewallInterfaces.ycp:472
 #, ycp-format
 msgid ""
 "These network interfaces assigned to internal network cannot be unselected:\n"
@@ -2296,7 +2314,7 @@ msgstr ""
 "%1"
 
 #. question popup
-#: library/network/src/CWMFirewallInterfaces.ycp:544
+#: library/network/src/CWMFirewallInterfaces.ycp:487
 msgid ""
 "No interface is selected. Service will not\n"
 "be available for other computers.\n"
@@ -2309,7 +2327,7 @@ msgstr ""
 "Czy kontynuować?"
 
 #. yes-no popup
-#: library/network/src/CWMFirewallInterfaces.ycp:593
+#: library/network/src/CWMFirewallInterfaces.ycp:514
 #, ycp-format
 msgid ""
 "Because of SuSE Firewall settings, the port\n"
@@ -2325,8 +2343,8 @@ msgstr ""
 "Czy kontynuować?"
 
 #. yes-no popup
-#: library/network/src/CWMFirewallInterfaces.ycp:610
-#: library/network/src/CWMFirewallInterfaces.ycp:660
+#: library/network/src/CWMFirewallInterfaces.ycp:530
+#: library/network/src/CWMFirewallInterfaces.ycp:578
 #, ycp-format
 msgid ""
 "Because of SuSE Firewall settings, the port\n"
@@ -2342,23 +2360,23 @@ msgstr ""
 "Czy kontynuować?"
 
 #. translators: selection box title
-#: library/network/src/CWMFirewallInterfaces.ycp:745
+#: library/network/src/CWMFirewallInterfaces.ycp:663
 msgid "Network &Interfaces with Open Port in Firewall"
 msgstr "Interfejsy &sieciowe z otwartym portem w zaporze sieciowej"
 
 #. push button to select all network intefaces for firewall
-#: library/network/src/CWMFirewallInterfaces.ycp:754
+#: library/network/src/CWMFirewallInterfaces.ycp:672
 msgid "Select &All"
 msgstr "Zaznacz &wszystko"
 
 #. push button to deselect all network intefaces for firewall
-#: library/network/src/CWMFirewallInterfaces.ycp:757
+#: library/network/src/CWMFirewallInterfaces.ycp:675
 msgid "Select &None"
 msgstr "Odz&nacz wszystko"
 
 #. help text for firewall settings widget 1/3,
 #. %1 is check box label, eg. "Open Port in Firewall" (without quotes)
-#: library/network/src/CWMFirewallInterfaces.ycp:1002
+#: library/network/src/CWMFirewallInterfaces.ycp:920
 #, ycp-format
 msgid ""
 "<p><b><big>Firewall Settings</big></b><br>\n"
@@ -2372,7 +2390,7 @@ msgstr ""
 #. help text for firewall port openning widget 2/3, optional
 #. %1 is push button label, eg. "Firewall &Details" (without quotes)
 #. note: %2 is correct, do not replace with %1!!!
-#: library/network/src/CWMFirewallInterfaces.ycp:1010
+#: library/network/src/CWMFirewallInterfaces.ycp:928
 #, ycp-format
 msgid ""
 "To select interfaces on which to open the port,\n"
@@ -2382,7 +2400,7 @@ msgstr ""
 "proszę nacisnąć przycisk <b>%2</b>.<br>"
 
 #. help text for firewall settings widget 3/3,
-#: library/network/src/CWMFirewallInterfaces.ycp:1014
+#: library/network/src/CWMFirewallInterfaces.ycp:932
 msgid ""
 "This option is available only if the firewall\n"
 "is enabled.</p>"
@@ -2391,27 +2409,27 @@ msgstr ""
 "jest włączona.</p>"
 
 #. part of help text - check box label, NO SHORTCUT!!!
-#: library/network/src/CWMFirewallInterfaces.ycp:1027
+#: library/network/src/CWMFirewallInterfaces.ycp:945
 msgid "Open Port in Firewall"
 msgstr "Otwórz port w zaporze sieciowej"
 
 #. part of help text - push button label, NO SHORTCUT!!!
-#: library/network/src/CWMFirewallInterfaces.ycp:1029
+#: library/network/src/CWMFirewallInterfaces.ycp:947
 msgid "Firewall Details"
 msgstr "Szczegóły zapory sieciowej"
 
 #. check box
-#: library/network/src/CWMFirewallInterfaces.ycp:1058
+#: library/network/src/CWMFirewallInterfaces.ycp:976
 msgid "Open Port in &Firewall"
 msgstr "Otwórz port w &zaporze sieciowej"
 
 #. push button
-#: library/network/src/CWMFirewallInterfaces.ycp:1061
+#: library/network/src/CWMFirewallInterfaces.ycp:979
 msgid "Firewall &Details..."
 msgstr "&Szczegóły zapory sieciowej..."
 
 #. label text
-#: library/network/src/CWMFirewallInterfaces.ycp:1090
+#: library/network/src/CWMFirewallInterfaces.ycp:1008
 msgid "Firewall is open"
 msgstr "Zapora sieciowa jest otwarta"
 
@@ -2654,40 +2672,40 @@ msgstr ""
 "Nie ma strefy odwrotnej %1 zarządzanej przez serwer DNS.\n"
 "Nie można dodać nazwy hosta %2."
 
-#: library/network/src/NetworkInterfaces.ycp:206
-msgid "Network Card"
-msgstr "Karta sieciowa"
-
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:209
-#: library/network/src/NetworkInterfaces.ycp:914
-#: library/network/src/NetworkInterfaces.ycp:922
+#: library/network/src/NetworkInterfaces.ycp:260
+#: library/network/src/NetworkInterfaces.ycp:960
+#: library/network/src/NetworkInterfaces.ycp:968
 #: library/system/src/classnames.ycp:98 library/system/src/classnames.ycp:210
 #: library/system/src/classnames.ycp:211
 msgid "Modem"
 msgstr "Modem"
 
+#: library/network/src/NetworkInterfaces.ycp:263
+msgid "Network Card"
+msgstr "Karta sieciowa"
+
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:212
-#: library/network/src/NetworkInterfaces.ycp:880
-#: library/network/src/NetworkInterfaces.ycp:900
-#: library/network/src/NetworkInterfaces.ycp:906
-#: library/network/src/NetworkInterfaces.ycp:918
+#: library/network/src/NetworkInterfaces.ycp:266
+#: library/network/src/NetworkInterfaces.ycp:926
+#: library/network/src/NetworkInterfaces.ycp:946
+#: library/network/src/NetworkInterfaces.ycp:952
+#: library/network/src/NetworkInterfaces.ycp:964
 msgid "ISDN"
 msgstr "ISDN"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:215
-#: library/network/src/NetworkInterfaces.ycp:884
+#: library/network/src/NetworkInterfaces.ycp:269
+#: library/network/src/NetworkInterfaces.ycp:930
 msgid "DSL"
 msgstr "DSL"
 
-#: library/network/src/NetworkInterfaces.ycp:217
+#: library/network/src/NetworkInterfaces.ycp:271
 #: library/packages/src/SignatureCheckDialogs.ycp:384
-#: library/packages/src/SignatureCheckDialogs.ycp:522
-#: library/packages/src/SignatureCheckDialogs.ycp:523
-#: library/packages/src/SignatureCheckDialogs.ycp:850
-#: library/packages/src/SignatureCheckDialogs.ycp:851
+#: library/packages/src/SignatureCheckDialogs.ycp:551
+#: library/packages/src/SignatureCheckDialogs.ycp:552
+#: library/packages/src/SignatureCheckDialogs.ycp:755
+#: library/packages/src/SignatureCheckDialogs.ycp:756
 msgid "Unknown"
 msgstr "nieznany"
 
@@ -2697,324 +2715,324 @@ msgstr "nieznany"
 #. are represented as its sub-interfaces.
 #. And also we frequently confuse "device" and "interface"
 #. :-(
-#: library/network/src/NetworkInterfaces.ycp:866
+#: library/network/src/NetworkInterfaces.ycp:912
 msgid "Additional Address"
 msgstr "Adres dodatkowy"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:870
+#: library/network/src/NetworkInterfaces.ycp:916
 msgid "ARCnet"
 msgstr "ARCnet"
 
-#: library/network/src/NetworkInterfaces.ycp:870
+#: library/network/src/NetworkInterfaces.ycp:916
 msgid "ARCnet Network Card"
 msgstr "Karta sieciowa ARCnet"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:872
+#: library/network/src/NetworkInterfaces.ycp:918
 msgid "ATM"
 msgstr "ATM"
 
-#: library/network/src/NetworkInterfaces.ycp:872
+#: library/network/src/NetworkInterfaces.ycp:918
 msgid "Asynchronous Transfer Mode (ATM)"
 msgstr "Tryb transmisji asynchronicznej (ATM)"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:874
+#: library/network/src/NetworkInterfaces.ycp:920
 msgid "Bluetooth"
 msgstr "Bluetooth"
 
-#: library/network/src/NetworkInterfaces.ycp:874
+#: library/network/src/NetworkInterfaces.ycp:920
 msgid "Bluetooth Connection"
 msgstr "Połączenie Bluetooth"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:876
+#: library/network/src/NetworkInterfaces.ycp:922
 msgid "Bond"
 msgstr "Powiązane"
 
-#: library/network/src/NetworkInterfaces.ycp:876
+#: library/network/src/NetworkInterfaces.ycp:922
 msgid "Bond Network"
 msgstr "Sieć powiązana"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:878
+#: library/network/src/NetworkInterfaces.ycp:924
 msgid "CLAW"
 msgstr "CLAW"
 
-#: library/network/src/NetworkInterfaces.ycp:878
+#: library/network/src/NetworkInterfaces.ycp:924
 msgid "Common Link Access for Workstation (CLAW)"
 msgstr "Common Link Access for Workstation (CLAW)"
 
-#: library/network/src/NetworkInterfaces.ycp:880
+#: library/network/src/NetworkInterfaces.ycp:926
 msgid "ISDN Card"
 msgstr "Karta ISDN"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:882
+#: library/network/src/NetworkInterfaces.ycp:928
 #: library/system/src/classnames.ycp:247
 msgid "CTC"
 msgstr "CTC"
 
-#: library/network/src/NetworkInterfaces.ycp:882
+#: library/network/src/NetworkInterfaces.ycp:928
 msgid "Channel to Channel Interface (CTC)"
 msgstr "Interfejs Channel to Channel CTC)"
 
-#: library/network/src/NetworkInterfaces.ycp:884
+#: library/network/src/NetworkInterfaces.ycp:930
 msgid "DSL Connection"
 msgstr "Połączenie DSL"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:886
+#: library/network/src/NetworkInterfaces.ycp:932
 msgid "Dummy"
 msgstr "Fikcyjne"
 
-#: library/network/src/NetworkInterfaces.ycp:886
+#: library/network/src/NetworkInterfaces.ycp:932
 msgid "Dummy Network Device"
 msgstr "Fikcyjne urządzenie sieciowe"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:888
+#: library/network/src/NetworkInterfaces.ycp:934
 #: library/system/src/classnames.ycp:251
 msgid "ESCON"
 msgstr "ESCON"
 
-#: library/network/src/NetworkInterfaces.ycp:888
+#: library/network/src/NetworkInterfaces.ycp:934
 msgid "Enterprise System Connector (ESCON)"
 msgstr "Enterprise System Connector (ESCON)"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:890
+#: library/network/src/NetworkInterfaces.ycp:936
 #: library/system/src/classnames.ycp:244
 msgid "Ethernet"
 msgstr "Ethernet"
 
-#: library/network/src/NetworkInterfaces.ycp:890
+#: library/network/src/NetworkInterfaces.ycp:936
 msgid "Ethernet Network Card"
 msgstr "Karta sieciowa Ethernet"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:892
+#: library/network/src/NetworkInterfaces.ycp:938
 #: library/system/src/classnames.ycp:246
 msgid "FDDI"
 msgstr "FDDI"
 
-#: library/network/src/NetworkInterfaces.ycp:892
+#: library/network/src/NetworkInterfaces.ycp:938
 msgid "FDDI Network Card"
 msgstr "Karta sieciowa FDDI"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:894
+#: library/network/src/NetworkInterfaces.ycp:940
 msgid "FICON"
 msgstr "FICON"
 
-#: library/network/src/NetworkInterfaces.ycp:894
+#: library/network/src/NetworkInterfaces.ycp:940
 msgid "Fiberchannel System Connector (FICON)"
 msgstr "Fiberchannel System Connector (FICON)"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:896
+#: library/network/src/NetworkInterfaces.ycp:942
 msgid "HIPPI"
 msgstr "HIPPI"
 
-#: library/network/src/NetworkInterfaces.ycp:896
+#: library/network/src/NetworkInterfaces.ycp:942
 msgid "HIgh Performance Parallel Interface (HIPPI)"
 msgstr "Interfejs HIgh Performance Parallel (HIPPI)"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:898
+#: library/network/src/NetworkInterfaces.ycp:944
 msgid "Hipersockets"
 msgstr "Hipersockets"
 
-#: library/network/src/NetworkInterfaces.ycp:898
+#: library/network/src/NetworkInterfaces.ycp:944
 msgid "Hipersockets Interface (HSI)"
 msgstr "Interfejs Hipersockets (HSI)"
 
-#: library/network/src/NetworkInterfaces.ycp:900
-#: library/network/src/NetworkInterfaces.ycp:906
-#: library/network/src/NetworkInterfaces.ycp:918
+#: library/network/src/NetworkInterfaces.ycp:946
+#: library/network/src/NetworkInterfaces.ycp:952
+#: library/network/src/NetworkInterfaces.ycp:964
 msgid "ISDN Connection"
 msgstr "Połączenie ISDN"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:902
-#: library/network/src/NetworkInterfaces.ycp:904
+#: library/network/src/NetworkInterfaces.ycp:948
+#: library/network/src/NetworkInterfaces.ycp:950
 msgid "IrDA"
 msgstr "IrDA"
 
-#: library/network/src/NetworkInterfaces.ycp:902
+#: library/network/src/NetworkInterfaces.ycp:948
 msgid "Infrared Network Device"
 msgstr "Urządzenie do łączności sieciowej w podczerwieni"
 
-#: library/network/src/NetworkInterfaces.ycp:904
+#: library/network/src/NetworkInterfaces.ycp:950
 msgid "Infrared Device"
 msgstr "Urządzenie do łączności w podczerwieni"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:908
+#: library/network/src/NetworkInterfaces.ycp:954
 #: library/system/src/classnames.ycp:248
 msgid "IUCV"
 msgstr "IUCV"
 
-#: library/network/src/NetworkInterfaces.ycp:908
+#: library/network/src/NetworkInterfaces.ycp:954
 msgid "Inter User Communication Vehicle (IUCV)"
 msgstr "Inter User Communication Vehicle (IUCV)"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:910
+#: library/network/src/NetworkInterfaces.ycp:956
 msgid "OSA LCS"
 msgstr "OSA LCS"
 
-#: library/network/src/NetworkInterfaces.ycp:910
+#: library/network/src/NetworkInterfaces.ycp:956
 msgid "OSA LCS Network Card"
 msgstr "Karta sieciowa OSA LCS"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:912
+#: library/network/src/NetworkInterfaces.ycp:958
 #: library/system/src/classnames.ycp:243
 msgid "Loopback"
 msgstr "Loopback"
 
-#: library/network/src/NetworkInterfaces.ycp:912
+#: library/network/src/NetworkInterfaces.ycp:958
 msgid "Loopback Device"
 msgstr "Urządzenie Loopback"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:916
+#: library/network/src/NetworkInterfaces.ycp:962
 #: library/system/src/classnames.ycp:252
 msgid "Myrinet"
 msgstr "Myrinet"
 
-#: library/network/src/NetworkInterfaces.ycp:916
+#: library/network/src/NetworkInterfaces.ycp:962
 msgid "Myrinet Network Card"
 msgstr "Karta sieciowa Myrinet"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:920
+#: library/network/src/NetworkInterfaces.ycp:966
 msgid "Parallel Line"
 msgstr "Łącze równoległe"
 
-#: library/network/src/NetworkInterfaces.ycp:920
+#: library/network/src/NetworkInterfaces.ycp:966
 msgid "Parallel Line Connection"
 msgstr "Połączenie łączem równoległym"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:924
+#: library/network/src/NetworkInterfaces.ycp:970
 #: library/system/src/classnames.ycp:250
 msgid "QETH"
 msgstr "QETH"
 
-#: library/network/src/NetworkInterfaces.ycp:924
+#: library/network/src/NetworkInterfaces.ycp:970
 msgid "OSA-Express or QDIO Device (QETH)"
 msgstr "Urządzenie OSA-Express lub QDIO (QETH)"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:926
+#: library/network/src/NetworkInterfaces.ycp:972
 msgid "IPv6-in-IPv4"
 msgstr "IPv6-in-IPv4"
 
-#: library/network/src/NetworkInterfaces.ycp:926
+#: library/network/src/NetworkInterfaces.ycp:972
 msgid "IPv6-in-IPv4 Encapsulation Device"
 msgstr "Urządzenie do enkapsulacji IPv6-in-IPv4"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:928
+#: library/network/src/NetworkInterfaces.ycp:974
 msgid "Serial Line"
 msgstr "Łącze szeregowe"
 
-#: library/network/src/NetworkInterfaces.ycp:928
+#: library/network/src/NetworkInterfaces.ycp:974
 msgid "Serial Line Connection"
 msgstr "Połączenie łączem szeregowym"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:930
+#: library/network/src/NetworkInterfaces.ycp:976
 msgid "Token Ring"
 msgstr "Token Ring"
 
-#: library/network/src/NetworkInterfaces.ycp:930
+#: library/network/src/NetworkInterfaces.ycp:976
 msgid "Token Ring Network Card"
 msgstr "Karta sieciowa Token Ring"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:932
+#: library/network/src/NetworkInterfaces.ycp:978
 msgid "USB"
 msgstr "USB"
 
-#: library/network/src/NetworkInterfaces.ycp:932
+#: library/network/src/NetworkInterfaces.ycp:978
 msgid "USB Network Device"
 msgstr "Urządzenie sieciowe USB"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:934
+#: library/network/src/NetworkInterfaces.ycp:980
 msgid "VMWare"
 msgstr "VMWare"
 
-#: library/network/src/NetworkInterfaces.ycp:934
+#: library/network/src/NetworkInterfaces.ycp:980
 msgid "VMWare Network Device"
 msgstr "Urządzenie sieciowe VMWare"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:936
+#: library/network/src/NetworkInterfaces.ycp:982
 msgid "Wireless"
 msgstr "Bezprzewodowe"
 
-#: library/network/src/NetworkInterfaces.ycp:936
+#: library/network/src/NetworkInterfaces.ycp:982
 msgid "Wireless Network Card"
 msgstr "Bezprzewodowa karta sieciowa"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:938
+#: library/network/src/NetworkInterfaces.ycp:984
 msgid "XPNET"
 msgstr "XPNET"
 
-#: library/network/src/NetworkInterfaces.ycp:938
+#: library/network/src/NetworkInterfaces.ycp:984
 msgid "XP Network"
 msgstr "Sieć XP"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:940
+#: library/network/src/NetworkInterfaces.ycp:986
 msgid "VLAN"
 msgstr "VLAN"
 
-#: library/network/src/NetworkInterfaces.ycp:940
+#: library/network/src/NetworkInterfaces.ycp:986
 msgid "Virtual LAN"
 msgstr "Wirtualna LAN"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:942
+#: library/network/src/NetworkInterfaces.ycp:988
 #: library/system/src/classnames.ycp:78 library/system/src/classnames.ycp:90
 msgid "Bridge"
 msgstr "Mostek"
 
-#: library/network/src/NetworkInterfaces.ycp:942
+#: library/network/src/NetworkInterfaces.ycp:988
 msgid "Network Bridge"
 msgstr "Most sieciowy"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:944
+#: library/network/src/NetworkInterfaces.ycp:990
 msgid "TUN"
 msgstr "TUN"
 
-#: library/network/src/NetworkInterfaces.ycp:944
+#: library/network/src/NetworkInterfaces.ycp:990
 msgid "Network TUNnel"
 msgstr "TUNel sieciowy"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:946
+#: library/network/src/NetworkInterfaces.ycp:992
 msgid "TAP"
 msgstr "TAP"
 
-#: library/network/src/NetworkInterfaces.ycp:946
+#: library/network/src/NetworkInterfaces.ycp:992
 msgid "Network TAP"
 msgstr "Sieć TAP"
 
 #. Device type label
-#: library/network/src/NetworkInterfaces.ycp:948
+#: library/network/src/NetworkInterfaces.ycp:994
 #: library/system/src/classnames.ycp:147
 msgid "InfiniBand"
 msgstr "InfiniBand"
 
-#: library/network/src/NetworkInterfaces.ycp:948
+#: library/network/src/NetworkInterfaces.ycp:994
 msgid "InfiniBand Device"
 msgstr "Urządzenie InfiniBand"
 
@@ -3134,24 +3152,24 @@ msgid "Demilitarized Zone"
 msgstr "Strefa zdemilitaryzowana (ograniczonego zaufania)"
 
 #. TRANSLATORS: Firewall zone full-name, used as combo box item or dialog title
-#: library/network/src/SuSEFirewall.ycp:1028
+#: library/network/src/SuSEFirewall.ycp:1041
 msgid "Unknown Zone"
 msgstr "Strefa nieznana"
 
 #. TRANSLATORS: a popup error message
-#: library/network/src/SuSEFirewall.ycp:1289
+#: library/network/src/SuSEFirewall.ycp:1302
 #, ycp-format
 msgid "Cannot enable service '%1'."
 msgstr "Nie można włączyć usługi '%1'."
 
 #. TRANSLATORS: a popup error message
-#: library/network/src/SuSEFirewall.ycp:1312
+#: library/network/src/SuSEFirewall.ycp:1325
 #, ycp-format
 msgid "Cannot disable service '%1'."
 msgstr "Nie można wyłączyć usługi '%1'."
 
 #. TRANSLATORS: Error message, %1 = interface name (like eth0)
-#: library/network/src/SuSEFirewall.ycp:1432
+#: library/network/src/SuSEFirewall.ycp:1445
 #, ycp-format
 msgid ""
 "Interface '%1' is included in multiple firewall zones.\n"
@@ -3167,8 +3185,8 @@ msgstr ""
 "w pliku '/etc/sysconfig/SuSEFirewall'."
 
 #. TRANSLATORS: Error message, %1 = interface name (like eth0)
-#: library/network/src/SuSEFirewall.ycp:1843
-#: library/network/src/SuSEFirewall.ycp:1906
+#: library/network/src/SuSEFirewall.ycp:1856
+#: library/network/src/SuSEFirewall.ycp:1919
 #, ycp-format
 msgid ""
 "Interface '%1' is not assigned to any firewall zone.\n"
@@ -3180,102 +3198,102 @@ msgstr ""
 "i przypisać go.\n"
 
 #. TRANSLATORS: Dialog caption
-#: library/network/src/SuSEFirewall.ycp:2314
+#: library/network/src/SuSEFirewall.ycp:2327
 msgid "Initializing Firewall Configuration"
 msgstr "Inicjalizacja konfiguracji zapory sieciowej"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2319
+#: library/network/src/SuSEFirewall.ycp:2332
 msgid "Check for network devices"
 msgstr "Sprawdzenie urządzeń sieciowych"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2321
+#: library/network/src/SuSEFirewall.ycp:2334
 msgid "Read current configuration"
 msgstr "Odczytanie bieżącej konfiguracji"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2323
+#: library/network/src/SuSEFirewall.ycp:2336
 msgid "Check possibly conflicting services"
 msgstr "Sprawdzenie usług mogących powodować konflikty"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2325
+#: library/network/src/SuSEFirewall.ycp:2338
 msgid "Read dynamic definitions of installed services"
 msgstr "Odczytanie dynamicznych definicji zainstalowanych usług"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2329
+#: library/network/src/SuSEFirewall.ycp:2342
 msgid "Checking for network devices..."
 msgstr "Sprawdzanie urządzeń sieciowych..."
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2331
+#: library/network/src/SuSEFirewall.ycp:2344
 msgid "Reading current configuration..."
 msgstr "Odczytywanie bieżącej konfiguracji..."
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2333
+#: library/network/src/SuSEFirewall.ycp:2346
 msgid "Checking possibly conflicting services..."
 msgstr "Sprawdzanie usług mogących powodować konflikty..."
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2335
+#: library/network/src/SuSEFirewall.ycp:2348
 msgid "Reading dynamic definitions of installed services..."
 msgstr "Odczytywanie dynamicznych definicji zainstalowanych usług..."
 
 #. TRANSLATORS: Dialog caption
-#: library/network/src/SuSEFirewall.ycp:2487
+#: library/network/src/SuSEFirewall.ycp:2500
 msgid "Writing Firewall Configuration"
 msgstr "Zapisywanie konfiguracji zapory sieciowej"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2492
+#: library/network/src/SuSEFirewall.ycp:2505
 msgid "Write firewall settings"
 msgstr "Zapisanie konfiguracji zapory sieciowej"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2494
+#: library/network/src/SuSEFirewall.ycp:2507
 msgid "Adjust firewall service"
 msgstr "Dostosowanie usługi zapory sieciowej"
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2498
+#: library/network/src/SuSEFirewall.ycp:2511
 msgid "Writing firewall settings..."
 msgstr "Zapisywanie ustawień zapory sieciowej..."
 
 #. TRANSLATORS: Progress step
-#: library/network/src/SuSEFirewall.ycp:2500
+#: library/network/src/SuSEFirewall.ycp:2513
 msgid "Adjusting firewall service..."
 msgstr "Dostosowywanie usługi zapory sieciowej..."
 
 #. TRANSLATORS: a popup error message
-#: library/network/src/SuSEFirewall.ycp:2516
+#: library/network/src/SuSEFirewall.ycp:2529
 msgid "Writing settings failed"
 msgstr "Zapisanie ustawień nie powiodło się"
 
 #. protocol name
-#: library/network/src/SuSEFirewall.ycp:3224
+#: library/network/src/SuSEFirewall.ycp:3237
 msgid "TCP"
 msgstr "TCP"
 
 #. protocol name
-#: library/network/src/SuSEFirewall.ycp:3226
+#: library/network/src/SuSEFirewall.ycp:3239
 msgid "UDP"
 msgstr "UDP"
 
 #. protocol name
-#: library/network/src/SuSEFirewall.ycp:3228
+#: library/network/src/SuSEFirewall.ycp:3241
 msgid "RPC"
 msgstr "RPC"
 
 #. protocol name
-#: library/network/src/SuSEFirewall.ycp:3230
+#: library/network/src/SuSEFirewall.ycp:3243
 msgid "IP"
 msgstr "IP"
 
 #. table item, %1 stands for the buggy protocol name
-#: library/network/src/SuSEFirewall.ycp:3248
+#: library/network/src/SuSEFirewall.ycp:3261
 #, ycp-format
 msgid "Unknown protocol (%1)"
 msgstr "Nieznany protokół (%1)"
@@ -3945,18 +3963,20 @@ msgid "Automatic resolving failed, manual dependency resolving is needed."
 msgstr "Automatyczne rozwiązywanie zależności nie powiodło się. Należy rozwiązać zależności ręcznie."
 
 #: library/packages/src/PackageSystem.ycp:224
+#, fuzzy
 msgid ""
 "Yast has automatically added or removed some packages,\n"
 "check the changes scheduled to fix the system\n"
-"in the package manager."
+"in the software manager."
 msgstr ""
 "Yast automatycznie dodał lub usunął niektóre pakiety.\n"
 "Sprawdź zmiany mające naprawić system\n"
 "w menedżerze pakietów."
 
 #: library/packages/src/PackageSystem.ycp:230
+#, fuzzy
 msgid ""
-"Start the package manager and fix the problems\n"
+"Start the software manager and fix the problems\n"
 "or skip fixing and install the already confirmed packages only?"
 msgstr ""
 "Uruchomić menedżera pakietów i usunąć problemy\n"
@@ -3964,9 +3984,10 @@ msgstr ""
 
 #. error message, after pressing [OK] the package manager is displayed
 #: library/packages/src/PackageSystem.ycp:293
+#, fuzzy
 msgid ""
 "There are unresolved dependencies which need\n"
-"to be solved manually in the package manager."
+"to be solved manually in the software manager."
 msgstr ""
 "Istnieją nierozwiązane zależności, które należy\n"
 "rozwiązać ręcznie w menedżerze pakietów."
@@ -4299,7 +4320,7 @@ msgstr "Brak sumy kontrolnej"
 
 #. Part of the GnuPG key description in popup, %1 is a GnuPG key ID
 #: library/packages/src/SignatureCheckDialogs.ycp:475
-#: library/packages/src/SignatureCheckDialogs.ycp:588
+#: library/packages/src/SignatureCheckDialogs.ycp:617
 #, ycp-format
 msgid "ID: %1"
 msgstr "ID: %1"
@@ -4326,8 +4347,38 @@ msgstr "Utworzony: %1"
 msgid "Expires: %1"
 msgstr "Wygasa: %1"
 
-#. popup question, %1 stands for the package name, %2 for the complete description of the GnuPG key (multiline)
+#. GPG key property
+#: library/packages/src/SignatureCheckDialogs.ycp:494
+#, fuzzy
+msgid "ID: "
+msgstr "ID: %1"
+
+#. GPG key property
+#: library/packages/src/SignatureCheckDialogs.ycp:496
+#, fuzzy
+msgid "Name: "
+msgstr "Nazwa: %1"
+
+#. GPG key property
+#: library/packages/src/SignatureCheckDialogs.ycp:498
+#, fuzzy
+msgid "Fingerprint: "
+msgstr "Odcisk: %1"
+
+#. GPG key property
 #: library/packages/src/SignatureCheckDialogs.ycp:500
+#, fuzzy
+msgid "Created: "
+msgstr "Utworzony: %1"
+
+#. GPG key property
+#: library/packages/src/SignatureCheckDialogs.ycp:502
+#, fuzzy
+msgid "Expires: "
+msgstr "Wygasa: %1"
+
+#. popup question, %1 stands for the package name, %2 for the complete description of the GnuPG key (multiline)
+#: library/packages/src/SignatureCheckDialogs.ycp:529
 #, ycp-format
 msgid ""
 "Package %1 from repository %2\n"
@@ -4352,7 +4403,7 @@ msgstr ""
 "Czy zainstalować ten pakiet pomimo tego?"
 
 #. popup question, %1 stands for the filename, %2 for the complete description of the GnuPG key (multiline)
-#: library/packages/src/SignatureCheckDialogs.ycp:511
+#: library/packages/src/SignatureCheckDialogs.ycp:540
 #, ycp-format
 msgid ""
 "File %1 from repository %2\n"
@@ -4375,12 +4426,12 @@ msgstr ""
 "\n"
 "Czy użyć tego pliku pomimo tego?"
 
-#: library/packages/src/SignatureCheckDialogs.ycp:533
+#: library/packages/src/SignatureCheckDialogs.ycp:562
 msgid "Validation Check Failed"
 msgstr "Sprawdzenie poprawności zakończone niepowodzeniem"
 
 #. popup question, %1 stands for the package name, %2 for the complex multiline description of the GnuPG key
-#: library/packages/src/SignatureCheckDialogs.ycp:565
+#: library/packages/src/SignatureCheckDialogs.ycp:594
 #, ycp-format
 msgid ""
 "The package %1 is digitally signed\n"
@@ -4400,7 +4451,7 @@ msgstr ""
 "Zainstalować ten pakiet?"
 
 #. popup question, %1 stands for the filename, %2 for the complex multiline description of the GnuPG key
-#: library/packages/src/SignatureCheckDialogs.ycp:575
+#: library/packages/src/SignatureCheckDialogs.ycp:604
 #, ycp-format
 msgid ""
 "The file %1\n"
@@ -4421,12 +4472,12 @@ msgstr ""
 "Użyć tego pliku?"
 
 #. popup heading
-#: library/packages/src/SignatureCheckDialogs.ycp:597
+#: library/packages/src/SignatureCheckDialogs.ycp:626
 msgid "Unknown GnuPG Key"
 msgstr "Nieznany klucz GnuPG"
 
 #. popup question, %1 stands for the package name, %2 for the key ID, %3 for the key name
-#: library/packages/src/SignatureCheckDialogs.ycp:644
+#: library/packages/src/SignatureCheckDialogs.ycp:673
 #, ycp-format
 msgid ""
 "The package %1 is digitally signed\n"
@@ -4451,7 +4502,7 @@ msgstr ""
 "jest pominięcie instalacji pakietu."
 
 #. popup question, %1 stands for the filename, %2 for the key ID, %3 for the key name
-#: library/packages/src/SignatureCheckDialogs.ycp:655
+#: library/packages/src/SignatureCheckDialogs.ycp:684
 #, ycp-format
 msgid ""
 "The file %1 is digitally signed\n"
@@ -4476,18 +4527,17 @@ msgstr ""
 "jest pominięcie instalacji pliku."
 
 #. popup heading
-#: library/packages/src/SignatureCheckDialogs.ycp:672
+#: library/packages/src/SignatureCheckDialogs.ycp:701
 msgid "Signed with Untrusted Public Key"
 msgstr "Podpisano niezaufanym kluczem publicznym"
 
 #. push button
-#: library/packages/src/SignatureCheckDialogs.ycp:678
+#: library/packages/src/SignatureCheckDialogs.ycp:707
 msgid "&Trust and Import the Key"
 msgstr "Zaimportuj i dodaj do &bazy zaufanych ten klucz"
 
 #. additional Richtext (HTML) warning text (kind of help), 1/2
-#: library/packages/src/SignatureCheckDialogs.ycp:711
-#: library/packages/src/SignatureCheckDialogs.ycp:827
+#: library/packages/src/SignatureCheckDialogs.ycp:740
 msgid ""
 "<p>The owner of the key may distribute updates,\n"
 "packages, and package repositories that your system will trust and offer\n"
@@ -4496,34 +4546,28 @@ msgid ""
 "to have a certain amount of control over the software on your system.</p>"
 msgstr "<p>Właściciel klucza może dystrybuować aktualizacje, pakiety i repozytoria pakietów, które będą uznane za godne zaufania. Ich instalacja będzie odbywać się bez dalszych ostrzeżeń. Poprzez zaimportowanie klucza do zbioru zaufanych właściciel klucza uzyskuje pewną kontrolę nad oprogramowaniem tego systemu.</p>"
 
-#. additional Richtext (HTML) warning text (kind of help), 2/2, %1 stands for the GnuPG key ID
-#: library/packages/src/SignatureCheckDialogs.ycp:718
-#: library/packages/src/SignatureCheckDialogs.ycp:834
-#, ycp-format
+#. additional Richtext (HTML) warning text (kind of help), 2/2
+#: library/packages/src/SignatureCheckDialogs.ycp:747
+#, fuzzy
 msgid ""
 "<p>A warning dialog opens for every package that\n"
-"is not signed by a trusted (imported) key. If you do not import the key,\n"
-"packages created by the owner of key <tt>%1</tt> show this warning.</p>"
+"is not signed by a trusted (imported) key. If you do not trust the key,\n"
+"the packages or repositories created by the owner of the key will not be used.</p>"
 msgstr "<p>Dla każdego pakietu niepodpisanego zaufanym kluczem wyświetlone zostanie okno z ostrzeżeniem. Jeśli klucz <tt>%1</tt> nie zostanie zaimportowany, dla wszystkich pakietów utworzonych przez jego właściciela wyświetlone będzie ostrzeżenie.</p>"
 
-#. warning label - the key to import is expired
-#. %1 is current date (formatted according to the current locale)
-#: library/packages/src/SignatureCheckDialogs.ycp:735
+#. popup message - label, part 1, %1 stands for repository name, %2 for its URL
+#: library/packages/src/SignatureCheckDialogs.ycp:754
 #, ycp-format
 msgid ""
-"WARNING: The key has expired!\n"
-"Expiry date: %1"
+"The following GnuPG key has been found in repository\n"
+"%1\n"
+"(%2):"
 msgstr ""
-"UWAGA: Klucz wygasł!\n"
-"Data wygaśnięcia: %1"
 
-#. popup message, %1 stands for GPG key complete multiline description, %2 for key location (URL or ...)
-#: library/packages/src/SignatureCheckDialogs.ycp:740
-#, ycp-format
+#. popup message - label, part 2
+#: library/packages/src/SignatureCheckDialogs.ycp:759
+#, fuzzy
 msgid ""
-"The GnuPG key %1\n"
-"has been found at %2.\n"
-"\n"
 "You can choose to import it into your keyring of trusted\n"
 "public keys, meaning that you trust the owner of the key.\n"
 "You should be sure that you can trust the owner and that\n"
@@ -4537,55 +4581,27 @@ msgstr ""
 "właścicielowi klucza, oraz czy jest to faktycznie klucz należący\n"
 "do niego."
 
-#. popup heading
-#: library/packages/src/SignatureCheckDialogs.ycp:771
-msgid "Import Public GnuPG Key"
-msgstr "Import klucza publicznego GnuPG"
-
-#. push button
-#: library/packages/src/SignatureCheckDialogs.ycp:782
-#: library/packages/src/SignatureCheckDialogs.ycp:886
-msgid "&Import"
-msgstr "&Importuj"
-
-#. push button
-#: library/packages/src/SignatureCheckDialogs.ycp:784
-#: library/packages/src/SignatureCheckDialogs.ycp:888
-msgid "Do &Not Import"
-msgstr "&Nie importuj"
-
-#. popup message, %1 stands for string "GPG key ID\nfingerprint", %2 for key name
-#: library/packages/src/SignatureCheckDialogs.ycp:841
-#, ycp-format
-msgid ""
-"The following GnuPG key has been found in repository %1 \n"
-"%2:\n"
-"\n"
-"%3\n"
-"\n"
-"You can choose to import it into your keyring of trusted\n"
-"public keys, meaning that you trust the owner of the key.\n"
-"You should be sure that you can trust the owner and that\n"
-"the key really belongs to that owner before importing it."
+#. warning label - the key to import is expired
+#: library/packages/src/SignatureCheckDialogs.ycp:768
+#, fuzzy, ycp-format
+msgid "WARNING: The key has expired!"
 msgstr ""
-"W repozytorium %1 znaleziono następujący klucz GnuPG:\n"
-"%2:\n"
-"\n"
-"%3\n"
-"\n"
-"Można zaimportować ten klucz i dodać\n"
-"go do bazy zaufanych kluczy. Przed importem należy upewnić się, czy można ufać \n"
-"właścicielowi klucza, oraz czy jest to faktycznie klucz należący\n"
-"do niego."
+"UWAGA: Klucz wygasł!\n"
+"Data wygaśnięcia: %1"
 
 #. popup heading
-#: library/packages/src/SignatureCheckDialogs.ycp:875
+#: library/packages/src/SignatureCheckDialogs.ycp:796
 msgid "Import Untrusted GnuPG Key"
 msgstr "Import niezaufanego klucza GnuPG"
 
+#. push button
+#: library/packages/src/SignatureCheckDialogs.ycp:814
+msgid "&Trust"
+msgstr ""
+
 #. popup question, %1 stands for the filename, %2 is expected checksum
 #. %3 is the current checksum (e.g. "803a8ff00d00c9075a1bd223a480bcf92d2481c1")
-#: library/packages/src/SignatureCheckDialogs.ycp:960
+#: library/packages/src/SignatureCheckDialogs.ycp:879
 #, ycp-format
 msgid ""
 "The expected checksum of file %1\n"
@@ -4608,12 +4624,12 @@ msgstr ""
 "Czy użyć tego pliku mimo wszystko?"
 
 #. dialog heading - displayed in a big bold font
-#: library/packages/src/SignatureCheckDialogs.ycp:975
+#: library/packages/src/SignatureCheckDialogs.ycp:894
 msgid "Wrong Digest"
 msgstr "Błędny skrót"
 
 #. popup question, %1 stands for the filename, %2 is expected digest, %3 is the current digest
-#: library/packages/src/SignatureCheckDialogs.ycp:991
+#: library/packages/src/SignatureCheckDialogs.ycp:910
 #, ycp-format
 msgid ""
 "The checksum of file %1\n"
@@ -4635,7 +4651,7 @@ msgstr ""
 "Czy użyć tego pliku pomimo tego?"
 
 #. dialog heading - displayed in a big bold font
-#: library/packages/src/SignatureCheckDialogs.ycp:1003
+#: library/packages/src/SignatureCheckDialogs.ycp:922
 msgid "Unknown Digest"
 msgstr "Nieznany skrót"
 
@@ -4735,7 +4751,7 @@ msgstr "&Odinstaluj"
 #. Error message.
 #. %1 is a name of an init script in /etc/init.d,
 #. eg. nfsserver
-#: library/runlevel/src/Service.ycp:73
+#: library/runlevel/src/Service.ycp:83
 #, ycp-format
 msgid "Empty service name: %1."
 msgstr "Pusta nazwa usługi: %1."
@@ -4743,7 +4759,7 @@ msgstr "Pusta nazwa usługi: %1."
 #. Error message.
 #. %1 is a name of an init script in /etc/init.d,
 #. eg. nfsserver
-#: library/runlevel/src/Service.ycp:81
+#: library/runlevel/src/Service.ycp:97
 #, ycp-format
 msgid "Service %1 does not exist."
 msgstr "Usługa %1 nie istnieje."
@@ -4753,7 +4769,7 @@ msgstr "Usługa %1 nie istnieje."
 #. Disabling means that the service should not start
 #. in appropriate runlevels, eg. at boot time.
 #. %2 is the stderr output of insserv(8)
-#: library/runlevel/src/Service.ycp:145
+#: library/runlevel/src/Service.ycp:160
 #, ycp-format
 msgid ""
 "Unable to disable service %1:\n"
@@ -4767,7 +4783,7 @@ msgstr ""
 #. Enabling means that the service should start
 #. in appropriate runlevels, eg. at boot time.
 #. %2 is the stderr output of insserv(8)
-#: library/runlevel/src/Service.ycp:196
+#: library/runlevel/src/Service.ycp:212
 #, ycp-format
 msgid ""
 "Unable to enable service %1:\n"
@@ -4782,7 +4798,7 @@ msgstr ""
 #. in appropriate runlevels, eg. at boot time.
 #. %2 is the stderr output of insserv(8)
 #. %3 is a comma separated list of runlevels
-#: library/runlevel/src/Service.ycp:252
+#: library/runlevel/src/Service.ycp:267
 #, ycp-format
 msgid ""
 "Unable to enable service %1 in runlevels %2:\n"
@@ -5466,7 +5482,7 @@ msgstr "TB"
 
 #. covert a number to download rate string
 #. %1 is string - size in bytes, B, kB, MB, GB or TB
-#: library/types/src/String.ycp:166
+#: library/types/src/String.ycp:191
 #, ycp-format
 msgid "%1/s"
 msgstr "%1/s"
@@ -5474,14 +5490,14 @@ msgstr "%1/s"
 #. format download rate message: %1 = the current download rate (e.g. "242.6kB/s")
 #. %2 is the average download rate (e.g. "228.3kB/s")
 #. to translators: keep translation of "on average" as short as possible
-#: library/types/src/String.ycp:193
+#: library/types/src/String.ycp:218
 #, ycp-format
 msgid "%1 (on average %2)"
 msgstr "%1 (średnio %2)"
 
 #. ellipsis - used to replace part of text to make it shorter
 #. example: "/really/very/long/file/name", "/.../file/name")
-#: library/types/src/String.ycp:1267
+#: library/types/src/String.ycp:1292
 msgid "..."
 msgstr "..."
 
@@ -5536,17 +5552,17 @@ msgid "Really delete '%1'?"
 msgstr "Na pewno usunąć %1?"
 
 #. button text
-#: library/wizard/src/Wizard.ycp:179 library/wizard/src/Wizard.ycp:428
+#: library/wizard/src/Wizard.ycp:169 library/wizard/src/Wizard.ycp:418
 msgid "&Apply"
 msgstr "&Zastosuj"
 
 #. translators: dialog title to appear before any content is initialized
-#: library/wizard/src/Wizard.ycp:206
+#: library/wizard/src/Wizard.ycp:196
 msgid "Initializing ..."
 msgstr "Inicjalizacja..."
 
 #. translators: dialog title to appear before any content is initialized
-#: library/wizard/src/Wizard.ycp:248
+#: library/wizard/src/Wizard.ycp:238
 msgid ""
 "YaST2\n"
 "Initializing ..."
@@ -5555,37 +5571,15 @@ msgstr ""
 "Inicjalizacja..."
 
 #. Heading for help popup window
-#: library/wizard/src/Wizard.ycp:290
+#: library/wizard/src/Wizard.ycp:280
 msgid "Help"
 msgstr "Pomoc"
 
-#: library/wizard/src/Wizard_hw.ycp:39
-msgid "A&vailable are:"
-msgstr "&Dostępne:"
-
-#: library/wizard/src/Wizard_hw.ycp:42
-msgid "Re&start detection"
-msgstr "U&ruchom ponownie wykrywanie"
-
-#: library/wizard/src/Wizard_hw.ycp:44
-msgid "&Configure..."
-msgstr "&Konfiguruj..."
-
-#: library/wizard/src/Wizard_hw.ycp:51
-msgid "C&hange..."
-msgstr "&Zmień..."
-
-#: library/wizard/src/Wizard_hw.ycp:113
-msgid "A&dd"
-msgstr "&Dodaj"
-
-#: library/wizard/src/Wizard_hw.ycp:114
-msgid "&Edit"
-msgstr "&Edytuj"
-
-#: library/wizard/src/Wizard_hw.ycp:115
-msgid "De&lete"
-msgstr "&Usuń"
+#. fallback name for the dialog title
+#: library/wizard/src/Wizard.ycp:1099 library/wizard/src/Wizard.ycp:1173
+#, fuzzy
+msgid "Module"
+msgstr "Modem"
 
 #. TextEntry label
 #: remote/password.ycp:20
@@ -5631,6 +5625,48 @@ msgstr "Wyszukiwanie komputerów w sieci lokalnej..."
 #: remote/remoteinstall.ycp:29
 msgid "Select the Serial &Interface to Use:"
 msgstr "&Interfejs szeregowy do użycia:"
+
+#~ msgid "Import Public GnuPG Key"
+#~ msgstr "Import klucza publicznego GnuPG"
+
+#~ msgid "&Import"
+#~ msgstr "&Importuj"
+
+#~ msgid "Do &Not Import"
+#~ msgstr "&Nie importuj"
+
+#~ msgid ""
+#~ "The following GnuPG key has been found in repository %1 \n"
+#~ "%2:\n"
+#~ "\n"
+#~ "%3\n"
+#~ "\n"
+#~ "You can choose to import it into your keyring of trusted\n"
+#~ "public keys, meaning that you trust the owner of the key.\n"
+#~ "You should be sure that you can trust the owner and that\n"
+#~ "the key really belongs to that owner before importing it."
+#~ msgstr ""
+#~ "W repozytorium %1 znaleziono następujący klucz GnuPG:\n"
+#~ "%2:\n"
+#~ "\n"
+#~ "%3\n"
+#~ "\n"
+#~ "Można zaimportować ten klucz i dodać\n"
+#~ "go do bazy zaufanych kluczy. Przed importem należy upewnić się, czy można ufać \n"
+#~ "właścicielowi klucza, oraz czy jest to faktycznie klucz należący\n"
+#~ "do niego."
+
+#~ msgid "A&vailable are:"
+#~ msgstr "&Dostępne:"
+
+#~ msgid "Re&start detection"
+#~ msgstr "U&ruchom ponownie wykrywanie"
+
+#~ msgid "&Configure..."
+#~ msgstr "&Konfiguruj..."
+
+#~ msgid "C&hange..."
+#~ msgstr "&Zmień..."
 
 #~ msgid "Package %1 was not found on the medium."
 #~ msgstr "Pakiet %1 nie został znaleziony na nośniku."

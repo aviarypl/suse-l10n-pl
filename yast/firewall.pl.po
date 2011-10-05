@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: firewall\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-23 15:56+0200\n"
+"POT-Creation-Date: 2011-10-05 10:07+0200\n"
 "PO-Revision-Date: 2011-02-01 08:41+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@opensuse.biz>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -1345,7 +1345,7 @@ msgid "Re&quested IP"
 msgstr "Żą&dany IP"
 
 #. TRANSLATORS: select box
-#: src/subdialogs.ycp:440 src/subdialogs.ycp:927 src/uifunctions.ycp:1525
+#: src/subdialogs.ycp:440 src/subdialogs.ycp:928 src/uifunctions.ycp:1528
 msgid "&Protocol"
 msgstr "&Protokół"
 
@@ -1456,29 +1456,38 @@ msgstr "Własne reguły zezwalania"
 msgid "Firewall &Zone"
 msgstr "Strefa &zapory sieciowej"
 
-#: src/subdialogs.ycp:924
+#: src/subdialogs.ycp:907
+msgid "Options"
+msgstr ""
+
+#: src/subdialogs.ycp:925
 msgid "Add New Allowing Rule"
 msgstr "Dodawanie nowej reguły zezwalającej"
 
-#: src/subdialogs.ycp:926
+#: src/subdialogs.ycp:927
 msgid "Source &Network"
 msgstr "&Sieć źródłowa"
 
-#: src/subdialogs.ycp:932
+#: src/subdialogs.ycp:933
 msgid "&Destination Port (Optional)"
 msgstr "Port &docelowy (opcjonalny)"
 
-#: src/subdialogs.ycp:933
+#: src/subdialogs.ycp:934
 msgid "&Source Port (Optional)"
 msgstr "P&ort źródłowy (opcjonalny)"
 
+#: src/subdialogs.ycp:935
+#, fuzzy
+msgid "Additiona &Options (Optional)"
+msgstr "Port &docelowy (opcjonalny)"
+
 #. TRANSLATORS: informative label in dialog
-#: src/subdialogs.ycp:954
+#: src/subdialogs.ycp:956
 msgid "Creating summary..."
 msgstr "Tworzenie podsumowania..."
 
 #. TRANSLATORS: check box in summary dialog
-#: src/subdialogs.ycp:957
+#: src/subdialogs.ycp:959
 msgid "&Show Details"
 msgstr "Wyświetl &szczegóły"
 
@@ -1553,8 +1562,8 @@ msgid "%1 custom rules are defined"
 msgstr "Zdefiniowanych własnych reguł: %1"
 
 #: src/summary.ycp:283
-#, ycp-format
-msgid "Network: <i>%1</i>, Protocol: <i>%2</i>, Destination port: <i>%3</i>, Source port: <i>%4</i>"
+#, fuzzy, ycp-format
+msgid "Network: <i>%1</i>, Protocol: <i>%2</i>, Destination port: <i>%3</i>, Source port: <i>%4</i>, Options: <i>%5</i>"
 msgstr "Sieć: <i>%1</i>, protokół: <i>%2</i>, port docelowy: <i>%3</i>, port źródłowy: <i>%4</i>"
 
 #: src/summary.ycp:284 src/summary.ycp:285 src/summary.ycp:286
@@ -1562,49 +1571,54 @@ msgstr "Sieć: <i>%1</i>, protokół: <i>%2</i>, port docelowy: <i>%3</i>, port 
 msgid "All"
 msgstr "Wszystkie"
 
+#: src/summary.ycp:288
+#, fuzzy
+msgid "None"
+msgstr "Strefa"
+
 #. TRANSLATORS: CommandLine Summary header
 #. TRANSLATORS: UI Summary header
-#: src/summary.ycp:311 src/summary.ycp:314
+#: src/summary.ycp:312 src/summary.ycp:315
 msgid "Firewall Starting"
 msgstr "Uruchamianie zapory sieciowej"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:322
+#: src/summary.ycp:323
 msgid "<b>Enable</b> firewall automatic starting"
 msgstr "<b>Włącz</b> automatyczne uruchamianie zapory"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:325
+#: src/summary.ycp:326
 msgid "<b>Disable</b> firewall automatic starting"
 msgstr "<b>Wyłącz</b> automatyczne uruchamianie zapory"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:333
+#: src/summary.ycp:334
 msgid "Firewall starts after the configuration gets written"
 msgstr "Zapora sieciowa zostanie uruchomiona po zapisaniu konfiguracji"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:337
+#: src/summary.ycp:338
 msgid "Firewall <b>starts</b> after the configuration gets written"
 msgstr "Zapora sieciowa zostanie <b>uruchomiona</b> po zapisaniu konfiguracji"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:343
+#: src/summary.ycp:344
 msgid "Firewall <b>will be stopped</b> after the configuration is written"
 msgstr "Zapora sieciowa zostanie <b>zatrzymana</b> po zapisaniu konfiguracji"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:347
+#: src/summary.ycp:348
 msgid "Firewall will not start after the configuration is written"
 msgstr "Zapora sieciowa nie zostanie uruchomiona po zapisaniu konfiguracji"
 
 #. TRANSLATORS: Summary text item
-#: src/summary.ycp:359 src/summary.ycp:362
+#: src/summary.ycp:360 src/summary.ycp:363
 msgid "Unassigned Interfaces"
 msgstr "Nieprzypisane interfejsy"
 
 #. TRANSLATORS: Warning plain text in summary
-#: src/summary.ycp:379
+#: src/summary.ycp:380
 msgid "No network traffic is permitted through these interfaces."
 msgstr "Przez te interfejsy nie jest dozwolony żaden ruch sieciowy."
 
@@ -1781,67 +1795,67 @@ msgstr ""
 "\n"
 "Czy wyłączyć zaporę po zapisaniu nowej konfiguracji?"
 
-#: src/uifunctions.ycp:1331 src/uifunctions.ycp:1490
+#: src/uifunctions.ycp:1333 src/uifunctions.ycp:1493
 #, ycp-format
 msgid "Invalid network definition '%1'"
 msgstr "Nieprawidłowa definicja sieci '%1'"
 
-#: src/uifunctions.ycp:1340 src/uifunctions.ycp:1355
+#: src/uifunctions.ycp:1342 src/uifunctions.ycp:1357
 #, ycp-format
 msgid "Invalid port range '%1'"
 msgstr "Nieprawidłowy zakres portów '%1'"
 
-#: src/uifunctions.ycp:1345 src/uifunctions.ycp:1360 src/uifunctions.ycp:1496
+#: src/uifunctions.ycp:1347 src/uifunctions.ycp:1362 src/uifunctions.ycp:1499
 #, ycp-format
 msgid "Invalid port name or number '%1'"
 msgstr "Nieprawidłowa nazwa lub numer portu '%1'"
 
-#: src/uifunctions.ycp:1410
+#: src/uifunctions.ycp:1413
 msgid "All services using UDP"
 msgstr "Wszystkie usługi używające UDP"
 
-#: src/uifunctions.ycp:1412
+#: src/uifunctions.ycp:1415
 msgid "All services using TCP"
 msgstr "Wszystkie usługi używające TCP"
 
-#: src/uifunctions.ycp:1414
+#: src/uifunctions.ycp:1417
 msgid "Samba browsing"
 msgstr "Przeglądanie zasobów Samba"
 
-#: src/uifunctions.ycp:1416
+#: src/uifunctions.ycp:1419
 msgid "SLP browsing"
 msgstr "Przeglądanie SLP"
 
-#: src/uifunctions.ycp:1424
+#: src/uifunctions.ycp:1427
 msgid "All networks"
 msgstr "Wszystkie sieci"
 
-#: src/uifunctions.ycp:1426
+#: src/uifunctions.ycp:1429
 #, ycp-format
 msgid "Subnet: %1"
 msgstr "Podsieć: %1"
 
-#: src/uifunctions.ycp:1515
+#: src/uifunctions.ycp:1518
 msgid "&Zone"
 msgstr "S&trefa"
 
-#: src/uifunctions.ycp:1516
+#: src/uifunctions.ycp:1519
 msgid "&Network"
 msgstr "&Sieć"
 
-#: src/uifunctions.ycp:1517
+#: src/uifunctions.ycp:1520
 msgid "&Service"
 msgstr "U&sługa"
 
-#: src/uifunctions.ycp:1522
+#: src/uifunctions.ycp:1525
 msgid "User-defined service"
 msgstr "Usługa definiowana przez użytkownika"
 
-#: src/uifunctions.ycp:1529
+#: src/uifunctions.ycp:1532
 msgid "Po&rt"
 msgstr "Po&rt"
 
-#: src/uifunctions.ycp:1609
+#: src/uifunctions.ycp:1612
 msgid "Select an item to delete."
 msgstr "Proszę wybrać element do usunięcia."
 

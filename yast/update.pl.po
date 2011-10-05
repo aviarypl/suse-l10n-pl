@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: update\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-06-23 15:53+0200\n"
+"POT-Creation-Date: 2011-10-05 10:01+0200\n"
 "PO-Revision-Date: 2011-09-25 14:09+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
@@ -142,16 +142,17 @@ msgstr "<p>Wszystkie kopie zapasowe znajdują się w %1.</p>"
 
 #. screen title for update options
 #. this is a heading
-#: src/clients/inst_update.ycp:26 src/clients/update_proposal.ycp:516
+#: src/clients/inst_update.ycp:26 src/clients/update_proposal.ycp:453
 msgid "Update Options"
 msgstr "Opcje aktualizacji"
 
-#: src/clients/inst_update.ycp:38
+#. push button label
+#: src/clients/inst_update.ycp:29
 msgid "Select Patterns"
 msgstr "Wybierz wzorce"
 
 #. Display warning message
-#: src/clients/inst_update.ycp:65
+#: src/clients/inst_update.ycp:38
 msgid ""
 "You have already chosen software from \"Detailed selection\".\n"
 "You will lose that selection if you change the basic selection."
@@ -166,7 +167,7 @@ msgstr ""
 #. Table item (unknown file system)
 #. label - name of sustem to update
 #. label for an unknown installed system
-#: src/clients/inst_update.ycp:72 src/clients/inst_update.ycp:73
+#: src/clients/inst_update.ycp:45 src/clients/inst_update.ycp:46
 #: src/include/rootpart.ycp:70 src/include/rootpart.ycp:76
 #: src/include/rootpart.ycp:93 src/modules/RootPart.ycp:131
 #: src/modules/RootPart.ycp:1189 src/modules/RootPart.ycp:1193
@@ -176,24 +177,24 @@ msgstr "Nieznany"
 
 #. label showing to which version we are updating
 #. TRANSLATORS: proposal summary item, %1 is a product name
-#: src/clients/inst_update.ycp:78 src/clients/update_proposal.ycp:428
+#: src/clients/inst_update.ycp:51 src/clients/update_proposal.ycp:374
 #, ycp-format
 msgid "Update to %1"
 msgstr "Aktualizacja do %1"
 
 #. label showing from which version to which version we are updating
-#: src/clients/inst_update.ycp:81
+#: src/clients/inst_update.ycp:54
 #, ycp-format
 msgid "Update from %1 to %2"
 msgstr "Aktualizacja z %1 do %2"
 
 #. frame title for update selection
-#: src/clients/inst_update.ycp:89
+#: src/clients/inst_update.ycp:62
 msgid "Update Mode"
 msgstr "Tryb aktualizacji"
 
 #. radio button label for update including new packages
-#: src/clients/inst_update.ycp:96
+#: src/clients/inst_update.ycp:69
 msgid ""
 "&Update with Installation of New Software and Features\n"
 "Based on the Selection:\n"
@@ -202,12 +203,12 @@ msgstr ""
 "w oparciu o wybór:\n"
 
 #. radio button label for update of already installed packages only
-#: src/clients/inst_update.ycp:107
+#: src/clients/inst_update.ycp:80
 msgid "Only U&pdate Installed Packages"
 msgstr "&Aktualizuj tylko zainstalowane pakiety"
 
 #. help text for dialog "update options" 1/4
-#: src/clients/inst_update.ycp:125
+#: src/clients/inst_update.ycp:98
 msgid ""
 "<p>The update option differs between two modes. In\n"
 "either case, it is recommended to make a backup of your personal data.</p>\n"
@@ -216,7 +217,7 @@ msgstr ""
 "zalecane jest wykonanie kopii zapasowej danych osobistych.</p>\n"
 
 #. help text for dialog "update options" 2/4, %1 is a product name
-#: src/clients/inst_update.ycp:130
+#: src/clients/inst_update.ycp:103
 #, ycp-format
 msgid ""
 "<p><b>With New Software:</b> This default setting\n"
@@ -230,7 +231,7 @@ msgstr ""
 "wybór pakietów.</p>\n"
 
 #. help text for dialog "update options" 3/4
-#: src/clients/inst_update.ycp:137
+#: src/clients/inst_update.ycp:110
 msgid ""
 "<p><b>Only Installed Packages:</b> This selection\n"
 "only updates the packages already installed on your system. <i>Note:</i>\n"
@@ -243,7 +244,7 @@ msgstr ""
 "po aktualizacji. Można nie dowiedzieć się o możliwościach nowej wersji.</p>\n"
 
 #. help text for dialog "update options" 4/4
-#: src/clients/inst_update.ycp:144
+#: src/clients/inst_update.ycp:117
 msgid ""
 "<p>After the update, some software might not\n"
 "function anymore. Activate <b>Delete Unmaintained Packages</b> to delete those\n"
@@ -254,7 +255,7 @@ msgstr ""
 "usunąć takie pakiety w czasie aktualizacji.</p>\n"
 
 #. yes/no question
-#: src/clients/inst_update.ycp:225
+#: src/clients/inst_update.ycp:168
 msgid ""
 "Do you really want\n"
 "to reset your detailed selection?"
@@ -345,7 +346,7 @@ msgstr "Brak dostępnego interfejsu użytkownika dla tego modułu."
 
 #. part of error popup message
 #. error message in proposal
-#: src/clients/update_proposal.ycp:113 src/clients/update_proposal.ycp:336
+#: src/clients/update_proposal.ycp:113 src/clients/update_proposal.ycp:292
 msgid "Cannot read the current RPM Database."
 msgstr "Nie można wczytać bieżącej bazy danych RPM."
 
@@ -356,7 +357,7 @@ msgid "None of these files exist:%1"
 msgstr "Następujące pliki nie istnieją: %1"
 
 #. continue-cancel popup
-#: src/clients/update_proposal.ycp:295
+#: src/clients/update_proposal.ycp:251
 msgid ""
 "The installed product is not compatible with the product\n"
 "on the installation media. If you try to update using the\n"
@@ -369,26 +370,20 @@ msgstr ""
 "albo niektóre programy nie będą działały poprawnie."
 
 #. error message in proposal
-#: src/clients/update_proposal.ycp:351
+#: src/clients/update_proposal.ycp:307
 msgid "The installed product is not compatible with the product on the installation media."
 msgstr "Zainstalowany produkt jest niezgodny z produktem znajdującym się na nośniku instalacyjnym."
 
-#. Can't find any software data, probably a installation media error
-#. error message
-#: src/clients/update_proposal.ycp:362
-msgid "Cannot read package data from installation media. Media error?"
-msgstr "Nie można odczytać danych dotyczących pakietów z nośnika instalacyjnego. Prawdopodobny błąd nośnika."
-
 #. TRANSLATORS: unknown product (label)
 #. TRANSLATORS: unknown product name
-#: src/clients/update_proposal.ycp:368 src/clients/update_proposal.ycp:376
-#: src/clients/update_proposal.ycp:405 src/clients/update_proposal.ycp:407
+#: src/clients/update_proposal.ycp:314 src/clients/update_proposal.ycp:322
+#: src/clients/update_proposal.ycp:351 src/clients/update_proposal.ycp:353
 msgid "Unknown product"
 msgstr "Nieznany produkt"
 
 #. TRANSLATORS: proposal error, %1 is the version of installed system
 #. %2 is the version being installed
-#: src/clients/update_proposal.ycp:388
+#: src/clients/update_proposal.ycp:334
 #, ycp-format
 msgid ""
 "Updating system to another version (%1 -> %2) is not supported on the running system.<br>\n"
@@ -400,29 +395,23 @@ msgstr ""
 "lub wyłączyć źródła instalacji zawierające produkty w różnych wersjach."
 
 #. TRANSLATORS: proposal warning, both %1 and %2 are replaced with product names
-#: src/clients/update_proposal.ycp:403
+#: src/clients/update_proposal.ycp:349
 #, ycp-format
 msgid "Warning: Updating from '%1' to '%2', products do not exactly match."
 msgstr "Ostrzeżenie: Aktualizacja z %1' do '%2'. Produkty nie są ze sobą całkowicie zgodne."
 
 #. Proposal for backup during update
-#: src/clients/update_proposal.ycp:439
+#: src/clients/update_proposal.ycp:385
 msgid "Only update installed packages"
 msgstr "Zaktualizuj tylko zainstalowane pakiety"
 
 #. proposal string
-#: src/clients/update_proposal.ycp:447
+#: src/clients/update_proposal.ycp:392
 msgid "Update based on patterns"
 msgstr "Aktualizacja na podstawie wzorców"
 
-#. Proposal for selection during update, %1 stands for selection name
-#: src/clients/update_proposal.ycp:463
-#, ycp-format
-msgid "Update based on selection \"%1\""
-msgstr "Aktualizacja na podstawie wyboru \"%1\""
-
 #. TRANSLATORS: proposal dialog help
-#: src/clients/update_proposal.ycp:472
+#: src/clients/update_proposal.ycp:409
 msgid ""
 "<p><b><big>Update Options</big></b>\n"
 "Here you can choose how your system is going to be updated.\n"
@@ -435,7 +424,7 @@ msgstr ""
 "(domyślnie), oraz czy usuwać pakiety nieutrzymywane.</p>"
 
 #. this is a menu entry
-#: src/clients/update_proposal.ycp:518
+#: src/clients/update_proposal.ycp:455
 msgid "&Update Options"
 msgstr "&Opcje aktualizacji"
 
@@ -459,8 +448,7 @@ msgstr "Porządkowanie"
 msgid "Update System Configuration"
 msgstr "Aktualizacja konfiguracji systemu"
 
-#. TRANSLATORS: dialog caption
-#: src/config/update.glade:75 src/modules/RootPart.ycp:1771
+#: src/config/update.glade:75
 msgid "Update Configuration"
 msgstr "Aktualizuj konfigurację"
 
@@ -872,15 +860,26 @@ msgstr "Sprawdzane partycji głównej (root). Proszę czekać..."
 msgid "Mounting partitions. One moment please..."
 msgstr "Montowanie partycji. Proszę czekać..."
 
+#. TRANSLATORS: dialog caption
+#: src/modules/RootPart.ycp:1771
+msgid "Searching for Available Systems"
+msgstr ""
+
 #. TRANSLATORS: "Update to: $product_name"
 #: src/modules/Update.ycp:282
 msgid "Unknown Product"
 msgstr "Nieznany produkt"
 
 #. TRANSLATORS: check-box, it might happen that we need to downgrade some packages during update
-#: src/modules/Update.ycp:723
+#: src/modules/Update.ycp:648
 msgid "Allow Package Downgrade"
 msgstr "Zezwalaj na instalację poprzednich wersji pakietów"
+
+#~ msgid "Cannot read package data from installation media. Media error?"
+#~ msgstr "Nie można odczytać danych dotyczących pakietów z nośnika instalacyjnego. Prawdopodobny błąd nośnika."
+
+#~ msgid "Update based on selection \"%1\""
+#~ msgstr "Aktualizacja na podstawie wyboru \"%1\""
 
 #~ msgid "&Delete Unmaintained Packages"
 #~ msgstr "&Usuń nieutrzymywane pakiety"
