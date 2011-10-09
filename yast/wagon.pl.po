@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: wagon\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-10-05 10:04+0200\n"
-"PO-Revision-Date: 2011-09-25 14:48+0100\n"
+"PO-Revision-Date: 2011-10-09 17:27+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Polish <team@opensuse.biz>\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,8 @@ msgstr ""
 "Nie można przywrócić poprzedniego stanu zainstalowanych produktów.\n"
 "Trzeba będzie przywrócić je ręcznie."
 
-#: src/clients/wagon.ycp:179 src/clients/wagon.ycp:221
+#: src/clients/wagon.ycp:179
+#: src/clients/wagon.ycp:221
 msgid "Reverting Migration"
 msgstr "Wycofanie migracji"
 
@@ -89,7 +90,8 @@ msgstr ""
 "Nie można usunąć produktu %1\n"
 "Proszę usunąć pakiet %2 ręcznie"
 
-#: src/clients/wagon.ycp:269 src/include/common_func.ycp:210
+#: src/clients/wagon.ycp:269
+#: src/include/common_func.ycp:210
 #: src/include/common_func.ycp:232
 msgid "Unknown product"
 msgstr "Nieznany produkt"
@@ -157,60 +159,57 @@ msgstr "Odznacz"
 #. help text
 #: src/clients/wagon_dup_repositories.ycp:67
 msgid "Here select the repositories which will be used for migration."
-msgstr ""
+msgstr "W tym miejscu należy wybrać repozytoria które zostaną wykorzystane w trakcie migracji."
 
 #: src/clients/wagon_dup_repositories.ycp:68
-#, fuzzy
 msgid "The installed packages will be switched to the versions available in the selected migration repositories."
-msgstr "Pakiety zostaną zamienione na ich wersje dostępne w wybranych repozytoriach."
+msgstr "Zainstalowane pakiety zostaną zamienione na ich odpowiednie wersje dostępne w wybranych repozytoriach migracji."
 
 #. heading text
 #: src/clients/wagon_dup_repositories.ycp:157
-#, fuzzy
 msgid "Migration Type"
-msgstr "Migracja ukończona"
+msgstr "Typ migracji"
 
 #. frame label
 #: src/clients/wagon_dup_repositories.ycp:163
-#, fuzzy
 msgid "Migration type"
-msgstr "Migracja ukończona"
+msgstr "Typ migracji"
 
 #. radio button
 #: src/clients/wagon_dup_repositories.ycp:169
 msgid "&Minimal - upgrade from repositories added by registration"
-msgstr ""
+msgstr "&Minimalna - uaktualnienie z repozytoriów dodanych przez rejestrację"
 
 #. radio button
 #: src/clients/wagon_dup_repositories.ycp:171
 msgid "&Full - upgrade from all repositories"
-msgstr ""
+msgstr "&Pełna - uaktualnienie ze wszystkich repozytoriów"
 
 #. push button
 #: src/clients/wagon_dup_repositories.ycp:181
 msgid "Advanced..."
-msgstr ""
+msgstr "Zaawansowane..."
 
 #. help text
 #: src/clients/wagon_dup_repositories.ycp:185
 msgid "Select the requested migration type."
-msgstr ""
+msgstr "Należy określić wybrany typ migracji."
 
 #. help text
 #: src/clients/wagon_dup_repositories.ycp:187
 msgid "Minimal migration only uses the repositories added by registration, full migration migrates all packages to the latest version available in any enabled repository. Full migration might use third party repositories."
-msgstr ""
+msgstr "Miminalna migracja wykorzystuje tylko repozytoria dodane przez rejestrację. Pełna migracja, migruje wszystkie pakiety do najnowszej wersji dostępnej w dowolnym z włączonych repozytoriów. W trakcie pełnej migracji mogą zostać wykorzystane repozytoria firm trzecich."
 
 #. help text
 #: src/clients/wagon_dup_repositories.ycp:189
 msgid "Press <b>Advanced</b> button to manually select the repositories used for upgrading."
-msgstr ""
+msgstr "Aby wybrać ręcznie repozytoria które zostaną wykorzystane do uaktualnienia, należy nacisnąc przycisk <b>Zaawansowane</b>."
 
 #. error popup message
 #: src/clients/wagon_dup_repositories.ycp:247
 #, ycp-format
 msgid "Selected unknown migration type: %1"
-msgstr ""
+msgstr "Wybrano nieznany typ migracji: %1"
 
 #: src/clients/wagon_migration_products.ycp:65
 #, ycp-format
@@ -219,7 +218,6 @@ msgstr "Nie można uaktualnić zainstalowanego produktu %1."
 
 #: src/clients/wagon_migration_products.ycp:77
 #: src/clients/wagon_migration_products.ycp:147
-#, fuzzy
 msgid "Unable to initialize the software manager."
 msgstr "Nie można zainicjalizować menedżera pakietów."
 
@@ -339,7 +337,6 @@ msgstr "Uruchom rejestrację..."
 
 #. help text
 #: src/clients/wagon_registration_check.ycp:189
-#, fuzzy
 msgid "YaST checks whether the installed products are registered."
 msgstr "YaST sprawdza czy zainstalowane produkty zostały zarejestrowane."
 
@@ -467,11 +464,14 @@ msgid ""
 "\n"
 "Press OK to exit."
 msgstr ""
+"Ten system jest zarządzany przez SUSE Manager,\n"
+"moduł YaST wagon nie może migrować systemów zarządzanych przez SUSE Manager.\n"
+"\n"
+"Aby zakończyć, należy nacisnąć przycisk OK."
 
 #. Report error but let user go further
 #. Might help us in the future
 #: src/clients/welcome_in_wagon.ycp:71
-#, fuzzy
 msgid "Cannot initialize software manager."
 msgstr "Nie można zainicjalizować menedżera pakietów."
 
@@ -498,12 +498,10 @@ msgid "Abort Upgrade"
 msgstr "Anuluj aktualizację"
 
 #: src/include/common_func.ycp:122
-#, fuzzy
 msgid "Resetting Software Manager"
 msgstr "Resetowanie menedżera pakietów"
 
 #: src/include/common_func.ycp:123
-#, fuzzy
 msgid "Resetting software manager..."
 msgstr "Resetowanie menedżera pakietów..."
 
@@ -566,12 +564,15 @@ msgstr "Na dysku może być niewystarczająca ilość wolnego miejsca do uruchom
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: src/modules/Wagon.ycp:558 src/modules/Wagon.ycp:573
-#: src/modules/Wagon.ycp:617 src/modules/Wagon.ycp:642
+#: src/modules/Wagon.ycp:558
+#: src/modules/Wagon.ycp:573
+#: src/modules/Wagon.ycp:617
+#: src/modules/Wagon.ycp:642
 msgid "No short name defined"
 msgstr "Nie określono krótkiej nazwy"
 
-#: src/modules/Wagon.ycp:572 src/modules/Wagon.ycp:616
+#: src/modules/Wagon.ycp:572
+#: src/modules/Wagon.ycp:616
 #: src/modules/Wagon.ycp:641
 msgid "No name defined"
 msgstr "Nie zdefiniowano nazwy"
@@ -620,7 +621,6 @@ msgstr "Wyłączone"
 
 #. help text
 #: src/modules/Wagon.ycp:661
-#, fuzzy
 msgid "<p>To change the update settings, go to <b>Packages Proposal</b> section.</p>"
 msgstr "<p>Aby zmienić ustawienia aktualizacji, należy przejść do sekcji <p>Propozycja pakietów</p>.</p>"
 
