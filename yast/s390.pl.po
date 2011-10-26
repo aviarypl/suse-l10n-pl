@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: s390\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-10 15:43+0200\n"
+"POT-Creation-Date: 2011-10-24 16:12+0200\n"
 "PO-Revision-Date: 2011-10-14 19:34+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
@@ -34,7 +34,7 @@ msgid "DASD"
 msgstr "DASD"
 
 #. section name in proposal - menu item
-#: src/clients/dasd_proposal.ycp:56 src/dump/ui.ycp:53
+#: src/clients/dasd_proposal.ycp:56 src/dump/ui.ycp:63
 msgid "&DASD"
 msgstr "&DASD"
 
@@ -111,8 +111,8 @@ msgstr "&zFCP"
 #. table cell
 #: src/dasd/dialogs.ycp:120 src/dasd/dialogs.ycp:125 src/dasd/dialogs.ycp:140
 #: src/dasd/dialogs.ycp:165 src/dasd/dialogs.ycp:173 src/dasd/dialogs.ycp:338
-#: src/iucvterminal-server/ui.ycp:41 src/modules/DASDController.ycp:235
-#: src/modules/DASDController.ycp:236 src/zfcp/dialogs.ycp:98
+#: src/iucvterminal-server/ui.ycp:41 src/modules/DASDController.ycp:245
+#: src/modules/DASDController.ycp:246 src/zfcp/dialogs.ycp:98
 msgid "Yes"
 msgstr "Tak"
 
@@ -122,7 +122,7 @@ msgstr "Tak"
 #.
 #: src/dasd/dialogs.ycp:122 src/dasd/dialogs.ycp:127 src/dasd/dialogs.ycp:142
 #: src/dasd/dialogs.ycp:167 src/iucvterminal-server/ui.ycp:46
-#: src/modules/DASDController.ycp:235 src/modules/DASDController.ycp:236
+#: src/modules/DASDController.ycp:245 src/modules/DASDController.ycp:246
 msgid "No"
 msgstr "Nie"
 
@@ -433,52 +433,61 @@ msgstr "Konfiguracja sterownika"
 msgid "Create Dump Device"
 msgstr "Utwórz urządzenie zrzutu"
 
-#: src/dump/ui.ycp:30
+#. Dump dialog help 1/8
+#: src/dump/ui.ycp:32
 msgid "<p><b>Prepare one or more volumes for use as S/390 dump device.</b></p>"
 msgstr "<p><b>Przygotuj jeden lub więcej wolumenów do wykorzystania jako urzadzenie zrzutu S/390.</b></p>"
 
-#: src/dump/ui.ycp:31
+#. Dump dialog help 2/8
+#: src/dump/ui.ycp:34
 msgid "<p>Supported devices are ECKD DASD and ZFCP disks, while multi-volumes are limited to DASD.<br>"
 msgstr "<p>Obsługiwane urządzenia to dyski ECDK DASD oraz ZFCP, natomiast multi-woluminy ograniczone są do DASD.<br>"
 
-#: src/dump/ui.ycp:32
+#. Dump dialog help 3/8
+#: src/dump/ui.ycp:36
 msgid "Only whole disks can be used, no partitions! If the device is incompatible formatted/partioned, activate the checkbox <b>Force overwrite of disk</b></p>"
 msgstr "Jedynie całe dyski mogą zostać użyte, nie partycje! Jeśli urządzenie nie jest sformatowane/podzielone na partycje w prawidlowy sposób, zaznacz pole <b>Wymuś nadpisanie dysku</b></p>"
 
-#: src/dump/ui.ycp:33
-msgid "<p>DASD and ZFCP devices have to be active to be utilized. This activation can be done in the YaST DASD respective ZFCP dialog.<br>"
+#. Dump dialog help 4/8
+#: src/dump/ui.ycp:38
+#, fuzzy
+msgid "<p>DASD and ZFCP devices have to be active to be utilized. This activation can be done in the respective YaST DASD or ZFCP dialog.<br>"
 msgstr "<p>Urządzenia DASD oraz ZFCP muszą być aktywne, aby mogły zostać użyte. Aktywacji można dokonać w oknie dialogowym ZFCP w sekcji DASD programu YaST.<br>"
 
-#: src/dump/ui.ycp:34
+#. Dump dialog help 5/8
+#: src/dump/ui.ycp:40
 msgid "Devices which are in use or have mounted partitions will not be shown.</p>"
 msgstr "Urządzenia będące w użyciu lub posiadające zamontowane partycje nie zostaną wyświetlone.</p>"
 
-#: src/dump/ui.ycp:35
+#. Dump dialog help 6/8
+#: src/dump/ui.ycp:42
 msgid "The mentioning of <b>dumpdevice</b> after a disk indicates that it is an already usable dump device. Additionally multi-volume dump devices are indicated by the list of including DASD ids. </p>"
 msgstr "Wyświetlenie <b>dumpdevice</b> obok dysku wskazuje, że jest on już gotowy do wykorzystania jako urządzenie zrzutu. Odpowiednio, multi-woliminowe urządzenia zrzutu, są oznaczone na liście identyfikatorów DASD.</p>"
 
-#: src/dump/ui.ycp:36
+#. Dump dialog help 7/8
+#: src/dump/ui.ycp:44
 msgid "<p>ZFCP columns: Device, Size, ID, WWPN, LUN, Dump<br>"
 msgstr "<p>Kolumny ZFCP: Urządzenie, Wielkość, Identyfikator, WWPN, LUN, Zrzut<br>"
 
-#: src/dump/ui.ycp:37
+#. Dump dialog help 8/8
+#: src/dump/ui.ycp:46
 msgid "DASD columns: Device, Size, ID, Dump</p>"
 msgstr "Kolumny DASD: Urządzenie, Wielkość, Identyfikator, Zrzut</p>"
 
-#: src/dump/ui.ycp:47
+#: src/dump/ui.ycp:57
 msgid "&ZFCP"
 msgstr "&ZFCP"
 
-#: src/dump/ui.ycp:60
+#: src/dump/ui.ycp:70
 msgid "&Force overwrite of disk"
 msgstr "Wymuś nadpisanie dysku"
 
-#: src/dump/ui.ycp:122
+#: src/dump/ui.ycp:132
 msgid "You haven't selected any device."
 msgstr "Nie wybrano żadnego urządzenia."
 
 #. warn only in case of force
-#: src/dump/ui.ycp:129
+#: src/dump/ui.ycp:139
 #, ycp-format
 msgid "The disk %1 will be formatted as a dump device. All data on this device will be lost! Continue?"
 msgid_plural "The disks %1 will be formatted as a dump device. All data on these devices will be lost! Continue?"
@@ -487,11 +496,11 @@ msgstr[1] "Dyski %1 zostanie sformatowany jako urządzenie zrzutu. Wszystkie dan
 msgstr[2] "Dyski %1 zostanie sformatowane jako urządzenia zrzutu. Wszystkie dane na urządzeniach zostaną utracone! Kontynuować?"
 
 #. don't quit in case of failures, error messages are reported by FormatDisk()
-#: src/dump/ui.ycp:133
+#: src/dump/ui.ycp:143
 msgid "Operation successful. Initialize another dump device?"
 msgstr "Operacja zakończona pomyślnie. Zainicjować urządzenie zrzutu?"
 
-#. z/VM IDs
+#. z/VM IDs dialog help 1/1
 #: src/iucvterminal-server/helps.ycp:20
 msgid "<p><b><big>z/VM IDs</big></b></p>"
 msgstr "<p><b><big>Identyfikatory z/VM</big></b></p>"
@@ -504,7 +513,7 @@ msgstr ""
 "<p>Aby skonfigurować serwer terminalowy IUCV muszą zostać okreśłone identyfikatory z/VM ktore zostaną wykorzystane.\n"
 "<br>Identyfikatory oddzielone są odstępami.</p>"
 
-#. TS-Shell
+#. TS-Shell dialog help 1/5
 #: src/iucvterminal-server/helps.ycp:26
 msgid "<p><b><big>TS-Shell</big></b></p>"
 msgstr "<p><b><big>TS-Shell</big></b></p>"
@@ -513,28 +522,32 @@ msgstr "<p><b><big>TS-Shell</big></b></p>"
 msgid "<p>TS-Shell allows the <b>Authorization</b> to be specified for every TS-Shell user and group. The rights of a group are inherited by their members.</p>"
 msgstr "<p>TS-Shell umożliwia określenie <b>Autoryzacji</b> dla każdego użytkownika i grupy. Prawa grupy są dziedziczone przez jej członków.</p>"
 
-#: src/iucvterminal-server/helps.ycp:29
+#. TS-Shell dialog help 2/5
+#: src/iucvterminal-server/helps.ycp:30
 msgid "<p>Each allowed z/VM IDs are either selected manually under <b>Selection</b>, defined by a <b>Regex</b> or loaded from a <b>File</b> which consist all allowed z/VM IDs separated by breaks.</p>"
 msgstr "<p>Każdy dopuszczalny identyfikator z/VM może zostać wybrany ręcznie w sekcji <b>Wybór</b>, określony przez <b>Regex</b> lub wczytany z <b>Pliku</b> zawierającego wszystkie dopuszczone identyfikatory oddzielone odstępami.</p>"
 
-#: src/iucvterminal-server/helps.ycp:31
+#. TS-Shell dialog help 3/5
+#: src/iucvterminal-server/helps.ycp:33
 msgid "<p>By clicking on the button <b>New User</b> addtional TS-Shell users could be created and also deleted by using <b>Delete User</b>.</p>"
 msgstr "<p>Dodatkowi użytkownicy TS-Shell powinni zostać utworzeni przez kliknięcie przycisku <b>Nowy użytkownik</b> oraz usuwani przyciskiem <b>Usuń użytkownika</b>.</p>"
 
-#: src/iucvterminal-server/helps.ycp:33
+#. TS-Shell dialog help 4/5
+#: src/iucvterminal-server/helps.ycp:36
 msgid "<p>To add or remove groups from the TS-Shell authorization table or to change the membership of them <b>Manage Groups</b> has to be called.</p>"
 msgstr "<p>Dodawania lub usuwanie grup z tablicy autoryzacji TS-Shell lub zmiany w członkostwach możliwe jest w sekcji <b>Zarządzanie grupami</b>.</p>"
 
-#: src/iucvterminal-server/helps.ycp:35
+#. TS-Shell dialog help 5/5
+#: src/iucvterminal-server/helps.ycp:39
 msgid "<p>With <b>Audited IDs</b> the z/VM IDs could be specified from which transcripts should be gathered."
 msgstr "<p><b>Kontrolowane identyfikatory</b> umożliwiają określenie z których transkrypcji należy pobrać identyfikatory z/VM."
 
-#. TS-Shell User creation dialog
-#: src/iucvterminal-server/helps.ycp:39
+#. TS-Shell User creation dialog help 1/3
+#: src/iucvterminal-server/helps.ycp:43
 msgid "<p><b><big>New TS-Shell User</big></b></p>"
 msgstr "<p><b><big>Nowy użytkownik TS-Shell</big</b></p>"
 
-#: src/iucvterminal-server/helps.ycp:40
+#: src/iucvterminal-server/helps.ycp:44
 msgid ""
 "<p>To create new TS-Shell user the <b>Username</b>, <b>Home Directory</b> and <b>Password</b> has to be provided.\n"
 "\t<br>It is also possible to specify <b>Additional Groups</b> by selecting them on the right.</p>"
@@ -542,32 +555,38 @@ msgstr ""
 "<p>Aby dodać nowego użytkownika TS-Shell należy określić <b>Nazwę użytkownika</b>, <b>Katalog domowy</b> oraz <b>hasło</b>.\n"
 "\t<br>Można rownież określić <b>Dodatkowe grupy</b> zaznaczając je po prawej stronie.</p>"
 
-#: src/iucvterminal-server/helps.ycp:43
+#. TS-Shell User creation dialog help 2/3
+#: src/iucvterminal-server/helps.ycp:48
 msgid "<p>To ensure that the user changes his password after the first Login <b>Force Password Change</b> has to be activated.</p>"
 msgstr "<p>Aby mieć pewność, że użytkownik zmienił hasło po pierwszym zalogowaniu się, należy aktywować opcję <b>Wymuś zmianę hasła</b>.</p>"
 
-#: src/iucvterminal-server/helps.ycp:45
+#. TS-Shell User creation dialog help 3/3
+#: src/iucvterminal-server/helps.ycp:51
 msgid "<p>The home directory could be the same for every TS-SHell user since it is not used for saving purposes.</p>"
 msgstr "<p>Katalog domowy powinien być taki sam dla każego użytkowniaka TS-Shell, do momentu, gdy nie będzie wykorzystany do zapisu.</p>"
 
-#. TS-Shell Managing Groups Dialog
-#: src/iucvterminal-server/helps.ycp:49
+#. TS-Shell Managing Groups dialog help 1/5
+#: src/iucvterminal-server/helps.ycp:55
 msgid "<p><b><big>Mange Groups for TS-Authorization</big></b></p>"
 msgstr "<p><b><big>Zarządzanie grupami dla TS-Authorization</b><b></p>"
 
-#: src/iucvterminal-server/helps.ycp:50
+#: src/iucvterminal-server/helps.ycp:56
 msgid "<p>It is possible to define TS-Shell authorizations per group so every TS-Shell member of this groups inherits these rights.</p>"
 msgstr "<p>Istnieje możliwość zdefiniowania autoryzacji TS-Shell dla każdej grupy, dzięki czemu każdy członek grupy dziedziczy jej prawa.</p>"
 
-#: src/iucvterminal-server/helps.ycp:52
+#. TS-Shell Managing Groups dialog help 2/5
+#: src/iucvterminal-server/helps.ycp:59
 msgid "<p>Already existing groups could be added to or removed from the TS-Shell authorization by selecting them in the table and clicking on <b>Select or Deselect</b>. The current status is shown in the column <b>TS-Auth</b>.</p>"
 msgstr "<p>Istniejące grupy powinny zostac dodane lub usunięte z autoryzacji TS-Shell poprzez ich wybranie w tabeli i kliknięcie przycisku <b>Zaznacz/odznacz</b>. Aktualny status jest wyświetlany w kolumnie <b>TS-Auth</b>.</p>"
 
-#: src/iucvterminal-server/helps.ycp:54
-msgid "<p>TS-Shell members of the selected group could be changed in the <b>TS-Members</b> selection on the side.</p>"
+#. TS-Shell Managing Groups dialog help 3/5
+#: src/iucvterminal-server/helps.ycp:62
+#, fuzzy
+msgid "<p>TS-Shell members of the selected group could be changed in the <b>TS-Members</b> selection.</p>"
 msgstr "<p>Członkami wybranej grupy TS-Shell można zarządzać w sekcji <b>TS-Members</b>.</p>"
 
-#: src/iucvterminal-server/helps.ycp:56
+#. TS-Shell Managing Groups dialog help 4/5
+#: src/iucvterminal-server/helps.ycp:65
 msgid ""
 "<p>New groups could be created by entering the name in the <b>New Group</b> input field and confirming with <b>Create</b>.\n"
 "\t<br>To delete previously created groups the <b>YaST users</b> dialog has to be used.</p>"
@@ -575,19 +594,27 @@ msgstr ""
 "<p>Tworząc nową grupę należy wprowadzić jej nazwę w polu <b>Nowa grupa</b> i zatwierdzić przyciskiem <b>Utwórz</b>.\n"
 "\t<br>Aby usunąć wcześniej utworzone grupy należy wykrzystać skecję <b>Użytkownicy YaST.</p>"
 
-#: src/iucvterminal-server/helps.ycp:59
+#. TS-Shell Managing Groups dialog help 5/5
+#: src/iucvterminal-server/helps.ycp:69
 msgid "<p>Changes in this dialog could be undone by using the <b>Back</b> button.<p>"
 msgstr "<p>Zmiany dokonane w oknie dialogowym można cofnąć klikając przycisk <p>Powrót</b>.<p>"
 
-#. IUCVConn on Login
-#: src/iucvterminal-server/helps.ycp:63
+#. IUCVConn on Login dialog help 1/2
+#: src/iucvterminal-server/helps.ycp:73
 msgid "<p><b><big>IUCVConn on Login</big></b></p>"
 msgstr "<p><b><big>IUCVConn podczas logowania</big></b></p>"
 
-#: src/iucvterminal-server/helps.ycp:64
-msgid ""
-"<p>IUCVConn on Login needs one user for every z/VM ID. To create these users a <b>password</b> and <b>home directory</b> has to be provided.\n"
-"\t<br>It is possible to sync the users manually by clicking on <b>Sync</b> or just confirming the changes with <b>Ok</b> while <b>IUCVConn on Login</b> is enabled. </p>"
+#: src/iucvterminal-server/helps.ycp:74
+#, fuzzy
+msgid "<p>IUCVConn on Login needs one user for every z/VM ID. To create these users a <b>password</b> and <b>home directory</b> has to be provided."
+msgstr ""
+"<p>IUCVConn w trakcie logowania wymaga przypisania jednego użytkownika dla każdego identyfikatora z/VM. Aby utworzyć użytkowników należy określić <b>hasło</b> i <b>katalog domowy.\n"
+"\t<br>Istnieje możliwość zsynchronizowania użytkowników ręcznie poprzez kliknięcie przycisku <b>Synchronizuj</b> lub po prostu zatwierdzając zmiany przyciskiem <b>Ok</b> kiedy <b>IUCVConn w trakcie logowania</b> jest włączone."
+
+#. IUCVConn on Login dialog help 2/2
+#: src/iucvterminal-server/helps.ycp:77
+#, fuzzy
+msgid "<p>It is possible to sync the users manually by clicking on <b>Sync</b> or just confirming the changes with <b>Ok</b> while <b>IUCVConn on Login</b> is enabled. </p>"
 msgstr ""
 "<p>IUCVConn w trakcie logowania wymaga przypisania jednego użytkownika dla każdego identyfikatora z/VM. Aby utworzyć użytkowników należy określić <b>hasło</b> i <b>katalog domowy.\n"
 "\t<br>Istnieje możliwość zsynchronizowania użytkowników ręcznie poprzez kliknięcie przycisku <b>Synchronizuj</b> lub po prostu zatwierdzając zmiany przyciskiem <b>Ok</b> kiedy <b>IUCVConn w trakcie logowania</b> jest włączone."
@@ -850,113 +877,125 @@ msgid "Wrong IUCV ID, only lower case letters are allowed."
 msgstr " Nieprawidłowy identyfikator IUCV, dozwolone są tylko małe litery."
 
 #: src/iucvterminal/ui.ycp:131
-#, ycp-format
-msgid "IUVC IDs can't be bigger than %1 chars long."
+#, fuzzy, ycp-format
+msgid "IUCV IDs can't be bigger than %1 chars long."
 msgstr "Identyfikatory IUVC nie mogą zawierać więcej niż %1 znaków."
 
-#: src/iucvterminal/ui.ycp:221
+#. IUCVTerminal dialog help 1/10
+#: src/iucvterminal/ui.ycp:224
 msgid "<p><h2>Configure Local Terminal System Settings</h2></p>"
 msgstr "<p><h2>Konfiguracja lokalnego systemu terminalowego</h2></p>"
 
-#: src/iucvterminal/ui.ycp:222
-msgid "<p><b>IUVCtty</b></p>"
+#. IUCVTerminal dialog help 2/11
+#: src/iucvterminal/ui.ycp:227
+#, fuzzy
+msgid "<p><b>IUCVtty</b></p>"
 msgstr "<p><b>IUVCtty</b></p>"
 
-#: src/iucvterminal/ui.ycp:223
+#. IUCVTerminal dialog help 3/11
+#: src/iucvterminal/ui.ycp:230
 msgid "<p>Several <b>IUCVtty instances</b> can run to provide multiple terminal devices. The instances are distinguished by a Terminal ID which is a combination of the the <b>Terminal ID Prefix</b> and the number of the instance.<br>"
 msgstr "<p>Dozwolone jest jednoczesne uruchomienie kilku instancji <b>IUCVtty<b>, w celu udostępnienia kilku urządzeń terminalowych. Instancje są rozróżniane identyfikatorem który połączeniem <b>Prefiksu identyfikatora terminala</b> oraz numeru instancji.<br>"
 
-#: src/iucvterminal/ui.ycp:224
+#. IUCVTerminal dialog help 4/11
+#: src/iucvterminal/ui.ycp:233
 msgid "So if for example 10 instances are defined with the prefix &quot;<i>lxterm</i>&quot; the Terminal IDs from <i>lxterm1</i> to <i>lxterm10</i> would be available.</p>"
 msgstr "Więc, jeśli zostanie uruchomionych 10 instancji, zostdaną one zdefiniowane prefiksem &quot;<i>lxterm </i>&quot; identyfikatoryi terminala z zakresu od <i>lxterm1</i> do <i>lxterm10</i> będą dostępne.</p>"
 
-#: src/iucvterminal/ui.ycp:226
+#. IUCVTerminal dialog help 5/11
+#: src/iucvterminal/ui.ycp:238
 msgid "<p><b>HVC</b></p>"
 msgstr "<p><b>HVC</b></p>"
 
-#: src/iucvterminal/ui.ycp:227
+#. IUCVTerminal dialog help 6/11
+#: src/iucvterminal/ui.ycp:241
 msgid "<p>The z/VM IUCV HVC device driver is a kernel module and uses device nodes to enable up to 8 HVC terminal devices to communicate with getty and login programs.</p>"
 msgstr "<p>Sterownik urządzenia z/VM IUCV HVC jest modułem jądra i wykorzystuje węzły urządzenia w celu uruchomienia do 8 terminali HVC, aby nawiązać komunikację z programami getty oraz login.</p>"
 
-#: src/iucvterminal/ui.ycp:228
+#. IUCVTerminal dialog help 7/11
+#: src/iucvterminal/ui.ycp:244
 msgid "<p>With <b>restrict access</b> it is possible to allow only the connection from certain <b>Terminal Servers</b>.</p>"
 msgstr "<p><b>Zastrzeżenie dostępu</b> umożliwia udostępnienie połączenia tylko określonym <b>Serwerom terminalowym</b>.</p>"
 
-#: src/iucvterminal/ui.ycp:229
+#. IUCVTerminal dialog help 8/11
+#: src/iucvterminal/ui.ycp:247
 msgid "<p>You can define the emulation for all instances at once or for every one of them on its own.</p>"
 msgstr "<p>Możliwe jest zdefiniowanie emulacji dla wszystkich instancji na raz lub dla każdej z osobna.</p>"
 
-#: src/iucvterminal/ui.ycp:230
+#. IUCVTerminal dialog help 9/11
+#: src/iucvterminal/ui.ycp:250
 msgid "<p>By activating <b>receive kernel messages on hvc0</b> kernel messages are routed to the hvc0 device instead of ttyS0.<br>"
 msgstr "<p>Aktywując <b>otrzymywanie komunikatów jądra przez hvc0</b> uruchomione zostanie przekierowanie komunikatów jądra do urządzenia hvc0 zamiast ttyS0.<br>"
 
-#: src/iucvterminal/ui.ycp:231
+#. IUCVTerminal dialog help 10/11
+#: src/iucvterminal/ui.ycp:253
 msgid "If you want the kernel messages to still be shown on ttyS0 you have to manually add <b>console=ttyS0</b> to the current boot selection kernel parameter in the <b>YaST bootloader module</b>.</p>"
 msgstr "Jeśli komunikaty jądra mają być nadal wyświetlane na ttyS0, należy ręcznie dodać wpis <b>console=ttyS0</b> do aktualnego parametru wybory jądra startowego w <b>Module rozruchu YaST</b>.</p>"
 
-#: src/iucvterminal/ui.ycp:232
+#. IUCVTerminal dialog help 11/11
+#: src/iucvterminal/ui.ycp:256
 msgid "<h3>Warning: HVC Terminals stay logged on without a manual logout through the shortcut: ctrl _ d</h3>"
 msgstr "<h3>UwagaL Terminale HVC pozostają zalogowane bez ręcznego wylogowania poprzez skrót: ctrl _ d</h3>"
 
-#: src/iucvterminal/ui.ycp:237
+#: src/iucvterminal/ui.ycp:262
 msgid "&IUCVtty"
 msgstr "&IUCVtty"
 
-#: src/iucvterminal/ui.ycp:238
+#: src/iucvterminal/ui.ycp:263
 msgid "Terminal ID &Prefix"
 msgstr "Prefiks identyfikatora terminala"
 
-#: src/iucvterminal/ui.ycp:240
+#: src/iucvterminal/ui.ycp:265
 msgid "I&UCVtty instances"
 msgstr "Instancje IUCVtty"
 
-#: src/iucvterminal/ui.ycp:245
+#: src/iucvterminal/ui.ycp:270
 msgid "HVC"
 msgstr "HVC"
 
-#: src/iucvterminal/ui.ycp:247
+#: src/iucvterminal/ui.ycp:272
 msgid "H&VC instances"
 msgstr "Instancje HVC"
 
-#: src/iucvterminal/ui.ycp:251
+#: src/iucvterminal/ui.ycp:276
 msgid "Restrict &access to"
 msgstr "Zastrzeż dostęp do"
 
-#: src/iucvterminal/ui.ycp:253
+#: src/iucvterminal/ui.ycp:278
 msgid "Allowed Terminal &Servers"
 msgstr "Dopuszczone serwery terminalowe"
 
-#: src/iucvterminal/ui.ycp:258
+#: src/iucvterminal/ui.ycp:283
 msgid "Select I&nstance"
 msgstr "Wybierz instancję"
 
-#: src/iucvterminal/ui.ycp:261
+#: src/iucvterminal/ui.ycp:286
 msgid "Select &Emulation"
 msgstr "Wybierz emulację"
 
-#: src/iucvterminal/ui.ycp:265
+#: src/iucvterminal/ui.ycp:290
 msgid "route &kernel messages to HVC0"
 msgstr "Przekieruj komunikaty jądra do HVC0"
 
-#: src/iucvterminal/ui.ycp:357
+#: src/iucvterminal/ui.ycp:382
 msgid "Really leave without saving?"
 msgstr "Czy na pewno chcesz wyjść bez zapisu?"
 
-#: src/iucvterminal/ui.ycp:369
+#: src/iucvterminal/ui.ycp:394
 msgid "The IUCV ID is not valid."
 msgstr "Podany identyfikator IUCV jest nieprawidłowy."
 
-#: src/iucvterminal/ui.ycp:380
+#: src/iucvterminal/ui.ycp:405
 msgid "The Terminal Servers are not valid."
 msgstr "Serwer terminalowy jest nieprawidłowy."
 
-#: src/iucvterminal/ui.ycp:407
+#: src/iucvterminal/ui.ycp:432
 msgid "The system has to be rebooted for some changes to take effect."
 msgstr "System został uruchomiony ponownie, aby pewne zmiany odniosły skutek."
 
 #. summary text, %1 is channel ID (number),
 #. %2 and %3 are Yes or No
-#: src/modules/DASDController.ycp:233
+#: src/modules/DASDController.ycp:243
 #, ycp-format
 msgid "Channel ID: %1, Format: %2, Use DIAG: %3"
 msgstr "ID kanału: %1, formatowanie: %2, użycie DIAG: %3"
@@ -964,66 +1003,66 @@ msgstr "ID kanału: %1, formatowanie: %2, użycie DIAG: %3"
 #. if (Mode::config ())
 #. return;
 #. popup label
-#: src/modules/DASDController.ycp:301
+#: src/modules/DASDController.ycp:311
 msgid "Reading Configured DASD Disks"
 msgstr "Odczytywanie skonfigurowanych dysków DASD"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:391 src/modules/ZFCPController.ycp:301
+#: src/modules/DASDController.ycp:401 src/modules/ZFCPController.ycp:301
 #: src/modules/ZFCPController.ycp:352
 #, ycp-format
 msgid "%1: sysfs not mounted."
 msgstr "%1: Nie zamontowano sysfs."
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:395
+#: src/modules/DASDController.ycp:405
 #, ycp-format
 msgid "%1: Invalid status for <online>"
 msgstr "%1: Nieprawidłowy stan dla <online>"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:399
+#: src/modules/DASDController.ycp:409
 #, ycp-format
 msgid "%1: No device found for <ccwid>"
 msgstr "%1: Nie znaleziono urządzenia dla <ccwid>"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:403
+#: src/modules/DASDController.ycp:413
 #, ycp-format
 msgid "%1: Could not change state of the device"
 msgstr "%1: Nie można zmienić stanu urządzenia"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:408
+#: src/modules/DASDController.ycp:418
 #, ycp-format
 msgid "%1: device is not a DASD"
 msgstr "%1: urządzenie nie jest typu DASD"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:413
+#: src/modules/DASDController.ycp:423
 #, ycp-format
 msgid "%1: Could not load module"
 msgstr "%1: Nie można wczytać modułu"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:418
+#: src/modules/DASDController.ycp:428
 #, ycp-format
 msgid "%1: Failed to activate DASD"
 msgstr "%1: nie powiodła się aktywacja DASD"
 
 #. error report, %1 is device identification
-#: src/modules/DASDController.ycp:423
+#: src/modules/DASDController.ycp:433
 #, ycp-format
 msgid "%1: DASD is not formatted"
 msgstr "%1: urządzenie DASD nie jest sformatowane"
 
 #. error report, %1 is device identification, %2 is integer code
-#: src/modules/DASDController.ycp:427
+#: src/modules/DASDController.ycp:437
 #, ycp-format
 msgid "%1: Unknown error %2"
 msgstr "%1: Nieznany błąd %2"
 
-#: src/modules/DASDController.ycp:447
+#: src/modules/DASDController.ycp:457
 #, ycp-format
 msgid ""
 "Device %1 is unformatted. Format device now?\n"
@@ -1034,7 +1073,7 @@ msgstr ""
 "Aby sformatować więcej urządzeń równocześnie, należy nacisnąć przycisk Anuluj, a następnie zaznaczyć opcję \"Wykonaj działanie\", \"Formatowanie\" później!"
 
 #. error report, %1 is exit code of the command (integer)
-#: src/modules/DASDController.ycp:546 src/modules/DASDController.ycp:630
+#: src/modules/DASDController.ycp:556 src/modules/DASDController.ycp:640
 #, ycp-format
 msgid "Disks formatting failed. Exit code: %1"
 msgstr "Nie powiodło się formatowanie dysku. Kod wyjścia: %1"
@@ -1042,7 +1081,7 @@ msgstr "Nie powiodło się formatowanie dysku. Kod wyjścia: %1"
 #. progress bar, %1 is device name, %2 and %3
 #. integers,
 #. eg. Formatting /dev/dasda: cylinder 123 of 12334 done
-#: src/modules/DASDController.ycp:608
+#: src/modules/DASDController.ycp:618
 #, ycp-format
 msgid "Formatting %1: cylinder %2 of %3 done"
 msgstr "Formatowanie %1: ukończono: cylinder %2 z %3"
@@ -1435,84 +1474,95 @@ msgstr "Tylko %1 linii jest dopuszczalnych dla VMCDM!"
 msgid "On Panic Configuration"
 msgstr "Konfiguracja OnPanic"
 
-#: src/onpanic/ui.ycp:91
+#. OnPanic dialog help 1/11
+#: src/onpanic/ui.ycp:93
 msgid "<p><b>Configure the actions to be taken if a kernel panic occurs</b></p>"
 msgstr "<p><b>Konfiguracja akcji do wykonania w przypadku wystąpienia błędu jądra</b></p>"
 
-#: src/onpanic/ui.ycp:92
+#. OnPanic dialog help 2/11
+#: src/onpanic/ui.ycp:95
 msgid "<p>The <b>Dumpconf</b> daemon needs to be enabled to influence the behavior during kernel panics.</p>"
 msgstr "<p>Demon <b>Dumpconf</b> musi być uruchomiony, aby wpływać na zachowanie podczas błędów jądra.<p>"
 
-#: src/onpanic/ui.ycp:93
+#. OnPanic dialog help 3/11
+#: src/onpanic/ui.ycp:97
 msgid "<p>The following <b>Panic Actions</b> are possible:<br>"
 msgstr "<p>Następujące <b>Akcje błędów jądra</b> są możliwe:<br>"
 
-#: src/onpanic/ui.ycp:94
+#. OnPanic dialog help 4/11
+#: src/onpanic/ui.ycp:99
 msgid "<b>stop</b> Stop Linux (default).<br>"
 msgstr "<b>stop</b> Zatrzymaj Linuksa (domyślna).<br>"
 
-#: src/onpanic/ui.ycp:95
+#. OnPanic dialog help 5/11
+#: src/onpanic/ui.ycp:101
 msgid "<b>dump</b> Dump Linux and stop system.<br>"
 msgstr "<b>dump</b> Wykonaj zrzut jądra i zatrzymaj system.<br>"
 
-#: src/onpanic/ui.ycp:96
+#. OnPanic dialog help 6/11
+#: src/onpanic/ui.ycp:103
 msgid "<b>reipl</b> Reboot Linux.<br>"
 msgstr "<b>reipl</b> Uruchom linuksa ponownie.<br>"
 
-#: src/onpanic/ui.ycp:97
+#. OnPanic dialog help 7/11
+#: src/onpanic/ui.ycp:105
 msgid "<b>dump_reipl</b> Dump Linux and reboot system. It is only available on LPAR with z9(r) machines and later, and on z/VMversion 5.3 and later.<br>"
 msgstr "<b>dump_reipl</b> Wykonaj zrzut jądra i uruchom system ponownie. Jest dostępna tyklo na maszynach LPAR z z9(r) i późniejszych oraz na z/VMversion 5.3 lub późniejszych.<br>"
 
-#: src/onpanic/ui.ycp:98
+#. OnPanic dialog help 8/11
+#: src/onpanic/ui.ycp:107
 msgid "<b>vmcmd</b> Execute specified CP commands and stop system.</p>"
 msgstr "<b>vmcmd</b> Uruchom określone polecenia CP i zatrzymaj system.</p>"
 
-#: src/onpanic/ui.ycp:99
+#. OnPanic dialog help 9/11
+#: src/onpanic/ui.ycp:109
 msgid "<p>The time defined in <b>Delay Minutes</b> defers activating the specified panic action for a newly started system to prevent loops. If the system crashes before the time has elapsed the default action (stop) is performed.</p>"
 msgstr "<p>Czas określony w polu <b>Opóźnienie w minutach</b> odracza wykonanie określonych akcji dla nowo uruchomionego systemu, aby zapobiec zapętlaniu. Jeśli system padnie przed upłynięciem tego czasu, domyślna akcja (stop) zostanie wykonana.</p>"
 
-#: src/onpanic/ui.ycp:100
+#. OnPanic dialog help 10/11
+#: src/onpanic/ui.ycp:111
 msgid "<p>The device for dumping the memory can be set with <b>Dump Device</b>. If no device is shown you have to create one with the <b>YaST Dump Devices</b> dialog.</p>"
 msgstr "<p>Urządzenie do składowania zrzutów pamięci można wybrać naciskając przycisk <b>Urządzenie zrzutu</b>. Jeśli żadne urządzenie nie jest wyświetlone, należy utworzyć nowe korzystając z narzędzia <b>Urządzenia składowania YaST</b>."
 
-#: src/onpanic/ui.ycp:101
+#. OnPanic dialog help 11/11
+#: src/onpanic/ui.ycp:113
 #, ycp-format
 msgid "<p>With <b>VMCMD</b> CP commands can be specified which are executed before the Linux system is stopped. Only %1 lines and a total of %2 chars are allowed.</p>"
 msgstr "<p>Używając <b>VMCMD</b> można określić które polecenia CP zostaną uruchomione przed zatrzymaniem sytemu Linux. Tylko %1 linii oraz łącznie %2 znaków jest dozwolonych.</p>"
 
 #. radio button label
-#: src/onpanic/ui.ycp:110
+#: src/onpanic/ui.ycp:122
 msgid "Do No&t Start Dumpconf"
 msgstr "Nie uruchamiaj Dumpconf"
 
 #. radio button label
-#: src/onpanic/ui.ycp:113
+#: src/onpanic/ui.ycp:125
 msgid "&Start Dumpconf"
 msgstr "Uruchom Dumpconf"
 
 #. combobox label
-#: src/onpanic/ui.ycp:118
+#: src/onpanic/ui.ycp:130
 msgid "&Panic Action"
 msgstr "Akcja "
 
-#: src/onpanic/ui.ycp:119
+#: src/onpanic/ui.ycp:131
 msgid "Delay &Minutes"
 msgstr "Opóźnienie w minutach"
 
 #. combobox label
-#: src/onpanic/ui.ycp:124
+#: src/onpanic/ui.ycp:136
 msgid "&Dump Device"
 msgstr "&Urządzenie zrzutu"
 
-#: src/onpanic/ui.ycp:126
+#: src/onpanic/ui.ycp:138
 msgid "&VMCMD"
 msgstr "VMCMD"
 
-#: src/onpanic/ui.ycp:176
+#: src/onpanic/ui.ycp:188
 msgid "It is not possible to enable the dump process without a dump device."
 msgstr "Nie można uruchomić procesu zrzutu bez urządzenia zrzutu."
 
-#: src/onpanic/ui.ycp:184
+#: src/onpanic/ui.ycp:196
 msgid "It is not possible to use vmcmd  without defining at least one command."
 msgstr "Nie można użyć vmcmd bez określenia conajmniej jednego polecenia."
 
