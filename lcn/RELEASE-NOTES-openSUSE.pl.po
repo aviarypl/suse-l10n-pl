@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: RELEASE-NOTES\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-26 16:13+0200\n"
+"POT-Creation-Date: 2011-10-28 13:17+0200\n"
 "PO-Revision-Date: 2011-10-24 09:40+0100\n"
 "Last-Translator: Przemyslaw Bojczuk <pbojczuk@opensuse.org>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 
 #: RELEASE-NOTES-openSUSE.xml:11(para)
 #, fuzzy
-msgid "12.1.2 (2011-10-21)"
+msgid "12.1.3 (2011-10-27)"
 msgstr "Wersja 12.1.2 (z dnia 2011-10-14)"
 
 #: RELEASE-NOTES-openSUSE.xml:13(para)
@@ -156,130 +156,153 @@ msgid "GNOME 3 offers a new design for the desktop that is different from GNOME 
 msgstr "GNOME 3 to nowe środowisko, którego projekt odbiega od dałożeń GNOME 2. W efekcie, lecz również by sprawić, żeby użytkownicy poczuli korzyści wynikające ze zmian, właściwości środowiska GNOME 2 nie zostaną usunięte automatycznie. Wykorzystując <guimenu>System Settings</guimenu> można dostosować GNOME 3, a w przypadku bardziej zaawansowanej konfiguracji można skorzystać z <command>gnome-tweak-tool</command>."
 
 #: RELEASE-NOTES-openSUSE.xml:188(para)
+msgid "The standard mode of GNOME 3 requires support for 3D acceleration in the graphic drivers. When 3D acceleration is not available, GNOME 3 then uses the fallback mode. If it turns out that GNOME 3 detects availability of 3D acceleration, but the standard mode is unusable, then you likely hit a bug in the graphic drivers. You can force the fallback mode with the \"<literal>gnome.fallback=1</literal>\" argument on the boot line in grub."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:197(para)
 #, fuzzy
 msgid "If you use the fallback mode, you can customize the panels by pressing Alt when right-clicking on a panel."
 msgstr "Jeżeli zostanie użyty tryb fallback (przywrócenie początkowych ustawień), można będzie zmienić właściwości paneli poprzez naciśniecie przycisku Alt i dwukrotne kliknięcie prawym przyciskiem myszy na nich."
 
-#: RELEASE-NOTES-openSUSE.xml:192(para)
+#: RELEASE-NOTES-openSUSE.xml:201(para)
 msgid "For a brief description of many GNOME Shell features, such as keybindings, drag and drop capabilities, and special utilities, see <ulink url=\"https://live.gnome.org/GnomeShell/CheatSheet\"/>."
 msgstr ""
 
-#: RELEASE-NOTES-openSUSE.xml:200(title)
+#: RELEASE-NOTES-openSUSE.xml:209(title)
 msgid "PulseAudio Sound System"
 msgstr "System dżwięku PulseAudio"
 
 #. bnc#707828
-#: RELEASE-NOTES-openSUSE.xml:202(para)
+#: RELEASE-NOTES-openSUSE.xml:211(para)
 msgid "The PulseAudio sound system is now system-wide integrated and enabled by default for new installation. If you disabled it on a previous release, and want to enable it now, check the <literal>PULSEAUDIO_ENABLE</literal> variable in <filename>/etc/sysconfig/sound</filename>:"
 msgstr "System PulseAudio został intensywnie zintegrowany z systemem i jest dostępny domyślnie w każdej nowej instalacji. Jeżeli był wyłaczany w poprzednim wydaniu i ma być właczony w obecnym, należy wyszukać zmienną <literal>PULSEAUDIO_ENABLE</literal> w pliku<filename>/etc/sysconfig/sound</filename>:"
 
-#: RELEASE-NOTES-openSUSE.xml:208(para)
+#: RELEASE-NOTES-openSUSE.xml:217(para)
 msgid "Set <literal>PULSEAUDIO_ENABLE</literal> to \"<literal>yes</literal>\" to forcefully enable PA everywhere. Setting <literal>PULSEAUDIO_ENABLE</literal> to \"<literal>no</literal>\" will disable PulseAudio completely, and setting it to \"custom\" means to keep a custom configuration untouched."
 msgstr "Ustaw <literal>PULSEAUDIO_ENABLE</literal> na wartość \"<literal>yes</literal>\" aby wymuśić PA w każdym programie. Ustawienie<literal>PULSEAUDIO_ENABLE</literal> na wartość \"<literal>no</literal>\" wyłączy całkowicie PulseAudio, a ustawienie parametru \"custom\" oznaczać będzie poyostawienie wasnej konfiguracji w nieymienionej postaci."
 
-#: RELEASE-NOTES-openSUSE.xml:217(title)
+#: RELEASE-NOTES-openSUSE.xml:226(title)
 msgid "Oracle Java Externally Available"
 msgstr "Oprogramowanie Oracle Java dostępne z zewnętrznych źródeł"
 
-#: RELEASE-NOTES-openSUSE.xml:218(para)
+#: RELEASE-NOTES-openSUSE.xml:227(para)
 msgid "The java-1_6_0-sun package is not anymore part of openSUSE due to a license change. We ship the OpenJDK build as a replacement. openSUSE users who prefer to use the Oracle JDK binary version over the openSUSE OpenJDK build, can download the Oracle version from <ulink url=\"http://oracle.com/java\"/>."
 msgstr "Pakiet java-1_6_0-sun nie jest już dostarczany jako część openSUSE ze względu na zmiany licencyjne. Zastąpiono go wersją OpenJDK. Użytkownicy openSUSE preferujacy binarny pakiet Oracle JDK mogą go pobrać ze strony Oracle <ulink url=\"http://oracle.com/java\"/>."
 
-#: RELEASE-NOTES-openSUSE.xml:229(title)
+#: RELEASE-NOTES-openSUSE.xml:238(title)
 msgid "System Upgrade"
 msgstr "Aktualizacja systemu"
 
 #. bnc#716136
-#: RELEASE-NOTES-openSUSE.xml:233(title)
+#: RELEASE-NOTES-openSUSE.xml:242(title)
 msgid "Mounting Encrypted Partitions with systemd"
 msgstr "Montowanie szyfrowanych partycji przy pomocy systemd"
 
-#: RELEASE-NOTES-openSUSE.xml:234(para)
+#: RELEASE-NOTES-openSUSE.xml:243(para)
 msgid "If encrypted partitions are not automatically mounted with systemd, the <literal>noauto</literal> flag in <filename>/etc/fstab</filename> for these partitions could be the cause. Replacing this flag with <literal>nofail</literal> will fix it. For instance, change the following line:"
 msgstr "Jeżeli szyfrowane partycje nie są montowane automatycznie, należy sprawdzić flagę <literal>noauto</literal> w <filename>/etc/fstab</filename> i zastąpić flagą <literal>nofail</literal> - może to rozwiązać problem. Czyli, należy zmienić poniższy wers:"
 
-#: RELEASE-NOTES-openSUSE.xml:241(screen)
+#: RELEASE-NOTES-openSUSE.xml:250(screen)
 #, no-wrap
 msgid "/dev/mapper/cr_sda3  /home   ext4    acl,user_xattr,noauto 0 2"
 msgstr "/dev/mapper/cr_sda3  /home   ext4    acl,user_xattr,noauto 0 2"
 
-#: RELEASE-NOTES-openSUSE.xml:242(para)
+#: RELEASE-NOTES-openSUSE.xml:251(para)
 msgid "to"
 msgstr "na"
 
-#: RELEASE-NOTES-openSUSE.xml:243(screen)
+#: RELEASE-NOTES-openSUSE.xml:252(screen)
 #, no-wrap
 msgid "/dev/mapper/cr_sda3  /home   ext4    acl,user_xattr,nofail 0 2"
 msgstr "/dev/mapper/cr_sda3  /home   ext4    acl,user_xattr,nofail 0 2"
 
-#: RELEASE-NOTES-openSUSE.xml:249(title)
+#: RELEASE-NOTES-openSUSE.xml:258(title)
 msgid "Technical"
 msgstr "Techniczne"
 
-#: RELEASE-NOTES-openSUSE.xml:252(title)
+#: RELEASE-NOTES-openSUSE.xml:261(title)
 msgid "Initializing Graphics with KMS (Kernel Mode Setting)"
 msgstr "Inicjalizacja grafiki z KMS (Ustawienia trybu jądra)"
 
-#: RELEASE-NOTES-openSUSE.xml:254(para)
-msgid "CHECKIT for 12.1. Is this entry still required?"
-msgstr "CHECKIT fdla 12.1. Czy ten wpis jest wciąż wymagany?"
-
-#: RELEASE-NOTES-openSUSE.xml:255(para)
+#. <para>CHECKIT for 12.1.  Is this entry still required?</para>
+#: RELEASE-NOTES-openSUSE.xml:265(para)
 msgid "With openSUSE 11.3 we switched to KMS (Kernel Mode Setting) for Intel, ATI and NVIDIA graphics, which now is our default. If you encounter problems with the KMS driver support (intel, radeon, nouveau), disable KMS by adding <literal>nomodeset</literal> to the kernel boot command line. To set this permanently, add it to the kernel command line in <filename>/boot/grub/menu.lst</filename>. This option makes sure the appropriate kernel module (intel, radeon, nouveau) is loaded with <literal>modeset=0</literal> in <filename>initrd</filename>, i.e. KMS is disabled."
 msgstr "Od openSUSE 11.3 domyślne jest użycie KMS (Ustawień trybu jądra) dla kart graficznych Intel, ATI oraz NVIDIA. Jeśli napotkasz problemy ze wsparciem sterowników KMS (intel, radeon, nouveau), można wyłączyć KMS dodając <literal>nomodeset</literal> do polecenia uruchamiającego kernel. Aby ustawić to na stałe, dodaj to polecenie do komend w pliku <filename>/boot/grub/menu.lst</filename>. Opcja ta zapewnia, że właściwy moduł jądra (intel, radeon, nouveau) jest załatowany z <literal>modeset=0</literal> w <filename>initrd</filename>, np. KMS jest wyłączone."
 
-#: RELEASE-NOTES-openSUSE.xml:266(para)
+#: RELEASE-NOTES-openSUSE.xml:276(para)
 msgid "In the rare cases when loading the DRM module from <filename>initrd</filename> is a general problem and unrelated to KMS, it is even possible to disable loading of the DRM module in <filename>initrd</filename> completely. For this set the <literal>NO_KMS_IN_INITRD</literal> sysconfig variable to <literal>yes</literal> via YAST, which then recreates <filename>initrd</filename> afterwards. Reboot your machine."
 msgstr "W wyjątkowych sytuacjach, kiedy wczytywanie modułu DRM z <filename>initrd</filename> jest ogólnym problemem, niezwiązanym z KMS, jest możliwe nawet całkowite wyłączenie modułu DRM w <filename>initrd</filename>. W tym celu należy ustawić zmienną sysconfig <literal>NO_KMS_IN_INITRD</literal> na <literal>tak</literal> za pomocą YaST, który następnie ponownie tworzy <filename>initrd</filename>. Konieczne jest ponowne uruchomienie urządzenia."
 
-#: RELEASE-NOTES-openSUSE.xml:274(para)
-msgid "On Intel without KMS the Xserver falls back to the <literal>fbdev</literal> driver (the <literal>intel</literal> driver only supports KMS); alternatively, there is the \"intellegacy\" driver (<systemitem>xorg-x11-driver-video-intel-legacy</systemitem> package) which still supports UMS (User Mode Setting). To use it, edit <filename>/etc/X11/xorg.conf.d/50-device.conf</filename> and change the driver entry to <literal>intellegacy</literal>."
+#: RELEASE-NOTES-openSUSE.xml:284(para)
+#, fuzzy
+msgid "On Intel without KMS the Xserver falls back to the <literal>fbdev</literal> driver (the <literal>intel</literal> driver only supports KMS); alternatively, for legacy GPUs from Intel the \"intellegacy\" driver (<systemitem>xorg-x11-driver-video-intel-legacy</systemitem> package) is available, which still supports UMS (User Mode Setting). To use it, edit <filename>/etc/X11/xorg.conf.d/50-device.conf</filename> and change the driver entry to <literal>intellegacy</literal>."
 msgstr "Na platformie Intel bez KMS Xserver powraca do sterownika <literal>fbdev</literal> (sterownik <literal>intel</literal> wspiera tylko KMS); opcjonalnie, istnieje sterownik  \"intellegacy\" (pakiet <systemitem>xorg-x11-driver-video-intel-legacy</systemitem>), który nadal wspiera UMS (ustawienia trybu użytkownika). Aby go użyć należy wyedytować plik <filename>/etc/X11/xorg.conf.d/50-device.conf</filename> zmieniając wpis dotyczący sterownika na <literal>intellegacy</literal>."
 
-#: RELEASE-NOTES-openSUSE.xml:283(para)
-msgid "On ATI for current GPUs it falls back to <literal>radeonhd</literal>. On NVIDIA without KMS the <literal>nv</literal> driver is used (the <literal>nouveau</literal> driver only supports KMS)."
+#: RELEASE-NOTES-openSUSE.xml:294(para)
+#, fuzzy
+msgid "On ATI for current GPUs it falls back to <literal>radeonhd</literal>. On NVIDIA without KMS the <literal>nv</literal> driver is used (the <literal>nouveau</literal> driver supports only KMS). Note, newer ATI and NVIDIA GPUs are falling back to <literal>fbdev</literal>, if you specify the <literal>nomodeset</literal> kernel boot parameter."
 msgstr "Na platformie ATI dla obecnych GPU powraca do <literal>radeonhd</literal>. Dla NVIDIA bez KMS, używany jest sterownik <literal>nv</literal> (sterownik <literal>nouveau</literal> wspiera jedynie KMS)."
 
 #. bnc#726387
-#: RELEASE-NOTES-openSUSE.xml:291(title)
+#: RELEASE-NOTES-openSUSE.xml:304(title)
 msgid "System Shutdown with systemd"
 msgstr ""
 
-#: RELEASE-NOTES-openSUSE.xml:293(para)
+#: RELEASE-NOTES-openSUSE.xml:306(para)
 msgid "To halt and poweroff the system when using <command>systemd</command>, issue <command>halt -p</command> or <command>shutdown -h now</command> on the command-line or use the shutdown button provided by your desktop environment."
 msgstr ""
 
-#: RELEASE-NOTES-openSUSE.xml:300(para)
+#: RELEASE-NOTES-openSUSE.xml:313(para)
 msgid "Note: A plain <command>halt</command> will not shutdown the system properly."
 msgstr ""
 
+#. bnc#725942
+#: RELEASE-NOTES-openSUSE.xml:319(title)
+msgid "systemd: Supplying Service Start-up Parameters"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:320(para)
+msgid "<command>systemctl</command> only supports \"standard\" parameters (see <ulink url=\"http://www.freedesktop.org/wiki/Software/systemd/Incompatibilities\"/>)."
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:325(para)
+msgid "You can bypass this new behavior by calling the start-up script directly, for example:"
+msgstr ""
+
+#: RELEASE-NOTES-openSUSE.xml:329(screen)
+#, no-wrap
+msgid ""
+"cd /etc/init.d\n"
+"./apache2 &lt;your_parameters&gt;\n"
+msgstr ""
+
 #. bnc#726178
-#: RELEASE-NOTES-openSUSE.xml:307(title)
+#: RELEASE-NOTES-openSUSE.xml:336(title)
 msgid "CUPS 1.5"
 msgstr ""
 
-#: RELEASE-NOTES-openSUSE.xml:308(para)
+#: RELEASE-NOTES-openSUSE.xml:337(para)
 msgid "CUPS 1.5 comes with backward incompatible changes:"
 msgstr ""
 
-#: RELEASE-NOTES-openSUSE.xml:313(para)
+#: RELEASE-NOTES-openSUSE.xml:342(para)
 msgid "CUPS no longer supports the <filename>~/.cupsrc</filename> or <filename>~/.lpoptions</filename> configuration files from CUPS 1.1. Instead use <filename>~/.cups/client.conf</filename> and <filename>~/.cups/lpoptions</filename> that were introduced with CUPS 1.2."
 msgstr ""
 
-#: RELEASE-NOTES-openSUSE.xml:322(para)
+#: RELEASE-NOTES-openSUSE.xml:351(para)
 msgid "The scheduler now requires that filters and backends have group write permissions disabled for improved security. If you use third party printer drivers from manufacturers with relaxed file permissions, adjust the permissions manually."
 msgstr ""
 
 #. bnc#717608
-#: RELEASE-NOTES-openSUSE.xml:334(title)
+#: RELEASE-NOTES-openSUSE.xml:363(title)
 msgid "The rename Command"
 msgstr "Polecenie rename"
 
-#: RELEASE-NOTES-openSUSE.xml:335(para)
+#: RELEASE-NOTES-openSUSE.xml:364(para)
 msgid "According to the GNU Coding Standards, the rename command now treats all strings beginning with a dash as a command line option. To prevent this, separate the option from the other arguments with <literal>--</literal> as follows:"
 msgstr "Zgodnie z wytycznymi GNU Coding Standards polecenie rename obecnie przetwarza wszystkie stringi rozpoczynające się myślnikiem jako opcje. Można tego uniknąć oddzielając opcje od pozostałych argumentów przy pomocy <literal>--</literal> jak poniżej:"
 
-#: RELEASE-NOTES-openSUSE.xml:341(screen)
+#: RELEASE-NOTES-openSUSE.xml:370(screen)
 #, no-wrap
 msgid ""
 "#!/bin/bash\n"
@@ -296,6 +319,9 @@ msgstr ""
 #: RELEASE-NOTES-openSUSE.xml:0(None)
 msgid "translator-credits"
 msgstr "Aviary.pl <team@aviary.pl>, 2009 Polish openSUSE group <opensuse-pl@opensuse.org>, 2011"
+
+#~ msgid "CHECKIT for 12.1. Is this entry still required?"
+#~ msgstr "CHECKIT fdla 12.1. Czy ten wpis jest wciąż wymagany?"
 
 #~ msgid "Update Applets with Changed Behavior"
 #~ msgstr "Aktualizuj aplety ze zmodyfikowanym zachowaniem"
