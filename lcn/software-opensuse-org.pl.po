@@ -9,16 +9,30 @@ msgid ""
 msgstr ""
 "Project-Id-Version: @PACKAGE@\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-05 14:09+0200\n"
+"POT-Creation-Date: 2011-11-23 10:20+0100\n"
 "PO-Revision-Date: 2011-10-26 03:31+0200\n"
 "Last-Translator: Mariusz Fik <fisiu@opensuse.org>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"Language: pl\n"
+
+#: app/controllers/download_controller.rb:35
+#, fuzzy
+#| msgid "Downloading patch rpm"
+msgid "Download appliance from %s"
+msgstr "Pobieranie poprawki"
+
+#: app/controllers/download_controller.rb:74
+msgid "Install package %s / %s"
+msgstr "Instalacja pakietu %s / %s"
+
+#: app/controllers/download_controller.rb:119
+msgid "Install pattern %s / %s"
+msgstr "Instalacja wzorca %s / %s"
 
 #: app/controllers/search_controller.rb:36
 msgid "Please use search strings of at least 2 characters"
@@ -37,29 +51,192 @@ msgstr "Proszę doprecyzować zapytanie, osiągnięty został limit wyszukiwania
 msgid "Could not perform search: "
 msgstr "Nie można przeprowadzić wyszukiwania:"
 
-#: app/controllers/download_controller.rb:7
-msgid "Install package %s / %s"
-msgstr "Instalacja pakietu %s / %s"
-
-#: app/controllers/download_controller.rb:9
-msgid "Install pattern %s / %s"
-msgstr "Instalacja wzorca %s / %s"
-
-#: app/controllers/main_controller.rb:130
+#: app/controllers/main_controller.rb:111
 msgid "Konqueror of KDE 3 is unfortunately unmaintained and its javascript implementation contains bugs that make it impossible to use with this page. Please make sure you have javascript disabled before you <a href='%s'>continue</a>."
 msgstr "Przeglądarka Konqueror w wersji z KDE3 nie jest już wspierana. Zawarty w niej kod JavaScript zawiera błędy sprawiające, że nie da się jej używać z tą stroną. Należy upewnić się, że obsługa JavaScript została zablokowana przed <a href='%s'>kontynuacją</a>."
 
-#: app/controllers/main_controller.rb:141
+#: app/controllers/main_controller.rb:122
 msgid "We currently don't have a Factory Snapshot that is more recent than our last openSUSE release. <br/>Please check <a href='http://en.opensuse.org/Portal:Factory'>http://en.opensuse.org/Portal:Factory</a> for more information."
 msgstr "Obecnie nie posiadamy Zrzutu Fabrycznego nowszego od ostatniego wydania openSUSE. <br/>Więcej informacji proszę szukać na stronie <a href='http://en.opensuse.org/Portal:Factory'>http://en.opensuse.org/Portal:Factory</a>."
 
-#: app/views/main/_download_link.rhtml:2 app/views/main/_options.rhtml:60
-msgid "Download"
+#: app/views/layouts/download.rhtml:54 app/views/layouts/application.rhtml:66
+msgid "Header Logo"
+msgstr "Logo nagłówka"
+
+#: app/views/layouts/download.rhtml:57 app/views/layouts/application.rhtml:69
+msgid "Downloads"
 msgstr "Pobierz"
 
-#: app/views/main/_download_link.rhtml:2
-msgid "Click to Download"
-msgstr "Kliknij by pobrać"
+#: app/views/layouts/download.rhtml:58 app/views/layouts/application.rhtml:70
+msgid "Support"
+msgstr "Wsparcie"
+
+#: app/views/layouts/download.rhtml:59 app/views/layouts/application.rhtml:71
+msgid "Community"
+msgstr "Społeczność"
+
+#: app/views/layouts/download.rhtml:60 app/views/layouts/application.rhtml:72
+msgid "Development"
+msgstr "Wersja rozwojowa"
+
+#: app/views/layouts/application.rhtml:92
+#: app/views/layouts/application.rhtml:94
+msgid "switch to"
+msgstr "przełącz do"
+
+#: app/views/layouts/application.rhtml:92
+msgid "Development Version"
+msgstr "Wersja rozwojowa"
+
+#: app/views/layouts/application.rhtml:94
+msgid "Released Version"
+msgstr "Numer wersji"
+
+#: app/views/layouts/application.rhtml:109
+msgid "Popular Software"
+msgstr "Popularne oprogramowanie"
+
+#: app/views/layouts/application.rhtml:127
+msgid "Getting Help"
+msgstr "Jak uzyskać pomoc"
+
+#: app/views/layouts/application.rhtml:129
+#, fuzzy
+#| msgid "http://en.opensuse.org/SDB:Installation_help"
+msgid "http://en.opensuse.org/SDB:Download_help"
+msgstr "http://en.opensuse.org/SDB:Installation_help"
+
+#: app/views/layouts/application.rhtml:129
+msgid "Download Help"
+msgstr "Informacje o pobieraniu"
+
+#: app/views/layouts/application.rhtml:130
+msgid "Burn CD/DVD Image(s)"
+msgstr "Nagrywanie obrazów CD/DVD"
+
+#: app/views/layouts/application.rhtml:131
+#, fuzzy
+#| msgid "http://en.opensuse.org/SDB:Installation_help"
+msgid "http://en.opensuse.org/Portal:Installation"
+msgstr "http://en.opensuse.org/SDB:Installation_help"
+
+#: app/views/layouts/application.rhtml:131
+msgid "Installation Guides"
+msgstr "Przewodniki instalacji "
+
+#: app/views/layouts/application.rhtml:132
+#, fuzzy
+#| msgid "http://en.opensuse.org/Derivatives"
+msgid "http://doc.opensuse.org/"
+msgstr "http://en.opensuse.org/Derivatives"
+
+#: app/views/layouts/application.rhtml:132
+msgid "Official Manuals"
+msgstr "Oficjalne podręczniki"
+
+#: app/views/layouts/application.rhtml:133
+#, fuzzy
+#| msgid "http://en.opensuse.org/Derivatives"
+msgid "http://en.opensuse.org/Package_repositories"
+msgstr "http://en.opensuse.org/Derivatives"
+
+#: app/views/layouts/application.rhtml:133
+msgid "Package Repositories"
+msgstr "Repozytoria pakietów"
+
+#: app/views/layouts/application.rhtml:134
+#, fuzzy
+#| msgid "http://en.opensuse.org/Buy_openSUSE"
+msgid "http://en.opensuse.org/openSUSE:Submitting_bug_reports"
+msgstr "http://en.opensuse.org/Buy_openSUSE"
+
+#: app/views/layouts/application.rhtml:134
+msgid "Reporting Bugs"
+msgstr "Zgłaszanie błędów"
+
+#: app/views/layouts/application.rhtml:139
+msgid "Countdown"
+msgstr "Odliczanie"
+
+#: app/views/layouts/application.rhtml:141
+msgid "openSUSE Countdown"
+msgstr "Odliczanie openSUSE"
+
+#: app/views/layouts/application.rhtml:147
+#: app/views/layouts/application.rhtml:149
+#: app/views/layouts/application.rhtml:152
+msgid "Buy openSUSE"
+msgstr "Kup openSUSE"
+
+#: app/views/layouts/application.rhtml:149
+#: app/views/layouts/application.rhtml:152
+msgid "http://en.opensuse.org/Buy_openSUSE"
+msgstr "http://en.opensuse.org/Buy_openSUSE"
+
+#: app/views/layouts/application.rhtml:158
+msgid "Sponsored by"
+msgstr "Sponsorowany przez"
+
+#: app/views/layouts/application.rhtml:159
+msgid "Platinum Sponsor"
+msgstr "Platynowy sponsor"
+
+#: app/views/layouts/application.rhtml:160
+msgid "Gold Sponsor"
+msgstr "Złoty sponsor"
+
+#: app/views/layouts/application.rhtml:162
+msgid "Sponsored by AMD"
+msgstr "Sponsorowane przez AMD"
+
+#: app/views/layouts/application.rhtml:163
+msgid "Sponsored by: IP Exchange"
+msgstr "Sponsorowane przez: IP Exchange"
+
+#: app/views/layouts/application.rhtml:165
+msgid "Silver Sponsor"
+msgstr "Srebrny sponsor"
+
+#: app/views/layouts/application.rhtml:167
+msgid "Sponsored by: B1 Systems"
+msgstr "Sponsorowany przez: B1 Systems"
+
+#: app/views/layouts/application.rhtml:169
+msgid "Bronze Sponsor"
+msgstr "Brązowy Sponsor"
+
+#: app/views/layouts/application.rhtml:173
+msgid "Language"
+msgstr "Język"
+
+#: app/views/search/_pattern_box.rhtml:4
+msgid "[Software collection]"
+msgstr "[Zbiór oprogramowania]"
+
+#: app/views/search/_pattern_box.rhtml:26
+#: app/views/search/_result_box.rhtml:22
+msgid "1-Click Install"
+msgstr "Instalacja 1-Click"
+
+#: app/views/search/index.rhtml:1
+msgid "Search Results"
+msgstr "Wyniki wyszukiwania"
+
+#: app/views/search/_result_box.rhtml:28
+msgid "Manual Package Download"
+msgstr "Ręczne pobieranie pakietów"
+
+#: app/views/search/_result_box.rhtml:30
+msgid "Go to OBS Project"
+msgstr "Idź do strony Projektu OBS"
+
+#: app/views/search/_search_result.rhtml:4
+msgid "No packages found in the openSUSE build service that matched your query."
+msgstr "Nie znaleziono pakietów pasujących do zapytania w usłudze budowania openSUSE."
+
+#: app/views/search/_search_result.rhtml:9
+msgid "%d collections and %d binaries from %d source packages"
+msgstr "%d zbiorów oraz %d binariów z pakietów źródłowych %d"
 
 #: app/views/main/_change_install.rhtml:34
 msgid "Some of the live distributions based on openSUSE. Those interested in trying to build their own derivatives can take a look at <a href=\"http://susestudio.com/\">SUSE Studio</a>."
@@ -72,6 +249,14 @@ msgstr "http://en.opensuse.org/Derivatives"
 #: app/views/main/_change_install.rhtml:36
 msgid "see Derivatives on wiki"
 msgstr "zobacz pochodne openSUSE na wiki"
+
+#: app/views/main/_download_link.rhtml:2 app/views/main/_options.rhtml:60
+msgid "Download"
+msgstr "Pobierz"
+
+#: app/views/main/_download_link.rhtml:2
+msgid "Click to Download"
+msgstr "Kliknij by pobrać"
 
 #: app/views/main/release.rhtml:3
 msgid "Download %s"
@@ -250,7 +435,9 @@ msgid "Help on Download Method"
 msgstr "Pomoc dotycząca sposobu pobierania"
 
 #: app/views/main/_options.rhtml:15
-msgid "openSUSE is available via http (direct link) or BitTorrent. The CD for network installation is only vailable via http."
+#, fuzzy
+#| msgid "openSUSE is available via http (direct link) or BitTorrent. The CD for network installation is only vailable via http."
+msgid "openSUSE is available via http (direct link) or BitTorrent. The CD for network installation is only available via http."
 msgstr "openSUSE można pobrać bezpośrednio ze strony internetowej (bezpośrednie łącze http) lub BitTorrent. Wersja do instalacji sieciowej (obraz CD) jest dostępna wyłącznie do pobrania ze strony internetowej. "
 
 #: app/views/main/_options.rhtml:19
@@ -258,7 +445,9 @@ msgid "When downloading images other than the CD for network installation, it is
 msgstr "W przypadku pobierania obrazów płyt innych niż do instalacji sieciowej, zaleca się używać odpowiedniego programu do pobierania, który pomoże obniżyć ryzyko uszkodzenia pobieranego pliku."
 
 #: app/views/main/_options.rhtml:23
-msgid "Using <a href=\"http://en.opensuse.org/index.php?title=SDB:BitTorrent_and_openSUSE\">BitTorrent</a> is recommended on slow links, especially when downloading the DVD image. BitTorrent downloads have several benefits, the clients protect against data corruption and you help relieving the load on the servers by participating in the upload - if enough people participate it will also be faster than the centralized servers - for everybody. Whatsmore, it allows you to stop the download at any time and resume it later."
+#, fuzzy
+#| msgid "Using <a href=\"http://en.opensuse.org/index.php?title=SDB:BitTorrent_and_openSUSE\">BitTorrent</a> is recommended on slow links, especially when downloading the DVD image. BitTorrent downloads have several benefits, the clients protect against data corruption and you help relieving the load on the servers by participating in the upload - if enough people participate it will also be faster than the centralized servers - for everybody. Whatsmore, it allows you to stop the download at any time and resume it later."
+msgid "Using <a href=\"http://en.opensuse.org/SDB:BitTorrent\">BitTorrent</a> is recommended on slow links, especially when downloading the DVD image. BitTorrent downloads have several benefits, the clients protect against data corruption and you help relieving the load on the servers by participating in the upload - if enough people participate it will also be faster than the centralized servers - for everybody. Whatsmore, it allows you to stop the download at any time and resume it later."
 msgstr "Użycie <a href=\"http://en.opensuse.org/index.php?title=SDB:BitTorrent_and_openSUSE\">BitTorrent</a> zaleca się szczególnie w przypadku pobierania obrazów płyt DVD poprzez wolne połączenia internetowe. Pobieranie przez BitTorrent ma kilka zalet, zabezpiecza przed uszkodzeniem plików podczas pobierania oraz pomaga odciążyć serwery poprzez współdzielenie pobieranego pliku - jeżeli wystarczająco dużo osób będzie udostępniać plik, BitTorrent będzie szybszy od serwerów centralnych - dla każdego. Ponadto proces pobierania można przerwać w dowolnym momencie i wznowić go w późniejszym czasie."
 
 #: app/views/main/_options.rhtml:27
@@ -333,199 +522,6 @@ msgstr "<a href='%s'>Informacje o wydaniu</a>"
 msgid "<a href=\"http://en.opensuse.org/openSUSE:License\">License</a>"
 msgstr "<a href=\"http://en.opensuse.org/openSUSE:License\">Licencja</a>"
 
-#: app/views/layouts/application.rhtml:59 app/views/layouts/download.rhtml:54
-msgid "Header Logo"
-msgstr "Logo nagłówka"
-
-#: app/views/layouts/application.rhtml:62 app/views/layouts/download.rhtml:57
-msgid "Downloads"
-msgstr "Pobierz"
-
-#: app/views/layouts/application.rhtml:63 app/views/layouts/download.rhtml:58
-msgid "Support"
-msgstr "Wsparcie"
-
-#: app/views/layouts/application.rhtml:64 app/views/layouts/download.rhtml:59
-msgid "Community"
-msgstr "Społeczność"
-
-#: app/views/layouts/application.rhtml:65 app/views/layouts/download.rhtml:60
-msgid "Development"
-msgstr "Wersja rozwojowa"
-
-#: app/views/layouts/application.rhtml:85
-#: app/views/layouts/application.rhtml:87
-msgid "switch to"
-msgstr "przełącz do"
-
-#: app/views/layouts/application.rhtml:85
-msgid "Development Version"
-msgstr "Wersja rozwojowa"
-
-#: app/views/layouts/application.rhtml:87
-msgid "Released Version"
-msgstr "Numer wersji"
-
-#: app/views/layouts/application.rhtml:102
-msgid "Popular Software"
-msgstr "Popularne oprogramowanie"
-
-#: app/views/layouts/application.rhtml:120
-msgid "Getting Help"
-msgstr "Jak uzyskać pomoc"
-
-#: app/views/layouts/application.rhtml:122
-msgid "Download Help"
-msgstr "Informacje o pobieraniu"
-
-#: app/views/layouts/application.rhtml:123
-msgid "Burn CD/DVD Image(s)"
-msgstr "Nagrywanie obrazów CD/DVD"
-
-#: app/views/layouts/application.rhtml:124
-msgid "Installation Guides"
-msgstr "Przewodniki instalacji "
-
-#: app/views/layouts/application.rhtml:125
-msgid "Official Manuals"
-msgstr "Oficjalne podręczniki"
-
-#: app/views/layouts/application.rhtml:126
-msgid "Package Repositories"
-msgstr "Repozytoria pakietów"
-
-#: app/views/layouts/application.rhtml:127
-msgid "Reporting Bugs"
-msgstr "Zgłaszanie błędów"
-
-#: app/views/layouts/application.rhtml:133
-msgid "Countdown"
-msgstr "Odliczanie"
-
-#: app/views/layouts/application.rhtml:135
-msgid "openSUSE Countdown"
-msgstr "Odliczanie openSUSE"
-
-#: app/views/layouts/application.rhtml:141
-#: app/views/layouts/application.rhtml:143
-#: app/views/layouts/application.rhtml:146
-msgid "Buy openSUSE"
-msgstr "Kup openSUSE"
-
-#: app/views/layouts/application.rhtml:143
-#: app/views/layouts/application.rhtml:146
-msgid "http://en.opensuse.org/Buy_openSUSE"
-msgstr "http://en.opensuse.org/Buy_openSUSE"
-
-#: app/views/layouts/application.rhtml:151
-msgid "Sponsored by"
-msgstr "Sponsorowany przez"
-
-#: app/views/layouts/application.rhtml:152
-msgid "Platinum Sponsor"
-msgstr "Platynowy sponsor"
-
-#: app/views/layouts/application.rhtml:153
-msgid "Gold Sponsor"
-msgstr "Złoty sponsor"
-
-#: app/views/layouts/application.rhtml:155
-msgid "Sponsored by AMD"
-msgstr "Sponsorowane przez AMD"
-
-#: app/views/layouts/application.rhtml:156
-msgid "Sponsored by: IP Exchange"
-msgstr "Sponsorowane przez: IP Exchange"
-
-#: app/views/layouts/application.rhtml:158
-msgid "Silver Sponsor"
-msgstr "Srebrny sponsor"
-
-#: app/views/layouts/application.rhtml:160
-msgid "Sponsored by: B1 Systems"
-msgstr "Sponsorowany przez: B1 Systems"
-
-#: app/views/layouts/application.rhtml:162
-msgid "Bronze Sponsor"
-msgstr "Brązowy Sponsor"
-
-#: app/views/layouts/application.rhtml:166
-msgid "Language"
-msgstr "Język"
-
-#: app/views/search/_search_result.rhtml:4
-msgid "No packages found in the openSUSE build service that matched your query."
-msgstr "Nie znaleziono pakietów pasujących do zapytania w usłudze budowania openSUSE."
-
-#: app/views/search/_search_result.rhtml:9
-msgid "%d collections and %d binaries from %d source packages"
-msgstr "%d zbiorów oraz %d binariów z pakietów źródłowych %d"
-
-#: app/views/search/_result_box.rhtml:22
-#: app/views/search/_pattern_box.rhtml:26
-msgid "1-Click Install"
-msgstr "Instalacja 1-Click"
-
-#: app/views/search/_result_box.rhtml:28
-msgid "Manual Package Download"
-msgstr "Ręczne pobieranie pakietów"
-
-#: app/views/search/_result_box.rhtml:30
-msgid "Go to OBS Project"
-msgstr "Idź do strony Projektu OBS"
-
-#: app/views/search/_pattern_box.rhtml:4
-msgid "[Software collection]"
-msgstr "[Zbiór oprogramowania]"
-
-#: app/views/search/index.rhtml:1
-msgid "Search Results"
-msgstr "Wyniki wyszukiwania"
-
-#: app/views/main/redirect_with_notice.erb:1
-msgid "Browser incompatibility"
-msgstr "Niekompatybilność przeglądarki"
-
-#: app/views/download/html.erb:2
-msgid "No data for %s / %s"
-msgstr "Brak danych dla %s / %s"
-
-#: app/views/download/html.erb:6
-msgid "(hide)"
-msgstr "(ukryj)"
-
-#: app/views/download/html.erb:7
-msgid "(show)"
-msgstr "(pokaż)"
-
-#: app/views/download/html.erb:146
-msgid "Select Your Operating System"
-msgstr "Proszę wybrać system operacyjny"
-
-#: app/views/download/html.erb:154
-msgid "No downloads found for %s in project %s"
-msgstr "Nie odnaleziono niczego do pobrania dla %s w projekcie %s"
-
-#: app/views/download/html.erb:158
-msgid "Install using One Click Install"
-msgstr "Zainstaluj używając Instalacji Jednym Kliknięciem"
-
-#: app/views/download/html.erb:167
-msgid "Add repository and install manually"
-msgstr "Dodaj repozytorium i zainstaluj ręcznie"
-
-#: app/views/download/html.erb:171
-msgid "For <strong>%s</strong> run the following as <strong>root</strong>:"
-msgstr "Dla <strong>%s</strong> uruchom następujący program jako <strong>root</strong>:"
-
-#: app/views/download/html.erb:200
-msgid "Grab binary packages directly"
-msgstr "Pobierz pakiety binarne bezpośrednio"
-
-#: app/views/download/html.erb:205
-msgid "Packages for %s:"
-msgstr "Pakiety dla %s:"
-
 #: app/views/search/_search_box.html.erb:3
 msgid "Package Search"
 msgstr "Wyszukiwanie pakietów"
@@ -549,6 +545,10 @@ msgstr "Dołącz domowe projekty użytkownika"
 #: app/views/search/_search_box.html.erb:18
 msgid "Exclude debug packages"
 msgstr "Wyklucz pakiety do debugowania"
+
+#: app/views/main/redirect_with_notice.erb:1
+msgid "Browser incompatibility"
+msgstr "Niekompatybilność przeglądarki"
 
 #: app/views/statistic/index.html.erb:1
 msgid "Statistics"
@@ -574,6 +574,74 @@ msgstr "Statystyki pobierania:"
 msgid "Top downloads:"
 msgstr "Najczęściej pobierane:"
 
+#: app/views/download/appliance.erb:2
+#, fuzzy
+#| msgid "No data for %s / %s"
+msgid "No appliance data for %s"
+msgstr "Brak danych dla %s / %s"
+
+#: app/views/download/appliance.erb:6 app/views/download/package.erb:6
+msgid "(hide)"
+msgstr "(ukryj)"
+
+#: app/views/download/appliance.erb:7 app/views/download/package.erb:7
+msgid "(show)"
+msgstr "(pokaż)"
+
+#: app/views/download/appliance.erb:39
+#, fuzzy
+#| msgid "Select the display type."
+msgid "Select the image type"
+msgstr "Proszę wybrać rodzaj ekranu"
+
+#: app/views/download/appliance.erb:47
+#, fuzzy
+#| msgid "No downloads found for %s in project %s"
+msgid "No appliances found in project %s"
+msgstr "Nie odnaleziono niczego do pobrania dla %s w projekcie %s"
+
+#: app/views/download/appliance.erb:52
+#, fuzzy
+#| msgid "Available Updates"
+msgid "Available Images"
+msgstr "Dostępne aktualizacje"
+
+#: app/views/download/appliance.erb:57
+msgid "Image:"
+msgstr ""
+
+#: app/views/download/package.erb:2
+msgid "No data for %s / %s"
+msgstr "Brak danych dla %s / %s"
+
+#: app/views/download/package.erb:60
+msgid "Select Your Operating System"
+msgstr "Proszę wybrać system operacyjny"
+
+#: app/views/download/package.erb:68
+msgid "No downloads found for %s in project %s"
+msgstr "Nie odnaleziono niczego do pobrania dla %s w projekcie %s"
+
+#: app/views/download/package.erb:72
+msgid "Install using One Click Install"
+msgstr "Zainstaluj używając Instalacji Jednym Kliknięciem"
+
+#: app/views/download/package.erb:81
+msgid "Add repository and install manually"
+msgstr "Dodaj repozytorium i zainstaluj ręcznie"
+
+#: app/views/download/package.erb:85
+msgid "For <strong>%s</strong> run the following as <strong>root</strong>:"
+msgstr "Dla <strong>%s</strong> uruchom następujący program jako <strong>root</strong>:"
+
+#: app/views/download/package.erb:114
+msgid "Grab binary packages directly"
+msgstr "Pobierz pakiety binarne bezpośrednio"
+
+#: app/views/download/package.erb:119
+msgid "Packages for %s:"
+msgstr "Pakiety dla %s:"
+
 #~ msgid "Additional Information"
 #~ msgstr "Dodatkowe informacje"
 
@@ -597,9 +665,6 @@ msgstr "Najczęściej pobierane:"
 
 #~ msgid "Official %s Start-Up guide"
 #~ msgstr "Oficjalny przewodnik Start-Up Guide dla %s"
-
-#~ msgid "http://en.opensuse.org/SDB:Installation_help"
-#~ msgstr "http://en.opensuse.org/SDB:Installation_help"
 
 #~ msgid "Step-by-step installation guide"
 #~ msgstr "Podręcznik instalacji krop po kroku"
