@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: sound\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-05 10:02+0200\n"
+"POT-Creation-Date: 2012-03-30 11:20+0200\n"
 "PO-Revision-Date: 2011-02-01 10:34+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@opensuse.biz>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -19,7 +19,7 @@ msgstr ""
 msgid "Generic Analog Joystick"
 msgstr "Typowy joystick analogowy"
 
-#: sound/src/Joystick.ycp:342
+#: sound/src/Joystick.ycp:373
 msgid "Summary of the joystick configuration..."
 msgstr "Podsumowanie konfiguracji joysticka..."
 
@@ -33,7 +33,7 @@ msgid "Disabled"
 msgstr "Nieaktywne"
 
 #. yes/no popup text, %1 is chip name
-#: sound/src/Sound.ycp:287
+#: sound/src/Sound.ycp:284
 #, ycp-format
 msgid ""
 "It looks like probing the chip\n"
@@ -49,7 +49,7 @@ msgstr ""
 "Czy wykryć układ teraz?\n"
 
 #. label
-#: sound/src/Sound.ycp:343
+#: sound/src/Sound.ycp:340
 msgid ""
 "No card was found.\n"
 "Attempt to detect the presence some old chips?\n"
@@ -64,55 +64,55 @@ msgstr ""
 "i spowodować niestabilność systemu.\n"
 
 #. selection box label
-#: sound/src/Sound.ycp:352
+#: sound/src/Sound.ycp:349
 msgid "&Select the Drivers to Probe"
 msgstr "Wybór &sterowników do wykrycia"
 
 #. button label
-#: sound/src/Sound.ycp:355
+#: sound/src/Sound.ycp:352
 msgid "&Yes, Probe"
 msgstr "Tak, w&ykryj"
 
 #. popup dialog header
-#: sound/src/Sound.ycp:374
+#: sound/src/Sound.ycp:371
 msgid "Probing:"
 msgstr "Wykrywanie:"
 
 #. progress bar label
-#: sound/src/Sound.ycp:377
+#: sound/src/Sound.ycp:374
 msgid "Progress:"
 msgstr "Postęp:"
 
 #. label (%1 is name of the chip)
-#: sound/src/Sound.ycp:400
+#: sound/src/Sound.ycp:397
 #, ycp-format
 msgid "Card with %1 Chip"
 msgstr "Karta z układem %1"
 
 #. summary string, %1 is a list of packages
-#: sound/src/Sound.ycp:691
+#: sound/src/Sound.ycp:688
 #, ycp-format
 msgid "Required packages to install: %1"
 msgstr "Wymagane pakiety do zainstalowania: %1"
 
 #. separator for constructing package list
-#: sound/src/Sound.ycp:693
+#: sound/src/Sound.ycp:690
 msgid ", "
 msgstr ", "
 
 #. sound Read dialog caption:
-#: sound/src/Sound.ycp:708
+#: sound/src/Sound.ycp:705
 msgid "Initializing Sound Configuration"
 msgstr "Inicjalizacja konfiguracji dźwięku"
 
 #. summary text: '(sound card is) Configured as snd-card-1'
-#: sound/src/Sound.ycp:955
+#: sound/src/Sound.ycp:952
 #, ycp-format
 msgid "Configured as %1."
 msgstr "Skonfigurowano jako: %1."
 
 #. table header (card name)
-#: sound/src/Sound.ycp:1224 sound/src/joystick.ycp:149
+#: sound/src/Sound.ycp:1221 sound/src/joy_dialog.ycp:618
 msgid "Sound card"
 msgstr "Karta dźwiękowa"
 
@@ -218,70 +218,19 @@ msgstr "Indeks"
 msgid "Card Model"
 msgstr "Model karty"
 
-#. Wait text label
-#: sound/src/joy_dialog.ycp:79
-msgid "Initializing joystick -- please wait..."
-msgstr "Inicjalizacja joysticka - proszę czekać..."
-
-#. popup text (yes/no)
-#: sound/src/joy_dialog.ycp:124
-msgid ""
-"For proper joystick initialization,\n"
-"a restart of the sound system is necessary.\n"
-"Proceed?"
+#. notice about USB devices, used at several places
+#: sound/src/joy_dialog.ycp:31
+msgid "USB joysticks do not need any configuration, just connect them."
 msgstr ""
-"Aby poprawnie zainicjalizować joystick\n"
-"konieczne jest ponowny uruchomienie podsystemu dźwięku.\n"
-"Czy kontynuować?"
 
-#. popup message
-#: sound/src/joy_dialog.ycp:153
-msgid "No joystick is connected."
-msgstr "Nie jest podłączony żaden joystick."
-
-#. text label
-#: sound/src/joy_dialog.ycp:172
-msgid ""
-"More than one joystick is connected.\n"
-"Select the one to test\n"
-"and press some of its buttons several times.\n"
-msgstr ""
-"Podłączono więcej niż jeden joystick.\n"
-"Należy wybrać joystick do testów i nacisnąć\n"
-"kilkakrotnie jego przyciski.\n"
-
-#. progress bar label
-#: sound/src/joy_dialog.ycp:288
-#, ycp-format
-msgid "Axis %1"
-msgstr "Oś %1"
-
-#. label
-#. label text ("Button" is joystick's button no. %1)
-#: sound/src/joy_dialog.ycp:303 sound/src/joy_dialog.ycp:355
-#: sound/src/joy_dialog.ycp:358
-#, ycp-format
-msgid "Button %1"
-msgstr "Przycisk %1"
-
-#. Popup label
-#: sound/src/joy_dialog.ycp:319
-msgid "Joystick Test"
-msgstr "Test joysticka"
-
-#. item in joystick types
-#: sound/src/joy_dialog.ycp:396
-msgid "No joystick"
-msgstr "Brak joysticka"
-
-#. dialog header - %1: card name (e.g "Soundblaster 16"), %2: card ID (a number)
-#: sound/src/joy_dialog.ycp:413
-#, ycp-format
-msgid "Joystick Configuration - %1 (snd-card-%2)"
-msgstr "Konfiguracja joysticka - %1 (snd-card-%2)"
+#. dialog header - %1: card name (e.g "Soundblaster 16")
+#: sound/src/joy_dialog.ycp:110
+#, fuzzy, ycp-format
+msgid "Joystick Configuration - %1"
+msgstr "Konfiguracja joysticka"
 
 #. help text for joystick configuration 1/4
-#: sound/src/joy_dialog.ycp:417
+#: sound/src/joy_dialog.ycp:114
 msgid ""
 "<P>In this dialog, specify your joystick type. If your\n"
 "joystick type is not in the list, select <B>Generic Analog Joystick</B>.</p>\n"
@@ -292,113 +241,156 @@ msgstr ""
 "<p>Joysticki USB nie są wymienione na tej liście. Aby korzystać z urządzeń USB,\n"
 "wystarczy podłączyć je do komputera.</p>\n"
 
-#. help text for joystick configuration 2/4
-#: sound/src/joy_dialog.ycp:423
-msgid ""
-"<P>To remove the configured joystick from the system\n"
-"or if you do not have a joystick, select <B>No joystick</B>.</P>\n"
-msgstr ""
-"<P>Jeśli do komputera nie jest podłączony żaden joystick, należy wybrać\n"
-" opcję <B>Brak joysticka</B>. W ten sam sposób można usunąć z systemu\n"
-"skonfigurowany joystick.</P>\n"
-
-#. help text for joystick configuration 3/4
-#: sound/src/joy_dialog.ycp:428
-msgid "<P>Press <B>Test</B> to test the functionality of the selected joystick type.</P>"
-msgstr ""
-"<P>Aby przetestować działanie wybranego typu joysticka, należy nacisnąć\n"
-"przycisk <B>Testuj</B>.</P>"
-
-#. help text for joystick configuration 4/4
-#: sound/src/joy_dialog.ycp:431
-msgid ""
-"<P><B>Note:</B> Connect your joystick to your computer\n"
-"before pressing <B>Test</B> or <B>Next</B>.</P>"
-msgstr ""
-"<P><B>Uwaga:</B> Przed naciśnięciem przycisków <B>Testuj</B>\n"
-" lub <B>Dalej</B>, należy podłączyć joystick do komputera.</P>"
-
 #. label above list of joystick types
-#: sound/src/joy_dialog.ycp:490
+#: sound/src/joy_dialog.ycp:168
 msgid "&Select your joystick type:"
 msgstr "Joy&stick:"
 
-#. button label
-#. push button label
-#. Test - button label
-#: sound/src/joy_dialog.ycp:494 sound/src/mixer.ycp:176
-#: sound/src/volume.ycp:78
-msgid "&Test"
-msgstr "&Testuj"
-
 #. warning message - user did not select any joystick type
-#: sound/src/joy_dialog.ycp:523
+#: sound/src/joy_dialog.ycp:199
 msgid ""
 "Select the joystick type from the list\n"
 "before pressing Next.\n"
 "\n"
 msgstr "Przed naciśnięciem Dalej proszę wybrać typ joysticka z listy.\n"
 
-#. error message (no joystick selected)
-#: sound/src/joy_dialog.ycp:536
-msgid "Select the joystick to test."
-msgstr "Proszę wybrać joystick do testu."
+#. joystick details, %1 is the sound card name to which is the joystick connected
+#. format description of a kernel driver, %1 is a description
+#. (e.g. Sound Blaster 16), %2 is a module name (e.g. snd-sb16)
+#: sound/src/joy_dialog.ycp:312 sound/src/routines.ycp:313
+#, ycp-format
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
 
-#. helptext
-#: sound/src/joystick.ycp:65
-msgid ""
-"<P>Two or more sound cards in your system support joysticks.</P>\n"
-"<P>To configure a joystick, select the sound card and press <B>Configure Joystick</B>.</P>\n"
+#: sound/src/joy_dialog.ycp:338
+#, fuzzy, ycp-format
+msgid "Number of axes: %1"
+msgstr "Numer karty dźwiękowej"
+
+#: sound/src/joy_dialog.ycp:343
+#, fuzzy, ycp-format
+msgid "Number of buttons: %1"
+msgstr "Numer karty dźwiękowej"
+
+#: sound/src/joy_dialog.ycp:403
+#, fuzzy
+msgid "Unknown joystick model"
+msgstr "Brak joysticka"
+
+#. the joystick device was not found (the joystick is probably disconnected)
+#: sound/src/joy_dialog.ycp:418
+msgid "<not found>"
 msgstr ""
-"<P>Dwie lub więcej kart dźwiękowych w tym komputerze obsługują joysticki.</P>\n"
-"<P>Aby skonfigurować joystick, należy wybrać odpowiednią kartę dźwiękową\n"
-"a następnie nacisnąć przycisk <B>Skonfiguruj joystick</B>.</P>\n"
 
-#. dialog label
-#: sound/src/joystick.ycp:104
-msgid "Joystick Configuration"
-msgstr "Konfiguracja joysticka"
+#. add red warning about invalid configuration to the model name (%1)
+#: sound/src/joy_dialog.ycp:420
+#, ycp-format
+msgid "%1 - <font color=\"red\">Invalid configuration<font>"
+msgstr ""
 
-#. popup message text
-#: sound/src/joystick.ycp:109
-msgid "The configured cards do not support the joystick."
-msgstr "Skonfigurowane karty nie obsługują joysticków."
+#. help text
+#: sound/src/joy_dialog.ycp:422
+msgid "The configuration is not active - either the joystick is not connected or a wrong driver is used"
+msgstr ""
 
-#. popup message text
-#: sound/src/joystick.ycp:111
-msgid "No configured sound card was found."
-msgstr "Nie znaleziono skonfigurowanej karty dźwiękowej."
+#. help text
+#: sound/src/joy_dialog.ycp:424
+msgid "Press <b>Edit</b> to change the joystick driver or <b>Delete</b> to remove the configuration"
+msgstr ""
 
-#. yesno popup message text
-#: sound/src/joystick.ycp:114
-msgid "Start sound card configuration?"
-msgstr "Czy rozpocząć konfigurację karty dźwiękowej?"
+#. progress bar label
+#: sound/src/joy_dialog.ycp:469
+#, ycp-format
+msgid "Axis %1"
+msgstr "Oś %1"
 
-#. popup message headline
-#: sound/src/joystick.ycp:118
-msgid "No joystick port to configure was found."
-msgstr "Nie znaleziono portów joysticka do konfiguracji."
+#. label
+#. label text ("Button" is joystick's button no. %1)
+#: sound/src/joy_dialog.ycp:493 sound/src/joy_dialog.ycp:559
+#, ycp-format
+msgid "Button %1"
+msgstr "Przycisk %1"
 
-#. table header (number)
-#: sound/src/joystick.ycp:147
-msgid "No."
-msgstr "Nr"
+#. Popup label
+#: sound/src/joy_dialog.ycp:508
+msgid "Joystick Test"
+msgstr "Test joysticka"
 
-#. table header (joystick type)
-#: sound/src/joystick.ycp:151
-msgid "Joystick"
-msgstr "Joystick"
+#. label - joystick details (%1 is model name, %2 is bus name)
+#: sound/src/joy_dialog.ycp:511
+#, ycp-format
+msgid "Joystick: %1, attached to: %2"
+msgstr ""
+
+#: sound/src/joy_dialog.ycp:615
+#, fuzzy
+msgid "Sound Cards with Joystick Support"
+msgstr "Skonfigurowane karty dźwiękowe z obsługą joysticka"
+
+#: sound/src/joy_dialog.ycp:622
+msgid "To add an USB joystick close this dialog and just connect it."
+msgstr ""
 
 #. button label
-#. push button label
-#: sound/src/joystick.ycp:154 sound/src/ui.ycp:68 sound/src/ui.ycp:203
+#: sound/src/joy_dialog.ycp:625
 msgid "&Configure joystick"
 msgstr "Skonfiguruj joysti&ck"
 
-#. dialog caption
-#: sound/src/joystick.ycp:159
-msgid "Configured Sound Cards with Joystick Support"
+#. menu item
+#: sound/src/joy_dialog.ycp:787
+msgid "&Test selected joystick..."
+msgstr ""
+
+#. dialog title
+#: sound/src/joy_dialog.ycp:791
+#, fuzzy
+msgid "Joysticks"
+msgstr "Joystick"
+
+#. help text
+#: sound/src/joy_dialog.ycp:793
+#, fuzzy
+msgid "<p><big><b>Joysticks</b></big></p>"
+msgstr "<p><b><big>Karty dźwiękowe</big></b></p>"
+
+#: sound/src/joy_dialog.ycp:794
+msgid "<p>Here is an overview of the detected joysticks.</p>"
+msgstr ""
+
+#: sound/src/joy_dialog.ycp:795
+msgid "<p>To configure a new joystick connected to a Gameport press <b>Add</b> button.</p>"
+msgstr ""
+
+#. table header
+#: sound/src/joy_dialog.ycp:798
+#, fuzzy
+msgid "Model"
+msgstr "Model karty"
+
+#: sound/src/joy_dialog.ycp:798
+msgid "Device name"
+msgstr ""
+
+#: sound/src/joy_dialog.ycp:798
+msgid "Attached to"
+msgstr ""
+
+#: sound/src/joy_dialog.ycp:848
+#, fuzzy
+msgid "There is no soundcard with joystick support (gameport)."
 msgstr "Skonfigurowane karty dźwiękowe z obsługą joysticka"
+
+#: sound/src/joy_dialog.ycp:861
+msgid "There is no soundcard with unconfigured joystick."
+msgstr ""
+
+#. error popup
+#: sound/src/joy_dialog.ycp:952
+msgid ""
+"The selected joystick configuration is not active.\n"
+"\n"
+"The joystick cannot be tested."
+msgstr ""
 
 #. table entry (vendor was not defined)
 #: sound/src/manual.ycp:90
@@ -560,6 +552,12 @@ msgstr "iSpeaker"
 #: sound/src/mixer.ycp:170
 msgid "&Master volume"
 msgstr "&Główna regulacja głośności"
+
+#. push button label
+#. Test - button label
+#: sound/src/mixer.ycp:176 sound/src/volume.ycp:78
+msgid "&Test"
+msgstr "&Testuj"
 
 #. frame label
 #: sound/src/mixer.ycp:216
@@ -723,13 +721,6 @@ msgstr "Nieznany CD-ROM"
 #: sound/src/routines.ycp:86
 msgid "CD-ROM &Device"
 msgstr "&Napęd CD-ROM"
-
-#. format description of a kernel driver, %1 is a description
-#. (e.g. Sound Blaster 16), %2 is a module name (e.g. snd-sb16)
-#: sound/src/routines.ycp:313
-#, ycp-format
-msgid "%1 (%2)"
-msgstr "%1 (%2)"
 
 #. label to error popup, %1 is module name
 #: sound/src/routines.ycp:799
@@ -1441,14 +1432,15 @@ msgstr ""
 "</p>\n"
 
 #: sound/src/texts.ycp:285
+#, fuzzy
 msgid ""
-"<P>PulseAudio daemon can used to play sounds,\n"
-"use <B>PulseAudio Configuration</B> to enable or disable it.</P>"
+"<P>PulseAudio daemon can be used to play sounds.\n"
+"Use <B>PulseAudio Configuration</B> to enable or disable it.</P>\n"
 msgstr ""
 "<P>Demon PulseAudio może być używany do odtwarzania dźwięków.\n"
 "Aby go włączyć lub wyłączyć należy skorzystać z opcji <B>Konfiguracja PulseAudio</B>.</P>"
 
-#: sound/src/texts.ycp:288
+#: sound/src/texts.ycp:289
 msgid ""
 "<p>The sound device with index 0 is the default device used by system and applications.\n"
 "Use <b>Other</b> to set the selected sound device as the primary device.</p>"
@@ -1456,7 +1448,7 @@ msgstr ""
 "<p>Urządzenie o numerze 0 jest domyślnie używane przez system i programy.\n"
 "Aby wybrać inne urządzenia jako domyślne, należy nacisnąć przycisk <b>Inne</b>.</p>"
 
-#: sound/src/texts.ycp:291
+#: sound/src/texts.ycp:292
 msgid ""
 "The applications which use OSS (Open Sound System) can use the software\n"
 "mixer by using aoss wrapper. Use command <tt>aoss &lt;application&gt;</tt> to\n"
@@ -1466,11 +1458,11 @@ msgstr ""
 "miksera poprzez program aoss. Aby uruchomić dany program w tym trybie,\n"
 "należy użyć polecenia <tt>aoss &lt;program&gt;</tt>."
 
-#: sound/src/texts.ycp:297 sound/src/texts.ycp:322
+#: sound/src/texts.ycp:298 sound/src/texts.ycp:323
 msgid "<p>An error has occurred. </p>"
 msgstr "<p>Wystąpił błąd. </p>"
 
-#: sound/src/texts.ycp:299
+#: sound/src/texts.ycp:300
 msgid ""
 "<p>\n"
 "If the the problem persists, try passing \n"
@@ -1486,7 +1478,7 @@ msgstr ""
 " <i>OSS/Free</i> albo innego.\n"
 "</p>\n"
 
-#: sound/src/texts.ycp:310
+#: sound/src/texts.ycp:311
 msgid ""
 "<p>\n"
 "This is the complete sound card list. Use the <b>Finish</b> button \n"
@@ -1498,7 +1490,7 @@ msgstr ""
 "o kartach dźwiękowych, należy nacisnąć przycisk <b>Zakończ</b>.\n"
 "</p>\n"
 
-#: sound/src/texts.ycp:316
+#: sound/src/texts.ycp:317
 msgid ""
 "<p>\n"
 "Use <b>Delete</b> to remove a configured sound card. \n"
@@ -1510,40 +1502,35 @@ msgstr ""
 "Aby dodać kartę dźwiękową, proszę nacisnąć przycisk <b>Dodaj kartę dźwiękową</b>.\n"
 "</p>\n"
 
-#: sound/src/texts.ycp:323
+#: sound/src/texts.ycp:324
 msgid "<p>You can try to pass some <b>options</b> to the module.</p>"
 msgstr "<p>Można spróbować przekazać do modułu odpowiednie <b>opcje</b>.</p>"
 
 #. this is the first part of message "The sound card 'cardname'
 #. will be configured as the first snd card"
-#: sound/src/ui.ycp:74 sound/src/ui.ycp:209
+#: sound/src/ui.ycp:68
 msgid "The sound card\n"
 msgstr "Karta dźwiękowa\n"
 
 #. radio button label - type of setup
-#: sound/src/ui.ycp:82 sound/src/ui.ycp:217
+#: sound/src/ui.ycp:76
 msgid "&Quick automatic setup"
 msgstr "Szy&bka konfiguracja automatyczna"
 
 #. radio button label - type of setup
-#: sound/src/ui.ycp:86 sound/src/ui.ycp:221
+#: sound/src/ui.ycp:80
 msgid "Normal &setup"
 msgstr "Zwykła konfigura&cja"
 
 #. radio button label - type of setup
-#: sound/src/ui.ycp:90
+#: sound/src/ui.ycp:84
 msgid "Advanced setup with possibility to change &options"
 msgstr "Konfiguracja zaawansowana z możliwością zmiany &opcji"
 
 #. dialog header
-#: sound/src/ui.ycp:116 sound/src/ui.ycp:250
+#: sound/src/ui.ycp:106
 msgid "Sound Card Configuration"
 msgstr "konfiguracja karty dźwiękowej"
-
-#. radio button label - type of setup
-#: sound/src/ui.ycp:225
-msgid "&More detailed installation of sound cards"
-msgstr "&Bardziej szczegółowa instalacja karty dźwiękowej"
 
 #. volume slider label
 #: sound/src/volume.ycp:52 sound/src/volume.ycp:58
@@ -1566,13 +1553,12 @@ msgid "Press 'Test' to start playing sound sample"
 msgstr "Proszę nacisnąć przycisk 'Test', aby odtworzyć dźwięk testowy."
 
 #. dialog title
-#. dialog header
-#: sound/src/volume.ycp:121 sound/src/volume.ycp:184
+#: sound/src/volume.ycp:121
 msgid "Sound Card Volume"
 msgstr "Głośność karty dźwiękowej"
 
 #. error message
-#: sound/src/volume.ycp:228
+#: sound/src/volume.ycp:211
 msgid ""
 "Please try to configure this sound card manually \n"
 "using the \"Cirrus Logic CS4232\" or \"Cirrus \n"
@@ -1585,7 +1571,7 @@ msgstr ""
 "w \"Konfiguracji zaawansowanej\"."
 
 #. error message
-#: sound/src/volume.ycp:237
+#: sound/src/volume.ycp:220
 msgid "An error occurred during the installation of"
 msgstr "Podczas instalacji wystąpił błąd."
 
@@ -1605,6 +1591,82 @@ msgstr ""
 #: sound/src/wizards.ycp:64
 msgid "Do you really want to delete this entry?"
 msgstr "Czy na pewno usunąć tę pozycję?"
+
+#~ msgid "Initializing joystick -- please wait..."
+#~ msgstr "Inicjalizacja joysticka - proszę czekać..."
+
+#~ msgid ""
+#~ "For proper joystick initialization,\n"
+#~ "a restart of the sound system is necessary.\n"
+#~ "Proceed?"
+#~ msgstr ""
+#~ "Aby poprawnie zainicjalizować joystick\n"
+#~ "konieczne jest ponowny uruchomienie podsystemu dźwięku.\n"
+#~ "Czy kontynuować?"
+
+#~ msgid "No joystick is connected."
+#~ msgstr "Nie jest podłączony żaden joystick."
+
+#~ msgid ""
+#~ "More than one joystick is connected.\n"
+#~ "Select the one to test\n"
+#~ "and press some of its buttons several times.\n"
+#~ msgstr ""
+#~ "Podłączono więcej niż jeden joystick.\n"
+#~ "Należy wybrać joystick do testów i nacisnąć\n"
+#~ "kilkakrotnie jego przyciski.\n"
+
+#~ msgid "Joystick Configuration - %1 (snd-card-%2)"
+#~ msgstr "Konfiguracja joysticka - %1 (snd-card-%2)"
+
+#~ msgid ""
+#~ "<P>To remove the configured joystick from the system\n"
+#~ "or if you do not have a joystick, select <B>No joystick</B>.</P>\n"
+#~ msgstr ""
+#~ "<P>Jeśli do komputera nie jest podłączony żaden joystick, należy wybrać\n"
+#~ " opcję <B>Brak joysticka</B>. W ten sam sposób można usunąć z systemu\n"
+#~ "skonfigurowany joystick.</P>\n"
+
+#~ msgid "<P>Press <B>Test</B> to test the functionality of the selected joystick type.</P>"
+#~ msgstr ""
+#~ "<P>Aby przetestować działanie wybranego typu joysticka, należy nacisnąć\n"
+#~ "przycisk <B>Testuj</B>.</P>"
+
+#~ msgid ""
+#~ "<P><B>Note:</B> Connect your joystick to your computer\n"
+#~ "before pressing <B>Test</B> or <B>Next</B>.</P>"
+#~ msgstr ""
+#~ "<P><B>Uwaga:</B> Przed naciśnięciem przycisków <B>Testuj</B>\n"
+#~ " lub <B>Dalej</B>, należy podłączyć joystick do komputera.</P>"
+
+#~ msgid "Select the joystick to test."
+#~ msgstr "Proszę wybrać joystick do testu."
+
+#~ msgid ""
+#~ "<P>Two or more sound cards in your system support joysticks.</P>\n"
+#~ "<P>To configure a joystick, select the sound card and press <B>Configure Joystick</B>.</P>\n"
+#~ msgstr ""
+#~ "<P>Dwie lub więcej kart dźwiękowych w tym komputerze obsługują joysticki.</P>\n"
+#~ "<P>Aby skonfigurować joystick, należy wybrać odpowiednią kartę dźwiękową\n"
+#~ "a następnie nacisnąć przycisk <B>Skonfiguruj joystick</B>.</P>\n"
+
+#~ msgid "The configured cards do not support the joystick."
+#~ msgstr "Skonfigurowane karty nie obsługują joysticków."
+
+#~ msgid "No configured sound card was found."
+#~ msgstr "Nie znaleziono skonfigurowanej karty dźwiękowej."
+
+#~ msgid "Start sound card configuration?"
+#~ msgstr "Czy rozpocząć konfigurację karty dźwiękowej?"
+
+#~ msgid "No joystick port to configure was found."
+#~ msgstr "Nie znaleziono portów joysticka do konfiguracji."
+
+#~ msgid "No."
+#~ msgstr "Nr"
+
+#~ msgid "&More detailed installation of sound cards"
+#~ msgstr "&Bardziej szczegółowa instalacja karty dźwiękowej"
 
 #~ msgid "Read card database"
 #~ msgstr "Wczytywanie bazy kart"

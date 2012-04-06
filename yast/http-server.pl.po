@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: http-server\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-05 10:07+0200\n"
+"POT-Creation-Date: 2012-03-30 11:24+0200\n"
 "PO-Revision-Date: 2011-10-06 19:39+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -745,8 +745,8 @@ msgstr "Włącz obsługę skryptów P&ython"
 
 #. illegal keys in vhost
 #: src/YaPI/HTTPD.pm:679 src/YaPI/HTTPD.pm:762
-#, perl-format
-msgid "Illegal key in vhost '%s'."
+#, fuzzy, perl-format
+msgid "Illegal key in virtual host '%s'."
 msgstr "Niedozwolony klucz w hoście wirtualnym '%s'."
 
 #: src/YaPI/HTTPD.pm:748
@@ -1439,15 +1439,16 @@ msgstr ""
 
 #. new host dialog help 3/3
 #: src/helps.ycp:178
+#, fuzzy
 msgid ""
 "<p><big><b>Server Resolution</b></big><br>\n"
 "Apache2 must be able to determine which virtual host\n"
 "settings it should use to create a response for an HTTP request. \n"
-"In principle, there are two basic approaches. If using HTTP headers\n"
+"There are two basic approaches. If using HTTP headers\n"
 "from the incoming request, the server looks up the host name specified by\n"
 "the HTTP request headers. The other possibility is to determine the virtual host\n"
 "by the IP address used by the client when connecting to the server.\n"
-"If you plan to configure SSL based vhost, use <b>Resolution via IP address</b>\n"
+"If you plan to configure SSL-based vhost, use <b>Resolution via IP address</b>\n"
 "Consult the Apache2 manual for further details.</p>\n"
 msgstr ""
 "<p><big><b>Rozwiązywanie żądań do serwera</b></big><br>\n"
@@ -1461,7 +1462,7 @@ msgstr ""
 "Więcej szczegółów można znaleźć w dokumentacji Apache 2.</p>\n"
 
 #. advanced new host dialog 1/5
-#: src/helps.ycp:188
+#: src/helps.ycp:189
 msgid ""
 "<p><b><big>Details for New Host</big></b><br>\n"
 "This dialog allows you to specify additional information about a new virtual host.</p>"
@@ -1470,7 +1471,7 @@ msgstr ""
 "Okno to umożliwia podanie dodatkowych informacji o nowym hoście wirtualnym.</p>"
 
 #. advanced new host dialog 2/5
-#: src/helps.ycp:191
+#: src/helps.ycp:192
 msgid ""
 "<p>Select <b>Enable CGI Support</b>\n"
 "to run CGI scripts in the path in <b>CGI Directory Path</b> using the alias <tt>/cgi-bin/</tt>.</p>"
@@ -1479,23 +1480,25 @@ msgstr ""
 "aby uruchamiać skrypty CGI z katalogu w <b>Ścieżce katalogu CGI</b> używając aliasu <tt>/cgi-bin/</tt>.</p>"
 
 #. advanced new host dialog 3/5
-#: src/helps.ycp:194
+#: src/helps.ycp:195
+#, fuzzy
 msgid ""
 "<p>For HTTPS access to this virtual host, select <b>Enable SSL Support</b>.\n"
 "\n"
-"Then enter the path for the certificate file in <b>Certificate File Path</b>.This option is available only for IP based vhosts.</p>"
+"Then enter the path for the certificate file in <b>Certificate File\n"
+"Path</b>.This option is only available for IP-based vhosts.</p>\n"
 msgstr ""
 "<p>Aby móc łączyć się z hostem wirtualnym przez HTTPS, należy wybrać <b>Włącz obsługę SSL</b>.\n"
 "\n"
 "Następnie trzeba podać ścieżkę do pliku z certyfikatem w polu <b>Ścieżka pliku certyfikatu<b>. Ta opcja jest dostępna wyłącznie dla wirtualnych hostów opartych o IP.</p>"
 
 #. advanced new host dialog 4/5
-#: src/helps.ycp:197
+#: src/helps.ycp:201
 msgid "<p>In <b>Directory Index</b>, enter a space-separated list of files that Apache should look for and provide when a URL for a directory (one that ends in <tt>/</tt>) is requested.  The first matching file found is provided.</p>"
 msgstr "<p>W polu <b>Indeks katalogu</b> należy podać rozdzieloną odstępami listę plików, których Apache powinien szukać i dostarczyć po otrzymaniu żądania URL prowadzącego do katalogu (kończącego się ukośnikiem </tt>/</tt>). Użyty zostanie pierwszy pasujący plik.</p>"
 
 #. advanced new host dialog 5/5
-#: src/helps.ycp:199
+#: src/helps.ycp:203
 msgid ""
 "<p><b>Public HTML</b>\n"
 "\n"

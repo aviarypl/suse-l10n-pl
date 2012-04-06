@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: heartbeat\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-05 10:07+0200\n"
+"POT-Creation-Date: 2012-03-30 11:24+0200\n"
 "PO-Revision-Date: 2011-02-01 08:43+0100\n"
 "Last-Translator: Piotr Krakowiak <piotr.krakowiak@opensuse.biz>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -221,7 +221,8 @@ msgstr "Konfiguracja klastra wysokiej dostępności (HA) przy użyciu usługi he
 
 #. translators: command line help text for add action
 #: src/heartbeat.ycp:42
-msgid "Configure a list of the servers for the cluster"
+#, fuzzy
+msgid "Configure a list of servers for the cluster."
 msgstr "Konfiguracja listy serwerów dla klastra."
 
 #. translators: command line help text for add action
@@ -261,7 +262,8 @@ msgstr "Nazwa węzła w klastrze"
 
 #. translators: command line help text for the 'play' option
 #: src/heartbeat.ycp:81
-msgid "Communication mode, can be 'bcast' for broadcast or 'mcast' for multicast."
+#, fuzzy
+msgid "Set the communication mode to 'bcast' for broadcast or 'mcast' for multicast."
 msgstr "Tryb komunikacji; może mieć wartość 'bcast' dla broadcast lub 'mcast' dla multicast."
 
 #. translators: command line help text for the 'play' option
@@ -286,7 +288,8 @@ msgstr "Numer portu UDP (domyślnie 694)."
 
 #. translators: command line help text for the 'play' option
 #: src/heartbeat.ycp:106
-msgid "Authentication method, can be 'crc' (no security), 'sha1' or 'md5'."
+#, fuzzy
+msgid "Set authentication method to 'crc' (no security), 'sha1' or 'md5'."
 msgstr "Metoda uwierzytelniania; może mieć wartość 'crc' (bez zabezpieczeń), 'sha1' lub 'md5'."
 
 #. translators: command line help text for the 'play' option
@@ -595,6 +598,7 @@ msgstr ""
 "modułów i akceptowanych przez nie parametrów.</p>\n"
 
 #: src/helps.ycp:153
+#, fuzzy
 msgid ""
 "<p><b><big>Booting</big></b><br>\n"
 "To start the Heartbeat software each time this cluster server\n"
@@ -603,9 +607,9 @@ msgid ""
 "is booted. You can start the Heartbeat server manually using\n"
 "the <tt>/etc/init.d/heartbeat start</tt> command.</p>\n"
 "<p>To propagate the configuration to all nodes of the cluster and \n"
-"to enable heartbeat service on them, run the commandline utility \n"
+"to enable heartbeat service on them, run the command line utility \n"
 "<tt>/usr/lib/heartbeat/ha_propagate</tt> on this node after the \n"
-"configuration is saved.</p>"
+"configuration is saved.</p>\n"
 msgstr ""
 "<p><b><big>Uruchamianie systemu</big></b><br>\n"
 "Aby uruchamiać oprogramowanie Heartbeat przy każdym uruchomieniu\n"
@@ -617,7 +621,7 @@ msgstr ""
 "<tt>/usr/lib/heartbeat/ha_propagate</tt> na tym węźle po\n"
 "zapisaniu konfiguracji.</p>"
 
-#: src/helps.ycp:164
+#: src/helps.ycp:165
 msgid ""
 "<p>Heartbeat uses a variety of timers to tune and configure its behavior.\n"
 "All timers are specified in seconds.</p>\n"
@@ -625,7 +629,7 @@ msgstr ""
 "<p>Do skonfigurowania swojego działania Heartbeat używa różnych liczników.\n"
 "Wartości wszystkich są podane w sekundach.</p>\n"
 
-#: src/helps.ycp:167
+#: src/helps.ycp:168
 msgid ""
 "<p><b>Keep Alive</b> specifies the interval at which a node announces itself on\n"
 "the network.</p>\n"
@@ -633,7 +637,7 @@ msgstr ""
 "<p><b>Aktywność</b> określa czas, po którym węzeł wysyła informacje \n"
 "o sobie w sieci.</p>\n"
 
-#: src/helps.ycp:170
+#: src/helps.ycp:171
 msgid ""
 "<p><b>Dead Time</b> is the time after which a node is presumed to be dead.\n"
 "It should probably default to five times the Keep Alive interval.</p>\n"
@@ -641,7 +645,7 @@ msgstr ""
 "<p><b>Czas śmierci</b> jest czasem, po którym zakłada się, że węzeł jest \n"
 "martwy. Dobrą wartością domyślną jest czas pięć razy dłuższy niż czas aktywności.</p>\n"
 
-#: src/helps.ycp:173
+#: src/helps.ycp:174
 msgid ""
 "<p><b>Warn Time</b> is the time after which Heartbeat warns in the log files\n"
 "that a node has been slow in sending its heartbeats. This should\n"
@@ -652,7 +656,7 @@ msgstr ""
 "synchronizacji. Dobrą wartością domyślną jest czas trzy razy dłuższy niż czas \n"
 "aktywności.</p>\n"
 
-#: src/helps.ycp:177
+#: src/helps.ycp:178
 msgid ""
 "<p><b>Init Dead Time</b> is the time a node waits after start-up for the other\n"
 "nodes, given that sometimes network interfaces, routing, etc., take a\n"
@@ -663,7 +667,7 @@ msgstr ""
 "sieciowych, routingu, itp. zajmuje pewien czas. Domyślnie powinien trwać on \n"
 "co najmniej dwa razy dłużej niż czas śmierci.</p>\n"
 
-#: src/helps.ycp:181
+#: src/helps.ycp:182
 msgid ""
 "If the <b>Watchdog Timer</b> is enabled, Heartbeat uses\n"
 "the in-kernel watchdog for monitoring the local node itself. If\n"
@@ -675,7 +679,7 @@ msgstr ""
 "Heartbeat nie wykona zapisu do tego pliku po każdych sześćdziesięciu\n"
 "sekundach, jądro wymusi ponowne uruchomienie węzła.</p>\n"
 
-#: src/helps.ycp:187
+#: src/helps.ycp:188
 msgid ""
 "<p><b>IP Fail</b> allows monitoring of external\n"
 "hosts and moving the resources accordingly (i.e., to the host with the\n"
@@ -685,7 +689,7 @@ msgstr ""
 "komputerów i odpowiednie przenoszenie zasobów (np. na węzeł z \n"
 "<i>najlepszym</i> połączeniem).</p>\n"
 
-#: src/helps.ycp:191
+#: src/helps.ycp:192
 msgid ""
 "<p>If enabled, Heartbeat needs a <b>Ping List</b> of external nodes to ping.\n"
 "The minimum if IP fail is enabled is one. A maximum of four to eight nodes seems sensible.</p>\n"
@@ -694,11 +698,11 @@ msgstr ""
 "zewnętrzne węzły. Minimalną liczbą elementów w przypadku włączenia \n"
 "opcji \"Błąd IP\" jest jeden. Sensownym maksimum wydają się cztery węzły.</p>\n"
 
-#: src/helps.ycp:194
+#: src/helps.ycp:195
 msgid "<p>For more complex configurations, Heartbeat also supports <i>Ping Groups</i>."
 msgstr "<p>W bardziej skomplikowanych konfiguracjach Heartbeat obsługuje także <i>Grupy ping</i>."
 
-#: src/helps.ycp:196
+#: src/helps.ycp:197
 msgid ""
 "A list of IP addresses is grouped together and if any\n"
 "of them is reachable, the node is deemed able to communicate with\n"

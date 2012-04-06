@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: iscsi-server\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-05 10:08+0200\n"
+"POT-Creation-Date: 2012-03-30 11:25+0200\n"
 "PO-Revision-Date: 2011-10-06 19:45+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -15,15 +15,17 @@ msgstr ""
 "Language: \n"
 
 #: src/IscsiServer.ycp:133
-msgid "Can't continue without installing iscsitarget package"
+#, fuzzy
+msgid "Cannot continue without installing iscsitarget package."
 msgstr "Nie można kontynuować bez instalacji pakietu \"iscsitarget\"."
 
 #. ask user whether reload or restart server
 #. #180205 - gettext problem - string wasn't marked to translate
 #: src/IscsiServer.ycp:182
+#, fuzzy
 msgid ""
 "If changes have been made, the iSCSI target is not able\n"
-"to reload current configuration. It can only restart.\n"
+"to reload the current configuration. It can only restart.\n"
 "When restarting, all sessions are aborted.\n"
 "Restart the iscsitarget service?\n"
 msgstr ""
@@ -214,8 +216,8 @@ msgstr "Przegląd serwera iSCSI"
 #. add target
 #. expert dialog
 #. LUN details
-#: src/dialogs.ycp:322 src/helps.ycp:112 src/helps.ycp:116 src/helps.ycp:124
-#: src/helps.ycp:126
+#: src/dialogs.ycp:322 src/helps.ycp:109 src/helps.ycp:113 src/helps.ycp:122
+#: src/helps.ycp:124
 msgid "<h1>iSCSI Target</h1>"
 msgstr "<h1>Serwer iSCSI</h1>"
 
@@ -376,7 +378,8 @@ msgstr ""
 "Proszę nacisnąć przycisk <b>Dalej</b>, aby kontynuować.\n"
 "<br></p>\n"
 
-#: src/helps.ycp:102
+#. discovery authentication
+#: src/helps.ycp:101
 msgid ""
 "Select the type of authentication. Use <b>No Authentication</b> or one of <b>Incoming</b> and <b>Outgoing</b> (can be both together). Then insert <b>User</b> and <b>Password</b>.\n"
 "For incoming authentication, it is possible to <b>Add</b> more  pairs or <b>Edit</b> or <b>Delete</b> them."
@@ -384,7 +387,8 @@ msgstr ""
 "Należy wybrać rodzaj uwierzytelniania. W tym celu trzeba użyć <b>Brak</b> lub jedno z <b>Wychodzących</b> i <b>Przychodzących</b> (można też oba równoczesnie). Następnie należy wprowadzić <b>Nazwę użytkownika</b> i <b>Hasło</b>. \n"
 "W przypadku uwierzytelniania przychodzących można dodać więcej par (<b>Dodaj</b>), modyfikować je (<b>Edytuj</b>) lub usuwać (<b>Usuń</b>)."
 
-#: src/helps.ycp:107
+#. target dialog
+#: src/helps.ycp:105
 msgid ""
 "List of offered targets. Create a new target by clicking <b>Add</b>. \n"
 "To delete or modify an item, select it and press <b>Modify</b> or <b>Delete</b>."
@@ -392,11 +396,11 @@ msgstr ""
 "Lista oferowanych serwerów. Aby utworzyć nowy serwer, należy kliknąć <b>Dodaj</b>. \n"
 "W celu usunięcia lub zmiany danego elementu należy nacisnąć przycisk <b>Modyfikuj</b> lub <b>Usuń</b>."
 
-#: src/helps.ycp:112
+#: src/helps.ycp:109
 msgid "It is possible to change the <b>Path</b> to block devices, regular files, LVM, or RAID.\n"
 msgstr "Można zmienić <b>Ścieżkę</b> urządzeń blokowych, zwykłych plików, LVM lub RAID.\n"
 
-#: src/helps.ycp:117
+#: src/helps.ycp:113
 msgid ""
 "Create a new target. Replace template values with the correct values.\n"
 "For <b>Target</b>, use the format iqn.yyyy-mm.<reversed domain name>.\n"
@@ -406,19 +410,20 @@ msgstr ""
 "Dla wartości <b>Serwer</b> należy użyć formatu : iqn.rrrr-mm.<odwrócona nazwa domeny>.\n"
 "Dla <b>Ścieżki</b> należy użyć urządzeń blokowych, zwykłych plików, LVM lub RAID.\n"
 
-#: src/helps.ycp:120
+#: src/helps.ycp:116
+#, fuzzy
 msgid ""
 "<b>Add</b> one or more LUNs.\n"
-"If you need any extra options, push <b>Expert Settings</b>."
+"If you need additional options, click <b>Expert Settings</b>.\n"
 msgstr ""
 "<b>Dodawanie</b> jednego lub więcej LUN.\n"
 "Dodatkowe opcje można znaleźć w <b>Ustawieniach zaawansowanych</b>."
 
-#: src/helps.ycp:124
+#: src/helps.ycp:122
 msgid "It is possible to <b>add</b>, <b>edit</b> or <b>delete</b> all additional configuration options."
 msgstr "Można <b>dodawać</b>, <b>modyfikować</b> lub <b>usuwać</b> wszystkie dodatkowe opcje konfiguracyjne."
 
-#: src/helps.ycp:126
+#: src/helps.ycp:124
 msgid ""
 "Edit <b>LUN</b> number if needed, set <b>Type</b> (nullio is for testing purposes). \n"
 "If Type=fileio set <b>Path</b> to disk device or file.<b>SCSI ID</b> and <b>Sectors</b> are optional."

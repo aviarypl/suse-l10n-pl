@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: dhcp-server\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-05 10:05+0200\n"
+"POT-Creation-Date: 2012-03-30 11:23+0200\n"
 "PO-Revision-Date: 2011-10-07 12:50+0100\n"
 "Last-Translator: Marcin Zajączkowski <marcinz@opensuse.biz>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -601,8 +601,9 @@ msgstr "Trzeba wybrać przynajmniej jeden interfejs sieciowy."
 #. TRANSLATORS: popup error, DHCP Server requires selected interface to have 
 #. at least minimal configuration 
 #: src/dialogs2.ycp:277
+#, fuzzy
 msgid ""
-"The selected network interface has currently no configuration (no assigned IP address \n"
+"The selected network interface is not configured (no assigned IP address \n"
 "and netmask). Using it in the DHCP server configuration may not work.\n"
 "Really use this interface?\n"
 msgstr ""
@@ -928,13 +929,13 @@ msgid "DHCP server commandline option \"-%1\" requires an argument"
 msgstr "Opcja wiersza poleceń serwera DHCP \"-%1\" wymaga parametru"
 
 #: src/dialogs2.ycp:1664
-#, ycp-format
+#, fuzzy, ycp-format
 msgid ""
 "You have specified an alternate configuration file for the DHCP server.\n"
 "\n"
-"This is not supported by YaST, as the DHCP server module can only read and write\n"
-"/etc/dhcpd.conf. The new configuration from %1 will not be imported and all changes \n"
-"will be saved to the default configuration file.\n"
+"YaST does not supported this. The DHCP server module can only read and write\n"
+"/etc/dhcpd.conf. The new configuration from %1 will not be imported. All\n"
+"changes will be saved to the default configuration file.\n"
 " \n"
 "Really continue?\n"
 msgstr ""
@@ -1072,7 +1073,8 @@ msgid "Save Settings and Restart DHCP Server Now"
 msgstr "Zapisz ustawienia i uruchom ponownie serwer DHCP"
 
 #: src/dialogs2.ycp:1883
-msgid "DHCP Server Start-Up Arguments"
+#, fuzzy
+msgid "DHCP Server Start-up Arguments"
 msgstr "Parametry uruchamiania serwera DHCP"
 
 #. dialog caption, %1 is step number
@@ -1086,12 +1088,13 @@ msgstr "Kreator tworzenia serwera DHCP (%1 z 4)"
 #. and
 #. DNS for Experts (editing current settings) (part 5)
 #: src/dns-helps.ycp:18
+#, fuzzy
 msgid ""
 "<p><b><big>Adding a New Range of DNS Records</big></b><br />\n"
 "<b>First IP Address</b> defines\n"
 "the starting address of the range and <b>Last IP Address</b> defines\n"
 "the last one. <b>Hostname Base</b> is a string that determines how hostnames\n"
-"should be created (such as <tt>dhcp-%i</tt> or <tt>e25-%i-a</tt>).\n"
+"are created (such as <tt>dhcp-%i</tt> or <tt>e25-%i-a</tt>).\n"
 "<tt>%i</tt> is replaced with the number of the host in the range.\n"
 "If no <tt>%i</tt> is defined, the number is added at the end of the\n"
 "string. <tt>%i</tt> can be used only once in <b>Hostname Base</b>.\n"
@@ -1111,12 +1114,13 @@ msgstr ""
 
 #. TRANSLATORS: DNS Wizard - step 1 (part 1)
 #: src/dns-helps.ycp:32
+#, fuzzy
 msgid ""
 "<p><b><big>DNS Wizard</big></b><br />\n"
-"This wizard helps you create a new DNS zone\n"
+"In this wizard, create a new DNS zone\n"
 "directly from the DHCP server configuration. This DNS zone is important\n"
-"if you also want to identify your DHCP clients by hostname. The DNS zone\n"
-"translates names to the IP addresses assigned to them. You can also\n"
+"if you want to identify your DHCP clients by hostname. The DNS zone\n"
+"translates names to the assigned IP addresses. You can also\n"
 "create a reverse zone that translates IP addresses to names.</p>\n"
 msgstr ""
 "<p><big><b>Kreator DNS</b></big><br />\n"
@@ -1127,16 +1131,17 @@ msgstr ""
 "też utworzenie strefy odwrotnej, zamieniającej adresy IP na nazwy.</p>\n"
 
 #. TRANSLATORS: DNS Wizard - step 1 (part 2)
-#: src/dns-helps.ycp:40
+#: src/dns-helps.ycp:41
+#, fuzzy
 msgid ""
 "<p><b>New Zone Name</b> or <b>Reverse Zone Name</b>\n"
-"are taken from your current DHCP server and network settings and, therefore, cannot be changed.</p>\n"
+"are taken from your current DHCP server and network settings and cannot be changed.</p>\n"
 msgstr ""
 "<p><b>Nazwa nowej strefy</b> lub <b>Nazwa strefy odwrotnej</b>\n"
 "zostały pobrane z obecnej konfiguracji serwera DHCP, dlatego nie mogą by modyfikowane.</p>\n"
 
 #. TRANSLATORS: DNS Wizard - step 1 (part 3)
-#: src/dns-helps.ycp:45
+#: src/dns-helps.ycp:46
 msgid ""
 "<p>Select <b>Also Create Reverse Zone</b> to create a zone \n"
 "to contain reverse entries of the main DNS zone.</p>\n"
@@ -1145,7 +1150,7 @@ msgstr ""
 "zawierającą wartości odwrotne do głównej strefy wyszukiwania DNS.</p>\n"
 
 #. TRANSLATORS: DNS Wizard - step 2 (part 1)
-#: src/dns-helps.ycp:50
+#: src/dns-helps.ycp:51
 msgid ""
 "<p><big><b>Name Servers</b></big><br />\n"
 "Name servers are needed for proper DNS server functionality.\n"
@@ -1156,15 +1161,16 @@ msgstr ""
 "Zarządzają one wszystkimi rekordami stref DNS.</p>\n"
 
 #. TRANSLATORS: DNS Wizard - step 2 (part 2)
-#: src/dns-helps.ycp:56
+#: src/dns-helps.ycp:57
+#, fuzzy
 msgid ""
 "<p><b><big>DNS Queries</big></b><br />\n"
-"Every DNS query that must find out, for example, an IP address for a\n"
-"hostname in a DNS zone, first asks the parent zone\n"
+"Every DNS query (for example searching an IP address for a\n"
+"hostname in a DNS zone) first asks the parent zone\n"
 "(<tt>com</tt> for <tt>example.com</tt>) for the current zone\n"
-"name servers, and then sends a DNS query to these name servers to get\n"
-"a reply containing the desired IP address.<br />\n"
-"This is why you should mention the current DNS server hostname as one of\n"
+"name servers. Then it sends a DNS query to these name servers requesting\n"
+"the desired IP address.<br />\n"
+"Therefore, always specify the current DNS server hostname as one of\n"
 "the zone name servers.</p>\n"
 msgstr ""
 "<p><big><b>Zapytania DNS</b></big><br />\n"
@@ -1177,7 +1183,7 @@ msgstr ""
 "serwerów  nazw tej strefy.</p>\n"
 
 #. TRANSLATORS: DNS Wizard - step 2 (part 3)
-#: src/dns-helps.ycp:67
+#: src/dns-helps.ycp:68
 msgid ""
 "<p>To add a <b>New Name Server</b>, click <b>Add</b>, complete the form,\n"
 "then click <b>Ok</b>. If the new name server name is included in the current\n"
@@ -1191,7 +1197,7 @@ msgstr ""
 
 #. TRANSLATORS: DNS Wizard - step 2 (part 4)
 #. TRANSLATORS: DNS Wizard - step 3 (part 5)
-#: src/dns-helps.ycp:74 src/dns-helps.ycp:102
+#: src/dns-helps.ycp:75 src/dns-helps.ycp:103
 msgid ""
 "<p>To edit or delete an entry, select it and click\n"
 "<b>Edit</b> or <b>Delete</b>.</p>\n"
@@ -1200,13 +1206,14 @@ msgstr ""
 "i nacisnąć przycisk <b>Edytuj</b> albo <b>Usuń</b>. </p>\n"
 
 #. TRANSLATORS: DNS Wizard - step 3 (part 1)
-#: src/dns-helps.ycp:79
+#: src/dns-helps.ycp:80
+#, fuzzy
 msgid ""
 "<p><b><big>DNS Records</big></b><br />\n"
-"Here, define DNS hostnames for all DHCP clients. You do not need to define\n"
-"all hostnames one by one. Only set one or more simple rules for how\n"
+"Define DNS hostnames for all DHCP clients. You do not need to define\n"
+"all hostnames one by one. Set simple rules for how\n"
 "the hostnames are created. These rules define the ranges of IP addresses to use\n"
-"and the string that is used to generate hostnames for a range.</p>\n"
+"and the string from which hostnames are generated for a range.</p>\n"
 msgstr ""
 "<p><b><big>Rekordy DNS</big></b><br />\n"
 "W tym miejscu definiuje się nazwy hostów DNS dla wszystkich klientów DHCP.\n"
@@ -1215,7 +1222,7 @@ msgstr ""
 "Zasady te wyznaczają zakres używanych adresów IP oraz ciąg znaków, jaki będzie wykorzystywany do generowania nazw hostów dla zakresu.</p>\n"
 
 #. TRANSLATORS: DNS Wizard - step 3 (part 2)
-#: src/dns-helps.ycp:87
+#: src/dns-helps.ycp:88
 msgid ""
 "<p><b><big>Range of DNS Records</big></b><br />\n"
 "For example, create a set of hostnames from <tt>dhcp-133-a</tt>\n"
@@ -1228,7 +1235,7 @@ msgstr ""
 "do <tt>192.168.5.188</tt>.</p>\n"
 
 #. TRANSLATORS: DNS Wizard - step 3 (part 3)
-#: src/dns-helps.ycp:94
+#: src/dns-helps.ycp:95
 msgid ""
 "<p>To add a new range of DNS records, click <b>Add</b>,\n"
 "complete the form, then click <b>Ok</b>.</p>\n"
@@ -1237,7 +1244,7 @@ msgstr ""
 "wypełnić formularz, a następnie nacisnąć przycisk <b>OK</b>.</p>\n"
 
 #. TRANSLATORS: DNS Wizard - summary (part 1)
-#: src/dns-helps.ycp:107
+#: src/dns-helps.ycp:108
 msgid ""
 "<p>This is a summary of all data\n"
 "entered in the configuration wizard so far.</p>\n"
@@ -1246,7 +1253,7 @@ msgstr ""
 "przez kreatora konfiguracji.</p>\n"
 
 #. TRANSLATORS: DNS Wizard - summary (part 2)
-#: src/dns-helps.ycp:112
+#: src/dns-helps.ycp:113
 msgid ""
 "<p>Click <b>Accept</b> to save the settings for\n"
 "the DNS server and return to the DHCP server configuration.\n"
@@ -1259,7 +1266,7 @@ msgstr ""
 "momentu zakończenia konfiguracji serwera DHCP.</p>\n"
 
 #. TRANSLATORS: DNS for Experts (editing current settings) (part 1)
-#: src/dns-helps.ycp:119
+#: src/dns-helps.ycp:120
 msgid ""
 "<p><b><big>DNS Synchronization</big></b><br />\n"
 "This is an advanced tool for editing DNS server settings to match your\n"
@@ -1272,11 +1279,12 @@ msgstr ""
 "typu \"A\" -- pozwalające zamieniać nazwy hostów na adresy IP.</p>\n"
 
 #. TRANSLATORS: DNS for Experts (editing current settings) (part 2)
-#: src/dns-helps.ycp:126
+#: src/dns-helps.ycp:127
+#, fuzzy
 msgid ""
 "<b>Current Subnet</b> and <b>Netmask</b> show the current network settings.\n"
 "<b>Domain</b> is taken from the current DHCP configuration.\n"
-"<b>First IP Address</b> and <b>Second ID Address</b> match the current\n"
+"<b>First IP Address</b> and <b>Second IP Address</b> match the current\n"
 "Dynamic DHCP range.</p>\n"
 msgstr ""
 "Pola <b>Aktualna podsieć</b> i <b>maska sieci</b> zawierają aktualne ustawienia sieciowe.\n"
@@ -1285,7 +1293,7 @@ msgstr ""
 "dynamicznemu zakresowi DHCP.</p>\n"
 
 #. TRANSLATORS: DNS for Experts (editing current settings) (part 3)
-#: src/dns-helps.ycp:133
+#: src/dns-helps.ycp:134
 msgid ""
 "<p>\n"
 "To create a DNS zone from scratch, use <b>Run Wizard</b>\n"
@@ -1296,7 +1304,7 @@ msgstr ""
 "z części <b>Ustawienia specjalne</b>.</p>\n"
 
 #. TRANSLATORS: DNS for Experts (editing current settings) (part 4)
-#: src/dns-helps.ycp:139
+#: src/dns-helps.ycp:140
 msgid ""
 "<p>\n"
 " To create or remove a single DNS record,\n"
@@ -1355,7 +1363,7 @@ msgstr ""
 
 #. TRANSLATORS: popup error, %1 is an IP address
 #. %2 is a network, %3 is a netmask
-#: src/dns-server-dialogs.ycp:146
+#: src/dns-server-dialogs.ycp:146 src/dns-server-dialogs.ycp:160
 #, ycp-format
 msgid ""
 "IP address %1 does not match\n"
@@ -1364,15 +1372,6 @@ msgstr ""
 "Adres IP %1 nie pasuje do\n"
 "aktualnych ustawień sieci %2/%3.\n"
 
-#: src/dns-server-dialogs.ycp:160
-#, ycp-format
-msgid ""
-"IP address %1 does not match\n"
-"the current network %2/%3\n"
-msgstr ""
-"Adres IP %1 nie pasuje do\n"
-"aktualnych ustawień sieci %2/%3\n"
-
 #. TRANSLATORS: popup error
 #: src/dns-server-dialogs.ycp:184 src/dns-server-management.ycp:386
 msgid "The last IP address must be higher than the first one."
@@ -1380,22 +1379,11 @@ msgstr "Ostatni adres IP musi być wyższy od pierwszego."
 
 #. TRANSLATORS: popup error, %1 an IP address
 #. %2 is the first IP address of the range, %3 is the last one
-#: src/dns-server-dialogs.ycp:193
-#, ycp-format
-msgid ""
-"The IP address %1 is out of the current\n"
-"dynamic DHCP range %2-%3.\n"
-msgstr ""
-"Adres IP %1 znajduje się poza aktualnym\n"
-"dynamicznym zakresem DHCP %2-%3.\n"
-
-#. TRANSLATORS: popup error, %1 an IP address
-#. %2 is the first IP address of the range, %3 is the last one
-#: src/dns-server-dialogs.ycp:206
-#, ycp-format
+#: src/dns-server-dialogs.ycp:193 src/dns-server-dialogs.ycp:207
+#, fuzzy, ycp-format
 msgid ""
 "The IP address %1 is\n"
-"out of the current\n"
+"outside the current\n"
 "dynamic DHCP range %2-%3.\n"
 msgstr ""
 "Adres IP %1\n"
@@ -1403,19 +1391,19 @@ msgstr ""
 "dynamicznym zakresem DHCP %2-%3.\n"
 
 #. TRANSLATORS: popup error '%i' is a special string, do not translate it, please
-#: src/dns-server-dialogs.ycp:318
+#: src/dns-server-dialogs.ycp:319
 msgid "There can be only one '%i' in the hostname base string."
 msgstr "Może być tylko jeden znak \"%i\" w ciągu znaków określającym nazwę hosta."
 
 #. TRANSLATORS: popup error, followed by a newline and a valid hostname description
-#: src/dns-server-dialogs.ycp:343 src/dns-server-management.ycp:229
+#: src/dns-server-dialogs.ycp:344 src/dns-server-management.ycp:229
 msgid "Invalid hostname."
 msgstr "Nieprawidłowa nazwa hosta."
 
 #. TRANSLATORS: popup error, followed by a newline and a valid IPv4 description
 #. TRANSLATORS: poupu error, followed by a newlone and a valid IPv4 description
 #. TRANSLATORS: popup error, followed by a newline and a valid IPv4 description
-#: src/dns-server-dialogs.ycp:351 src/dns-server-dialogs.ycp:376
+#: src/dns-server-dialogs.ycp:352 src/dns-server-dialogs.ycp:377
 #: src/dns-server-management.ycp:237 src/dns-server-management.ycp:336
 #: src/dns-server-management.ycp:344
 msgid "Invalid IP address."
@@ -1423,7 +1411,7 @@ msgstr "Nieprawidłowy adres IP."
 
 #. TRANSLATORS: popup error, %1 is an IP address
 #. %2 is the first IP address of the range, %3 is the last one
-#: src/dns-server-dialogs.ycp:363 src/dns-server-dialogs.ycp:388
+#: src/dns-server-dialogs.ycp:364 src/dns-server-dialogs.ycp:389
 #, ycp-format
 msgid ""
 "IP address %1 is not in the range of allowed\n"
@@ -1490,7 +1478,7 @@ msgstr ""
 
 #. TRANSLATORS: popup error, %1 is a zone name
 #. TRANSLATORS: error message, %1 is a zone name
-#: src/dns-server-management.ycp:499 src/dns-server-wizard.ycp:926
+#: src/dns-server-management.ycp:499 src/dns-server-wizard.ycp:925
 #, ycp-format
 msgid "Cannot create zone %1."
 msgstr "Nie można utworzyć strefy %1."
@@ -1502,8 +1490,9 @@ msgstr "Synchronizacja rekordów strefy odwrotnej serwera DNS..."
 
 #. TRANSLATORS: popup question - canceling dns synchronization with dhcp
 #: src/dns-server-management.ycp:740
+#, fuzzy
 msgid ""
-"If you cancel, all changes made in the DNS server will be lost.\n"
+"If you cancel, all changes made to the DNS server will be lost.\n"
 "Really cancel this operation?\n"
 msgstr ""
 "Anulowanie synchronizacji spowoduje, że wszystkie zmiany dokonane w serwerze DNS zostaną utracone.\n"
@@ -1601,10 +1590,10 @@ msgstr "Adres &IP serwera"
 
 #. TRANSLATORS: popup question
 #: src/dns-server-wizard.ycp:197
+#, fuzzy
 msgid ""
 "No IP address has been provided for a name server in the current DNS zone.\n"
-"This might not work because each zone needs its name server name and IP \n"
-"defined. \n"
+"This may not work because each zone needs the name and IP of its name server defined. \n"
 "Really use the current settings?\n"
 msgstr ""
 "W bieżącej strefie wyszukiwań DNS nie został podany adres IP dla serwera nazw.\n"
@@ -1613,7 +1602,7 @@ msgstr ""
 "Czy na pewno użyć aktualnych ustawień?\n"
 
 #. TRANSLATORS: popup error, %1 si a server name
-#: src/dns-server-wizard.ycp:214
+#: src/dns-server-wizard.ycp:213
 #, ycp-format
 msgid "Name server %1 already exists in the configuration."
 msgstr "Serwer nazw %1 istnieje już w bieżącej konfiguracji."
@@ -1621,7 +1610,7 @@ msgstr "Serwer nazw %1 istnieje już w bieżącej konfiguracji."
 #. TRANSLATORS: popup error
 #. %1 the first IP address og 'another range'
 #. %2 is the last one
-#: src/dns-server-wizard.ycp:271
+#: src/dns-server-wizard.ycp:270
 #, ycp-format
 msgid ""
 "This new range of DNS entries is already covered by\n"
@@ -1632,140 +1621,140 @@ msgstr ""
 "pokrywa się z już istniejącym (%1-%2).\n"
 "Czy na pewno użyć nowego zakresu?\n"
 
-#: src/dns-server-wizard.ycp:369
+#: src/dns-server-wizard.ycp:368
 msgid "At least one name server must be defined."
 msgstr "Należy zdefiniować przynajmniej jeden serwer nazw."
 
 #. TRANSLATORS: a dialog caption
-#: src/dns-server-wizard.ycp:386
+#: src/dns-server-wizard.ycp:385
 msgid "DHCP Server: New DNS Zone--Step 1 of 3"
 msgstr "Uruchamianie serwera DHCP: Nowa strefa wyszukiwania DNS -- krok 1 z 3"
 
 #. TRANSLATORS: text entry
-#: src/dns-server-wizard.ycp:396 src/dns-server-wizard.ycp:438
-#: src/dns-server-wizard.ycp:491
+#: src/dns-server-wizard.ycp:395 src/dns-server-wizard.ycp:437
+#: src/dns-server-wizard.ycp:490
 msgid "New &Zone Name"
 msgstr "Nowa na&zwa strefy"
 
 #. TRANSLATORS: text entry
-#: src/dns-server-wizard.ycp:400 src/dns-server-wizard.ycp:442
-#: src/dns-server-wizard.ycp:495
+#: src/dns-server-wizard.ycp:399 src/dns-server-wizard.ycp:441
+#: src/dns-server-wizard.ycp:494
 msgid "&Current Network"
 msgstr "Aktualna &sieć"
 
 #. TRANSLATORS: check box
-#: src/dns-server-wizard.ycp:405
+#: src/dns-server-wizard.ycp:404
 msgid "&Also Create Reverse Zone"
 msgstr "Utwórz także strefę wyszukiwania &odwrotnego"
 
 #. TRANSLATORS: a dialog caption
-#: src/dns-server-wizard.ycp:428
+#: src/dns-server-wizard.ycp:427
 msgid "DHCP Server: Zone Name Servers--Step 2 of 3"
 msgstr "Uruchamianie serwera DHCP: Serwery nazw strefy -- krok 2 z 3"
 
 #. TRANSLATORS: table label
-#: src/dns-server-wizard.ycp:450
+#: src/dns-server-wizard.ycp:449
 msgid "Current Name Servers"
 msgstr "Aktualne serwery nazw"
 
 #. TRANSLATORS: table header item
-#: src/dns-server-wizard.ycp:455
+#: src/dns-server-wizard.ycp:454
 msgid "Server Name"
 msgstr "Nazwa serwera"
 
 #. TRANSLATORS: table header item
-#: src/dns-server-wizard.ycp:457
+#: src/dns-server-wizard.ycp:456
 msgid "IP (Optional)"
 msgstr "Adres IP (opcjonalny)"
 
 #. TRANSLATORS: push button
-#: src/dns-server-wizard.ycp:463 src/dns-server-wizard.ycp:520
+#: src/dns-server-wizard.ycp:462 src/dns-server-wizard.ycp:519
 msgid "A&dd..."
 msgstr "&Dodaj..."
 
 #. TRANSLATORS: push button
-#: src/dns-server-wizard.ycp:465 src/dns-server-wizard.ycp:522
+#: src/dns-server-wizard.ycp:464 src/dns-server-wizard.ycp:521
 msgid "&Edit..."
 msgstr "&Edytuj..."
 
 #. TRANSLATORS: a dialog caption
-#: src/dns-server-wizard.ycp:481
+#: src/dns-server-wizard.ycp:480
 msgid "DHCP Server: DNS Records--Step 3 of 3"
 msgstr "Uruchamianie serwera DHCP: rekordy DNS -- krok 3 z 3"
 
 #. TRANSLATORS: table header label
-#: src/dns-server-wizard.ycp:503
+#: src/dns-server-wizard.ycp:502
 msgid "DNS Records for DHCP Clients"
 msgstr "Rekordy DNS dla klientów DHCP"
 
 #. TRANSLATORS: table header item
-#: src/dns-server-wizard.ycp:508
+#: src/dns-server-wizard.ycp:507
 msgid "Hostname Base"
 msgstr "Nazwa hosta"
 
 #. TRANSLATORS: table header item
-#: src/dns-server-wizard.ycp:510
+#: src/dns-server-wizard.ycp:509
 msgid "Number to Start With"
 msgstr "Numer, od którego należy zacząć"
 
 #. TRANSLATORS: table header item
-#: src/dns-server-wizard.ycp:512
+#: src/dns-server-wizard.ycp:511
 msgid "From IP"
 msgstr "Od adresu IP"
 
 #. TRANSLATORS: table header item
-#: src/dns-server-wizard.ycp:514
+#: src/dns-server-wizard.ycp:513
 msgid "To IP"
 msgstr "Do adresu IP"
 
 #. TRANSLATORS: a dialog caption
-#: src/dns-server-wizard.ycp:538
+#: src/dns-server-wizard.ycp:537
 msgid "DHCP Server: DNS Records--Summary"
 msgstr "Serwer DHCP: Rekordy DNS -- Podsumowanie"
 
 #. TRANSLATORS: text entry
-#: src/dns-server-wizard.ycp:565
+#: src/dns-server-wizard.ycp:564
 msgid "Re&verse Zone Name"
 msgstr "Nazwa strefy wyszukiwania &odwrotnego"
 
 #. TRANSLATORS: HTML summary item
-#: src/dns-server-wizard.ycp:707
+#: src/dns-server-wizard.ycp:706
 #, ycp-format
 msgid "<b>Zone Name:</b> %1"
 msgstr "<b>Nazwa strefy wyszukiwania</b> %1"
 
 #. TRANSLATORS: HTML summary item
 #. TRANSLATORS: HTML summary note
-#: src/dns-server-wizard.ycp:712 src/dns-server-wizard.ycp:725
+#: src/dns-server-wizard.ycp:711 src/dns-server-wizard.ycp:724
 msgid "(Replacing the current zone with the new one)"
 msgstr "(Zamiana aktualnej strefy wyszukiwania na nową)"
 
 #. TRANSLATORS: HTML summary item
-#: src/dns-server-wizard.ycp:720
+#: src/dns-server-wizard.ycp:719
 #, ycp-format
 msgid "<b>Reverse Zone Name:</b> %1"
 msgstr "<b>Nazwa strefy wyszukiwania odwrotnego:</b> %1"
 
 #. name servers
 #. TRANSLATORS: html summary header
-#: src/dns-server-wizard.ycp:732
+#: src/dns-server-wizard.ycp:731
 msgid "Zone Name Servers:"
 msgstr "Serwery nazw strefy wyszukiwania"
 
 #. TRANSLATORS: HTML summary item, %1 is a hostname, %2 is an IP address
-#: src/dns-server-wizard.ycp:736
+#: src/dns-server-wizard.ycp:735
 #, ycp-format
 msgid "Hostname: %1, IP: %2"
 msgstr "Nazwa komputera: %1, adres IP: %2"
 
 #. TRANSLATORS: IP address for the HTML summary item is not defined
-#: src/dns-server-wizard.ycp:739
+#: src/dns-server-wizard.ycp:738
 msgid "Not defined"
 msgstr "Niezdefiniowane"
 
 #. dhcp ranges
 #. TRANSLATORS: HTML summary header
-#: src/dns-server-wizard.ycp:746
+#: src/dns-server-wizard.ycp:745
 msgid "Ranges of DNS Hosts:"
 msgstr "Zakresy hostów DNS:"
 
@@ -1773,53 +1762,53 @@ msgstr "Zakresy hostów DNS:"
 #. %1 is the first IP of the range, %2 is the last one
 #. %3 defines the hostname base (e.g., 'dhcp-%i')
 #. %4 is a number 'start' used incremental replacement for '%i'
-#: src/dns-server-wizard.ycp:753
+#: src/dns-server-wizard.ycp:752
 #, ycp-format
 msgid "Range: %1-%2<br />Hostname Base: %3, Starting With: %4"
 msgstr "Zakres: %1-%2<br />Nazwa komputera: %3, Rozpoczyna się: %4"
 
 #. TRANSLATORS: popup error
-#: src/dns-server-wizard.ycp:844
+#: src/dns-server-wizard.ycp:843
 msgid "At least one DNS record must be set."
 msgstr "Musi być ustawiony co najmniej jeden rekord DNS."
 
 #. TRANSLATORS: error message, %1 is a zone name
 #. TRANSLATORS: error message, %1 is a reverse zone name
-#: src/dns-server-wizard.ycp:913 src/dns-server-wizard.ycp:986
+#: src/dns-server-wizard.ycp:912 src/dns-server-wizard.ycp:985
 #, ycp-format
 msgid "Cannot remove zone %1."
 msgstr "Nie można usunąć strefy %1."
 
 #. TRANSLATORS: error message, %1 is a zone name
-#: src/dns-server-wizard.ycp:948 src/dns-server-wizard.ycp:1016
+#: src/dns-server-wizard.ycp:947 src/dns-server-wizard.ycp:1015
 #, ycp-format
 msgid "Cannot add name servers to zone %1."
 msgstr "Nie można dodać serwerów nazw do strefy %1."
 
 #. TRANSLATORS: error message
-#: src/dns-server-wizard.ycp:966 src/dns-server-wizard.ycp:1033
+#: src/dns-server-wizard.ycp:965 src/dns-server-wizard.ycp:1032
 msgid "Cannot add zone DNS records."
 msgstr "Nie można dodać rekordów DNS strefy."
 
 #. TRANSLATORS: error message, %1 is a reverse zone name
-#: src/dns-server-wizard.ycp:1000
+#: src/dns-server-wizard.ycp:999
 #, ycp-format
 msgid "Cannot create reverse zone %1."
 msgstr "Nie można utworzyć strefy wyszukiwania odwrotnego %1."
 
 #. TRANSLATORS: busy message
-#: src/dns-server-wizard.ycp:1044
+#: src/dns-server-wizard.ycp:1043
 msgid "Creating DNS zone..."
 msgstr "Tworzenie strefy DNS..."
 
 #. restore previous settings
 #. TRANSLATORS: busy message
-#: src/dns-server-wizard.ycp:1061
+#: src/dns-server-wizard.ycp:1060
 msgid "Restoring previous DNS settings..."
 msgstr "Przywracanie poprzednich ustawień serwera DNS..."
 
 #. TRANSLATORS: popup question, %1 is a list of errors
-#: src/dns-server-wizard.ycp:1069
+#: src/dns-server-wizard.ycp:1068
 #, ycp-format
 msgid ""
 "Errors occurred during DNS zone creation:\n"
@@ -1833,7 +1822,7 @@ msgstr ""
 "Czy powrócić do kreatora?\n"
 
 #. TRANSLATORS: popup message
-#: src/dns-server-wizard.ycp:1085
+#: src/dns-server-wizard.ycp:1084
 msgid "The DNS zone was created successfully."
 msgstr "Strefa DNS została pomyślnie utworzona."
 
@@ -2200,10 +2189,11 @@ msgstr ""
 
 #. Wizard Installation - Step 3 1/4
 #: src/helps.ycp:183
+#, fuzzy
 msgid ""
 "<p><b><big>Subnet Information</big></b></br>\n"
-"Here you can view the information about the current subnet, such as its address,\n"
-"netmask and minimum and maximum IP addresses available for the clients.\n"
+"View information about the current subnet, such as its address,\n"
+"netmask, minimum and maximum IP addresses available for the clients.\n"
 "</p>\n"
 msgstr ""
 "<p><b><big>Informacje o podsieci</big></b></br>\n"
@@ -2213,11 +2203,12 @@ msgstr ""
 
 #. Wizard Installation - Step 3 2/4
 #: src/helps.ycp:190
+#, fuzzy
 msgid ""
 "<p><b><big>IP Address Range</big></b><br>\n"
 "Set the <b>First IP Address</b> and the <b>Last IP Address</b>\n"
-"to lease to the clients.  These addresses must have the same netmask.\n"
-"For instance, <tt>192.168.1.1</tt> and <tt>192.168.1.64</tt>. Check <b>\n"
+"of the address range to be leased to clients. These addresses must have the same netmask.\n"
+"For instance, <tt>192.168.1.1</tt> and <tt>192.168.1.64</tt>. Check the <b>\n"
 "Allow Dynamic BOOTP</b> flag if the specified range may be dynamically\n"
 "assigned to BOOTP clients as well as DHCP clients</p>.\n"
 msgstr ""
@@ -2633,6 +2624,20 @@ msgstr "&Główny serwer DNS"
 #: src/widgets.ycp:1185
 msgid "DHCP Server &Expert Configuration..."
 msgstr "Zaawan&sowana konfiguracja serwera DHCP..."
+
+#~ msgid ""
+#~ "IP address %1 does not match\n"
+#~ "the current network %2/%3\n"
+#~ msgstr ""
+#~ "Adres IP %1 nie pasuje do\n"
+#~ "aktualnych ustawień sieci %2/%3\n"
+
+#~ msgid ""
+#~ "The IP address %1 is out of the current\n"
+#~ "dynamic DHCP range %2-%3.\n"
+#~ msgstr ""
+#~ "Adres IP %1 znajduje się poza aktualnym\n"
+#~ "dynamicznym zakresem DHCP %2-%3.\n"
 
 #~ msgid "Cannot determine the hostname of %1."
 #~ msgstr "Nie można określić nazwy hosta %1."
