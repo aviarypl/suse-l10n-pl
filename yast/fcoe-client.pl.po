@@ -1,15 +1,15 @@
 # Polish message file for YaST2 (@memory@).
 # Copyright (C) 2005 SUSE Linux Products GmbH.
 # Copyright (C) 2003 SuSE Linux AG.
-# 
+#
 # , 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-30 11:23+0200\n"
-"PO-Revision-Date: 2011-10-07 12:51+0100\n"
-"Last-Translator: Marcin Zajączkowski <marcinz@opensuse.biz>\n"
+"PO-Revision-Date: 2012-04-12 22:55+0100\n"
+"Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,6 +34,9 @@ msgid ""
 "You may edit the settings and recreate the FCoE\n"
 "VLAN interface to get a valid configuration."
 msgstr ""
+"Nie można odczytać pliku konfigracyjnego dla %1.\n"
+"Plik ustawień można edytować i odtworzyć interfejs\n"
+"FCoE VLAN, aby pobrać właściwą konfigurację."
 
 #. FcoeClient read dialog caption
 #: src/FcoeClient.ycp:939
@@ -81,7 +84,8 @@ msgid "Reading /etc/fcoe/config"
 msgstr "Wczytywanie /etc/fcoe/config"
 
 #. Progress finished
-#: src/FcoeClient.ycp:967 src/FcoeClient.ycp:1059
+#: src/FcoeClient.ycp:967
+#: src/FcoeClient.ycp:1059
 msgid "Finished"
 msgstr "Zakończono"
 
@@ -141,7 +145,6 @@ msgid "Cannot write settings to /etc/fcoe/config."
 msgstr "Nie można zapisać ustawień do /etc/fcoe/config."
 
 #: src/FcoeClient.ycp:1081
-#, fuzzy
 msgid ""
 "Cannot write settings for FCoE interfaces.\n"
 "For details, see /var/log/YaST2/y2log."
@@ -151,15 +154,13 @@ msgstr ""
 
 #. Error message
 #: src/FcoeClient.ycp:1090
-#, fuzzy
 msgid "Restarting of service fcoe failed."
-msgstr "Uruchamianie usług nie powiodło się."
+msgstr "Ponowne uruchomienie usługi fcoe nie powiodło się."
 
 #. Error message
 #: src/FcoeClient.ycp:1096
-#, fuzzy
 msgid "Cannot write /etc/sysconfig/network/ifcfg-files."
-msgstr "Nie można odczytać pliku /etc/fcoe/cfg-file z %1"
+msgstr "Nie można zapisać pliku /etc/sysconfig/network/ifcfg-files."
 
 #. Configuration summary text for autoyast
 #: src/FcoeClient.ycp:1160
@@ -180,22 +181,26 @@ msgid "<b>Starting of services</b>"
 msgstr "<b>Uruchamianie usług</b>"
 
 #. starting of service "fcoe" at boot time is enabled or disabled
-#. starting of service "lldpad" at boot time is enabled or disabled 
-#: src/FcoeClient.ycp:1179 src/FcoeClient.ycp:1181
+#. starting of service "lldpad" at boot time is enabled or disabled
+#: src/FcoeClient.ycp:1179
+#: src/FcoeClient.ycp:1181
 msgid "enabled"
 msgstr "włączony "
 
-#: src/FcoeClient.ycp:1179 src/FcoeClient.ycp:1181
+#: src/FcoeClient.ycp:1179
+#: src/FcoeClient.ycp:1181
 msgid "disabled"
 msgstr "wyłączony"
 
 #. text of an error popup
 #: src/complex.ycp:88
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "Cannot remove the FCoE interface.\n"
 "Command %1 failed."
-msgstr "Usuwanie interfejsu %1 nie powiodło się"
+msgstr ""
+"Nie można usunąć interfejsu FCoE.\n"
+"Polecenie %1 zawiodło."
 
 #. headline of the edit dialog - configuration of values for a certain network interface
 #: src/complex.ycp:258
@@ -205,9 +210,8 @@ msgstr "Konfiguracja interfejsu %1"
 
 #. headline of a popup: creating and starting Fibre Channel over Ethernet
 #: src/complex.ycp:313
-#, fuzzy
 msgid "Creating and Starting FCoE on Detected VLAN Device"
-msgstr "Tworzenie i uruchamianie FCoE na wykrytym urządzeniu VLAN"
+msgstr "Tworzenie i uruchamianie usługi FCoE na wykrytym urządzeniu VLAN"
 
 #. question to the user: really create and start FCoE
 #: src/complex.ycp:315
@@ -223,11 +227,11 @@ msgstr ""
 
 #. text of an error popup
 #: src/complex.ycp:331
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "Cannot create and start FCoE on %1."
-msgstr "Nie można utworzyć i uruchomić FCoE na %1"
+msgstr "Nie można utworzyć i uruchomić FCoE na %1."
 
-#. text of an error popup: command failed on the network interface 
+#. text of an error popup: command failed on the network interface
 #: src/complex.ycp:359
 #, ycp-format
 msgid "Command \"%1\" on %2 failed."
@@ -235,17 +239,20 @@ msgstr "Polecenie \"%1\" na %2 nie powiodło się."
 
 #. popup text: really remove FCoE VLAN interface
 #: src/complex.ycp:414
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "Do you really want to remove the FCoE interface %1?"
-msgstr "Czy na pewno chcesz usunąć urządzenie FCoE VLAN na %1?"
+msgstr "Czy na pewno chcesz usunąć interfejs FCoE %1?"
 
-#. popup text continues 
+#. popup text continues
 #: src/complex.ycp:420
 msgid ""
 "Attention:\n"
 "Make sure the interface is not essential for a used device.\n"
 "Removing it may result in an unusable system."
 msgstr ""
+"Uwaga:\n"
+"Należy upewniś się, że interfejs nie jest niezbędny dla używanego urządzenia.\n"
+"Usunięcie go, może spowodować nieprawidłowe działanie systemu."
 
 #. popup text continues
 #: src/complex.ycp:427
@@ -253,26 +260,27 @@ msgid ""
 "Don't remove the interface if it's related\n"
 "to an already activated multipath device."
 msgstr ""
+"Nie należy usuwać interfejsu, jeśli jest on przypisany\n"
+"do aktywowanego urządzenia wielościeżkowego."
 
 #: src/complex.ycp:486
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "Removing of interface %1 failed."
-msgstr "Usuwanie interfejsu %1 nie powiodło się"
+msgstr "Usuwanie interfejsu %1 nie powiodło się."
 
 #: src/complex.ycp:492
-#, fuzzy, ycp-format
+#, ycp-format
 msgid "Destroying interface %1 failed."
-msgstr "Usuwanie interfejsu %1 nie powiodło się"
+msgstr "Usuwanie interfejsu %1 nie powiodło się."
 
 #. text of a warning popup
 #: src/complex.ycp:518
-#, fuzzy
 msgid ""
 "DCB Required is set to \"yes\" but the\n"
 "interface isn't DCB capable."
 msgstr ""
 "DCB Required ustawiony jest na \"tak\", ale\n"
-"interfejs ten nie jest zdolny do DCB"
+"interfejs ten nie jest zdolny do DCB."
 
 #. text of an information (notify)  popup
 #: src/complex.ycp:543
@@ -280,41 +288,42 @@ msgid ""
 "Service 'fcoe' requires enabled service 'lldpad'.\n"
 "Enabling start on boot of service 'lldpad'."
 msgstr ""
+"Usługa \"fcoe\" wymaga działającej usługi \"lldpad\".\n"
+"Włączanie uruchamiania usługi \"lldpad\" w trakcie uruchamiania systemu."
 
 #. radio button: start service on boot
-#: src/dialogs.ycp:46 src/dialogs.ycp:58
+#: src/dialogs.ycp:46
+#: src/dialogs.ycp:58
 msgid "When Booting"
-msgstr ""
+msgstr "W trakcie uruchamiania"
 
 #. radio button: start service manually
-#: src/dialogs.ycp:49 src/dialogs.ycp:61
+#: src/dialogs.ycp:49
+#: src/dialogs.ycp:61
 msgid "Manually"
-msgstr ""
+msgstr "Ręcznie"
 
 #. combo box label: enable FCoE (yes/no)
 #: src/dialogs.ycp:79
-#, fuzzy
 msgid "&FCoE Enable"
-msgstr "Włącz FCoE"
+msgstr "Włącz &FCoE."
 
 #. combo box label: require DCB (yes/no)
 #: src/dialogs.ycp:85
-#, fuzzy
 msgid "&DCB Required"
-msgstr "Wymagane DCB"
+msgstr "Wymagane &DCB"
 
 #. combo box label: AUTO_VLAN setting (yes/no)
 #: src/dialogs.ycp:91
-#, fuzzy
 msgid "&AUTO_VLAN"
-msgstr "AUTO_VLAN"
+msgstr "&AUTO_VLAN"
 
-#. frame containing radio buttons for fcoe service start 
+#. frame containing radio buttons for fcoe service start
 #: src/dialogs.ycp:115
 msgid "FCoE Service Start"
 msgstr "Uruchomienie usługi FCoE"
 
-#. frame containing radio buttons for lldpad service start 
+#. frame containing radio buttons for lldpad service start
 #: src/dialogs.ycp:120
 msgid "Lldpad Service Start"
 msgstr "Uruchomienie usługi Lldpad"
@@ -332,7 +341,7 @@ msgstr "Model"
 msgid "FCoE VLAN Interface"
 msgstr "Interfejs FCoE VLAN"
 
-#. continue column headers 
+#. continue column headers
 #: src/dialogs.ycp:139
 msgid "FCoE Enable"
 msgstr "Włącz FCoE"
@@ -352,16 +361,15 @@ msgstr "Obsługuje DCB"
 #. button labels
 #: src/dialogs.ycp:143
 msgid "Retry &Detection"
-msgstr ""
+msgstr "Ponów wykrywanie"
 
 #: src/dialogs.ycp:144
 msgid "Change &Settings"
 msgstr "Zmiana u&stawień"
 
 #: src/dialogs.ycp:145
-#, fuzzy
 msgid "Create &FCoE Interface"
-msgstr "Utwórz interfejs FCoE &VLAN"
+msgstr "Utwórz interfejs &FCoE"
 
 #: src/dialogs.ycp:146
 msgid "&Remove Interface"
@@ -453,7 +461,6 @@ msgstr ""
 
 #. Summary dialog help 2/3
 #: src/helps.ycp:66
-#, fuzzy
 msgid ""
 "<p><b><big>Adding a fcoe-client:</big></b><br>\n"
 "Choose a fcoe-client from the list of detected fcoe-clients.\n"
@@ -461,7 +468,7 @@ msgid ""
 "Then press <b>Configure</b>.</p>\n"
 msgstr ""
 "<p><b><big>Dodawanie klienta fcoe-client:</big></b><br>\n"
-"Wybierz klienta fcoe-client z listy wykrytych klientów.\n"
+"Należy wybrać klienta fcoe-client z listy wykrytych klientów.\n"
 "Jeśli właściwy klient fcoe-client nie został wykryty automatycznie, należy użyć opcji <b>Inny (nie wykryty)</b>.\n"
 "Następnie należy nacisnąć przycisk <b>Konfiguruj</b>.</p>\n"
 
@@ -478,12 +485,11 @@ msgstr ""
 
 #. Services dialog help 1/3
 #: src/helps.ycp:79
-#, fuzzy
 msgid ""
 "<p><b><big>Starting of services</big><br></b><br>\n"
 "Enable or disable the start of the services <b>fcoe</b> and <b>lldpad</b> at boot time.</p>\n"
 msgstr ""
-"<p><b><big>Uruchamianie usług:</big></b><br>\n"
+"<p><b><big>Uruchamianie usług</big><br></b><br>\n"
 "Istnieje możliwość włączenia/wyłączenia uruchamiania usług \n"
 "<b>fcoe<b> i <b>lidpad</b> podczas startu systemu.<br></p>\n"
 
@@ -500,51 +506,44 @@ msgstr ""
 
 #. Services dialog help 3/3
 #: src/helps.ycp:88
-#, fuzzy
 msgid "<p>The <b>lldpad</b> service provides the <i>Link Layer Discovery Protocol</i> agent daemon <i>lldpad</i>, which informs <i>fcoemon</i> about DCB (Data Center Bridging) features and configuration of the interfaces.</p>"
 msgstr "<p><b>Lldpad</b> usługa obejmuje <i>Link Layer Discovery Protocol</i>  agent demona <i>lldpad</i>, który informuje <i>fcoemon</i> o DCB (Data Center Bridging) funkacjach i konfiguracji interfejsów.</p>"
 
 #. Interfaces dialog help 1/4
 #: src/helps.ycp:91
-#, fuzzy
 msgid "<p><b><big>Network interface overview</big></b></p>"
-msgstr "<p><b><big>Przegląd interfejsu sieciowego</big></b><br></p>"
+msgstr "<p><b><big>Przegląd interfejsu sieciowego</big></b></p>"
 
 #. Interfaces dialog help 2/4
 #: src/helps.ycp:94
-#, fuzzy
 msgid "<p>The interfaces dialog shows all detected netcards including the status of VLAN and FCoE configuration.<br>FCoE is possible if a VLAN interface is configured for FCoE on the switch. For every netcard (network interface), this is shown in column <i>FCoE VLAN Interface</i>.</p>"
 msgstr "<p>Okno dialogowe \"Interfejsy\" zawiera listę wszystkich wykrytych kart sieciowych oraz konfigurację FcoE i VLAN.<br>FCoE można uruchomić, jeśli interfejs VLAN został skonfigurowany do obsługiwania FCoE na switchu. Dla każdej karty sieciowej (interfejsu sieciowego) zostało to pokazane w kolumnie <i>Interfejs FCoE VLAN</i>.</p>"
 
 #. Interfaces dialog help 3/4
 #: src/helps.ycp:97
-#, fuzzy
 msgid ""
 "<p>The values for <i>FCoE VLAN Interface</i> in detail:<br>\n"
 "<b>not available</b>: Fibre Channel over Ethernet is not possible (must be enabled on the switch first).<br>\n"
 "<b>not configured</b>: FCoE is possible but not yet activated. Press <b>Create FCoE VLAN Interface</b> to activate.<br>\n"
 " If the FCoE VLAN interface has already been created, the name is shown in the column, e.g. eth3.200.</p>\n"
 msgstr ""
-"<p>Wartości dla <i>Interfejs FCoE VLAN </i> detale:<br>\n"
+"<p>Wartości dla <i>Interfejs FCoE VLAN </i> w szczególe:<br>\n"
 "<i>niedostępny</i> oznacza, że uruchomienie FCoE nie jest możliwe (najpierw należy uruchomić usługę na switchu)<br>\n"
 "<i>nie skonfigurowano</>: uruchomienie FCoE jest możliwe, ale usługa nie została jeszcze aktywowana, naciśnij przycisk <b>Utwórz interfejs FCoE VLAN</b>, aby aktywować<br>\n"
-"Jeśli interfejs FCoE VLAN został już utworzony, w kolumnie zostanie wyświetlona jego nazwa, np. eth3.200.</p>"
+"Jeśli interfejs FCoE VLAN został już utworzony, w kolumnie zostanie wyświetlona jego nazwa, np. eth3.200.</p>\n"
 
 #. Interfaces dialog help 3/4
 #: src/helps.ycp:104
-#, fuzzy
 msgid "<p>To change the configuration of an existing FCoE VLAN interface, click on<b>Change Settings</b>.</p>"
 msgstr "<p>Aby zmienić konfigurację istniejącego interfejsu FCoE VLAN, naciśnij przycisk <b>Zmień ustawienia<b/>.</p>"
 
 #. Configuration dialog help 1/3
 #: src/helps.ycp:107
-#, fuzzy
 msgid "<p><b><big>General Configuration of FCoE</big></b></p>"
 msgstr "<p><b><big>Globalna konfiguracja FCoE</big></b></p>"
 
 #. Configuration dialog help 2/3
 #: src/helps.ycp:110
-#, fuzzy
 msgid "<p>Configure the general settings for the FCoE system service. The settings are written to '/etc/fcoe/config'.</p>"
 msgstr "<p>W tym miejscu można globalnie skonfigurować ustawienia dla usługi systemowej FCoE. Ustawienia te są zapisywane w pliku \"/etc/fcoe/config\".</p>"
 
@@ -563,7 +562,6 @@ msgstr ""
 
 #. edit dialog help 1/3
 #: src/helps.ycp:120
-#, fuzzy
 msgid "<p>Edit Settings in /etc/fcoe/ethx</p>"
 msgstr "<p>Edycja ustawień w /etc/fcoe/ethx</p>"
 
@@ -597,13 +595,15 @@ msgstr ""
 "Jeśli ustawiony na <i>tak</i>'fcoemon' utworzy interfejs VLAN\n"
 "automatycznie.</p>"
 
-#. Header of tab in tab widget		 
-#: src/wizards.ycp:87 src/wizards.ycp:112
+#. Header of tab in tab widget
+#: src/wizards.ycp:87
+#: src/wizards.ycp:112
 msgid "&Interfaces"
 msgstr "&Interfejsy"
 
-#. Header of tab in tab widget		 
-#: src/wizards.ycp:93 src/wizards.ycp:118
+#. Header of tab in tab widget
+#: src/wizards.ycp:93
+#: src/wizards.ycp:118
 msgid "&Configuration"
 msgstr "Konfigura&cja"
 
