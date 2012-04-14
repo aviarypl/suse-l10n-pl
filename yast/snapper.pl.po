@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-30 11:28+0200\n"
-"PO-Revision-Date: 2011-10-09 16:36+0100\n"
-"Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
+"PO-Revision-Date: 2012-04-14 00:49+0100\n"
+"Last-Translator: Jakub Derda <j.derda@tjgroup.eu>\n"
 "Language-Team: Polish <i18n@suse.de>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,9 +24,8 @@ msgstr "Zrzut \"%1\" nie został odnaleziony."
 
 #. error popup
 #: src/Snapper.ycp:206
-#, fuzzy
 msgid "File /etc/sysconfig/snapper is not available."
-msgstr "Plik /etc/sysconfig/snapper jest niedostępny"
+msgstr "Plik /etc/sysconfig/snapper nie jest dostępny."
 
 #: src/Snapper.ycp:229
 msgid "Reason not known."
@@ -79,7 +78,7 @@ msgstr "Odtwarzanie plików..."
 #: src/Snapper.ycp:334
 #, ycp-format
 msgid "Deleted %1\n"
-msgstr ""
+msgstr "Usunięto %1\n"
 
 #. log entry (%1 is file name)
 #: src/Snapper.ycp:362
@@ -176,9 +175,8 @@ msgstr "Grupa właścicieli została zmieniona z \"%1\" na \"%2\"."
 
 #. button label
 #: src/dialogs.ycp:409
-#, fuzzy
 msgid "R&estore from First"
-msgstr "Odtwórz z pierwszego"
+msgstr "Przywróć z pi&erwszego"
 
 #. button label
 #: src/dialogs.ycp:411
@@ -186,9 +184,8 @@ msgid "Restore"
 msgstr "Odtwórz"
 
 #: src/dialogs.ycp:424
-#, fuzzy
 msgid "Res&tore from Second"
-msgstr "Przywróć z drugiego"
+msgstr "P&rzywróć z drugiego"
 
 #. radio button label
 #: src/dialogs.ycp:447
@@ -250,9 +247,15 @@ msgid ""
 "\n"
 "from current system?"
 msgstr ""
+"Czy na pewno usunąć plik\n"
+"\n"
+"%1\n"
+"\n"
+"z tego systemu?"
 
 #. yes/no question, %1 is file name, %2 is number
-#: src/dialogs.ycp:645 src/dialogs.ycp:657
+#: src/dialogs.ycp:645
+#: src/dialogs.ycp:657
 #, ycp-format
 msgid ""
 "Do you want to copy the file\n"
@@ -261,6 +264,11 @@ msgid ""
 "\n"
 "from snapshot '%2' to current system?"
 msgstr ""
+"Czy skopiować plik\n"
+"\n"
+"%1\n"
+"\n"
+"ze zrzutu '%2' do tego systemu?"
 
 #. popup message
 #: src/dialogs.ycp:685
@@ -283,20 +291,24 @@ msgid ""
 "<p>Files existing in original snapshot will be copied to current system.</p>\n"
 "<p>Files that did not exist in the snapshot will be deleted.</p>Are you sure?"
 msgstr ""
+"<p>Te pliki zostaną przywrócone ze zrzutu '%1':</p>\n"
+"<p>\n"
+"%2\n"
+"</p>\n"
+"<p>Pliki istniejące w oryginalnym zrzucie zostaną skopiowane do tego systemu.</p>\n"
+"<p>Pliki, które nie istniały w zrzucie zostaną usunięte.</p>Czy na pewno kontynuować?"
 
 #. Read dialog help
 #: src/helps.ycp:40
-#, fuzzy
 msgid ""
 "<p><b><big>Reading the list of snapshots</big></b><br>\n"
 "</p>\n"
 msgstr ""
 "<p><b><big>Odczytywanie listy zrzutów</big></b><br>\n"
-"Proszę czekać...<br></p>\n"
+"</p>\n"
 
 #. Summary dialog help:
 #: src/helps.ycp:45
-#, fuzzy
 msgid ""
 "<p><b><big>Snapshots Configuration</big></b><p>\n"
 "<p>The table shows a list of root filesystem snapshots. There are three types\n"
@@ -306,12 +318,14 @@ msgid ""
 "new file system changes in the specified snapshot.</p>\n"
 msgstr ""
 "<p><b><big>Konfiguracja zrzutów</big></b><p>\n"
-"<p>W tabeli widoczna jest lista zrzutów głównego systemu plików. Istnieją trzy rodzaje zrzutów: <pojedynczy>, <b>przed</b> i <p>po</b>. Pojedyncze zrzutu są wykorzystywane do przechowywania stanu systemu w określonym czasie, natomiast zrzuty Przed i Po, służą do określenia zmian dokonanych przez specjalne operacje między tymi zrzutami. Zrzuty Przed i Po wylistowane są w parach.</p>\n"
-"<p>Zaznacz zrzut lub parę zrzutów i naciśnij przycisk <b>Wyświetl zmiany</b>, aby zobaczyć zmiany w systemie plików przedstawione w danym zrzucie.</p>\n"
+"<p>W tabeli widoczna jest lista zrzutów głównego systemu plików. Istnieją trzy rodzaje zrzutów,\n"
+"<b>pojedynczy</b>, <b>przed</b> i <p>po</b>. Pojedyncze zrzutu są wykorzystywane do \n"
+"przechowywania stanu systemu w określonym czasie, podczas gdy zrzuty Przed i Po służą do określenia zmian dokonanych przez specjalne operacje wykonane pomiędzy tymi zrzutami. Zrzuty Przed i Po wyświetlane są w parach.</p>\n"
+"<p>Proszę wybrać zrzut lub parę zrzutów i naciśnąć przycisk <b>Wyświetl zmiany</b>, aby zobaczyć\n"
+"zmiany w systemie plików utrwalone w danym zrzucie.</p>\n"
 
 #. Show snapshot dialog help
 #: src/helps.ycp:54
-#, fuzzy
 msgid ""
 "<p><b><big>Snapshot Overview</big></b><p>\n"
 "<p>\n"
@@ -323,16 +337,14 @@ msgid ""
 msgstr ""
 "<p><b><big>Przegląd zrzutu</big</b><p>\n"
 "<p>\n"
-"W drzewie wyświetlone są pliki w których zaszły zmiany w czasię między utworzeniem pierwszego (\"przed\") i drugiego (\"po\") zrzutu. W prawej cześci, widoczny jest opis wygenerowany w momencie utworzenia pierwszego zrzutu oraz czas\n"
-"utworzenia obydwu zrzutów.\n"
+"W drzewie wyświetlone są pliki zmienione w czasię pomiędzy pierwszym ('przed') i drugim ('po') zrzutem. W prawej cześci widoczny jest opis wygenerowany w momencie utworzenia pierwszego zrzutu oraz czas utworzenia obydwu zrzutów.\n"
 "</p>\n"
 "<p>\n"
-"Po zaznaczeniu pliku w drzewie, można zobaczyć jakie zaszły w nim zmiany. Domyślnie, wyświetlane są zmiany między parą zrzutów, ale możliwe jest porównanie pliku z inną wersją.\n"
-"\v</p>"
+"Po zaznaczeniu pliku w drzewie, można zobaczyć jakie zaszły w nim zmiany. Domyślnie wyświetlane są zmiany między parą zrzutów, ale możliwe jest porównanie pliku z inną wersją.\n"
+"</p>\n"
 
 #. Show snapshot dialog help, alternative for single snapshots
 #: src/helps.ycp:64
-#, fuzzy
 msgid ""
 "<p><b><big>Snapshot Overview</big></b><p>\n"
 "<p>\n"
@@ -344,10 +356,11 @@ msgid ""
 msgstr ""
 "<p><b><big>Przegląd zrzutu</big></b><p>\n"
 "<p>\n"
-"W drzewie wyświetlone są wszzystkie pliki w których zaszły zmiany w czasie między wykonaniem zrzutu i obecnym stanem systemu. W prawej części, widoczny jest opis zrzutu oraz czas jego utworzenia.\n"
+"W drzewie wyświetlone są wszzystkie pliki które różnią się w zrzucie i obecnym stanie systemu. W prawej części widoczny jest opis zrzutu oraz czas jego utworzenia.\n"
+"</p>\n"
 "<p>\n"
-"<p>\n"
-"Zaznaczenie pliku w drzewie, udostępni możliwość zobaczenia różnic jakie zaszły w pliku w czasie miedzy utworzeniem zrzutu, a obecnym stanem systemu."
+"Po zaznaczeniu pliku w drzewie, można zobaczyć różnice pomiędzy wersją utrwaloną w zrzucie a stanem obecnym.\n"
+"</p>\n"
 
 #: src/snapper.ycp:53
 msgid "Configuration of system snapshots"
