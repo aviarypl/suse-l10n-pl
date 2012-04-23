@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: users\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-03-30 11:19+0200\n"
-"PO-Revision-Date: 2012-04-20 19:07+0200\n"
+"PO-Revision-Date: 2012-04-23 20:03+0200\n"
 "Last-Translator: Mariusz Fik <fisiu@opensuse.org>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
 "MIME-Version: 1.0\n"
@@ -605,12 +605,12 @@ msgstr "Wystąpił błąd."
 #. plugin name
 #: src/UsersPluginLDAPPasswordPolicy.pm:147
 msgid "LDAP Password Policy"
-msgstr "Założenia haseł LDAP"
+msgstr "Polityka haseł LDAP"
 
 #. user plugin summary (table item)
 #: src/UsersPluginLDAPPasswordPolicy.pm:156
 msgid "Edit Password Policy"
-msgstr "Edycja założeń haseł"
+msgstr "Edycja polityki haseł"
 
 #. error popup, %s is object DN
 #: src/UsersPluginLDAPPasswordPolicy.pm:239
@@ -636,7 +636,7 @@ msgid ""
 "is not a Password Policy object"
 msgstr ""
 "Obiekt \"%s\"\n"
-"nie jest obiektem założeń haseł."
+"nie jest obiektem polityki haseł."
 
 #. error popup
 #: src/UsersPluginLDAPPasswordPolicy.pm:308
@@ -666,7 +666,7 @@ msgid ""
 "the plug-in for Password Policy is in use.\n"
 msgstr ""
 "Dodanie tej wtyczki jest niemożliwe, jeśli\n"
-"używana jest wtyczka do założeń haseł.\n"
+"używana jest wtyczka do polityki haseł.\n"
 
 #. plugin name
 #: src/UsersPluginQuota.pm:237
@@ -2697,12 +2697,14 @@ msgstr ""
 
 #. Help text 1/6
 #: src/helps.ycp:503
-#, fuzzy
 msgid ""
 "<p>Activate <b>Force Password Change</b> to force the user to change the\n"
 "password at the next login. If <b>Last Password Change</b> is set to\n"
 "<i>Never</i>, the user will be forced to change the password.</p>"
-msgstr "<p>Włączenie opcji <b>Wymuś zmianę hasła</b>, pozwala wymusić na użytkowniku zmianę hasła podczas następnego logowania. Jeśli opcja <b>Ostatnia zmiana hasła</b> jest ustawiona na <i>Nigdy</i>, użytkownik zostanie zmuszony do zmiany hasła.</p>"
+msgstr ""
+"<p>Włączenie opcji <b>Wymuś zmianę hasła</b>, pozwala wymusić na użytkowniku\n"
+"zmianę hasła podczas następnego logowania. Jeśli opcja <b>Ostatnia zmiana hasła</b>\n"
+"jest ustawiona na <i>Nigdy</i>, użytkownik zostanie zmuszony do zmiany hasła.</p>"
 
 #. Help text 2/6
 #: src/helps.ycp:506
@@ -3180,10 +3182,9 @@ msgid ""
 msgstr ""
 "<p>\n"
 "Proszę wybrać metodę szyfrowania haseł dla użytkowników lokalnych \n"
-"i systemowych.\n"
-"<b>DES</b>, domyślna metoda systemu Linux, działa we wszystkich \n"
-"środowiskach sieciowych, ale ogranicza długość hasła do ośmiu lub \n"
-"mniej znaków.\n"
+"i systemowych.\n <b>DES</b>, domyślna metoda systemu Linux,\n"
+"działa we wszystkich środowiskach sieciowych, ale ogranicza długość\n"
+"hasła do co najwyżej ośmiu znaków.\n"
 "</p>\n"
 
 #. Help text for password expert dialog
@@ -3204,9 +3205,8 @@ msgstr ""
 #. Help text for password expert dialog
 #. Help text for password expert dialog 4/5
 #: src/inst_user_first.ycp:224 src/widgets.ycp:181
-#, fuzzy
 msgid "<p><b>SHA-512</b> is the current standard hash method. Using other algorithms is not recommended unless needed for compatibility purposes.</p>"
-msgstr "<p><b>SHA-512</b> jest obowiązującym standardem metody hashowania, wykorzystanie innych algorytmów jest niezalecane, chyba, że dla zachowania kompatybilności.</p>"
+msgstr "<p><b>SHA-512</b> jest aktualną metodą haszowania. Wykorzystanie innych algorytmów jest niezalecane, chyba, że dla zachowania kompatybilności.</p>"
 
 #. help text for main add user dialog
 #: src/inst_user_first.ycp:235
@@ -3242,7 +3242,7 @@ msgstr ""
 #. help text for main add user dialog
 #: src/inst_user_first.ycp:275
 msgid "<p>Check <b>Use this password for system administrator</b> if the same password as entered for the first user should be used for root.</p>"
-msgstr "<p>Proszę zaznaczyć opcję <b>Użyj tego hasła dla administratora systemu</b>, jeśli hasło pierwszego użytkownika ma być użyte również dla użytkownika root</p>"
+msgstr "<p>Należy zaznaczyć opcję <b>Użyj tego hasła dla administratora systemu</b>, jeśli hasło pierwszego użytkownika ma być użyte również dla użytkownika root</p>"
 
 #: src/inst_user_first.ycp:364
 msgid "Expert Settings"
@@ -3312,146 +3312,157 @@ msgstr "Tworzenie nowego użytkownika"
 #: src/ldap_dialogs.ycp:60
 msgid "<p>Select the <b>Password Change Policies</b>, <b>Password Aging Policies</b>, and <b>Lockout Policies</b> tabs to choose LDAP password policy groups of attributes to configure.</p>"
 msgstr ""
+"<p>Należy wybrać kartę <b>Polityka zmiany haseł</b>, <b>Polityka wygasania haseł</b> i <b>Polityka unieważniania haseł</b> aby skonfigurować grupę atrybutów polityki haseł LDAP.</p> "
 
 #. help text for pwdInHistory attribute
 #: src/ldap_dialogs.ycp:66
 msgid "<p>Specify the <b>Maximum Number of Passwords Stored in History</b> to set how many previously used passwords should be saved. Saved passwords may not be used.</p>"
 msgstr ""
+"<p>Parametr <b>Maksymalna liczba haseł przechowywanych w historii</b> określa ile poprzednio użytych haseł będzie zapisanych. Zapisanych haseł nie można użyć.</p>"
 
 #. help text for pwdMustChange attribute
 #: src/ldap_dialogs.ycp:69
 msgid "<p>Check <b>User Must Change Password after Reset</b> to force users to change their passwords after the the password is reset or changed by an administrator.</p>"
 msgstr ""
+"<p>Należy zaznaczyć opcję <b>Użytkownik musi zmienić hasło po zresetowaniu</b>, aby wymusić zmianę hasła przez użytkownika po zresetowaniu lub edytowaniu go przez administratora.</p>"
 
 #. help text for pwdAllowUserChange attribute
 #: src/ldap_dialogs.ycp:72
 msgid "<p>Check <b>User Can Change Password</b> to allow users to change their passwords.</p>"
 msgstr ""
+"<p>Należy zaznaczyć opcję <b>Użytkownik może zmienić hasło</b>, aby zezwolić użytkownikom na zmianę swojego hasła.</p>"
 
 #. help text for pwdSafeModify attribute
 #: src/ldap_dialogs.ycp:75
 msgid "<p>If the existing password must be provided along with the new password, check <b>Old Password Required for Password Change</b>.</p>"
 msgstr ""
+"<p>Jeśli aktualne hasło musi być podane podczas tworzenia nowego, należy zaznaczyć opcję <b>Wymagaj podania starego hasła do jego zmiany</b>.</p>"
 
 #. help text for pwdCheckQuality attribute
 #: src/ldap_dialogs.ycp:78
 msgid "<p>Select whether the password quality should be verified while passwords are modified or added. Select <b>No Checking</b> if passwords should not be checked at all. With <b>Accept Uncheckable Passwords</b>, passwords are accepted even if the check cannot be performed, for example, if the user has provided an encrypted password. With <b>Only Accept Checked Passwords</b> passwords are refused if the quality test fails or the password cannot be checked.</p>"
 msgstr ""
+"<p>Należy określić czy dodawane lub edytowane hasło powinno być sprawdzane. Jeśli hasło nie powinno być w ogóle sprawdzane, należy wybrać <b>Bez sprawdzania</b>."
+"Wybranie <b>Akceptuj niesprawdzone hasła</b> powoduje, że hasła będą akceptowane nawet wtedy, gdy sprawdzanie nie może być wykonane - np. gdy użytkownik użyje hasła zaszyfrowanego. Wybranie <b>Akceptuj &tylko sprawdzone hasła</b> powoduje, że hasła będą odrzucane w przypadku gdy ich jakość będzie wątpliwa lub ich sprawdzenie nie będzie możliwe.</p>"
 
 #. help text for pwdMinLength attribute
 #: src/ldap_dialogs.ycp:81
 msgid "Set the minimum number of characters that must be used in a password in <b>Minimum Password Length</b>.</p>"
 msgstr ""
+"W polu <b>Minimalna długość hasła</b> należy określić minimalną ilość znaków, jaką musi zawierać hasło.</p>"
 
 #. help text for pwdMinAge attribute
 #: src/ldap_dialogs.ycp:84
 msgid "<p><b>Minimum Password Age</b> sets how much time must pass between modifications to the password.</p>"
 msgstr ""
+"<p>Parametr <b>Minimalny wiek hasła</b> określa ile czasu musi upłynąć pomiędzy zmianami hasła.</p>"
 
 #. help text for pwdMaxAge attribute
 #: src/ldap_dialogs.ycp:87
 msgid "<p><b>Maximum Password Age</b> sets how long after modification a password expires.</p>"
 msgstr ""
+"<p>Parametr <b>Maksymalny wiek hasła</b> określa czas po którym zmienione hasła wygaśnie.</p>"
 
 #. help text for pwdExpireWarning attribute
 #: src/ldap_dialogs.ycp:90
-#, fuzzy
 msgid "<p>In <b>Time before Password Expiration to Issue Warning</b> set how long before a password is due to expire that an expiration warning messages should be given to an authenticating user.</p>"
 msgstr ""
-"<p>\n"
-"<b>Ostrzeżenie przed wygaśnięciem</B><BR>\n"
-"Użytkownicy mogą być ostrzegani przed wygaśnięciem swoich haseł.\n"
-"Proszę podać, na ile dni przed wygaśnięciem ma pojawiać się to ostrzeżenie.\n"
-"Podanie wartości -1 wyłącza ostrzeżenia.\n"
-"</p>\n"
+"<p>Parametr <b>Czas do ostrzeżenia przed wygaśnięciem hasła</b> określa ile czasu przed wygaśnięciem hasła powiadomienie powinno być wysłane do użytkownika.</p>"
 
 #. help text for pwdGraceAuthNLimit attribute
 #: src/ldap_dialogs.ycp:93
 msgid "<p>Set the number of times an expired password can be used to authenticate in <b>Allowed Uses of an Expired Password</b>.</p>"
 msgstr ""
+"<p>Wartość opcji <b>Dozwolone użycie przedawnionego hasła</b> pozwala na określenie ile razy przedawnione hasło może zostać użyte do uwierzytelnienia.</p>"
 
 #. help text for pwdLockout attribute
 #: src/ldap_dialogs.ycp:96
 msgid "<p>Check <b>Enable Password Locking</b> to forbid use of a password after a specified number of consecutive failed bind attempts.</p>"
 msgstr ""
+"<p>Zaznaczenie opcji <b>Włącz blokowanie haseł</b> powoduje blokowanie hasła po określonej liczbie nieudanych prób logowania.</p>"
 
 #. help text for pwdMaxFailure attribute
 #: src/ldap_dialogs.ycp:99
 msgid "<p>Set the number of consecutive failed bind  attempts after which the password may not be used to authenticate in <b>Bind Failures to Lock the Password</b>.</p>"
 msgstr ""
+"<p>Liczbę nieudanych prób logowania po których uwierzytelnianie hasłem nie będzie możliwe, należy ustalić w polu <b>Liczba nieudanych prób logowania prowadząca do zablokowania hasła</b>.</p>"
 
 #. help text for pwdLockoutDuration attribute
 #: src/ldap_dialogs.ycp:102
 msgid "<p>Set how long the password cannot be used in <b>Password Lock Duration</b>.</p>"
 msgstr ""
+"<p>Czas przez który nie będzie można używać hasła należy określić w polu <b>Czas trwania blokady hasła</b>.</p>"
 
+# Masło maślane. Nie wiem jak to ogarnąć.
 #. help text for pwdFailureCountInterval attribute
 #: src/ldap_dialogs.ycp:105
+#, fuzzy
 msgid "<p><b>Bind Failures Cache Duration</b> sets how long before password failures are purged from the failure counter even though no successful authentication has occurred.</p>"
 msgstr ""
+"<p><b>Czas pamiętania nieudanych prób logowania</b> ustawia ile czasu przed błędami haseł są one usuwane z licznika błędów, nawet gdy nie nastąpiło udane uwierzytelnienie.</p>"
 
 #. tab label
 #: src/ldap_dialogs.ycp:140
-#, fuzzy
 msgid "&Password Change Policies"
-msgstr "Ostatnia zmiana hasła: %1"
+msgstr "Polityka &zmiany haseł"
 
 #. tab label
 #: src/ldap_dialogs.ycp:142
-#, fuzzy
 msgid "Pa&ssword Aging Policies"
-msgstr "Ustawienia założeń haseł"
+msgstr "Polityka &wygasania haseł"
 
 #. tab label
 #: src/ldap_dialogs.ycp:144
 msgid "&Lockout Policies"
 msgstr ""
+"Polityka &unieważniania haseł"
 
 #. IntField label
 #: src/ldap_dialogs.ycp:173
-#, fuzzy
 msgid "Ma&ximum Number of Passwords Stored in History"
-msgstr "M&aksymalna liczba dni z tym samym hasłem"
+msgstr "Maksy&malna liczba haseł przechowywanych w historii"
 
 #. checkbox label
 #: src/ldap_dialogs.ycp:178
 msgid "U&ser Must Change Password after Reset"
 msgstr ""
+"Użytkownik &musi zmienić hasło po zresetowaniu"
 
 #. checkbox label
 #: src/ldap_dialogs.ycp:183
-#, fuzzy
 msgid "&User Can Change Password"
-msgstr "&Resetuj hasło"
+msgstr "&Użytkownik może zmienić hasło"
 
 #. checkbox label
 #: src/ldap_dialogs.ycp:188
-#, fuzzy
 msgid "&Old Password Required for Password Change"
-msgstr "Wymuś zmianę hasła"
+msgstr "Wymagaj podania &starego hasła do jego zmiany"
 
 #. frame label
 #: src/ldap_dialogs.ycp:192
-#, fuzzy
 msgid "Password Quality Checking"
-msgstr "Ustawienia założeń haseł"
+msgstr "Sprawdzanie jakości hasła"
 
 #: src/ldap_dialogs.ycp:196
 msgid "&No Checking"
 msgstr ""
+"&Bez sprawdzania"
 
 #: src/ldap_dialogs.ycp:198
 msgid "Acc&ept Uncheckable Passwords"
 msgstr ""
+"Akceptuj &niesprawdzone hasła"
 
 #: src/ldap_dialogs.ycp:201
 msgid "&Only Accept Checked Passwords"
 msgstr ""
+"Akceptuj &tylko sprawdzone hasła"
 
 #. IntField label
 #: src/ldap_dialogs.ycp:206
 msgid "&Minimum Password Length"
 msgstr ""
+"&Minimalna długość hasła"
 
 #: src/ldap_dialogs.ycp:226 src/users_plugin_quota.ycp:102
 msgid "Days"
@@ -3471,53 +3482,53 @@ msgstr "Sekund"
 
 #. frame label
 #: src/ldap_dialogs.ycp:248
-#, fuzzy
 msgid "Minimum Password Age"
-msgstr "Po&twierdzenie hasła"
+msgstr "Minimalny wiek hasła"
 
 #. frame label
 #: src/ldap_dialogs.ycp:251
 msgid "Maximum Password Age"
 msgstr ""
+"Maksymalny wiek hasła"
 
 #. frame label
 #: src/ldap_dialogs.ycp:255
-#, fuzzy
 msgid "Time before Password Expiration to Issue Warning"
-msgstr "Ostrzeż na &podaną liczbę dni przed wygaśnięciem hasła"
+msgstr "Czas do ostrzeżenia przed wygaśnięciem hasła"
 
 #. IntField label
 #: src/ldap_dialogs.ycp:259
 msgid "Allowed Uses of an Expired Password"
 msgstr ""
+"Dozwolone użycie przedawnionego hasła"
 
 #. check box label
 #: src/ldap_dialogs.ycp:276
-#, fuzzy
 msgid "Enable Password Locking"
-msgstr "Edycja założeń haseł"
+msgstr "Włącz blokowanie haseł"
 
 #. intField label
 #: src/ldap_dialogs.ycp:281
 msgid "Bind Failures to Lock the Password"
 msgstr ""
+"Liczba nieudanych prób logowania prowadząca do zablokowania hasła"
 
 #. frame label
 #: src/ldap_dialogs.ycp:284
-#, fuzzy
 msgid "Password Lock Duration"
-msgstr "Szyfrowanie haseł"
+msgstr "Czas trwania blokady hasła"
 
 #. frame label
 #: src/ldap_dialogs.ycp:288
+#, fuzzy
 msgid "Bind Failures Cache Duration"
 msgstr ""
+"Czas pamiętania nieudanych prób logowania"
 
 #. dialog label
 #: src/ldap_dialogs.ycp:308
-#, fuzzy
 msgid "Password Policy Configuration"
-msgstr "Ustawienia założeń haseł"
+msgstr "Konfiguracja polityki haseł"
 
 #. error popup, %1 is attribute name
 #: src/ldap_dialogs.ycp:362
@@ -3526,12 +3537,13 @@ msgid ""
 "The \"%1\" attribute is mandatory.\n"
 "Enter a value."
 msgstr ""
+"Atrybut \"%1\" jest obowiązkowy.\n"
+"Należy wprowadzić wartość."
 
 #. help text caption
 #: src/ldap_dialogs.ycp:479
-#, fuzzy
 msgid "<p><b>Home Directories</b></p>"
-msgstr "<p><b>Ustawienia logowania</b></p>"
+msgstr "<p><b>Katalogi domowe</b></p>"
 
 #. help text
 #: src/ldap_dialogs.ycp:482
@@ -3541,6 +3553,10 @@ msgid ""
 "action.  It is only information for the YaST users module, which can manage\n"
 "user home directories.</p>\n"
 msgstr ""
+"<p>Jeśli katalogi domowe użytkowników LDAP powinny być przechowywane na tym komputerze,\n"
+"należy wybrać odpowiednią opcję. Zmiana tej wartości nie powoduje żadnej bezpośredniej akcji.\n"
+"Jest to tylko informacja dla modułu YaST - Zarządzanie użytkownikami i grupami, który umożliwia\n"
+"zarządzanie katalogami domowymi użytkowników.</p>\n"
 
 #. help text
 #: src/ldap_dialogs.ycp:489
@@ -3549,15 +3565,15 @@ msgid ""
 "LDAP server. You will be asked for the password if you are not connected yet or\n"
 "have changed your configuration.</p>\n"
 msgstr ""
+"<p> Aby skonfigurować ustawienia przechowywane na serwerze LDAP, należy\n"
+"nacisnąć przycisk <b>Konfiguruj</b>. Jeśli połączenie nie jest jeszcze aktywne\n"
+"lub konfiguracja uległa zmianie wymagane będzie podanie hasła.</p>\n"
 
 #. password policy help text caption
 #: src/ldap_dialogs.ycp:495
-#, fuzzy
 msgid "<p><b>Password Policy</b></p>"
 msgstr ""
-"<p>\n"
-"<b>Ustawienia zaawansowane.</b>\n"
-"</p>"
+"<p><b>Polityka haseł</b></p>"
 
 #. password policy help
 #: src/ldap_dialogs.ycp:498
@@ -3565,53 +3581,54 @@ msgid ""
 "<p>Configure the selected password policy with <b>Edit</b>. Use <b>Add</b> to add a new password policy. The configuration is only possible,\n"
 "  if the password policies are already enabled on the LDAP server.</p>"
 msgstr ""
+"<p>Przycisk <b>Edytuj</b> umożliwia konfigurację wybranej polityki haseł. Przycisk <b>Dodaj</b> umożliwia dodanie nowej polityki haseł.\n"
+"Konfiguracja jest możliwa tylko wtedy, gdy polityki haseł zostały włączone na serwerze LDAP.</p>"
 
 #. checkbox label
 #: src/ldap_dialogs.ycp:504
-#, fuzzy
 msgid "&Home Directories on This Machine"
-msgstr "Tryb uprawnień katalogu &domowego"
+msgstr "Katalogi &domowe na tym komputerze"
 
 #. pushbutton label
 #: src/ldap_dialogs.ycp:509
 msgid "Configure User Management &Settings..."
 msgstr ""
+"Konfiguracja ustawień zarządzania użytkownikami..."
 
 #. table header
 #: src/ldap_dialogs.ycp:513
-#, fuzzy
 msgid "Password Policy"
-msgstr "Założenia haseł LDAP"
+msgstr "Polityka haseł"
 
 #. dialog title
 #: src/ldap_dialogs.ycp:527
-#, fuzzy
 msgid "LDAP Administration Settings"
-msgstr "Ust&awienia uwierzytelniania"
+msgstr "Ustawienia administracji LDAP"
 
 #: src/ldap_dialogs.ycp:548
-#, fuzzy
 msgid "Name of Password Policy Object"
-msgstr "DN o&biektu założeń haseł"
+msgstr "Nazwa obiektu polityki haseł"
 
 #. text label,suffix will follow in next label
 #: src/ldap_dialogs.ycp:551 src/ldap_dialogs.ycp:583
 msgid "Suffix:"
 msgstr ""
+"Przyrostek:"
 
 #. pushbutton label
 #: src/ldap_dialogs.ycp:554 src/ldap_dialogs.ycp:586
 msgid "Change Suffix"
 msgstr ""
+"Zmiana przyrostka"
 
 #: src/ldap_dialogs.ycp:597
-#, fuzzy, ycp-format
+#, ycp-format
 msgid ""
 "The Policy '%1' already exists.\n"
 "Please select another one."
 msgstr ""
-"Katalog domowy (%1) już istnieje.\n"
-"Czy użyć go mimo to?"
+"Polityka '%1' już istnieje.\n"
+"Należy wybrać inną."
 
 #. translators: command line help text for Users module
 #: src/users.ycp:93
@@ -3794,16 +3811,16 @@ msgstr "Dodatkowe ustawienia LDAP"
 #. helptext
 #: src/users_plugin_ldap_passwordpolicy.ycp:81
 msgid "<p>Assign a password policy object to this user in <b>DN of Password Policy object</b>. Activate <b>Reset Password</b> to reset the password of modified user.</p>"
-msgstr "<p>Do przypisania obiektu polityki haseł dla tego użytkownika służy <b>DN obiektu założeń haseł</b>. Wybranie <b>Wyzeruj hasło</b> spowoduje wyzerowanie hasła edytowanego konta użytkownika.</p>"
+msgstr "<p>Do przypisania obiektu polityki haseł dla tego użytkownika służy <b>DN obiektu polityki haseł</b>. Wybranie <b>Resetuj hasło</b> spowoduje zresetowanie hasła edytowanego konta użytkownika.</p>"
 
 #. check box label
 #: src/users_plugin_ldap_passwordpolicy.ycp:93
 msgid "Use &Default Password Policy"
-msgstr "Użyj &domyślnych założeń haseł"
+msgstr "Użyj &domyślnej polityki haseł"
 
 #: src/users_plugin_ldap_passwordpolicy.ycp:98
 msgid "DN of &Password Policy object"
-msgstr "DN o&biektu założeń haseł"
+msgstr "DN &obiektu polityki haseł"
 
 #: src/users_plugin_ldap_passwordpolicy.ycp:105
 msgid "&Reset Password"
@@ -3812,7 +3829,7 @@ msgstr "&Resetuj hasło"
 #. dialog caption
 #: src/users_plugin_ldap_passwordpolicy.ycp:115
 msgid "Password Policy Settings"
-msgstr "Ustawienia założeń haseł"
+msgstr "Ustawienia polityki haseł"
 
 #. dialog caption
 #: src/users_plugin_ldap_shadowaccount.ycp:157
@@ -3821,9 +3838,8 @@ msgstr "Ustawienia kont shadow"
 
 #. helptext for quota
 #: src/users_plugin_quota.ycp:138
-#, fuzzy
 msgid "<p>Configure quota settings for the user on selected file systems.</p>"
-msgstr "<p>W tym miejscu można konfigurować ustawienia limitu dyskowego użytkownika w wybranych systemach plików .</p>"
+msgstr "<p>Tutaj można skonfigurować ustawienia limitu dyskowego dla użytkownika na wybranych systemach plików.</p>"
 
 #. helptext for quota, cont.
 #: src/users_plugin_quota.ycp:141
@@ -3832,7 +3848,7 @@ msgid ""
 "user may have on this file system. Additionally, you can define an inode limit specifying the number of inodes the user may have on the file system.</p>\n"
 msgstr ""
 "<p>Określ rozmiar poprzez podanie liczby 1 kb bloków jaką użytkownik może posiadać\n"
-"w systemie plików. Dodatkowo można określić liczbę i-węzłów, jaki może posiadać użytkownik w systemie plików.</p>\n"
+"w systemie plików. Dodatkowo można określić liczbę i-węzłów, jaką może posiadać użytkownik w systemie plików.</p>\n"
 
 #. helptext for quota, cont.
 #: src/users_plugin_quota.ycp:146
@@ -3846,19 +3862,17 @@ msgstr "<p>Gdy  tylko użytkownik przekroczy miękki limit, pola do wprowadzenia
 
 #. helptext for quota
 #: src/users_plugin_quota.ycp:154
-#, fuzzy
 msgid "<p>Configure quota settings for the group on selected file systems.</p>"
-msgstr "<p>Tutaj można skonfigurować ustawienia limitu dyskowego grup w wybranych systemach plików.</p>"
+msgstr "<p>Tutaj można skonfigurować ustawienia limitu dyskowego dla grupy na wybranych systemach plików.</p>"
 
 #. helptext for quota, cont.
 #: src/users_plugin_quota.ycp:157
-#, fuzzy
 msgid ""
 "<p>Define a size limit by specifying the number of 1 kB blocks the\n"
 "group may use on this file system. Additionally, you can define an inode limit specifying the number of inodes the group may use on the file system.</p>\n"
 msgstr ""
-"<p>Proszę zdefiniować limit rozmiaru poprzez określenie liczby 1 kilobajtowych bloków, jaką grupa może posiadać\n"
-"w tym systemie plików. Dodatkowo można zdefiniować limit i-węzłów systemu plików, jaki może posiadać grupa.</p>\n"
+"<p>Określ rozmiar poprzez podanie liczby 1 kb bloków jaką grupa może posiadać,\n"
+"w systemie plików. Dodatkowo można określić liczbę i-węzłów, jaką może posiadać grupa w systemie plików.</p>\n"
 
 #. helptext for quota, cont.
 #: src/users_plugin_quota.ycp:162
@@ -3892,9 +3906,8 @@ msgstr "&Twardy limit"
 
 #. frame label
 #: src/users_plugin_quota.ycp:234
-#, fuzzy
 msgid "I-nodes Limit"
-msgstr "Limity i-węzłów"
+msgstr "Limit i-węzłów"
 
 #. intfield label
 #: src/users_plugin_quota.ycp:237
@@ -3908,7 +3921,6 @@ msgstr "Twar&dy limit"
 
 #. error popup
 #: src/users_plugin_quota.ycp:286
-#, fuzzy
 msgid "Soft limit cannot be higher than the hard limit."
 msgstr "Miękki limit nie może być większy niż twardy limit."
 
@@ -4146,14 +4158,13 @@ msgstr ""
 
 #. help text 2/3
 #: src/widgets.ycp:258
-#, fuzzy
 msgid ""
 "<p>It seems that you are running a NIS server. In some network environments,\n"
 "you might be unable to log in to a NIS client when a user password is\n"
 "encrypted with a method other than DES.\n"
 "</p>\n"
 msgstr ""
-"<p>Wygląda na to, że uruchomiony jest serwrr NIS. W niektórych środowiskach \n"
+"<p>Wygląda na to, że uruchomiony jest serwer NIS. W niektórych środowiskach \n"
 "sieciowych zalogowanie się na klienta NIS może być niemożliwe, jeśli hasła \n"
 "użytkowników są szyfrowane inną metodą niż DES.\n"
 "</p>\n"
