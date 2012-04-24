@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bootloader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-03-30 11:18+0200\n"
+"POT-Creation-Date: 2012-04-20 13:32+0200\n"
 "PO-Revision-Date: 2012-04-12 22:39+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
@@ -137,10 +137,11 @@ msgstr ""
 #. Message that will be displayed along with information
 #. how the boot loader was installed
 #: src/clients/bootloader_finish.ycp:154
+#, fuzzy, ycp-format
 msgid ""
 "The system will reboot now.\n"
 "After reboot, reconnect and run the following:\n"
-"/usr/lib/YaST2/startup/YaST2.ssh"
+"%1"
 msgstr ""
 "System zostanie teraz ponownie uruchomiony.\n"
 "Po wznowieniu pracy komputera proszę\n"
@@ -863,7 +864,7 @@ msgid "Enable Red&undancy for MD Array"
 msgstr "Włącz nadmiarowość dla tablicy MD"
 
 #. push button
-#: src/grub/options.ycp:653 src/routines/global_widgets.ycp:786
+#: src/grub/options.ycp:653 src/routines/global_widgets.ycp:802
 msgid "Boot Loader Installation &Details"
 msgstr "Szczegóły &instalacji programu rozruchowego"
 
@@ -875,7 +876,7 @@ msgstr "Główne sektory startowe (MBR) dysków %1"
 
 #. summary text, %1 is bootloader name (eg. LILO)
 #: src/modules/BootCommon.ycp:912 src/modules/BootGRUB.ycp:736
-#: src/modules/BootGRUB2.ycp:134
+#: src/modules/BootGRUB2.ycp:158 src/modules/BootGRUB2EFI.ycp:151
 #, ycp-format
 msgid "Boot Loader Type: %1"
 msgstr "Typ programu rozruchowego: %1"
@@ -976,24 +977,24 @@ msgstr "Uruchamianie systemu z partycji \"/\" jest wyłączone (<a href=\"enable
 msgid "Change Location: %1"
 msgstr "Zmiana lokalizacji: %1"
 
-#: src/modules/BootGRUB.ycp:744 src/modules/BootGRUB2.ycp:139
+#: src/modules/BootGRUB.ycp:744 src/modules/BootGRUB2.ycp:163
 msgid " (\"/boot\")"
 msgstr " (\"/boot\")"
 
-#: src/modules/BootGRUB.ycp:746 src/modules/BootGRUB2.ycp:141
+#: src/modules/BootGRUB.ycp:746 src/modules/BootGRUB2.ycp:165
 msgid " (extended)"
 msgstr " (rozszerzona)"
 
-#: src/modules/BootGRUB.ycp:748 src/modules/BootGRUB2.ycp:143
+#: src/modules/BootGRUB.ycp:748 src/modules/BootGRUB2.ycp:167
 msgid " (\"/\")"
 msgstr " (\"/\")"
 
-#: src/modules/BootGRUB.ycp:750 src/modules/BootGRUB2.ycp:145
+#: src/modules/BootGRUB.ycp:750 src/modules/BootGRUB2.ycp:169
 msgid " (MBR)"
 msgstr " (MBR)"
 
 #. FIXME: should we translate all devices to names and add MBR suffixes?
-#: src/modules/BootGRUB.ycp:755 src/modules/BootGRUB2.ycp:150
+#: src/modules/BootGRUB.ycp:755 src/modules/BootGRUB2.ycp:174
 #, ycp-format
 msgid "Status Location: %1"
 msgstr "Status lokalizacji: %1"
@@ -1619,7 +1620,7 @@ msgid "Expert Manual Configuration"
 msgstr "Zaawansowana konfiguracja ręczna"
 
 #. menu button
-#: src/routines/global_widgets.ycp:113 src/routines/global_widgets.ycp:595
+#: src/routines/global_widgets.ycp:113 src/routines/global_widgets.ycp:611
 msgid "Other"
 msgstr "Inne"
 
@@ -1650,7 +1651,7 @@ msgid "Label"
 msgstr "Etykieta"
 
 #. table header
-#: src/routines/global_widgets.ycp:229 src/routines/global_widgets.ycp:715
+#: src/routines/global_widgets.ycp:229 src/routines/global_widgets.ycp:731
 msgid "Type"
 msgstr "Typ"
 
@@ -1697,8 +1698,21 @@ msgstr ""
 "\n"
 "Kontynuować?\n"
 
+#: src/routines/global_widgets.ycp:334
+#, fuzzy
+msgid ""
+"\n"
+"The grub2-efi is still under develope and test.\n"
+"\n"
+"Proceed?\n"
+msgstr ""
+"\n"
+"Program GRUB2 jest wciaż w fazie rozwoju i testowania.\n"
+"\n"
+"Kontynuować?\n"
+
 #. continue/cancel pop-up
-#: src/routines/global_widgets.ycp:336
+#: src/routines/global_widgets.ycp:352
 msgid ""
 "\n"
 "ELILO supports only the EFI boot architecture. If yor\n"
@@ -1710,7 +1724,7 @@ msgstr ""
 " wbudowane jej nie wspiera, komputer nie zostanie uruchomiony."
 
 #. continue/cancel pop-up
-#: src/routines/global_widgets.ycp:347
+#: src/routines/global_widgets.ycp:363
 msgid ""
 "\n"
 "Bootloader you selected does not support the EFI boot\n"
@@ -1724,7 +1738,7 @@ msgstr ""
 "komputer nie zostanie uruchomiony."
 
 #. warning - popup, followed by radio buttons
-#: src/routines/global_widgets.ycp:359
+#: src/routines/global_widgets.ycp:375
 msgid ""
 "\n"
 "You chose to change your boot loader. When converting \n"
@@ -1747,87 +1761,87 @@ msgstr ""
 
 #. radiobutton
 #. menubutton item, keep as short as possible
-#: src/routines/global_widgets.ycp:376 src/routines/global_widgets.ycp:556
+#: src/routines/global_widgets.ycp:392 src/routines/global_widgets.ycp:572
 msgid "&Propose New Configuration"
 msgstr "Za&proponuj nową konfigurację"
 
 #. radiobutton
-#: src/routines/global_widgets.ycp:379
+#: src/routines/global_widgets.ycp:395
 msgid "Co&nvert Current Configuration"
 msgstr "Ko&nwertuj aktualną konfigurację"
 
 #. radiobutton
-#: src/routines/global_widgets.ycp:383
+#: src/routines/global_widgets.ycp:399
 msgid "&Start New Configuration from Scratch"
 msgstr "Zacznij nową konfigurację od pod&staw"
 
 #. radiobutton
-#: src/routines/global_widgets.ycp:387
+#: src/routines/global_widgets.ycp:403
 msgid "&Read Configuration Saved on Disk"
 msgstr "Odczytaj konfigu&rację zapisaną na dysku"
 
 #. radiobutton
-#: src/routines/global_widgets.ycp:393
+#: src/routines/global_widgets.ycp:409
 msgid "Res&tore Configuration Saved before Conversion"
 msgstr "Przywróć konfigurację zapi&saną przed konwersją"
 
 #. popup message
-#: src/routines/global_widgets.ycp:480
+#: src/routines/global_widgets.ycp:496
 msgid "Select the boot loader before editing sections."
 msgstr "Przed edycją sekcji proszę wybrać program rozruchowy."
 
 #. pushbutton
 #. menu button entry
-#: src/routines/global_widgets.ycp:530 src/routines/global_widgets.ycp:551
+#: src/routines/global_widgets.ycp:546 src/routines/global_widgets.ycp:567
 msgid "E&dit Configuration Files"
 msgstr "E&dytuj pliki konfiguracyjne"
 
 #. menubutton item, keep as short as possible
-#: src/routines/global_widgets.ycp:562
+#: src/routines/global_widgets.ycp:578
 msgid "&Start from Scratch"
 msgstr "Zacznij od pod&staw"
 
 #. menubutton item, keep as short as possible
-#: src/routines/global_widgets.ycp:569
+#: src/routines/global_widgets.ycp:585
 msgid "&Reread Configuration from Disk"
 msgstr "Ponownie odczytaj konfigu&rację z dysku"
 
 #. menubutton item, keep as short as possible
-#: src/routines/global_widgets.ycp:581
+#: src/routines/global_widgets.ycp:597
 msgid "Restore MBR of Hard Disk"
 msgstr "Przywróć główny sektor startowy dysku"
 
 #. menubutton item, keep as short as possible
-#: src/routines/global_widgets.ycp:588
+#: src/routines/global_widgets.ycp:604
 msgid "Write bootloader boot code to disk"
 msgstr "Zapisz program rozruchowy na dysku"
 
 #. message popup
-#: src/routines/global_widgets.ycp:624
+#: src/routines/global_widgets.ycp:640
 msgid "MBR restored successfully."
 msgstr "Główny sektor startowy odtworzony pomyślnie."
 
 #. message popup
-#: src/routines/global_widgets.ycp:627
+#: src/routines/global_widgets.ycp:643
 msgid "Failed to restore MBR."
 msgstr "Odtworzenie głównego sektora startowego nie powiodło się."
 
-#: src/routines/global_widgets.ycp:655
+#: src/routines/global_widgets.ycp:671
 msgid "Writing bootloader settings failed."
 msgstr "Zapisanie ustawień programu rozruchowego nie powiodło się."
 
 #. tab header
-#: src/routines/global_widgets.ycp:700
+#: src/routines/global_widgets.ycp:716
 msgid "&Section Management"
 msgstr "Zarządzanie &sekcjami"
 
 #. tab header
-#: src/routines/global_widgets.ycp:712
+#: src/routines/global_widgets.ycp:728
 msgid "Boot Loader &Installation"
 msgstr "&Instalacja programu rozruchowego"
 
 #. push button
-#: src/routines/global_widgets.ycp:776
+#: src/routines/global_widgets.ycp:792
 msgid "Boot &Loader Options"
 msgstr "Opcje programu ro&zruchowego"
 
