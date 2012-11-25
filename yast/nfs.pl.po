@@ -5,23 +5,23 @@ msgid ""
 msgstr ""
 "Project-Id-Version: nfs\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-20 13:35+0200\n"
+"POT-Creation-Date: 2012-10-24 13:25+0200\n"
 "PO-Revision-Date: 2012-04-14 18:21+0100\n"
 "Last-Translator: Jakub Derda <j.derda@tjgroup.eu>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 
 #. error popup message
-#: src/Nfs.ycp:360
+#: src/Nfs.ycp:374
 #, ycp-format
 msgid "Unable to create directory '%1'."
 msgstr "Nie można utworzyć katalogu '%1'."
 
 #. error popup message
-#: src/Nfs.ycp:372
+#: src/Nfs.ycp:386
 msgid ""
 "Unable to write to /etc/fstab.\n"
 "No changes will be made to the\n"
@@ -32,52 +32,52 @@ msgstr ""
 "konfiguracji klienta NFS.\n"
 
 #. dialog label
-#: src/Nfs.ycp:413
+#: src/Nfs.ycp:429
 msgid "Writing NFS Configuration"
 msgstr "Zapisywanie konfiguracji NFS"
 
 #. progress stage label
-#: src/Nfs.ycp:415
+#: src/Nfs.ycp:431
 msgid "Stop services"
 msgstr "Zatrzymanie usług"
 
 #. progress stage label
-#: src/Nfs.ycp:417
+#: src/Nfs.ycp:433
 msgid "Start services"
 msgstr "Uruchomienie usług"
 
 #. progress step label
-#: src/Nfs.ycp:420
+#: src/Nfs.ycp:436
 msgid "Stopping services..."
 msgstr "Zatrzymywanie usług..."
 
 #. progress step label
-#: src/Nfs.ycp:422
+#: src/Nfs.ycp:438
 msgid "Starting services..."
 msgstr "Uruchamianie usług..."
 
 #. final progress step label
-#: src/Nfs.ycp:424
+#: src/Nfs.ycp:440
 msgid "Finished"
 msgstr "Zakończono"
 
 #. help text
-#: src/Nfs.ycp:428
+#: src/Nfs.ycp:444
 msgid "Writing NFS client settings. Please wait..."
 msgstr "Zapisywanie ustawień klienta NFS. Proszę czekać..."
 
 #. error popup message
-#: src/Nfs.ycp:449
+#: src/Nfs.ycp:465
 msgid "Unable to mount the NFS entries from /etc/fstab."
 msgstr "Nie można zamontować pozycji NFS z pliku /etc/fstab."
 
 #. summary header
-#: src/Nfs.ycp:475
+#: src/Nfs.ycp:491
 msgid "NFS Entries"
 msgstr "Pozycje NFS"
 
 #. summary item, %1 is a number
-#: src/Nfs.ycp:479
+#: src/Nfs.ycp:495
 #, ycp-format
 msgid "%1 entries configured"
 msgstr "%1 pozycje skonfigurowane"
@@ -174,19 +174,26 @@ msgid "File system ID, supported nfs and nfs4. Default value is nfs."
 msgstr "Identyfikator systemu plików, obsługiwane są systemy nfs oraz nfs4. Domyślna wartość to nfs."
 
 #. error popup message
-#: src/routines.ycp:96
-#, ycp-format
+#: src/routines.ycp:100
+#, fuzzy, ycp-format
+#| msgid ""
+#| "The hostname entered is invalid. It must be\n"
+#| "shorter than 50 characters and only use\n"
+#| "0-9, A-Z, a-z, dots, -, and _.:"
 msgid ""
 "The hostname entered is invalid. It must be\n"
 "shorter than 50 characters and only use\n"
-"0-9, A-Z, a-z, dots, -, and _.:"
+"valid IPv4, IPv6 or domain name.\n"
+"Valid IPv4: %1\n"
+"Valid IPv6: %2\n"
+"Valid domain: %3"
 msgstr ""
 "Podana nazwa komputera jest nieprawidłowa. Musi być ona\n"
 "krótsza niż 50 znaków i zawierać\n"
 "wyłącznie znaki 0-9, A-Z, a-z, kropki, - oraz _.:"
 
 #. error popup message
-#: src/routines.ycp:117
+#: src/routines.ycp:125
 #, ycp-format
 msgid ""
 "fstab already contains an entry\n"
@@ -196,7 +203,7 @@ msgstr ""
 "z miejscem montowania '%1'."
 
 #. error popup message (spaces are now allowed)
-#: src/routines.ycp:138
+#: src/routines.ycp:146
 #, ycp-format
 msgid ""
 "The path entered is invalid.\n"
@@ -208,25 +215,25 @@ msgstr ""
 "i musi zaczynać się od ukośnika (/)."
 
 #. To translators: error popup
-#: src/routines.ycp:153
+#: src/routines.ycp:161
 msgid "Empty option strings are not allowed."
 msgstr "Pusty ciąg znaków dla opcji jest niedozwolony."
 
 #. FIXME: this also triggers for "intr=bogus"
 #. To translators: error popup
-#: src/routines.ycp:192
+#: src/routines.ycp:203
 #, ycp-format
 msgid "Unknown option: %1"
 msgstr "Nieznana opcja: %1"
 
 #. To translators: error popup
-#: src/routines.ycp:194
+#: src/routines.ycp:205
 #, ycp-format
 msgid "Invalid option: %1"
 msgstr "Błędna opcja: %1"
 
 #. To translators: error popup
-#: src/routines.ycp:196
+#: src/routines.ycp:207
 #, ycp-format
 msgid "Empty value for option: %1"
 msgstr "Pusta wartość dla opcji: %1"
@@ -433,21 +440,25 @@ msgstr "Włącz NFSv4"
 msgid "NFSv4 Domain Name"
 msgstr "Nazwa Domeny NFSv4"
 
-#: src/ui.ycp:576
+#: src/ui.ycp:564
+msgid "Enable &GSS Security"
+msgstr "Włącz zabezpieczenia &GSS"
+
+#: src/ui.ycp:578
 msgid "&NFS Shares"
 msgstr "Udziały &NFS"
 
-#: src/ui.ycp:577
+#: src/ui.ycp:579
 msgid "NFS &Settings"
 msgstr "&Ustawienia NFS"
 
-#: src/ui.ycp:659
+#: src/ui.ycp:663
 #, ycp-format
 msgid "Really delete %1?"
 msgstr "Na pewno usunąć %1?"
 
 #. dialog heading
-#: src/ui.ycp:701
+#: src/ui.ycp:705
 msgid "NFS Client Configuration"
 msgstr "Konfiguracja klienta NFS"
 

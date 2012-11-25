@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: country\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-20 13:32+0200\n"
+"POT-Creation-Date: 2012-10-25 15:48+0200\n"
 "PO-Revision-Date: 2012-04-12 22:39+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
@@ -252,6 +252,31 @@ msgstr "Chiński uproszczony"
 msgid "Romanian"
 msgstr "rumuński"
 
+#. keyboard layout
+#: keyboard/data/keyboard_raw.ycp:705
+msgid "US International"
+msgstr ""
+
+#. label text: user can choose the keyboard from the updated system
+#. or continue with the one defined by his language.
+#. 2 radio-buttons follow this label.
+#. Such keyboard layout is used only for the time of the update,
+#. it is not saved to the system.
+#: keyboard/src/Keyboard.ycp:1392
+msgid ""
+"You are currently using a keyboard layout\n"
+"different from the one in the system to update.\n"
+"Select the layout to use during update:"
+msgstr ""
+"Obecnie używany jest układ klawiatury inny niż w aktualizowanym systemie.\n"
+"Proszę wybrać układ, jaki ma być używany podczas aktualizacji:"
+
+#. summary label
+#: keyboard/src/Keyboard.ycp:1465 keyboard/src/keyboard.ycp:116
+#, ycp-format
+msgid "Current Keyboard Layout: %1"
+msgstr "Aktualny układ klawiatury: %1"
+
 #. help text for keyboard expert screen
 #: keyboard/src/dialogs.ycp:52
 msgid ""
@@ -352,9 +377,8 @@ msgstr "&Wyłącz CapsLock"
 #. title for selection box 'keyboard layout'
 #. menue label text
 #. menu button label
-#: keyboard/src/dialogs.ycp:196
-#: keyboard/src/proposal/keyboard_proposal.ycp:106
-#: language/src/proposal/country_simple_proposal.ycp:71
+#: keyboard/src/dialogs.ycp:196 keyboard/src/keyboard_proposal.ycp:106
+#: language/src/country_simple_proposal.ycp:71
 msgid "&Keyboard Layout"
 msgstr "Układ &klawiatury"
 
@@ -425,12 +449,6 @@ msgstr ""
 msgid "System Keyboard Configuration"
 msgstr "Konfiguracja klawiatury"
 
-#. summary label
-#: keyboard/src/keyboard.ycp:116 keyboard/src/modules/Keyboard.ycp:1465
-#, ycp-format
-msgid "Current Keyboard Layout: %1"
-msgstr "Aktualny układ klawiatury: %1"
-
 #. error message (%1 is given layout); do not translate 'list'
 #: keyboard/src/keyboard.ycp:143
 #, ycp-format
@@ -462,24 +480,85 @@ msgstr "Wyświetl wszystkie dostępne układy klawiatury"
 msgid "New keyboard layout"
 msgstr "Nowy układ klawiatury"
 
-#. label text: user can choose the keyboard from the updated system
-#. or continue with the one defined by his language.
-#. 2 radio-buttons follow this label.
-#. Such keyboard layout is used only for the time of the update,
-#. it is not saved to the system.
-#: keyboard/src/modules/Keyboard.ycp:1392
-msgid ""
-"You are currently using a keyboard layout\n"
-"different from the one in the system to update.\n"
-"Select the layout to use during update:"
-msgstr ""
-"Obecnie używany jest układ klawiatury inny niż w aktualizowanym systemie.\n"
-"Proszę wybrać układ, jaki ma być używany podczas aktualizacji:"
-
 #. summary item
-#: keyboard/src/proposal/keyboard_proposal.ycp:104
+#: keyboard/src/keyboard_proposal.ycp:104
 msgid "Keyboard Layout"
 msgstr "Układ klawiatury"
+
+#. busy message
+#: language/src/Language.ycp:387
+msgid "Downloading installation system language extension..."
+msgstr "Pobieranie dodatku językowego dla instalatora..."
+
+#. summary label
+#: language/src/Language.ycp:758 language/src/Language.ycp:831
+#, ycp-format
+msgid "Primary Language: %1"
+msgstr "Język podstawowy: %1"
+
+#. summary label
+#: language/src/Language.ycp:814 language/src/Language.ycp:847
+#: language/src/language.ycp:199
+#, ycp-format
+msgid "Additional Languages: %1"
+msgstr "Dodatkowe języki: %1"
+
+#: language/src/Language.ycp:1012
+msgid "Installing Packages..."
+msgstr "Instalowanie pakietów..."
+
+#. continue/cancel message
+#: language/src/Language.ycp:1114
+msgid ""
+"Translation of the primary language is not complete.\n"
+"Some texts may be displayed in English.\n"
+msgstr ""
+"Tłumaczenie na wskazany język podstawowy jest niekompletne.\n"
+"Niektóre teksty mogą pojawiać się w języku angielskim.\n"
+
+#. popup message
+#: language/src/Language.ycp:1310
+msgid ""
+"Only minimal support for the selected language is included on this media.\n"
+"Add the Language add-on CD as an additional repository in order to get the appropriate support\n"
+"for this language.\n"
+msgstr ""
+"Na tym nośniku zawarta jest jedynie minimalna obsługa dla wybranego języka.\n"
+"Aby uzyskać odpowiednią obsługę tego języka, należy dodać płytę <b>Dodatki językowe</b> (Language add-on) jako\n"
+"dodatkowe repozytorium.\n"
+
+#. popup message (user selected CJK language in text mode)
+#: language/src/Language.ycp:1340
+msgid ""
+"The selected language cannot be used in text mode. English is used for\n"
+"installation, but the selected language will be used for the new system."
+msgstr ""
+"Wybrany język nie może być używany w trybie tekstowym. Podczas instalacji\n"
+"używany jest język angielski, ale wybrany język będzie używany w systemie."
+
+#. summary label <%1>-<%2> are HTML tags, leave untouched
+#: language/src/country_simple_proposal.ycp:44
+#, ycp-format
+msgid "<%1>Keyboard Layout<%2>: %3"
+msgstr "<%1>Układ klawiatury<%2>: %3"
+
+#. summary label <%1>-<%2> are HTML tags, leave untouched
+#: language/src/country_simple_proposal.ycp:51
+#, ycp-format
+msgid "<%1>Language<%2>: %3"
+msgstr "<%1>Język<%2>: %3"
+
+#. rich text label
+#: language/src/country_simple_proposal.ycp:66
+msgid "Locale Settings"
+msgstr "Ustawienia lokalne"
+
+#. menu button label
+#. menue label text
+#: language/src/country_simple_proposal.ycp:69
+#: language/src/language_proposal.ycp:125
+msgid "&Language"
+msgstr "&Język"
 
 #. progress title
 #: language/src/language.ycp:69
@@ -516,142 +595,61 @@ msgstr "Instalacja i usuwanie powiązanych pakietów..."
 msgid "Updating translations in boot loader menu..."
 msgstr "Aktualizacja tłumaczeń w menu programu rozruchowego..."
 
-#. last progress step
-#: language/src/language.ycp:84
-msgid "Starting SuSEconfig..."
-msgstr "Uruchamianie SuSEconfig..."
-
 #. help for write dialog
-#: language/src/language.ycp:174
+#: language/src/language.ycp:169
 msgid "<p><b>Saving Configuration</b><br>Please wait...</p>"
 msgstr "<p><b>Zapisywanie konfiguracji</b><br>Proszę czekać...</p>"
 
 #. summary label
-#: language/src/language.ycp:194
+#: language/src/language.ycp:189
 #, ycp-format
 msgid "Current Language: %1 (%2)"
 msgstr "Aktualny język: %1 (%2)"
 
-#. summary label
-#: language/src/language.ycp:204 language/src/modules/Language.ycp:814
-#: language/src/modules/Language.ycp:847
-#, ycp-format
-msgid "Additional Languages: %1"
-msgstr "Dodatkowe języki: %1"
-
 #. error message (%1 is given layout); do not translate 'list'
-#: language/src/language.ycp:234
+#: language/src/language.ycp:229
 #, ycp-format
 msgid "%1 is not a valid language. Use the list command to see possible values."
 msgstr "%1 nie jest poprawnym językiem. Proszę użyć polecenia list, aby wyświetlić możliwe wartości."
 
 #. translators: command line help text for language module
-#: language/src/language.ycp:258
+#: language/src/language.ycp:253
 msgid "Language configuration"
 msgstr "Konfiguracja języków"
 
 #. command line help text for 'summary' action
-#: language/src/language.ycp:266
+#: language/src/language.ycp:261
 msgid "Language configuration summary"
 msgstr "Podsumowanie konfiguracji języków"
 
 #. command line help text for 'set' action
-#: language/src/language.ycp:271
+#: language/src/language.ycp:266
 msgid "Set new values for language"
 msgstr "Ustaw nowe wartości dla języka"
 
 #. command line help text for 'list' action
-#: language/src/language.ycp:276
+#: language/src/language.ycp:271
 msgid "List all available languages."
 msgstr "Wyświetl wszystkie dostępne języki."
 
 #. command line help text for 'set lang' option
-#: language/src/language.ycp:282
+#: language/src/language.ycp:277
 msgid "New language value"
 msgstr "Nowa wartość języka"
 
 #. command line help text for 'set languages' option
-#: language/src/language.ycp:287
+#: language/src/language.ycp:282
 msgid "List of secondary languages (separated by commas)"
 msgstr "Lista języków dodatkowych (oddzielonych przecinkami)"
 
 #. command line help text for 'set no_packages' option
-#: language/src/language.ycp:292
+#: language/src/language.ycp:287
 msgid "Do not install language specific packages"
 msgstr "Nie instaluj specyficznych pakietów językowych"
 
-#. busy message
-#: language/src/modules/Language.ycp:387
-msgid "Downloading installation system language extension..."
-msgstr "Pobieranie dodatku językowego dla instalatora..."
-
-#. summary label
-#: language/src/modules/Language.ycp:758 language/src/modules/Language.ycp:831
-#, ycp-format
-msgid "Primary Language: %1"
-msgstr "Język podstawowy: %1"
-
-#: language/src/modules/Language.ycp:1012
-msgid "Installing Packages..."
-msgstr "Instalowanie pakietów..."
-
-#. continue/cancel message
-#: language/src/modules/Language.ycp:1114
-msgid ""
-"Translation of the primary language is not complete.\n"
-"Some texts may be displayed in English.\n"
-msgstr ""
-"Tłumaczenie na wskazany język podstawowy jest niekompletne.\n"
-"Niektóre teksty mogą pojawiać się w języku angielskim.\n"
-
-#. popup message
-#: language/src/modules/Language.ycp:1310
-msgid ""
-"Only minimal support for the selected language is included on this media.\n"
-"Add the Language add-on CD as an additional repository in order to get the appropriate support\n"
-"for this language.\n"
-msgstr ""
-"Na tym nośniku zawarta jest jedynie minimalna obsługa dla wybranego języka.\n"
-"Aby uzyskać odpowiednią obsługę tego języka, należy dodać płytę <b>Dodatki językowe</b> (Language add-on) jako\n"
-"dodatkowe repozytorium.\n"
-
-#. popup message (user selected CJK language in text mode)
-#: language/src/modules/Language.ycp:1340
-msgid ""
-"The selected language cannot be used in text mode. English is used for\n"
-"installation, but the selected language will be used for the new system."
-msgstr ""
-"Wybrany język nie może być używany w trybie tekstowym. Podczas instalacji\n"
-"używany jest język angielski, ale wybrany język będzie używany w systemie."
-
-#. summary label <%1>-<%2> are HTML tags, leave untouched
-#: language/src/proposal/country_simple_proposal.ycp:44
-#, ycp-format
-msgid "<%1>Keyboard Layout<%2>: %3"
-msgstr "<%1>Układ klawiatury<%2>: %3"
-
-#. summary label <%1>-<%2> are HTML tags, leave untouched
-#: language/src/proposal/country_simple_proposal.ycp:51
-#, ycp-format
-msgid "<%1>Language<%2>: %3"
-msgstr "<%1>Język<%2>: %3"
-
-#. rich text label
-#: language/src/proposal/country_simple_proposal.ycp:66
-msgid "Locale Settings"
-msgstr "Ustawienia lokalne"
-
-#. menu button label
-#. menue label text
-#: language/src/proposal/country_simple_proposal.ycp:69
-#: language/src/proposal/language_proposal.ycp:125
-msgid "&Language"
-msgstr "&Język"
-
 #. label text
 #. heading text
-#: language/src/proposal/language_proposal.ycp:123
-#: language/src/select_language.ycp:254
+#: language/src/language_proposal.ycp:123 language/src/select_language.ycp:254
 msgid "Language"
 msgstr "Język"
 
@@ -897,28 +895,28 @@ msgstr ""
 
 #. label text (Clock setting)
 #. summary text (Clock setting)
-#: timezone/src/Timezone.ycp:691 timezone/src/Timezone.ycp:924
-#: timezone/src/timezone.ycp:112
+#: timezone/src/Timezone.ycp:738 timezone/src/Timezone.ycp:982
+#: timezone/src/timezone.ycp:111
 msgid "UTC"
 msgstr "UTC"
 
 #. label text, Clock setting: local time (not UTC)
-#: timezone/src/Timezone.ycp:695 timezone/src/Timezone.ycp:928
+#: timezone/src/Timezone.ycp:742 timezone/src/Timezone.ycp:986
 msgid "Local Time"
 msgstr "Czas lokalny"
 
 #. label text
-#: timezone/src/Timezone.ycp:698 timezone/src/Timezone.ycp:931
+#: timezone/src/Timezone.ycp:745 timezone/src/Timezone.ycp:989
 msgid "Hardware Clock Set To"
 msgstr "Ustawienie zegara sprzętowego"
 
 #. summary label
-#: timezone/src/Timezone.ycp:707
+#: timezone/src/Timezone.ycp:754
 msgid "NTP configured"
 msgstr "NTP jest skonfigurowane"
 
 #. summary label
-#: timezone/src/Timezone.ycp:935
+#: timezone/src/Timezone.ycp:993
 #, ycp-format
 msgid "Current Time Zone: %1"
 msgstr "Aktualna strefa czasowa: %1"
@@ -1106,6 +1104,19 @@ msgstr "Zegar i strefa czasowa"
 
 #. warning popup, in case local time is selected (bnc#732769)
 #: timezone/src/dialogs.ycp:861
+#, fuzzy
+#| msgid ""
+#| "\n"
+#| "You selected local time, but only Linux  seems to be installed on your system.\n"
+#| "In such case, it is strongly recommended to use UTC, and to click Cancel.\n"
+#| "\n"
+#| "If you want to keep local time, you must adjust the CMOS clock twice the year\n"
+#| "because of Day Light Saving switches. If you miss to adjust the clock, backups may fail,\n"
+#| "your mail system may drop mail messages, etc.\n"
+#| "\n"
+#| "If you use UTC, the Linux will adjust the time automatically.\n"
+#| "\n"
+#| "Do you want to continue with your selection (local time)?"
 msgid ""
 "\n"
 "You selected local time, but only Linux  seems to be installed on your system.\n"
@@ -1115,7 +1126,7 @@ msgid ""
 "because of Day Light Saving switches. If you miss to adjust the clock, backups may fail,\n"
 "your mail system may drop mail messages, etc.\n"
 "\n"
-"If you use UTC, the Linux will adjust the time automatically.\n"
+"If you use UTC, Linux will adjust the time automatically.\n"
 "\n"
 "Do you want to continue with your selection (local time)?"
 msgstr ""
@@ -1136,8 +1147,61 @@ msgstr ""
 msgid "Select a valid time zone."
 msgstr "Proszę wybrać właściwą strefę czasową."
 
+#. summary label
+#: timezone/src/timezone.ycp:104
+#, ycp-format
+msgid "Current Time Zone:\t%1"
+msgstr "Aktualna strefa czasowa:\t%1"
+
+#. summary label
+#: timezone/src/timezone.ycp:109
+#, ycp-format
+msgid "Hardware Clock Set To:\t%1"
+msgstr "Ustawienie zegara systemowego:\t%1"
+
+#. summary text (Clock setting)
+#: timezone/src/timezone.ycp:113
+msgid "Local time"
+msgstr "Czas lokalny"
+
+#. summary label
+#: timezone/src/timezone.ycp:118
+#, ycp-format
+msgid "Current Time and Date:\t%1"
+msgstr "Aktualny czas i data:\t%1"
+
+#. translators: command line help text for timezone module
+#: timezone/src/timezone.ycp:164
+msgid "Time zone configuration"
+msgstr "Konfiguracja strefy czasowej"
+
+#. command line help text for 'summary' action
+#: timezone/src/timezone.ycp:172
+msgid "Time zone configuration summary"
+msgstr "Podsumowanie konfiguracji strefy czasowej"
+
+#. command line help text for 'set' action
+#: timezone/src/timezone.ycp:177
+msgid "Set new values for time zone configuration"
+msgstr "Ustaw nowe wartości dla konfiguracji strefy czasowej"
+
+#. command line help text for 'list' action
+#: timezone/src/timezone.ycp:182
+msgid "List all available time zones"
+msgstr "Wyświetl wszystkie dostępne strefy czasowe."
+
+#. command line help text for 'set timezone' option
+#: timezone/src/timezone.ycp:188
+msgid "New time zone"
+msgstr "Nowa strefa czasowa"
+
+#. command line help text for 'set hwclock' option
+#: timezone/src/timezone.ycp:193
+msgid "New value for hardware clock"
+msgstr "Nowa wartość dla zegara sprzętowego"
+
 #. error text, %1 is output of 'date' command
-#: timezone/src/proposal/timezone_proposal.ycp:37
+#: timezone/src/timezone_proposal.ycp:37
 #, ycp-format
 msgid ""
 "Time %1 is in the past.\n"
@@ -1147,64 +1211,14 @@ msgstr ""
 "Proszę ustawić prawidłowy czas przed rozpoczęciem instalacji."
 
 #. summary item
-#: timezone/src/proposal/timezone_proposal.ycp:83
+#: timezone/src/timezone_proposal.ycp:83
 msgid "Time Zone"
 msgstr "Strefa czasowa"
 
 #. menue label text
-#: timezone/src/proposal/timezone_proposal.ycp:85
+#: timezone/src/timezone_proposal.ycp:85
 msgid "&Time Zone"
 msgstr "Strefa &czasowa"
 
-#. summary label
-#: timezone/src/timezone.ycp:105
-#, ycp-format
-msgid "Current Time Zone:\t%1"
-msgstr "Aktualna strefa czasowa:\t%1"
-
-#. summary label
-#: timezone/src/timezone.ycp:110
-#, ycp-format
-msgid "Hardware Clock Set To:\t%1"
-msgstr "Ustawienie zegara systemowego:\t%1"
-
-#. summary text (Clock setting)
-#: timezone/src/timezone.ycp:114
-msgid "Local time"
-msgstr "Czas lokalny"
-
-#. summary label
-#: timezone/src/timezone.ycp:119
-#, ycp-format
-msgid "Current Time and Date:\t%1"
-msgstr "Aktualny czas i data:\t%1"
-
-#. translators: command line help text for timezone module
-#: timezone/src/timezone.ycp:165
-msgid "Time zone configuration"
-msgstr "Konfiguracja strefy czasowej"
-
-#. command line help text for 'summary' action
-#: timezone/src/timezone.ycp:173
-msgid "Time zone configuration summary"
-msgstr "Podsumowanie konfiguracji strefy czasowej"
-
-#. command line help text for 'set' action
-#: timezone/src/timezone.ycp:178
-msgid "Set new values for time zone configuration"
-msgstr "Ustaw nowe wartości dla konfiguracji strefy czasowej"
-
-#. command line help text for 'list' action
-#: timezone/src/timezone.ycp:183
-msgid "List all available time zones"
-msgstr "Wyświetl wszystkie dostępne strefy czasowe."
-
-#. command line help text for 'set timezone' option
-#: timezone/src/timezone.ycp:189
-msgid "New time zone"
-msgstr "Nowa strefa czasowa"
-
-#. command line help text for 'set hwclock' option
-#: timezone/src/timezone.ycp:194
-msgid "New value for hardware clock"
-msgstr "Nowa wartość dla zegara sprzętowego"
+#~ msgid "Starting SuSEconfig..."
+#~ msgstr "Uruchamianie SuSEconfig..."

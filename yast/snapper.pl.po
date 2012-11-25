@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-20 13:49+0200\n"
+"POT-Creation-Date: 2012-10-24 13:32+0200\n"
 "PO-Revision-Date: 2012-04-14 00:49+0100\n"
 "Last-Translator: Jakub Derda <j.derda@tjgroup.eu>\n"
 "Language-Team: Polish <i18n@suse.de>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 
 #. popup error
@@ -27,7 +27,8 @@ msgstr "Zrzut \"%1\" nie został odnaleziony."
 msgid "File /etc/sysconfig/snapper is not available."
 msgstr "Plik /etc/sysconfig/snapper nie jest dostępny."
 
-#: src/Snapper.ycp:229
+#: src/Snapper.ycp:229 src/Snapper.ycp:259 src/Snapper.ycp:284
+#: src/Snapper.ycp:305
 msgid "Reason not known."
 msgstr "Przyczyna nieznana."
 
@@ -49,196 +50,336 @@ msgstr ""
 "Nie udało się zainicjować biblioteki snappera:\n"
 "%1"
 
+#: src/Snapper.ycp:263
+#, fuzzy
+#| msgid "Snapshot '%1' was not found."
+msgid "Snapshot was not found."
+msgstr "Zrzut \"%1\" nie został odnaleziony."
+
+#. error popup
+#: src/Snapper.ycp:268
+#, fuzzy, ycp-format
+#| msgid "Failed to delete configuration %1."
+msgid ""
+"Failed to delete snapshot:\n"
+"%1"
+msgstr "Usunięcie konfiguracji %1 nie powiodło się."
+
+#. error popup
+#: src/Snapper.ycp:288
+#, fuzzy, ycp-format
+#| msgid "Failed to modify %1."
+msgid ""
+"Failed to modify snapshot:\n"
+"%1"
+msgstr "Nie udało się zmienić %1."
+
+#: src/Snapper.ycp:309
+msgid "Wrong snapshot type given."
+msgstr ""
+
+#: src/Snapper.ycp:313
+#, fuzzy
+#| msgid "Snapshot '%1' was not found."
+msgid "'Pre' snapshot was not given."
+msgstr "Zrzut \"%1\" nie został odnaleziony."
+
+#: src/Snapper.ycp:317
+#, fuzzy
+#| msgid "Snapshot '%1' was not found."
+msgid "Given 'Pre' snapshot was not found."
+msgstr "Zrzut \"%1\" nie został odnaleziony."
+
+#. error popup
+#: src/Snapper.ycp:322
+#, fuzzy, ycp-format
+#| msgid "Failed to create the new map."
+msgid ""
+"Failed to create new snapshot:\n"
+"%1"
+msgstr "Tworzenie nowej mapy autofs nie powiodło się."
+
 #. Snapper read dialog caption
-#: src/Snapper.ycp:255
+#: src/Snapper.ycp:335
 msgid "Initializing Snapper"
 msgstr "Inicjalizacja Snappera"
 
 #. Progress stage 1/3
-#: src/Snapper.ycp:262
+#: src/Snapper.ycp:342
 msgid "Read the list of snapshots"
 msgstr "Wczytaj listę zrzutów"
 
 #. Progress step 1/3
-#: src/Snapper.ycp:265
+#: src/Snapper.ycp:345
 msgid "Reading the database..."
 msgstr "Odczytywanie bazy danych..."
 
 #. Progress finished
-#: src/Snapper.ycp:267
+#: src/Snapper.ycp:347
 msgid "Finished"
 msgstr "Zakończono"
 
 #. label for log window
-#: src/Snapper.ycp:314
+#: src/Snapper.ycp:394
 msgid "Restoring Files..."
 msgstr "Odtwarzanie plików..."
 
 #. log entry (%1 is file name)
-#: src/Snapper.ycp:334
+#: src/Snapper.ycp:414
 #, ycp-format
 msgid "Deleted %1\n"
 msgstr "Usunięto %1\n"
 
 #. log entry (%1 is file name)
-#: src/Snapper.ycp:362
+#: src/Snapper.ycp:442
 #, ycp-format
 msgid "%1 skipped\n"
 msgstr "Pominięto plik %1\n"
 
+#. text entry label
+#: src/dialogs.ycp:126 src/dialogs.ycp:231 src/dialogs.ycp:402
+msgid "Description"
+msgstr "Opis"
+
+#. text entry label
+#: src/dialogs.ycp:129 src/dialogs.ycp:251
+#, fuzzy
+#| msgid "User name"
+msgid "User data"
+msgstr "Nazwa użytkownika"
+
+#. combo box label
+#. text entry label
+#: src/dialogs.ycp:133 src/dialogs.ycp:253
+#, fuzzy
+#| msgid "C&leanup Script"
+msgid "Cleanup algorithm"
+msgstr "Sk&rypt do porządkowania"
+
+#. popup label, %1 is number
+#: src/dialogs.ycp:140
+#, fuzzy, ycp-format
+#| msgid "Modify %1"
+msgid "Modify Snapshot %1"
+msgstr "Zmiana %1"
+
+#. popup label, %1, %2 are numbers (range)
+#: src/dialogs.ycp:148
+#, ycp-format
+msgid "Modify Snapshots %1 - %2"
+msgstr ""
+
+#. label
+#: src/dialogs.ycp:150
+#, fuzzy, ycp-format
+#| msgid "PReP (%1)"
+msgid "Pre (%1)"
+msgstr "PReP (%1)"
+
+#. label
+#: src/dialogs.ycp:154
+#, fuzzy, ycp-format
+#| msgid "Host %1"
+msgid "Post (%1)"
+msgstr "Host %1"
+
+#. popup label
+#: src/dialogs.ycp:229
+#, fuzzy
+#| msgid "Create New "
+msgid "Create New Snapshot"
+msgstr "Utwórz nowy "
+
+#. radio button label
+#: src/dialogs.ycp:235
+#, fuzzy
+#| msgid "Snapshots"
+msgid "Single snapshot"
+msgstr "Zrzuty"
+
+#. radio button label
+#: src/dialogs.ycp:238 src/dialogs.ycp:364
+msgid "Pre"
+msgstr "Przed"
+
+#. radio button label, snapshot selection will follow
+#: src/dialogs.ycp:242
+msgid "Post, paired with:"
+msgstr ""
+
+#. yes/no popup question
+#: src/dialogs.ycp:298
+#, fuzzy, ycp-format
+#| msgid "Really delete '%1'?"
+msgid "Really delete snapshot '%1'?"
+msgstr "Na pewno usunąć %1?"
+
 #. summary dialog caption
-#: src/dialogs.ycp:69
+#: src/dialogs.ycp:312
 msgid "Snapshots"
 msgstr "Zrzuty"
 
-#: src/dialogs.ycp:91
+#: src/dialogs.ycp:341
 msgid "Single"
 msgstr "Pojedynczy"
 
-#: src/dialogs.ycp:105
+#: src/dialogs.ycp:355
 msgid "Pre & Post"
 msgstr "Przed i po"
 
+#. busy popup message
+#: src/dialogs.ycp:380
+msgid "Reading list of snapshots..."
+msgstr "Odczytywanie listy zrzutów..."
+
 #. combo box label
-#: src/dialogs.ycp:118
+#: src/dialogs.ycp:394
 msgid "Current Configuration"
 msgstr "Obecna konfiguracja"
 
 #. table header
-#: src/dialogs.ycp:126
+#: src/dialogs.ycp:402
 msgid "ID"
 msgstr "Identyfikator"
 
-#: src/dialogs.ycp:126
+#: src/dialogs.ycp:402
 msgid "Type"
 msgstr "Typ"
 
-#: src/dialogs.ycp:126
+#: src/dialogs.ycp:402
 msgid "Start Date"
 msgstr "Data rozpoczęcia"
 
-#: src/dialogs.ycp:126
+#: src/dialogs.ycp:402
 msgid "End Date"
 msgstr "Data zakończenia"
 
-#: src/dialogs.ycp:126
-msgid "Description"
-msgstr "Opis"
+#: src/dialogs.ycp:402
+msgid "User Data"
+msgstr "Dane użytkownika"
 
-#: src/dialogs.ycp:130
+#. button label
+#: src/dialogs.ycp:407
 msgid "Show Changes"
 msgstr "Wyświetl zmiany"
 
-#. busy popup message
-#: src/dialogs.ycp:176
-msgid "Reading list of snapshots..."
-msgstr "Odczytywanie listy zrzutów..."
+#. button label
+#: src/dialogs.ycp:410
+msgid "Modify"
+msgstr "Zmień"
+
+#. popup message
+#: src/dialogs.ycp:443
+msgid ""
+"This 'Pre' snapshot is not paired with any 'Post' one yet.\n"
+"Showing differences is not possible."
+msgstr ""
 
 #. dialog caption
-#: src/dialogs.ycp:205
+#: src/dialogs.ycp:500
 msgid "Selected Snapshot Overview"
 msgstr "Wybrany opis zrzutu"
 
 #. '%1: %2' means 'ID: description', adapt the order if necessary
-#: src/dialogs.ycp:235
+#: src/dialogs.ycp:530
 #, ycp-format
 msgid "%1: %2"
 msgstr "%1: %2"
 
 #. busy popup message
-#: src/dialogs.ycp:252
+#: src/dialogs.ycp:547
 msgid "Calculating changed files..."
 msgstr "Obliczanie zmienionych plików..."
 
 #. busy popup message
-#: src/dialogs.ycp:320
+#: src/dialogs.ycp:615
 msgid "Calculating file modifications..."
 msgstr "Obliczanie zmian w plikach..."
 
 #. text label, %1, %2 are file modes (like '-rw-r--r--')
-#: src/dialogs.ycp:353
+#: src/dialogs.ycp:648
 #, ycp-format
 msgid "File mode was changed from '%1' to '%2'."
 msgstr "Tryb pliku został zmieniony z \"%1\" na \"%2\"."
 
 #. text label, %1, %2 are user names
-#: src/dialogs.ycp:361
+#: src/dialogs.ycp:656
 #, ycp-format
 msgid "File user ownership was changed from '%1' to '%2'."
 msgstr "Właściciel pliku został zmieniony z \"%1\" na \"%2\"."
 
 #. text label, %1, %2 are group names
-#: src/dialogs.ycp:370
+#: src/dialogs.ycp:665
 #, ycp-format
 msgid "File group ownership was changed from '%1' to '%2'."
 msgstr "Grupa właścicieli została zmieniona z \"%1\" na \"%2\"."
 
 #. button label
-#: src/dialogs.ycp:409
+#: src/dialogs.ycp:704
 msgid "R&estore from First"
 msgstr "Przywróć z pi&erwszego"
 
 #. button label
-#: src/dialogs.ycp:411
+#: src/dialogs.ycp:706
 msgid "Restore"
 msgstr "Odtwórz"
 
-#: src/dialogs.ycp:424
+#: src/dialogs.ycp:719
 msgid "Res&tore from Second"
 msgstr "P&rzywróć z drugiego"
 
 #. radio button label
-#: src/dialogs.ycp:447
+#: src/dialogs.ycp:742
 msgid "Show the difference between snapshot and current system"
 msgstr "Wyświetl różnice między zrzutem, a obecną wersją"
 
 #. radio button label, snapshot selection will follow
-#: src/dialogs.ycp:451
+#: src/dialogs.ycp:746
 msgid "Show the difference between current and selected snapshot:"
 msgstr "Wyświetl różnice miedzy obecnym i zaznaczonym zrzutem:"
 
 #. radio button label
-#: src/dialogs.ycp:472
+#: src/dialogs.ycp:767
 msgid "Show the difference between first and second snapshot"
 msgstr "Wyświetl różnice między pierwszym i drugim zrzutem"
 
 #. radio button label
-#: src/dialogs.ycp:475
+#: src/dialogs.ycp:770
 msgid "Show the difference between first snapshot and current system"
 msgstr "Wyświetl róznice między pierwszym zrzutem, a obecną wersją"
 
 #. radio button label
-#: src/dialogs.ycp:478
+#: src/dialogs.ycp:773
 msgid "Show the difference between second snapshot and current system"
 msgstr "Wyświetl różnice między drugim zrzutem, a obecną wersją"
 
 #. label, date string will follow at the end of line
-#: src/dialogs.ycp:500
+#: src/dialogs.ycp:795
 msgid "Time of taking the first snapshot:"
 msgstr "Czas wykonania pierwszego zrzutu:"
 
 #. label, date string will follow at the end of line
-#: src/dialogs.ycp:505
+#: src/dialogs.ycp:800
 msgid "Time of taking the second snapshot:"
 msgstr "Czas wykonania drugiego zrzutu:"
 
 #. label, date string will follow at the end of line
-#: src/dialogs.ycp:514
+#: src/dialogs.ycp:809
 msgid "Time of taking the snapshot:"
 msgstr "Czas wykonania zrzutu:"
 
 #. button label
-#: src/dialogs.ycp:534
+#: src/dialogs.ycp:829
 msgid "&Open"
 msgstr "&Otwórz"
 
 #. button label
-#: src/dialogs.ycp:558
+#: src/dialogs.ycp:853
 msgid "Restore Selected"
 msgstr "Odtwórz wybrane"
 
 #. yes/no question, %1 is file name, %2 is number
-#: src/dialogs.ycp:633
+#: src/dialogs.ycp:928
 #, ycp-format
 msgid ""
 "Do you want to delete the file\n"
@@ -254,7 +395,7 @@ msgstr ""
 "z tego systemu?"
 
 #. yes/no question, %1 is file name, %2 is number
-#: src/dialogs.ycp:645 src/dialogs.ycp:657
+#: src/dialogs.ycp:940 src/dialogs.ycp:952
 #, ycp-format
 msgid ""
 "Do you want to copy the file\n"
@@ -270,17 +411,17 @@ msgstr ""
 "ze zrzutu '%2' do tego systemu?"
 
 #. popup message
-#: src/dialogs.ycp:685
+#: src/dialogs.ycp:980
 msgid "No file was selected for restoring"
 msgstr "Do odtworzenia nie został wybrany żaden plik"
 
 #. popup headline
-#: src/dialogs.ycp:689
+#: src/dialogs.ycp:984
 msgid "Restoring files"
 msgstr "Odtwarzanie plików"
 
 #. popup message, %1 is snapshot number, %2 list of files
-#: src/dialogs.ycp:691
+#: src/dialogs.ycp:986
 #, ycp-format
 msgid ""
 "<p>These files will be restored from snapshot '%1':</p>\n"

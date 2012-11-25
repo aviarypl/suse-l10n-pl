@@ -5,30 +5,40 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audit-laf\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-20 13:40+0200\n"
+"POT-Creation-Date: 2012-10-24 13:26+0200\n"
 "PO-Revision-Date: 2012-04-12 22:39+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 
-#: src/AuditLaf.ycp:202
+#: src/AuditLaf.ycp:203
 msgid "The rules for auditctl are locked."
 msgstr "Reguły dla auditctl są zablokowane."
 
 #. combo box item
-#: src/AuditLaf.ycp:204 src/dialogs.ycp:262
+#: src/AuditLaf.ycp:205 src/dialogs.ycp:262
 msgid "Auditing enabled"
 msgstr "Audyt włączony"
 
 #. combo box item
-#: src/AuditLaf.ycp:206 src/dialogs.ycp:264
+#: src/AuditLaf.ycp:207 src/dialogs.ycp:264
 msgid "Auditing disabled"
 msgstr "Audyt wyłączony"
 
-#: src/AuditLaf.ycp:379
+#: src/AuditLaf.ycp:358
+#, fuzzy, ycp-format
+#| msgid "<p>To configure the iSCSI initiator, the <b>%1</b> package must be installed.</p>"
+msgid "<p>To continue the configuration of Linux Auditing, the package <b>%1</b> must be installed.</p>"
+msgstr "<p>Aby skonfigurować moduł inicjujący iSCSI, należy zainstalować pakiet <b>%1</b>.</p>"
+
+#: src/AuditLaf.ycp:359
+msgid "<p>Install it now?</p>"
+msgstr "<p>Czy zainstalować go teraz?</p>"
+
+#: src/AuditLaf.ycp:403
 msgid ""
 "Cannot start the audit daemon.\n"
 "Please check /var/log/messages for auditd errors.\n"
@@ -41,51 +51,67 @@ msgstr ""
 "'Różne' w Centrum Sterowania YaST."
 
 #. AuditLaf read dialog caption
-#: src/AuditLaf.ycp:397
+#: src/AuditLaf.ycp:421
 msgid "Initializing Audit Configuration"
 msgstr "Inicjalizacja konfiguracji audytu"
 
 #. Progress stage 1/4
-#: src/AuditLaf.ycp:408
-msgid "Read the configuration for auditd"
-msgstr "Odczytanie konfiguracji auditd"
+#: src/AuditLaf.ycp:432
+#, fuzzy
+#| msgid "Check installed packages"
+msgid "Check for installed packages"
+msgstr "Sprawdzanie zainstalowanych pakietów"
 
 #. Progress stage 2/4
-#: src/AuditLaf.ycp:410
+#: src/AuditLaf.ycp:434
+#, fuzzy
+#| msgid "Read the configuration for auditd"
+msgid "Read the configuration of auditd"
+msgstr "Odczytanie konfiguracji auditd"
+
+#. Progress stage 3/4
+#: src/AuditLaf.ycp:436
 msgid "Read the rules file"
 msgstr "Odczytywanie pliku reguł"
 
-#. Progress stage 3/4
-#: src/AuditLaf.ycp:412
+#. Progress stage 4/4
+#: src/AuditLaf.ycp:438
 msgid "Check status of auditd"
 msgstr "Sprawdzanie stanu auditd"
 
-#. Progress step 1/3
-#: src/AuditLaf.ycp:416
+#. Progress stage 1/4
+#: src/AuditLaf.ycp:441
+#, fuzzy
+#| msgid "Checking packages..."
+msgid "Checking for packages..."
+msgstr "Sprawdzanie pakietów..."
+
+#. Progress step 2/4
+#: src/AuditLaf.ycp:443
 msgid "Reading the configuration..."
 msgstr "Odczytywanie konfiguracji..."
 
-#. Progress step 2/3
-#: src/AuditLaf.ycp:418
+#. Progress step 3/4
+#: src/AuditLaf.ycp:445
 msgid "Reading the rules file..."
 msgstr "Odczytywanie pliku reguł..."
 
-#. Progress step 3/3
-#: src/AuditLaf.ycp:420
+#. Progress step 4/4
+#: src/AuditLaf.ycp:447
 msgid "Checking status..."
 msgstr "Sprawdzanie stanu..."
 
 #. Report error
-#: src/AuditLaf.ycp:437
+#: src/AuditLaf.ycp:472
 msgid "Cannot read auditd.conf."
 msgstr "Nie można odczytać auditd.conf."
 
 #. Error message
-#: src/AuditLaf.ycp:447
+#: src/AuditLaf.ycp:482
 msgid "Cannot read audit.rules."
 msgstr "Nie można odczytać audit.rules."
 
-#: src/AuditLaf.ycp:467
+#: src/AuditLaf.ycp:502
 msgid ""
 "The audit daemon doesn't run.\n"
 "Do you want to start it now?"
@@ -93,7 +119,7 @@ msgstr ""
 "Demon audytu jest wyłączony.\n"
 "Czy uruchomić go teraz?"
 
-#: src/AuditLaf.ycp:471
+#: src/AuditLaf.ycp:506
 msgid ""
 " The 'apparmor' kernel module is loaded.\n"
 "The kernel uses a running audit daemon to log audit\n"
@@ -105,15 +131,15 @@ msgstr ""
 "zdarzeń do /var/log/audit/audit.log (domyślnie). \n"
 "Czy chcesz teraz uruchomić usługę?"
 
-#: src/AuditLaf.ycp:476
+#: src/AuditLaf.ycp:511
 msgid "Audit daemon not running."
 msgstr "Demon audytu nie jest uruchomiony."
 
-#: src/AuditLaf.ycp:483
+#: src/AuditLaf.ycp:518
 msgid "Cannot start the audit daemon."
 msgstr "Nie można uruchomić demona audytu."
 
-#: src/AuditLaf.ycp:484
+#: src/AuditLaf.ycp:519
 msgid ""
 "The rules may be locked.\n"
 "Continue to check the rules. You can change\n"
@@ -126,35 +152,35 @@ msgstr ""
 "zmiany wymaga ponownego uruchomienia komputera.\n"
 
 #. Auditd read dialog caption
-#: src/AuditLaf.ycp:546
+#: src/AuditLaf.ycp:581
 msgid "Saving Audit Configuration"
 msgstr "Zapisywanie konfiguracji Audit"
 
 #. Progress stage 1/2
-#: src/AuditLaf.ycp:558
+#: src/AuditLaf.ycp:593
 msgid "Write the settings"
 msgstr "Zapis ustawień"
 
 #. Progress stage 2/2
-#: src/AuditLaf.ycp:560
+#: src/AuditLaf.ycp:595
 msgid "Write the rules"
 msgstr "Zapis reguł"
 
 #. Progress step 1/2
-#: src/AuditLaf.ycp:563
+#: src/AuditLaf.ycp:598
 msgid "Writing the settings..."
 msgstr "Zapisywanie ustawień..."
 
 #. Progress step 2/2
-#: src/AuditLaf.ycp:565
+#: src/AuditLaf.ycp:600
 msgid "Writing the rules..."
 msgstr "Zapisywanie reguł..."
 
-#: src/AuditLaf.ycp:578
+#: src/AuditLaf.ycp:613
 msgid "The rules are already locked."
 msgstr "Reguły są już zablokowane."
 
-#: src/AuditLaf.ycp:579
+#: src/AuditLaf.ycp:614
 msgid ""
 "Do you want to change the 'Enabled Flag'?\n"
 "If yes, the new rules will be written to /etc/audit/audit.rules.\n"
@@ -165,25 +191,25 @@ msgstr ""
 "Po tej czynności należy uruchomić komputer ponownie.\n"
 
 #. Error message
-#: src/AuditLaf.ycp:605
+#: src/AuditLaf.ycp:640
 msgid "Restart of the audit daemon failed."
 msgstr "Ponowne uruchomienie demona audytu nie powiodło się."
 
 #. Error message
-#: src/AuditLaf.ycp:614
+#: src/AuditLaf.ycp:651
 msgid "Cannot write settings to auditd.conf."
 msgstr "Nie można zapisać ustawień do auditd.conf."
 
 #. Error message, rules cannot be set
-#: src/AuditLaf.ycp:641
+#: src/AuditLaf.ycp:678
 msgid "Start yast2-audit-laf again and check the rules."
 msgstr "Proszę uruchomić yast2-audit-laf ponownie i sprawdzić reguły."
 
-#: src/AuditLaf.ycp:647
+#: src/AuditLaf.ycp:684
 msgid "Cannot write settings to auditd.rules."
 msgstr "Nie można zapisać ustawień do auditd.rules."
 
-#: src/AuditLaf.ycp:701
+#: src/AuditLaf.ycp:738
 msgid "Log file"
 msgstr "Plik dziennika"
 

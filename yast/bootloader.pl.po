@@ -6,14 +6,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bootloader\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-20 13:32+0200\n"
+"POT-Creation-Date: 2012-10-24 13:22+0200\n"
 "PO-Revision-Date: 2012-05-17 20:09+0200\n"
 "Last-Translator: Mariusz Fik <fisiu@opensuse.org>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
 "X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
@@ -548,7 +548,7 @@ msgstr "Ustawienia kolejności dysków"
 msgid "Boot Menu"
 msgstr "Menu rozruchowe"
 
-#: src/grub/dialogs.ycp:96 src/ppc/dialogs.ycp:102
+#: src/grub/dialogs.ycp:96 src/grub2/dialogs.ycp:73 src/ppc/dialogs.ycp:102
 msgid "Boot Loader Options"
 msgstr "Opcje programu rozruchowego"
 
@@ -805,11 +805,11 @@ msgstr "Ha&sło"
 msgid "Re&type Password"
 msgstr "Proszę po&wtórzyć hasło"
 
-#: src/grub/options.ycp:298
+#: src/grub/options.ycp:298 src/grub2/options.ycp:230
 msgid "Use &serial console"
 msgstr "Użyj &szeregowej konsoli"
 
-#: src/grub/options.ycp:301
+#: src/grub/options.ycp:301 src/grub2/options.ycp:233
 msgid "&Console arguments"
 msgstr "&Argumenty konsoli"
 
@@ -868,6 +868,97 @@ msgstr "Włącz nadmiarowość dla tablicy MD"
 msgid "Boot Loader Installation &Details"
 msgstr "Szczegóły &instalacji programu rozruchowego"
 
+#: src/grub2/helps.ycp:23 src/routines/section_helps.ycp:32
+msgid "<p><b>Optional Kernel Command Line Parameter</b> lets you define additional parameters to pass to the kernel.</p>"
+msgstr "<p><b>Opcjonalne parametry polecenia wywołania jądra</b> pozwalają na określenie dodatkowych parametrów przekazywanych do jądra.</p>"
+
+#: src/grub2/helps.ycp:25 src/routines/section_helps.ycp:30
+msgid "<p><b>Vga Mode</b> defines the VGA mode the kernel should set the <i>console</i> to when booting.</p>"
+msgstr "<p><b>Tryb VGA</b> określa tryb VGA dla <i>konsoli</i>, który ma być użyty przez jądro podczas uruchamiania.</p>"
+
+#: src/grub2/helps.ycp:27
+#, fuzzy
+#| msgid "<p><b>Optional Kernel Command Line Parameter</b> lets you define additional parameters to pass to the kernel.</p>"
+msgid "<p><b>Failsafe Kernel Command Line Parameter</b> lets you define failsafe parameters to pass to the kernel.</p>"
+msgstr "<p><b>Opcjonalne parametry polecenia wywołania jądra</b> pozwalają na określenie dodatkowych parametrów przekazywanych do jądra.</p>"
+
+#: src/grub2/helps.ycp:29
+msgid "<p><b>Probe Foreign OS</b> by means of os-prober for multiboot with other foreign distribution </p>"
+msgstr ""
+
+#: src/grub2/helps.ycp:33 src/routines/section_helps.ycp:94
+msgid "O&ptional Kernel Command Line Parameter"
+msgstr "O&pcjonalne parametry polecenia wywołania jądra"
+
+#: src/grub2/helps.ycp:34 src/routines/section_helps.ycp:93
+msgid "&Vga Mode"
+msgstr "Tryb &VGA"
+
+#: src/grub2/helps.ycp:35
+#, fuzzy
+#| msgid "O&ptional Kernel Command Line Parameter"
+msgid "&Failsafe Kernel Command Line Parameter"
+msgstr "O&pcjonalne parametry polecenia wywołania jądra"
+
+#: src/grub2/helps.ycp:36
+#, fuzzy
+#| msgid "Probe Source Type"
+msgid "Probe Foreign OS"
+msgstr "Sprawdzanie typu źródła"
+
+#. combo box item
+#. %1 is X resolution (width) in pixels
+#. %2 is Y resolution (height) in pixels
+#. %3 is color depth (usually one of 8, 16, 24, 32)
+#. %4 is the VGA mode ID (hexadecimal number)
+#: src/grub2/options.ycp:48 src/routines/section_widgets.ycp:448
+#, ycp-format
+msgid "%1x%2, %3 bits (mode %4)"
+msgstr "%1x%2, %3 bity (tryb %4)"
+
+#: src/grub2/options.ycp:51 src/routines/section_widgets.ycp:452
+msgid "Standard 8-pixel font mode."
+msgstr "Standardowy 8-mio pikselowy tryb czcionki."
+
+#. item of a combo box
+#: src/grub2/options.ycp:53 src/routines/section_widgets.ycp:454
+msgid "Text Mode"
+msgstr "Tryb tekstowy"
+
+#: src/grub2/options.ycp:54 src/routines/section_widgets.ycp:455
+msgid "Unspecified"
+msgstr "Nieokreślony"
+
+#: src/grub2/options.ycp:112
+#, fuzzy
+#| msgid "Autodetected card"
+msgid "Autodetect by grub2"
+msgstr "Karta wykryta automatycznie"
+
+#: src/grub2/options.ycp:175
+#, fuzzy
+#| msgid "Choose new graphical menu file"
+msgid "Choose new graphical theme file"
+msgstr "Proszę wybrać nowy plik graficznego menu rozruchowego"
+
+#: src/grub2/options.ycp:221
+#, fuzzy
+#| msgid "Use &serial console"
+msgid "Use &graphical console"
+msgstr "Użyj &szeregowej konsoli"
+
+#: src/grub2/options.ycp:224
+#, fuzzy
+#| msgid "Conflict Resolution:"
+msgid "&Console resolution"
+msgstr "Rozwiązanie konfliktu:"
+
+#: src/grub2/options.ycp:225
+#, fuzzy
+#| msgid "&Console arguments"
+msgid "&Console theme"
+msgstr "&Argumenty konsoli"
+
 #. summary part, %1 is a list of device names
 #: src/modules/BootCommon.ycp:900
 #, ycp-format
@@ -876,7 +967,7 @@ msgstr "Główne sektory startowe (MBR) dysków %1"
 
 #. summary text, %1 is bootloader name (eg. LILO)
 #: src/modules/BootCommon.ycp:912 src/modules/BootGRUB.ycp:736
-#: src/modules/BootGRUB2.ycp:158 src/modules/BootGRUB2EFI.ycp:151
+#: src/modules/BootGRUB2.ycp:186 src/modules/BootGRUB2EFI.ycp:178
 #, ycp-format
 msgid "Boot Loader Type: %1"
 msgstr "Typ programu rozruchowego: %1"
@@ -977,24 +1068,24 @@ msgstr "Uruchamianie systemu z partycji \"/\" jest wyłączone (<a href=\"enable
 msgid "Change Location: %1"
 msgstr "Zmiana lokalizacji: %1"
 
-#: src/modules/BootGRUB.ycp:744 src/modules/BootGRUB2.ycp:163
+#: src/modules/BootGRUB.ycp:744 src/modules/BootGRUB2.ycp:191
 msgid " (\"/boot\")"
 msgstr " (\"/boot\")"
 
-#: src/modules/BootGRUB.ycp:746 src/modules/BootGRUB2.ycp:165
+#: src/modules/BootGRUB.ycp:746 src/modules/BootGRUB2.ycp:193
 msgid " (extended)"
 msgstr " (rozszerzona)"
 
-#: src/modules/BootGRUB.ycp:748 src/modules/BootGRUB2.ycp:167
+#: src/modules/BootGRUB.ycp:748 src/modules/BootGRUB2.ycp:195
 msgid " (\"/\")"
 msgstr " (\"/\")"
 
-#: src/modules/BootGRUB.ycp:750 src/modules/BootGRUB2.ycp:169
+#: src/modules/BootGRUB.ycp:750 src/modules/BootGRUB2.ycp:197
 msgid " (MBR)"
 msgstr " (MBR)"
 
 #. FIXME: should we translate all devices to names and add MBR suffixes?
-#: src/modules/BootGRUB.ycp:755 src/modules/BootGRUB2.ycp:174
+#: src/modules/BootGRUB.ycp:755 src/modules/BootGRUB2.ycp:202
 #, ycp-format
 msgid "Status Location: %1"
 msgstr "Status lokalizacji: %1"
@@ -2441,14 +2532,6 @@ msgstr "<p><b>Obraz jądra</b> - określenie jądra, które ma być uruchamiane.
 msgid "<p><b>Root Device</b> sets the device to pass to the kernel as root device.</p>"
 msgstr "<p><b>Urządzenie główne</b> określa urządzenie, przekazywane do jądra jako urządzenie główne (root).</p>"
 
-#: src/routines/section_helps.ycp:30
-msgid "<p><b>Vga Mode</b> defines the VGA mode the kernel should set the <i>console</i> to when booting.</p>"
-msgstr "<p><b>Tryb VGA</b> określa tryb VGA dla <i>konsoli</i>, który ma być użyty przez jądro podczas uruchamiania.</p>"
-
-#: src/routines/section_helps.ycp:32
-msgid "<p><b>Optional Kernel Command Line Parameter</b> lets you define additional parameters to pass to the kernel.</p>"
-msgstr "<p><b>Opcjonalne parametry polecenia wywołania jądra</b> pozwalają na określenie dodatkowych parametrów przekazywanych do jądra.</p>"
-
 #: src/routines/section_helps.ycp:34
 msgid ""
 "<p><b>Initial RAM Disk</b>, if not empty, defines the initial ramdisk to use. Either enter the path and file name\n"
@@ -2578,14 +2661,6 @@ msgstr "&Obraz jądra"
 msgid "&Root Device"
 msgstr "&Urządzenie główne"
 
-#: src/routines/section_helps.ycp:93
-msgid "&Vga Mode"
-msgstr "Tryb &VGA"
-
-#: src/routines/section_helps.ycp:94
-msgid "O&ptional Kernel Command Line Parameter"
-msgstr "O&pcjonalne parametry polecenia wywołania jądra"
-
 #: src/routines/section_helps.ycp:95
 msgid "&Initial RAM Disk"
 msgstr "RAM-d&ysk początkowy"
@@ -2710,32 +2785,9 @@ msgstr "Uaktywnij &SELinux"
 msgid "The name includes unallowable char(s)"
 msgstr "Nazwa zawiera niedozwolony znak(i)"
 
-#. combo box item
-#. %1 is X resolution (width) in pixels
-#. %2 is Y resolution (height) in pixels
-#. %3 is color depth (usually one of 8, 16, 24, 32)
-#. %4 is the VGA mode ID (hexadecimal number)
-#: src/routines/section_widgets.ycp:448
-#, ycp-format
-msgid "%1x%2, %3 bits (mode %4)"
-msgstr "%1x%2, %3 bity (tryb %4)"
-
 #: src/routines/section_widgets.ycp:451
 msgid "Ask for resolution during boot."
 msgstr "Pytaj o rozdzielczość podczas ładowania systemu."
-
-#: src/routines/section_widgets.ycp:452
-msgid "Standard 8-pixel font mode."
-msgstr "Standardowy 8-mio pikselowy tryb czcionki."
-
-#. item of a combo box
-#: src/routines/section_widgets.ycp:454
-msgid "Text Mode"
-msgstr "Tryb tekstowy"
-
-#: src/routines/section_widgets.ycp:455
-msgid "Unspecified"
-msgstr "Nieokreślony"
 
 #. radio button
 #: src/routines/section_widgets.ycp:481

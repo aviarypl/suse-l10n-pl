@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: scanner\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-20 13:49+0200\n"
+"POT-Creation-Date: 2012-10-24 13:31+0200\n"
 "PO-Revision-Date: 2012-04-22 10:29+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
 "X-Generator: Lokalize 1.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
@@ -42,22 +42,40 @@ msgid "Failed to determine the version of package %1."
 msgstr "Określenie wersji pakietu %1 nie powiodło się."
 
 #. Message of a Popup::Error for models which require
-#. the third-party Image Scan (IScan) driver software from Epson/Avasys.
+#. the third-party Image Scan (IScan) driver software from Epson
+#. (formerly Avasys, see https://bugzilla.novell.com/show_bug.cgi?id=746038).
 #. Do not change or translate "Image Scan", it is a driver software name.
-#. Do not change or translate "Avasys, it is a manufacturer name.
-#: src/Scanner.ycp:396
+#. Do not change or translate "Avasys", it is a manufacturer name.
+#. Do not change or translate "Epson", it is a manufacturer name.
+#: src/Scanner.ycp:398
+#, fuzzy
+#| msgid ""
+#| "The third-party Image Scan driver software from Avasys is required.\n"
+#| "The Image Scan driver software is made and provided by Avasys\n"
+#| "http://avasys.jp/eng/linux_driver/\n"
+#| "where RPM packages for 32-bit (i386) and 64-bit (x86_64) architecture\n"
+#| "can be downloaded (if you accept the Avasys and Epson license agreements).\n"
+#| "The Image Scan driver contains proprietary binary-only software.\n"
+#| "For some models it is only available for 32-bit (i386) architecture\n"
+#| "which does not work when you have a 64-bit system installation.\n"
+#| "Some scanners are also supported by another (free-software) driver.\n"
+#| "When your scanner model requires a DFSG non-free (proprietary) module,\n"
+#| "you have to download and install two packages from Avasys:\n"
+#| "The 'iscan' package for the base software and an additional\n"
+#| "model dependant 'iscan-plugin' package with the proprietary module.\n"
 msgid ""
-"The third-party Image Scan driver software from Avasys is required.\n"
-"The Image Scan driver software is made and provided by Avasys\n"
-"http://avasys.jp/eng/linux_driver/\n"
+"The third-party Image Scan driver software from Epson/Avasys is required.\n"
+"The Image Scan driver software is made and provided by Epson (formerly Avasys)\n"
+"http://download.ebz.epson.net/dsc/search/01/search/?OSC=LXEpson\n"
+"(formerly Avasys http://avasys.jp/eng/linux_driver/)\n"
 "where RPM packages for 32-bit (i386) and 64-bit (x86_64) architecture\n"
-"can be downloaded (if you accept the Avasys and Epson license agreements).\n"
+"can be downloaded (if you accept the Epson/Avasys license agreements).\n"
 "The Image Scan driver contains proprietary binary-only software.\n"
 "For some models it is only available for 32-bit (i386) architecture\n"
 "which does not work when you have a 64-bit system installation.\n"
 "Some scanners are also supported by another (free-software) driver.\n"
 "When your scanner model requires a DFSG non-free (proprietary) module,\n"
-"you have to download and install two packages from Avasys:\n"
+"you have to download and install two packages from Epson/Avasys:\n"
 "The 'iscan' package for the base software and an additional\n"
 "model dependant 'iscan-plugin' package with the proprietary module.\n"
 msgstr ""
@@ -71,13 +89,13 @@ msgstr ""
 "pakiety: 'iscan' i 'iscan-plugin'.\n"
 
 #. Message of a Popup::Error where %1 will be replaced by the package name:
-#: src/Scanner.ycp:436
+#: src/Scanner.ycp:439
 #, ycp-format
 msgid "Required package %1 is not installed and there is no package repository available."
 msgstr "Wymagany pakiet %1 nie jest zainstalowany i brak dostępnego repozytorium."
 
 #. Message of a Popup::Error where %1 will be replaced by the package name:
-#: src/Scanner.ycp:445
+#: src/Scanner.ycp:448
 #, ycp-format
 msgid "Required package %1 is not installed and not available in the repository."
 msgstr "Wymagany pakiet %1 nie jest zainstalowany i nie jest dostępny w repozytorium."
@@ -87,7 +105,7 @@ msgstr "Wymagany pakiet %1 nie jest zainstalowany i nie jest dostępny w repozyt
 #. Either the user has explicitly rejected to install the package,
 #. or this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Scanner.ycp:458
+#: src/Scanner.ycp:461
 #, ycp-format
 msgid "Failed to install required package %1."
 msgstr "Instalacja wymaganego pakietu %1 nie powiodła się."
@@ -96,7 +114,7 @@ msgstr "Instalacja wymaganego pakietu %1 nie powiodła się."
 #. Do not change or translate "net", it is a metadriver name.
 #. Do not simply use "driver" because net is no normal driver but a metadriver.
 #. Do not change or translate "scanimage -L", it is a fixed command.
-#: src/Scanner.ycp:482
+#: src/Scanner.ycp:485
 msgid ""
 "Failed to determine the active scanners.\n"
 "If the net metadriver is activated while there is a problem\n"
@@ -118,15 +136,15 @@ msgstr ""
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no active scanner was determined.
 #. The latter results no error.
-#: src/Scanner.ycp:504
+#: src/Scanner.ycp:507
 msgid "Failed to determine the active scanners."
 msgstr "Wykrywanie aktywnych skanerów nie powiodło się."
 
 #. Message of a Popup::Error where %1 will be replaced by the file name.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Scanner.ycp:514 src/Scanner.ycp:562 src/Scanner.ycp:611
-#: src/Scanner.ycp:2337
+#: src/Scanner.ycp:517 src/Scanner.ycp:565 src/Scanner.ycp:614
+#: src/Scanner.ycp:2341
 #, ycp-format
 msgid "File %1 does not exist."
 msgstr "Plik %1 nie istnieje."
@@ -134,8 +152,8 @@ msgstr "Plik %1 nie istnieje."
 #. Message of a Popup::Error where %1 will be replaced by the file name.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Scanner.ycp:526 src/Scanner.ycp:574 src/Scanner.ycp:623
-#: src/Scanner.ycp:2349
+#: src/Scanner.ycp:529 src/Scanner.ycp:577 src/Scanner.ycp:626
+#: src/Scanner.ycp:2353
 #, ycp-format
 msgid "Failed to read %1."
 msgstr "Odczytywanie %1 nie powiodło się."
@@ -145,7 +163,7 @@ msgstr "Odczytywanie %1 nie powiodło się."
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no active driver was determined.
 #. The latter results no error.
-#: src/Scanner.ycp:552
+#: src/Scanner.ycp:555
 msgid "Failed to determine the active drivers."
 msgstr "Wykrywanie aktywnych programów obsługi nie powiodło się."
 
@@ -154,108 +172,108 @@ msgstr "Wykrywanie aktywnych programów obsługi nie powiodło się."
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no scanner was autodetected.
 #. The latter results no error.
-#: src/Scanner.ycp:601
+#: src/Scanner.ycp:604
 msgid "Failed to detect scanners automatically."
 msgstr "Automatycznie wykrywanie skanerów nie powiodło się."
 
 #. Define the progress stages:
 #. Header of a Progress::New:
-#: src/Scanner.ycp:717
+#: src/Scanner.ycp:720
 msgid "Initializing Scanner Configuration"
 msgstr "Inicjalizacja konfiguracji skanerów"
 
 #. 1. progress stage name of a Progress::New:
-#: src/Scanner.ycp:721
+#: src/Scanner.ycp:724
 msgid "Check installed packages"
 msgstr "Sprawdzanie zainstalowanych pakietów"
 
 #. 2. progress stage name of a Progress::New:
-#: src/Scanner.ycp:723
+#: src/Scanner.ycp:726
 msgid "Read or create the scanner database"
 msgstr "Odczytywanie albo tworzenie bazy danych skanerów"
 
 #. 3. progress stage name of a Progress::New:
 #. 5. progress stage name of a Progress::New:
-#: src/Scanner.ycp:725 src/Scanner.ycp:1863
+#: src/Scanner.ycp:728 src/Scanner.ycp:1867
 msgid "Determine active scanners"
 msgstr "Wykrywanie aktywnych skanerów"
 
 #. 4. progress stage name of a Progress::New:
-#: src/Scanner.ycp:727
+#: src/Scanner.ycp:730
 msgid "Determine active drivers"
 msgstr "Wykrywanie aktywnych programów obsługi"
 
 #. 5. progress stage name of a Progress::New:
-#: src/Scanner.ycp:729
+#: src/Scanner.ycp:732
 msgid "Detect scanners"
 msgstr "Wykrywanie skanerów"
 
 #. 1. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:732
+#: src/Scanner.ycp:735
 msgid "Checking installed packages..."
 msgstr "Sprawdzanie zainstalowanych pakietów..."
 
 #. 2. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:734
+#: src/Scanner.ycp:737
 msgid "Reading or creating the scanner database..."
 msgstr "Odczytywanie lub tworzenie bazy danych skanerów..."
 
 #. 3. progress step progress bar title of a Progress::New:
 #. 5. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:736 src/Scanner.ycp:1874
+#: src/Scanner.ycp:739 src/Scanner.ycp:1878
 msgid "Determining active scanners..."
 msgstr "Wykrywanie aktywnych skanerów..."
 
 #. 4. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:738
+#: src/Scanner.ycp:741
 msgid "Determining active drivers..."
 msgstr "Wykrywanie aktywnych programów obsługi..."
 
 #. 5. progress step progress bar title of a Progress::New:
 #. Busy message:
 #. Body of a Popup::ShowFeedback:
-#: src/Scanner.ycp:740 src/Scanner.ycp:920 src/Scanner.ycp:994
+#: src/Scanner.ycp:743 src/Scanner.ycp:923 src/Scanner.ycp:997
 msgid "Detecting scanners..."
 msgstr "Wykrywanie skanerów..."
 
 #. Last progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:742 src/Scanner.ycp:956 src/Scanner.ycp:1876
+#: src/Scanner.ycp:745 src/Scanner.ycp:959 src/Scanner.ycp:1880
 msgid "Finished"
 msgstr "Zakończono"
 
 #. Show feedback because creating the scanner database takes a few seconds:
-#: src/Scanner.ycp:786
+#: src/Scanner.ycp:789
 msgid "Creating scanner database..."
 msgstr "Tworzenie bazy danych skanerów..."
 
 #. Message of a Popup::ErrorDetails.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Scanner.ycp:822
+#: src/Scanner.ycp:825
 msgid "Aborting: Failed to create the scanner database."
 msgstr "Przerwanie: Tworzenie bazy danych skanerów nie powiodło się."
 
 #. Message of a Popup::Error where %1 will be replaced by the file name.
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
-#: src/Scanner.ycp:861
+#: src/Scanner.ycp:864
 #, ycp-format
 msgid "Aborting: Failed to read %1."
 msgstr "Przerwanie: Odczytywanie %1 nie powiodło się."
 
 #. Define the progress stages:
 #. Header of a Progress::New:
-#: src/Scanner.ycp:947
+#: src/Scanner.ycp:950
 msgid "Writing Scanner Configuration"
 msgstr "Zapisywanie konfiguracji skanera"
 
 #. 1. progress stage name of a Progress::New:
-#: src/Scanner.ycp:951
+#: src/Scanner.ycp:954
 msgid "Save the actual environment"
 msgstr "Zapisywanie bieżącego środowiska"
 
 #. 1. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:954
+#: src/Scanner.ycp:957
 msgid "Saving the actual environment..."
 msgstr "Zapisywanie bieżącego środowiska..."
 
@@ -263,7 +281,7 @@ msgstr "Zapisywanie bieżącego środowiska..."
 #. Do not change or translate "ptal", it is a service name.
 #. Do not change or translate "hp-setup", it is a program name.
 #. Do not change or translate "HPLIP", it is a subsystem name.
-#: src/Scanner.ycp:1021
+#: src/Scanner.ycp:1024
 msgid ""
 "There is at least one printer configuration that uses the ptal service.\n"
 "It is possible to proceed but then the running ptal service could prevent\n"
@@ -280,7 +298,7 @@ msgstr ""
 
 #. Message of a Popup::Error when hp-setup should be run.
 #. Do not change or translate "hp-setup", it is a program name:
-#: src/Scanner.ycp:1031
+#: src/Scanner.ycp:1034
 msgid ""
 "Cannot run hp-setup because no graphical display can be opened.  \n"
 "This happens if YaST runs in text-only mode, or the user who runs YaST \n"
@@ -299,7 +317,7 @@ msgstr ""
 #. Message of a Popup::YesNo when hplip should be installed.
 #. Do not change or translate "hp-setup", it is a program name.
 #. Do not change or translate "hplip", it is a package name:
-#: src/Scanner.ycp:1042
+#: src/Scanner.ycp:1045
 msgid ""
 "It seems hplip is not installed, which is required to run hp-setup.\n"
 "Should the hplip package be installed?\n"
@@ -309,7 +327,7 @@ msgstr ""
 
 #. Message of a Popup::Error when hp-setup should be run.
 #. Do not change or translate "hp-setup", it is a program name:
-#: src/Scanner.ycp:1048
+#: src/Scanner.ycp:1051
 msgid ""
 "Cannot run hp-setup because\n"
 "/usr/bin/hp-setup is not executable\n"
@@ -321,7 +339,7 @@ msgstr ""
 
 #. Body of a Popup::ShowFeedback.
 #. Do not change or translate "hp-setup", it is a program name:
-#: src/Scanner.ycp:1055
+#: src/Scanner.ycp:1058
 msgid ""
 "Launched hp-setup.\n"
 "You must finish hp-setup before you can proceed with the scanner configuration.\n"
@@ -332,22 +350,22 @@ msgstr ""
 #. A prefix for the first column of a table
 #. where autodetected scanners are listed in the second column
 #. to denote those scanners which are not configured yet:
-#: src/Scanner.ycp:1213
+#: src/Scanner.ycp:1216
 msgid "Not Configured:"
 msgstr "Nieskonfigurowane:"
 
 #. Fallback device name if the real device name is missing:
-#: src/Scanner.ycp:1238 src/Scanner.ycp:2109
+#: src/Scanner.ycp:1241 src/Scanner.ycp:2113
 msgid "Unknown device"
 msgstr "Nieznane urządzenie"
 
 #. Fallback manufacturer name if the real manufacturer name is missing:
-#: src/Scanner.ycp:1240 src/Scanner.ycp:2105
+#: src/Scanner.ycp:1243 src/Scanner.ycp:2109
 msgid "Unknown manufacturer"
 msgstr "Nieznany producent"
 
 #. Fallback model name if the real model name is missing:
-#: src/Scanner.ycp:1242 src/Scanner.ycp:2107
+#: src/Scanner.ycp:1245 src/Scanner.ycp:2111
 msgid "Unknown model"
 msgstr "Nieznany model"
 
@@ -360,7 +378,7 @@ msgstr "Nieznany model"
 #. %1 will be replaced by the manufacturer name
 #. %2 will be replaced by the model name
 #. %3 will be replaced by the device name where the scanner is connected to:
-#: src/Scanner.ycp:1264 src/Scanner.ycp:2103
+#: src/Scanner.ycp:1267 src/Scanner.ycp:2107
 #, ycp-format
 msgid "%1 %2 at %3"
 msgstr "%1 %2 na %3"
@@ -368,7 +386,7 @@ msgstr "%1 %2 na %3"
 #. A suffix for the second column of a table
 #. where active scanner drivers are listed in the first column
 #. to denote those drivers for which there is no matching active scanner:
-#: src/Scanner.ycp:1310
+#: src/Scanner.ycp:1313
 msgid "No scanner recognized by this driver"
 msgstr "Brak skanerów obsługiwanych przez ten program obsługi."
 
@@ -376,27 +394,30 @@ msgstr "Brak skanerów obsługiwanych przez ten program obsługi."
 #. when neither a scanner was autodetected
 #. nor an active scanner was found
 #. nor an active driver was found:
-#: src/Scanner.ycp:1329
+#: src/Scanner.ycp:1332
 msgid "No scanner was detected and no active scanner or driver exists."
 msgstr "Nie wykryto żadnego skanera i nie istnieją aktywne skanery ani programy obsługi."
 
 #. Scanner model list firmware entry for models which require a firmware upload:
-#: src/Scanner.ycp:1359
+#: src/Scanner.ycp:1362
 msgid "Firmware upload required."
 msgstr "Wymagane jest przekazanie pliku z oprogramowaniem wbudowanym."
 
 #. Scanner model list entry for models which require
 #. the third-party Image Scan (IScan) driver software from Epson/Avasys.
 #. Do not change or translate "Image Scan", it is a driver software name.
-#. Do not change or translate "Avasys, it is a manufacturer name.
-#: src/Scanner.ycp:1364
-msgid "Third-party Image Scan driver software from Avasys required."
+#. Do not change or translate "Avasys", it is a manufacturer name.
+#. Do not change or translate "Epson", it is a manufacturer name.
+#: src/Scanner.ycp:1368
+#, fuzzy
+#| msgid "Third-party Image Scan driver software from Avasys required."
+msgid "Third-party Image Scan driver software from Epson/Avasys required."
 msgstr "Sterownik skanera formy Avasys jest wymagany."
 
 #. Scanner model list package name entry:
 #. %1 will be replaced by the RPM package name
 #. which provides the driver for the particular model:
-#: src/Scanner.ycp:1441
+#: src/Scanner.ycp:1445
 #, ycp-format
 msgid "Package %1"
 msgstr "Pakiet %1"
@@ -404,27 +425,27 @@ msgstr "Pakiet %1"
 #. Scanner model list status entry for "good" supported models
 #. but where the backend (scanner driver) is unmaintained:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/Scanner.ycp:1462
+#: src/Scanner.ycp:1466
 #, ycp-format
 msgid "Unmaintained driver %1 may provide good functionality."
 msgstr "Sterownik %1 zapewnia dobrą funkcjonalność."
 
 #. Scanner model list status entry for "good" supported models:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/Scanner.ycp:1469
+#: src/Scanner.ycp:1473
 #, ycp-format
 msgid "Driver %1 should provide good functionality."
 msgstr "Sterownik %1 zapewnia dobrą funkcjonalność."
 
 #. Scanner model list status entry for unsupported models:
-#: src/Scanner.ycp:1478
+#: src/Scanner.ycp:1482
 msgid "This scanner is not supported."
 msgstr "Ten skaner nie jest obsługiwany."
 
 #. Scanner model list status entry for models
 #. which are listed as "unsupported" for a particular driver:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/Scanner.ycp:1484
+#: src/Scanner.ycp:1488
 #, ycp-format
 msgid "This scanner is not supported by the driver %1."
 msgstr "Ten skaner nie jest obsługiwany przez sterownik %1."
@@ -432,21 +453,21 @@ msgstr "Ten skaner nie jest obsługiwany przez sterownik %1."
 #. Scanner model list status entry for "complete" supported models
 #. but where the backend (scanner driver) is unmaintained:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/Scanner.ycp:1495
+#: src/Scanner.ycp:1499
 #, ycp-format
 msgid "Unmaintained driver %1 may provide complete functionality."
 msgstr "Sterownik %1 zapewnia pełną funkcjonalność."
 
 #. Scanner model list status entry for "complete" supported models:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/Scanner.ycp:1502
+#: src/Scanner.ycp:1506
 #, ycp-format
 msgid "Driver %1 should provide complete functionality."
 msgstr "Sterownik %1 zapewnia pełną funkcjonalność."
 
 #. Scanner model list status entry for "untested" models:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/Scanner.ycp:1511
+#: src/Scanner.ycp:1515
 #, ycp-format
 msgid "Driver %1 may work, but was not tested."
 msgstr "Sterownik %1 może działać, ale nie był testowany."
@@ -454,14 +475,14 @@ msgstr "Sterownik %1 może działać, ale nie był testowany."
 #. Scanner model list status entry for "basic" supported models
 #. but where the backend (scanner driver) is unmaintained:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/Scanner.ycp:1521
+#: src/Scanner.ycp:1525
 #, ycp-format
 msgid "Unmaintained driver %1 may provide basic functionality."
 msgstr "Sterownik %1 zapewnia podstawową funkcjonalność."
 
 #. Scanner model list status entry for "basic" supported models:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/Scanner.ycp:1528
+#: src/Scanner.ycp:1532
 #, ycp-format
 msgid "Driver %1 should provide basic functionality."
 msgstr "Sterownik %1 zapewnia podstawową funkcjonalność."
@@ -469,14 +490,14 @@ msgstr "Sterownik %1 zapewnia podstawową funkcjonalność."
 #. Scanner model list status entry for "minimal" supported models
 #. but where the backend (scanner driver) is unmaintained:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/Scanner.ycp:1539
+#: src/Scanner.ycp:1543
 #, ycp-format
 msgid "Unmaintained driver %1 may provide minimal functionality."
 msgstr "Sterownik %1 zapewnia minimalną funkcjonalność."
 
 #. Scanner model list status entry for "minimal" supported models:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/Scanner.ycp:1546
+#: src/Scanner.ycp:1550
 #, ycp-format
 msgid "Driver %1 should provide minimal functionality."
 msgstr "Sterownik %1 zapewnia minimalną funkcjonalność."
@@ -484,7 +505,7 @@ msgstr "Sterownik %1 zapewnia minimalną funkcjonalność."
 #. Fallback scanner model list status entry for models
 #. which are listed but without a known support status:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/Scanner.ycp:1555
+#: src/Scanner.ycp:1559
 #, ycp-format
 msgid "Driver %1 may work, but the functionality is unknown."
 msgstr "Sterownik %1 może działać, ale zapewniany przez niego poziom obsługi nie jest znany."
@@ -495,7 +516,7 @@ msgstr "Sterownik %1 może działać, ale zapewniany przez niego poziom obsługi
 #. stored on the manufacturer's CD but often it is buried in a weird Windows-only
 #. driver archive format. The text must indicate this.
 #. Do not change or translate "SANE", it is a project name.
-#: src/Scanner.ycp:1773
+#: src/Scanner.ycp:1777
 msgid ""
 "A firmware file contains software that must be uploaded to the scanner's memory.\n"
 "Without firmware, the scanner cannot work.\n"
@@ -528,7 +549,7 @@ msgstr ""
 #. Message of a Popup::ContinueCancel for scanners which should be set up with the hpaio driver.
 #. Do not change or translate "ptal", it is a service name.
 #. Do not change or translate "HPLIP", it is a subsystem name.
-#: src/Scanner.ycp:1791
+#: src/Scanner.ycp:1795
 msgid ""
 "There is at least one printer configuration that uses the ptal service.\n"
 "It is possible to proceed but then the ptal service would be stopped\n"
@@ -545,7 +566,7 @@ msgstr ""
 #. Do not change or translate "PTAL", it is a subsystem name.
 #. Do not change or translate "ptal", it is a service name.
 #. Do not change or translate "hplip", it is a service name.
-#: src/Scanner.ycp:1802
+#: src/Scanner.ycp:1806
 msgid ""
 "The hpoj driver requires the PTAL system to be set up and running.\n"
 "In particular, the ptal service must be up and running.\n"
@@ -585,7 +606,7 @@ msgstr ""
 #. Do not change or translate "hplip", it is a service name.
 #. Do not change or translate "hpaio", it is a driver name.
 #. Do not change or translate "ptal", it is a service name.
-#: src/Scanner.ycp:1824
+#: src/Scanner.ycp:1828
 msgid ""
 "There is at least one printer configuration that uses the hplip service.\n"
 "It is possible to proceed but then the hplip service would be stopped\n"
@@ -604,53 +625,53 @@ msgstr ""
 #. Define the progress stages:
 #. Header of a Progress::New:
 #. %1 will be replaced by the backend name
-#: src/Scanner.ycp:1849
+#: src/Scanner.ycp:1853
 #, ycp-format
 msgid "Setting Up Driver %1"
 msgstr "Konfigurowanie programu obsługi %1"
 
 #. 1. progress stage name of a Progress::New:
-#: src/Scanner.ycp:1855
+#: src/Scanner.ycp:1859
 msgid "Check whether additional packages must be installed"
 msgstr "Sprawdzenie, czy konieczna jest instalacja dodatkowych pakietów"
 
 #. 2. progress stage name of a Progress::New:
-#: src/Scanner.ycp:1857
+#: src/Scanner.ycp:1861
 msgid "Check whether firmware upload is required"
 msgstr "Sprawdzenie, czy konieczne jest przekazanie pliku z oprogramowaniem wbudowanym"
 
 #. 3. progress stage name of a Progress::New:
-#: src/Scanner.ycp:1859
+#: src/Scanner.ycp:1863
 msgid "Test and set up special requirements for particular drivers"
 msgstr "Sprawdzenie i ustawienie specjalnych wymagań dla programów obsługi"
 
 #. 4. progress stage name of a Progress::New:
-#: src/Scanner.ycp:1861
+#: src/Scanner.ycp:1865
 msgid "Activate the driver"
 msgstr "Aktywacja programu obsługi"
 
 #. 1. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:1866
+#: src/Scanner.ycp:1870
 msgid "Checking whether additional packages must be installed..."
 msgstr "Sprawdzanie, czy konieczna jest instalacja dodatkowych pakietów..."
 
 #. 2. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:1868
+#: src/Scanner.ycp:1872
 msgid "Checking whether firmware upload is required..."
 msgstr "Sprawdzanie, czy konieczne jest przekazanie pliku z oprogramowaniem wbudowanym..."
 
 #. 3. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:1870
+#: src/Scanner.ycp:1874
 msgid "Testing and setting up special requirements for particular drivers..."
 msgstr "Sprawdzanie i ustawianie specjalnych wymagań dla programów obsługi..."
 
 #. 4. progress step progress bar title of a Progress::New:
-#: src/Scanner.ycp:1872
+#: src/Scanner.ycp:1876
 msgid "Activating the driver..."
 msgstr "Aktywacja programu obsługi..."
 
 #. Header of a Popup::AnyMessage:
-#: src/Scanner.ycp:1896
+#: src/Scanner.ycp:1900
 msgid "Required Package Not Installed"
 msgstr "Wymagany pakiet nie jest zainstalowany"
 
@@ -660,19 +681,19 @@ msgstr "Wymagany pakiet nie jest zainstalowany"
 #. Only a simple message because before there was a dialog
 #. which let the user install the package so that this message is shown
 #. if the user has explicitly rejected to install it.
-#: src/Scanner.ycp:1903
+#: src/Scanner.ycp:1907
 #, ycp-format
 msgid "The driver %1 requires the package %2."
 msgstr "Program obsługi %1 wymaga pakietu %2."
 
 #. Last progress step progress bar title when the Progress was aborted:
-#: src/Scanner.ycp:1907 src/Scanner.ycp:1949 src/Scanner.ycp:2000
-#: src/Scanner.ycp:2016 src/Scanner.ycp:2026
+#: src/Scanner.ycp:1911 src/Scanner.ycp:1953 src/Scanner.ycp:2004
+#: src/Scanner.ycp:2020 src/Scanner.ycp:2030
 msgid "Aborted"
 msgstr "Przerwane"
 
 #. Header of a Popup::AnyMessage for scanners which require a firmware upload:
-#: src/Scanner.ycp:1926
+#: src/Scanner.ycp:1930
 msgid "Firmware Upload Required"
 msgstr "Przekazanie pliku z oprogramowaniem wbudowanym jest wymagane"
 
@@ -681,7 +702,7 @@ msgstr "Przekazanie pliku z oprogramowaniem wbudowanym jest wymagane"
 #. which asked the user whether he wants to let YaST activate the ptal service
 #. so that this message is shown if the user has explicitly rejected to do it.
 #. Do not change or translate "ptal", it is a service name.
-#: src/Scanner.ycp:1987
+#: src/Scanner.ycp:1991
 msgid "If the ptal service is not running, the scanner cannot work."
 msgstr "Skaner nie może działać, jeśli nie działa usługa ptal."
 
@@ -689,12 +710,12 @@ msgstr "Skaner nie może działać, jeśli nie działa usługa ptal."
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not change or translate "PTAL", it is a subsystem name.
-#: src/Scanner.ycp:2012
+#: src/Scanner.ycp:2016
 msgid "Failed to set up the PTAL system."
 msgstr "Ustawienie systemu PTAL nie powiodło się."
 
 #. Header message for a list of scanners which will be deactivated:
-#: src/Scanner.ycp:2096
+#: src/Scanner.ycp:2100
 msgid ""
 "The following scanners use the same driver.\n"
 "Therefore all those scanners will be deactivated:"
@@ -712,7 +733,7 @@ msgstr ""
 #. Message of a Popup::Error where %1 will be replaced by the driver (backend) name.
 #. Only a simple message because before the function Scanner::DeactivateBackend
 #. was called and this function would have shown more specific messages.
-#: src/Scanner.ycp:2125 src/dialogs.ycp:422 src/dialogs.ycp:875
+#: src/Scanner.ycp:2129 src/dialogs.ycp:421 src/dialogs.ycp:875
 #, ycp-format
 msgid "Failed to deactivate %1."
 msgstr "Dezaktywacja %1 nie powiodła się."
@@ -725,49 +746,49 @@ msgstr "Dezaktywacja %1 nie powiodła się."
 #. Do not change or translate "hpoj", it is a driver name.
 #. Do not change or translate "ptal", it is a service name.
 #. Do not change or translate "CUPS", it is a subsystem name.
-#: src/Scanner.ycp:2150
+#: src/Scanner.ycp:2154
 msgid "The driver hpoj is deactivated but the associated service ptal is not deactivated because it is needed by the CUPS printing system."
 msgstr "Program obsługi hpoj jest nieaktywny, ale związana z nim usługa ptal nie jest nieaktywna, ponieważ jest wymagana przez system drukowania CUPS."
 
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not change or translate "ptal", it is a service name.
-#: src/Scanner.ycp:2166
+#: src/Scanner.ycp:2170
 msgid "Failed to stop the ptal service."
 msgstr "Zatrzymywanie usługi ptal nie powiodło się."
 
 #. Only a simple message because this error does not happen on a normal system
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not change or translate "ptal", it is a service name.
-#: src/Scanner.ycp:2177
+#: src/Scanner.ycp:2181
 msgid "Failed to disable the ptal service."
 msgstr "Wyłączanie usługi ptal nie powiodło się."
 
 #. Header of a Popup::AnyMessage where %1 will be replaced by the driver name:
-#: src/Scanner.ycp:2233
+#: src/Scanner.ycp:2237
 #, ycp-format
 msgid "No Scanner for %1"
 msgstr "Brak skanera dla %1"
 
 #. Body of a Popup::AnyMessage:
-#: src/Scanner.ycp:2235
+#: src/Scanner.ycp:2239
 msgid "It is not possible to test without a matching active scanner."
 msgstr "Niemożliwe jest testowanie bez odpowiedniego aktywnego skanera."
 
 #. Header of a SelectionBox with a list of scanners:
-#: src/Scanner.ycp:2246
+#: src/Scanner.ycp:2250
 msgid "&Scanner to Test"
 msgstr "&Skaner do przetestowania"
 
 #. Header of a Popup::ShowFeedback where %1 will be replaced by the driver name:
-#: src/Scanner.ycp:2266
+#: src/Scanner.ycp:2270
 #, ycp-format
 msgid "Testing %1"
 msgstr "Testowanie %1"
 
 #. Body of a Popup::ShowFeedback where %1 will be replaced by the SANE device identifier.
 #. Do not change or translate "scanimage -d %1 -v", it is a fixed command.
-#: src/Scanner.ycp:2269
+#: src/Scanner.ycp:2273
 #, ycp-format
 msgid "Testing with 'scanimage -d %1 -v'..."
 msgstr "Testowanie poleceniem \"scanimage -d %1 -v\"..."
@@ -777,7 +798,7 @@ msgstr "Testowanie poleceniem \"scanimage -d %1 -v\"..."
 #. %2 will be replaced by the actual test results
 #. which are usually only available in English.
 #. Do not change or translate "scanimage -d %1 -v", it is a fixed command.
-#: src/Scanner.ycp:2280
+#: src/Scanner.ycp:2284
 #, ycp-format
 msgid ""
 "Test with 'scanimage -d %1 -v' failed.\n"
@@ -791,12 +812,12 @@ msgstr ""
 "%2"
 
 #. Fallback message if the real results are missing:
-#: src/Scanner.ycp:2283 src/Scanner.ycp:2307
+#: src/Scanner.ycp:2287 src/Scanner.ycp:2311
 msgid "(no results available)"
 msgstr "(brak wyników)"
 
 #. Header of a Popup::AnyMessage where %1 will be replaced by the driver name:
-#: src/Scanner.ycp:2297
+#: src/Scanner.ycp:2301
 #, ycp-format
 msgid "Successfully Tested %1"
 msgstr "Udany test %1"
@@ -806,7 +827,7 @@ msgstr "Udany test %1"
 #. %2 will be replaced by the actual test results
 #. which are usually only available in English.
 #. Do not change or translate "scanimage -d %1 -v", it is a fixed command.
-#: src/Scanner.ycp:2304
+#: src/Scanner.ycp:2308
 #, ycp-format
 msgid ""
 "Test with 'scanimage -d %1 -v' succeeded.\n"
@@ -824,7 +845,7 @@ msgstr ""
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no scanning via network was configured.
 #. The latter results no error.
-#: src/Scanner.ycp:2327
+#: src/Scanner.ycp:2331
 msgid "Failed to determine the configuration for scanning via network."
 msgstr "Ustalanie konfiguracji do skanowania przez sieć nie powiodło się."
 
@@ -833,17 +854,17 @@ msgstr "Ustalanie konfiguracji do skanowania przez sieć nie powiodło się."
 #. (i.e. a system which is not totally broken or totally messed up).
 #. Do not confuse this error with the case when no scanning via network is to be set up.
 #. The latter results no error.
-#: src/Scanner.ycp:2384
+#: src/Scanner.ycp:2388
 msgid "Failed to set up scanning via network."
 msgstr "Konfiguracja skanowania przez sieć nie powiodła się."
 
 #. Popup::MessageDetails message:
-#: src/Scanner.ycp:2419
+#: src/Scanner.ycp:2423
 msgid "Check that your firewall allows scanning via network."
 msgstr "Proszę sprawdzić czy firewall umożliwia dostęp do skanowania przez sieć."
 
 #. Popup::MessageDetails information regarding details:
-#: src/Scanner.ycp:2421
+#: src/Scanner.ycp:2425
 msgid "For details regarding firewall see the help text of this dialog."
 msgstr "Aby uzyskać więcej informacji o ustawieniach firewalla proszę sprawdzić pomoc dla tego okna."
 
@@ -893,15 +914,15 @@ msgstr "Ska&nowanie przez sieć..."
 
 #. Header of a Popup::AnyMessage when nothing was selected:
 #. Header of a Popup::AnyMessage when no model was selected:
-#: src/dialogs.ycp:222 src/dialogs.ycp:332 src/dialogs.ycp:405
-#: src/dialogs.ycp:437 src/dialogs.ycp:506 src/dialogs.ycp:708
+#: src/dialogs.ycp:221 src/dialogs.ycp:331 src/dialogs.ycp:404
+#: src/dialogs.ycp:436 src/dialogs.ycp:505 src/dialogs.ycp:707
 msgid "Nothing Selected"
 msgstr "Nic nie wybrano"
 
 #. Body of a Popup::AnyMessage when nothing was selected:
 #. Body of a Popup::AnyMessage when no model was selected:
-#: src/dialogs.ycp:224 src/dialogs.ycp:334 src/dialogs.ycp:407
-#: src/dialogs.ycp:439 src/dialogs.ycp:508 src/dialogs.ycp:710
+#: src/dialogs.ycp:223 src/dialogs.ycp:333 src/dialogs.ycp:406
+#: src/dialogs.ycp:438 src/dialogs.ycp:507 src/dialogs.ycp:709
 msgid "Select an entry."
 msgstr "Proszę wybrać pozycję."
 
@@ -915,7 +936,7 @@ msgstr "Proszę wybrać pozycję."
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Edit] button.
 #. Translate 'Edit' to the exact label of the [Edit] button.
-#: src/dialogs.ycp:288 src/dialogs.ycp:302
+#: src/dialogs.ycp:287 src/dialogs.ycp:301
 msgid "Edit Not Possible"
 msgstr "Edycja nie jest możliwa"
 
@@ -927,7 +948,7 @@ msgstr "Edycja nie jest możliwa"
 #. without a matching active scanner was selected
 #. and then the user clicked the [Test] button:
 #. Translate 'delete' to the exact label of the [Delete] button.
-#: src/dialogs.ycp:293 src/dialogs.ycp:480
+#: src/dialogs.ycp:292 src/dialogs.ycp:479
 msgid "It is only possible to delete a driver without a matching scanner."
 msgstr "Możliwe jest tylko usunięcie programu obsługi, do którego nie jest przypisany żaden skaner."
 
@@ -943,7 +964,7 @@ msgstr "Możliwe jest tylko usunięcie programu obsługi, do którego nie jest p
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Test] button.
 #. Translate 'add' to the exact label of the [Add] button.
-#: src/dialogs.ycp:307 src/dialogs.ycp:373 src/dialogs.ycp:494
+#: src/dialogs.ycp:306 src/dialogs.ycp:372 src/dialogs.ycp:493
 msgid "It is only possible to add a scanner."
 msgstr "Możliwe jest tylko dodanie skanera."
 
@@ -957,7 +978,7 @@ msgstr "Możliwe jest tylko dodanie skanera."
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Delete] button.
 #. Translate 'Delete' to the exact label of the [Delete] button.
-#: src/dialogs.ycp:354 src/dialogs.ycp:368
+#: src/dialogs.ycp:353 src/dialogs.ycp:367
 msgid "Delete Not Possible"
 msgstr "Usunięcie nie jest możliwe"
 
@@ -969,13 +990,13 @@ msgstr "Usunięcie nie jest możliwe"
 #. which is not yet configured was selected
 #. and then the user clicked the [Test] button:
 #. Translate 'edit' to the exact label of the [Edit] button.
-#: src/dialogs.ycp:359 src/dialogs.ycp:464
+#: src/dialogs.ycp:358 src/dialogs.ycp:463
 msgid "It is only possible to edit a detected scanner."
 msgstr "Możliwa jest tylko edycja wykrytego skanera."
 
 #. Question of a Popup::YesNo
 #. where %1 will be replaced by the driver name:
-#: src/dialogs.ycp:413
+#: src/dialogs.ycp:412
 #, ycp-format
 msgid "Deactivate %1?"
 msgstr "Deaktywować %1?"
@@ -996,14 +1017,14 @@ msgstr "Deaktywować %1?"
 #. when there is neither a detected scanner nor an active scanner or driver
 #. and then the user clicked the [Test] button.
 #. Translate 'Test' to the exact label of the [Test] button.
-#: src/dialogs.ycp:459 src/dialogs.ycp:475 src/dialogs.ycp:489
+#: src/dialogs.ycp:458 src/dialogs.ycp:474 src/dialogs.ycp:488
 msgid "Test Not Possible"
 msgstr "Test nie jest możliwy"
 
 #. Message of a Popup::Error where %1 will be replaced by the driver (backend) name.
 #. Only a simple message because before the function Scanner::TestBackend
 #. was called and this function would have shown more specific messages.
-#: src/dialogs.ycp:516
+#: src/dialogs.ycp:515
 #, ycp-format
 msgid "Failed to test %1."
 msgstr "Testowanie %1 nie powiodło się."
@@ -1012,47 +1033,47 @@ msgstr "Testowanie %1 nie powiodło się."
 #. Only a simple message because before the function Scanner::RunHpsetup
 #. was called and this function would have shown more specific messages.
 #. Do not change or translate "hp-setup", it is a program name:
-#: src/dialogs.ycp:563
+#: src/dialogs.ycp:562
 msgid "Failed to run hp-setup."
 msgstr "Uruchomienie hp-setup nie powiodło się."
 
 #. Caption of the SelectModelDialog:
-#: src/dialogs.ycp:586
+#: src/dialogs.ycp:585
 msgid "Scanner Model and Driver Selection"
 msgstr "Wybór modelu i programu obsługi skanera"
 
 #. Header of a TextEntry user input field to enter a search string:
-#: src/dialogs.ycp:629
+#: src/dialogs.ycp:628
 msgid "S&earch String"
 msgstr "Szu&kaj tekstu"
 
 #. Label of a PushButton to search a list for a search string:
-#: src/dialogs.ycp:641
+#: src/dialogs.ycp:640
 msgid "&Search"
 msgstr "Szuka&j"
 
 #. Label of a PushButton to show all entries of a list:
-#: src/dialogs.ycp:645
+#: src/dialogs.ycp:644
 msgid "Show Complete &List"
 msgstr "Wyświe&tl pełną listę"
 
 #. Header of a SelectionBox with a list of models:
-#: src/dialogs.ycp:652 src/dialogs.ycp:685
+#: src/dialogs.ycp:651 src/dialogs.ycp:684
 msgid "Scanner &Models"
 msgstr "&Modele skanerów"
 
 #. Header of a SelectionBox with the complete list of models:
-#: src/dialogs.ycp:697
+#: src/dialogs.ycp:696
 msgid "All Scanner &Models"
 msgstr "&Wszystkie modele skanerów"
 
 #. Header of a Popup::AnyMessage when an unsupported model was selected:
-#: src/dialogs.ycp:719
+#: src/dialogs.ycp:718
 msgid "Unsupported Model"
 msgstr "Model nieobsługiwany"
 
 #. Body of a Popup::AnyMessage when an unsupported model was selected:
-#: src/dialogs.ycp:721
+#: src/dialogs.ycp:720
 msgid ""
 "This model is not supported.\n"
 "Ask the manufacturer for a Linux driver."
@@ -1063,14 +1084,14 @@ msgstr ""
 #. Header of a Popup::AnyMessage when a model was selected
 #. which is listed as "unsupported" for a particular driver:
 #. %1 will be replaced by the backend (scanner driver) name
-#: src/dialogs.ycp:728
+#: src/dialogs.ycp:727
 #, ycp-format
 msgid "Model Not Supported by the Driver %1"
 msgstr "Model nie jest obsługiwany przez program obsługi %1"
 
 #. Body of a Popup::AnyMessage when a model was selected
 #. which is listed as "unsupported" for a particular driver:
-#: src/dialogs.ycp:733
+#: src/dialogs.ycp:732
 msgid ""
 "Check if another driver supports it,\n"
 "select a compatible model,\n"
@@ -1249,11 +1270,30 @@ msgstr ""
 #. Do not change or translate "hp-setup", it is a command name.
 #. Do not change or translate "lsusb", it is a command name.
 #: src/helps.ycp:73
+#, fuzzy
+#| msgid ""
+#| "<p>\n"
+#| "A normal USB scanner should be detected automatically.\n"
+#| "By default, only those USB scanners are shown\n"
+#| "for which the UDB vendor and product IDs are known.\n"
+#| "If a USB scanner is not shown or if there are unexpected results,\n"
+#| "try <b>Other</b> and <b>Restart Detection</b>.\n"
+#| "It might happen that particular USB devices which are not scanners\n"
+#| "are shown too. There is no generic way to reliably distinguish a scanner\n"
+#| "from other USB devices because there is no USB device class for scanners.\n"
+#| "Try to proceed with <b>Add</b>.\n"
+#| "For HP all-in-one devices you may have to run <tt>hp-setup</tt>\n"
+#| "via <b>Other</b> and <b>Run hp-setup</b> before you can \n"
+#| "configure the scanner unit with this tool.\n"
+#| "If you have difficulties configuring your scanner,\n"
+#| "check whether it appears in the output of <tt>lsusb</tt>.\n"
+#| "If it is not listed there, the USB system cannot communicate with the scanner.\n"
+#| "</p>\n"
 msgid ""
 "<p>\n"
 "A normal USB scanner should be detected automatically.\n"
 "By default, only those USB scanners are shown\n"
-"for which the UDB vendor and product IDs are known.\n"
+"for which the USB vendor and product IDs are known.\n"
 "If a USB scanner is not shown or if there are unexpected results,\n"
 "try <b>Other</b> and <b>Restart Detection</b>.\n"
 "It might happen that particular USB devices which are not scanners\n"

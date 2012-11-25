@@ -7,14 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: YaST (@memory@)\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-04-20 13:47+0200\n"
+"POT-Creation-Date: 2012-10-24 13:23+0200\n"
 "PO-Revision-Date: 2010-12-27 20:19+0100\n"
 "Last-Translator: Mariusz Fik <fisiu@opensuse.org>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
+"Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: pl\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.0\n"
 
@@ -22,11 +22,11 @@ msgstr ""
 msgid "Online Update Configuration Module Help"
 msgstr "Pomoc modułu konfiguracji aktualizacji online"
 
-#: src/clients/online_update_configuration.ycp:176
+#: src/clients/online_update_configuration.ycp:182
 msgid "The registration module is not available."
 msgstr "Moduł rejestracji jest niedostępny."
 
-#: src/clients/online_update_configuration.ycp:176
+#: src/clients/online_update_configuration.ycp:182
 msgid "Please install yast2-registration and try again."
 msgstr "Należy zainstalować moduł yast2-registration, a następnie spróbować ponownie."
 
@@ -65,55 +65,63 @@ msgstr "Ustaw jako domyślne"
 msgid "Advanced"
 msgstr "Zaawansowany"
 
+#. for category filter
 #: src/dialogs/OUCDialogs.ycp:37
-#, ycp-format
-msgid "<p>In <b>%1</b> the current update repository is shown.</p>"
-msgstr "<p>W <b>%1</b> wyświetlone jest bieżące repozytorium aktualizacji.</p>"
+#, fuzzy
+#| msgid "Filter by author"
+msgid "Filter by Category"
+msgstr "Filtrowanie wg autora"
 
-#: src/dialogs/OUCDialogs.ycp:38
-#, ycp-format
-msgid "<p>Press <b>%1</b> to use the default update repository.</p>"
-msgstr "<p>Proszę nacisnąć przycisk <b>%1</b>, aby użyć domyślnego repozytorium aktualizacji.</p>"
-
+#. for category filter //translators: means: categories of patches
 #: src/dialogs/OUCDialogs.ycp:39
-#, ycp-format
-msgid "<p>Find related actions in the <b>%1</b> menu.</p>"
-msgstr "<p>Podobne czynności można znaleźć w menu <b>%1</b>.</p>"
+#, fuzzy
+#| msgid "Package Categories"
+msgid "Patch Categories"
+msgstr "Kategorie pakietów"
 
-#: src/dialogs/OUCDialogs.ycp:40
-#, ycp-format
-msgid "<p>In <b>%1</b> set up the automatic online update. Choose the interval to use and if interactive patches should be ignored, otherwise the updater will use the default answers.</p>"
-msgstr "<p>Opcja  <b>%1</b> umożliwia automatyzacją aktualizacji. Należy określić interwał do użycia i czy interaktywne poprawki mają być ignorowane. W przeciwnym razie w programie aktualizującym użyte zostaną domyślne odpowiedzi.</p>"
+#: src/dialogs/OUCDialogs.ycp:41
+msgid "enabled"
+msgstr "włączona"
 
-#: src/dialogs/OUCDialogs.ycp:43
+#: src/dialogs/OUCDialogs.ycp:42
+msgid "disabled"
+msgstr "wyłączona"
+
+#: src/dialogs/OUCDialogs.ycp:44
 msgid "Edit Software Repositories"
 msgstr "Edycja repozytoriów oprogramowania"
 
-#: src/dialogs/OUCDialogs.ycp:44
+#: src/dialogs/OUCDialogs.ycp:45
 msgid "Register for support and get update repository"
 msgstr "Rejestracja w pomocy technicznej i pobranie repozytorium aktualizacji"
 
-#: src/dialogs/OUCDialogs.ycp:45
+#: src/dialogs/OUCDialogs.ycp:46
 msgid "Send hardware information to the smolt project"
 msgstr "Prześlij informacje o sprzęcie do projektu smolt"
 
-#: src/dialogs/OUCDialogs.ycp:46
+#: src/dialogs/OUCDialogs.ycp:47
 msgid "Interval"
 msgstr "Interwał"
 
-#: src/dialogs/OUCDialogs.ycp:47
+#: src/dialogs/OUCDialogs.ycp:48
 msgid "Skip Interactive Patches"
 msgstr "Pomiń poprawki interaktywne"
 
-#: src/dialogs/OUCDialogs.ycp:48
+#: src/dialogs/OUCDialogs.ycp:49
 msgid "Agree with Licenses"
 msgstr "Zgoda na Licencje"
 
-#: src/dialogs/OUCDialogs.ycp:49
+#: src/dialogs/OUCDialogs.ycp:50
+#, fuzzy
+#| msgid "Recommended Packages"
+msgid "Include Recommended Packages"
+msgstr "Zalecane pakiety"
+
+#: src/dialogs/OUCDialogs.ycp:51
 msgid "Current Update Repository:"
 msgstr "Bieżące repozytorium aktualizacji:"
 
-#: src/dialogs/OUCDialogs.ycp:50
+#: src/dialogs/OUCDialogs.ycp:52
 msgid ""
 "In order to add the default update repository\n"
 "you have to register this product."
@@ -121,26 +129,54 @@ msgstr ""
 "W celu dodania domyślnego repozytorium aktualizacji\n"
 "należy zarejestrować produkt."
 
-#: src/dialogs/OUCDialogs.ycp:51
+#: src/dialogs/OUCDialogs.ycp:53
 msgid "Do you want to perform the registration now?"
 msgstr "Czy dokonać teraz rejestracji?"
 
-#: src/dialogs/OUCDialogs.ycp:55
-msgid "enabled"
-msgstr "włączona"
-
 #: src/dialogs/OUCDialogs.ycp:56
-msgid "disabled"
-msgstr "wyłączona"
+#, ycp-format
+msgid "<p>In <b>%1</b> the current update repository is shown.</p>"
+msgstr "<p>W <b>%1</b> wyświetlone jest bieżące repozytorium aktualizacji.</p>"
 
-#: src/dialogs/OUCDialogs.ycp:85
-msgid "daily"
-msgstr "codziennie"
+#: src/dialogs/OUCDialogs.ycp:57
+#, ycp-format
+msgid "<p>Press <b>%1</b> to use the default update repository.</p>"
+msgstr "<p>Proszę nacisnąć przycisk <b>%1</b>, aby użyć domyślnego repozytorium aktualizacji.</p>"
 
-#: src/dialogs/OUCDialogs.ycp:86
-msgid "weekly"
-msgstr "co tydzień"
+#: src/dialogs/OUCDialogs.ycp:58
+#, ycp-format
+msgid "<p>Find related actions in the <b>%1</b> menu.</p>"
+msgstr "<p>Podobne czynności można znaleźć w menu <b>%1</b>.</p>"
 
-#: src/dialogs/OUCDialogs.ycp:87
-msgid "monthly"
-msgstr "co miesiąc"
+#: src/dialogs/OUCDialogs.ycp:59
+#, fuzzy, ycp-format
+#| msgid "Set up automatic online update"
+msgid "<p>In <b>%1</b> set up the automatic online update.</p>"
+msgstr "Konfiguracja automatycznej aktualizacji online"
+
+#: src/dialogs/OUCDialogs.ycp:60
+#, ycp-format
+msgid "<p>Select an update interval and specify if interactive patches should be ignored and if licenses should be automatically agreed with.</p>"
+msgstr ""
+
+#: src/dialogs/OUCDialogs.ycp:61
+#, ycp-format
+msgid "<p>All packages that are recommended by an updated package will be installed when <b>%1</b> is enabled.</p>"
+msgstr ""
+
+#: src/dialogs/OUCDialogs.ycp:62
+#, ycp-format
+msgid "<p>Category filter for patches can be configured in the section <b>%1</b>. Only patches of the listed categories will be installed. Others will be skipped.</p>"
+msgstr ""
+
+#~ msgid "<p>In <b>%1</b> set up the automatic online update. Choose the interval to use and if interactive patches should be ignored, otherwise the updater will use the default answers.</p>"
+#~ msgstr "<p>Opcja  <b>%1</b> umożliwia automatyzacją aktualizacji. Należy określić interwał do użycia i czy interaktywne poprawki mają być ignorowane. W przeciwnym razie w programie aktualizującym użyte zostaną domyślne odpowiedzi.</p>"
+
+#~ msgid "daily"
+#~ msgstr "codziennie"
+
+#~ msgid "weekly"
+#~ msgstr "co tydzień"
+
+#~ msgid "monthly"
+#~ msgstr "co miesiąc"
