@@ -14,8 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 1.5\n"
 
 #. hint to error message
@@ -27,12 +26,10 @@ msgstr "Proszę zweryfikować, czy serwer LDAP jest uruchomiony i osiągalny."
 #: src/Ldap.ycp:349
 msgid ""
 "Failed to establish TLS encryption.\n"
-"Verify that the correct CA Certificate is installed and the Server "
-"Certificate is valid."
+"Verify that the correct CA Certificate is installed and the Server Certificate is valid."
 msgstr ""
 "Nie udało się ustanowić szyfrowania TLS.\n"
-"Proszę zweryfikować, czy zainstalowany jest prawidlowy certyfikat CA, oraz "
-"czy serwer certyfikatów jest prawidłowy."
+"Proszę zweryfikować, czy zainstalowany jest prawidlowy certyfikat CA, oraz czy serwer certyfikatów jest prawidłowy."
 
 #. hint to error message
 #: src/Ldap.ycp:352
@@ -212,8 +209,7 @@ msgid ""
 "Retry connection without TLS/SSL?\n"
 msgstr ""
 "Możliwą przyczyną nieudanego połączenia może być fakt, że\n"
-"klient jest skonfigurowany do użycia protokołu TLS/SSL, którego serwer nie "
-"obsługuje.\n"
+"klient jest skonfigurowany do użycia protokołu TLS/SSL, którego serwer nie obsługuje.\n"
 "\n"
 "Ponowić próbę połączenia bez TLS/SSL?\n"
 
@@ -344,8 +340,7 @@ msgstr ""
 "dodawać za pomocą przycisku <b>Dodaj wartość</b>. Czasem przycisk ten\n"
 "zawiera listę możliwych dla bieżącego atrybutu wartości.\n"
 "Jeśli wartość modyfikowanego atrybutu powinna być unikatową nazwą DN,\n"
-"możliwe jest wybranie jej z drzewa LDAP za pomocą przycisku <b>Przeglądaj</b>"
-".\n"
+"możliwe jest wybranie jej z drzewa LDAP za pomocą przycisku <b>Przeglądaj</b>.\n"
 "</p>\n"
 
 #. help text 3/3, %1 is attribute name, description follows.
@@ -435,8 +430,7 @@ msgstr "Proszę wprowadzić nazwę modułu."
 #: src/LdapPopup.ycp:499
 msgid ""
 "<p>Here, set the values of attributes belonging\n"
-"to an object using the current template. Such values are used as defaults "
-"when\n"
+"to an object using the current template. Such values are used as defaults when\n"
 "the new object is created.</p>\n"
 msgstr ""
 "<p>W tym miejscu należy podać wartości atrybutów należących do\n"
@@ -570,14 +564,8 @@ msgstr "<p>Drzewo LDAP można przeglądać w lewej części okna dialogowego.</p
 
 #. help text for LDAP browser
 #: src/ldap_browser.ycp:69
-msgid ""
-"<p>Once the LDAP object is selected in the tree, the table shows the object "
-"data. Use <b>Edit</b> to change the value of the selected attribute. Use <b>"
-"Save</b> to save your changes to LDAP.</p>"
-msgstr ""
-"<p>Tabela zawiera dane zaznaczonego w drzewie LDAP obiektu. Aby zmienić "
-"wartość wybranego atrybutu, należy nacisnąć przycisk <b>Edytuj</b>. Do "
-"zapisywania zmian w LDAP służy przycisk <b>Zapisz</b>.</p>"
+msgid "<p>Once the LDAP object is selected in the tree, the table shows the object data. Use <b>Edit</b> to change the value of the selected attribute. Use <b>Save</b> to save your changes to LDAP.</p>"
+msgstr "<p>Tabela zawiera dane zaznaczonego w drzewie LDAP obiektu. Aby zmienić wartość wybranego atrybutu, należy nacisnąć przycisk <b>Edytuj</b>. Do zapisywania zmian w LDAP służy przycisk <b>Zapisz</b>.</p>"
 
 #. popup question (Continue/Cancel follows)
 #: src/ldap_browser.ycp:72
@@ -741,58 +729,38 @@ msgstr "<p>W tym miejscu można ustawić ten komputer jako klienta LDAP.</p>\n"
 
 #. help text 2/9
 #: src/ui.ycp:332
-msgid ""
-"<p>To authenticate your users with an OpenLDAP server, select <b>Use LDAP</b>"
-". NSS and PAM will be configured accordingly.</p>"
-msgstr ""
-"<p>Aby uwierzytelniać użytkowników przy użyciu serwera OpenLDAP, należy "
-"wybrać opcję <b>Używaj LDAP</b>. NSS i PAM zostaną w tym celu odpowiednio "
-"skonfigurowane.</p>"
+msgid "<p>To authenticate your users with an OpenLDAP server, select <b>Use LDAP</b>. NSS and PAM will be configured accordingly.</p>"
+msgstr "<p>Aby uwierzytelniać użytkowników przy użyciu serwera OpenLDAP, należy wybrać opcję <b>Używaj LDAP</b>. NSS i PAM zostaną w tym celu odpowiednio skonfigurowane.</p>"
 
 #. help text 3/9
 #: src/ui.ycp:335
 msgid ""
 "<p>To deactivate LDAP services, click <b>Do Not Use LDAP</b>.\n"
-"If you deactivate LDAP, the current LDAP entry for passwd in "
-"/etc/nsswitch.conf\n"
+"If you deactivate LDAP, the current LDAP entry for passwd in /etc/nsswitch.conf\n"
 "will be removed. The PAM configuration will be modified and the LDAP entry\n"
 "removed.</p>"
 msgstr ""
 "<p>Aby wyłączyć usługi LDAP, należy wybrać opcję <b>Nie używaj LDAP</b>.\n"
-"Po wyłączeniu LDAP, bieżąca pozycja LDAP dla passwd w pliku "
-"/etc/nsswitch.conf\n"
+"Po wyłączeniu LDAP, bieżąca pozycja LDAP dla passwd w pliku /etc/nsswitch.conf\n"
 "zostanie usunięta. Zmieniona zostanie konfiguracja PAM, z której zostaną\n"
 "usunięte pozycje LDAP.</p>"
 
 #. help text 3.5/9
 #: src/ui.ycp:341
-msgid ""
-"<p>To activate LDAP but forbid users from logging in to this machine, select "
-"<b>Enable LDAP Users but Disable Logins</b>.</p>"
-msgstr ""
-"<p>Aby włączyć LDAP, ale zabronić użytkownikom logowania się do tego "
-"komputera, należy zaznaczyć opcję <b>Włącz LDAP, ale wyłącz logowanie</b>.</p>"
+msgid "<p>To activate LDAP but forbid users from logging in to this machine, select <b>Enable LDAP Users but Disable Logins</b>.</p>"
+msgstr "<p>Aby włączyć LDAP, ale zabronić użytkownikom logowania się do tego komputera, należy zaznaczyć opcję <b>Włącz LDAP, ale wyłącz logowanie</b>.</p>"
 
 #. help text
 #: src/ui.ycp:344
-msgid ""
-"<p>Check <b>Use System Security Services Daemon</b> if you want the system to "
-"use SSSD instead of nss_ldap.</p>"
-msgstr ""
-"<p>Zaznacz pole <b>Użyj demona bezpieczeństwa usług systemowych</b>, jeśl "
-"chcesz korzystać z SSSD zamiast nss_ldap.</p>i "
+msgid "<p>Check <b>Use System Security Services Daemon</b> if you want the system to use SSSD instead of nss_ldap.</p>"
+msgstr "<p>Zaznacz pole <b>Użyj demona bezpieczeństwa usług systemowych</b>, jeśl chcesz korzystać z SSSD zamiast nss_ldap.</p>i "
 
 #. help text 4/9
 #: src/ui.ycp:347
 msgid ""
-"<p>Enter the LDAP server's address (such as ldap.example.com or 10.20.0.2) in "
-"<b>Addresses</b> and the distinguished name of the search base (<b>Base DN</b>"
-", such as dc=example,dc=com). Specify multiple servers\n"
-"by separating their addresses with spaces. It must be possible to resolve "
-"the\n"
-"addresses without using LDAP. You can also specify the port on which the "
-"server is running using the syntax \"server:port\", for example, <tt>"
-"ldap.example.com:379</tt>.\n"
+"<p>Enter the LDAP server's address (such as ldap.example.com or 10.20.0.2) in <b>Addresses</b> and the distinguished name of the search base (<b>Base DN</b>, such as dc=example,dc=com). Specify multiple servers\n"
+"by separating their addresses with spaces. It must be possible to resolve the\n"
+"addresses without using LDAP. You can also specify the port on which the server is running using the syntax \"server:port\", for example, <tt>ldap.example.com:379</tt>.\n"
 "</p>\n"
 msgstr ""
 "<p>W polu <b>Adresy serwerów LDAP</b> należy podać adres serwera LDAP \n"
@@ -800,35 +768,26 @@ msgstr ""
 "wyróżniającą nazwę podstawy wyszukiwania (np. dc=example,dc=com). \n"
 "Nazwy wielu serwerów należy rozdzielić znakami spacji. Musi być możliwe \n"
 "rozwiązywanie adresów bez używania LDAP. Używając składni \"server:port\" \n"
-"można także podać port, na którym działa serwer, np. <tt>"
-"ldap.example.com:379<//tt>.\n"
+"można także podać port, na którym działa serwer, np. <tt>ldap.example.com:379<//tt>.\n"
 "</p>\n"
 
 #. help text 5/9
 #: src/ui.ycp:354
-msgid ""
-"<p>With <b>Find</b>, select the LDAP server from the list provided by the "
-"service location protocol (SLP). Using <b>Fetch DN</b>, read the base DN from "
-"server.</p>"
-msgstr ""
-"<p>Aby wybrać serwer LDAP z listy uzyskanej za pomocą protokołu lokalizacji "
-"usług (SLP), proszę nacisnąć przycisk <b>Znajdź</b>. Aby odczytać bazowe DN z "
-"serwera, należy nacisnąć przycisk <b>Pobierz DN</b>.</p>"
+msgid "<p>With <b>Find</b>, select the LDAP server from the list provided by the service location protocol (SLP). Using <b>Fetch DN</b>, read the base DN from server.</p>"
+msgstr "<p>Aby wybrać serwer LDAP z listy uzyskanej za pomocą protokołu lokalizacji usług (SLP), proszę nacisnąć przycisk <b>Znajdź</b>. Aby odczytać bazowe DN z serwera, należy nacisnąć przycisk <b>Pobierz DN</b>.</p>"
 
 #. help text 6/9
 #: src/ui.ycp:357
 msgid ""
 "<p>Some LDAP servers support StartTLS (RFC2830).\n"
-"If your server supports it and it is configured, activate <b>LDAP TLS/SSL</b>"
-"\n"
+"If your server supports it and it is configured, activate <b>LDAP TLS/SSL</b>\n"
 "to encrypt your communication with the LDAP server. You may download a CA\n"
 "certificate file in PEM format from a given URL.</p>\n"
 msgstr ""
 "<p>Niektóre serwery LDAP obsługują StartTLS [RFC2830].\n"
 "Jeśli używany serwer to obsługuje i jest skonfigurowany, można uaktywnić \n"
 "<b>LDAP TLS/SSL</b>, aby szyfrować komunikację z serwerem LDAP. \n"
-"Można również chcieć pobrać plik certyfikatu w formacie PEM z podanego adresu "
-"URL.</p>\n"
+"Można również chcieć pobrać plik certyfikatu w formacie PEM z podanego adresu URL.</p>\n"
 
 #. help text 8/9
 #: src/ui.ycp:364
@@ -842,15 +801,13 @@ msgstr ""
 #. help text 9/9 (additional)
 #: src/ui.ycp:368
 msgid ""
-"<p><b>Automounter</b> is a daemon that automatically mounts directories, "
-"such\n"
+"<p><b>Automounter</b> is a daemon that automatically mounts directories, such\n"
 "as users' home directories. Its configuration files (auto.*) should already\n"
 "exist locally or over LDAP. If the automounter is not installed yet but you\n"
 "want to use it, it will be installed automatically.</p>\n"
 msgstr ""
 "<p><b>Automounter</b>  jest demonem, który automatycznie montuje katalogi,\n"
-"na przykład katalogi domowe użytkowników. Zakłada się, że jego pliki "
-"konfiguracyjne (auto.*) istnieją już\n"
+"na przykład katalogi domowe użytkowników. Zakłada się, że jego pliki konfiguracyjne (auto.*) istnieją już\n"
 "lokalnie albo że są dostępne przez LDAP.\n"
 "Jeśli Automounter nie jest zainstalowany, zostanie zainstalowany\n"
 "automatycznie.</p>\n"
@@ -938,8 +895,7 @@ msgstr ""
 "\n"
 "W aktualnej konfiguracji zamiast SSSD używane jest nss_ldap.\n"
 "Tylko konfiguracja oparta o SSSD jest obsługiwana przez YaST.\n"
-"Czy chcesz kontynuować i użyć SSSD, czy anulować i zachować poprzednią "
-"konfigurację?"
+"Czy chcesz kontynuować i użyć SSSD, czy anulować i zachować poprzednią konfigurację?"
 
 #. error popup label
 #: src/ui.ycp:567
@@ -996,12 +952,10 @@ msgstr ""
 #. yes/no question
 #: src/ui.ycp:695
 msgid ""
-"The security connection is enabled, but server certificate verification is "
-"disabled.\n"
+"The security connection is enabled, but server certificate verification is disabled.\n"
 "Enable certificate checks now?"
 msgstr ""
-"Bezpiecznie połączenie zostało włączone, ale weryfikacja certyfikatu serwera "
-"jest wyłączona.\n"
+"Bezpiecznie połączenie zostało włączone, ale weryfikacja certyfikatu serwera jest wyłączona.\n"
 "Uruchomić sprawdzanie certyfikatu?"
 
 #. help text caption 1
@@ -1012,32 +966,22 @@ msgstr "<p><b>Zaawansowane opcje klienta LDAP</b></p>"
 #. help text 1/3
 #: src/ui.ycp:737
 msgid ""
-"<p>If Kerberos authentication should be used, specify the <b>realm</b> and <b>"
-"KDC Address</b>.\n"
-"Determine if user credentials should be cached locally by checking <b>SSSD "
-"Offline Authentication</b>.\n"
-"For more info about SSSD settings, check the man page of <tt>sssd.conf</tt>.<"
-"/p>\n"
+"<p>If Kerberos authentication should be used, specify the <b>realm</b> and <b>KDC Address</b>.\n"
+"Determine if user credentials should be cached locally by checking <b>SSSD Offline Authentication</b>.\n"
+"For more info about SSSD settings, check the man page of <tt>sssd.conf</tt>.</p>\n"
 msgstr ""
-"<p>Jeśil używane ma być uwierzytelnianie Kerberos, należy określić <b>domenę<"
-"/b> oraz <b>Adres serwera KDC</b>.\n"
-"Zadecyduj, czy poświadczenia użytkowników powinny być przechowywane lokalnie "
-"zaznaczając pole <b>Uwierzytelnianie offline SSSD</b>.\n"
-"Więcej informacji o ustawieniach SSSD znajdziesz na stronie manuala pliku <tt>"
-"sssd.conf</tt>.</p>\n"
+"<p>Jeśil używane ma być uwierzytelnianie Kerberos, należy określić <b>domenę</b> oraz <b>Adres serwera KDC</b>.\n"
+"Zadecyduj, czy poświadczenia użytkowników powinny być przechowywane lokalnie zaznaczając pole <b>Uwierzytelnianie offline SSSD</b>.\n"
+"Więcej informacji o ustawieniach SSSD znajdziesz na stronie manuala pliku <tt>sssd.conf</tt>.</p>\n"
 
 #. help text 2/3
 #: src/ui.ycp:743
 msgid ""
-"<p><b>Password Change Protocol</b> refers to the pam_password attribute of "
-"the\n"
-"<tt>/etc/ldap.conf</tt> file. See <tt>man pam_ldap</tt> for an explanation of "
-"its values.</p>"
+"<p><b>Password Change Protocol</b> refers to the pam_password attribute of the\n"
+"<tt>/etc/ldap.conf</tt> file. See <tt>man pam_ldap</tt> for an explanation of its values.</p>"
 msgstr ""
-"<p><b>Protokół zmiany hasła</b> odnosi się do atrybutu pam_password z pliku <"
-"tt>/etc/ldap.conf</tt>. \n"
-"Informacje o znaczeniu jego wartości dostępne są na stronie podręcznika "
-"systemowego (<tt>man pam_ldap</tt>).</p>"
+"<p><b>Protokół zmiany hasła</b> odnosi się do atrybutu pam_password z pliku <tt>/etc/ldap.conf</tt>. \n"
+"Informacje o znaczeniu jego wartości dostępne są na stronie podręcznika systemowego (<tt>man pam_ldap</tt>).</p>"
 
 #. help text 3/3, %1 is attribute name
 #: src/ui.ycp:746
@@ -1052,14 +996,11 @@ msgstr ""
 #: src/ui.ycp:751
 msgid ""
 "<p>If secure connection requires certificate checking, specify where your\n"
-"certificate file is located. Enter either a directory containing "
-"certificates\n"
+"certificate file is located. Enter either a directory containing certificates\n"
 "or the explicit path to one certificate file.</p>"
 msgstr ""
-"<p>Jeśli bezpiecznie połączenie wymaga sprawdzania certyfikatu, można podać "
-"miejsce, w którym znajduje się plik certyfikatu. \n"
-"Należy to zrobić przez podanie całego katalogu lub ścieżki do konkretnego "
-"pliku certyfikatu.</p>"
+"<p>Jeśli bezpiecznie połączenie wymaga sprawdzania certyfikatu, można podać miejsce, w którym znajduje się plik certyfikatu. \n"
+"Należy to zrobić przez podanie całego katalogu lub ścieżki do konkretnego pliku certyfikatu.</p>"
 
 #. help text caption 2
 #: src/ui.ycp:756
@@ -1082,41 +1023,33 @@ msgstr ""
 msgid ""
 "<p>To access the data stored on the server, enter the\n"
 "<b>Administrator DN</b>.\n"
-"You can enter the full DN (for example, cn=Administrator,dc=mydomain,dc=com) "
-"or \n"
-"the relative DN (for example, cn=Administrator). The LDAP base DN is appended "
-"automatically if the appropriate option is checked.</p>\n"
+"You can enter the full DN (for example, cn=Administrator,dc=mydomain,dc=com) or \n"
+"the relative DN (for example, cn=Administrator). The LDAP base DN is appended automatically if the appropriate option is checked.</p>\n"
 msgstr ""
 "<p>Aby uzyskać dostęp do danych przechowywanych na serwerze,\n"
 "należy wprowadzić <b>DN Administratora</b>.\n"
 "Można podać pełne DN (np. cn=Administrator,dc=domena,dc=com) albo tylko \n"
-"względne DN (np. cn=Administrator). Bazowe DN z LDAP zostanie automatycznie "
-"dołączone, o ile zaznaczona zostanie odpowiednia opcja.</p>\n"
+"względne DN (np. cn=Administrator). Bazowe DN z LDAP zostanie automatycznie dołączone, o ile zaznaczona zostanie odpowiednia opcja.</p>\n"
 
 #. help text 3/4
 #: src/ui.ycp:772
 msgid ""
 "<p>To create the default configuration objects for LDAP users and groups,\n"
-"check <b>Create Default Configuration Objects</b>. The objects are only "
-"created when they do not already exist.</p>\n"
+"check <b>Create Default Configuration Objects</b>. The objects are only created when they do not already exist.</p>\n"
 msgstr ""
 "<p>Aby utworzyć domyślną konfigurację obiektów dla użytkowników i grup LDAP\n"
-"należy zaznaczyć opcję <b>Utwórz domyślne obiekty konfiguracyjne</b>. Obiekty "
-"zostaną utworzone tylko wtedy, jeśli wcześniej nie istniały.</p>\n"
+"należy zaznaczyć opcję <b>Utwórz domyślne obiekty konfiguracyjne</b>. Obiekty zostaną utworzone tylko wtedy, jeśli wcześniej nie istniały.</p>\n"
 
 #. help text 4/4
 #: src/ui.ycp:777
 msgid ""
 "<p>Press <b>Configure</b> to configure settings stored on the\n"
-"LDAP server. You will be asked for the password if you are not connected yet "
-"or\n"
+"LDAP server. You will be asked for the password if you are not connected yet or\n"
 "have changed your configuration.</p>\n"
 msgstr ""
 "<p>Aby skonfigurować ustawienia przechowywane na serwerze LDAP,\n"
-"należy nacisnąć przycisk <b>Skonfiguruj</b>. Jeśli komputer nie jest jeszcze "
-"połączony,\n"
-"albo jeśli konfiguracja została zmieniona, pojawi się prośba o podanie "
-"hasła.</p>\n"
+"należy nacisnąć przycisk <b>Skonfiguruj</b>. Jeśli komputer nie jest jeszcze połączony,\n"
+"albo jeśli konfiguracja została zmieniona, pojawi się prośba o podanie hasła.</p>\n"
 
 #. tab label
 #: src/ui.ycp:835
@@ -1233,8 +1166,7 @@ msgid ""
 "<p>Edit the template attribute values with <b>Edit</b>.\n"
 "Changing the <b>cn</b> value renames the template.</p>\n"
 msgstr ""
-"<p>Aby zmodyfikować atrybuty szablonu, należy nacisnąć przycisk <b>Edytuj</b>"
-".\n"
+"<p>Aby zmodyfikować atrybuty szablonu, należy nacisnąć przycisk <b>Edytuj</b>.\n"
 "Zmiana wartości <b>cn</b> spowoduje zmianę nazwy szablonu.</p>\n"
 
 #. help text 3/3
@@ -1287,9 +1219,7 @@ msgstr "Czy na pewno usunąć domyślny atrybut \"%1\"?"
 #. helptext 1/4
 #: src/ui.ycp:1409
 msgid "<p>Manage the configuration stored in the LDAP directory.</p>"
-msgstr ""
-"<p>W tym miejscu można zarządzać konfiguracją przechowywaną w katalogu LDAP.<"
-"/p>"
+msgstr "<p>W tym miejscu można zarządzać konfiguracją przechowywaną w katalogu LDAP.</p>"
 
 #. helptext 2/4
 #: src/ui.ycp:1412
@@ -1300,8 +1230,7 @@ msgid ""
 "using <b>Delete</b>.</p>\n"
 msgstr ""
 "<p>Każdy z zestawów konfiguracji jest nazywany \"modułem konfiguracji\". \n"
-"Jeśli w podanej lokalizacji nie ma żadnego modułu konfiguracji (konfiguracja "
-"\n"
+"Jeśli w podanej lokalizacji nie ma żadnego modułu konfiguracji (konfiguracja \n"
 "podstawowa), należy go utworzyć za pomocą przycisku <b>Nowy</b>. Bieżący \n"
 "moduł można usunąć za pomocą przycisku <b>Usuń</b>.</p>\n"
 
@@ -1309,8 +1238,7 @@ msgstr ""
 #: src/ui.ycp:1419
 msgid ""
 "<p>Edit the values of attributes in the table with <b>Edit</b>.\n"
-"Some values have special meanings, for example, changing the <b>cn</b> value "
-"renames the\n"
+"Some values have special meanings, for example, changing the <b>cn</b> value renames the\n"
 "current module.</p>\n"
 msgstr ""
 "<p>Aby zmienić wartości atrybutów, należy nacisnąć przycisk <b>Edytuj</b>.\n"
