@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: runlevel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-24 13:25+0200\n"
+"POT-Creation-Date: 2013-01-30 16:26+0100\n"
 "PO-Revision-Date: 2012-04-14 01:20+0100\n"
 "Last-Translator: Jakub Derda <j.derda@tjgroup.eu>\n"
 "Language-Team: Novell Language <language@novell.com>\n"
@@ -15,13 +15,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #. progress caption
-#: src/RunlevelEd.ycp:186
+#: src/RunlevelEd.ycp:215
 msgid "Initializing system services (runlevel). Please wait..."
 msgstr "Inicjalizacja usług systemowych (poziomu pracy). Proszę czekać..."
 
 #. TODO: localize the loop, disable it only locally
 #. and say what scripts form it
-#: src/RunlevelEd.ycp:314
+#: src/RunlevelEd.ycp:330
 msgid ""
 "A dependency loop was detected.\n"
 "Further dependency checking will be disabled."
@@ -29,90 +29,110 @@ msgstr ""
 "Wykryto pętlę zależności.\n"
 "Sprawdzanie zależności zostanie zatrzymane."
 
-#. progress caption
-#: src/RunlevelEd.ycp:513
-msgid "Saving changes to runlevels."
-msgstr "Zapisywanie zmian do poziomów pracy."
+#: src/RunlevelEd.ycp:643
+#, ycp-format
+msgid "Cannot enable service %1"
+msgstr "Nie można włączyć usługi %1"
+
+#: src/RunlevelEd.ycp:657
+#, ycp-format
+msgid ""
+"Unable to start and enable service %1.\n"
+"Service is not installed."
+msgstr ""
+"Nie można uruchomić i włączyć usługi %1.\n"
+"Usługa nie jest zainstalowana."
 
 #. progress item, %1 is a service (init script) name
-#: src/RunlevelEd.ycp:542
+#: src/RunlevelEd.ycp:684
 #, ycp-format
 msgid "Service %1"
 msgstr "Usługa %1"
 
-#: src/RunlevelEd.ycp:546
+#. this can also disable some services
+#: src/RunlevelEd.ycp:689
 #, ycp-format
 msgid "Setting %1: %2"
 msgstr "Ustawienie %1: %2"
 
 #. progress item, %1 is a service (init script) name
-#: src/RunlevelEd.ycp:552
+#: src/RunlevelEd.ycp:694
 #, ycp-format
 msgid "Skipping service %1."
 msgstr "Pomijanie usługi %1."
 
-#: src/RunlevelEd.ycp:560
+#: src/RunlevelEd.ycp:705
 #, ycp-format
 msgid "Failed services: %1."
 msgstr "Usługi, których uruchomienie nie powiodło się: %1."
 
+#: src/RunlevelEd.ycp:724
+#, fuzzy, ycp-format
+msgid "Cannot enable service %1."
+msgstr "Nie można włączyć usługi %1"
+
+#. progress caption
+#: src/RunlevelEd.ycp:740
+msgid "Saving changes to runlevels."
+msgstr "Zapisywanie zmian do poziomów pracy."
+
 #. descriptions of runlevels. there must be number: description
 #. number is runlevel name
 #. runlevel description
-#: src/RunlevelEd.ycp:743
+#: src/RunlevelEd.ycp:953
 msgid "0: System halt"
 msgstr "0: Zatrzymanie systemu"
 
 #. runlevel description
-#: src/RunlevelEd.ycp:745
+#: src/RunlevelEd.ycp:955
 msgid "1: Single user mode"
 msgstr "1: Tryb jednego użytkownika"
 
 #. runlevel description
-#: src/RunlevelEd.ycp:747
+#: src/RunlevelEd.ycp:957
 msgid "2: Local multiuser without remote network"
 msgstr "2: Lokalny tryb wielu użytkowników, bez dostępu do sieci zdalnej"
 
 #. runlevel description
-#: src/RunlevelEd.ycp:749
+#: src/RunlevelEd.ycp:959
 msgid "3: Full multiuser with network"
 msgstr "3: Pełny tryb wielu użytkowników, z dostępem do sieci"
 
 #. runlevel description
-#: src/RunlevelEd.ycp:751
+#: src/RunlevelEd.ycp:961
 msgid "4: User defined"
 msgstr "4: Zdefiniowany przez użytkownika"
 
 #. runlevel description
-#: src/RunlevelEd.ycp:753
+#: src/RunlevelEd.ycp:963
 msgid "5: Full multiuser with network and display manager"
 msgstr "5: Pełny tryb wielu użytkowników, z dostępem do sieci i graficznym menedżerem logowania"
 
 #. runlevel description
-#: src/RunlevelEd.ycp:755
+#: src/RunlevelEd.ycp:965
 msgid "6: System reboot"
 msgstr "6: Ponowne uruchomienie systemu"
 
 #. runlevel description
 #. internal one: without a number
-#: src/RunlevelEd.ycp:758
+#: src/RunlevelEd.ycp:968
 msgid "Unchanged"
 msgstr "Niezmieniony"
 
 #. Rich text title
-#: src/RunlevelEd.ycp:782 src/runlevel_proposal.ycp:294
+#: src/RunlevelEd.ycp:992 src/runlevel_proposal.ycp:294
 msgid "Default Runlevel"
 msgstr "Domyślny poziom pracy"
 
 #. summary header
 #. RichText label
-#: src/RunlevelEd.ycp:785 src/services_proposal.ycp:526
+#: src/RunlevelEd.ycp:995 src/services_proposal.ycp:476
 msgid "Services"
 msgstr "Usługi"
 
 #. summary item: %1 service name,
 #. %2, %3 list of runlevels it starts/stops in
-#: src/RunlevelEd.ycp:795
+#: src/RunlevelEd.ycp:1005
 #, ycp-format
 msgid "<p><b>%1</b><br> Start: %2</p>"
 msgstr "<p><b>%1</b><br> Uruchamiany w: %2</p>"
@@ -336,31 +356,12 @@ msgstr "Usługa <i>%1</i> zostanie <b>włączona</b> <a href=\"%2\">(wyłącz)</
 msgid "Service <i>%1</i> will be <b>disabled</b> <a href=\"%2\">(enable)</a>"
 msgstr "Usługa <i>%1</i> zostanie <b>wyłączona</b> <a href=\"%2\">(włącz)</a>"
 
-#: src/services_proposal.ycp:302
-#, ycp-format
-msgid "Cannot enable service %1"
-msgstr "Nie można włączyć usługi %1"
-
-#: src/services_proposal.ycp:316
-#, ycp-format
-msgid ""
-"Unable to start and enable service %1.\n"
-"Service is not installed."
-msgstr ""
-"Nie można uruchomić i włączyć usługi %1.\n"
-"Usługa nie jest zainstalowana."
-
 #: src/services_proposal.ycp:322
-#, ycp-format
-msgid "Cannot start service %1"
-msgstr "Nie można uruchomić usługi %1"
-
-#: src/services_proposal.ycp:378
 #, ycp-format
 msgid "Required package %1 is not available for installation."
 msgstr "Wymagany pakiet %1 nie jest dostępny do instalacji."
 
-#: src/services_proposal.ycp:428
+#: src/services_proposal.ycp:372
 msgid ""
 "Installation of required packages has failed,\n"
 "enabling and starting the services may also fail."
@@ -369,7 +370,7 @@ msgstr ""
 "Włączenie i uruchomienie tych usług może również się nie powieść."
 
 #. a help text, not very helpful though
-#: src/services_proposal.ycp:457
+#: src/services_proposal.ycp:407
 msgid ""
 "<p><big><b>Services</b></big><br>\n"
 "The current setup does not provide any functionality now.</p>"
@@ -378,7 +379,7 @@ msgstr ""
 "Bieżąca konfiguracja nie zawiera żadnych funkcji.</p>"
 
 #. a help text, part 1
-#: src/services_proposal.ycp:462
+#: src/services_proposal.ycp:412
 msgid ""
 "<p><big><b>Services</b></big><br>\n"
 "This installation proposal allows you to start and enable a service from the \n"
@@ -389,7 +390,7 @@ msgstr ""
 "listy usług.</p> \n"
 
 #. a help text, part 2
-#: src/services_proposal.ycp:467
+#: src/services_proposal.ycp:417
 msgid ""
 "<p>It may also open ports in the firewall for a service if firewall is enabled\n"
 "and a particular service requires opening them.</p>\n"
@@ -398,7 +399,7 @@ msgstr ""
 "zapora jest włączona, a usługa wymaga ich otwarcia.</p>\n"
 
 #. Menu label
-#: src/services_proposal.ycp:528
+#: src/services_proposal.ycp:478
 msgid "&Services"
 msgstr "&Usługi"
 
@@ -673,8 +674,8 @@ msgstr "Wykonywanie %1 %2 ..."
 #. %3 exit status, %4 status description, %5 stdout
 #. added a colon
 #: src/ui.ycp:910
-#, ycp-format
-msgid "<p><b>/etc/init.d/%1 %2</b> returned %3 (%4):<br>%5</p>"
+#, fuzzy, ycp-format
+msgid "<p><b>/bin/systemctl %1 %2.service</b> returned %3 (%4):<br>%5</p>"
 msgstr "<p>Polecenie <b>/etc/init.d/%1 %2</b> zwróciło %3 (%4):<br>%5</p>"
 
 #. list of services will follow
@@ -1001,6 +1002,9 @@ msgstr ""
 "\n"
 "Czy portmap ma pozostać\n"
 "wyłączony?\n"
+
+#~ msgid "Cannot start service %1"
+#~ msgstr "Nie można uruchomić usługi %1"
 
 #~ msgid "Default &Runlevel"
 #~ msgstr "Domyślny poziom p&racy"

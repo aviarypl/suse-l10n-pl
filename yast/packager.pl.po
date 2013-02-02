@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: packager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-24 13:21+0200\n"
+"POT-Creation-Date: 2013-01-30 16:22+0100\n"
 "PO-Revision-Date: 2012-04-22 11:59+0100\n"
 "Last-Translator: Michał Newiak <manveru1986@gmail.com>\n"
 "Language-Team: Polish <opensuse-pl@opensuse.org>\n"
@@ -1040,7 +1040,7 @@ msgstr ""
 "%1\n"
 
 #. Command line help text for the software management module, %1 is "zypper"
-#: src/clients/sw_single.ycp:760
+#: src/clients/sw_single.ycp:737
 #, ycp-format
 msgid "Software Installation - This module does not support the command line interface, use '%1' instead."
 msgstr "Instalacja oprogramowania - ten moduł nie obsługuje interfejsu wiersza poleceń. Zamiast tego trzeba użyć polecenia \"%1\"."
@@ -1932,7 +1932,7 @@ msgstr ""
 "Szczegóły dot. błędu znajdują się w pliku dziennika %1."
 
 #. bnc #436925
-#: src/modules/Packages.ycp:1932
+#: src/modules/Packages.ycp:1941
 msgid ""
 "The software selection has been changed externally.\n"
 "Software proposal will be called again."
@@ -1941,7 +1941,7 @@ msgstr ""
 "Propozycje oprogramowania zostaną ponownie wywołane."
 
 #. popup label
-#: src/modules/Packages.ycp:1951
+#: src/modules/Packages.ycp:1960
 msgid "Evaluating package selection..."
 msgstr "Sprawdzanie listy pakietów..."
 
@@ -2180,7 +2180,7 @@ msgid "&Server Name"
 msgstr "Nazwa &serwera"
 
 #. text entry
-#: src/modules/SourceDialogs.ycp:420 src/modules/SourceDialogs.ycp:1436
+#: src/modules/SourceDialogs.ycp:420 src/modules/SourceDialogs.ycp:1461
 msgid "&Path to Directory or ISO Image"
 msgstr "Ś&cieżka do katalogu lub obrazu ISO"
 
@@ -2194,20 +2194,31 @@ msgstr "Obraz &ISO"
 msgid "N&FS v4 Protocol"
 msgstr "Protokół N&FS v4"
 
-#: src/modules/SourceDialogs.ycp:432
+#: src/modules/SourceDialogs.ycp:433
+msgid "Mount Options"
+msgstr ""
+
+#. TRANSLATORS: "(default)" - is a combobox value and means default libzypp
+#. NFS mount option (users can change it to anything else, the field is editable)
+#: src/modules/SourceDialogs.ycp:437
+#, fuzzy
+msgid "(default)"
+msgstr "Domyślny"
+
+#: src/modules/SourceDialogs.ycp:444
 msgid "URL of the Repository"
 msgstr "Adres URL repozytorium"
 
-#: src/modules/SourceDialogs.ycp:598 src/modules/SourceDialogs.ycp:1676
+#: src/modules/SourceDialogs.ycp:620 src/modules/SourceDialogs.ycp:1701
 msgid "Edit Parts of the URL"
 msgstr "Edytuj części adresu URL"
 
-#: src/modules/SourceDialogs.ycp:600 src/modules/SourceDialogs.ycp:1678
+#: src/modules/SourceDialogs.ycp:622 src/modules/SourceDialogs.ycp:1703
 msgid "Edit Complete URL"
 msgstr "Edytuj kompletny adres URL"
 
 #. help text
-#: src/modules/SourceDialogs.ycp:609
+#: src/modules/SourceDialogs.ycp:631
 msgid ""
 "<p><big><b>NFS Server</b></big><br>\n"
 "Use <b>Server Name</b> and <b>Path to Directory or ISO Image</b>\n"
@@ -2217,17 +2228,25 @@ msgstr ""
 "Nazwę hosta i ścieżkę na serwerze można określić w polach<b>Nazwa serwera</b>\n"
 " i <b>Ścieżka do katalogu lub obrazu ISO</b>.<p>"
 
+#: src/modules/SourceDialogs.ycp:634
+msgid ""
+"<p><big><b>Mount Options</b></big><br>\n"
+"You can specify extra options used for mounting the NFS volume.\n"
+"This is an expert option, keeping the default value is recommened. See <b>man 5 nfs</b>\n"
+"for details and the list of supported options."
+msgstr ""
+
 #. radio button
-#: src/modules/SourceDialogs.ycp:658
+#: src/modules/SourceDialogs.ycp:683
 msgid "&CD-ROM"
 msgstr "&CD-ROM"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:660
+#: src/modules/SourceDialogs.ycp:685
 msgid "&DVD-ROM"
 msgstr "&DVD-ROM"
 
-#: src/modules/SourceDialogs.ycp:664
+#: src/modules/SourceDialogs.ycp:689
 msgid ""
 "<p><big><b>CD or DVD Media</b></big><br>\n"
 "Set <b>CD-ROM</b> or <b>DVD-ROM</b> to specify the type of media.</p>"
@@ -2237,17 +2256,17 @@ msgstr ""
 
 #. dialog caption
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:739 src/modules/SourceDialogs.ycp:2112
+#: src/modules/SourceDialogs.ycp:764 src/modules/SourceDialogs.ycp:2137
 msgid "Local Directory"
 msgstr "Katalog lokalny"
 
 #. dialog caption
-#: src/modules/SourceDialogs.ycp:758
+#: src/modules/SourceDialogs.ycp:783
 msgid "ISO Image File"
 msgstr "Plik obrazu ISO"
 
 #. error popup - the entered path is not a directory
-#: src/modules/SourceDialogs.ycp:784
+#: src/modules/SourceDialogs.ycp:809
 msgid ""
 "The entered path is not a directory\n"
 "or the directory does not exist.\n"
@@ -2256,7 +2275,7 @@ msgstr ""
 "lub katalog ten nie istnieje.\n"
 
 #. error popup - the entered path is not a regular file
-#: src/modules/SourceDialogs.ycp:813
+#: src/modules/SourceDialogs.ycp:838
 msgid ""
 "The entered path is not a file\n"
 "or the file does not exist.\n"
@@ -2265,7 +2284,7 @@ msgstr ""
 "lub plik ten nie istnieje.\n"
 
 #. continue/cancel popup, %1 is a file name
-#: src/modules/SourceDialogs.ycp:838
+#: src/modules/SourceDialogs.ycp:863
 #, ycp-format
 msgid ""
 "File '%1'\n"
@@ -2277,17 +2296,17 @@ msgstr ""
 "Czy użyć go mimo wszystko?\n"
 
 #. text entry
-#: src/modules/SourceDialogs.ycp:857
+#: src/modules/SourceDialogs.ycp:882
 msgid "&Path to Directory"
 msgstr "Ścieżka do k&atalogu"
 
 #. checkbox label
-#: src/modules/SourceDialogs.ycp:865 src/modules/SourceDialogs.ycp:1103
-#: src/modules/SourceDialogs.ycp:1174
+#: src/modules/SourceDialogs.ycp:890 src/modules/SourceDialogs.ycp:1128
+#: src/modules/SourceDialogs.ycp:1199
 msgid "&Plain RPM Directory"
 msgstr "&Zwykły katalog RPM"
 
-#: src/modules/SourceDialogs.ycp:873
+#: src/modules/SourceDialogs.ycp:898
 msgid ""
 "<p><big><b>Local Directory</b></big><br>\n"
 "Use <b>Path to Directory</b> to specify the path to the\n"
@@ -2303,19 +2322,19 @@ msgstr ""
 
 #. combobox title
 #. `opt(`hstretch),
-#: src/modules/SourceDialogs.ycp:1098
+#: src/modules/SourceDialogs.ycp:1123
 msgid "&USB Mass Storage Device"
 msgstr "Urządzenie pamięci masowej &USB"
 
-#: src/modules/SourceDialogs.ycp:1101 src/modules/SourceDialogs.ycp:1172
+#: src/modules/SourceDialogs.ycp:1126 src/modules/SourceDialogs.ycp:1197
 msgid "&File System"
 msgstr "&System plików"
 
-#: src/modules/SourceDialogs.ycp:1102 src/modules/SourceDialogs.ycp:1173
+#: src/modules/SourceDialogs.ycp:1127 src/modules/SourceDialogs.ycp:1198
 msgid "Dire&ctory"
 msgstr "&Katalog"
 
-#: src/modules/SourceDialogs.ycp:1107
+#: src/modules/SourceDialogs.ycp:1132
 msgid ""
 "<p><big><b>USB Stick or Disk</b></big><br>\n"
 "Select the USB device on which the repository is located.\n"
@@ -2334,7 +2353,7 @@ msgstr ""
 "<b>Zwykły katalog z RPM</b>.</p>\n"
 
 #. 'auto' is a value in the combo box widget, do not translate it!
-#: src/modules/SourceDialogs.ycp:1117 src/modules/SourceDialogs.ycp:1188
+#: src/modules/SourceDialogs.ycp:1142 src/modules/SourceDialogs.ycp:1213
 msgid ""
 "<p>The file system used on the device will be detected automatically\n"
 "if you select file system 'auto'. If the detection fails or you\n"
@@ -2345,11 +2364,11 @@ msgstr ""
 " nie powiedzie się lub należy użyć konkretnego systemu plików, trzeba wybrać go z listy.</p>\n"
 
 #. combobox title
-#: src/modules/SourceDialogs.ycp:1171
+#: src/modules/SourceDialogs.ycp:1196
 msgid "&Disk Device"
 msgstr "Urządzenie &dyskowe"
 
-#: src/modules/SourceDialogs.ycp:1178
+#: src/modules/SourceDialogs.ycp:1203
 msgid ""
 "<p><big><b>Disk</b></big><br>\n"
 "Select the disk on which the repository is located.\n"
@@ -2368,11 +2387,11 @@ msgstr ""
 "<b>Zwykły katalog RPM</b>.</p>\n"
 
 #. text entry
-#: src/modules/SourceDialogs.ycp:1205
+#: src/modules/SourceDialogs.ycp:1230
 msgid "&Path to ISO Image"
 msgstr "Ś&cieżka do obrazu ISO"
 
-#: src/modules/SourceDialogs.ycp:1219
+#: src/modules/SourceDialogs.ycp:1244
 msgid ""
 "<p><big><b>Local ISO Image</b></big><br>\n"
 "Use <b>Path to ISO Image</b> to specify the path to the\n"
@@ -2383,84 +2402,84 @@ msgstr ""
 "pliku obrazu ISO.</p>"
 
 #. frame
-#: src/modules/SourceDialogs.ycp:1252
+#: src/modules/SourceDialogs.ycp:1277
 msgid "P&rotocol"
 msgstr "P&rotokół"
 
 #. input field label
-#: src/modules/SourceDialogs.ycp:1261
+#: src/modules/SourceDialogs.ycp:1286
 msgid "&URL of the Repository"
 msgstr "Adres &URL repozytorium"
 
 #. text entry
-#: src/modules/SourceDialogs.ycp:1423
+#: src/modules/SourceDialogs.ycp:1448
 msgid "Server &Name"
 msgstr "&Nazwa serwera"
 
-#: src/modules/SourceDialogs.ycp:1425
+#: src/modules/SourceDialogs.ycp:1450
 msgid "&Port"
 msgstr "&Port"
 
 #. text entry
-#: src/modules/SourceDialogs.ycp:1429
+#: src/modules/SourceDialogs.ycp:1454
 msgid "&Share"
 msgstr "&Udział"
 
 #. checkbox label
-#: src/modules/SourceDialogs.ycp:1439
+#: src/modules/SourceDialogs.ycp:1464
 msgid "ISO &Image"
 msgstr "&Obraz ISO"
 
 #. text entry
-#: src/modules/SourceDialogs.ycp:1442
+#: src/modules/SourceDialogs.ycp:1467
 msgid "&Directory on Server"
 msgstr "&Katalog na serwerze"
 
 #. frame
-#: src/modules/SourceDialogs.ycp:1446
+#: src/modules/SourceDialogs.ycp:1471
 msgid "Au&thentication"
 msgstr "Au&toryzacja"
 
 #. check box
-#: src/modules/SourceDialogs.ycp:1449
+#: src/modules/SourceDialogs.ycp:1474
 msgid "&Anonymous"
 msgstr "Dostęp &anonimowy"
 
-#: src/modules/SourceDialogs.ycp:1453
+#: src/modules/SourceDialogs.ycp:1478
 msgid "&Workgroup or Domain"
 msgstr "&Grupa robocza lub domena"
 
-#: src/modules/SourceDialogs.ycp:1458
+#: src/modules/SourceDialogs.ycp:1483
 msgid "&User Name"
 msgstr "Nazwa &użytkownika"
 
 #. password entry
-#: src/modules/SourceDialogs.ycp:1460
+#: src/modules/SourceDialogs.ycp:1485
 msgid "&Password"
 msgstr "&Hasło"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1538
+#: src/modules/SourceDialogs.ycp:1563
 msgid "&FTP"
 msgstr "&FTP"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1541
+#: src/modules/SourceDialogs.ycp:1566
 msgid "H&TTP"
 msgstr "H&TTP"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1548
+#: src/modules/SourceDialogs.ycp:1573
 msgid "HTT&PS"
 msgstr "HTT&PS"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1554 src/modules/SourceDialogs.ycp:1779
+#: src/modules/SourceDialogs.ycp:1579 src/modules/SourceDialogs.ycp:1804
 msgid "&SMB/CIFS"
 msgstr "&SMB/CIFS"
 
 #. help text - server dialog
-#: src/modules/SourceDialogs.ycp:1690
+#: src/modules/SourceDialogs.ycp:1715
 msgid ""
 "<p><big><b>Server and Directory</b></big><br>\n"
 "Use <b>Server Name</b> and <b>Path to Directory or ISO Image</b>\n"
@@ -2484,7 +2503,7 @@ msgstr ""
 "nośnika, należy zaznaczyć opcję <b>Obraz ISO</b>.</p>\n"
 
 #. help text - server dialog, there is a "Port" widget
-#: src/modules/SourceDialogs.ycp:1702
+#: src/modules/SourceDialogs.ycp:1727
 msgid ""
 "<p>It is possible to set the <b>Port</b> number for a HTTP/HTTPS repository.\n"
 "Leave it empty to use the default port.</p>\n"
@@ -2493,81 +2512,81 @@ msgstr ""
 "Wartość pusta oznacza port domyślny.</p>\n"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1760
+#: src/modules/SourceDialogs.ycp:1785
 msgid "&Scan Using SLP..."
 msgstr "&Skanuj, używając SLP..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1764
+#: src/modules/SourceDialogs.ycp:1789
 msgid "Commun&ity Repositories"
 msgstr "R&epozytoria społeczności"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1770 src/modules/SourceDialogs.ycp:1810
+#: src/modules/SourceDialogs.ycp:1795 src/modules/SourceDialogs.ycp:1835
 msgid "Specify &URL..."
 msgstr "Określ &URL..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1773
+#: src/modules/SourceDialogs.ycp:1798
 msgid "&FTP..."
 msgstr "&FTP..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1775
+#: src/modules/SourceDialogs.ycp:1800
 msgid "&HTTP..."
 msgstr "&HTTP..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1777
+#: src/modules/SourceDialogs.ycp:1802
 msgid "HTT&PS..."
 msgstr "HTT&PS..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1781
+#: src/modules/SourceDialogs.ycp:1806
 msgid "&NFS..."
 msgstr "&NFS..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1783 src/modules/SourceDialogs.ycp:1813
+#: src/modules/SourceDialogs.ycp:1808 src/modules/SourceDialogs.ycp:1838
 msgid "&CD..."
 msgstr "&CD..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1785 src/modules/SourceDialogs.ycp:1815
+#: src/modules/SourceDialogs.ycp:1810 src/modules/SourceDialogs.ycp:1840
 msgid "&DVD..."
 msgstr "&DVD..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1787 src/modules/SourceDialogs.ycp:1817
+#: src/modules/SourceDialogs.ycp:1812 src/modules/SourceDialogs.ycp:1842
 msgid "&Hard Disk..."
 msgstr "Dysk &twardy..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1789
+#: src/modules/SourceDialogs.ycp:1814
 msgid "&USB Mass Storage (USB Stick, Disk)..."
 msgstr "Pamięć masowa &USB (pamięci, dyski USB)..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1791 src/modules/SourceDialogs.ycp:1821
+#: src/modules/SourceDialogs.ycp:1816 src/modules/SourceDialogs.ycp:1846
 msgid "&Local Directory..."
 msgstr "Katalog &lokalny..."
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1793 src/modules/SourceDialogs.ycp:1823
+#: src/modules/SourceDialogs.ycp:1818 src/modules/SourceDialogs.ycp:1848
 msgid "&Local ISO Image..."
 msgstr "&Lokalny obraz ISO..."
 
-#: src/modules/SourceDialogs.ycp:1797 src/modules/SourceDialogs.ycp:1827
+#: src/modules/SourceDialogs.ycp:1822 src/modules/SourceDialogs.ycp:1852
 msgid "&Download repository description files"
 msgstr "&Pobierz pliki opisów repozytoriów"
 
 #. radio button
-#: src/modules/SourceDialogs.ycp:1819
+#: src/modules/SourceDialogs.ycp:1844
 msgid "&USB Stick or Disk..."
 msgstr "Pamięć lub dysk &USB..."
 
 #. help text
-#: src/modules/SourceDialogs.ycp:1852
+#: src/modules/SourceDialogs.ycp:1877
 msgid ""
 "<p><big><b>Media Type</b></big><br>\n"
 "The software repository can be located on CD, on a network server,\n"
@@ -2578,7 +2597,7 @@ msgstr ""
 "na serwerze sieciowym lub na dysku twardym.</p>"
 
 #. help, continued
-#: src/modules/SourceDialogs.ycp:1857
+#: src/modules/SourceDialogs.ycp:1882
 msgid ""
 "<p>\n"
 "To add  <b>CD</b> or <b>DVD</b>,\n"
@@ -2588,7 +2607,7 @@ msgstr ""
 "Aby dodać katalog z <b>CD</b> lub <b>DVD</b> wymagane są odpowiednie płyty.</p>"
 
 #. help, continued
-#: src/modules/SourceDialogs.ycp:1862
+#: src/modules/SourceDialogs.ycp:1887
 msgid ""
 "<p>\n"
 "The product CDs can be copied to the hard disk.\n"
@@ -2603,7 +2622,7 @@ msgstr ""
 "katalogu, wystarczy podać tylko jego nazwę. </p>\n"
 
 #. help, continued
-#: src/modules/SourceDialogs.ycp:1870
+#: src/modules/SourceDialogs.ycp:1895
 msgid ""
 "<p>\n"
 "Network installation requires a working network connection.\n"
@@ -2616,23 +2635,23 @@ msgstr ""
 "z pierwszego dysku CD, np. /data1/CD1.</p>\n"
 
 #. error popup
-#: src/modules/SourceDialogs.ycp:1883
+#: src/modules/SourceDialogs.ycp:1908
 msgid "Select the media type"
 msgstr "Proszę wybrać typ nośnika"
 
-#: src/modules/SourceDialogs.ycp:1890
+#: src/modules/SourceDialogs.ycp:1915
 msgid "Insert the add-on product CD"
 msgstr "Proszę umieścić w napędzie płytę CD produktu dodatkowego"
 
-#: src/modules/SourceDialogs.ycp:1891
+#: src/modules/SourceDialogs.ycp:1916
 msgid "Insert the add-on product DVD"
 msgstr "Proszę umieścić w napędzie płytę DVD produktu dodatkowego"
 
-#: src/modules/SourceDialogs.ycp:1914
+#: src/modules/SourceDialogs.ycp:1939
 msgid "No USB disk was detected."
 msgstr "Nie wykryto żadnego dysku USB."
 
-#: src/modules/SourceDialogs.ycp:2039
+#: src/modules/SourceDialogs.ycp:2064
 msgid ""
 "<p><b>Download Files</b><br>\n"
 "Each repository has description files which describe the content of the\n"
@@ -2647,44 +2666,44 @@ msgstr ""
 "pobranie plików przez program YaST, dopiero kiedy będą potrzebne. </p>\n"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:2100 src/modules/SourceManagerSLP.ycp:258
+#: src/modules/SourceDialogs.ycp:2125 src/modules/SourceManagerSLP.ycp:258
 msgid "Repository URL"
 msgstr "Adres URL repozytorium"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:2102
+#: src/modules/SourceDialogs.ycp:2127
 msgid "NFS Server"
 msgstr "Serwer NFS"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:2104 src/modules/SourceDialogs.ycp:2106
+#: src/modules/SourceDialogs.ycp:2129 src/modules/SourceDialogs.ycp:2131
 msgid "CD or DVD Media"
 msgstr "Typ nośnika CD/DVD"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:2108
+#: src/modules/SourceDialogs.ycp:2133
 msgid "Hard Disk"
 msgstr "Dysk twardy"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:2110
+#: src/modules/SourceDialogs.ycp:2135
 msgid "USB Stick or Disk"
 msgstr "Pamięć lub dysk USB"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:2114
+#: src/modules/SourceDialogs.ycp:2139
 msgid "Local ISO Image"
 msgstr "Lokalny obraz ISO"
 
 #. label / dialog caption
-#: src/modules/SourceDialogs.ycp:2116 src/modules/SourceDialogs.ycp:2118
-#: src/modules/SourceDialogs.ycp:2120 src/modules/SourceDialogs.ycp:2122
-#: src/modules/SourceDialogs.ycp:2124
+#: src/modules/SourceDialogs.ycp:2141 src/modules/SourceDialogs.ycp:2143
+#: src/modules/SourceDialogs.ycp:2145 src/modules/SourceDialogs.ycp:2147
+#: src/modules/SourceDialogs.ycp:2149
 msgid "Server and Directory"
 msgstr "Serwer i katalog"
 
 #. dialog caption
-#: src/modules/SourceDialogs.ycp:2300 src/modules/SourceDialogs.ycp:2322
+#: src/modules/SourceDialogs.ycp:2325 src/modules/SourceDialogs.ycp:2347
 msgid "Media Type"
 msgstr "Typ nośnika"
 
@@ -2891,22 +2910,22 @@ msgid "Deselect some packages."
 msgstr "Proszę zrezygnować z niektórych pakietów."
 
 #. TRANSLATORS: package description item
-#: src/modules/WebpinPackageSearch.ycp:239
+#: src/modules/WebpinPackageSearch.ycp:238
 msgid "No further information available."
 msgstr "Brak dalszych informacji."
 
 #. TRANSLATORS: repository summary
-#: src/modules/WebpinPackageSearch.ycp:255
+#: src/modules/WebpinPackageSearch.ycp:254
 msgid "Unknown repository"
 msgstr "Nieznane repozytorium"
 
 #. TRANSLATORS: repositry description
-#: src/modules/WebpinPackageSearch.ycp:257
+#: src/modules/WebpinPackageSearch.ycp:256
 msgid "No further information available, use at your own risk."
 msgstr "Brak dalszych informacji, użycie na własne ryzyko."
 
 #. %1 is HTTP error code like 404 or 503
-#: src/modules/WebpinPackageSearch.ycp:364
+#: src/modules/WebpinPackageSearch.ycp:363
 #, ycp-format
 msgid ""
 "Search failed.\n"
